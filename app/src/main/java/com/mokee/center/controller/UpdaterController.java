@@ -23,6 +23,7 @@ import android.os.PowerManager;
 import android.os.SystemClock;
 import android.support.v4.content.LocalBroadcastManager;
 import android.text.format.DateUtils;
+import android.text.format.Formatter;
 import android.util.Log;
 
 import com.lzy.okgo.OkGo;
@@ -32,6 +33,7 @@ import com.lzy.okgo.request.GetRequest;
 import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadListener;
 import com.lzy.okserver.download.DownloadTask;
+import com.mokee.center.R;
 import com.mokee.center.misc.State;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.CommonUtils;
@@ -209,6 +211,15 @@ public class UpdaterController {
                 final long now = SystemClock.elapsedRealtime();
                 if (now - DateUtils.SECOND_IN_MILLIS >= mLastUpdate) {
                     mLastUpdate = now;
+
+                    long spendTime = (System.currentTimeMillis() - progress.date) / DateUtils.SECOND_IN_MILLIS;
+                    long speed = progress.speed != 0 ? progress.speed : progress.currentSize / spendTime;
+                    if (speed == 0) return;
+
+                    CharSequence eta = CommonUtils.calculateEta(mContext, speed, progress.totalSize, progress.currentSize);
+                    CharSequence etaWithSpeed = mContext.getString(R.string.download_speed, eta, Formatter.formatFileSize(mContext, speed));
+                    progress.extra1 = etaWithSpeed.toString();
+
                     notifyDownloadProgress(progress.tag);
                 }
             }

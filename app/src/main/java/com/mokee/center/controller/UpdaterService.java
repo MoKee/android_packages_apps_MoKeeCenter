@@ -36,8 +36,6 @@ import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
-import android.text.format.DateUtils;
-import android.text.format.Formatter;
 import android.util.Log;
 
 import com.lzy.okgo.exception.OkGoException;
@@ -329,15 +327,7 @@ public class UpdaterService extends Service {
 
         setNotificationTitle(progress.fileName);
 
-        long spendTime = (System.currentTimeMillis() - progress.date) / DateUtils.SECOND_IN_MILLIS;
-        long speed = progress.speed != 0 ? progress.speed : progress.currentSize / spendTime;
-        if (speed == 0) return;
-
-        CharSequence eta = CommonUtils.calculateEta(this, speed, progress.totalSize, progress.currentSize);
-        CharSequence etaWithSpeed = getString(R.string.download_speed, eta, Formatter.formatFileSize(this, speed));
-        progress.extra1 = etaWithSpeed.toString();
-
-        mNotificationStyle.bigText(etaWithSpeed);
+        mNotificationStyle.bigText(progress.extra1.toString());
 
         mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
     }
