@@ -108,12 +108,12 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
         String title = donationInfo.isAdvanced() ? getContext().getString(R.string.donation_dialog_title) : getContext().getString(R.string.unlock_features_title);
         setTitle(title);
         setView(donationView);
-        setNeutralButton(R.string.faq, (dialog, which) -> {
+        setNeutralButton(R.string.action_faq, (dialog, which) -> {
             Uri uri = Uri.parse("https://bbs.mokeedev.com/t/topic/9049/1");
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             getContext().startActivity(intent);
         });
-        setPositiveButton(R.string.next, (dialog, which) -> {
+        setPositiveButton(R.string.action_next, (dialog, which) -> {
             int price = donationInfo.isAdvanced() ? seekBar.getProgress() + 10 : seekBar.getProgress() - donationInfo.getPaid();
             try {
                 switch (via.getCheckedRadioButtonId()) {

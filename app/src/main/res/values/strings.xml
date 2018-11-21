@@ -30,6 +30,12 @@
     <string name="action_donation">Donation</string>
     <string name="action_unlock_features">Unlock Features</string>
     <string name="action_refresh">Refresh</string>
+    <string name="action_faq">Q&amp;A</string>
+    <string name="action_solution">Solution</string>
+    <string name="action_next">Next</string>
+    <string name="action_pause">Pause</string>
+    <string name="action_resume">Resume</string>
+    <string name="action_download">Download</string>
 
     <!-- Nav Main -->
     <string name="nav_main_forum_title">Forum</string>
@@ -103,14 +109,9 @@
     <string name="text_copied">Text copied to clipboard.</string>
     <string name="unknown">Unknown</string>
     <string name="never">Never</string>
-    <string name="solution">Solution</string>
-    <string name="faq">Q&amp;A</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
-    <string name="next">Next</string>
-    <string name="pause">Pause</string>
-    <string name="resume">Resume</string>
     <string name="activity_not_found">App isn\'t installed.</string>
     <string name="payment_not_found">MoKee Payment isn\'t installed.</string>
 
@@ -130,5 +131,10 @@
     <string name="download_already_running">A download is already running</string>
     <string name="download_progress_new" translatable="false"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
     <string name="download_progress_eta_new" translatable="false"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left, 1.56 MB/s" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+
+    <!-- Mobile data -->
+    <string name="update_on_mobile_data_title">Warning</string>
+    <string name="update_on_mobile_data_message">You\'re about to download an update package using mobile data which is likely going to cause high data usage. Would you like to proceed?</string>
+    <string name="checkbox_mobile_data_warning">Do not show again</string>
 
 </resources>

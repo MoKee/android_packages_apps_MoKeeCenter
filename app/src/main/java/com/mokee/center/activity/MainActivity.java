@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity
                 makeSnackbar(R.string.donation_restore_failure).show();
                 break;
             case DONATION_RESULT_NOT_FOUND:
-                makeSnackbar(R.string.donation_restore_not_found).setAction(R.string.solution, (view) -> {
+                makeSnackbar(R.string.donation_restore_not_found).setAction(R.string.action_solution, (view) -> {
                     Uri uri = Uri.parse("https://bbs.mokeedev.com/t/topic/577");
                     Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                     startActivity(intent);

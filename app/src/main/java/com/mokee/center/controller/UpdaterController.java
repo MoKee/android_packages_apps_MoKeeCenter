@@ -172,6 +172,7 @@ public class UpdaterController {
         Log.d(TAG, "Pausing " + downloadId);
         mOkDownload.getTask(downloadId).pause();
         mActiveDownloads--;
+        mActiveDownloadTag = null;
     }
 
     public String getActiveDownloadTag() {

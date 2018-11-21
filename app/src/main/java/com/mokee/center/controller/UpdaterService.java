@@ -249,7 +249,7 @@ public class UpdaterService extends Service {
                 mNotificationBuilder.setStyle(mNotificationStyle);
                 mNotificationBuilder.setSmallIcon(android.R.drawable.stat_sys_download);
                 mNotificationBuilder.addAction(android.R.drawable.ic_media_pause,
-                        getString(R.string.pause),
+                        getString(R.string.action_pause),
                         getPausePendingIntent(progress.tag));
                 mNotificationBuilder.setTicker(text);
                 mNotificationBuilder.setOngoing(true);
@@ -267,7 +267,7 @@ public class UpdaterService extends Service {
                 mNotificationBuilder.setStyle(mNotificationStyle);
                 mNotificationBuilder.setSmallIcon(R.drawable.ic_action_pause);
                 mNotificationBuilder.addAction(android.R.drawable.ic_media_play,
-                        getString(R.string.resume),
+                        getString(R.string.action_resume),
                         getResumePendingIntent(progress.tag));
                 mNotificationBuilder.setTicker(text);
                 mNotificationBuilder.setOngoing(false);
@@ -304,7 +304,7 @@ public class UpdaterService extends Service {
                     mNotificationBuilder.setStyle(mNotificationStyle);
                     mNotificationBuilder.setSmallIcon(R.drawable.ic_action_pause);
                     mNotificationBuilder.addAction(android.R.drawable.ic_media_play,
-                            getString(R.string.resume),
+                            getString(R.string.action_resume),
                             getResumePendingIntent(progress.tag));
                     mNotificationBuilder.setTicker(text);
                     mNotificationBuilder.setOngoing(true);

@@ -18,11 +18,14 @@ package com.mokee.center.preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.internal.widget.PreferenceImageView;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceViewHolder;
 import android.text.format.Formatter;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -133,6 +136,9 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     if (mProgress.exception instanceof SocketException
                             || mProgress.exception instanceof IOException) {
                         mSummaryView.setText(R.string.download_waiting_network_notification);
+                        mActionProgress.setVisibility(View.VISIBLE);
+                        mIconView.setVisibility(View.GONE);
+                        mUpdateButton.setEnabled(false);
                         break;
                     }
                 default:
@@ -159,51 +165,56 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         }
     }
 
+    private void showWarnDialog(SharedPreferences prefs) {
+        View checkboxView = LayoutInflater.from(getContext()).inflate(R.layout.checkbox_view, null);
+        CheckBox checkbox = checkboxView.findViewById(R.id.checkbox);
+        checkbox.setText(R.string.checkbox_mobile_data_warning);
+
+        new AlertDialog.Builder(getContext())
+                .setTitle(R.string.update_on_mobile_data_title)
+                .setMessage(R.string.update_on_mobile_data_message)
+                .setView(checkboxView)
+                .setPositiveButton(R.string.action_download,
+                        (dialog, which) -> {
+                            if (checkbox.isChecked()) {
+                                prefs.edit()
+                                        .putBoolean(Constants.PREF_MOBILE_DATA_WARNING, false)
+                                        .apply();
+                            }
+                            execAction();
+                        })
+                .setNegativeButton(android.R.string.cancel, null)
+                .show();
+    }
+
+    private void execAction() {
+        if (mProgress == null) {
+            mOnActionListener.onStartDownload(mUpdateInfo.getName());
+        } else {
+            mOnActionListener.onResumeDownload(mUpdateInfo.getName());
+        }
+    }
+
     @Override
     public void onClick(View view) {
         if (mOnActionListener == null) return;
-        if (mProgress == null) {
-            SharedPreferences mMainPrefs = CommonUtils.getMainPrefs(getContext());
-            boolean warn = mMainPrefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
+        SharedPreferences mMainPrefs = CommonUtils.getMainPrefs(getContext());
+        boolean warn = mMainPrefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
+        if (mProgress == null || mProgress.status == Progress.PAUSE
+                || mProgress.status == Progress.ERROR || mProgress.status == Progress.NONE) {
             if (CommonUtils.isOnWifiOrEthernet(getContext()) || !warn) {
-                mOnActionListener.onStartDownload(mUpdateInfo.getName());
+                execAction();
                 return;
             }
-//        View checkboxView = LayoutInflater.from(getContext()).inflate(R.layout.checkbox_view, null);
-//        CheckBox checkbox = (CheckBox) checkboxView.findViewById(R.id.checkbox);
-//        checkbox.setText(R.string.checkbox_mobile_data_warning);
-//
-//        new AlertDialog.Builder(mActivity)
-//                .setTitle(R.string.update_on_mobile_data_title)
-//                .setMessage(R.string.update_on_mobile_data_message)
-//                .setView(checkboxView)
-//                .setPositiveButton(R.string.action_download,
-//                        (dialog, which) -> {
-//                            if (checkbox.isChecked()) {
-//                                preferences.edit()
-//                                        .putBoolean(Constants.PREF_MOBILE_DATA_WARNING, false)
-//                                        .apply();
-//                                mActivity.supportInvalidateOptionsMenu();
-//                            }
-//                            mUpdaterController.startDownload(downloadId);
-//                        })
-//                .setNegativeButton(android.R.string.cancel, null)
-//                .show();
+            showWarnDialog(mMainPrefs);
         } else {
             switch (mProgress.status) {
                 case Progress.WAITING:
                 case Progress.LOADING:
                     mOnActionListener.onPauseDownload(mUpdateInfo.getName());
                     break;
-                case Progress.PAUSE:
-                case Progress.ERROR:
-                case Progress.NONE:
-                    mOnActionListener.onResumeDownload(mUpdateInfo.getName());
-                    break;
-
             }
         }
-
     }
 
     public void setOnActionListener(OnActionListener listener) {

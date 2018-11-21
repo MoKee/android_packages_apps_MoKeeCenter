@@ -93,11 +93,12 @@
     <string name="text_copied">文本已复制到剪贴板。</string>
     <string name="unknown">未知</string>
     <string name="never">从未</string>
-    <string name="solution">解决方案</string>
-    <string name="faq">疑问解答</string>
-    <string name="next">下一步</string>
-    <string name="pause">暂停</string>
-    <string name="resume">继续</string>
+    <string name="action_solution">解决方案</string>
+    <string name="action_faq">疑问解答</string>
+    <string name="action_next">下一步</string>
+    <string name="action_pause">暂停</string>
+    <string name="action_resume">继续</string>
+    <string name="action_download">下载</string>
     <string name="activity_not_found">未安装该应用。</string>
     <string name="payment_not_found">未安装魔趣支付应用。</string>
     <string name="new_updates_channel_title">新的系统更新</string>
@@ -116,5 +117,9 @@
     <string name="download_remaining">还剩 <xliff:g id="DURATION">%s</xliff:g></string>
     <string name="download_speed">%1$s, %2$s/秒</string>
     <string name="download_already_running">已有一个正在运行的下载</string>
+
+    <string name="update_on_mobile_data_title">警告</string>
+    <string name="update_on_mobile_data_message">您将要通过移动数据网络下载更新包，这可能会导致较大的数据用量。您确定要继续吗？</string>
+    <string name="checkbox_mobile_data_warning">不再显示</string>
 
 </resources>
