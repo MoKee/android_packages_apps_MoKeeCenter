@@ -28,12 +28,14 @@ import android.content.IntentFilter;
 import android.net.ConnectivityManager;
 import android.net.ConnectivityManager.NetworkCallback;
 import android.net.Network;
+import android.net.NetworkCapabilities;
 import android.net.NetworkRequest;
 import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.LocalBroadcastManager;
+import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.text.format.Formatter;
 import android.util.Log;
@@ -44,6 +46,7 @@ import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadTask;
 import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
+import com.mokee.center.misc.Constants;
 import com.mokee.center.util.CommonUtils;
 
 import java.io.IOException;
@@ -139,13 +142,28 @@ public class UpdaterService extends Service {
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_STATUS);
 //        intentFilter.addAction(UpdaterController.ACTION_UPDATE_REMOVED);
         LocalBroadcastManager.getInstance(this).registerReceiver(mBroadcastReceiver, intentFilter);
-        mConnectivityManager.registerNetworkCallback(new NetworkRequest.Builder().build(), mNetworkCallback);
+
+        NetworkRequest.Builder req = new NetworkRequest.Builder();
+        req.addTransportType(NetworkCapabilities.TRANSPORT_WIFI);
+        req.addTransportType(NetworkCapabilities.TRANSPORT_ETHERNET);
+        req.addTransportType(NetworkCapabilities.TRANSPORT_BLUETOOTH);
+        req.addTransportType(NetworkCapabilities.TRANSPORT_VPN);
+        boolean warn = CommonUtils.getMainPrefs(this).getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
+        if (!warn) {
+            req.addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR);
+        }
+        mConnectivityManager.registerNetworkCallback(req.build(), mNetworkCallback);
     }
 
     private NetworkCallback mNetworkCallback = new NetworkCallback() {
         @Override
         public void onAvailable(Network network) {
             super.onAvailable(network);
+            mConnectivityManager.bindProcessToNetwork(network);
+            String downloadId = mUpdaterController.getActiveDownloadTag();
+            if (!TextUtils.isEmpty(downloadId)) {
+                mOkDownload.getTask(downloadId).start();
+            }
         }
     };
 
