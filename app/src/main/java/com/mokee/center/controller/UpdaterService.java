@@ -229,7 +229,7 @@ public class UpdaterService extends Service {
             case Progress.WAITING: {
                 mNotificationBuilder.mActions.clear();
                 mNotificationBuilder.setProgress(0, 0, true);
-                mNotificationStyle.setSummaryText(null);
+//                mNotificationStyle.setSummaryText(null);
                 String text = getString(R.string.download_starting_notification);
                 mNotificationStyle.bigText(text);
                 mNotificationBuilder.setStyle(mNotificationStyle);
