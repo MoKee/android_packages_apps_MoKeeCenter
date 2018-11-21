@@ -33,7 +33,7 @@ import com.lzy.okgo.model.Progress;
 import com.mokee.center.R;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.model.UpdateInfo;
-import com.mokee.center.util.CommonUtils;
+import com.mokee.center.util.CommonUtil;
 
 import java.io.IOException;
 import java.net.SocketException;
@@ -158,7 +158,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
             if (diffSize == 0) {
                 mSummaryView.setText(R.string.update_not_support_incremental_updates);
             } else {
-                mSummaryView.setText(getContext().getString(CommonUtils.isIncrementalUpdate(mUpdateInfo.getName())
+                mSummaryView.setText(getContext().getString(CommonUtil.isIncrementalUpdate(mUpdateInfo.getName())
                                 ? R.string.update_supported_incremental_updates_ota
                                 : R.string.update_supported_incremental_updates_full,
                         Formatter.formatFileSize(getContext(), diffSize)));
@@ -199,11 +199,11 @@ public class UpdatePreference extends Preference implements View.OnClickListener
     @Override
     public void onClick(View view) {
         if (mOnActionListener == null) return;
-        SharedPreferences mMainPrefs = CommonUtils.getMainPrefs(getContext());
+        SharedPreferences mMainPrefs = CommonUtil.getMainPrefs(getContext());
         boolean warn = mMainPrefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
         if (mProgress == null || mProgress.status == Progress.PAUSE
                 || mProgress.status == Progress.ERROR || mProgress.status == Progress.NONE) {
-            if (CommonUtils.isOnWifiOrEthernet(getContext()) || !warn) {
+            if (CommonUtil.isOnWifiOrEthernet(getContext()) || !warn) {
                 execAction();
                 return;
             }

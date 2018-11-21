@@ -45,7 +45,7 @@ import com.lzy.okserver.download.DownloadTask;
 import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
 import com.mokee.center.misc.Constants;
-import com.mokee.center.util.CommonUtils;
+import com.mokee.center.util.CommonUtil;
 
 import java.io.IOException;
 import java.net.ProtocolException;
@@ -146,7 +146,7 @@ public class UpdaterService extends Service {
         req.addTransportType(NetworkCapabilities.TRANSPORT_ETHERNET);
         req.addTransportType(NetworkCapabilities.TRANSPORT_BLUETOOTH);
         req.addTransportType(NetworkCapabilities.TRANSPORT_VPN);
-        boolean warn = CommonUtils.getMainPrefs(this).getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
+        boolean warn = CommonUtil.getMainPrefs(this).getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
         if (!warn) {
             req.addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR);
         }
@@ -275,6 +275,7 @@ public class UpdaterService extends Service {
                 break;
             }
             case Progress.FINISH: {
+//                FileUtil
                 stopForeground(STOP_FOREGROUND_DETACH);
                 mNotificationBuilder.mActions.clear();
                 mNotificationBuilder.setStyle(null);

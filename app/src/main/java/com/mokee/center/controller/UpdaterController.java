@@ -36,7 +36,8 @@ import com.lzy.okserver.download.DownloadTask;
 import com.mokee.center.R;
 import com.mokee.center.misc.State;
 import com.mokee.center.model.UpdateInfo;
-import com.mokee.center.util.CommonUtils;
+import com.mokee.center.util.CommonUtil;
+import com.mokee.center.util.FileUtil;
 
 import java.io.File;
 import java.util.HashMap;
@@ -90,7 +91,7 @@ public class UpdaterController {
 //        CommonUtils.cleanupDownloadsDir(context);
 
         Map<String, DownloadTask> downloadTaskMap = getDownloadTaskMap();
-        for (UpdateInfo updateInfo : State.loadState(CommonUtils.getCachedUpdateList(context))) {
+        for (UpdateInfo updateInfo : State.loadState(FileUtil.getCachedUpdateList(context))) {
             DownloadTask downloadTask = downloadTaskMap.get(updateInfo.getName());
             if (downloadTask != null) {
                 if (!new File(downloadTask.progress.filePath).exists()) {
@@ -216,7 +217,7 @@ public class UpdaterController {
                     long speed = progress.speed != 0 ? progress.speed : progress.currentSize / spendTime;
                     if (speed == 0) return;
 
-                    CharSequence eta = CommonUtils.calculateEta(mContext, speed, progress.totalSize, progress.currentSize);
+                    CharSequence eta = CommonUtil.calculateEta(mContext, speed, progress.totalSize, progress.currentSize);
                     CharSequence etaWithSpeed = mContext.getString(R.string.download_speed, eta, Formatter.formatFileSize(mContext, speed));
                     progress.extra1 = etaWithSpeed.toString();
 

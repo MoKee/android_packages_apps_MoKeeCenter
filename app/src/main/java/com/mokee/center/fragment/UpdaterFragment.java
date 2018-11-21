@@ -61,8 +61,9 @@ import com.mokee.center.preference.UpdateTypePreference;
 import com.mokee.center.preference.VerifiedUpdatesPreference;
 import com.mokee.center.receiver.UpdatesCheckReceiver;
 import com.mokee.center.controller.UpdaterService;
-import com.mokee.center.util.CommonUtils;
-import com.mokee.center.util.RequestUtils;
+import com.mokee.center.util.CommonUtil;
+import com.mokee.center.util.FileUtil;
+import com.mokee.center.util.RequestUtil;
 
 import org.json.JSONException;
 
@@ -145,7 +146,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         mRefreshAnimation.setDuration(1000);
 
         mOkDownload = OkDownload.getInstance();
-        mOkDownload.setFolder(CommonUtils.getDownloadPath(getContext()).getAbsolutePath());
+        mOkDownload.setFolder(CommonUtil.getDownloadPath(getContext()).getAbsolutePath());
         mOkDownload.getThreadPool().setCorePoolSize(1);
     }
 
@@ -154,7 +155,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     public void onCreatePreferences(Bundle bundle, String s) {
         addPreferencesFromResource(R.xml.updater);
         setHasOptionsMenu(true);
-        mDonationPrefs = CommonUtils.getDonationPrefs(getContext());
+        mDonationPrefs = CommonUtil.getDonationPrefs(getContext());
         mDonationRecordPreference = (DonationRecordPreference) findPreference(PREF_DONATION_RECORD);
         mIncrementalUpdatesPreference = (IncrementalUpdatesPreference) findPreference(PREF_INCREMENTAL_UPDATES);
         mIncrementalUpdatesPreference.setOnPreferenceClickListener(this);
@@ -177,7 +178,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         switch (resultCode) {
             case DONATION_RESULT_OK:
             case DONATION_RESULT_SUCCESS:
-                CommonUtils.updateDonationInfo(getContext());
+                CommonUtil.updateDonationInfo(getContext());
                 mDonationRecordPreference.updateRankInfo();
                 mIncrementalUpdatesPreference.updateStatus();
                 mVerifiedUpdatesPreference.updateStatus();
@@ -225,7 +226,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                 downloadUpdatesList(true);
                 return true;
             case R.id.action_restore:
-                CommonUtils.restoreLicenseRequest(getActivity());
+                CommonUtil.restoreLicenseRequest(getActivity());
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -272,7 +273,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     }
 
     private void getUpdatesList() {
-        File jsonFile = CommonUtils.getCachedUpdateList(getContext());
+        File jsonFile = FileUtil.getCachedUpdateList(getContext());
         if (jsonFile.exists()) {
             loadUpdatesList(State.loadState(jsonFile), false);
             Log.d(TAG, "Cached list parsed");
@@ -283,14 +284,14 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
 
     private void processNewJson(Response<String> response, File json, File jsonNew, boolean manualRefresh) {
         try {
-            final LinkedList<UpdateInfo> updates = CommonUtils.parseJson(response.body(), TAG);
+            final LinkedList<UpdateInfo> updates = CommonUtil.parseJson(response.body(), TAG);
             State.saveState(updates, jsonNew);
             loadUpdatesList(updates, manualRefresh);
-            SharedPreferences preferences = CommonUtils.getMainPrefs(getActivity());
+            SharedPreferences preferences = CommonUtil.getMainPrefs(getActivity());
             preferences.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
             ((LastUpdateCheckPreference)findPreference(PREF_LAST_UPDATE_CHECK)).updateSummary();
             if (json.exists() && preferences.getBoolean(Constants.PREF_AUTO_UPDATES_CHECK, true)
-                    && CommonUtils.checkForNewUpdates(json, jsonNew)) {
+                    && CommonUtil.checkForNewUpdates(json, jsonNew)) {
                 UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getActivity());
             }
             // In case we set a one-shot check because of a previous failure
@@ -305,9 +306,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     }
 
     private void downloadUpdatesList(final boolean manualRefresh) {
-        final File json = CommonUtils.getCachedUpdateList(getContext());
+        final File json = FileUtil.getCachedUpdateList(getContext());
         final File jsonNew = new File(json.getAbsolutePath() + UUID.randomUUID());
-        RequestUtils.fetchAvailableUpdates(getContext(), new StringCallback() {
+        RequestUtil.fetchAvailableUpdates(getContext(), new StringCallback() {
             @Override
             public void onSuccess(Response<String> response) {
                 processNewJson(response, json, jsonNew, manualRefresh);
@@ -355,7 +356,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         if (key.equals(KEY_DONATION_AMOUNT)) {
             if (mDonationPrefs.getInt(KEY_DONATION_AMOUNT, 0)
                     > MKCenterApplication.getInstance().getDonationInfo().getPaid()) {
-                CommonUtils.restoreLicenseRequest(getActivity());
+                CommonUtil.restoreLicenseRequest(getActivity());
             }
         }
     }
@@ -374,7 +375,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference instanceof UpdateTypePreference) {
             if (TextUtils.equals(mUpdateTypePreference.getValue(), newValue.toString())) return false;
-            CommonUtils.getMainPrefs(getContext()).edit().putString(PREF_UPDATE_TYPE, newValue.toString()).apply();
+            CommonUtil.getMainPrefs(getContext()).edit().putString(PREF_UPDATE_TYPE, newValue.toString()).apply();
             downloadUpdatesList(true);
             return true;
         }

@@ -25,7 +25,7 @@ import android.util.AttributeSet;
 
 import com.mokee.center.R;
 import com.mokee.center.misc.Constants;
-import com.mokee.center.util.CommonUtils;
+import com.mokee.center.util.CommonUtil;
 
 public class LastUpdateCheckPreference extends Preference {
 
@@ -33,7 +33,7 @@ public class LastUpdateCheckPreference extends Preference {
 
     public LastUpdateCheckPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mMainPrefs = CommonUtils.getMainPrefs(context);
+        mMainPrefs = CommonUtil.getMainPrefs(context);
     }
 
     public void updateSummary() {

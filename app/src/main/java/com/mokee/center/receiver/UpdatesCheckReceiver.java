@@ -35,8 +35,9 @@ import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
 import com.mokee.center.misc.State;
 import com.mokee.center.model.UpdateInfo;
-import com.mokee.center.util.CommonUtils;
-import com.mokee.center.util.RequestUtils;
+import com.mokee.center.util.CommonUtil;
+import com.mokee.center.util.FileUtil;
+import com.mokee.center.util.RequestUtil;
 
 import org.json.JSONException;
 
@@ -67,7 +68,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
             //cleanup downloads dir
         }
 
-        final SharedPreferences mMainPrefs = CommonUtils.getMainPrefs(context);
+        final SharedPreferences mMainPrefs = CommonUtil.getMainPrefs(context);
         if (!mMainPrefs.getBoolean(PREF_AUTO_UPDATES_CHECK, true)) {
             return;
         }
@@ -77,21 +78,21 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
             scheduleRepeatingUpdatesCheck(context);
         }
 
-        if (!CommonUtils.isNetworkAvailable(context)) {
+        if (!CommonUtil.isNetworkAvailable(context)) {
             Log.d(TAG, "Network not available, scheduling new check");
             scheduleUpdatesCheck(context);
             return;
         }
 
-        final File json = CommonUtils.getCachedUpdateList(context);
+        final File json = FileUtil.getCachedUpdateList(context);
         final File jsonNew = new File(json.getAbsolutePath() + UUID.randomUUID());
-        RequestUtils.fetchAvailableUpdates(context, new StringCallback() {
+        RequestUtil.fetchAvailableUpdates(context, new StringCallback() {
             @Override
             public void onSuccess(Response<String> response) {
                 try {
-                    final LinkedList<UpdateInfo> updates = CommonUtils.parseJson(response.body(), TAG);
+                    final LinkedList<UpdateInfo> updates = CommonUtil.parseJson(response.body(), TAG);
                     State.saveState(updates, jsonNew);
-                    if (json.exists() && CommonUtils.checkForNewUpdates(json, jsonNew)) {
+                    if (json.exists() && CommonUtil.checkForNewUpdates(json, jsonNew)) {
                         showNotification(context, updates);
                         updateRepeatingUpdatesCheck(context);
                     }
@@ -214,7 +215,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
     private static long millisToNextRelease(Context context) {
         final long extraMillis = 3 * AlarmManager.INTERVAL_HOUR;
 
-        LinkedList<UpdateInfo> updates = State.loadState(CommonUtils.getCachedUpdateList(context));
+        LinkedList<UpdateInfo> updates = State.loadState(FileUtil.getCachedUpdateList(context));
 
         if (updates == null || updates.size() == 0) {
             return SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_DAY;

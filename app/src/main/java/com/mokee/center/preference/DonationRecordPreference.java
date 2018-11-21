@@ -30,7 +30,7 @@ import com.lzy.okgo.model.Response;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.model.RankInfo;
-import com.mokee.center.util.CommonUtils;
+import com.mokee.center.util.CommonUtil;
 import com.mokee.os.Build;
 
 import static com.mokee.center.misc.Constants.KEY_DONATION_AMOUNT;
@@ -49,7 +49,7 @@ public class DonationRecordPreference extends Preference {
 
     public DonationRecordPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
-        mDonationPrefs = CommonUtils.getDonationPrefs(context);
+        mDonationPrefs = CommonUtil.getDonationPrefs(context);
     }
 
     @Override

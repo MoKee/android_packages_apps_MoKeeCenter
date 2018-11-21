@@ -34,14 +34,14 @@ import static com.mokee.center.misc.Constants.PREF_INCREMENTAL_UPDATES;
 import static com.mokee.center.misc.Constants.PREF_UPDATE_TYPE;
 import static com.mokee.center.misc.Constants.PREF_VERIFIED_UPDATES;
 
-public class RequestUtils {
+public class RequestUtil {
 
     public static void fetchAvailableUpdates(Context context, StringCallback callback) {
         HttpParams params = new HttpParams();
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
-        SharedPreferences mMainPrefs = CommonUtils.getMainPrefs(context);
+        SharedPreferences mMainPrefs = CommonUtil.getMainPrefs(context);
 
-        String suggestUpdateType = CommonUtils.getSuggestUpdateType();
+        String suggestUpdateType = CommonUtil.getSuggestUpdateType();
         String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, String.valueOf(suggestUpdateType));
         if (!suggestUpdateType.equals("3") && configUpdateType.equals("3")) {
             configUpdateType = String.valueOf(suggestUpdateType);

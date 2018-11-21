@@ -37,7 +37,7 @@ import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.dialog.DonationDialogBuilder;
 import com.mokee.center.misc.Constants;
-import com.mokee.center.util.CommonUtils;
+import com.mokee.center.util.CommonUtil;
 
 import static com.mokee.center.misc.Constants.DONATION_RESULT_FAILURE;
 import static com.mokee.center.misc.Constants.DONATION_RESULT_NOT_FOUND;
@@ -133,28 +133,28 @@ public class MainActivity extends AppCompatActivity
     public boolean onNavigationItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.nav_forum:
-                CommonUtils.openLink(this, Constants.NAV_FORUM_URL);
+                CommonUtil.openLink(this, Constants.NAV_FORUM_URL);
                 break;
             case R.id.nav_bug_reports:
-                CommonUtils.openLink(this, Constants.NAV_BUG_REPORTS_URL);
+                CommonUtil.openLink(this, Constants.NAV_BUG_REPORTS_URL);
                 break;
             case R.id.nav_open_source:
-                CommonUtils.openLink(this, Constants.NAV_OPEN_SOURCE_URL);
+                CommonUtil.openLink(this, Constants.NAV_OPEN_SOURCE_URL);
                 break;
             case R.id.nav_code_review:
-                CommonUtils.openLink(this, Constants.NAV_CODE_REVIEW_URL);
+                CommonUtil.openLink(this, Constants.NAV_CODE_REVIEW_URL);
                 break;
             case R.id.nav_translate:
-                CommonUtils.openLink(this, Constants.NAV_TRANSLATE_URL);
+                CommonUtil.openLink(this, Constants.NAV_TRANSLATE_URL);
                 break;
             case R.id.nav_weibo:
-                CommonUtils.openLink(this, Constants.NAV_WEIBO_URL);
+                CommonUtil.openLink(this, Constants.NAV_WEIBO_URL);
                 break;
             case R.id.nav_qqchat:
-                CommonUtils.openLink(this, Constants.NAV_QQCHAT_URL);
+                CommonUtil.openLink(this, Constants.NAV_QQCHAT_URL);
                 break;
             case R.id.nav_telegram:
-                CommonUtils.openLink(this, Constants.NAV_TELEGRAM_URL);
+                CommonUtil.openLink(this, Constants.NAV_TELEGRAM_URL);
                 break;
         }
         DrawerLayout drawer = findViewById(R.id.drawer_layout);

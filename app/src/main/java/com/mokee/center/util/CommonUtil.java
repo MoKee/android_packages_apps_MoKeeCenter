@@ -18,7 +18,6 @@
 package com.mokee.center.util;
 
 import android.app.Activity;
-import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -48,22 +47,15 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
-import static android.content.Context.NOTIFICATION_SERVICE;
-import static com.mokee.center.controller.UpdaterService.NOTIFICATION_ID;
 import static com.mokee.center.misc.Constants.ACTION_PAYMENT_REQUEST;
 
-public class CommonUtils {
-
-    public static File getCachedUpdateList(Context context) {
-        return new File(context.getCacheDir(), "updates.state");
-    }
+public class CommonUtil {
 
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(
@@ -222,7 +214,7 @@ public class CommonUtils {
                 Log.e(tag, "Could not parse update object, index=" + i, e);
             }
         }
-        return CommonUtils.getSortedUpdates(updates);
+        return CommonUtil.getSortedUpdates(updates);
     }
 
     private static UpdateInfo parseJsonUpdate(JSONObject object) throws JSONException {
