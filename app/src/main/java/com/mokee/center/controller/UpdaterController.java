@@ -44,6 +44,7 @@ import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class UpdaterController {
 
@@ -112,10 +113,11 @@ public class UpdaterController {
     private Map<String, UpdateInfo> mAvailableUpdates = new LinkedHashMap<>();
 
     public void setUpdatesAvailableOnline(List<String> downloadIds) {
-        for (UpdateInfo updateInfo : mAvailableUpdates.values()) {
-            if (!downloadIds.contains(updateInfo.getName())) {
-                Log.d(TAG, updateInfo.getName() + " no longer available online, removing");
-                mAvailableUpdates.remove(updateInfo.getName());
+        for (Iterator<Entry<String, UpdateInfo>> iterator = mAvailableUpdates.entrySet().iterator(); iterator.hasNext();) {
+            Entry<String, UpdateInfo> item = iterator.next();
+            if (!downloadIds.contains(item.getKey())) {
+                Log.d(TAG, item.getKey() + " no longer available online, removing");
+                iterator.remove();
             }
         }
     }
@@ -159,13 +161,11 @@ public class UpdaterController {
         DownloadTask task = OkDownload.request(mAvailableUpdates.get(downloadId).getName(), request).save().register(new LogDownloadListener());
         task.start();
         mAvailableUpdates.get(downloadId).setProgress(task.progress);
-        mActiveDownloads++;
     }
 
     public void resumeDownload(String downloadId) {
         Log.d(TAG, "Resuming " + downloadId);
         mOkDownload.getTask(downloadId).register(new LogDownloadListener()).start();
-        mActiveDownloads++;
     }
 
     public void pauseDownload(String downloadId) {
@@ -175,7 +175,6 @@ public class UpdaterController {
     }
 
     public boolean hasActiveDownloads() {
-        Log.i("MOKEEE", "hasActiveDownloads: " + mActiveDownloads);
         return mActiveDownloads > 0;
     }
 
@@ -191,6 +190,7 @@ public class UpdaterController {
         @Override
         public void onStart(Progress progress) {
             mWakeLock.acquire();
+            mActiveDownloads++;
         }
 
         @Override

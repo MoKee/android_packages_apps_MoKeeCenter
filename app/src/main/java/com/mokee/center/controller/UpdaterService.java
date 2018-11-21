@@ -200,6 +200,7 @@ public class UpdaterService extends Service {
     }
 
     private void tryStopSelf() {
+        Log.i("MOKEEE", "hasActiveDownloads: " + mUpdaterController.hasActiveDownloads());
         if (!mHasClients && !mUpdaterController.hasActiveDownloads()) {
 //        if (!mHasClients && !mUpdaterController.hasActiveDownloads() &&
 //                !mUpdaterController.isInstallingUpdate()) {

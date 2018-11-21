@@ -27,7 +27,9 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.support.v4.content.LocalBroadcastManager;
+import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceFragmentCompat;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -39,6 +41,7 @@ import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
+import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
 import com.lzy.okserver.OkDownload;
@@ -54,6 +57,7 @@ import com.mokee.center.preference.DonationRecordPreference;
 import com.mokee.center.preference.IncrementalUpdatesPreference;
 import com.mokee.center.preference.LastUpdateCheckPreference;
 import com.mokee.center.preference.UpdatePreference;
+import com.mokee.center.preference.UpdateTypePreference;
 import com.mokee.center.preference.VerifiedUpdatesPreference;
 import com.mokee.center.receiver.UpdatesCheckReceiver;
 import com.mokee.center.controller.UpdaterService;
@@ -63,9 +67,7 @@ import com.mokee.center.util.RequestUtils;
 import org.json.JSONException;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
@@ -77,9 +79,10 @@ import static com.mokee.center.misc.Constants.PREF_DONATION_RECORD;
 import static com.mokee.center.misc.Constants.PREF_INCREMENTAL_UPDATES;
 import static com.mokee.center.misc.Constants.PREF_LAST_UPDATE_CHECK;
 import static com.mokee.center.misc.Constants.PREF_UPDATES_CATEGORY;
+import static com.mokee.center.misc.Constants.PREF_UPDATE_TYPE;
 import static com.mokee.center.misc.Constants.PREF_VERIFIED_UPDATES;
 
-public class UpdaterFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener {
+public class UpdaterFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener, Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
 
     private static final String TAG = UpdaterFragment.class.getName();
 
@@ -91,7 +94,12 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
 
     private MainActivity mMainActivity;
     private InterstitialAd mWelcomeInterstitialAd;
+
     private AvailableUpdatesPreferenceCategory mUpdatesCategory;
+    private DonationRecordPreference mDonationRecordPreference;
+    private IncrementalUpdatesPreference mIncrementalUpdatesPreference;
+    private VerifiedUpdatesPreference mVerifiedUpdatesPreference;
+    private UpdateTypePreference mUpdateTypePreference;
 
     private SharedPreferences mDonationPrefs;
 
@@ -147,6 +155,13 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         addPreferencesFromResource(R.xml.updater);
         setHasOptionsMenu(true);
         mDonationPrefs = CommonUtils.getDonationPrefs(getContext());
+        mDonationRecordPreference = (DonationRecordPreference) findPreference(PREF_DONATION_RECORD);
+        mIncrementalUpdatesPreference = (IncrementalUpdatesPreference) findPreference(PREF_INCREMENTAL_UPDATES);
+        mIncrementalUpdatesPreference.setOnPreferenceClickListener(this);
+        mVerifiedUpdatesPreference = (VerifiedUpdatesPreference) findPreference(PREF_VERIFIED_UPDATES);
+        mVerifiedUpdatesPreference.setOnPreferenceClickListener(this);
+        mUpdateTypePreference = (UpdateTypePreference) findPreference(PREF_UPDATE_TYPE);
+        mUpdateTypePreference.setOnPreferenceChangeListener(this);
         mUpdatesCategory = (AvailableUpdatesPreferenceCategory) findPreference(PREF_UPDATES_CATEGORY);
     }
 
@@ -163,9 +178,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             case DONATION_RESULT_OK:
             case DONATION_RESULT_SUCCESS:
                 CommonUtils.updateDonationInfo(getContext());
-                ((DonationRecordPreference) findPreference(PREF_DONATION_RECORD)).updateRankInfo();
-                ((IncrementalUpdatesPreference) findPreference(PREF_INCREMENTAL_UPDATES)).updateStatus();
-                ((VerifiedUpdatesPreference) findPreference(PREF_VERIFIED_UPDATES)).updateStatus();
+                mDonationRecordPreference.updateRankInfo();
+                mIncrementalUpdatesPreference.updateStatus();
+                mVerifiedUpdatesPreference.updateStatus();
                 break;
         }
     }
@@ -195,6 +210,12 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             mMainActivity.unbindService(mConnection);
         }
         super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        OkGo.getInstance().cancelAll();
     }
 
     @Override
@@ -265,19 +286,21 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             final LinkedList<UpdateInfo> updates = CommonUtils.parseJson(response.body(), TAG);
             State.saveState(updates, jsonNew);
             loadUpdatesList(updates, manualRefresh);
-            SharedPreferences preferences = CommonUtils.getMainPrefs(getContext());
+            SharedPreferences preferences = CommonUtils.getMainPrefs(getActivity());
             preferences.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
             ((LastUpdateCheckPreference)findPreference(PREF_LAST_UPDATE_CHECK)).updateSummary();
             if (json.exists() && preferences.getBoolean(Constants.PREF_AUTO_UPDATES_CHECK, true)
                     && CommonUtils.checkForNewUpdates(json, jsonNew)) {
-                UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getContext());
+                UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getActivity());
             }
             // In case we set a one-shot check because of a previous failure
-            UpdatesCheckReceiver.cancelUpdatesCheck(getContext());
+            UpdatesCheckReceiver.cancelUpdatesCheck(getActivity());
             jsonNew.renameTo(json);
         } catch (JSONException e) {
             Log.e(TAG, "Could not read json", e);
-            mMainActivity.makeSnackbar(R.string.updates_check_failed).show();
+            json.delete();
+            loadUpdatesList(new LinkedList<>(), manualRefresh);
+            mMainActivity.makeSnackbar(R.string.no_updates_found).show();
         }
     }
 
@@ -313,8 +336,8 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             mRefreshAnimation.setRepeatCount(Animation.INFINITE);
             mRefreshIconView.startAnimation(mRefreshAnimation);
             mRefreshIconView.setEnabled(false);
-            findPreference(PREF_INCREMENTAL_UPDATES).setEnabled(false);
-            findPreference(PREF_VERIFIED_UPDATES).setEnabled(false);
+            mIncrementalUpdatesPreference.setEnabled(false);
+            mVerifiedUpdatesPreference.setEnabled(false);
         }
     }
 
@@ -322,8 +345,8 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         if (mRefreshIconView != null) {
             mRefreshAnimation.setRepeatCount(0);
             mRefreshIconView.setEnabled(true);
-            findPreference(PREF_INCREMENTAL_UPDATES).setEnabled(true);
-            findPreference(PREF_VERIFIED_UPDATES).setEnabled(true);
+            mIncrementalUpdatesPreference.setEnabled(true);
+            mVerifiedUpdatesPreference.setEnabled(true);
         }
     }
 
@@ -336,4 +359,26 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             }
         }
     }
+
+    @Override
+    public boolean onPreferenceClick(Preference preference) {
+        if (preference instanceof IncrementalUpdatesPreference
+                || preference instanceof VerifiedUpdatesPreference) {
+            downloadUpdatesList(true);
+            return true;
+        }
+        return false;
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference instanceof UpdateTypePreference) {
+            if (TextUtils.equals(mUpdateTypePreference.getValue(), newValue.toString())) return false;
+            CommonUtils.getMainPrefs(getContext()).edit().putString(PREF_UPDATE_TYPE, newValue.toString()).apply();
+            downloadUpdatesList(true);
+            return true;
+        }
+        return false;
+    }
+
 }

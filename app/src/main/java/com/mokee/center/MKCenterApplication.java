@@ -52,6 +52,4 @@ public class MKCenterApplication extends Application {
         OkGo.getInstance().init(this).addCommonHeaders(httpHeaders);
     }
 
-
-
 }
