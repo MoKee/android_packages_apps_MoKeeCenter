@@ -21,6 +21,7 @@ import android.app.Application;
 
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.model.HttpHeaders;
+import com.lzy.okserver.OkDownload;
 import com.mokee.center.model.DonationInfo;
 import com.mokee.center.util.CommonUtils;
 
@@ -50,5 +51,7 @@ public class MKCenterApplication extends Application {
         httpHeaders.put("User-Agent", USER_AGENT);
         OkGo.getInstance().init(this).addCommonHeaders(httpHeaders);
     }
+
+
 
 }

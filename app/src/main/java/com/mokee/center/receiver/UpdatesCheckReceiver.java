@@ -119,7 +119,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         NotificationChannel notificationChannel = new NotificationChannel(
                 NEW_UPDATES_NOTIFICATION_CHANNEL,
                 context.getString(R.string.new_updates_channel_title),
-                NotificationManager.IMPORTANCE_HIGH);
+                NotificationManager.IMPORTANCE_LOW);
         NotificationCompat.Builder notificationBuilder = new NotificationCompat.Builder(context,
                 NEW_UPDATES_NOTIFICATION_CHANNEL);
 

@@ -19,8 +19,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    android:layout_marginTop="8dp">
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,10 +31,10 @@
             android:id="@+id/message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="24dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/donation_dialog_message"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
@@ -42,8 +42,8 @@
             android:id="@+id/price"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingEnd="24dp"
             android:paddingStart="24dp"
+            android:paddingEnd="24dp"
             android:progress="0" />
 
         <ProgressBar
@@ -51,17 +51,17 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingEnd="20dp"
             android:paddingStart="20dp"
+            android:paddingEnd="20dp"
             android:visibility="gone" />
 
         <TextView
             android:id="@+id/tips"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="24dp"
             android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="8dp"
             android:textAppearance="@style/TextAppearance.AppCompat.Small"
             android:textColor="@color/colorAccent"
             tools:text="@string/unlock_features_all_title" />
@@ -70,8 +70,8 @@
             android:id="@+id/via"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
             android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
             android:checkedButton="@+id/alipay"
             android:orientation="horizontal">
 

@@ -47,4 +47,8 @@
             android:title="@string/update_type_title" />
     </PreferenceCategory>
 
+    <com.mokee.center.preference.AvailableUpdatesPreferenceCategory
+        android:key="updates_category"
+        android:title="@string/available_updates_title" />
+
 </PreferenceScreen>

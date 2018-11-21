@@ -18,6 +18,7 @@
 package com.mokee.center.util;
 
 import android.app.Activity;
+import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -27,9 +28,11 @@ import android.net.Uri;
 import android.os.Environment;
 import android.support.v7.preference.PreferenceManager;
 import android.text.TextUtils;
+import android.text.format.DateUtils;
 import android.util.Log;
 
 import com.mokee.center.MKCenterApplication;
+import com.mokee.center.R;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.misc.State;
 import com.mokee.center.model.DonationInfo;
@@ -52,6 +55,8 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Set;
 
+import static android.content.Context.NOTIFICATION_SERVICE;
+import static com.mokee.center.controller.UpdaterService.NOTIFICATION_ID;
 import static com.mokee.center.misc.Constants.ACTION_PAYMENT_REQUEST;
 
 public class CommonUtils {
@@ -64,7 +69,15 @@ public class CommonUtils {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(
                 Context.CONNECTIVITY_SERVICE);
         NetworkInfo info = cm.getActiveNetworkInfo();
-        return info != null && info.isConnected();
+        return !(info == null || !info.isConnected() || !info.isAvailable());
+    }
+
+    public static boolean isOnWifiOrEthernet(Context context) {
+        ConnectivityManager cm = (ConnectivityManager) context.getSystemService(
+                Context.CONNECTIVITY_SERVICE);
+        NetworkInfo info = cm.getActiveNetworkInfo();
+        return (info != null && (info.getType() == ConnectivityManager.TYPE_ETHERNET
+                || info.getType() == ConnectivityManager.TYPE_WIFI));
     }
 
     public static File getDownloadPath(Context context) {
@@ -152,7 +165,7 @@ public class CommonUtils {
             if (codeo2 - codeo1 == 0) {
                 return Long.compare(getBuildDate(o2.getName()), getBuildDate(o1.getName()));
             } else {
-                return Float.compare(codeo2, codeo1);
+                return Float.compare(codeo1, codeo2);
             }
         });
         return updates;
@@ -161,7 +174,7 @@ public class CommonUtils {
     public static long getBuildDate(String version) {
         String[] info = version.split("-");
         String date;
-        if (version.toLowerCase(Locale.ENGLISH).startsWith("ota")) {
+        if (isIncrementalUpdate(version)) {
             date = info[4];
         } else {
             date = info[2];
@@ -176,7 +189,7 @@ public class CommonUtils {
     public static float getReleaseCode(String version) {
         String[] info = version.split("-");
         String code;
-        if (version.toLowerCase(Locale.ENGLISH).startsWith("ota")) {
+        if (isIncrementalUpdate(version)) {
             code = info[1];
         } else {
             code = info[0];
@@ -186,6 +199,10 @@ public class CommonUtils {
         } else {
             return Float.valueOf(code.substring(2, code.length()));
         }
+    }
+
+    public static boolean isIncrementalUpdate(String version) {
+        return version.toLowerCase(Locale.ENGLISH).startsWith("ota");
     }
 
     public static LinkedList<UpdateInfo> parseJson(String json, String tag)
@@ -218,6 +235,10 @@ public class CommonUtils {
                 .setDownloadUrl(object.getString("rom"))
                 .setChangelogUrl(object.getString("log")).build();
         return updateInfo;
+    }
+
+    public static CharSequence calculateEta(Context context, long speed, long totalBytes, long totalBytesRead) {
+        return context.getString(R.string.download_remaining, DateUtils.formatDuration((totalBytes - totalBytesRead) / speed * 1000));
     }
 
     public static SharedPreferences getDonationPrefs(Context context) {

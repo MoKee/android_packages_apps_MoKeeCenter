@@ -15,13 +15,13 @@
      You should have received a copy of the GNU General Public License
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">魔趣中心</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">开启导航抽屉</string>
+    <string name="navigation_drawer_close">关闭导航抽屉</string>
     <string name="nav_header_title">魔趣开源项目</string>
     <string name="nav_header_subtitle">可能是中国最好的安卓开源ROM</string>
-    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_desc">导航标题</string>
     <string name="action_settings">设置</string>
     <string name="action_restore">恢复授权</string>
     <string name="action_donation">捐赠</string>
@@ -82,7 +82,12 @@
     <string name="wechat">微信</string>
     <string name="paypal">贝宝</string>
 
+    <string name="updates_found">找到新的更新</string>
+    <string name="no_updates_found">没有找到新的更新</string>
     <string name="updates_check_failed">检查更新失败，请检查您的网络连接并稍后重试。</string>
+
+    <string name="available_updates_title">可用更新</string>
+    <string name="no_available_updates_intro">最后一次检测并未找到可用的更新，请点击右上角的刷新按钮尝试手动检查更新。</string>
 
     <string name="text_copied">文本已复制到剪贴板。</string>
     <string name="unknown">未知</string>
@@ -90,8 +95,25 @@
     <string name="solution">解决方案</string>
     <string name="faq">疑问解答</string>
     <string name="next">下一步</string>
+    <string name="pause">暂停</string>
+    <string name="resume">继续</string>
     <string name="activity_not_found">未安装该应用。</string>
     <string name="payment_not_found">未安装魔趣支付应用。</string>
     <string name="new_updates_channel_title">新的系统更新</string>
     <string name="new_updates_found_title">新的系统更新</string>
+
+    <string name="update_not_support_incremental_updates">不支持增量更新到此版本</string>
+    <string name="update_supported_incremental_updates_full">开启增量更新可为您节省 %s 流量</string>
+    <string name="update_supported_incremental_updates_ota">与完整包相比可为您节省 %s 流量</string>
+
+    <string name="ongoing_channel_title">正在下载</string>
+    <string name="downloading_notification">下载中</string>
+    <string name="download_paused_notification">下载已暂停</string>
+    <string name="download_starting_notification">正在开始下载</string>
+    <string name="download_completed_notification">下载完成</string>
+    <string name="download_waiting_network_notification">正在等待连接到网络</string>
+    <string name="download_remaining">还剩 <xliff:g id="DURATION">%s</xliff:g></string>
+    <string name="download_speed">%1$s, %2$s/秒</string>
+    <string name="download_already_running">已有一个正在运行的下载</string>
+
 </resources>

@@ -20,6 +20,8 @@ package com.mokee.center.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.lzy.okgo.model.Progress;
+
 import java.io.Serializable;
 
 public class UpdateInfo implements Parcelable, Serializable {
@@ -36,17 +38,18 @@ public class UpdateInfo implements Parcelable, Serializable {
 
     private static final long serialVersionUID = 5499890003569313403L;
     private String mName;
-    private String mMD5Sum;
+    private String mMd5;
     private long mDiffSize;
     private long mFileSize;
     private long mTimestamp;
     private String mDownloadUrl;
     private String mChangelogUrl;
+    private Progress mProgress;
 
-    private UpdateInfo() {
+    public UpdateInfo() {
     }
 
-    private UpdateInfo(Parcel in) {
+    public UpdateInfo(Parcel in) {
         readFromParcel(in);
     }
 
@@ -54,8 +57,8 @@ public class UpdateInfo implements Parcelable, Serializable {
         return mName;
     }
 
-    public String getMD5Sum() {
-        return mMD5Sum;
+    public String getMd5() {
+        return mMd5;
     }
 
     public long getDiffSize() {
@@ -74,8 +77,24 @@ public class UpdateInfo implements Parcelable, Serializable {
         return mDownloadUrl;
     }
 
+    public void setDownloadUrl(String downloadUrl) {
+        this.mDownloadUrl = downloadUrl;
+    }
+
     public String getChangelogUrl() {
         return mChangelogUrl;
+    }
+
+    public void setChangelogUrl(String changelogUrl) {
+        this.mChangelogUrl = changelogUrl;
+    }
+
+    public Progress getProgress() {
+        return mProgress;
+    }
+
+    public void setProgress(Progress progress) {
+        this.mProgress = progress;
     }
 
     @Override
@@ -86,7 +105,7 @@ public class UpdateInfo implements Parcelable, Serializable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(mName);
-        dest.writeString(mMD5Sum);
+        dest.writeString(mMd5);
         dest.writeLong(mDiffSize);
         dest.writeLong(mFileSize);
         dest.writeLong(mTimestamp);
@@ -96,7 +115,7 @@ public class UpdateInfo implements Parcelable, Serializable {
 
     private void readFromParcel(Parcel in) {
         mName = in.readString();
-        mMD5Sum = in.readString();
+        mMd5 = in.readString();
         mDiffSize = in.readLong();
         mFileSize = in.readLong();
         mTimestamp = in.readLong();
@@ -106,7 +125,7 @@ public class UpdateInfo implements Parcelable, Serializable {
 
     public static class Builder {
         private String mName;
-        private String mMD5Sum;
+        private String mMd5;
         private long mDiffSize;
         private long mFileSize;
         private long mTimestamp;
@@ -119,7 +138,7 @@ public class UpdateInfo implements Parcelable, Serializable {
         }
 
         public Builder setMD5Sum(String md5Sum) {
-            mMD5Sum = md5Sum;
+            mMd5 = md5Sum;
             return this;
         }
 
@@ -151,7 +170,7 @@ public class UpdateInfo implements Parcelable, Serializable {
         public UpdateInfo build() {
             UpdateInfo info = new UpdateInfo();
             info.mName = mName;
-            info.mMD5Sum = mMD5Sum;
+            info.mMd5 = mMd5;
             info.mDiffSize = mDiffSize;
             info.mFileSize = mFileSize;
             info.mTimestamp = mTimestamp;
