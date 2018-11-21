@@ -36,6 +36,7 @@ public class Constants {
     public static final String NAV_TRANSLATE_URL = "http://translate.mokeedev.com";
     public static final String NAV_WEIBO_URL = "https://weibo.com/martincz";
     public static final String NAV_TELEGRAM_URL = "https://t.me/mokeecommunity";
+    public static final String NAV_QQCHAT_URL = "https://bbs.mokeedev.com/t/topic/9551/1";
 
     // License
     public static final String LICENSE_FILE = Environment.getExternalStorageDirectory().getAbsolutePath() + "/mokee.license";

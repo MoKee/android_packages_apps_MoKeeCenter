@@ -22,15 +22,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_forum"
-            android:icon="@drawable/ic_menu_forum"
+            android:icon="@drawable/ic_mav_forum"
             android:title="@string/nav_main_forum_title" />
         <item
             android:id="@+id/nav_bug_reports"
-            android:icon="@drawable/ic_menu_bug_reports"
+            android:icon="@drawable/ic_nav_bug_reports"
             android:title="@string/nav_main_bug_reports_title" />
         <item
             android:id="@+id/nav_open_source"
-            android:icon="@drawable/ic_menu_open_source"
+            android:icon="@drawable/ic_nav_open_source"
             android:title="@string/nav_main_source_title" />
     </group>
 
@@ -38,11 +38,11 @@
         <menu>
             <item
                 android:id="@+id/nav_code_review"
-                android:icon="@drawable/ic_menu_code_review"
+                android:icon="@drawable/ic_nav_code_review"
                 android:title="@string/nav_contribute_code_title" />
             <item
                 android:id="@+id/nav_translate"
-                android:icon="@drawable/ic_menu_translate"
+                android:icon="@drawable/ic_nav_translate"
                 android:title="@string/nav_contribute_translate_title" />
         </menu>
     </item>
@@ -51,11 +51,15 @@
         <menu>
             <item
                 android:id="@+id/nav_weibo"
-                android:icon="@drawable/ic_menu_weibo"
+                android:icon="@drawable/ic_nav_weibo"
                 android:title="@string/nav_social_weibo_title" />
             <item
+                android:id="@+id/nav_qqchat"
+                android:icon="@drawable/ic_nav_qqchat"
+                android:title="@string/nav_social_qqchat_title" />
+            <item
                 android:id="@+id/nav_telegram"
-                android:icon="@drawable/ic_menu_telegram"
+                android:icon="@drawable/ic_nav_telegram"
                 android:title="@string/nav_social_telegram_title" />
         </menu>
     </item>

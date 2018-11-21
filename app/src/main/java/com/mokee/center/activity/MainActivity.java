@@ -150,6 +150,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_weibo:
                 CommonUtils.openLink(this, Constants.NAV_WEIBO_URL);
                 break;
+            case R.id.nav_qqchat:
+                CommonUtils.openLink(this, Constants.NAV_QQCHAT_URL);
+                break;
             case R.id.nav_telegram:
                 CommonUtils.openLink(this, Constants.NAV_TELEGRAM_URL);
                 break;
