@@ -258,8 +258,8 @@ public class UpdaterService extends Service {
             case Progress.PAUSE: {
                 stopForeground(STOP_FOREGROUND_DETACH);
                 // In case we pause before the first progress update
-                mNotificationBuilder.setProgress((int) progress.totalSize, (int) progress.currentSize, false);
                 mNotificationBuilder.mActions.clear();
+                mNotificationBuilder.setProgress((int) progress.totalSize, (int) progress.currentSize, false);
                 String text = getString(R.string.download_paused_notification);
                 mNotificationStyle.bigText(text);
                 mNotificationBuilder.setStyle(mNotificationStyle);
@@ -276,6 +276,7 @@ public class UpdaterService extends Service {
             }
             case Progress.FINISH: {
                 stopForeground(STOP_FOREGROUND_DETACH);
+                mNotificationBuilder.mActions.clear();
                 mNotificationBuilder.setStyle(null);
                 mNotificationBuilder.setSmallIcon(R.drawable.ic_system_update);
                 mNotificationBuilder.setProgress(0, 0, false);
