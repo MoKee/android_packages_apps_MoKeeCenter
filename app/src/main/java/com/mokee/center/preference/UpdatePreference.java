@@ -22,6 +22,7 @@ import android.support.v7.internal.widget.PreferenceImageView;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceViewHolder;
 import android.text.format.Formatter;
+import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -32,6 +33,8 @@ import com.mokee.center.misc.Constants;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.CommonUtils;
 
+import java.io.IOException;
+import java.net.SocketException;
 import java.text.NumberFormat;
 
 public class UpdatePreference extends Preference implements View.OnClickListener {
@@ -42,6 +45,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
     private TextView mFileSizeView;
     private TextView mSummaryView;
     private ProgressBar mDownloadProgress;
+    private ProgressBar mActionProgress;
     private View mUpdateButton;
 
     public Progress getProgress() {
@@ -65,15 +69,16 @@ public class UpdatePreference extends Preference implements View.OnClickListener
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
-        mUpdateButton = holder.findViewById(android.R.id.icon_frame);
+        mUpdateButton = holder.findViewById(R.id.action_frame);
         mUpdateButton.setOnClickListener(this);
 
-        mIconView = (PreferenceImageView) holder.findViewById(android.R.id.icon);
+        mIconView = (PreferenceImageView) holder.findViewById(R.id.action_icon);
 
         mFileSizeView = (TextView) holder.findViewById(R.id.file_size);
         mFileSizeView.setText(Formatter.formatFileSize(getContext(), mUpdateInfo.getFileSize()));
 
         mDownloadProgress = (ProgressBar) holder.findViewById(R.id.download_progress);
+        mActionProgress = (ProgressBar) holder.findViewById(R.id.action_progress);
 
         mSummaryView = (TextView) holder.findViewById(R.id.summary);
         updatePreferenceView();
@@ -82,7 +87,8 @@ public class UpdatePreference extends Preference implements View.OnClickListener
 
     public void updatePreferenceView() {
         if (mDownloadProgress == null || mIconView == null
-                ||mSummaryView == null && mFileSizeView == null) {
+                ||mSummaryView == null && mFileSizeView == null
+                || mActionProgress == null) {
             return;
         }
         if (mProgress != null) {
@@ -94,6 +100,9 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     mDownloadProgress.setVisibility(View.VISIBLE);
                     mDownloadProgress.setIndeterminate(true);
                     mSummaryView.setText(R.string.download_starting_notification);
+                    mActionProgress.setVisibility(View.VISIBLE);
+                    mIconView.setVisibility(View.GONE);
+                    mUpdateButton.setEnabled(false);
                     break;
                 case Progress.LOADING:
                     mIconView.setImageResource(R.drawable.ic_action_pause);
@@ -106,6 +115,9 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                                 mProgress.extra1,
                                 NumberFormat.getPercentInstance().format(mProgress.fraction)));
                     }
+                    mActionProgress.setVisibility(View.GONE);
+                    mIconView.setVisibility(View.VISIBLE);
+                    mUpdateButton.setEnabled(true);
                     break;
                 case Progress.PAUSE:
                     mIconView.setImageResource(R.drawable.ic_action_download);
@@ -118,6 +130,12 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     mDownloadProgress.setVisibility(View.GONE);
                     mSummaryView.setText(R.string.download_completed_notification);
                     break;
+                case Progress.ERROR:
+                    if (mProgress.exception instanceof SocketException
+                            || mProgress.exception instanceof IOException) {
+                        mSummaryView.setText(R.string.download_waiting_network_notification);
+                        break;
+                    }
                 default:
                     mIconView.setImageResource(R.drawable.ic_action_download);
                     mDownloadProgress.setVisibility(View.VISIBLE);

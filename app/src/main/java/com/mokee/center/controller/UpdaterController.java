@@ -37,7 +37,6 @@ import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.CommonUtils;
 
 import java.io.File;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;

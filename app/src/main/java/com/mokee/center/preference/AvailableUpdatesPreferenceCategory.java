@@ -57,7 +57,6 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
                 UpdatePreference updatePreference = new UpdatePreference(getContext(), updateInfo);
                 updatePreference.setTitle(updateInfo.getName());
                 updatePreference.setKey(updateInfo.getName());
-                updatePreference.setIcon(R.drawable.ic_action_download);
                 updatePreference.setProgress(updateInfo.getProgress());
                 updatePreference.setOnActionListener(this);
                 addPreference(updatePreference);

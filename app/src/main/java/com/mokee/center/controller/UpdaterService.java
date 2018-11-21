@@ -38,7 +38,6 @@ import android.text.format.DateUtils;
 import android.text.format.Formatter;
 import android.util.Log;
 
-import com.lzy.okgo.db.DownloadManager;
 import com.lzy.okgo.exception.OkGoException;
 import com.lzy.okgo.model.Progress;
 import com.lzy.okserver.OkDownload;
@@ -60,8 +59,6 @@ public class UpdaterService extends Service {
     public static final String ACTION_DOWNLOAD_CONTROL = "action_download_control";
     public static final String EXTRA_DOWNLOAD_ID = "extra_download_id";
     public static final String EXTRA_DOWNLOAD_CONTROL = "extra_download_control";
-    public static final String ACTION_INSTALL_UPDATE = "action_install_update";
-    public static final String ACTION_INSTALL_STOP = "action_install_stop";
 
     private static final String ONGOING_NOTIFICATION_CHANNEL =
             "ongoing_notification_channel";
