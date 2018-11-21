@@ -297,6 +297,7 @@ public class UpdaterService extends Service {
                 } else if (progress.exception instanceof SocketException
                         || progress.exception instanceof IOException) {
                     mNotificationBuilder.mActions.clear();
+                    mNotificationBuilder.setProgress(0, 0, true);
                     String text = getString(R.string.download_waiting_network_notification);
                     mNotificationStyle.bigText(text);
                     mNotificationBuilder.setStyle(mNotificationStyle);

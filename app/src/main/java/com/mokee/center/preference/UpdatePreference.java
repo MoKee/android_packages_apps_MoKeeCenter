@@ -135,6 +135,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                 case Progress.ERROR:
                     if (mProgress.exception instanceof SocketException
                             || mProgress.exception instanceof IOException) {
+                        mDownloadProgress.setIndeterminate(true);
                         mSummaryView.setText(R.string.download_waiting_network_notification);
                         mActionProgress.setVisibility(View.VISIBLE);
                         mIconView.setVisibility(View.GONE);
