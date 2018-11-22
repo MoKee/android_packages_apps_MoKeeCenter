@@ -103,6 +103,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     private UpdateTypePreference mUpdateTypePreference;
 
     private SharedPreferences mDonationPrefs;
+    private SharedPreferences mMainPrefs;
 
     private OkDownload mOkDownload;
 
@@ -156,6 +157,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         addPreferencesFromResource(R.xml.updater);
         setHasOptionsMenu(true);
         mDonationPrefs = CommonUtil.getDonationPrefs(getContext());
+        mMainPrefs = CommonUtil.getMainPrefs(getContext());
         mDonationRecordPreference = (DonationRecordPreference) findPreference(PREF_DONATION_RECORD);
         mIncrementalUpdatesPreference = (IncrementalUpdatesPreference) findPreference(PREF_INCREMENTAL_UPDATES);
         mIncrementalUpdatesPreference.setOnPreferenceClickListener(this);
@@ -190,6 +192,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     public void onStart() {
         super.onStart();
         mDonationPrefs.registerOnSharedPreferenceChangeListener(this);
+        mMainPrefs.registerOnSharedPreferenceChangeListener(this);
 
         Intent intent = new Intent(mMainActivity, UpdaterService.class);
         mMainActivity.startService(intent);
@@ -206,6 +209,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     @Override
     public void onStop() {
         mDonationPrefs.unregisterOnSharedPreferenceChangeListener(this);
+        mMainPrefs.unregisterOnSharedPreferenceChangeListener(this);
         LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mBroadcastReceiver);
         if (mUpdaterService != null) {
             mMainActivity.unbindService(mConnection);
@@ -287,10 +291,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             final LinkedList<UpdateInfo> updates = CommonUtil.parseJson(response.body(), TAG);
             State.saveState(updates, jsonNew);
             loadUpdatesList(updates, manualRefresh);
-            SharedPreferences preferences = CommonUtil.getMainPrefs(getContext());
-            preferences.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
+            mMainPrefs.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
             ((LastUpdateCheckPreference)findPreference(PREF_LAST_UPDATE_CHECK)).updateSummary();
-            if (json.exists() && preferences.getBoolean(Constants.PREF_AUTO_UPDATES_CHECK, true)
+            if (json.exists() && mMainPrefs.getBoolean(Constants.PREF_AUTO_UPDATES_CHECK, true)
                     && CommonUtil.checkForNewUpdates(json, jsonNew)) {
                 UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getContext());
             }
@@ -357,6 +360,14 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                     > MKCenterApplication.getInstance().getDonationInfo().getPaid()) {
                 CommonUtil.restoreLicenseRequest(getActivity());
             }
+        } else if (key.equals(PREF_INCREMENTAL_UPDATES)) {
+            String suggestUpdateType = CommonUtil.getSuggestUpdateType();
+            String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, String.valueOf(suggestUpdateType));
+            if (!TextUtils.equals(suggestUpdateType, configUpdateType)) {
+                mMainPrefs.edit().putString(PREF_UPDATE_TYPE, suggestUpdateType).apply();
+                mUpdateTypePreference.setValue(suggestUpdateType);
+                mUpdateTypePreference.setSummary(mUpdateTypePreference.getEntries()[mUpdateTypePreference.findIndexOfValue(suggestUpdateType)]);
+            }
         }
     }
 
@@ -380,7 +391,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             File jsonFile = FileUtil.getCachedUpdateList(getContext());
             jsonFile.delete();
             loadUpdatesList(new LinkedList<>(), false);
-            CommonUtil.getMainPrefs(getContext()).edit().putString(PREF_UPDATE_TYPE, newValue.toString()).apply();
+            mMainPrefs.edit().putString(PREF_UPDATE_TYPE, newValue.toString()).apply();
             downloadUpdatesList(true);
             return true;
         }

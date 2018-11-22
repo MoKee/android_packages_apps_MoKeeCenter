@@ -41,13 +41,13 @@ public class UpdateTypePreference extends ListPreference {
     public void onAttached() {
         super.onAttached();
         Resources resources = getContext().getResources();
-
-        // Reset update type
+        // Reset update type for unofficial version
         String suggestUpdateType = CommonUtil.getSuggestUpdateType();
         String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, String.valueOf(suggestUpdateType));
         if (!suggestUpdateType.equals("3") && configUpdateType.equals("3")) {
             configUpdateType = String.valueOf(suggestUpdateType);
         }
+
         if (suggestUpdateType.equals("3")) {
             setEntries(resources.getStringArray(R.array.all_type_entries));
             setEntryValues(resources.getStringArray(R.array.all_type_values));
