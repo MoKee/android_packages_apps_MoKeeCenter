@@ -18,6 +18,7 @@
 package com.mokee.center.model;
 
 public class RankInfo {
+
     private int amount;
     private int rank;
     private int percent;

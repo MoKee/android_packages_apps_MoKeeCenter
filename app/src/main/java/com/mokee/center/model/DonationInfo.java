@@ -18,6 +18,7 @@
 package com.mokee.center.model;
 
 public class DonationInfo {
+
     private boolean basic;
     private boolean advanced;
     private int paid;

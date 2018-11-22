@@ -29,7 +29,6 @@ import com.lzy.okgo.model.Progress;
 import com.mokee.center.R;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.BuildInfoUtil;
-import com.mokee.center.util.CommonUtil;
 
 import java.io.IOException;
 import java.net.SocketException;

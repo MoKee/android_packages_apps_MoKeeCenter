@@ -19,7 +19,6 @@ package com.mokee.center.preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.os.Build;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.preference.PreferenceCategory;
@@ -33,7 +32,6 @@ import com.mokee.center.R;
 import com.mokee.center.controller.UpdaterController;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.model.UpdateInfo;
-import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
 
 import java.util.LinkedList;
