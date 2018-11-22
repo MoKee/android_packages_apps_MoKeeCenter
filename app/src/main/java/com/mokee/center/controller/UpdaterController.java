@@ -134,6 +134,10 @@ public class UpdaterController {
             updateAdded.setChangelogUrl(updateInfo.getChangelogUrl());
             return false;
         }
+        DownloadTask downloadedTask = mOkDownload.getTask(updateInfo.getName());
+        if (downloadedTask != null) {
+            updateInfo.setProgress(downloadedTask.progress);
+        }
         mAvailableUpdates.put(updateInfo.getName(), updateInfo);
         return true;
     }
