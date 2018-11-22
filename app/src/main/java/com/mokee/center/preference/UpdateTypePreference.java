@@ -21,8 +21,10 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.support.v7.preference.ListPreference;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 
+import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
@@ -41,12 +43,19 @@ public class UpdateTypePreference extends ListPreference {
     @Override
     public void onAttached() {
         super.onAttached();
+        refreshPreference();
+    }
+
+    public void refreshPreference() {
         Resources resources = getContext().getResources();
-        // Reset update type for unofficial version
+        // Reset update type for unofficial version or different version
         String suggestUpdateType = BuildInfoUtil.getSuggestUpdateType();
         String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, String.valueOf(suggestUpdateType));
-        if (!suggestUpdateType.equals("3") && configUpdateType.equals("3")) {
+        if (!suggestUpdateType.equals("3") && configUpdateType.equals("3")
+                || !MKCenterApplication.getInstance().getDonationInfo().isBasic()
+                && !TextUtils.equals(suggestUpdateType, configUpdateType)) {
             configUpdateType = String.valueOf(suggestUpdateType);
+            mMainPrefs.edit().putString(PREF_UPDATE_TYPE, configUpdateType).apply();
         }
 
         if (suggestUpdateType.equals("3")) {

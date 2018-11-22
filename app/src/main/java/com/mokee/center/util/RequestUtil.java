@@ -19,6 +19,7 @@ package com.mokee.center.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.text.TextUtils;
 
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
@@ -43,8 +44,11 @@ public class RequestUtil {
 
         String suggestUpdateType = BuildInfoUtil.getSuggestUpdateType();
         String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, String.valueOf(suggestUpdateType));
-        if (!suggestUpdateType.equals("3") && configUpdateType.equals("3")) {
+        // Reset update type for unofficial version or different version
+        if (!suggestUpdateType.equals("3") && configUpdateType.equals("3")
+                || !donationInfo.isBasic() && !TextUtils.equals(suggestUpdateType, configUpdateType)) {
             configUpdateType = String.valueOf(suggestUpdateType);
+            mMainPrefs.edit().putString(PREF_UPDATE_TYPE, configUpdateType).apply();
         }
 
         String url;

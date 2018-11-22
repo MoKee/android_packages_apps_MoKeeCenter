@@ -183,6 +183,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             case DONATION_RESULT_SUCCESS:
                 CommonUtil.updateDonationInfo(getContext());
                 mDonationRecordPreference.updateRankInfo();
+                mUpdateTypePreference.refreshPreference();
                 mIncrementalUpdatesPreference.refreshPreference();
                 mVerifiedUpdatesPreference.refreshPreference();
                 break;
