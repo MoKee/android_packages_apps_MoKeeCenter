@@ -38,10 +38,10 @@ public class VerifiedUpdatesPreference extends SwitchPreference {
     @Override
     public void onAttached() {
         super.onAttached();
-        updateStatus();
+        refreshPreference();
     }
 
-    public void updateStatus() {
+    public void refreshPreference() {
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
         setEnabled(donationInfo.isAdvanced());
         if (!isEnabled()) {

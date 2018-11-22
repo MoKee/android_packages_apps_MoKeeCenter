@@ -183,8 +183,8 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             case DONATION_RESULT_SUCCESS:
                 CommonUtil.updateDonationInfo(getContext());
                 mDonationRecordPreference.updateRankInfo();
-                mIncrementalUpdatesPreference.updateStatus();
-                mVerifiedUpdatesPreference.updateStatus();
+                mIncrementalUpdatesPreference.refreshPreference();
+                mVerifiedUpdatesPreference.refreshPreference();
                 break;
         }
     }
@@ -351,8 +351,8 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         if (mRefreshIconView != null) {
             mRefreshAnimation.setRepeatCount(0);
             mRefreshIconView.setEnabled(true);
-            mIncrementalUpdatesPreference.setEnabled(true);
-            mVerifiedUpdatesPreference.setEnabled(true);
+            mIncrementalUpdatesPreference.setEnabled(MKCenterApplication.getInstance().getDonationInfo().isBasic());
+            mVerifiedUpdatesPreference.setEnabled(MKCenterApplication.getInstance().getDonationInfo().isAdvanced());
         }
     }
 
