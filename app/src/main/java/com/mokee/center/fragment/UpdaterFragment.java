@@ -319,7 +319,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             @Override
             public void onError(Response<String> response) {
                 super.onError(response);
-                mMainActivity.makeSnackbar(R.string.updates_check_failed).show();
+                if (manualRefresh) {
+                    mMainActivity.makeSnackbar(R.string.updates_check_failed).show();
+                }
             }
 
             @Override
