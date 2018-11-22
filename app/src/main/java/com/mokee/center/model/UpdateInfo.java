@@ -45,6 +45,7 @@ public class UpdateInfo implements Parcelable, Serializable {
     private String mDownloadUrl;
     private String mChangelogUrl;
     private Progress mProgress;
+    private String mDisplayVersion;
 
     public UpdateInfo() {
     }
@@ -55,6 +56,10 @@ public class UpdateInfo implements Parcelable, Serializable {
 
     public String getName() {
         return mName;
+    }
+
+    public String getDisplayVersion() {
+        return mDisplayVersion;
     }
 
     public String getMd5() {
@@ -105,6 +110,7 @@ public class UpdateInfo implements Parcelable, Serializable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(mName);
+        dest.writeString(mDisplayVersion);
         dest.writeString(mMd5);
         dest.writeLong(mDiffSize);
         dest.writeLong(mFileSize);
@@ -115,6 +121,7 @@ public class UpdateInfo implements Parcelable, Serializable {
 
     private void readFromParcel(Parcel in) {
         mName = in.readString();
+        mDisplayVersion = in.readString();
         mMd5 = in.readString();
         mDiffSize = in.readLong();
         mFileSize = in.readLong();
@@ -125,6 +132,7 @@ public class UpdateInfo implements Parcelable, Serializable {
 
     public static class Builder {
         private String mName;
+        private String mDisplayVersion;
         private String mMd5;
         private long mDiffSize;
         private long mFileSize;
@@ -134,6 +142,11 @@ public class UpdateInfo implements Parcelable, Serializable {
 
         public Builder setName(String name) {
             mName = name;
+            return this;
+        }
+
+        public Builder setDisplayVersion(String version) {
+            mDisplayVersion = version;
             return this;
         }
 
@@ -170,6 +183,7 @@ public class UpdateInfo implements Parcelable, Serializable {
         public UpdateInfo build() {
             UpdateInfo info = new UpdateInfo();
             info.mName = mName;
+            info.mDisplayVersion = mDisplayVersion;
             info.mMd5 = mMd5;
             info.mDiffSize = mDiffSize;
             info.mFileSize = mFileSize;

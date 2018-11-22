@@ -90,7 +90,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
             @Override
             public void onSuccess(Response<String> response) {
                 try {
-                    final LinkedList<UpdateInfo> updates = CommonUtil.parseJson(response.body(), TAG);
+                    final LinkedList<UpdateInfo> updates = CommonUtil.parseJson(context, response.body(), TAG);
                     State.saveState(updates, jsonNew);
                     if (json.exists() && CommonUtil.checkForNewUpdates(json, jsonNew)) {
                         showNotification(context, updates);
@@ -141,7 +141,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         int added = 0, count = updates.size();
         for (UpdateInfo update : updates) {
             if (added < EXTRAS_NOTIF_UPDATE_COUNT) {
-                inbox.addLine(update.getName());
+                inbox.addLine(update.getDisplayVersion());
                 added ++;
             }
         }

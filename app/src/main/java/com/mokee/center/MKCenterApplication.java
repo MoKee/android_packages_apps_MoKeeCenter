@@ -25,6 +25,8 @@ import com.lzy.okgo.model.HttpHeaders;
 import com.mokee.center.model.DonationInfo;
 import com.mokee.center.util.CommonUtil;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import javax.net.ssl.HostnameVerifier;
@@ -54,6 +56,8 @@ public class MKCenterApplication extends Application {
         return builder;
     }
 
+    public static final List<String> WHITELIST_HOSTNAME = Arrays.asList("ota.mokeedev.com", "cloud.mokeedev.com");
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -82,7 +86,7 @@ public class MKCenterApplication extends Application {
     private class SafeHostnameVerifier implements HostnameVerifier {
         @Override
         public boolean verify(String hostname, SSLSession session) {
-            return hostname.equals("ota.mokeedev.com");
+            return WHITELIST_HOSTNAME.contains(hostname);
         }
     }
 

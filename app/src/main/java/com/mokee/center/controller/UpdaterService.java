@@ -114,7 +114,7 @@ public class UpdaterService extends Service {
                 String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
                 if (UpdaterController.ACTION_UPDATE_STATUS.equals(intent.getAction())) {
                     DownloadTask downloadTask = mOkDownload.getTask(downloadId);
-                    setNotificationTitle(downloadTask.progress.fileName);
+                    setNotificationTitle(mUpdaterController.getUpdate(downloadId).getDisplayVersion());
                     Bundle extras = new Bundle();
                     extras.putString(UpdaterController.EXTRA_DOWNLOAD_ID, downloadId);
                     mNotificationBuilder.setExtras(extras);
@@ -329,7 +329,7 @@ public class UpdaterService extends Service {
         String percent = NumberFormat.getPercentInstance().format(progress.fraction);
         mNotificationStyle.setSummaryText(percent);
 
-        setNotificationTitle(progress.fileName);
+        setNotificationTitle(mUpdaterController.getUpdate(progress.tag).getDisplayVersion());
 
         mNotificationStyle.bigText(progress.extra1.toString());
 
@@ -350,9 +350,9 @@ public class UpdaterService extends Service {
 //        mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
 //    }
 
-    private void setNotificationTitle(String fileName) {
-        mNotificationStyle.setBigContentTitle(fileName);
-        mNotificationBuilder.setContentTitle(fileName);
+    private void setNotificationTitle(String version) {
+        mNotificationStyle.setBigContentTitle(version);
+        mNotificationBuilder.setContentTitle(version);
     }
 
     private PendingIntent getResumePendingIntent(String downloadId) {

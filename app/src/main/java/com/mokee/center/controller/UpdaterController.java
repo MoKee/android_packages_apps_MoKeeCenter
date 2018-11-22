@@ -190,6 +190,10 @@ public class UpdaterController {
         return mActiveDownloads;
     }
 
+    public UpdateInfo getUpdate(String downloadId) {
+        return mAvailableUpdates.get(downloadId);
+    }
+
     public class LogDownloadListener extends DownloadListener {
 
         private long mLastUpdate = 0;

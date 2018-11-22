@@ -289,7 +289,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
 
     private void processNewJson(Response<String> response, File json, File jsonNew, boolean manualRefresh) {
         try {
-            final LinkedList<UpdateInfo> updates = CommonUtil.parseJson(response.body(), TAG);
+            final LinkedList<UpdateInfo> updates = CommonUtil.parseJson(getContext(), response.body(), TAG);
             State.saveState(updates, jsonNew);
             loadUpdatesList(updates, manualRefresh);
             mMainPrefs.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();

@@ -145,7 +145,7 @@ public class CommonUtil {
         return updates;
     }
 
-    public static LinkedList<UpdateInfo> parseJson(String json, String tag)
+    public static LinkedList<UpdateInfo> parseJson(Context context, String json, String tag)
             throws JSONException {
         LinkedList<UpdateInfo> updates = new LinkedList<>();
         JSONArray updatesList = new JSONArray(json);
@@ -154,7 +154,7 @@ public class CommonUtil {
                 continue;
             }
             try {
-                UpdateInfo updateInfo = parseJsonUpdate(updatesList.getJSONObject(i));
+                UpdateInfo updateInfo = parseJsonUpdate(context, updatesList.getJSONObject(i));
                 if (updateInfo != null) {
                     updates.add(updateInfo);
                 }
@@ -165,9 +165,10 @@ public class CommonUtil {
         return CommonUtil.getSortedUpdates(updates);
     }
 
-    private static UpdateInfo parseJsonUpdate(JSONObject object) throws JSONException {
+    private static UpdateInfo parseJsonUpdate(Context context, JSONObject object) throws JSONException {
         UpdateInfo updateInfo = new UpdateInfo.Builder()
                 .setName(object.getString("name"))
+                .setDisplayVersion(BuildInfoUtil.getDisplayVersion(context, object.getString("name")))
                 .setMD5Sum(object.getString("md5"))
                 .setDiffSize(object.getLong("diff"))
                 .setFileSize(object.getLong("length"))

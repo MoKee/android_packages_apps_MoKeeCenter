@@ -17,13 +17,35 @@
 
 package com.mokee.center.util;
 
+import android.content.Context;
 import android.text.TextUtils;
+import android.text.format.DateUtils;
 
 import com.mokee.os.Build;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Locale;
 
 public class BuildInfoUtil {
+
+    public static String getDisplayVersion(Context context, String version) {
+        SimpleDateFormat simpleDateFormat;
+        String buildDate = String.valueOf(getBuildDate(version));
+
+        if (buildDate.length() == 6) {
+            simpleDateFormat = new SimpleDateFormat("yyMMdd");
+        } else {
+            simpleDateFormat = new SimpleDateFormat("yyyyMMddhhmm");
+        }
+        try {
+            long timestamp = simpleDateFormat.parse(buildDate).getTime();
+            return getReleaseVersion(version) + " - " + DateUtils.formatDateTime(context, timestamp, DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     public static long getBuildDate(String version) {
         String[] info = version.split("-");
@@ -40,14 +62,14 @@ public class BuildInfoUtil {
         }
     }
 
+    public static String getReleaseVersion(String version) {
+        String[] info = version.split("-");
+        return isIncrementalUpdate(version) ? info[1] : info[0];
+    }
+
     public static float getReleaseCode(String version) {
         String[] info = version.split("-");
-        String code;
-        if (isIncrementalUpdate(version)) {
-            code = info[1];
-        } else {
-            code = info[0];
-        }
+        String code = getReleaseVersion(version);
         if (!code.toLowerCase(Locale.ENGLISH).startsWith("mk")) {
             return 0;
         } else {
