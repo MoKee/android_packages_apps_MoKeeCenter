@@ -18,15 +18,26 @@
 package com.mokee.center.util;
 
 import android.content.Context;
+import android.text.TextUtils;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Locale;
 
 public class FileUtil {
 
     public static File getCachedUpdateList(Context context) {
         return new File(context.getCacheDir(), "updates.state");
+    }
+
+    public static boolean checkMd5(String md5, File file) {
+        try {
+            return TextUtils.equals(md5, calculateMd5(file));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return false;
     }
 
     /**
@@ -38,7 +49,7 @@ public class FileUtil {
      */
     public static String calculateMd5(File file) throws IOException {
         FileInputStream inputSource = new FileInputStream(file);
-        return StreamUtil.calculateMd5(inputSource);
+        return StreamUtil.calculateMd5(inputSource).toUpperCase(Locale.ENGLISH);
     }
 
 }

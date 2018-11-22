@@ -46,7 +46,9 @@ import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.util.CommonUtil;
+import com.mokee.center.util.FileUtil;
 
+import java.io.File;
 import java.io.IOException;
 import java.net.ProtocolException;
 import java.net.SocketException;
@@ -275,7 +277,6 @@ public class UpdaterService extends Service {
                 break;
             }
             case Progress.FINISH: {
-//                FileUtil
                 stopForeground(STOP_FOREGROUND_DETACH);
                 mNotificationBuilder.mActions.clear();
                 mNotificationBuilder.setStyle(null);
