@@ -18,15 +18,21 @@
 package com.mokee.center.preference;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.preference.PreferenceCategory;
 import android.support.v7.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.CheckBox;
 
 import com.mokee.center.R;
 import com.mokee.center.controller.UpdaterController;
+import com.mokee.center.misc.Constants;
 import com.mokee.center.model.UpdateInfo;
+import com.mokee.center.util.CommonUtil;
 
 import java.util.LinkedList;
 
@@ -67,26 +73,60 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
         }
     }
 
-    @Override
-    public void onStartDownload(String downloadId) {
-        if (!mUpdaterController.hasActiveDownloads()) {
+    private void onStartAction(String downloadId, boolean isNew) {
+        if (isNew) {
             mUpdaterController.startDownload(downloadId);
         } else {
-            Snackbar.make(mItemView, R.string.download_already_running, Snackbar.LENGTH_SHORT).show();
+            mUpdaterController.resumeDownload(downloadId);
         }
+    }
+
+    private void onCheckWarn(String downloadId, boolean isNew) {
+        if (mUpdaterController.hasActiveDownloads()) {
+            Snackbar.make(mItemView, R.string.download_already_running, Snackbar.LENGTH_SHORT).show();
+        } else {
+            SharedPreferences mMainPrefs = CommonUtil.getMainPrefs(getContext());
+            boolean warn = mMainPrefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
+
+            if (CommonUtil.isOnWifiOrEthernet(getContext()) || !warn) {
+                onStartAction(downloadId, isNew);
+                return;
+            }
+
+            View checkboxView = LayoutInflater.from(getContext()).inflate(R.layout.checkbox_view, null);
+            CheckBox checkbox = checkboxView.findViewById(R.id.checkbox);
+            checkbox.setText(R.string.checkbox_mobile_data_warning);
+
+            new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.update_on_mobile_data_title)
+                    .setMessage(R.string.update_on_mobile_data_message)
+                    .setView(checkboxView)
+                    .setPositiveButton(R.string.action_download,
+                            (dialog, which) -> {
+                                if (checkbox.isChecked()) {
+                                    mMainPrefs.edit()
+                                            .putBoolean(Constants.PREF_MOBILE_DATA_WARNING, false)
+                                            .apply();
+                                }
+                                onStartAction(downloadId, isNew);
+                            })
+                    .setNegativeButton(android.R.string.cancel, null)
+                    .show();
+        }
+    }
+
+    @Override
+    public void onStartDownload(String downloadId) {
+        onCheckWarn(downloadId, true);
+    }
+
+    @Override
+    public void onResumeDownload(String downloadId) {
+        onCheckWarn(downloadId, false);
     }
 
     @Override
     public void onPauseDownload(String downloadId) {
         mUpdaterController.pauseDownload(downloadId);
-    }
-
-    @Override
-    public void onResumeDownload(String downloadId) {
-        if (!mUpdaterController.hasActiveDownloads()) {
-            mUpdaterController.resumeDownload(downloadId);
-        } else {
-            Snackbar.make(mItemView, R.string.download_already_running, Snackbar.LENGTH_SHORT).show();
-        }
     }
 }

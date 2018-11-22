@@ -17,21 +17,16 @@
 package com.mokee.center.preference;
 
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.internal.widget.PreferenceImageView;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceViewHolder;
 import android.text.format.Formatter;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.CheckBox;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.lzy.okgo.model.Progress;
 import com.mokee.center.R;
-import com.mokee.center.misc.Constants;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.CommonUtil;
 
@@ -166,29 +161,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         }
     }
 
-    private void showWarnDialog(SharedPreferences prefs) {
-        View checkboxView = LayoutInflater.from(getContext()).inflate(R.layout.checkbox_view, null);
-        CheckBox checkbox = checkboxView.findViewById(R.id.checkbox);
-        checkbox.setText(R.string.checkbox_mobile_data_warning);
-
-        new AlertDialog.Builder(getContext())
-                .setTitle(R.string.update_on_mobile_data_title)
-                .setMessage(R.string.update_on_mobile_data_message)
-                .setView(checkboxView)
-                .setPositiveButton(R.string.action_download,
-                        (dialog, which) -> {
-                            if (checkbox.isChecked()) {
-                                prefs.edit()
-                                        .putBoolean(Constants.PREF_MOBILE_DATA_WARNING, false)
-                                        .apply();
-                            }
-                            execAction();
-                        })
-                .setNegativeButton(android.R.string.cancel, null)
-                .show();
-    }
-
-    private void execAction() {
+    private void onStartAction() {
         if (mProgress == null) {
             mOnActionListener.onStartDownload(mUpdateInfo.getName());
         } else {
@@ -199,15 +172,9 @@ public class UpdatePreference extends Preference implements View.OnClickListener
     @Override
     public void onClick(View view) {
         if (mOnActionListener == null) return;
-        SharedPreferences mMainPrefs = CommonUtil.getMainPrefs(getContext());
-        boolean warn = mMainPrefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
         if (mProgress == null || mProgress.status == Progress.PAUSE
                 || mProgress.status == Progress.ERROR || mProgress.status == Progress.NONE) {
-            if (CommonUtil.isOnWifiOrEthernet(getContext()) || !warn) {
-                execAction();
-                return;
-            }
-            showWarnDialog(mMainPrefs);
+            onStartAction();
         } else {
             switch (mProgress.status) {
                 case Progress.WAITING:
@@ -224,8 +191,8 @@ public class UpdatePreference extends Preference implements View.OnClickListener
 
     public interface OnActionListener {
         void onStartDownload(String downloadId);
-        void onPauseDownload(String downloadId);
         void onResumeDownload(String downloadId);
+        void onPauseDownload(String downloadId);
     }
 
 }
