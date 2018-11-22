@@ -85,7 +85,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         }
 
         final File json = FileUtil.getCachedUpdateList(context);
-        final File jsonNew = new File(json.getAbsolutePath() + UUID.randomUUID());
+        final File jsonNew = new File(context.getCacheDir().getAbsolutePath() + UUID.randomUUID());
         RequestUtil.fetchAvailableUpdates(context, new StringCallback() {
             @Override
             public void onSuccess(Response<String> response) {

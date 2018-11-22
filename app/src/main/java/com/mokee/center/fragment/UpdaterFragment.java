@@ -309,7 +309,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
 
     private void downloadUpdatesList(final boolean manualRefresh) {
         final File json = FileUtil.getCachedUpdateList(getContext());
-        final File jsonNew = new File(json.getAbsolutePath() + UUID.randomUUID());
+        final File jsonNew = new File(getContext().getCacheDir().getAbsolutePath() + UUID.randomUUID());
         RequestUtil.fetchAvailableUpdates(getContext(), new StringCallback() {
             @Override
             public void onSuccess(Response<String> response) {
