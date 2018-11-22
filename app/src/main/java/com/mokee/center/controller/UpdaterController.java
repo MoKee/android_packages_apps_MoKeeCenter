@@ -66,7 +66,7 @@ public class UpdaterController {
 
     private final PowerManager.WakeLock mWakeLock;
 
-    private int mActiveDownloads = 0;
+    private boolean mActiveDownloads = false;
     private String mActiveDownloadTag;
 
     public static synchronized UpdaterController getInstance() {
@@ -178,7 +178,7 @@ public class UpdaterController {
     public void pauseDownload(String downloadId) {
         Log.d(TAG, "Pausing " + downloadId);
         mOkDownload.getTask(downloadId).pause();
-        mActiveDownloads--;
+        mActiveDownloads = false;
         mActiveDownloadTag = null;
     }
 
@@ -187,7 +187,7 @@ public class UpdaterController {
     }
 
     public boolean hasActiveDownloads() {
-        return mActiveDownloads > 0;
+        return mActiveDownloads;
     }
 
     public class LogDownloadListener extends DownloadListener {
@@ -202,7 +202,7 @@ public class UpdaterController {
         @Override
         public void onStart(Progress progress) {
             mWakeLock.acquire();
-            mActiveDownloads++;
+            mActiveDownloads = true;
             mActiveDownloadTag = progress.tag;
         }
 
@@ -237,7 +237,7 @@ public class UpdaterController {
         @Override
         public void onFinish(File file, Progress progress) {
             tryReleaseWakelock();
-            mActiveDownloads--;
+            mActiveDownloads = false;
         }
 
         @Override
