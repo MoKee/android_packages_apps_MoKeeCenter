@@ -212,7 +212,7 @@ public class UpdaterController {
 
         @Override
         public void onProgress(Progress progress) {
-            if (mStatus != progress.status) {
+            if (mStatus != progress.status || progress.status == Progress.ERROR) {
                 Log.i("MOKEEE", "Status changed: " + mStatus + " to " + String.valueOf(progress.status));
                 mStatus = progress.status;
                 notifyUpdateChange(progress.tag);
@@ -223,11 +223,11 @@ public class UpdaterController {
 
                     long spendTime = (System.currentTimeMillis() - progress.date) / DateUtils.SECOND_IN_MILLIS;
                     long speed = progress.speed != 0 ? progress.speed : progress.currentSize / spendTime;
-                    if (speed == 0) return;
-
-                    CharSequence eta = CommonUtil.calculateEta(mContext, speed, progress.totalSize, progress.currentSize);
-                    CharSequence etaWithSpeed = mContext.getString(R.string.download_speed, eta, Formatter.formatFileSize(mContext, speed));
-                    progress.extra1 = etaWithSpeed.toString();
+                    if (speed != 0) {
+                        CharSequence eta = CommonUtil.calculateEta(mContext, speed, progress.totalSize, progress.currentSize);
+                        CharSequence etaWithSpeed = mContext.getString(R.string.download_speed, eta, Formatter.formatFileSize(mContext, speed));
+                        progress.extra1 = etaWithSpeed.toString();
+                    }
 
                     notifyDownloadProgress(progress.tag);
                 }

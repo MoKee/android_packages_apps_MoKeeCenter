@@ -44,11 +44,7 @@ import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadTask;
 import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
-import com.mokee.center.misc.Constants;
-import com.mokee.center.util.CommonUtil;
-import com.mokee.center.util.FileUtil;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.ProtocolException;
 import java.net.SocketException;
@@ -148,10 +144,11 @@ public class UpdaterService extends Service {
         req.addTransportType(NetworkCapabilities.TRANSPORT_ETHERNET);
         req.addTransportType(NetworkCapabilities.TRANSPORT_BLUETOOTH);
         req.addTransportType(NetworkCapabilities.TRANSPORT_VPN);
-        boolean warn = CommonUtil.getMainPrefs(this).getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
-        if (!warn) {
-            req.addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR);
-        }
+        req.removeCapability(NetworkCapabilities.NET_CAPABILITY_NOT_VPN);
+//        boolean warn = CommonUtil.getMainPrefs(this).getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
+//        if (!warn) {
+//            req.addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR);
+//        }
         mConnectivityManager.registerNetworkCallback(req.build(), mNetworkCallback);
     }
 
@@ -231,7 +228,6 @@ public class UpdaterService extends Service {
             case Progress.WAITING: {
                 mNotificationBuilder.mActions.clear();
                 mNotificationBuilder.setProgress(0, 0, true);
-//                mNotificationStyle.setSummaryText(null);
                 String text = getString(R.string.download_starting_notification);
                 mNotificationStyle.bigText(text);
                 mNotificationBuilder.setStyle(mNotificationStyle);
