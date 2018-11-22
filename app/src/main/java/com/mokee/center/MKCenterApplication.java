@@ -40,12 +40,18 @@ public class MKCenterApplication extends Application {
 
     private DonationInfo mDonationInfo = new DonationInfo();
 
+    private OkHttpClient.Builder builder = new OkHttpClient.Builder();
+
     public static synchronized MKCenterApplication getInstance() {
         return mApp;
     }
 
     public DonationInfo getDonationInfo() {
         return mDonationInfo;
+    }
+
+    public OkHttpClient.Builder getClient() {
+        return builder;
     }
 
     @Override
@@ -60,13 +66,12 @@ public class MKCenterApplication extends Application {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.put("User-Agent", USER_AGENT);
 
-        OkHttpClient.Builder builder = new OkHttpClient.Builder();
         //log
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor("OkGo");
         loggingInterceptor.setPrintLevel(HttpLoggingInterceptor.Level.NONE);
         builder.addInterceptor(loggingInterceptor);
         //default timeout
-        builder.connectTimeout(5, TimeUnit.SECONDS);
+        builder.connectTimeout(15, TimeUnit.SECONDS);
         builder.hostnameVerifier(new SafeHostnameVerifier());
 
         OkGo.getInstance().init(this)

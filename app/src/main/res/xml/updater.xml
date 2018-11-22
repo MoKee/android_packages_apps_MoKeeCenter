@@ -34,6 +34,10 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/update_settings_title">
+        <com.mokee.center.preference.UpdateTypePreference
+            android:dependency="incremental_updates"
+            android:key="update_type"
+            android:title="@string/update_type_title" />
         <com.mokee.center.preference.IncrementalUpdatesPreference
             android:disableDependentsState="true"
             android:key="incremental_updates"
@@ -41,10 +45,6 @@
         <com.mokee.center.preference.VerifiedUpdatesPreference
             android:key="verified_updates"
             android:title="@string/verified_updates_title" />
-        <com.mokee.center.preference.UpdateTypePreference
-            android:dependency="incremental_updates"
-            android:key="update_type"
-            android:title="@string/update_type_title" />
     </PreferenceCategory>
 
     <com.mokee.center.preference.AvailableUpdatesPreferenceCategory

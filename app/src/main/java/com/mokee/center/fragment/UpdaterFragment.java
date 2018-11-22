@@ -214,6 +214,12 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     }
 
     @Override
+    public void onDestroy() {
+        super.onDestroy();
+        OkGo.cancelAll(MKCenterApplication.getInstance().getClient().build());
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_refresh:
@@ -281,21 +287,20 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             final LinkedList<UpdateInfo> updates = CommonUtil.parseJson(response.body(), TAG);
             State.saveState(updates, jsonNew);
             loadUpdatesList(updates, manualRefresh);
-            SharedPreferences preferences = CommonUtil.getMainPrefs(getActivity());
+            SharedPreferences preferences = CommonUtil.getMainPrefs(getContext());
             preferences.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
             ((LastUpdateCheckPreference)findPreference(PREF_LAST_UPDATE_CHECK)).updateSummary();
             if (json.exists() && preferences.getBoolean(Constants.PREF_AUTO_UPDATES_CHECK, true)
                     && CommonUtil.checkForNewUpdates(json, jsonNew)) {
-                UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getActivity());
+                UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getContext());
             }
             // In case we set a one-shot check because of a previous failure
-            UpdatesCheckReceiver.cancelUpdatesCheck(getActivity());
+            UpdatesCheckReceiver.cancelUpdatesCheck(getContext());
             jsonNew.renameTo(json);
         } catch (JSONException e) {
             Log.e(TAG, "Could not read json", e);
             json.delete();
             loadUpdatesList(new LinkedList<>(), manualRefresh);
-            mMainActivity.makeSnackbar(R.string.no_updates_found).show();
         }
     }
 
@@ -359,6 +364,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     public boolean onPreferenceClick(Preference preference) {
         if (preference instanceof IncrementalUpdatesPreference
                 || preference instanceof VerifiedUpdatesPreference) {
+            File jsonFile = FileUtil.getCachedUpdateList(getContext());
+            jsonFile.delete();
+            loadUpdatesList(new LinkedList<>(), false);
             downloadUpdatesList(true);
             return true;
         }
@@ -369,6 +377,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference instanceof UpdateTypePreference) {
             if (TextUtils.equals(mUpdateTypePreference.getValue(), newValue.toString())) return false;
+            File jsonFile = FileUtil.getCachedUpdateList(getContext());
+            jsonFile.delete();
+            loadUpdatesList(new LinkedList<>(), false);
             CommonUtil.getMainPrefs(getContext()).edit().putString(PREF_UPDATE_TYPE, newValue.toString()).apply();
             downloadUpdatesList(true);
             return true;
