@@ -41,7 +41,7 @@ public class RequestUtil {
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
         SharedPreferences mMainPrefs = CommonUtil.getMainPrefs(context);
 
-        String suggestUpdateType = CommonUtil.getSuggestUpdateType();
+        String suggestUpdateType = BuildInfoUtil.getSuggestUpdateType();
         String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, String.valueOf(suggestUpdateType));
         if (!suggestUpdateType.equals("3") && configUpdateType.equals("3")) {
             configUpdateType = String.valueOf(suggestUpdateType);

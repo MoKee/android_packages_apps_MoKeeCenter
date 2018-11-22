@@ -28,6 +28,7 @@ import android.widget.TextView;
 import com.lzy.okgo.model.Progress;
 import com.mokee.center.R;
 import com.mokee.center.model.UpdateInfo;
+import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
 
 import java.io.IOException;
@@ -153,7 +154,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
             if (diffSize == 0) {
                 mSummaryView.setText(R.string.update_not_support_incremental_updates);
             } else {
-                mSummaryView.setText(getContext().getString(CommonUtil.isIncrementalUpdate(mUpdateInfo.getName())
+                mSummaryView.setText(getContext().getString(BuildInfoUtil.isIncrementalUpdate(mUpdateInfo.getName())
                                 ? R.string.update_supported_incremental_updates_ota
                                 : R.string.update_supported_incremental_updates_full,
                         Formatter.formatFileSize(getContext(), diffSize)));

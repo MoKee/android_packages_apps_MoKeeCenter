@@ -24,6 +24,7 @@ import android.support.v7.preference.ListPreference;
 import android.util.AttributeSet;
 
 import com.mokee.center.R;
+import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
 
 import static com.mokee.center.misc.Constants.PREF_UPDATE_TYPE;
@@ -42,7 +43,7 @@ public class UpdateTypePreference extends ListPreference {
         super.onAttached();
         Resources resources = getContext().getResources();
         // Reset update type for unofficial version
-        String suggestUpdateType = CommonUtil.getSuggestUpdateType();
+        String suggestUpdateType = BuildInfoUtil.getSuggestUpdateType();
         String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, String.valueOf(suggestUpdateType));
         if (!suggestUpdateType.equals("3") && configUpdateType.equals("3")) {
             configUpdateType = String.valueOf(suggestUpdateType);

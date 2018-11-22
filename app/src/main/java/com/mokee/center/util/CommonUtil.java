@@ -24,9 +24,7 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.os.Environment;
 import android.support.v7.preference.PreferenceManager;
-import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.util.Log;
 
@@ -50,7 +48,6 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Locale;
 import java.util.Set;
 
 import static com.mokee.center.misc.Constants.ACTION_PAYMENT_REQUEST;
@@ -70,10 +67,6 @@ public class CommonUtil {
         NetworkInfo info = cm.getActiveNetworkInfo();
         return (info != null && (info.getType() == ConnectivityManager.TYPE_ETHERNET
                 || info.getType() == ConnectivityManager.TYPE_WIFI));
-    }
-
-    public static File getDownloadPath(Context context) {
-        return new File(Environment.getExternalStorageDirectory(), "mokee_updates");
     }
 
     public static void openLink(Context context, String url) {
@@ -105,17 +98,6 @@ public class CommonUtil {
             return 0f;
         }
         return 0f;
-    }
-
-    public static String getSuggestUpdateType() {
-        switch (Build.RELEASE_TYPE.toLowerCase(Locale.ENGLISH)) {
-            case "release":
-                return "0";
-            case "unofficial":
-                return "3";
-            default:
-                return "1";
-        }
     }
 
     public static void sendPaymentRequest(Activity context, String channel, String description, String price, String type) {
@@ -152,49 +134,15 @@ public class CommonUtil {
 
     public static LinkedList<UpdateInfo> getSortedUpdates(LinkedList<UpdateInfo> updates) {
         Collections.sort(updates, (o1, o2) -> {
-            float codeo1 = getReleaseCode(o1.getName());
-            float codeo2 = getReleaseCode(o2.getName());
+            float codeo1 = BuildInfoUtil.getReleaseCode(o1.getName());
+            float codeo2 = BuildInfoUtil.getReleaseCode(o2.getName());
             if (codeo2 - codeo1 == 0) {
-                return Long.compare(getBuildDate(o2.getName()), getBuildDate(o1.getName()));
+                return Long.compare(BuildInfoUtil.getBuildDate(o2.getName()), BuildInfoUtil.getBuildDate(o1.getName()));
             } else {
                 return Float.compare(codeo1, codeo2);
             }
         });
         return updates;
-    }
-
-    public static long getBuildDate(String version) {
-        String[] info = version.split("-");
-        String date;
-        if (isIncrementalUpdate(version)) {
-            date = info[4];
-        } else {
-            date = info[2];
-        }
-        if (!TextUtils.isDigitsOnly(date)) {
-            return 0;
-        } else {
-            return Long.valueOf(date);
-        }
-    }
-
-    public static float getReleaseCode(String version) {
-        String[] info = version.split("-");
-        String code;
-        if (isIncrementalUpdate(version)) {
-            code = info[1];
-        } else {
-            code = info[0];
-        }
-        if (!code.toLowerCase(Locale.ENGLISH).startsWith("mk")) {
-            return 0;
-        } else {
-            return Float.valueOf(code.substring(2, code.length()));
-        }
-    }
-
-    public static boolean isIncrementalUpdate(String version) {
-        return version.toLowerCase(Locale.ENGLISH).startsWith("ota");
     }
 
     public static LinkedList<UpdateInfo> parseJson(String json, String tag)

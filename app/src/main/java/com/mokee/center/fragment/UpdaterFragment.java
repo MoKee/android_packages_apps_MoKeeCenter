@@ -61,6 +61,7 @@ import com.mokee.center.preference.UpdateTypePreference;
 import com.mokee.center.preference.VerifiedUpdatesPreference;
 import com.mokee.center.receiver.UpdatesCheckReceiver;
 import com.mokee.center.controller.UpdaterService;
+import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
 import com.mokee.center.util.FileUtil;
 import com.mokee.center.util.RequestUtil;
@@ -147,7 +148,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         mRefreshAnimation.setDuration(1000);
 
         mOkDownload = OkDownload.getInstance();
-        mOkDownload.setFolder(CommonUtil.getDownloadPath(getContext()).getAbsolutePath());
+        mOkDownload.setFolder(FileUtil.getDownloadPath(getContext()).getAbsolutePath());
         mOkDownload.getThreadPool().setCorePoolSize(1);
     }
 
@@ -363,7 +364,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                 CommonUtil.restoreLicenseRequest(getActivity());
             }
         } else if (key.equals(PREF_INCREMENTAL_UPDATES)) {
-            String suggestUpdateType = CommonUtil.getSuggestUpdateType();
+            String suggestUpdateType = BuildInfoUtil.getSuggestUpdateType();
             String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, String.valueOf(suggestUpdateType));
             if (!TextUtils.equals(suggestUpdateType, configUpdateType)) {
                 mMainPrefs.edit().putString(PREF_UPDATE_TYPE, suggestUpdateType).apply();

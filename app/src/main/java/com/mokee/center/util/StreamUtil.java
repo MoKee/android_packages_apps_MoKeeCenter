@@ -27,19 +27,14 @@ import java.util.Objects;
 
 public class StreamUtil {
 
-    // 16K buffer size
     private static final int BUF_SIZE = 16 * 1024;
 
-    /**
-     * Helper method to calculate md5 for a inputStream. The inputStream will be consumed and
-     * closed.
-     *
-     * @param inputSource used to create inputStream
-     * @return md5 of the stream
-     * @throws IOException
-     */
+    private static final char[] HEX_CHARS = {
+            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'
+    };
+
     public static String calculateMd5(InputStream inputSource) throws IOException {
-        MessageDigest md = null;
+        MessageDigest md;
         try {
             md = MessageDigest.getInstance("md5");
         } catch (NoSuchAlgorithmException e) {
@@ -56,16 +51,6 @@ public class StreamUtil {
         return md5;
     }
 
-    private static final char[] HEX_CHARS = {
-            '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'
-    };
-
-    /**
-     * Converts a byte array into a String of hexadecimal characters.
-     *
-     * @param bytes an array of bytes
-     * @return hex string representation of bytes array
-     */
     private static String bytesToHexString(byte[] bytes) {
         Objects.requireNonNull(bytes);
         StringBuilder sb = new StringBuilder(2 * bytes.length);

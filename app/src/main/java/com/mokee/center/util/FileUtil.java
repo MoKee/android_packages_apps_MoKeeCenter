@@ -18,6 +18,7 @@
 package com.mokee.center.util;
 
 import android.content.Context;
+import android.os.Environment;
 import android.text.TextUtils;
 
 import java.io.File;
@@ -26,6 +27,10 @@ import java.io.IOException;
 import java.util.Locale;
 
 public class FileUtil {
+
+    public static File getDownloadPath(Context context) {
+        return new File(Environment.getExternalStorageDirectory(), "mokee_updates");
+    }
 
     public static File getCachedUpdateList(Context context) {
         return new File(context.getCacheDir(), "updates.state");
@@ -40,13 +45,6 @@ public class FileUtil {
         return false;
     }
 
-    /**
-     * Helper method to calculate md5 for a file.
-     *
-     * @param file
-     * @return md5 of the file
-     * @throws IOException
-     */
     public static String calculateMd5(File file) throws IOException {
         FileInputStream inputSource = new FileInputStream(file);
         return StreamUtil.calculateMd5(inputSource).toUpperCase(Locale.ENGLISH);
