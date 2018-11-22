@@ -20,9 +20,17 @@ package com.mokee.center;
 import android.app.Application;
 
 import com.lzy.okgo.OkGo;
+import com.lzy.okgo.interceptor.HttpLoggingInterceptor;
 import com.lzy.okgo.model.HttpHeaders;
 import com.mokee.center.model.DonationInfo;
 import com.mokee.center.util.CommonUtil;
+
+import java.util.concurrent.TimeUnit;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.SSLSession;
+
+import okhttp3.OkHttpClient;
 
 import static com.mokee.center.misc.Constants.USER_AGENT;
 
@@ -45,10 +53,32 @@ public class MKCenterApplication extends Application {
         super.onCreate();
         mApp = this;
         CommonUtil.updateDonationInfo(this);
+        initOkGo();
+    }
 
+    private void initOkGo() {
         HttpHeaders httpHeaders = new HttpHeaders();
         httpHeaders.put("User-Agent", USER_AGENT);
-        OkGo.getInstance().init(this).addCommonHeaders(httpHeaders);
+
+        OkHttpClient.Builder builder = new OkHttpClient.Builder();
+        //log
+        HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor("OkGo");
+        loggingInterceptor.setPrintLevel(HttpLoggingInterceptor.Level.NONE);
+        builder.addInterceptor(loggingInterceptor);
+        //default timeout
+        builder.connectTimeout(5, TimeUnit.SECONDS);
+        builder.hostnameVerifier(new SafeHostnameVerifier());
+
+        OkGo.getInstance().init(this)
+                .setOkHttpClient(builder.build())
+                .addCommonHeaders(httpHeaders);
+    }
+
+    private class SafeHostnameVerifier implements HostnameVerifier {
+        @Override
+        public boolean verify(String hostname, SSLSession session) {
+            return hostname.equals("ota.mokeedev.com");
+        }
     }
 
 }

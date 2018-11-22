@@ -214,12 +214,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
-        OkGo.getInstance().cancelAll();
-    }
-
-    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_refresh:
