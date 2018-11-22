@@ -17,32 +17,41 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory android:title="@string/mokee_information_title">
+    <PreferenceCategory>
 
-        <com.mokee.center.preference.VersionPreference android:title="@string/mokee_version_title" />
+        <com.mokee.center.preference.VersionPreference
+            android:icon="@drawable/ic_pref_version"
+            android:title="@string/mokee_version_title" />
 
-        <com.mokee.center.preference.UniqueIDPreference android:title="@string/unique_id_title" />
+        <com.mokee.center.preference.UniqueIDPreference
+            android:icon="@drawable/ic_pref_unique_id"
+            android:title="@string/unique_id_title" />
 
         <com.mokee.center.preference.DonationRecordPreference
+            android:icon="@drawable/ic_pref_donation_record"
             android:key="donation_record"
             android:title="@string/donation_record_title" />
 
         <com.mokee.center.preference.LastUpdateCheckPreference
+            android:icon="@drawable/ic_pref_last_update_check"
             android:key="last_update_check"
             android:title="@string/last_update_check_title" />
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/update_settings_title">
+    <PreferenceCategory>
         <com.mokee.center.preference.UpdateTypePreference
             android:dependency="incremental_updates"
+            android:icon="@drawable/ic_pref_update_type"
             android:key="update_type"
             android:title="@string/update_type_title" />
         <com.mokee.center.preference.IncrementalUpdatesPreference
             android:disableDependentsState="true"
+            android:icon="@drawable/ic_pref_incremental_updates"
             android:key="incremental_updates"
             android:title="@string/incremental_updates_title" />
         <com.mokee.center.preference.VerifiedUpdatesPreference
+            android:icon="@drawable/ic_pref_verified_updates"
             android:key="verified_updates"
             android:title="@string/verified_updates_title" />
     </PreferenceCategory>

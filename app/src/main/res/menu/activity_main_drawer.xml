@@ -22,7 +22,7 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_forum"
-            android:icon="@drawable/ic_mav_forum"
+            android:icon="@drawable/ic_nav_forum"
             android:title="@string/nav_main_forum_title" />
         <item
             android:id="@+id/nav_bug_reports"
