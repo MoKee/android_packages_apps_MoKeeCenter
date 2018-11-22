@@ -57,7 +57,9 @@ public class RequestUtil {
         } else {
             url = context.getString(R.string.conf_fetch_full_update_url_def);
             mMainPrefs.edit().putBoolean(PREF_INCREMENTAL_UPDATES, false).apply();
-            params.put("user_id", Build.getUniqueID(context));
+            if (donationInfo.isBasic()) {
+                params.put("user_id", Build.getUniqueID(context));
+            }
             params.put("device_official", configUpdateType);
         }
 
