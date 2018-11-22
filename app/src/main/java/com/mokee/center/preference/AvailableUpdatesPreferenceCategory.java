@@ -28,6 +28,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.controller.UpdaterController;
 import com.mokee.center.misc.Constants;
@@ -40,6 +44,7 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
 
     private UpdaterController mUpdaterController;
     private View mItemView;
+    private InterstitialAd mDownloadInterstitialAd;
 
     public AvailableUpdatesPreferenceCategory(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -53,6 +58,27 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
         mItemView = holder.itemView;
+        if (!MKCenterApplication.getInstance().getDonationInfo().isAdvanced()) {
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mDownloadInterstitialAd = new InterstitialAd(getContext());
+            mDownloadInterstitialAd.setAdUnitId(getContext().getString(R.string.interstitial_ad_unit_id));
+            mDownloadInterstitialAd.setAdListener(new AdListener() {
+                @Override
+                public void onAdClosed() {
+                    mDownloadInterstitialAd.loadAd(adRequest);
+                    if (!MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
+                        Snackbar.make(mItemView, R.string.download_limited_mode, Snackbar.LENGTH_LONG).show();
+                    }
+                }
+            });
+            mDownloadInterstitialAd.loadAd(adRequest);
+        }
+    }
+
+    public void setInterstitialAd() {
+        if (MKCenterApplication.getInstance().getDonationInfo().isAdvanced()) {
+            mDownloadInterstitialAd = null;
+        }
     }
 
     public void refreshPreferences() {
@@ -74,6 +100,15 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
     }
 
     private void onStartAction(String downloadId, boolean isNew) {
+        if (mDownloadInterstitialAd != null) {
+            if (mDownloadInterstitialAd.isLoaded()) {
+                mDownloadInterstitialAd.show();
+            } else {
+                if (!MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
+                    Snackbar.make(mItemView, R.string.download_limited_mode, Snackbar.LENGTH_LONG).show();
+                }
+            }
+        }
         if (isNew) {
             mUpdaterController.startDownload(downloadId);
         } else {

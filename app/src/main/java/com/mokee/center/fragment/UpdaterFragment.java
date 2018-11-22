@@ -84,7 +84,8 @@ import static com.mokee.center.misc.Constants.PREF_UPDATES_CATEGORY;
 import static com.mokee.center.misc.Constants.PREF_UPDATE_TYPE;
 import static com.mokee.center.misc.Constants.PREF_VERIFIED_UPDATES;
 
-public class UpdaterFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener, Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
+public class UpdaterFragment extends PreferenceFragmentCompat implements SharedPreferences.OnSharedPreferenceChangeListener,
+        Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener {
 
     private static final String TAG = UpdaterFragment.class.getName();
 
@@ -186,6 +187,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                 mUpdateTypePreference.refreshPreference();
                 mIncrementalUpdatesPreference.refreshPreference();
                 mVerifiedUpdatesPreference.refreshPreference();
+                mUpdatesCategory.setInterstitialAd();
                 break;
         }
     }
@@ -401,5 +403,4 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         }
         return false;
     }
-
 }
