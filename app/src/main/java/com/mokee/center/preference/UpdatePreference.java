@@ -151,11 +151,11 @@ public class UpdatePreference extends Preference implements View.OnClickListener
             mDownloadProgress.setVisibility(View.GONE);
             long diffSize = Long.valueOf(mUpdateInfo.getDiffSize());
             if (diffSize == 0) {
-                mSummaryView.setText(R.string.update_not_support_incremental_updates);
+                mSummaryView.setText(R.string.incremental_updates_not_support_summary);
             } else {
                 mSummaryView.setText(getContext().getString(BuildInfoUtil.isIncrementalUpdate(mUpdateInfo.getName())
-                                ? R.string.update_supported_incremental_updates_ota
-                                : R.string.update_supported_incremental_updates_full,
+                                ? R.string.incremental_updates_supported_ota_summary
+                                : R.string.incremental_updates_supported_full_summary,
                         Formatter.formatFileSize(getContext(), diffSize)));
             }
         }

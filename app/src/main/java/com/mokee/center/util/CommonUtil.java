@@ -24,6 +24,7 @@ import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.SystemProperties;
 import android.support.v7.preference.PreferenceManager;
 import android.text.format.DateUtils;
 import android.util.Log;
@@ -180,6 +181,10 @@ public class CommonUtil {
 
     public static CharSequence calculateEta(Context context, long speed, long totalBytes, long totalBytesRead) {
         return context.getString(R.string.download_remaining, DateUtils.formatDuration((totalBytes - totalBytesRead) / speed * 1000));
+    }
+
+    public static boolean isABDevice() {
+        return SystemProperties.getBoolean(Constants.PROP_AB_DEVICE, false);
     }
 
     public static SharedPreferences getDonationPrefs(Context context) {

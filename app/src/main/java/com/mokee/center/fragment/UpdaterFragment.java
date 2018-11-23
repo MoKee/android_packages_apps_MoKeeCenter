@@ -230,11 +230,8 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_refresh:
+            case R.id.menu_refresh:
                 downloadUpdatesList(true);
-                return true;
-            case R.id.action_restore:
-                CommonUtil.restoreLicenseRequest(getActivity());
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -297,8 +294,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             loadUpdatesList(updates, manualRefresh);
             mMainPrefs.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
             ((LastUpdateCheckPreference)findPreference(PREF_LAST_UPDATE_CHECK)).updateSummary();
-            if (json.exists() && mMainPrefs.getBoolean(Constants.PREF_AUTO_UPDATES_CHECK, true)
-                    && CommonUtil.checkForNewUpdates(json, jsonNew)) {
+            if (json.exists() && CommonUtil.checkForNewUpdates(json, jsonNew)) {
                 UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getContext());
             }
             // In case we set a one-shot check because of a previous failure
@@ -339,7 +335,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
 
     private void refreshAnimationStart() {
         if (mRefreshIconView == null) {
-            mRefreshIconView = getActivity().findViewById(R.id.action_refresh);
+            mRefreshIconView = getActivity().findViewById(R.id.menu_refresh);
         }
         if (mRefreshIconView != null) {
             mRefreshAnimation.setRepeatCount(Animation.INFINITE);
@@ -403,4 +399,5 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         }
         return false;
     }
+
 }

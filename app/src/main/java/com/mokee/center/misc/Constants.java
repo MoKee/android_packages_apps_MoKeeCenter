@@ -67,10 +67,11 @@ public class Constants {
     // Prefs
     public static final String PREF_DONATION_RECORD = "donation_record";
     public static final String PREF_LAST_UPDATE_CHECK = "last_update_check";
+    public static final String PREF_AUTO_DELETE_UPDATES = "auto_delete_updates";
+    public static final String PREF_AB_PERF_MODE = "ab_perf_mode";
     public static final String PREF_UPDATE_TYPE = "update_type";
     public static final String PREF_VERIFIED_UPDATES = "verified_updates";
     public static final String PREF_INCREMENTAL_UPDATES = "incremental_updates";
-    public static final String PREF_AUTO_UPDATES_CHECK = "auto_updates_check";
     public static final String PREF_UPDATES_CATEGORY = "updates_category";
     public static final String PREF_MOBILE_DATA_WARNING = "pref_mobile_data_warning";
 
@@ -78,8 +79,9 @@ public class Constants {
     public static final String PARAM_UNIQUE_IDS = "user_ids";
 
     // Request Tags
-    public static final String DONATION_RANKING_TAG = "FetchDonationRanking";
-    public static final String CHANGELOG_TAG = "FetchChangeLog";
     public static final String AVAILABLE_UPDATES_TAG = "FetchAvailableUpdates";
+
+    // Props
+    public static final String PROP_AB_DEVICE = "ro.build.ab_update";
 
 }

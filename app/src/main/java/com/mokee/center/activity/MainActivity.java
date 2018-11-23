@@ -36,6 +36,7 @@ import android.view.MenuItem;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.dialog.DonationDialogBuilder;
+import com.mokee.center.dialog.PreferencesDialogBuilder;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.util.CommonUtil;
 
@@ -109,9 +110,9 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
         if (MKCenterApplication.getInstance().getDonationInfo().isAdvanced()) {
-            menu.findItem(R.id.action_donation).setTitle(R.string.action_donation);
+            menu.findItem(R.id.menu_donation).setTitle(R.string.menu_donation);
         } else {
-            menu.findItem(R.id.action_donation).setTitle(R.string.action_unlock_features);
+            menu.findItem(R.id.menu_donation).setTitle(R.string.menu_unlock_features);
         }
         return true;
     }
@@ -119,10 +120,14 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.action_settings:
+            case R.id.menu_preferences:
+                new PreferencesDialogBuilder(this).show();
                 return true;
-            case R.id.action_donation:
+            case R.id.menu_donation:
                 new DonationDialogBuilder(this).show();
+                return true;
+            case R.id.menu_restore:
+                CommonUtil.restoreLicenseRequest(this);
                 return true;
         }
         return super.onOptionsItemSelected(item);
@@ -177,5 +182,4 @@ public class MainActivity extends AppCompatActivity
     public Snackbar makeSnackbar(@StringRes int resId, int duration) {
         return Snackbar.make(findViewById(R.id.updater), resId, duration);
     }
-
 }

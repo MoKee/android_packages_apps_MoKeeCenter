@@ -22,11 +22,15 @@
     <string name="nav_header_title">魔趣开源项目</string>
     <string name="nav_header_subtitle">可能是中国最好的安卓开源ROM</string>
     <string name="nav_header_desc">导航标题</string>
-    <string name="action_settings">设置</string>
-    <string name="action_restore">恢复授权</string>
-    <string name="action_donation">捐赠</string>
-    <string name="action_unlock_features">功能解锁</string>
-    <string name="action_refresh">刷新</string>
+    <string name="menu_preferences">首选项</string>
+    <string name="menu_restore">恢复授权</string>
+    <string name="menu_donation">捐赠</string>
+    <string name="menu_unlock_features">功能解锁</string>
+    <string name="menu_refresh">刷新</string>
+    <!-- Preferences -->
+    <string name="pref_auto_delete_updates">安装完毕后删除更新</string>
+    <string name="pref_ab_perf_mode">更快的安装更新</string>
+    <string name="pref_mobile_data_warning">移动数据警告</string>
     <!-- Nav Main -->
     <string name="nav_main_forum_title">魔趣论坛</string>
     <string name="nav_main_source_title">开源代码</string>
@@ -104,9 +108,9 @@
     <string name="new_updates_channel_title">新的系统更新</string>
     <string name="new_updates_found_title">新的系统更新</string>
 
-    <string name="update_not_support_incremental_updates">不支持增量更新到此版本</string>
-    <string name="update_supported_incremental_updates_full">开启增量更新可为您节省 %s 流量</string>
-    <string name="update_supported_incremental_updates_ota">与完整包相比可为您节省 %s 流量</string>
+    <string name="incremental_updates_not_support_summary">不支持增量更新到此版本</string>
+    <string name="incremental_updates_supported_full_summary">开启增量更新可为您节省 %s 流量</string>
+    <string name="incremental_updates_supported_ota_summary">与完整包相比可为您节省 %s 流量</string>
 
     <string name="ongoing_channel_title">正在下载</string>
     <string name="downloading_notification">下载中</string>

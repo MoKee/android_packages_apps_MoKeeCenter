@@ -47,8 +47,7 @@ import java.util.Date;
 import java.util.LinkedList;
 import java.util.UUID;
 
-import static com.mokee.center.misc.Constants.PREF_AUTO_UPDATES_CHECK;
-import static com.mokee.center.misc.Constants.PREF_LAST_UPDATE_CHECK;
+import com.mokee.center.misc.Constants;
 
 public class UpdatesCheckReceiver extends BroadcastReceiver {
 
@@ -69,9 +68,6 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
         }
 
         final SharedPreferences mMainPrefs = CommonUtil.getMainPrefs(context);
-        if (!mMainPrefs.getBoolean(PREF_AUTO_UPDATES_CHECK, true)) {
-            return;
-        }
 
         if (Intent.ACTION_BOOT_COMPLETED.equals(intent.getAction())) {
             // Set a repeating alarm on boot to check for new updates once per day
@@ -103,7 +99,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
                     Log.e(TAG, "Could not parse list, scheduling new check", e);
                     scheduleUpdatesCheck(context);
                 }
-                mMainPrefs.edit().putLong(PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
+                mMainPrefs.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
             }
 
             @Override

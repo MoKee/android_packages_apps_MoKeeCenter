@@ -271,4 +271,10 @@ public class UpdaterController {
         return downloadTaskMap;
     }
 
+//    public void setPerformanceMode(boolean enable) {
+//        if (!CommonUtil.isABDevice()) {
+//            return;
+//        }
+//        ABUpdateInstaller.getInstance(mContext, this).setPerformanceMode(enable);
+//    }
 }
