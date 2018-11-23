@@ -75,7 +75,7 @@ public class MKCenterApplication extends Application {
         loggingInterceptor.setPrintLevel(HttpLoggingInterceptor.Level.NONE);
         builder.addInterceptor(loggingInterceptor);
         //default timeout
-        builder.connectTimeout(15, TimeUnit.SECONDS);
+        builder.connectTimeout(30, TimeUnit.SECONDS);
         builder.hostnameVerifier(new SafeHostnameVerifier());
 
         OkGo.getInstance().init(this)
