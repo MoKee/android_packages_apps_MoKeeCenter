@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.os.PowerManager;
 import android.os.SystemClock;
 import android.support.v4.content.LocalBroadcastManager;
+import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.text.format.Formatter;
 import android.util.Log;
@@ -33,11 +34,13 @@ import com.lzy.okgo.request.GetRequest;
 import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadListener;
 import com.lzy.okserver.download.DownloadTask;
+import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.misc.State;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.CommonUtil;
 import com.mokee.center.util.FileUtil;
+import com.mokee.center.util.RequestUtil;
 
 import java.io.File;
 import java.util.HashMap;
@@ -94,7 +97,7 @@ public class UpdaterController {
         for (UpdateInfo updateInfo : State.loadState(FileUtil.getCachedUpdateList(context))) {
             DownloadTask downloadTask = downloadTaskMap.get(updateInfo.getName());
             if (downloadTask != null) {
-                if (!new File(downloadTask.progress.filePath).exists()) {
+                if (TextUtils.isEmpty(downloadTask.progress.filePath) || !new File(downloadTask.progress.filePath).exists()) {
                     downloadTask.remove();
                 } else {
                     updateInfo.setProgress(downloadTask.progress);
@@ -165,6 +168,10 @@ public class UpdaterController {
     public void startDownload(String downloadId) {
         Log.d(TAG, "Starting " + downloadId);
         GetRequest<File> request = OkGo.get(mAvailableUpdates.get(downloadId).getDownloadUrl());
+        if (MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
+            request.params(RequestUtil.updateParams(mContext));
+        }
+
         DownloadTask task = OkDownload.request(mAvailableUpdates.get(downloadId).getName(), request).save().register(new LogDownloadListener());
         task.start();
         mAvailableUpdates.get(downloadId).setProgress(task.progress);
@@ -172,7 +179,12 @@ public class UpdaterController {
 
     public void resumeDownload(String downloadId) {
         Log.d(TAG, "Resuming " + downloadId);
-        mOkDownload.getTask(downloadId).register(new LogDownloadListener()).start();
+        DownloadTask downloadTask = mOkDownload.getTask(downloadId);
+
+        if (MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
+            downloadTask.progress.request.params(RequestUtil.updateParams(mContext));
+        }
+        downloadTask.register(new LogDownloadListener()).start();
     }
 
     public void pauseDownload(String downloadId) {

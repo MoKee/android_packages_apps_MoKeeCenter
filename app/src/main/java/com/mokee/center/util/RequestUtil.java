@@ -24,11 +24,14 @@ import android.text.TextUtils;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.HttpParams;
+import com.lzy.okgo.request.GetRequest;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.model.DonationInfo;
 import com.mokee.os.Build;
 import com.mokee.security.RSAUtils;
+
+import java.io.File;
 
 import static com.mokee.center.misc.Constants.AVAILABLE_UPDATES_TAG;
 import static com.mokee.center.misc.Constants.PREF_INCREMENTAL_UPDATES;
@@ -57,9 +60,6 @@ public class RequestUtil {
         } else {
             url = context.getString(R.string.conf_fetch_full_update_url_def);
             mMainPrefs.edit().putBoolean(PREF_INCREMENTAL_UPDATES, false).apply();
-            if (donationInfo.isBasic()) {
-                params.put("user_id", Build.getUniqueID(context));
-            }
             params.put("device_official", configUpdateType);
         }
 
@@ -80,4 +80,11 @@ public class RequestUtil {
 
         OkGo.<String>post(url).tag(AVAILABLE_UPDATES_TAG).params(params).execute(callback);
     }
+
+    public static HttpParams updateParams (Context context) {
+        HttpParams params = new HttpParams();
+        params.put("user_id", Build.getUniqueID(context));
+        return params;
+    }
+
 }
