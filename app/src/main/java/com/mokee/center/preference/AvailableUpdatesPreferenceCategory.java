@@ -34,6 +34,7 @@ import com.google.android.gms.ads.InterstitialAd;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.controller.UpdaterController;
+import com.mokee.center.controller.UpdaterService;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.CommonUtil;
@@ -99,7 +100,7 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
         }
     }
 
-    private void onStartAction(String downloadId, boolean isNew) {
+    private void onStartAction(String downloadId, int action) {
         if (mDownloadInterstitialAd != null) {
             if (mDownloadInterstitialAd.isLoaded()) {
                 mDownloadInterstitialAd.show();
@@ -109,14 +110,16 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
                 }
             }
         }
-        if (isNew) {
+        if (action == UpdaterService.DOWNLOAD_START) {
             mUpdaterController.startDownload(downloadId);
+        } else if (action == UpdaterService.DOWNLOAD_RESTART) {
+            mUpdaterController.restartDownload(downloadId);
         } else {
             mUpdaterController.resumeDownload(downloadId);
         }
     }
 
-    private void onCheckWarn(String downloadId, boolean isNew) {
+    private void onCheckWarn(String downloadId, int action) {
         if (mUpdaterController.hasActiveDownloads()) {
             Snackbar.make(mItemView, R.string.download_already_running, Snackbar.LENGTH_SHORT).show();
         } else {
@@ -124,7 +127,7 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
             boolean warn = mMainPrefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
 
             if (CommonUtil.isOnWifiOrEthernet(getContext()) || !warn) {
-                onStartAction(downloadId, isNew);
+                onStartAction(downloadId, action);
                 return;
             }
 
@@ -143,7 +146,7 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
                                             .putBoolean(Constants.PREF_MOBILE_DATA_WARNING, false)
                                             .apply();
                                 }
-                                onStartAction(downloadId, isNew);
+                                onStartAction(downloadId, action);
                             })
                     .setNegativeButton(android.R.string.cancel, null)
                     .show();
@@ -152,12 +155,17 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
 
     @Override
     public void onStartDownload(String downloadId) {
-        onCheckWarn(downloadId, true);
+        onCheckWarn(downloadId, UpdaterService.DOWNLOAD_START);
+    }
+
+    @Override
+    public void onRestartDownload(String downloadId) {
+        onCheckWarn(downloadId, UpdaterService.DOWNLOAD_RESTART);
     }
 
     @Override
     public void onResumeDownload(String downloadId) {
-        onCheckWarn(downloadId, false);
+        onCheckWarn(downloadId, UpdaterService.DOWNLOAD_RESUME);
     }
 
     @Override

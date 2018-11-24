@@ -134,6 +134,7 @@
     <string name="download_paused_notification">Download paused</string>
     <string name="download_waiting_network_notification">Waiting for network</string>
     <string name="download_completed_notification">Download completed</string>
+    <string name="download_verification_failed_notification">更新文件可能损坏，请尝试重新下载</string>
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> left</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">A download is already running</string>

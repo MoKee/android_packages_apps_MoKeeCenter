@@ -84,7 +84,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
 
     public void updatePreferenceView() {
         if (mDownloadProgress == null || mIconView == null
-                ||mSummaryView == null && mFileSizeView == null
+                || mSummaryView == null && mFileSizeView == null
                 || mActionProgress == null) {
             return;
         }
@@ -93,19 +93,19 @@ public class UpdatePreference extends Preference implements View.OnClickListener
             mDownloadProgress.setProgress((int) mProgress.currentSize);
             switch (mProgress.status) {
                 case Progress.WAITING:
-                    mIconView.setImageResource(R.drawable.ic_action_pause);
-                    mDownloadProgress.setVisibility(View.VISIBLE);
+                    mIconView.setVisibility(View.GONE);
                     mDownloadProgress.setIndeterminate(true);
+                    mDownloadProgress.setVisibility(View.VISIBLE);
                     mSummaryView.setText(R.string.download_starting_notification);
                     mActionProgress.setVisibility(View.VISIBLE);
-                    mIconView.setVisibility(View.GONE);
                     mUpdateButton.setEnabled(false);
                     break;
                 case Progress.LOADING:
                     mIconView.setImageResource(R.drawable.ic_action_pause);
+                    mIconView.setVisibility(View.VISIBLE);
+                    mDownloadProgress.setIndeterminate(false);
                     mDownloadProgress.setVisibility(View.VISIBLE);
                     if (mProgress.extra1 != null) {
-                        mDownloadProgress.setIndeterminate(false);
                         mSummaryView.setText(getContext().getString(R.string.download_progress_eta_new,
                                 Formatter.formatFileSize(getContext(), mProgress.currentSize),
                                 Formatter.formatFileSize(getContext(), mProgress.totalSize),
@@ -113,41 +113,61 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                                 NumberFormat.getPercentInstance().format(mProgress.fraction)));
                     }
                     mActionProgress.setVisibility(View.GONE);
-                    mIconView.setVisibility(View.VISIBLE);
                     mUpdateButton.setEnabled(true);
                     break;
                 case Progress.PAUSE:
                     mIconView.setImageResource(R.drawable.ic_action_download);
-                    mDownloadProgress.setVisibility(View.VISIBLE);
+                    mIconView.setVisibility(View.VISIBLE);
                     mDownloadProgress.setIndeterminate(false);
+                    mDownloadProgress.setVisibility(View.VISIBLE);
                     mSummaryView.setText(R.string.download_paused_notification);
+                    mActionProgress.setVisibility(View.GONE);
+                    mUpdateButton.setEnabled(true);
                     break;
                 case Progress.FINISH:
                     mIconView.setImageResource(R.drawable.ic_action_install);
+                    mIconView.setVisibility(View.VISIBLE);
+                    mDownloadProgress.setIndeterminate(false);
                     mDownloadProgress.setVisibility(View.GONE);
                     mSummaryView.setText(R.string.download_completed_notification);
+                    mActionProgress.setVisibility(View.GONE);
+                    mUpdateButton.setEnabled(true);
                     break;
                 case Progress.ERROR:
-                    if (mProgress.exception instanceof SocketException
-                            || mProgress.exception instanceof IOException) {
+                    if (mProgress.exception instanceof SocketException || mProgress.exception instanceof IOException) {
+                        mIconView.setVisibility(View.GONE);
                         mDownloadProgress.setIndeterminate(true);
+                        mDownloadProgress.setVisibility(View.VISIBLE);
                         mSummaryView.setText(R.string.download_waiting_network_notification);
                         mActionProgress.setVisibility(View.VISIBLE);
-                        mIconView.setVisibility(View.GONE);
                         mUpdateButton.setEnabled(false);
+                        break;
+                    } else {
+                        mIconView.setImageResource(R.drawable.ic_action_download);
+                        mIconView.setVisibility(View.VISIBLE);
+                        mDownloadProgress.setIndeterminate(false);
+                        mDownloadProgress.setVisibility(View.GONE);
+                        mSummaryView.setText(R.string.download_verification_failed_notification);
+                        mActionProgress.setVisibility(View.GONE);
+                        mUpdateButton.setEnabled(true);
                         break;
                     }
                 default:
                     mIconView.setImageResource(R.drawable.ic_action_download);
-                    mDownloadProgress.setVisibility(View.VISIBLE);
+                    mIconView.setVisibility(View.VISIBLE);
                     mDownloadProgress.setIndeterminate(false);
+                    mDownloadProgress.setVisibility(View.VISIBLE);
                     mSummaryView.setText(getContext().getString(R.string.download_progress_new,
                             Formatter.formatFileSize(getContext(), mProgress.currentSize),
                             Formatter.formatFileSize(getContext(), mProgress.totalSize),
                             NumberFormat.getPercentInstance().format(mProgress.fraction)));
+                    mActionProgress.setVisibility(View.GONE);
+                    mUpdateButton.setEnabled(true);
             }
         } else {
             mIconView.setImageResource(R.drawable.ic_action_download);
+            mIconView.setVisibility(View.VISIBLE);
+            mDownloadProgress.setIndeterminate(false);
             mDownloadProgress.setVisibility(View.GONE);
             long diffSize = Long.valueOf(mUpdateInfo.getDiffSize());
             if (diffSize == 0) {
@@ -158,12 +178,17 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                                 : R.string.incremental_updates_supported_full_summary,
                         Formatter.formatFileSize(getContext(), diffSize)));
             }
+            mActionProgress.setVisibility(View.GONE);
+            mUpdateButton.setEnabled(true);
         }
     }
 
     private void onStartAction() {
         if (mProgress == null) {
             mOnActionListener.onStartDownload(mUpdateInfo.getName());
+        } else if (mProgress.status == Progress.ERROR
+                && mProgress.exception instanceof UnsupportedOperationException) {
+            mOnActionListener.onRestartDownload(mUpdateInfo.getName());
         } else {
             mOnActionListener.onResumeDownload(mUpdateInfo.getName());
         }
@@ -175,13 +200,10 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         if (mProgress == null || mProgress.status == Progress.PAUSE
                 || mProgress.status == Progress.ERROR || mProgress.status == Progress.NONE) {
             onStartAction();
-        } else {
-            switch (mProgress.status) {
-                case Progress.WAITING:
-                case Progress.LOADING:
-                    mOnActionListener.onPauseDownload(mUpdateInfo.getName());
-                    break;
-            }
+        } else if (mProgress.status == Progress.LOADING){
+            mOnActionListener.onPauseDownload(mUpdateInfo.getName());
+        } else if (mProgress.status == Progress.FINISH) {
+
         }
     }
 
@@ -191,6 +213,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
 
     public interface OnActionListener {
         void onStartDownload(String downloadId);
+        void onRestartDownload(String downloadId);
         void onResumeDownload(String downloadId);
         void onPauseDownload(String downloadId);
     }

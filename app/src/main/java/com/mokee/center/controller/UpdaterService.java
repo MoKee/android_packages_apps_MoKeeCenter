@@ -62,8 +62,10 @@ public class UpdaterService extends Service {
     private static final String ONGOING_NOTIFICATION_CHANNEL =
             "ongoing_notification_channel";
 
-    public static final int DOWNLOAD_RESUME = 0;
-    public static final int DOWNLOAD_PAUSE = 1;
+    public static final int DOWNLOAD_START = 0;
+    public static final int DOWNLOAD_RESUME = 1;
+    public static final int DOWNLOAD_PAUSE = 2;
+    public static final int DOWNLOAD_RESTART = 3;
 
     public static final int NOTIFICATION_ID = 10;
 
@@ -200,6 +202,8 @@ public class UpdaterService extends Service {
                 mUpdaterController.resumeDownload(downloadId);
             } else if (action == DOWNLOAD_PAUSE) {
                 mUpdaterController.pauseDownload(downloadId);
+            } else if (action == DOWNLOAD_RESTART) {
+                mUpdaterController.restartDownload(downloadId);
             } else {
                 Log.e(TAG, "Unknown download action");
             }
@@ -275,9 +279,9 @@ public class UpdaterService extends Service {
             case Progress.FINISH: {
                 stopForeground(STOP_FOREGROUND_DETACH);
                 mNotificationBuilder.mActions.clear();
+                mNotificationBuilder.setProgress(0, 0, false);
                 mNotificationBuilder.setStyle(null);
                 mNotificationBuilder.setSmallIcon(R.drawable.ic_system_update);
-                mNotificationBuilder.setProgress(0, 0, false);
                 String text = getString(R.string.download_completed_notification);
                 mNotificationBuilder.setContentText(text);
                 mNotificationBuilder.setTicker(text);
@@ -308,12 +312,32 @@ public class UpdaterService extends Service {
                     mNotificationBuilder.setOngoing(true);
                     mNotificationBuilder.setAutoCancel(false);
                     mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
+                } else if (progress.exception instanceof UnsupportedOperationException) {
+                    stopForeground(STOP_FOREGROUND_DETACH);
+                    mNotificationBuilder.mActions.clear();
+                    mNotificationBuilder.setProgress(0, 0, false);
+                    String text = getString(R.string.download_verification_failed_notification);
+                    mNotificationStyle.bigText(text);
+                    mNotificationStyle.setSummaryText(null);
+                    mNotificationBuilder.setStyle(mNotificationStyle);
+                    mNotificationBuilder.setSmallIcon(R.drawable.ic_system_alert);
+                    mNotificationBuilder.addAction(android.R.drawable.ic_media_play,
+                            getString(R.string.action_download),
+                            getRestartPendingIntent(progress.tag));
+                    mNotificationBuilder.setTicker(text);
+                    mNotificationBuilder.setOngoing(false);
+                    mNotificationBuilder.setAutoCancel(false);
+                    mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
                     tryStopSelf();
-                    break;
                 } else {
+                    stopForeground(STOP_FOREGROUND_DETACH);
+                    mNotificationBuilder.setOngoing(false);
+                    mNotificationManager.cancel(NOTIFICATION_ID);
                     Log.i("MOKEEE", progress.exception.getMessage());
                     progress.exception.printStackTrace();
+                    tryStopSelf();
                 }
+                break;
             }
         }
     }
@@ -364,6 +388,14 @@ public class UpdaterService extends Service {
         intent.setAction(ACTION_DOWNLOAD_CONTROL);
         intent.putExtra(EXTRA_DOWNLOAD_ID, downloadId);
         intent.putExtra(EXTRA_DOWNLOAD_CONTROL, DOWNLOAD_PAUSE);
+        return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    private PendingIntent getRestartPendingIntent(String downloadId) {
+        final Intent intent = new Intent(this, UpdaterService.class);
+        intent.setAction(ACTION_DOWNLOAD_CONTROL);
+        intent.putExtra(EXTRA_DOWNLOAD_ID, downloadId);
+        intent.putExtra(EXTRA_DOWNLOAD_CONTROL, DOWNLOAD_RESTART);
         return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 

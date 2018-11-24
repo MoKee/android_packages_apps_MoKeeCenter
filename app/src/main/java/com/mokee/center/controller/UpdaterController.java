@@ -20,6 +20,7 @@ package com.mokee.center.controller;
 import android.content.Context;
 import android.content.Intent;
 import android.os.PowerManager;
+import android.os.RecoverySystem;
 import android.os.SystemClock;
 import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
@@ -69,7 +70,6 @@ public class UpdaterController {
 
     private final PowerManager.WakeLock mWakeLock;
 
-    private boolean mActiveDownloads = false;
     private String mActiveDownloadTag;
 
     public static synchronized UpdaterController getInstance() {
@@ -97,6 +97,7 @@ public class UpdaterController {
         for (UpdateInfo updateInfo : State.loadState(FileUtil.getCachedUpdateList(context))) {
             DownloadTask downloadTask = downloadTaskMap.get(updateInfo.getName());
             if (downloadTask != null) {
+                // File already deleted
                 if (TextUtils.isEmpty(downloadTask.progress.filePath) || !new File(downloadTask.progress.filePath).exists()) {
                     downloadTask.remove();
                 } else {
@@ -145,6 +146,37 @@ public class UpdaterController {
         return true;
     }
 
+    private void verifyUpdateAsync(final String downloadId) {
+        new Thread(() -> {
+            DownloadTask downloadTask = mOkDownload.getTask(downloadId);
+            File file = new File(downloadTask.progress.filePath);
+            if (!file.exists() || !verifyPackage(file)) {
+                Progress progress = downloadTask.progress;
+                progress.status = Progress.ERROR;
+                progress.exception = new UnsupportedOperationException("Verification failed");
+                downloadTask.save();
+            }
+            notifyUpdateChange(downloadId);
+        }).start();
+    }
+
+    private boolean verifyPackage(File file) {
+        try {
+            RecoverySystem.verifyPackage(file, null, null);
+            Log.e(TAG, "Verification successful");
+            return true;
+        } catch (Exception e) {
+            Log.e(TAG, "Verification failed", e);
+            if (file.exists()) {
+                file.delete();
+            } else {
+                // The download was probably stopped. Exit silently
+                Log.e(TAG, "Error while verifying the file", e);
+            }
+            return false;
+        }
+    }
+
     void notifyUpdateChange(String downloadId) {
         Intent intent = new Intent();
         intent.setAction(ACTION_UPDATE_STATUS);
@@ -187,10 +219,14 @@ public class UpdaterController {
         downloadTask.register(new LogDownloadListener()).start();
     }
 
+    public void restartDownload(String downloadId) {
+        Log.d(TAG, "Restarting " + downloadId);
+        mOkDownload.getTask(downloadId).restart();
+    }
+
     public void pauseDownload(String downloadId) {
         Log.d(TAG, "Pausing " + downloadId);
         mOkDownload.getTask(downloadId).pause();
-        mActiveDownloads = false;
         mActiveDownloadTag = null;
     }
 
@@ -199,7 +235,7 @@ public class UpdaterController {
     }
 
     public boolean hasActiveDownloads() {
-        return mActiveDownloads;
+        return !TextUtils.isEmpty(mActiveDownloadTag);
     }
 
     public UpdateInfo getUpdate(String downloadId) {
@@ -217,17 +253,19 @@ public class UpdaterController {
 
         @Override
         public void onStart(Progress progress) {
-            mWakeLock.acquire();
-            mActiveDownloads = true;
             mActiveDownloadTag = progress.tag;
+            mWakeLock.acquire();
         }
 
         @Override
         public void onProgress(Progress progress) {
-            if (mStatus != progress.status || progress.status == Progress.ERROR) {
+            if (mStatus != progress.status) {
                 Log.i("MOKEEE", "Status changed: " + mStatus + " to " + String.valueOf(progress.status));
+                if (progress.status != Progress.FINISH
+                        && progress.status != Progress.ERROR) {
+                    notifyUpdateChange(progress.tag);
+                }
                 mStatus = progress.status;
-                notifyUpdateChange(progress.tag);
             } else {
                 final long now = SystemClock.elapsedRealtime();
                 if (now - DateUtils.SECOND_IN_MILLIS >= mLastUpdate) {
@@ -248,12 +286,14 @@ public class UpdaterController {
 
         @Override
         public void onError(Progress progress) {
+            notifyUpdateChange(progress.tag);
         }
 
         @Override
         public void onFinish(File file, Progress progress) {
+            mActiveDownloadTag = null;
+            verifyUpdateAsync(progress.tag);
             tryReleaseWakelock();
-            mActiveDownloads = false;
         }
 
         @Override

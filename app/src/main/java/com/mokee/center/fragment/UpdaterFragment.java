@@ -136,7 +136,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                     UpdatePreference updatePreference = (UpdatePreference) findPreference(downloadId);
                     if (updatePreference.getProgress() == null) {
                         updatePreference.setProgress(OkDownload.getInstance().getTask(downloadId).progress);
-
                     }
                     updatePreference.updatePreferenceView();
                 }
@@ -149,7 +148,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         mRefreshAnimation.setDuration(1000);
 
         mOkDownload = OkDownload.getInstance();
-        mOkDownload.setFolder(FileUtil.getDownloadPath(getContext()).getAbsolutePath());
+        mOkDownload.setFolder(FileUtil.getDownloadPath().getAbsolutePath());
         mOkDownload.getThreadPool().setCorePoolSize(1);
     }
 

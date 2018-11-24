@@ -28,12 +28,12 @@ import java.util.Locale;
 
 public class FileUtil {
 
-    public static File getDownloadPath(Context context) {
+    public static File getDownloadPath() {
         return new File(Environment.getExternalStorageDirectory(), "mokee_updates");
     }
 
     public static File getCachedUpdateList(Context context) {
-        return new File(context.getCacheDir(), "updates.state");
+        return new File(context.getCacheDir(), "updates.cached");
     }
 
     public static boolean checkMd5(String md5, File file) {
