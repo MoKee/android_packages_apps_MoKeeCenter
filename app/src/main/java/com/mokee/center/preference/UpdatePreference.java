@@ -65,9 +65,8 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         super.onBindViewHolder(holder);
         UpdateInfo updateInfo = mUpdaterController.getUpdate(getKey());
         if (updateInfo == null) return;
-        if (updateInfo.getProgress() != null) {
-            holder.itemView.setOnLongClickListener(this);
-        }
+        holder.itemView.setOnLongClickListener(this);
+
         mUpdateButton = holder.findViewById(R.id.action_frame);
         mUpdateButton.setOnClickListener(this);
 
@@ -199,11 +198,15 @@ public class UpdatePreference extends Preference implements View.OnClickListener
 
     @Override
     public boolean onLongClick(View view) {
-        PopupMenu popupMenu = new PopupMenu(getContext(), mTitleView);
-        popupMenu.getMenuInflater().inflate(R.menu.menu_action_mode, popupMenu.getMenu());
-        popupMenu.setOnMenuItemClickListener(this);
-        popupMenu.show();
-        return true;
+        Progress progress = mUpdaterController.getUpdate(getKey()).getProgress();
+        if (progress != null && progress.status == Progress.FINISH) {
+            PopupMenu popupMenu = new PopupMenu(getContext(), mTitleView);
+            popupMenu.getMenuInflater().inflate(R.menu.menu_action_mode, popupMenu.getMenu());
+            popupMenu.setOnMenuItemClickListener(this);
+            popupMenu.show();
+            return true;
+        }
+        return false;
     }
 
     @Override

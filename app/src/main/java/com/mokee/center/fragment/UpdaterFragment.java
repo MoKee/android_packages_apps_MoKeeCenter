@@ -135,7 +135,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                     String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
                     UpdateInfo updateInfo = mUpdaterService.getUpdaterController().getUpdate(downloadId);
                     UpdatePreference updatePreference = (UpdatePreference) findPreference(downloadId);
-                    updatePreference.updatePreferenceView(updateInfo);
+                    if (updatePreference != null) {
+                        updatePreference.updatePreferenceView(updateInfo);
+                    }
                 }
             }
         };
@@ -388,6 +390,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference instanceof UpdateTypePreference) {
             if (TextUtils.equals(mUpdateTypePreference.getValue(), newValue.toString())) return false;
+            OkDownload.getInstance().pauseAll();
             File jsonFile = FileUtil.getCachedUpdateList(getContext());
             jsonFile.delete();
             loadUpdatesList(new LinkedList<>(), false);

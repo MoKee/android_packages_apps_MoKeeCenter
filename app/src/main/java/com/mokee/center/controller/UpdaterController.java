@@ -184,6 +184,13 @@ public class UpdaterController {
         mBroadcastManager.sendBroadcast(intent);
     }
 
+    void notifyUpdateDelete(String downloadId) {
+        Intent intent = new Intent();
+        intent.setAction(ACTION_UPDATE_REMOVED);
+        intent.putExtra(EXTRA_DOWNLOAD_ID, downloadId);
+        mBroadcastManager.sendBroadcast(intent);
+    }
+
     void notifyDownloadProgress(String downloadId) {
         Intent intent = new Intent();
         intent.setAction(ACTION_DOWNLOAD_PROGRESS);
@@ -234,10 +241,15 @@ public class UpdaterController {
         Log.d(TAG, "Deleting " + downloadId);
         mOkDownload.getTask(downloadId).remove(true);
         mAvailableUpdates.get(downloadId).setProgress(null);
+        notifyUpdateDelete(downloadId);
     }
 
     public String getActiveDownloadTag() {
         return mActiveDownloadTag;
+    }
+
+    public void setActiveDownloadTag(String activeDownloadTag) {
+        this.mActiveDownloadTag = activeDownloadTag;
     }
 
     public boolean hasActiveDownloads() {

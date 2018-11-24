@@ -124,21 +124,21 @@ public class UpdaterService extends Service {
                     UpdateInfo update = mUpdaterController.getUpdate(downloadId);
                     setNotificationTitle(update);
                     handleInstallProgress(update);
-                } else if (UpdaterController.ACTION_UPDATE_REMOVED.equals(intent.getAction())) {
+                }*/ else if (UpdaterController.ACTION_UPDATE_REMOVED.equals(intent.getAction())) {
                     Bundle extras = mNotificationBuilder.getExtras();
                     if (extras != null && downloadId.equals(
                             extras.getString(UpdaterController.EXTRA_DOWNLOAD_ID))) {
                         mNotificationBuilder.setExtras(null);
                         mNotificationManager.cancel(NOTIFICATION_ID);
                     }
-                }*/
+                }
             }
         };
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(UpdaterController.ACTION_DOWNLOAD_PROGRESS);
 //        intentFilter.addAction(UpdaterController.ACTION_INSTALL_PROGRESS);
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_STATUS);
-//        intentFilter.addAction(UpdaterController.ACTION_UPDATE_REMOVED);
+        intentFilter.addAction(UpdaterController.ACTION_UPDATE_REMOVED);
         LocalBroadcastManager.getInstance(this).registerReceiver(mBroadcastReceiver, intentFilter);
 
         NetworkRequest.Builder req = new NetworkRequest.Builder();
