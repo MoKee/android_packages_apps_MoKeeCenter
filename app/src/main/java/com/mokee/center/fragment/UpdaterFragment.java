@@ -374,6 +374,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     public boolean onPreferenceClick(Preference preference) {
         if (preference instanceof IncrementalUpdatesPreference
                 || preference instanceof VerifiedUpdatesPreference) {
+            OkDownload.getInstance().pauseAll();
             File jsonFile = FileUtil.getCachedUpdateList(getContext());
             jsonFile.delete();
             loadUpdatesList(new LinkedList<>(), false);

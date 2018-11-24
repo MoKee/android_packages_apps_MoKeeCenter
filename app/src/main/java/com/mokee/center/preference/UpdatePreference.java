@@ -64,6 +64,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
         UpdateInfo updateInfo = mUpdaterController.getUpdate(getKey());
+        if (updateInfo == null) return;
         if (updateInfo.getProgress() != null) {
             holder.itemView.setOnLongClickListener(this);
         }
