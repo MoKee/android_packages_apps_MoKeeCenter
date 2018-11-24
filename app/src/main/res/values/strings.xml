@@ -39,6 +39,7 @@
     <string name="menu_donation">Donation</string>
     <string name="menu_unlock_features">Unlock Features</string>
     <string name="menu_refresh">Refresh</string>
+    <string name="menu_delete_update">Delete</string>
 
     <!-- Preference -->
     <string name="pref_auto_delete_updates">Delete updates when installed or deprecated</string>

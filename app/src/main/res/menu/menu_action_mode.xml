@@ -15,12 +15,10 @@
      You should have received a copy of the GNU General Public License
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-<resources>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        <item name="android:statusBarColor">@android:color/transparent</item>
-    </style>
+    <item
+        android:id="@+id/menu_delete_action"
+        android:title="@string/menu_delete_update" />
 
-</resources>
+</menu>

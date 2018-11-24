@@ -20,7 +20,10 @@ import android.content.Context;
 import android.support.v7.internal.widget.PreferenceImageView;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceViewHolder;
+import android.support.v7.view.menu.MenuBuilder;
+import android.support.v7.widget.PopupMenu;
 import android.text.format.Formatter;
+import android.view.Menu;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -34,11 +37,12 @@ import java.io.IOException;
 import java.net.SocketException;
 import java.text.NumberFormat;
 
-public class UpdatePreference extends Preference implements View.OnClickListener {
+public class UpdatePreference extends Preference implements View.OnClickListener, View.OnLongClickListener {
 
     private OnActionListener mOnActionListener;
 
     private PreferenceImageView mIconView;
+    private TextView mTitleView;
     private TextView mFileSizeView;
     private TextView mSummaryView;
     private ProgressBar mDownloadProgress;
@@ -66,10 +70,14 @@ public class UpdatePreference extends Preference implements View.OnClickListener
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
+        if (mProgress != null) {
+            holder.itemView.setOnLongClickListener(this);
+        }
         mUpdateButton = holder.findViewById(R.id.action_frame);
         mUpdateButton.setOnClickListener(this);
 
         mIconView = (PreferenceImageView) holder.findViewById(R.id.action_icon);
+        mTitleView = (TextView) holder.findViewById(android.R.id.title);
 
         mFileSizeView = (TextView) holder.findViewById(R.id.file_size);
         mFileSizeView.setText(Formatter.formatFileSize(getContext(), mUpdateInfo.getFileSize()));
@@ -192,6 +200,14 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         } else {
             mOnActionListener.onResumeDownload(mUpdateInfo.getName());
         }
+    }
+
+    @Override
+    public boolean onLongClick(View view) {
+        PopupMenu popupMenu = new PopupMenu(getContext(), mTitleView);
+        popupMenu.getMenuInflater().inflate(R.menu.menu_action_mode, popupMenu.getMenu());
+        popupMenu.show();
+        return true;
     }
 
     @Override
