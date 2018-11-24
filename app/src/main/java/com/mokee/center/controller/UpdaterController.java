@@ -230,6 +230,12 @@ public class UpdaterController {
         mActiveDownloadTag = null;
     }
 
+    public void deleteDownload(String downloadId) {
+        Log.d(TAG, "Deleting " + downloadId);
+        mOkDownload.getTask(downloadId).remove(true);
+        mAvailableUpdates.get(downloadId).setProgress(null);
+    }
+
     public String getActiveDownloadTag() {
         return mActiveDownloadTag;
     }

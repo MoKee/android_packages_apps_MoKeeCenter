@@ -20,16 +20,16 @@ import android.content.Context;
 import android.support.v7.internal.widget.PreferenceImageView;
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceViewHolder;
-import android.support.v7.view.menu.MenuBuilder;
 import android.support.v7.widget.PopupMenu;
 import android.text.format.Formatter;
-import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.lzy.okgo.model.Progress;
 import com.mokee.center.R;
+import com.mokee.center.controller.UpdaterController;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.BuildInfoUtil;
 
@@ -37,7 +37,7 @@ import java.io.IOException;
 import java.net.SocketException;
 import java.text.NumberFormat;
 
-public class UpdatePreference extends Preference implements View.OnClickListener, View.OnLongClickListener {
+public class UpdatePreference extends Preference implements View.OnClickListener, View.OnLongClickListener, PopupMenu.OnMenuItemClickListener {
 
     private OnActionListener mOnActionListener;
 
@@ -49,28 +49,22 @@ public class UpdatePreference extends Preference implements View.OnClickListener
     private ProgressBar mActionProgress;
     private View mUpdateButton;
 
-    public Progress getProgress() {
-        return mProgress;
+    private UpdaterController mUpdaterController;
+
+    public void setUpdaterController(UpdaterController updaterController) {
+        mUpdaterController = updaterController;
     }
 
-    public void setProgress(Progress progress) {
-        this.mProgress = progress;
-    }
-
-    private Progress mProgress;
-    private UpdateInfo mUpdateInfo;
-
-
-    public UpdatePreference(Context context, UpdateInfo updateInfo) {
+    public UpdatePreference(Context context) {
         super(context);
-        mUpdateInfo  = updateInfo;
         setLayoutResource(R.layout.preference_update);
     }
 
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
-        if (mProgress != null) {
+        UpdateInfo updateInfo = mUpdaterController.getUpdate(getKey());
+        if (updateInfo.getProgress() != null) {
             holder.itemView.setOnLongClickListener(this);
         }
         mUpdateButton = holder.findViewById(R.id.action_frame);
@@ -80,26 +74,26 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         mTitleView = (TextView) holder.findViewById(android.R.id.title);
 
         mFileSizeView = (TextView) holder.findViewById(R.id.file_size);
-        mFileSizeView.setText(Formatter.formatFileSize(getContext(), mUpdateInfo.getFileSize()));
+        mFileSizeView.setText(Formatter.formatFileSize(getContext(), updateInfo.getFileSize()));
 
         mDownloadProgress = (ProgressBar) holder.findViewById(R.id.download_progress);
         mActionProgress = (ProgressBar) holder.findViewById(R.id.action_progress);
 
         mSummaryView = (TextView) holder.findViewById(R.id.summary);
-        updatePreferenceView();
-
+        updatePreferenceView(updateInfo);
     }
 
-    public void updatePreferenceView() {
+    public void updatePreferenceView(UpdateInfo updateInfo) {
         if (mDownloadProgress == null || mIconView == null
                 || mSummaryView == null && mFileSizeView == null
                 || mActionProgress == null) {
             return;
         }
-        if (mProgress != null) {
-            mDownloadProgress.setMax((int) mProgress.totalSize);
-            mDownloadProgress.setProgress((int) mProgress.currentSize);
-            switch (mProgress.status) {
+        Progress progress = updateInfo.getProgress();
+        if (progress != null) {
+            mDownloadProgress.setMax((int) progress.totalSize);
+            mDownloadProgress.setProgress((int) progress.currentSize);
+            switch (progress.status) {
                 case Progress.WAITING:
                     mIconView.setVisibility(View.GONE);
                     mDownloadProgress.setIndeterminate(true);
@@ -113,12 +107,12 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     mIconView.setVisibility(View.VISIBLE);
                     mDownloadProgress.setIndeterminate(false);
                     mDownloadProgress.setVisibility(View.VISIBLE);
-                    if (mProgress.extra1 != null) {
+                    if (progress.extra1 != null) {
                         mSummaryView.setText(getContext().getString(R.string.download_progress_eta_new,
-                                Formatter.formatFileSize(getContext(), mProgress.currentSize),
-                                Formatter.formatFileSize(getContext(), mProgress.totalSize),
-                                mProgress.extra1,
-                                NumberFormat.getPercentInstance().format(mProgress.fraction)));
+                                Formatter.formatFileSize(getContext(), progress.currentSize),
+                                Formatter.formatFileSize(getContext(), progress.totalSize),
+                                progress.extra1,
+                                NumberFormat.getPercentInstance().format(progress.fraction)));
                     }
                     mActionProgress.setVisibility(View.GONE);
                     mUpdateButton.setEnabled(true);
@@ -142,7 +136,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     mUpdateButton.setEnabled(true);
                     break;
                 case Progress.ERROR:
-                    if (mProgress.exception instanceof SocketException || mProgress.exception instanceof IOException) {
+                    if (progress.exception instanceof SocketException || progress.exception instanceof IOException) {
                         mIconView.setVisibility(View.GONE);
                         mDownloadProgress.setIndeterminate(true);
                         mDownloadProgress.setVisibility(View.VISIBLE);
@@ -166,9 +160,9 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     mDownloadProgress.setIndeterminate(false);
                     mDownloadProgress.setVisibility(View.VISIBLE);
                     mSummaryView.setText(getContext().getString(R.string.download_progress_new,
-                            Formatter.formatFileSize(getContext(), mProgress.currentSize),
-                            Formatter.formatFileSize(getContext(), mProgress.totalSize),
-                            NumberFormat.getPercentInstance().format(mProgress.fraction)));
+                            Formatter.formatFileSize(getContext(), progress.currentSize),
+                            Formatter.formatFileSize(getContext(), progress.totalSize),
+                            NumberFormat.getPercentInstance().format(progress.fraction)));
                     mActionProgress.setVisibility(View.GONE);
                     mUpdateButton.setEnabled(true);
             }
@@ -177,11 +171,11 @@ public class UpdatePreference extends Preference implements View.OnClickListener
             mIconView.setVisibility(View.VISIBLE);
             mDownloadProgress.setIndeterminate(false);
             mDownloadProgress.setVisibility(View.GONE);
-            long diffSize = Long.valueOf(mUpdateInfo.getDiffSize());
+            long diffSize = Long.valueOf(updateInfo.getDiffSize());
             if (diffSize == 0) {
                 mSummaryView.setText(R.string.incremental_updates_not_support_summary);
             } else {
-                mSummaryView.setText(getContext().getString(BuildInfoUtil.isIncrementalUpdate(mUpdateInfo.getName())
+                mSummaryView.setText(getContext().getString(BuildInfoUtil.isIncrementalUpdate(getKey())
                                 ? R.string.incremental_updates_supported_ota_summary
                                 : R.string.incremental_updates_supported_full_summary,
                         Formatter.formatFileSize(getContext(), diffSize)));
@@ -191,14 +185,14 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         }
     }
 
-    private void onStartAction() {
-        if (mProgress == null) {
-            mOnActionListener.onStartDownload(mUpdateInfo.getName());
-        } else if (mProgress.status == Progress.ERROR
-                && mProgress.exception instanceof UnsupportedOperationException) {
-            mOnActionListener.onRestartDownload(mUpdateInfo.getName());
+    private void onStartAction(Progress progress) {
+        if (progress == null) {
+            mOnActionListener.onStartDownload(getKey());
+        } else if (progress.status == Progress.ERROR
+                && progress.exception instanceof UnsupportedOperationException) {
+            mOnActionListener.onRestartDownload(getKey());
         } else {
-            mOnActionListener.onResumeDownload(mUpdateInfo.getName());
+            mOnActionListener.onResumeDownload(getKey());
         }
     }
 
@@ -206,19 +200,32 @@ public class UpdatePreference extends Preference implements View.OnClickListener
     public boolean onLongClick(View view) {
         PopupMenu popupMenu = new PopupMenu(getContext(), mTitleView);
         popupMenu.getMenuInflater().inflate(R.menu.menu_action_mode, popupMenu.getMenu());
+        popupMenu.setOnMenuItemClickListener(this);
         popupMenu.show();
         return true;
     }
 
     @Override
+    public boolean onMenuItemClick(MenuItem menuItem) {
+        switch (menuItem.getItemId()) {
+            case R.id.menu_delete_action:
+                mOnActionListener.onDeleteDownload(getKey());
+                updatePreferenceView(mUpdaterController.getUpdate(getKey()));
+                return true;
+        }
+        return false;
+    }
+
+    @Override
     public void onClick(View view) {
         if (mOnActionListener == null) return;
-        if (mProgress == null || mProgress.status == Progress.PAUSE
-                || mProgress.status == Progress.ERROR || mProgress.status == Progress.NONE) {
-            onStartAction();
-        } else if (mProgress.status == Progress.LOADING){
-            mOnActionListener.onPauseDownload(mUpdateInfo.getName());
-        } else if (mProgress.status == Progress.FINISH) {
+        Progress progress = mUpdaterController.getUpdate(getKey()).getProgress();
+        if (progress == null || progress.status == Progress.PAUSE
+                || progress.status == Progress.ERROR || progress.status == Progress.NONE) {
+            onStartAction(progress);
+        } else if (progress.status == Progress.LOADING){
+            mOnActionListener.onPauseDownload(getKey());
+        } else if (progress.status == Progress.FINISH) {
 
         }
     }
@@ -232,6 +239,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         void onRestartDownload(String downloadId);
         void onResumeDownload(String downloadId);
         void onPauseDownload(String downloadId);
+        void onDeleteDownload(String downloadId);
     }
 
 }

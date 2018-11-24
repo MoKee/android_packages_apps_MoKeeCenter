@@ -133,11 +133,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                 if (UpdaterController.ACTION_UPDATE_STATUS.equals(intent.getAction())
                         || UpdaterController.ACTION_DOWNLOAD_PROGRESS.equals(intent.getAction())) {
                     String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
+                    UpdateInfo updateInfo = mUpdaterService.getUpdaterController().getUpdate(downloadId);
                     UpdatePreference updatePreference = (UpdatePreference) findPreference(downloadId);
-                    if (updatePreference.getProgress() == null) {
-                        updatePreference.setProgress(OkDownload.getInstance().getTask(downloadId).progress);
-                    }
-                    updatePreference.updatePreferenceView();
+                    updatePreference.updatePreferenceView(updateInfo);
                 }
             }
         };

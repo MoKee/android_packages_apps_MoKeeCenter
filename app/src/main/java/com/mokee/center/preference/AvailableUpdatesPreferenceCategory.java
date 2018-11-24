@@ -87,11 +87,11 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
         LinkedList<UpdateInfo> availableUpdates = mUpdaterController.getUpdates();
         if (availableUpdates != null && availableUpdates.size() > 0) {
             for (UpdateInfo updateInfo : availableUpdates) {
-                UpdatePreference updatePreference = new UpdatePreference(getContext(), updateInfo);
+                UpdatePreference updatePreference = new UpdatePreference(getContext());
                 updatePreference.setTitle(updateInfo.getDisplayVersion());
                 updatePreference.setKey(updateInfo.getName());
-                updatePreference.setProgress(updateInfo.getProgress());
                 updatePreference.setOnActionListener(this);
+                updatePreference.setUpdaterController(mUpdaterController);
                 addPreference(updatePreference);
             }
         } else {
@@ -171,5 +171,10 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
     @Override
     public void onPauseDownload(String downloadId) {
         mUpdaterController.pauseDownload(downloadId);
+    }
+
+    @Override
+    public void onDeleteDownload(String downloadId) {
+        mUpdaterController.deleteDownload(downloadId);
     }
 }
