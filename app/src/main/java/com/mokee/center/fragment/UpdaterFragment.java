@@ -51,6 +51,7 @@ import com.mokee.center.activity.MainActivity;
 import com.mokee.center.controller.UpdaterController;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.misc.State;
+import com.mokee.center.model.DonationInfo;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.preference.AvailableUpdatesPreferenceCategory;
 import com.mokee.center.preference.DonationRecordPreference;
@@ -130,14 +131,14 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         mBroadcastReceiver = new BroadcastReceiver() {
             @Override
             public void onReceive(Context context, Intent intent) {
-                if (UpdaterController.ACTION_UPDATE_STATUS.equals(intent.getAction())
-                        || UpdaterController.ACTION_DOWNLOAD_PROGRESS.equals(intent.getAction())) {
-                    String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
-                    UpdateInfo updateInfo = mUpdaterService.getUpdaterController().getUpdate(downloadId);
-                    UpdatePreference updatePreference = (UpdatePreference) findPreference(downloadId);
-                    if (updatePreference != null) {
-                        updatePreference.updatePreferenceView(updateInfo);
-                    }
+                if (UpdaterController.ACTION_UPDATE_STATUS.equals(intent.getAction())) {
+                    updateFeatureStatus();
+                }
+                String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
+                UpdateInfo updateInfo = mUpdaterService.getUpdaterController().getUpdate(downloadId);
+                UpdatePreference updatePreference = (UpdatePreference) findPreference(downloadId);
+                if (updatePreference != null) {
+                    updatePreference.updatePreferenceView(updateInfo);
                 }
             }
         };
@@ -151,7 +152,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         mOkDownload.setFolder(FileUtil.getDownloadPath().getAbsolutePath());
         mOkDownload.getThreadPool().setCorePoolSize(1);
     }
-
 
     @Override
     public void onCreatePreferences(Bundle bundle, String s) {
@@ -246,6 +246,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             mUpdaterService = binder.getService();
             mUpdatesCategory.setUpdaterController(mUpdaterService.getUpdaterController());
             mUpdatesCategory.refreshPreferences();
+            updateFeatureStatus();
             getUpdatesList();
         }
 
@@ -349,9 +350,16 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         if (mRefreshIconView != null) {
             mRefreshAnimation.setRepeatCount(0);
             mRefreshIconView.setEnabled(true);
-            mIncrementalUpdatesPreference.setEnabled(MKCenterApplication.getInstance().getDonationInfo().isBasic());
-            mVerifiedUpdatesPreference.setEnabled(MKCenterApplication.getInstance().getDonationInfo().isAdvanced());
+            updateFeatureStatus();
         }
+    }
+
+    private void updateFeatureStatus() {
+        DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
+        mIncrementalUpdatesPreference.setEnabled(donationInfo.isBasic()
+                && !mUpdaterService.getUpdaterController().hasActiveDownloads());
+        mVerifiedUpdatesPreference.setEnabled(donationInfo.isAdvanced()
+                && !mUpdaterService.getUpdaterController().hasActiveDownloads());
     }
 
     @Override
@@ -376,7 +384,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     public boolean onPreferenceClick(Preference preference) {
         if (preference instanceof IncrementalUpdatesPreference
                 || preference instanceof VerifiedUpdatesPreference) {
-            OkDownload.getInstance().pauseAll();
             File jsonFile = FileUtil.getCachedUpdateList(getContext());
             jsonFile.delete();
             loadUpdatesList(new LinkedList<>(), false);
@@ -390,7 +397,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference instanceof UpdateTypePreference) {
             if (TextUtils.equals(mUpdateTypePreference.getValue(), newValue.toString())) return false;
-            OkDownload.getInstance().pauseAll();
             File jsonFile = FileUtil.getCachedUpdateList(getContext());
             jsonFile.delete();
             loadUpdatesList(new LinkedList<>(), false);
@@ -400,5 +406,4 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         }
         return false;
     }
-
 }

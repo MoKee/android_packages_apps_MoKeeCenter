@@ -214,7 +214,6 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         switch (menuItem.getItemId()) {
             case R.id.menu_delete_action:
                 mOnActionListener.onDeleteDownload(getKey());
-                updatePreferenceView(mUpdaterController.getUpdate(getKey()));
                 return true;
         }
         return false;
