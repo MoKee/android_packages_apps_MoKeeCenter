@@ -216,7 +216,6 @@ public class UpdaterService extends Service {
     }
 
     private void tryStopSelf() {
-        Log.i("MOKEEE", "hasActiveDownloads: " + mUpdaterController.hasActiveDownloads());
         if (!mHasClients && !mUpdaterController.hasActiveDownloads()) {
 //        if (!mHasClients && !mUpdaterController.hasActiveDownloads() &&
 //                !mUpdaterController.isInstallingUpdate()) {
@@ -292,6 +291,7 @@ public class UpdaterService extends Service {
                 break;
             }
             case Progress.ERROR: {
+                Log.i(TAG, progress.exception.getMessage());
                 if (progress.exception instanceof ProtocolException
                         || progress.exception instanceof SocketTimeoutException) {
                     downloadTask.start();
@@ -333,7 +333,6 @@ public class UpdaterService extends Service {
                     stopForeground(STOP_FOREGROUND_DETACH);
                     mNotificationBuilder.setOngoing(false);
                     mNotificationManager.cancel(NOTIFICATION_ID);
-                    Log.i("MOKEEE", progress.exception.getMessage());
                     progress.exception.printStackTrace();
                     tryStopSelf();
                 }
