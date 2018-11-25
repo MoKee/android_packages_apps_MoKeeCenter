@@ -45,6 +45,9 @@ public class IncrementalUpdatesPreference extends SwitchPreference {
     public void refreshPreference() {
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
         if (!donationInfo.isBasic()) {
+            if (isChecked()) {
+                setChecked(false);
+            }
             if (donationInfo.getPaid() == 0f) {
                 setSummary(TextUtils.join(" ", Arrays.asList(getContext().getString(R.string.incremental_updates_summary),
                         getContext().getString(R.string.unlock_features_request_summary, DONATION_BASIC))));

@@ -187,6 +187,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                 mIncrementalUpdatesPreference.refreshPreference();
                 mVerifiedUpdatesPreference.refreshPreference();
                 mUpdatesCategory.setInterstitialAd();
+                updateFeatureStatus();
                 break;
         }
     }
