@@ -44,5 +44,5 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.lzy.net:okgo:3.0.4'
     implementation 'com.lzy.net:okserver:2.0.5'
-    compileOnly files('/Volumes/AndroidSource/MoKeeOpenSource/mko-mr1-dev/vendor/mk-priv/build/tools/sdks/cloud/cloud.jar')
+    compileOnly files('../../../../vendor/mk-priv/build/tools/sdks/cloud/cloud.jar')
 }
