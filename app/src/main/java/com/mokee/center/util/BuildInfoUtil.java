@@ -30,8 +30,6 @@ import java.util.Locale;
 public class BuildInfoUtil {
 
     public static boolean isCompatible(String version) {
-        long newa = getBuildDate(version);
-        long newb = getBuildDate(Build.VERSION);
         return getBuildDate(version) > getBuildDate(Build.VERSION);
     }
 
