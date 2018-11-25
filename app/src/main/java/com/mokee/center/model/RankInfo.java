@@ -17,10 +17,15 @@
 
 package com.mokee.center.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class RankInfo {
 
+    @SerializedName("amount")
     private int amount;
+    @SerializedName("rank")
     private int rank;
+    @SerializedName("percent")
     private int percent;
 
     public int getAmount() {
