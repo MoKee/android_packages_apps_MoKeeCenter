@@ -82,16 +82,8 @@ public class UpdateInfo implements Parcelable, Serializable {
         return mDownloadUrl;
     }
 
-    public void setDownloadUrl(String downloadUrl) {
-        this.mDownloadUrl = downloadUrl;
-    }
-
     public String getChangelogUrl() {
         return mChangelogUrl;
-    }
-
-    public void setChangelogUrl(String changelogUrl) {
-        this.mChangelogUrl = changelogUrl;
     }
 
     public Progress getProgress() {

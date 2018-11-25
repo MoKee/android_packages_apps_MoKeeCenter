@@ -133,9 +133,6 @@ public class UpdaterController {
         Log.d(TAG, "Adding download: " + updateInfo.getName());
         if (mAvailableUpdates.containsKey(updateInfo.getName())) {
             Log.d(TAG, "Download (" + updateInfo.getName() + ") already added");
-            UpdateInfo updateAdded = mAvailableUpdates.get(updateInfo.getName());
-            updateAdded.setDownloadUrl(updateInfo.getDownloadUrl());
-            updateAdded.setChangelogUrl(updateInfo.getChangelogUrl());
             return false;
         }
         DownloadTask downloadedTask = mOkDownload.getTask(updateInfo.getName());
