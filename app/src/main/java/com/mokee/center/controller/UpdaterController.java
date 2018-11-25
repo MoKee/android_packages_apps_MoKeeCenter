@@ -29,7 +29,6 @@ import android.text.format.Formatter;
 import android.util.Log;
 
 import com.lzy.okgo.OkGo;
-import com.lzy.okgo.db.DownloadManager;
 import com.lzy.okgo.exception.HttpException;
 import com.lzy.okgo.model.Progress;
 import com.lzy.okgo.request.GetRequest;
@@ -46,7 +45,6 @@ import com.mokee.center.util.FileUtil;
 import com.mokee.center.util.RequestUtil;
 
 import java.io.File;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
@@ -93,9 +91,9 @@ public class UpdaterController {
         mContext = context.getApplicationContext();
         mOkDownload = OkDownload.getInstance();
 
-//        CommonUtils.cleanupDownloadsDir(context);
+        CommonUtil.cleanupDownloadsDir(context);
 
-        Map<String, DownloadTask> downloadTaskMap = getDownloadTaskMap();
+        Map<String, DownloadTask> downloadTaskMap = CommonUtil.getDownloadTaskMap();
         for (UpdateInfo updateInfo : State.loadState(FileUtil.getCachedUpdateList(context))) {
             if (!BuildInfoUtil.isCompatible(updateInfo.getName())) continue;
             DownloadTask downloadTask = downloadTaskMap.get(updateInfo.getName());
@@ -320,16 +318,6 @@ public class UpdaterController {
         @Override
         public void onRemove(Progress progress) {
         }
-    }
-
-    private Map<String, DownloadTask> getDownloadTaskMap() {
-        Map<String, DownloadTask> downloadTaskMap = new HashMap<>();
-        List<DownloadTask> downloadTasks = OkDownload.restore(DownloadManager.getInstance().getAll());
-        for (Iterator iterator = downloadTasks.iterator(); iterator.hasNext(); ) {
-            DownloadTask task = (DownloadTask) iterator.next();
-            downloadTaskMap.put(task.progress.tag, task);
-        }
-        return downloadTaskMap;
     }
 
 //    public void setPerformanceMode(boolean enable) {

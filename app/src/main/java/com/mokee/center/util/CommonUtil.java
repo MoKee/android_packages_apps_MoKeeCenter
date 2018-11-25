@@ -29,6 +29,9 @@ import android.support.v7.preference.PreferenceManager;
 import android.text.format.DateUtils;
 import android.util.Log;
 
+import com.lzy.okgo.db.DownloadManager;
+import com.lzy.okserver.OkDownload;
+import com.lzy.okserver.download.DownloadTask;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.misc.Constants;
@@ -46,9 +49,12 @@ import org.json.JSONObject;
 import java.io.File;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import static com.mokee.center.misc.Constants.ACTION_PAYMENT_REQUEST;
@@ -68,6 +74,19 @@ public class CommonUtil {
         NetworkInfo info = cm.getActiveNetworkInfo();
         return (info != null && (info.getType() == ConnectivityManager.TYPE_ETHERNET
                 || info.getType() == ConnectivityManager.TYPE_WIFI));
+    }
+
+    public static void cleanupDownloadsDir(Context context) {
+        SharedPreferences mMainPrefs = getMainPrefs(context);
+        boolean deleteUpdates = mMainPrefs.getBoolean(Constants.PREF_AUTO_DELETE_UPDATES, false);
+        if (deleteUpdates) {
+            Map<String, DownloadTask> downloadTaskMap = CommonUtil.getDownloadTaskMap();
+            for (String version : downloadTaskMap.keySet()) {
+                if (!BuildInfoUtil.isCompatible(version)) {
+                    downloadTaskMap.get(version).remove(true);
+                }
+            }
+        }
     }
 
     public static void openLink(Context context, String url) {
@@ -193,6 +212,16 @@ public class CommonUtil {
 
     public static SharedPreferences getMainPrefs(Context context) {
         return PreferenceManager.getDefaultSharedPreferences(context);
+    }
+
+    public static Map<String, DownloadTask> getDownloadTaskMap() {
+        Map<String, DownloadTask> downloadTaskMap = new HashMap<>();
+        List<DownloadTask> downloadTasks = OkDownload.restore(DownloadManager.getInstance().getAll());
+        for (Iterator iterator = downloadTasks.iterator(); iterator.hasNext(); ) {
+            DownloadTask task = (DownloadTask) iterator.next();
+            downloadTaskMap.put(task.progress.tag, task);
+        }
+        return downloadTaskMap;
     }
 
 }
