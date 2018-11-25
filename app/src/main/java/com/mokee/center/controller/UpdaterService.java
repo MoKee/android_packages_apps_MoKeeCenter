@@ -49,6 +49,7 @@ import java.net.UnknownHostException;
 import java.text.NumberFormat;
 
 import javax.net.ssl.SSLException;
+import javax.net.ssl.SSLHandshakeException;
 
 public class UpdaterService extends Service {
 
@@ -296,6 +297,8 @@ public class UpdaterService extends Service {
                 progress.exception.printStackTrace();
                 if (progress.exception instanceof OkGoException) {
                     downloadTask.restart();
+                } else if (progress.exception instanceof SSLHandshakeException) {
+                    downloadTask.start();
                 } else if (progress.exception instanceof SSLException
                         || progress.exception instanceof UnknownHostException) {
                     mNotificationBuilder.mActions.clear();

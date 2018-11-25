@@ -109,7 +109,7 @@
     <string name="new_updates_channel_title">新的系统更新</string>
     <string name="new_updates_found_title">新的系统更新</string>
 
-    <string name="incremental_updates_not_support_summary">不支持增量更新到此版本</string>
+    <string name="incremental_updates_not_support_summary">暂不支持增量更新到此版本</string>
     <string name="incremental_updates_supported_full_summary">开启增量更新可为您节省 %s 流量</string>
     <string name="incremental_updates_supported_ota_summary">与完整包相比可为您节省 %s 流量</string>
 
