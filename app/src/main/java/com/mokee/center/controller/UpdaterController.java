@@ -151,13 +151,15 @@ public class UpdaterController {
     private void verifyUpdateAsync(final String downloadId) {
         new Thread(() -> {
             DownloadTask downloadTask = mOkDownload.getTask(downloadId);
-            File file = new File(downloadTask.progress.filePath);
-            if (!file.exists() || !verifyPackage(file)) {
-                Progress progress = downloadTask.progress;
+            File partialFile = new File(downloadTask.progress.filePath);
+            Progress progress = downloadTask.progress;
+            if (!partialFile.exists() || !verifyPackage(partialFile)) {
                 progress.status = Progress.ERROR;
                 progress.exception = new UnsupportedOperationException("Verification failed");
-                downloadTask.save();
             }
+            progress.fileName = downloadId;
+            downloadTask.save();
+            partialFile.renameTo(new File(downloadTask.progress.filePath));
             notifyUpdateChange(downloadId);
         }).start();
     }
@@ -212,8 +214,9 @@ public class UpdaterController {
         if (MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
             request.params(RequestUtil.updateParams(mContext));
         }
-
-        DownloadTask task = OkDownload.request(mAvailableUpdates.get(downloadId).getName(), request).save().register(new LogDownloadListener());
+        DownloadTask task = OkDownload.request(mAvailableUpdates.get(downloadId).getName(), request)
+                .fileName(FileUtil.getPartialName(downloadId)).save()
+                .register(new LogDownloadListener());
         task.start();
         mAvailableUpdates.get(downloadId).setProgress(task.progress);
     }

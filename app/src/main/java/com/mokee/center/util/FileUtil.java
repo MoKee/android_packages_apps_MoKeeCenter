@@ -36,6 +36,11 @@ public class FileUtil {
         return new File(context.getCacheDir(), "updates.cached");
     }
 
+    public static String getPartialName(String file) {
+        int extensionPosition = file.lastIndexOf(".");
+        return file.substring(0, extensionPosition) + ".partial";
+    }
+
     public static boolean checkMd5(String md5, File file) {
         try {
             return TextUtils.equals(md5, calculateMd5(file));
