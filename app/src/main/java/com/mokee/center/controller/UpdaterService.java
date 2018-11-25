@@ -59,6 +59,7 @@ public class UpdaterService extends Service {
     public static final String ACTION_DOWNLOAD_CONTROL = "action_download_control";
     public static final String EXTRA_DOWNLOAD_ID = "extra_download_id";
     public static final String EXTRA_DOWNLOAD_CONTROL = "extra_download_control";
+    public static final String ACTION_INSTALL_UPDATE = "action_install_update";
 
     private static final String ONGOING_NOTIFICATION_CHANNEL =
             "ongoing_notification_channel";
@@ -210,6 +211,10 @@ public class UpdaterService extends Service {
             } else {
                 Log.e(TAG, "Unknown download action");
             }
+        } else if (ACTION_INSTALL_UPDATE.equals(intent.getAction())) {
+            String downloadId = intent.getStringExtra(EXTRA_DOWNLOAD_ID);
+            UpdateInstaller installer = UpdateInstaller.getInstance(this, mUpdaterController);
+            installer.install(downloadId);
         }
         return START_NOT_STICKY;
     }
@@ -219,9 +224,8 @@ public class UpdaterService extends Service {
     }
 
     private void tryStopSelf() {
-        if (!mHasClients && !mUpdaterController.hasActiveDownloads()) {
-//        if (!mHasClients && !mUpdaterController.hasActiveDownloads() &&
-//                !mUpdaterController.isInstallingUpdate()) {
+        if (!mHasClients && !mUpdaterController.hasActiveDownloads() &&
+                !mUpdaterController.isInstallingUpdate()) {
             Log.d(TAG, "Service no longer needed, stopping");
             stopSelf();
         }

@@ -257,6 +257,10 @@ public class UpdaterController {
         return !TextUtils.isEmpty(mActiveDownloadTag);
     }
 
+    public boolean isInstallingUpdate() {
+        return UpdateInstaller.isInstalling();
+    }
+
     public UpdateInfo getUpdate(String downloadId) {
         return mAvailableUpdates.get(downloadId);
     }

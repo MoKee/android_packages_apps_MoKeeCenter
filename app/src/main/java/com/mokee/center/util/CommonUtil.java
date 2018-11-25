@@ -34,6 +34,7 @@ import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadTask;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
+import com.mokee.center.controller.UpdaterService;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.misc.State;
 import com.mokee.center.model.DonationInfo;
@@ -206,12 +207,11 @@ public class CommonUtil {
         return SystemProperties.getBoolean(Constants.PROP_AB_DEVICE, false);
     }
 
-    public static SharedPreferences getDonationPrefs(Context context) {
-        return context.getSharedPreferences(Constants.DONATION_PREF, Context.MODE_PRIVATE);
-    }
-
-    public static SharedPreferences getMainPrefs(Context context) {
-        return PreferenceManager.getDefaultSharedPreferences(context);
+    public static void triggerUpdate(Context context, String downloadId) {
+        final Intent intent = new Intent(context, UpdaterService.class);
+        intent.setAction(UpdaterService.ACTION_INSTALL_UPDATE);
+        intent.putExtra(UpdaterService.EXTRA_DOWNLOAD_ID, downloadId);
+        context.startService(intent);
     }
 
     public static Map<String, DownloadTask> getDownloadTaskMap() {
@@ -224,4 +224,11 @@ public class CommonUtil {
         return downloadTaskMap;
     }
 
+    public static SharedPreferences getDonationPrefs(Context context) {
+        return context.getSharedPreferences(Constants.DONATION_PREF, Context.MODE_PRIVATE);
+    }
+
+    public static SharedPreferences getMainPrefs(Context context) {
+        return PreferenceManager.getDefaultSharedPreferences(context);
+    }
 }

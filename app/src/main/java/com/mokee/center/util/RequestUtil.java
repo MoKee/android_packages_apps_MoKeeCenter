@@ -30,8 +30,6 @@ import com.mokee.center.model.DonationInfo;
 import com.mokee.os.Build;
 import com.mokee.security.RSAUtils;
 
-import java.io.File;
-
 import static com.mokee.center.misc.Constants.AVAILABLE_UPDATES_TAG;
 import static com.mokee.center.misc.Constants.PREF_INCREMENTAL_UPDATES;
 import static com.mokee.center.misc.Constants.PREF_UPDATE_TYPE;

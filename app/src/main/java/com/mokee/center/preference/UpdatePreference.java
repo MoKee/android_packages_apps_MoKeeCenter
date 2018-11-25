@@ -34,8 +34,6 @@ import com.mokee.center.controller.UpdaterController;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.BuildInfoUtil;
 
-import java.io.IOException;
-import java.net.SocketException;
 import java.net.UnknownHostException;
 import java.text.NumberFormat;
 
@@ -55,13 +53,13 @@ public class UpdatePreference extends Preference implements View.OnClickListener
 
     private UpdaterController mUpdaterController;
 
-    public void setUpdaterController(UpdaterController updaterController) {
-        mUpdaterController = updaterController;
-    }
-
     public UpdatePreference(Context context) {
         super(context);
         setLayoutResource(R.layout.preference_update);
+    }
+
+    public void setUpdaterController(UpdaterController updaterController) {
+        mUpdaterController = updaterController;
     }
 
     @Override
@@ -240,10 +238,10 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         if (progress == null || progress.status == Progress.PAUSE
                 || progress.status == Progress.ERROR || progress.status == Progress.NONE) {
             onStartAction(progress);
-        } else if (progress.status == Progress.LOADING){
+        } else if (progress.status == Progress.LOADING) {
             mOnActionListener.onPauseDownload(getKey());
         } else if (progress.status == Progress.FINISH) {
-
+            mOnActionListener.onInstallUpdate(getKey());
         }
     }
 
@@ -253,10 +251,16 @@ public class UpdatePreference extends Preference implements View.OnClickListener
 
     public interface OnActionListener {
         void onStartDownload(String downloadId);
+
         void onRestartDownload(String downloadId);
+
         void onResumeDownload(String downloadId);
+
         void onPauseDownload(String downloadId);
+
         void onDeleteDownload(String downloadId);
+
+        void onInstallUpdate(String downloadId);
     }
 
 }

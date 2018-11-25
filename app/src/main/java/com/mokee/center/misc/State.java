@@ -58,7 +58,6 @@ public class State {
         }
     }
 
-    @SuppressWarnings("unchecked")
     public static LinkedList<UpdateInfo> loadState(File file) {
         LinkedList<UpdateInfo> availableUpdates = new LinkedList<UpdateInfo>();
         ObjectInputStream ois = null;

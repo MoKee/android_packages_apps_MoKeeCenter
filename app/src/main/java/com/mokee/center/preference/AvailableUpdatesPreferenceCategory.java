@@ -18,7 +18,11 @@
 package com.mokee.center.preference;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.os.BatteryManager;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.preference.PreferenceCategory;
@@ -177,4 +181,44 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
     public void onDeleteDownload(String downloadId) {
         mUpdaterController.deleteDownload(downloadId);
     }
+
+    @Override
+    public void onInstallUpdate(String downloadId) {
+        if (!isBatteryLevelOk()) {
+            Resources resources = getContext().getResources();
+            String message = resources.getString(R.string.dialog_battery_low_message_pct,
+                    resources.getInteger(R.integer.battery_ok_percentage_discharging),
+                    resources.getInteger(R.integer.battery_ok_percentage_charging));
+            new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.dialog_battery_low_title)
+                    .setMessage(message)
+                    .setPositiveButton(android.R.string.ok, null).show();
+        } else {
+            UpdateInfo updateInfo = mUpdaterController.getUpdate(downloadId);
+            new AlertDialog.Builder(getContext())
+                    .setTitle(R.string.apply_update_dialog_title)
+                    .setMessage(getContext().getString(R.string.apply_update_dialog_message,
+                            updateInfo.getDisplayVersion(), getContext().getString(android.R.string.ok)))
+                    .setPositiveButton(android.R.string.ok,
+                            (dialog, which) -> CommonUtil.triggerUpdate(getContext(), downloadId))
+                    .setNegativeButton(android.R.string.cancel, null).show();
+
+        }
+    }
+
+    private boolean isBatteryLevelOk() {
+        Intent intent = getContext().registerReceiver(null,
+                new IntentFilter(Intent.ACTION_BATTERY_CHANGED));
+        if (!intent.getBooleanExtra(BatteryManager.EXTRA_PRESENT, false)) {
+            return true;
+        }
+        int percent = Math.round(100.f * intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 100) /
+                intent.getIntExtra(BatteryManager.EXTRA_SCALE, 100));
+        int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, 0);
+        int required = (plugged & BatteryManager.BATTERY_PLUGGED_ANY) != 0 ?
+                getContext().getResources().getInteger(R.integer.battery_ok_percentage_charging) :
+                getContext().getResources().getInteger(R.integer.battery_ok_percentage_discharging);
+        return percent >= required;
+    }
+
 }
