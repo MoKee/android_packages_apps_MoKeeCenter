@@ -19,6 +19,11 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+-keep public class * extends android.support.v7.preference.* {
+    public <init>(android.content.Context, android.util.AttributeSet);
+}
+
 #okhttp
 -dontwarn okhttp3.**
 -keep class okhttp3.**{*;}
