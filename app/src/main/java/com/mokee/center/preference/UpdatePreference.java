@@ -27,6 +27,7 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.lzy.okgo.exception.HttpException;
 import com.lzy.okgo.model.Progress;
 import com.mokee.center.R;
 import com.mokee.center.controller.UpdaterController;
@@ -154,6 +155,15 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                         mDownloadProgress.setIndeterminate(false);
                         mDownloadProgress.setVisibility(View.GONE);
                         mSummaryView.setText(R.string.download_verification_failed_notification);
+                        mActionProgress.setVisibility(View.GONE);
+                        mUpdateButton.setEnabled(true);
+                        break;
+                    } else if (progress.exception instanceof HttpException) {
+                        mIconView.setImageResource(R.drawable.ic_action_download);
+                        mIconView.setVisibility(View.VISIBLE);
+                        mDownloadProgress.setIndeterminate(false);
+                        mDownloadProgress.setVisibility(View.GONE);
+                        mSummaryView.setText(R.string.download_file_not_found_notification);
                         mActionProgress.setVisibility(View.GONE);
                         mUpdateButton.setEnabled(true);
                         break;

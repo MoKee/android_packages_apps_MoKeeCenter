@@ -38,6 +38,7 @@ import android.support.v4.content.LocalBroadcastManager;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.lzy.okgo.exception.HttpException;
 import com.lzy.okgo.exception.OkGoException;
 import com.lzy.okgo.model.Progress;
 import com.lzy.okserver.OkDownload;
@@ -331,6 +332,20 @@ public class UpdaterService extends Service {
                     mNotificationBuilder.setAutoCancel(false);
                     mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
                     tryStopSelf();
+                } else if (progress.exception instanceof HttpException) {
+                    stopForeground(STOP_FOREGROUND_DETACH);
+                    mNotificationBuilder.mActions.clear();
+                    mNotificationBuilder.setProgress(0, 0, false);
+                    String text = getString(R.string.download_file_not_found_notification);
+                    mNotificationStyle.bigText(text);
+                    mNotificationStyle.setSummaryText(null);
+                    mNotificationBuilder.setStyle(mNotificationStyle);
+                    mNotificationBuilder.setSmallIcon(R.drawable.ic_system_alert);
+                    mNotificationBuilder.setTicker(text);
+                    mNotificationBuilder.setOngoing(false);
+                    mNotificationBuilder.setAutoCancel(false);
+                    mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
+                    tryStopSelf();
                 } else {
                     downloadTask.start();
                 }
@@ -348,7 +363,9 @@ public class UpdaterService extends Service {
 
         setNotificationTitle(mUpdaterController.getUpdate(progress.tag).getDisplayVersion());
 
-        mNotificationStyle.bigText(progress.extra1.toString());
+        if (progress.extra1 != null) {
+            mNotificationStyle.bigText(progress.extra1.toString());
+        }
 
         mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
     }

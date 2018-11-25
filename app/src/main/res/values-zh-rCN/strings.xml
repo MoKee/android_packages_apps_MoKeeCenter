@@ -118,7 +118,8 @@
     <string name="download_paused_notification">下载已暂停</string>
     <string name="download_starting_notification">正在开始下载</string>
     <string name="download_completed_notification">下载完成</string>
-    <string name="download_verification_failed_notification">更新文件可能损坏，请尝试重新下载</string>
+    <string name="download_verification_failed_notification">更新包验证失败，请重新下载</string>
+    <string name="download_file_not_found_notification">下载地址已经失效，请点击右上角的刷新按钮后再试一次</string>
     <string name="download_waiting_network_notification">正在等待连接到网络</string>
     <string name="download_remaining">还剩 <xliff:g id="DURATION">%s</xliff:g></string>
     <string name="download_speed">%1$s, %2$s/秒</string>

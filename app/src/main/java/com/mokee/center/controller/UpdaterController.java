@@ -30,6 +30,7 @@ import android.util.Log;
 
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.db.DownloadManager;
+import com.lzy.okgo.exception.HttpException;
 import com.lzy.okgo.model.Progress;
 import com.lzy.okgo.request.GetRequest;
 import com.lzy.okserver.OkDownload;
@@ -298,6 +299,9 @@ public class UpdaterController {
         @Override
         public void onError(Progress progress) {
             notifyUpdateChange(progress.tag);
+            if (progress.exception instanceof HttpException) {
+                mActiveDownloadTag = null;
+            }
         }
 
         @Override
