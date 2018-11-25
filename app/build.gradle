@@ -24,7 +24,7 @@ android {
         debug {
             storeFile file("platform.jks")
             storePassword 'android'
-            keyAlias 'platform'
+            keyAlias 'oreo'
             keyPassword 'android'
         }
     }
