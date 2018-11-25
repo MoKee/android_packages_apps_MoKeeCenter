@@ -45,11 +45,10 @@ import com.lzy.okserver.download.DownloadTask;
 import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
 
-import java.io.IOException;
-import java.net.ProtocolException;
-import java.net.SocketException;
-import java.net.SocketTimeoutException;
+import java.net.UnknownHostException;
 import java.text.NumberFormat;
+
+import javax.net.ssl.SSLException;
 
 public class UpdaterService extends Service {
 
@@ -292,13 +291,11 @@ public class UpdaterService extends Service {
             }
             case Progress.ERROR: {
                 Log.i(TAG, progress.exception.getMessage());
-                if (progress.exception instanceof ProtocolException
-                        || progress.exception instanceof SocketTimeoutException) {
-                    downloadTask.start();
-                } else if (progress.exception instanceof OkGoException) {
+                progress.exception.printStackTrace();
+                if (progress.exception instanceof OkGoException) {
                     downloadTask.restart();
-                } else if (progress.exception instanceof SocketException
-                        || progress.exception instanceof IOException) {
+                } else if (progress.exception instanceof SSLException
+                        || progress.exception instanceof UnknownHostException) {
                     mNotificationBuilder.mActions.clear();
                     mNotificationBuilder.setProgress(0, 0, true);
                     String text = getString(R.string.download_waiting_network_notification);
@@ -330,11 +327,7 @@ public class UpdaterService extends Service {
                     mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
                     tryStopSelf();
                 } else {
-                    stopForeground(STOP_FOREGROUND_DETACH);
-                    mNotificationBuilder.setOngoing(false);
-                    mNotificationManager.cancel(NOTIFICATION_ID);
-                    progress.exception.printStackTrace();
-                    tryStopSelf();
+                    downloadTask.start();
                 }
                 break;
             }

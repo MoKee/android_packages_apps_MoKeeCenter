@@ -223,7 +223,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     @Override
     public void onDestroy() {
         super.onDestroy();
-        OkGo.cancelAll(MKCenterApplication.getInstance().getClient().build());
+        OkGo.cancelTag(MKCenterApplication.getInstance().getClient().build(), Constants.AVAILABLE_UPDATES_TAG);
     }
 
     @Override

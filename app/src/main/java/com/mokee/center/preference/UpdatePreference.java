@@ -35,7 +35,10 @@ import com.mokee.center.util.BuildInfoUtil;
 
 import java.io.IOException;
 import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.text.NumberFormat;
+
+import javax.net.ssl.SSLException;
 
 public class UpdatePreference extends Preference implements View.OnClickListener, View.OnLongClickListener, PopupMenu.OnMenuItemClickListener {
 
@@ -136,7 +139,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     mUpdateButton.setEnabled(true);
                     break;
                 case Progress.ERROR:
-                    if (progress.exception instanceof SocketException || progress.exception instanceof IOException) {
+                    if (progress.exception instanceof SSLException || progress.exception instanceof UnknownHostException) {
                         mIconView.setVisibility(View.GONE);
                         mDownloadProgress.setIndeterminate(true);
                         mDownloadProgress.setVisibility(View.VISIBLE);
@@ -144,7 +147,8 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                         mActionProgress.setVisibility(View.VISIBLE);
                         mUpdateButton.setEnabled(false);
                         break;
-                    } else {
+                    } else if (progress.exception instanceof UnsupportedOperationException
+                            || progress.fraction == 1) {
                         mIconView.setImageResource(R.drawable.ic_action_download);
                         mIconView.setVisibility(View.VISIBLE);
                         mDownloadProgress.setIndeterminate(false);
@@ -189,7 +193,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         if (progress == null) {
             mOnActionListener.onStartDownload(getKey());
         } else if (progress.status == Progress.ERROR
-                && progress.exception instanceof UnsupportedOperationException) {
+                && progress.fraction == 1) {
             mOnActionListener.onRestartDownload(getKey());
         } else {
             mOnActionListener.onResumeDownload(getKey());

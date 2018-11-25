@@ -248,10 +248,6 @@ public class UpdaterController {
         return mActiveDownloadTag;
     }
 
-    public void setActiveDownloadTag(String activeDownloadTag) {
-        this.mActiveDownloadTag = activeDownloadTag;
-    }
-
     public boolean hasActiveDownloads() {
         return !TextUtils.isEmpty(mActiveDownloadTag);
     }
