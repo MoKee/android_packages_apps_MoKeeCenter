@@ -29,6 +29,12 @@ import java.util.Locale;
 
 public class BuildInfoUtil {
 
+    public static boolean isCompatible(String version) {
+        long newa = getBuildDate(version);
+        long newb = getBuildDate(Build.VERSION);
+        return getBuildDate(version) > getBuildDate(Build.VERSION);
+    }
+
     public static String getDisplayVersion(Context context, String version) {
         SimpleDateFormat simpleDateFormat;
         String buildDate = String.valueOf(getBuildDate(version));
@@ -68,7 +74,6 @@ public class BuildInfoUtil {
     }
 
     public static float getReleaseCode(String version) {
-        String[] info = version.split("-");
         String code = getReleaseVersion(version);
         if (!code.toLowerCase(Locale.ENGLISH).startsWith("mk")) {
             return 0;

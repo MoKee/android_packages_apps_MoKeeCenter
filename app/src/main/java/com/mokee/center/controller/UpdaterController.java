@@ -40,6 +40,7 @@ import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.misc.State;
 import com.mokee.center.model.UpdateInfo;
+import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
 import com.mokee.center.util.FileUtil;
 import com.mokee.center.util.RequestUtil;
@@ -96,6 +97,7 @@ public class UpdaterController {
 
         Map<String, DownloadTask> downloadTaskMap = getDownloadTaskMap();
         for (UpdateInfo updateInfo : State.loadState(FileUtil.getCachedUpdateList(context))) {
+            if (!BuildInfoUtil.isCompatible(updateInfo.getName())) continue;
             DownloadTask downloadTask = downloadTaskMap.get(updateInfo.getName());
             if (downloadTask != null) {
                 // File already deleted
@@ -134,6 +136,10 @@ public class UpdaterController {
         Log.d(TAG, "Adding download: " + updateInfo.getName());
         if (mAvailableUpdates.containsKey(updateInfo.getName())) {
             Log.d(TAG, "Download (" + updateInfo.getName() + ") already added");
+            return false;
+        }
+        if (!BuildInfoUtil.isCompatible(updateInfo.getName())) {
+            Log.d(TAG, "Download (" + updateInfo.getName() + ") is deprecated");
             return false;
         }
         DownloadTask downloadedTask = mOkDownload.getTask(updateInfo.getName());
