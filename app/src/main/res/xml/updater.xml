@@ -17,27 +17,23 @@
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory>
+    <com.mokee.center.preference.VersionPreference
+        android:icon="@drawable/ic_pref_version"
+        android:title="@string/mokee_version_title" />
 
-        <com.mokee.center.preference.VersionPreference
-            android:icon="@drawable/ic_pref_version"
-            android:title="@string/mokee_version_title" />
+    <com.mokee.center.preference.UniqueIDPreference
+        android:icon="@drawable/ic_pref_unique_id"
+        android:title="@string/unique_id_title" />
 
-        <com.mokee.center.preference.UniqueIDPreference
-            android:icon="@drawable/ic_pref_unique_id"
-            android:title="@string/unique_id_title" />
+    <com.mokee.center.preference.DonationRecordPreference
+        android:icon="@drawable/ic_pref_donation_record"
+        android:key="donation_record"
+        android:title="@string/donation_record_title" />
 
-        <com.mokee.center.preference.DonationRecordPreference
-            android:icon="@drawable/ic_pref_donation_record"
-            android:key="donation_record"
-            android:title="@string/donation_record_title" />
-
-        <com.mokee.center.preference.LastUpdateCheckPreference
-            android:icon="@drawable/ic_pref_last_update_check"
-            android:key="last_update_check"
-            android:title="@string/last_update_check_title" />
-
-    </PreferenceCategory>
+    <com.mokee.center.preference.LastUpdateCheckPreference
+        android:icon="@drawable/ic_pref_last_update_check"
+        android:key="last_update_check"
+        android:title="@string/last_update_check_title" />
 
     <PreferenceCategory>
         <com.mokee.center.preference.UpdateTypePreference
