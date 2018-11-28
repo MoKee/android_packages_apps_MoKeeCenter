@@ -25,7 +25,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.SystemProperties;
-import android.support.v7.preference.PreferenceManager;
+import androidx.preference.PreferenceManager;
 import android.text.format.DateUtils;
 import android.util.Log;
 

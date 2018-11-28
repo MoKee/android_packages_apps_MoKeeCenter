@@ -20,9 +20,9 @@ package com.mokee.center.preference;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
-import android.support.design.widget.Snackbar;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceViewHolder;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 
 import com.mokee.center.R;

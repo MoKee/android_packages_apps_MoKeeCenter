@@ -19,7 +19,7 @@ package com.mokee.center.preference;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 import android.text.format.DateUtils;
 import android.util.AttributeSet;
 

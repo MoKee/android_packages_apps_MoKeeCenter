@@ -17,10 +17,10 @@
 package com.mokee.center.preference;
 
 import android.content.Context;
-import android.support.v7.internal.widget.PreferenceImageView;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceViewHolder;
-import android.support.v7.widget.PopupMenu;
+import androidx.preference.internal.PreferenceImageView;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceViewHolder;
+import androidx.appcompat.widget.PopupMenu;
 import android.text.format.Formatter;
 import android.view.MenuItem;
 import android.view.View;

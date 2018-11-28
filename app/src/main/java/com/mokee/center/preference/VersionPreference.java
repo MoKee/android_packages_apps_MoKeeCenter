@@ -19,7 +19,7 @@ package com.mokee.center.preference;
 
 import android.content.Context;
 import android.os.SystemProperties;
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 import android.util.AttributeSet;
 
 import com.mokee.center.R;

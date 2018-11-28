@@ -20,8 +20,6 @@
     package="com.mokee.center"
     android:sharedUserId="android.uid.system">
 
-    <uses-sdk android:minSdkVersion="27" />
-
     <uses-permission android:name="android.permission.ACCESS_CACHE_FILESYSTEM" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />

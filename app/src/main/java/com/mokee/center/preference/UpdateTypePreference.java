@@ -20,7 +20,7 @@ package com.mokee.center.preference;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
-import android.support.v7.preference.ListPreference;
+import androidx.preference.ListPreference;
 import android.text.TextUtils;
 import android.util.AttributeSet;
 

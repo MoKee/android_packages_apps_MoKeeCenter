@@ -101,7 +101,7 @@
             android:visibility="gone"
             android:tint="?colorAccent"/>
 
-        <android.support.v7.internal.widget.PreferenceImageView
+        <androidx.preference.internal.PreferenceImageView
             android:id="@+id/action_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
