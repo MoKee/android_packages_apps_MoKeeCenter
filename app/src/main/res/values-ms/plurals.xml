@@ -18,9 +18,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <plurals name="new_updates_found_content">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> 个可下载的系统更新</item>
+        <item quantity="other">kemaskini tersedia untuk dimuat turun</item>
     </plurals>
     <plurals name="new_updates_found_additional_count">
-        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> 个</item>
+        <item quantity="other">lagi</item>
     </plurals>
 </resources>

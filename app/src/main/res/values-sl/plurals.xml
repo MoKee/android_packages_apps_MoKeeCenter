@@ -18,9 +18,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <plurals name="new_updates_found_content">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> 个可下载的系统更新</item>
+        <item quantity="one"><xliff:g id="count">%d </xliff:g> posodobitev na voljo za prenos</item>
+        <item quantity="two"><xliff:g id="count">%d </xliff:g> posodobitevi na voljo za prenos</item>
+        <item quantity="few"><xliff:g id="count">%d </xliff:g> posodobiteve na voljo za prenos</item>
+        <item quantity="other"><xliff:g id="count">%d </xliff:g> posodobitev na voljo za prenos</item>
     </plurals>
     <plurals name="new_updates_found_additional_count">
-        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> 个</item>
+        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> več</item>
+        <item quantity="two">+ <xliff:g id="count">%d</xliff:g> več</item>
+        <item quantity="few">+ <xliff:g id="count">%d</xliff:g> več</item>
+        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> več</item>
     </plurals>
 </resources>

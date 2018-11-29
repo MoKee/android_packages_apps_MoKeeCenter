@@ -18,9 +18,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <plurals name="new_updates_found_content">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> 个可下载的系统更新</item>
-    </plurals>
-    <plurals name="new_updates_found_additional_count">
-        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> 个</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> עדכון זמין להורדה</item>
+        <item quantity="two"><xliff:g id="count">%d</xliff:g> עדכונים זמינים להורדה</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> עדכונים זמינים להורדה</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> עדכונים זמינים להורדה</item>
     </plurals>
 </resources>

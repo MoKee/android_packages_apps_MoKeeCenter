@@ -17,10 +17,29 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <plurals name="new_updates_found_content">
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> 个可下载的系统更新</item>
-    </plurals>
-    <plurals name="new_updates_found_additional_count">
-        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> 个</item>
-    </plurals>
+    <!-- App Main -->
+    <!-- Action -->
+    <string name="action_next">Seguinte</string>
+    <string name="action_pause">Pausar</string>
+    <string name="action_resume">Continuar</string>
+    <!-- Menu -->
+    <!-- Preference -->
+    <!-- Nav Main -->
+    <!-- Nav Social -->
+    <!-- Nav Contribute -->
+    <!-- Preference list -->
+    <!-- Unlock Features -->
+    <!-- Incremental Updates -->
+    <!-- Update Type -->
+    <!-- Donation Info -->
+    <!-- Snackbar Update -->
+    <!-- Common -->
+    <string name="activity_not_found">A aplicación non está instalada</string>
+    <!-- Notification -->
+    <!-- Download Status -->
+    <!-- Mobile data -->
+    <string name="update_on_mobile_data_title">Aviso</string>
+    <string name="checkbox_mobile_data_warning">Non amosar máis</string>
+    <!-- Battery check -->
+    <!-- Apply update -->
 </resources>
