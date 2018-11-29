@@ -246,16 +246,14 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             UpdaterService.LocalBinder binder = (UpdaterService.LocalBinder) service;
             mUpdaterService = binder.getService();
             mUpdatesCategory.setUpdaterController(mUpdaterService.getUpdaterController());
-            mUpdatesCategory.refreshPreferences();
             updateFeatureStatus();
             getUpdatesList();
         }
 
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
-            //mAdapter.setUpdaterController(null);
+            //mUpdatesCategory.setUpdaterController(null);
             mUpdaterService = null;
-            //mAdapter.notifyDataSetChanged();
         }
     };
 
@@ -284,7 +282,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             loadUpdatesList(State.loadState(jsonFile), false);
             Log.d(TAG, "Cached list parsed");
         } else {
-            downloadUpdatesList(false);
+            mUpdatesCategory.refreshPreferences();
         }
     }
 
