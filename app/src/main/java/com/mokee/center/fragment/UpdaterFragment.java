@@ -258,7 +258,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     };
 
     private void loadUpdatesList(LinkedList<UpdateInfo> updates, boolean manualRefresh) {
-        Log.d(TAG, "Adding remote updates");
+        if (updates.size() > 0) {
+            Log.d(TAG, "Adding remote updates");
+        }
         UpdaterController controller = mUpdaterService.getUpdaterController();
         boolean newUpdates = false;
 
