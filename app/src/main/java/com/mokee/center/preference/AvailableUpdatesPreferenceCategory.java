@@ -86,6 +86,12 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
         }
     }
 
+    public void setPendingListPreferences() {
+        removeAll();
+        PendingListPreference pendingListPreference = new PendingListPreference(getContext());
+        addPreference(pendingListPreference);
+    }
+
     public void refreshPreferences() {
         removeAll();
         LinkedList<UpdateInfo> availableUpdates = mUpdaterController.getUpdates();

@@ -342,6 +342,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             mRefreshIconView.setEnabled(false);
             mIncrementalUpdatesPreference.setEnabled(false);
             mVerifiedUpdatesPreference.setEnabled(false);
+            mUpdatesCategory.setPendingListPreferences();
         }
     }
 
@@ -385,7 +386,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                 || preference instanceof VerifiedUpdatesPreference) {
             File jsonFile = FileUtil.getCachedUpdateList(getContext());
             jsonFile.delete();
-            loadUpdatesList(new LinkedList<>(), false);
             downloadUpdatesList(true);
             return true;
         }
@@ -398,7 +398,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             if (TextUtils.equals(mUpdateTypePreference.getValue(), newValue.toString())) return false;
             File jsonFile = FileUtil.getCachedUpdateList(getContext());
             jsonFile.delete();
-            loadUpdatesList(new LinkedList<>(), false);
             mMainPrefs.edit().putString(PREF_UPDATE_TYPE, newValue.toString()).apply();
             downloadUpdatesList(true);
             return true;
