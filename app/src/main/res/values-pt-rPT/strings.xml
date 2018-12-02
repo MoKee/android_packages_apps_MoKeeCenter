@@ -22,6 +22,7 @@
     <string name="navigation_drawer_open">Abrir a gaveta de navegação</string>
     <string name="navigation_drawer_close">Fechar a gaveta de navegação</string>
     <!-- Action -->
+    <string name="action_faq">P&amp;R</string>
     <string name="action_solution">Solução</string>
     <string name="action_next">Próximo</string>
     <string name="action_pause">Pausa</string>
@@ -38,9 +39,15 @@
     <string name="mokee_information_title">Informação da Versão</string>
     <string name="mokee_version_title">Versão Mokee</string>
     <string name="unique_id_title">ID Único</string>
+    <string name="incremental_updates_title">Atualizações incrementais</string>
+    <string name="incremental_updates_summary">Obter atualizações incrementais para economizar tempo de download e largura de banda</string>
+    <string name="verified_updates_title">Atualizações testadas</string>
+    <string name="verified_updates_summary">Exibir somente as atualizações que são testadas por outros utilizadores</string>
     <string name="available_updates_title">Actualizações Disponíveis</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Funcionalidade de desbloqueio</string>
+    <string name="unlock_features_request_summary">(disponível após a doação %d CNY)</string>
+    <string name="unlock_features_pending_summary">(doados %1$d CNY, disponível para a vida após a doação de mais %2$d CNY)</string>
     <!-- Incremental Updates -->
     <!-- Update Type -->
     <string name="update_type_release">Lançamento</string>
@@ -68,4 +75,5 @@
     <string name="checkbox_mobile_data_warning">Não mostrar novamente</string>
     <!-- Battery check -->
     <!-- Apply update -->
+    <string name="apply_update_dialog_title">Instalar atualização</string>
 </resources>

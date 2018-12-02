@@ -68,6 +68,7 @@
     <string name="verified_updates_summary">عرض التحديثات التي يتم التحقق منها بواسطة المستخدمين الآخرين فقط</string>
     <string name="available_updates_title">التحديثات المتوفرة</string>
     <string name="no_available_updates_intro">التحقق الأخير لم يجد أي تحديثات متوفرة. للبحث عن التحديثات الجديدة يدوياً، استخدم زر التحديث.</string>
+    <string name="pending_available_updates_intro">بحث عن تحديثات متوفرة</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">فتح كافة الميزات</string>
     <string name="unlock_features_incremental_updates_title">تبرع %d CNY لفتح التحديثات التدريجية والتنزيل بأقصى سرعة.</string>

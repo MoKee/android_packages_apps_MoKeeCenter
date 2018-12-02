@@ -22,36 +22,62 @@
     <string name="navigation_drawer_open">Открыть меню приложений</string>
     <string name="navigation_drawer_close">Закрыть меню приложений</string>
     <string name="nav_header_title">MoKee Open Source</string>
+    <string name="nav_header_subtitle">Операционная система Android-сообщества</string>
+    <string name="nav_header_desc">Панель навигации</string>
     <!-- Action -->
     <string name="action_faq">Вопросы и ответы</string>
     <string name="action_solution">Решение</string>
     <string name="action_next">Следующее видео</string>
     <string name="action_pause">Пауза</string>
     <string name="action_resume">Продолжить</string>
-    <string name="action_download">Загрузить</string>
+    <string name="action_download">Скачать</string>
     <!-- Menu -->
+    <string name="menu_preferences">Настройки</string>
     <string name="menu_restore">Восстановление</string>
+    <string name="menu_donation">Пожертвование</string>
+    <string name="menu_unlock_features">Разблок. все функции</string>
     <string name="menu_refresh">Обновить</string>
     <string name="menu_delete_update">Удалить</string>
     <!-- Preference -->
+    <string name="pref_auto_delete_updates">Удаление обновлений после установки или устаревании</string>
+    <string name="pref_ab_perf_mode">Приоритет процесса обновления</string>
+    <string name="pref_mobile_data_warning">Предупреждать об использовании мобильных данных</string>
     <!-- Nav Main -->
+    <string name="nav_main_forum_title">Форум</string>
+    <string name="nav_main_source_title">Исходный код</string>
+    <string name="nav_main_bug_reports_title">Отчёты об ошибках</string>
     <!-- Nav Social -->
+    <string name="nav_social_title">Социальные сети</string>
+    <string name="nav_social_telegram_title">Telegram</string>
+    <string name="nav_social_weibo_title">Weibo</string>
+    <string name="nav_social_google_plus_title">Google+</string>
+    <string name="nav_social_qqchat_title">Группа QQ</string>
     <!-- Nav Contribute -->
+    <string name="nav_contribute_title">Внести вклад</string>
+    <string name="nav_contribute_code_title">Код</string>
+    <string name="nav_contribute_translate_title">Перевод</string>
     <!-- Preference list -->
     <string name="mokee_information_title">Информация о версии</string>
     <string name="mokee_version_title">Версия MoKee</string>
     <string name="unique_id_title">Идентификатор устройства</string>
+    <string name="last_update_check_title">Последняя проверка:</string>
+    <string name="update_settings_title">Сохранить настройки</string>
     <string name="incremental_updates_title">OTA-обновления</string>
     <string name="incremental_updates_summary">Получать ОТА-обновления для экономии трафика и времени загрузки</string>
     <string name="verified_updates_title">Проверенные обновления</string>
     <string name="verified_updates_summary">Показывать только проверенные другими пользователями обновления</string>
     <string name="available_updates_title">Доступные обновления</string>
     <string name="no_available_updates_intro">Во время последней проверки не найдено доступных обновлений. Чтобы вручную проверить доступные обновления, используйте кнопку \"Обновить\".</string>
+    <string name="pending_available_updates_intro">Поиск доступных обновлений</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Разблок. все функции</string>
+    <string name="unlock_features_incremental_updates_title">Пожертвуйте %d юаней, чтобы разблокировать обновления по воздуху (ОТА) и возможность скачивания на полной скорости.</string>
+    <string name="unlock_features_verified_updates_title">Пожертвуйте %d юаней для доступа к проверенным обновлениям и отключению рекламы Google.</string>
+    <string name="unlock_features_all_title">Пожертвуйте %d юаней, чтобы разблокировать обновления по воздуху, а также возможность скачивания обновлений на полной скорости, доступа к проверенным обновлениям и отключению рекламы Google.</string>
     <string name="unlock_features_request_summary">(доступно после пожертвования в %d юаней)</string>
     <string name="unlock_features_pending_summary">(пожертвовано %1$d юаней, будет доступно навсегда после пожертвования ещё %2$d юаней и более)</string>
     <!-- Incremental Updates -->
+    <string name="incremental_updates_not_support_summary">Обновления по воздуху для этой версии не поддерживаются.</string>
     <string name="incremental_updates_supported_full_summary">ОТА-обновления могут сэкономить %s трафика</string>
     <string name="incremental_updates_supported_ota_summary">Сэкономит %s по сравнению с полным пакетом обновления</string>
     <!-- Update Type -->
@@ -62,28 +88,54 @@
     <string name="update_type_nightly">Ночные сборки</string>
     <string name="update_type_unofficial">Неофициальная</string>
     <!-- Donation Info -->
+    <string name="donation_record_title">История пожертвований</string>
+    <string name="donation_record_without_rank">Всего вы пожертвовали %1$d юаней.</string>
     <string name="donation_record_with_rank">Вы пожертвовали в общей сложности %1$d юаней, более чем %2$s донатеров во всем мире, ваш номер в списке: %3$d!</string>
     <string name="donation_record_none">Вы не произвели пожертвование</string>
+    <string name="donation_restore_success">История пожертвований успешно восстановлена!</string>
+    <string name="donation_restore_failure">Пожалуйста, проверьте ваше соединение и повторите попытку.</string>
+    <string name="donation_restore_not_found">Не найдены записи пожертвований.</string>
     <string name="donation_payment_success">Благодарим Вас за пожертвование!</string>
     <string name="donation_dialog_title">Пожертвовать MoKee Open Source</string>
+    <string name="donation_dialog_message">MoKee Open Source - это некоммерческий проект, рождённый благодаря энтузиазму и желанию его разработчиков. Чтобы поддерживать этот проект, мы вынуждены чаще отказываться от собственных денег или полагаться на пожертвования и рекламу. Ваши пожертвования могут помочь снизить нашу финансовую нагрузку и обеспечить дальнейшее развитие!</string>
+    <string name="donation_dialog_message_extra">После пожертвования мы активируем функции, которые доступны только донорам на всю жизнь!</string>
     <!-- Snackbar Update -->
+    <string name="updates_found">Доступны новые обновления</string>
     <string name="no_updates_found">Новые обновления не найдены.</string>
     <string name="updates_check_failed">Не удалось выполнить проверку обновлений. Пожалуйста, проверьте подключение к Интернету, либо повторите попытку позже.</string>
     <!-- Common -->
+    <string name="text_copied">Текст скопирован в буфер обмена.</string>
     <string name="unknown">Неизвестно</string>
-    <string name="never">Не проводилось</string>
+    <string name="never">Никогда</string>
     <string name="alipay">AliPay (CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal (USD)</string>
     <string name="activity_not_found">Приложение не установлено.</string>
+    <string name="payment_not_found">MoKee Payment не установлено.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Новые обновления</string>
+    <string name="new_updates_found_title">Новые системные обновления</string>
+    <string name="ongoing_channel_title">Текущие загрузки</string>
     <!-- Download Status -->
+    <string name="downloading_notification">Скачивание</string>
+    <string name="download_starting_notification">Загрузка началась</string>
+    <string name="download_paused_notification">Загрузка приостановлена</string>
+    <string name="download_waiting_network_notification">Ожидание сети...</string>
+    <string name="download_completed_notification">Загрузка завершена</string>
+    <string name="download_verification_failed_notification">Не удалось проверить пакет обновления, пожалуйста, загрузите обновление ещё раз.</string>
+    <string name="download_file_not_found_notification">Ссылка на скачивание устарела, нажмите кнопку «Обновить» и повторите попытку.</string>
+    <string name="download_remaining">Осталось <xliff:g example="3 minutes" id="duration">%s</xliff:g></string>
+    <string name="download_speed">%1$s, %2$s/сек</string>
     <string name="download_already_running">Загрузка уже выполняется</string>
+    <string name="download_limited_mode">Скорость скачивания ограничена, пожалуйста, пожертвуйте 30 юаней, чтобы насладиться полной скоростью.</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Внимание</string>
+    <string name="update_on_mobile_data_message">Вы собираетесь загрузить пакет обновления с использованием мобильных данных, что, вероятно, приведет использованию большого объема трафика. Хотите продолжить?</string>
     <string name="checkbox_mobile_data_warning">Не показывать снова</string>
     <!-- Battery check -->
+    <string name="dialog_battery_low_title">Низкий заряд батареи</string>
+    <string name="dialog_battery_low_message_pct">Низкий заряд батареи. Необходимо не менее <xliff:g id="percent_discharging">%1$d</xliff:g>%% заряда батареи для продолжения, <xliff:g id="percent_charging">%2$d</xliff:g>%% заряда батареи, если телефон заряжается.</string>
     <!-- Apply update -->
     <string name="apply_update_dialog_title">Применить обновление</string>
+    <string name="apply_update_dialog_message">Вы собираетесь обновиться до версии <xliff:g id="update_name">%1$s</xliff:g>.\n\nЕсли вы нажмете <xliff:g id="ok">%2$s</xliff:g>, устройство будет перезагружено в режим восстановления для установки обновления.\n\nПримечание: для этой функции требуется совместимое меню Recovery, в ином случае обновление необходимо будет устанавливать вручную.</string>
 </resources>

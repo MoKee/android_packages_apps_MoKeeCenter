@@ -22,6 +22,7 @@
     <string name="navigation_drawer_open">Abrir gaveta de navegação</string>
     <string name="navigation_drawer_close">Fechar gaveta de navegação</string>
     <!-- Action -->
+    <string name="action_faq">P&amp;R</string>
     <string name="action_solution">Solução</string>
     <string name="action_next">Próximo</string>
     <string name="action_pause">Pausar</string>

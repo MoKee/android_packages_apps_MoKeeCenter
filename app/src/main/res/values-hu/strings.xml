@@ -68,6 +68,7 @@
     <string name="verified_updates_summary">Csak azokat a frissítéseket jeleníti meg, amiket más felhasználók ellenőriztek</string>
     <string name="available_updates_title">Elérhető frissítések</string>
     <string name="no_available_updates_intro">Az utolsó ellenőrzés nem talált elérhető frissítést. A manuális ellenőrizéshez használja a Frissítés gombot.</string>
+    <string name="pending_available_updates_intro">Az elérhető frissítések keresése</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Feloldási lehetőségek</string>
     <string name="unlock_features_incremental_updates_title">%d kínai jüan adományozásával megnyílik a növekményes frissítések teljes sebességű letöltésének lehetősége.</string>

@@ -21,6 +21,9 @@
     <string name="app_name">MoKee Merkezi</string>
     <string name="navigation_drawer_open">Gezinme çekmecesini aç</string>
     <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
+    <string name="nav_header_title">MoKee Open Source</string>
+    <string name="nav_header_subtitle">Android Topluluğu İşletim Sistemi</string>
+    <string name="nav_header_desc">Gezinme başlığı</string>
     <!-- Action -->
     <string name="action_faq">Soru ve Cevap</string>
     <string name="action_solution">Çözüm</string>
@@ -29,28 +32,52 @@
     <string name="action_resume">Devam et</string>
     <string name="action_download">İndir</string>
     <!-- Menu -->
+    <string name="menu_preferences">Tercihler</string>
     <string name="menu_restore">Geri yükle</string>
+    <string name="menu_donation">Bağış</string>
+    <string name="menu_unlock_features">Özelliklerin kilidini aç</string>
     <string name="menu_refresh">Yenile</string>
     <string name="menu_delete_update">Sil</string>
     <!-- Preference -->
+    <string name="pref_auto_delete_updates">Yüklendiğinde veya kullanımdan kaldırıldığında güncellemeleri sil</string>
+    <string name="pref_ab_perf_mode">Güncelleme sürecini önceliklendir</string>
+    <string name="pref_mobile_data_warning">Mobil veri uyarısı</string>
     <!-- Nav Main -->
+    <string name="nav_main_forum_title">Forum</string>
+    <string name="nav_main_source_title">Kaynak Kodu</string>
+    <string name="nav_main_bug_reports_title">Hata Bildirme</string>
     <!-- Nav Social -->
+    <string name="nav_social_title">Sosyal Medya</string>
+    <string name="nav_social_telegram_title">Telegram</string>
+    <string name="nav_social_weibo_title">Weibo</string>
+    <string name="nav_social_google_plus_title">Google +</string>
+    <string name="nav_social_qqchat_title">QQ Grup</string>
     <!-- Nav Contribute -->
+    <string name="nav_contribute_title">Katkıda bulunun</string>
+    <string name="nav_contribute_code_title">Kod</string>
+    <string name="nav_contribute_translate_title">Çeviri</string>
     <!-- Preference list -->
     <string name="mokee_information_title">Versiyon Bilgisi</string>
     <string name="mokee_version_title">MoKee Versiyonu</string>
     <string name="unique_id_title">Benzersiz kimlik</string>
+    <string name="last_update_check_title">Son kontrol</string>
+    <string name="update_settings_title">Güncelleme ayarları</string>
     <string name="incremental_updates_title">OTA güncellemeleri</string>
     <string name="incremental_updates_summary">İndirme süresinden kazanmak ve veri tasarrufu için Ota güncellemeleri alın</string>
     <string name="verified_updates_title">Doğrulanmış güncellemeler</string>
     <string name="verified_updates_summary">Yalnızca diğer kullanıcılar tarafından doğrulanan güncellemeleri görüntüleyin</string>
     <string name="available_updates_title">Mevcut güncellemeler</string>
     <string name="no_available_updates_intro">Son kontrolde güncelleme bulunamadı. Yeni güncellemeleri elle kontrol etmek için Yenile tuşunu kullanın.</string>
+    <string name="pending_available_updates_intro">Mevcut güncellemeleri arıyor</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Özelliklerin kilidini aç</string>
+    <string name="unlock_features_incremental_updates_title">Artımlı güncellemeleri açmak ve tam hızda indirmek için %d CNY\'ye bağış yapın.</string>
+    <string name="unlock_features_verified_updates_title">Doğrulanmış güncellemeler için %d CNY\'ye bağış yapın ve Google reklamlarını kaldırın.</string>
+    <string name="unlock_features_all_title">Artımlı güncellemelerin kilidini açmak, tam hızla indirmek, Güncellemeleri güncellemek ve google reklamları kaldırmak için %d CNY\'ye bağış yapın.</string>
     <string name="unlock_features_request_summary">(%d CNY bağışta bulunulduğunda kullanılabilir)</string>
     <string name="unlock_features_pending_summary">(bağış %1$d CNY %2$d CNY daha bağış yaptıktan sonra ömür boyu kullanılabilir)</string>
     <!-- Incremental Updates -->
+    <string name="incremental_updates_not_support_summary">Bu sürüme yapılan güncellemeleri desteklenmiyor.</string>
     <string name="incremental_updates_supported_full_summary">Artan güncellemeler %s kaydedebilir</string>
     <string name="incremental_updates_supported_ota_summary">Tam ROM için karşılaştırıldığında %s kaydeder</string>
     <!-- Update Type -->
@@ -61,28 +88,54 @@
     <string name="update_type_nightly">Gecelik</string>
     <string name="update_type_unofficial">Resmi olmayan</string>
     <!-- Donation Info -->
+    <string name="donation_record_title">Bağış kaydı</string>
+    <string name="donation_record_without_rank">Toplamda %1$d CNY bağışladınız.</string>
     <string name="donation_record_with_rank">Toplamda CNY %1$d bağışta bulundun, diğer bağışçılaradan %2$s daha fazla bağışta bulundun, sıra no %3$d!</string>
     <string name="donation_record_none">Bağiş yapılmadı</string>
+    <string name="donation_restore_success">Bağış kaydı başarıyla geri yüklendi!</string>
+    <string name="donation_restore_failure">Lütfen internet bağlantınızı kontrol edip daha sonra tekrar deneyin.</string>
+    <string name="donation_restore_not_found">Bağış kaydı bulunamadı.</string>
     <string name="donation_payment_success">Bağış için teşekkür ederiz!</string>
     <string name="donation_dialog_title">MoKee Açık Kaynak\'a bağışta bulunun</string>
+    <string name="donation_dialog_message">MoKee Açık Kaynak, hobi ve tutkudan doğan tamamen kar amacı gütmeyen bir projedir. Bu projeyi sürdürebilmek için, kendi paramızı çoğaltmak ya da bağış ve reklamlara güvenmek zorundayız. Bağışlarınız finansal yükümüzü azaltmaya ve gelecekteki gelişmeyi sürdürmeye yardımcı olabilir!</string>
+    <string name="donation_dialog_message_extra">Bağış yaptıktan sonra, yalnızca bağışçıların hayatları boyunca kullanabileceği bazı özellikleri aktif hale getireceğiz!</string>
     <!-- Snackbar Update -->
+    <string name="updates_found">Yeni güncellemeler bulundu</string>
     <string name="no_updates_found">Yeni güncelleme yok</string>
     <string name="updates_check_failed">Güncelleme kontrolü başarısız oldu. Lütfen internet bağlantınızı kontrol edin ve daha sonra tekrar deneyin.</string>
     <!-- Common -->
+    <string name="text_copied">Metin panoya kopyalandı.</string>
     <string name="unknown">Bilinmiyor</string>
     <string name="never">Asla</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>
     <string name="activity_not_found">Uygulama yüklü değil.</string>
+    <string name="payment_not_found">MoKee Ödeme yüklü değil.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Yeni güncellemeler</string>
+    <string name="new_updates_found_title">Yeni sistem güncellemeleri</string>
+    <string name="ongoing_channel_title">Devam eden indirmeler</string>
     <!-- Download Status -->
+    <string name="downloading_notification">İndiriliyor</string>
+    <string name="download_starting_notification">İndirme başlatılıyor</string>
+    <string name="download_paused_notification">İndirme duraklatıldı</string>
+    <string name="download_waiting_network_notification">Bağlantı bekleniyor</string>
+    <string name="download_completed_notification">İndirme tamamlandı</string>
+    <string name="download_verification_failed_notification">Güncelleme paketi doğrulanamadı, lütfen tekrar indirin</string>
+    <string name="download_file_not_found_notification">İndirme bağlantısının süresi doldu, lütfen Yenile tuşuna tıklayın ve tekrar deneyin</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> kaldı</string>
+    <string name="download_speed">%1$s, %2$s/sn</string>
     <string name="download_already_running">Bir indirme işlemi devam ediyor</string>
+    <string name="download_limited_mode">Sınırlı hızda indiriliyor, tam hızın tadını çıkarmak için lütfen 30 CNY bağışında bulunun.</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Uyarı</string>
+    <string name="update_on_mobile_data_message">Yüksek veri kullanımına neden olabilecek mobil verileri kullanarak bir güncelleme paketi indirmek üzeresiniz. Devam etmek ister misiniz?</string>
     <string name="checkbox_mobile_data_warning">Tekrar gösterme</string>
     <!-- Battery check -->
+    <string name="dialog_battery_low_title">Düşük pil</string>
+    <string name="dialog_battery_low_message_pct">Pil seviyesi çok düşük, devam etmek için en az <xliff:g id="percent_discharging">%1$d</xliff:g>%% pil gereklidir, <xliff:g id="percent_charging">%2$d</xliff:g>%% şarj ediliyor.</string>
     <!-- Apply update -->
     <string name="apply_update_dialog_title">Güncellemeyi uygula</string>
+    <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> yükseltmek üzeresiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> bastığınızda, güncellemeyi yüklemek için cihaz kurtarma modun da yeniden başlatılacak.\n\nNot: Bu özellik uyumlu bir Kurtarma bölümü gerektirir veya güncellemelerin el ile kurulması gerekir.</string>
 </resources>
