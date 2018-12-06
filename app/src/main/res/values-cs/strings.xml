@@ -27,10 +27,10 @@
     <string name="action_next">Další</string>
     <string name="action_pause">Pozastavit</string>
     <string name="action_resume">Pokračovat</string>
-    <string name="action_download">Ke stažení</string>
+    <string name="action_download">Stáhnout</string>
     <!-- Menu -->
-    <string name="menu_restore">Obnovení</string>
-    <string name="menu_refresh">Obnovit</string>
+    <string name="menu_restore">Obnovit</string>
+    <string name="menu_refresh">Znovu načíst</string>
     <string name="menu_delete_update">Smazat</string>
     <!-- Preference -->
     <!-- Nav Main -->
@@ -40,7 +40,7 @@
     <string name="mokee_information_title">Informace o verzi</string>
     <string name="mokee_version_title">Verze MoKee</string>
     <string name="unique_id_title">Jedinečné ID</string>
-    <string name="incremental_updates_title">OTA aktualizace</string>
+    <string name="incremental_updates_title">Přírůstkové aktualizace</string>
     <string name="incremental_updates_summary">Stahovat OTA aktualizace, aby jste ušetřili data a čas</string>
     <string name="verified_updates_title">Ověřené aktualizace</string>
     <string name="verified_updates_summary">Zobrazit jen aktualizace ověřené jinými uživateli</string>
