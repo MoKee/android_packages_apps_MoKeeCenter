@@ -24,6 +24,9 @@ import com.lzy.okgo.model.Progress;
 
 import java.io.Serializable;
 
+import androidx.annotation.Keep;
+
+@Keep
 public class UpdateInfo implements Parcelable, Serializable {
 
     public static final Parcelable.Creator<UpdateInfo> CREATOR = new Parcelable.Creator<UpdateInfo>() {

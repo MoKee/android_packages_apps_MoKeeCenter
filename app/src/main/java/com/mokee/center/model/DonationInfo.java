@@ -17,7 +17,9 @@
 
 package com.mokee.center.model;
 
-public class DonationInfo {
+import java.io.Serializable;
+
+public class DonationInfo implements Serializable {
 
     private boolean basic;
     private boolean advanced;

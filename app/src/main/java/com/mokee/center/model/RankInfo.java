@@ -19,7 +19,9 @@ package com.mokee.center.model;
 
 import com.google.gson.annotations.SerializedName;
 
-public class RankInfo {
+import java.io.Serializable;
+
+public class RankInfo implements Serializable {
 
     @SerializedName("amount")
     private int amount;
