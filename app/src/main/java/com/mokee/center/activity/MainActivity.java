@@ -140,6 +140,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_forum:
                 CommonUtil.openLink(this, Constants.NAV_FORUM_URL);
                 break;
+            case R.id.nav_guide:
+                CommonUtil.openLink(this, Constants.NAV_GUIDE_URL);
+                break;
             case R.id.nav_bug_reports:
                 CommonUtil.openLink(this, Constants.NAV_BUG_REPORTS_URL);
                 break;

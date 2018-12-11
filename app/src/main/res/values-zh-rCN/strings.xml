@@ -44,6 +44,7 @@
     <string name="pref_mobile_data_warning">移动数据警告</string>
     <!-- Nav Main -->
     <string name="nav_main_forum_title">魔趣论坛</string>
+    <string name="nav_main_guide_title">使用指南</string>
     <string name="nav_main_source_title">开源代码</string>
     <string name="nav_main_bug_reports_title">问题报告</string>
     <!-- Nav Social -->

@@ -48,6 +48,7 @@
 
     <!-- Nav Main -->
     <string name="nav_main_forum_title">Forum</string>
+    <string name="nav_main_guide_title">Guide</string>
     <string name="nav_main_source_title">Source Code</string>
     <string name="nav_main_bug_reports_title">Bug Reports</string>
     <!-- Nav Social -->

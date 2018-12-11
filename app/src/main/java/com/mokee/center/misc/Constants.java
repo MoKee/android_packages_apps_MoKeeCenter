@@ -30,6 +30,7 @@ public class Constants {
 
     // Nav URLs
     public static final String NAV_FORUM_URL = "https://bbs.mokeedev.com/";
+    public static final String NAV_GUIDE_URL = "https://www.mokeedev.com/guide";
     public static final String NAV_BUG_REPORTS_URL = "https://bbs.mokeedev.com/c/bug-reports";
     public static final String NAV_OPEN_SOURCE_URL = "https://github.com/MoKee";
     public static final String NAV_CODE_REVIEW_URL = "https://mokeedev.review";
