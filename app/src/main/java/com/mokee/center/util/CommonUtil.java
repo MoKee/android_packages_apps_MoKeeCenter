@@ -183,7 +183,7 @@ public class CommonUtil {
                 Log.e(tag, "Could not parse update object, index=" + i, e);
             }
         }
-        return CommonUtil.getSortedUpdates(updates);
+        return updates;
     }
 
     private static UpdateInfo parseJsonUpdate(Context context, JSONObject object) throws JSONException {

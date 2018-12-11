@@ -115,7 +115,7 @@ public class UpdaterController {
         for (UpdateInfo updateInfo : mAvailableUpdates.values()) {
             availableUpdates.add(updateInfo);
         }
-        return availableUpdates;
+        return CommonUtil.getSortedUpdates(availableUpdates);
     }
 
     private Map<String, UpdateInfo> mAvailableUpdates = new LinkedHashMap<>();

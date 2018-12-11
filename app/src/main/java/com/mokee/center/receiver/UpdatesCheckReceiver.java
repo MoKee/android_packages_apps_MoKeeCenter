@@ -86,7 +86,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
             @Override
             public void onSuccess(Response<String> response) {
                 try {
-                    final LinkedList<UpdateInfo> updates = CommonUtil.parseJson(context, response.body(), TAG);
+                    final LinkedList<UpdateInfo> updates = CommonUtil.getSortedUpdates(CommonUtil.parseJson(context, response.body(), TAG));
                     State.saveState(updates, jsonNew);
                     if (json.exists() && CommonUtil.checkForNewUpdates(json, jsonNew)) {
                         showNotification(context, updates);
