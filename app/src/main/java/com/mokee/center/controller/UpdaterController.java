@@ -46,11 +46,11 @@ import com.mokee.center.util.RequestUtil;
 
 import java.io.File;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.TreeMap;
 
 public class UpdaterController {
 
@@ -115,10 +115,10 @@ public class UpdaterController {
         for (UpdateInfo updateInfo : mAvailableUpdates.values()) {
             availableUpdates.add(updateInfo);
         }
-        return CommonUtil.getSortedUpdates(availableUpdates);
+        return availableUpdates;
     }
 
-    private Map<String, UpdateInfo> mAvailableUpdates = new LinkedHashMap<>();
+    private Map<String, UpdateInfo> mAvailableUpdates = new TreeMap<>((o1, o2) -> CommonUtil.compare(o1, o2));
 
     public void setUpdatesAvailableOnline(List<String> downloadIds) {
         for (Iterator<Entry<String, UpdateInfo>> iterator = mAvailableUpdates.entrySet().iterator(); iterator.hasNext();) {

@@ -153,16 +153,18 @@ public class CommonUtil {
         return false;
     }
 
+    public static int compare(String o1, String o2) {
+        float codeo1 = BuildInfoUtil.getReleaseCode(o1);
+        float codeo2 = BuildInfoUtil.getReleaseCode(o2);
+        if (codeo2 - codeo1 == 0) {
+            return Long.compare(BuildInfoUtil.getBuildDate(o2), BuildInfoUtil.getBuildDate(o1));
+        } else {
+            return Float.compare(codeo1, codeo2);
+        }
+    }
+
     public static LinkedList<UpdateInfo> getSortedUpdates(LinkedList<UpdateInfo> updates) {
-        Collections.sort(updates, (o1, o2) -> {
-            float codeo1 = BuildInfoUtil.getReleaseCode(o1.getName());
-            float codeo2 = BuildInfoUtil.getReleaseCode(o2.getName());
-            if (codeo2 - codeo1 == 0) {
-                return Long.compare(BuildInfoUtil.getBuildDate(o2.getName()), BuildInfoUtil.getBuildDate(o1.getName()));
-            } else {
-                return Float.compare(codeo1, codeo2);
-            }
-        });
+        Collections.sort(updates, (o1, o2) -> compare(o1.getName(), o2.getName()));
         return updates;
     }
 
@@ -183,7 +185,7 @@ public class CommonUtil {
                 Log.e(tag, "Could not parse update object, index=" + i, e);
             }
         }
-        return updates;
+        return CommonUtil.getSortedUpdates(updates);
     }
 
     private static UpdateInfo parseJsonUpdate(Context context, JSONObject object) throws JSONException {
