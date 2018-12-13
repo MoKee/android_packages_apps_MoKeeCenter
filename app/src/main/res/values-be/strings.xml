@@ -21,6 +21,8 @@
     <string name="app_name">Панэль MoKee</string>
     <string name="navigation_drawer_open">Адкрыць панэль</string>
     <string name="navigation_drawer_close">Зачыніць панель</string>
+    <string name="nav_header_title">Адкрыты рэсурс MoKee</string>
+    <string name="nav_header_desc">Навігацыйны радок</string>
     <!-- Action -->
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Рашэнне</string>
@@ -29,11 +31,16 @@
     <string name="action_resume">Узнавіць</string>
     <string name="action_download">Спампаваць</string>
     <!-- Menu -->
+    <string name="menu_preferences">Налады</string>
     <string name="menu_restore">Аднавіць з рэзервовай копіі</string>
+    <string name="menu_donation">Дарэнне</string>
+    <string name="menu_unlock_features">Функцыі разблакоўкі</string>
     <string name="menu_refresh">Абнавiць</string>
     <string name="menu_delete_update">Выдаліць</string>
     <!-- Preference -->
     <!-- Nav Main -->
+    <string name="nav_main_forum_title">Форум</string>
+    <string name="nav_main_source_title">Зыходны код</string>
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->

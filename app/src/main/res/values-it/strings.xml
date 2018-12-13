@@ -44,6 +44,7 @@
     <string name="pref_mobile_data_warning">Avviso se su dati mobili</string>
     <!-- Nav Main -->
     <string name="nav_main_forum_title">Forum</string>
+    <string name="nav_main_guide_title">Guida</string>
     <string name="nav_main_source_title">Codice Sorgente</string>
     <string name="nav_main_bug_reports_title">Segnalazioni errori</string>
     <!-- Nav Social -->

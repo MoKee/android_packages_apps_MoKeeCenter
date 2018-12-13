@@ -21,6 +21,7 @@
     <string name="app_name">MoKee centrum</string>
     <string name="navigation_drawer_open">Otevřít panel navigace</string>
     <string name="navigation_drawer_close">Zavřít panel navigace</string>
+    <string name="nav_header_title">MoKee Open Source</string>
     <!-- Action -->
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Řešení</string>
@@ -29,17 +30,34 @@
     <string name="action_resume">Pokračovat</string>
     <string name="action_download">Stáhnout</string>
     <!-- Menu -->
+    <string name="menu_preferences">Předvolby</string>
     <string name="menu_restore">Obnovit</string>
+    <string name="menu_donation">Příspěvek</string>
+    <string name="menu_unlock_features">Odemknout funkce</string>
     <string name="menu_refresh">Znovu načíst</string>
     <string name="menu_delete_update">Smazat</string>
     <!-- Preference -->
+    <string name="pref_ab_perf_mode">Upřednostňovat proces aktualizace</string>
     <!-- Nav Main -->
+    <string name="nav_main_forum_title">Fórum</string>
+    <string name="nav_main_source_title">Zdrojový kód</string>
+    <string name="nav_main_bug_reports_title">Hlášení chyb</string>
     <!-- Nav Social -->
+    <string name="nav_social_title">Sociální média</string>
+    <string name="nav_social_telegram_title">Telegram</string>
+    <string name="nav_social_weibo_title">Weibo</string>
+    <string name="nav_social_google_plus_title">Google+</string>
+    <string name="nav_social_qqchat_title">Skupina QQ</string>
     <!-- Nav Contribute -->
+    <string name="nav_contribute_title">Přispět</string>
+    <string name="nav_contribute_code_title">Kód</string>
+    <string name="nav_contribute_translate_title">Překlady</string>
     <!-- Preference list -->
     <string name="mokee_information_title">Informace o verzi</string>
     <string name="mokee_version_title">Verze MoKee</string>
     <string name="unique_id_title">Jedinečné ID</string>
+    <string name="last_update_check_title">Poslední kontrola</string>
+    <string name="update_settings_title">Aktualizovat nastavení</string>
     <string name="incremental_updates_title">Přírůstkové aktualizace</string>
     <string name="incremental_updates_summary">Stahovat OTA aktualizace, aby jste ušetřili data a čas</string>
     <string name="verified_updates_title">Ověřené aktualizace</string>
@@ -66,9 +84,11 @@
     <string name="donation_payment_success">Děkujeme vám za váš příspěvek!</string>
     <string name="donation_dialog_title">Přispět na MoKee OpenSource</string>
     <!-- Snackbar Update -->
+    <string name="updates_found">Nalezeny nové aktualizace</string>
     <string name="no_updates_found">Nové aktualizace nenalezeny</string>
     <string name="updates_check_failed">Kontrola aktualizací selhala. Zkontrolujte připojení k internetu a zkuste to znovu.</string>
     <!-- Common -->
+    <string name="text_copied">Text zkopírován do schránky.</string>
     <string name="unknown">Neznámá</string>
     <string name="never">Nikdy</string>
     <string name="alipay">AliPay</string>
@@ -77,12 +97,26 @@
     <string name="activity_not_found">Aplikace není nainstalována.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Nové aktualizace</string>
+    <string name="new_updates_found_title">Nová systémové aktualizace</string>
+    <string name="ongoing_channel_title">Probíhající stahování</string>
     <!-- Download Status -->
+    <string name="downloading_notification">Stahování</string>
+    <string name="download_starting_notification">Zahajování stahování</string>
+    <string name="download_paused_notification">Stahování pozastaveno</string>
+    <string name="download_waiting_network_notification">Čekání na připojení</string>
+    <string name="download_completed_notification">Stahování dokončeno</string>
+    <string name="download_remaining">Zbývá <xliff:g example="3 minutes" id="duration">%s</xliff:g></string>
+    <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Stahování již běží</string>
+    <string name="download_limited_mode">Stahování omezenou rychlostí, prosím přispějte 30 CNY pro povolení plné rychlosti stahování.</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Varování</string>
+    <string name="update_on_mobile_data_message">Chystáte se stáhnout aktualizaci pomocí mobilních dat, což pravděpodobně zapříčiní vysoké využití dat. Přejete si pokračovat?</string>
     <string name="checkbox_mobile_data_warning">Znovu nezobrazovat</string>
     <!-- Battery check -->
+    <string name="dialog_battery_low_title">Nízký stav baterie</string>
+    <string name="dialog_battery_low_message_pct">Úroveň nabití baterie je příliš nízká, potřebujete alespoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterie pro pokračování, <xliff:g id="percent_charging">%2$d</xliff:g>%% při nabíjení.</string>
     <!-- Apply update -->
     <string name="apply_update_dialog_title">Nainstalovat aktualizaci</string>
+    <string name="apply_update_dialog_message">Chystáte se aktualizovat na <xliff:g id="update_name">%1$s</xliff:g>.\n\nPokud stisknete <xliff:g id="ok">%2$s</xliff:g>, telefon se restartuje do režimu Recovery, kde budete pokračovat v instalaci aktualizace.\n\nPoznámka: tato funkce vyžaduje nainstalovaný kompatibilní režim Recovery nebo je nutné instalaci provést ručně.</string>
 </resources>
