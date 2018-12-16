@@ -44,6 +44,7 @@
     <string name="pref_mobile_data_warning">تحذير إذا كان على بيانات الجوال</string>
     <!-- Nav Main -->
     <string name="nav_main_forum_title">المنتدى</string>
+    <string name="nav_main_guide_title">الدليل</string>
     <string name="nav_main_source_title">الشفرة المصدرية</string>
     <string name="nav_main_bug_reports_title">تقارير الأخطاء</string>
     <!-- Nav Social -->

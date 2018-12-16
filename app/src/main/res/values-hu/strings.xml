@@ -44,6 +44,7 @@
     <string name="pref_mobile_data_warning">Figyelmeztetés, ha mobiladatot használ</string>
     <!-- Nav Main -->
     <string name="nav_main_forum_title">Fórum</string>
+    <string name="nav_main_guide_title">Útmutató</string>
     <string name="nav_main_source_title">Forráskód</string>
     <string name="nav_main_bug_reports_title">Hibajelentés</string>
     <!-- Nav Social -->
