@@ -44,6 +44,7 @@
     <string name="pref_mobile_data_warning">Предупреждать об использовании мобильных данных</string>
     <!-- Nav Main -->
     <string name="nav_main_forum_title">Форум</string>
+    <string name="nav_main_guide_title">Руководство</string>
     <string name="nav_main_source_title">Исходный код</string>
     <string name="nav_main_bug_reports_title">Отчёты об ошибках</string>
     <!-- Nav Social -->

@@ -22,6 +22,8 @@
     <string name="navigation_drawer_open">Otevřít panel navigace</string>
     <string name="navigation_drawer_close">Zavřít panel navigace</string>
     <string name="nav_header_title">MoKee Open Source</string>
+    <string name="nav_header_subtitle">Operační systém Android pro komunitu</string>
+    <string name="nav_header_desc">Navigační záhlaví</string>
     <!-- Action -->
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Řešení</string>
@@ -37,9 +39,12 @@
     <string name="menu_refresh">Znovu načíst</string>
     <string name="menu_delete_update">Smazat</string>
     <!-- Preference -->
+    <string name="pref_auto_delete_updates">Odstranit aktualizace, pokud jsou nainstalovány nebo zastaralé</string>
     <string name="pref_ab_perf_mode">Upřednostňovat proces aktualizace</string>
+    <string name="pref_mobile_data_warning">Upozornění na mobilní data</string>
     <!-- Nav Main -->
     <string name="nav_main_forum_title">Fórum</string>
+    <string name="nav_main_guide_title">Průvodce</string>
     <string name="nav_main_source_title">Zdrojový kód</string>
     <string name="nav_main_bug_reports_title">Hlášení chyb</string>
     <!-- Nav Social -->
@@ -64,11 +69,16 @@
     <string name="verified_updates_summary">Zobrazit jen aktualizace ověřené jinými uživateli</string>
     <string name="available_updates_title">Dostupné aktualizace</string>
     <string name="no_available_updates_intro">Při poslední kontrole nebyly zjištěny žádné dostupné aktualizace. Chcete-li ručně zkontrolovat nové aktualizace, použijte tlačítko Aktualizovat.</string>
+    <string name="pending_available_updates_intro">Vyhledat dostupné aktualizace</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Odemknout funkce</string>
+    <string name="unlock_features_incremental_updates_title">Darovat %d CNY pro odemknutí přírůstkových aktualizací a stahování v plné rychlosti.</string>
+    <string name="unlock_features_verified_updates_title">Darovat %d CNY pro ověřené aktualizace a odstranění reklam Google.</string>
+    <string name="unlock_features_all_title">Darovat %d CNY pro odemknutí přírůstkových a ověřených aktualizací, stahování v plné rychlosti a odstranění reklam Google.</string>
     <string name="unlock_features_request_summary">(k dispozici po darování %d CNY)</string>
     <string name="unlock_features_pending_summary">(darováno %1$d CNY, doživotně k dispozici po darování o %2$d CNY více)</string>
     <!-- Incremental Updates -->
+    <string name="incremental_updates_not_support_summary">Přírůstkové aktualizace nejsou pro tuto verzi podporovány.</string>
     <string name="incremental_updates_supported_full_summary">Přírůstkové aktualizace mohou ušetřit %s</string>
     <string name="incremental_updates_supported_ota_summary">Ušetří %s v porovnání s plnou ROM</string>
     <!-- Update Type -->
@@ -79,10 +89,17 @@
     <string name="update_type_nightly">Nightly</string>
     <string name="update_type_unofficial">Neoficiální</string>
     <!-- Donation Info -->
+    <string name="donation_record_title">Záznam darování</string>
+    <string name="donation_record_without_rank">Celkem jste darovali %1$d CNY.</string>
     <string name="donation_record_with_rank">Daroval celkem CNY %1$d, více než %2$s dárců celkem, hodnost No.%3$d!</string>
     <string name="donation_record_none">Nebylo darováno</string>
+    <string name="donation_restore_success">Záznam darování byl úspěšně obnoven!</string>
+    <string name="donation_restore_failure">Zkontrolujte své připojení k Internetu a zkuste to znovu později.</string>
+    <string name="donation_restore_not_found">Žádný záznam darování nebyl nalezen.</string>
     <string name="donation_payment_success">Děkujeme vám za váš příspěvek!</string>
     <string name="donation_dialog_title">Přispět na MoKee OpenSource</string>
+    <string name="donation_dialog_message">MoKee Open Source je čistě neziskový projekt, který se zrodil ze záliby a vášně. Abychom tento projekt udrželi, musíme většinu času vynakládat vlastní peníze nebo se spoléhat na dary a reklamy. Vaše dary mohou přispět ke snížení finanční zátěže a udržení budoucího vývoje!</string>
+    <string name="donation_dialog_message_extra">Po darování aktivujeme určité funkce, které jsou k dispozici pouze pro dárce!</string>
     <!-- Snackbar Update -->
     <string name="updates_found">Nalezeny nové aktualizace</string>
     <string name="no_updates_found">Nové aktualizace nenalezeny</string>
@@ -95,6 +112,7 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikace není nainstalována.</string>
+    <string name="payment_not_found">MoKee Payment není nainstalován.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Nové aktualizace</string>
     <string name="new_updates_found_title">Nová systémové aktualizace</string>
@@ -105,6 +123,8 @@
     <string name="download_paused_notification">Stahování pozastaveno</string>
     <string name="download_waiting_network_notification">Čekání na připojení</string>
     <string name="download_completed_notification">Stahování dokončeno</string>
+    <string name="download_verification_failed_notification">Nepodařilo se ověřit balíček aktualizace, stáhněte aktualizaci znovu</string>
+    <string name="download_file_not_found_notification">Odkaz ke stažení vypršel, klepněte na tlačítko Obnovit a zkuste to znovu</string>
     <string name="download_remaining">Zbývá <xliff:g example="3 minutes" id="duration">%s</xliff:g></string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Stahování již běží</string>
