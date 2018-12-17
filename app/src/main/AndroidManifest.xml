@@ -35,6 +35,8 @@
     <application
         android:name=".MKCenterApplication"
         android:allowBackup="true"
+        android:fullBackupContent="@xml/backup_scheme"
+        android:fullBackupOnly="true"
         android:defaultToDeviceProtectedStorage="false"
         android:directBootAware="true"
         android:icon="@mipmap/ic_launcher"
