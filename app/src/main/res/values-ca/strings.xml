@@ -27,6 +27,7 @@
     <string name="action_resume">Reprèn</string>
     <string name="action_download">Descarregar</string>
     <!-- Menu -->
+    <string name="menu_restore">Restaura</string>
     <string name="menu_refresh">Recarregar</string>
     <string name="menu_delete_update">Suprimeix</string>
     <!-- Preference -->

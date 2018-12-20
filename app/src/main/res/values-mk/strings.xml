@@ -19,7 +19,9 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Main -->
     <!-- Action -->
+    <string name="action_next">Следно</string>
     <!-- Menu -->
+    <string name="menu_delete_update">Избриши</string>
     <!-- Preference -->
     <!-- Nav Main -->
     <!-- Nav Social -->
@@ -31,6 +33,7 @@
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="never">Никогаш</string>
     <string name="activity_not_found">Апликацијата не е инсталирана.</string>
     <!-- Notification -->
     <!-- Download Status -->

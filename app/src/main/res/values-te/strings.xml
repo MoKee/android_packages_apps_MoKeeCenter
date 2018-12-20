@@ -47,6 +47,7 @@
     <string name="donation_dialog_title">ఓపెన్ సోర్స్ మోకికి విరాళంగా</string>
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="unknown">తెలియదు</string>
     <string name="never">ఎప్పటికీ వద్దు</string>
     <string name="alipay">అలిపాయ్</string>
     <string name="wechat">వెచ్చటి</string>

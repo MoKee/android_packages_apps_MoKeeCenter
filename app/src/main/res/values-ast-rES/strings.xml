@@ -23,7 +23,9 @@
     <!-- Action -->
     <string name="action_next">Siguiente</string>
     <string name="action_pause">Posar</string>
+    <string name="action_resume">Siguir</string>
     <!-- Menu -->
+    <string name="menu_delete_update">Desaniciar</string>
     <!-- Preference -->
     <!-- Nav Main -->
     <!-- Nav Social -->
@@ -35,6 +37,7 @@
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="never">Enxamás</string>
     <!-- Notification -->
     <!-- Download Status -->
     <!-- Mobile data -->

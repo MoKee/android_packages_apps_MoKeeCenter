@@ -24,6 +24,7 @@
     <!-- Action -->
     <string name="action_solution">Рішення</string>
     <string name="action_next">Далі</string>
+    <string name="action_resume">Продовжити</string>
     <string name="action_download">Завантажити</string>
     <!-- Menu -->
     <string name="menu_restore">Відновити</string>

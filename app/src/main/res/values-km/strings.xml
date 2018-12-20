@@ -32,6 +32,7 @@
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="unknown">មិន​ស្គាល់</string>
     <string name="activity_not_found">មិន​បាន​ដំឡើង​កម្មវិធី។</string>
     <!-- Notification -->
     <!-- Download Status -->

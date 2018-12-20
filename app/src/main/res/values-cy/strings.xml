@@ -19,8 +19,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Main -->
     <!-- Action -->
+    <string name="action_next">Nesaf</string>
     <string name="action_pause">Saib</string>
     <!-- Menu -->
+    <string name="menu_delete_update">Dileu</string>
     <!-- Preference -->
     <!-- Nav Main -->
     <!-- Nav Social -->
@@ -35,6 +37,7 @@
     <!-- Notification -->
     <!-- Download Status -->
     <!-- Mobile data -->
+    <string name="update_on_mobile_data_title">Rhybudd</string>
     <!-- Battery check -->
     <!-- Apply update -->
 </resources>

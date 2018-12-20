@@ -27,6 +27,7 @@
     <string name="action_next">Próximo</string>
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Continuar</string>
+    <string name="action_download">Transferência</string>
     <!-- Menu -->
     <string name="menu_restore">Restaurar</string>
     <string name="menu_refresh">Refrescar</string>

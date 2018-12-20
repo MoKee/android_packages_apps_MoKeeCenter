@@ -33,6 +33,7 @@
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="unknown">නොදනී</string>
     <string name="activity_not_found">යෙදුම ස්ථාපනය කර නැත.</string>
     <!-- Notification -->
     <!-- Download Status -->

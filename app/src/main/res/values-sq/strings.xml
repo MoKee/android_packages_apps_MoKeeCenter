@@ -20,9 +20,11 @@
     <!-- App Main -->
     <string name="app_name">Mokee مركز</string>
     <!-- Action -->
+    <string name="action_next">Vazhdo</string>
     <string name="action_pause">Ndërprit</string>
     <string name="action_resume">Rifillo</string>
     <!-- Menu -->
+    <string name="menu_delete_update">Fshi</string>
     <!-- Preference -->
     <!-- Nav Main -->
     <!-- Nav Social -->
@@ -38,6 +40,7 @@
     <!-- Notification -->
     <!-- Download Status -->
     <!-- Mobile data -->
+    <string name="update_on_mobile_data_title">Kujdes</string>
     <!-- Battery check -->
     <!-- Apply update -->
 </resources>

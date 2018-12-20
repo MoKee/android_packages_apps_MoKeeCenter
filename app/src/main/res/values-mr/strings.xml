@@ -32,6 +32,7 @@
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="unknown">अज्ञात</string>
     <string name="activity_not_found">अॅप स्थापित केलेला नाही.</string>
     <!-- Notification -->
     <!-- Download Status -->

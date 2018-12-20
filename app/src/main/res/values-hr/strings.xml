@@ -22,6 +22,7 @@
     <string name="action_next">Sljedeći</string>
     <string name="action_pause">Pauziraj</string>
     <string name="action_resume">Nastavi</string>
+    <string name="action_download">Preuzmi</string>
     <!-- Menu -->
     <string name="menu_delete_update">Izbriši</string>
     <!-- Preference -->
@@ -32,13 +33,16 @@
     <!-- Unlock Features -->
     <!-- Incremental Updates -->
     <!-- Update Type -->
+    <string name="update_type_history">Povijest</string>
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="unknown">Nepoznato</string>
     <string name="activity_not_found">Aplikacija nije instalirana.</string>
     <!-- Notification -->
     <!-- Download Status -->
     <!-- Mobile data -->
+    <string name="update_on_mobile_data_title">Upozorenje</string>
     <string name="checkbox_mobile_data_warning">Ne prikazuj ponovno</string>
     <!-- Battery check -->
     <!-- Apply update -->

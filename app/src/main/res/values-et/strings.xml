@@ -35,6 +35,7 @@
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="unknown">Teadmata</string>
     <string name="activity_not_found">Rakendus pole installitud.</string>
     <!-- Notification -->
     <!-- Download Status -->

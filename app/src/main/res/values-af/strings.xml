@@ -35,6 +35,8 @@
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="unknown">Onbekend</string>
+    <string name="never">Nooit</string>
     <string name="activity_not_found">Program is nie geïnstalleer nie.</string>
     <!-- Notification -->
     <!-- Download Status -->

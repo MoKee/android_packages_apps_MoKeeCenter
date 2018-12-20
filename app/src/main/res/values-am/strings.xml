@@ -34,6 +34,7 @@
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="unknown">ያልታወቀ</string>
     <string name="activity_not_found">መተግበሪያ አልተጫነም።</string>
     <!-- Notification -->
     <!-- Download Status -->

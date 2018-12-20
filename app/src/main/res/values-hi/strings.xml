@@ -24,6 +24,7 @@
     <string name="action_pause">पॉज़ करें</string>
     <string name="action_resume">फिर से शुरू करें</string>
     <!-- Menu -->
+    <string name="menu_restore">आयात</string>
     <string name="menu_delete_update">हटाएं</string>
     <!-- Preference -->
     <!-- Nav Main -->
@@ -40,6 +41,7 @@
     <string name="no_updates_found">कोई नया अपडेट नहीं मिला</string>
     <string name="updates_check_failed">अद्यतन जांच असफल रही कृपया अपना इंटरनेट कनेक्शन जांचें और बाद में फिर से प्रयास करें।</string>
     <!-- Common -->
+    <string name="unknown">अज्ञात</string>
     <string name="activity_not_found">ऐप स्थापित नहीं है।</string>
     <!-- Notification -->
     <!-- Download Status -->

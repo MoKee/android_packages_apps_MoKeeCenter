@@ -32,6 +32,7 @@
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="unknown">Тодорхойгүй</string>
     <string name="activity_not_found">Апп суугаагүй байна.</string>
     <!-- Notification -->
     <!-- Download Status -->

@@ -23,8 +23,10 @@
     <string name="navigation_drawer_close">Затвори фиоку навигације</string>
     <!-- Action -->
     <string name="action_next">Следеће</string>
+    <string name="action_resume">Настави</string>
     <string name="action_download">Преузми</string>
     <!-- Menu -->
+    <string name="menu_restore">Увези</string>
     <string name="menu_refresh">Оcвежи</string>
     <string name="menu_delete_update">Избриши</string>
     <!-- Preference -->

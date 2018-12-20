@@ -35,6 +35,7 @@
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="unknown">უცნობი</string>
     <string name="activity_not_found">აპი არ არის დაყენებული.</string>
     <!-- Notification -->
     <!-- Download Status -->

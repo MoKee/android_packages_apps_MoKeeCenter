@@ -21,6 +21,7 @@
     <string name="app_name">Mokee Senter</string>
     <!-- Action -->
     <string name="action_next">Neste</string>
+    <string name="action_resume">Fortsett</string>
     <string name="action_download">Last ned</string>
     <!-- Menu -->
     <string name="menu_restore">Gjenopprett</string>

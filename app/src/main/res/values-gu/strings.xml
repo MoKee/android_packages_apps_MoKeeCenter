@@ -34,6 +34,7 @@
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->
+    <string name="unknown">અજાણ્યો</string>
     <string name="activity_not_found">ઍપ્લિકેશન ઇન્સ્ટોલ થઈ નથી.</string>
     <!-- Notification -->
     <!-- Download Status -->
