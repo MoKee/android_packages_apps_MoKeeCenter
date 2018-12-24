@@ -57,8 +57,7 @@
         <service android:name=".controller.UpdaterService" />
 
         <receiver
-            android:name=".receiver.UpdatesCheckReceiver"
-            android:exported="false">
+            android:name=".receiver.UpdatesCheckReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
