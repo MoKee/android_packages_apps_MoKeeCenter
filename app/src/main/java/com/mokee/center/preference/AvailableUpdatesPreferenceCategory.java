@@ -23,10 +23,6 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.BatteryManager;
-import com.google.android.material.snackbar.Snackbar;
-import androidx.appcompat.app.AlertDialog;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceViewHolder;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -35,6 +31,7 @@ import android.widget.CheckBox;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.material.snackbar.Snackbar;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.controller.UpdaterController;
@@ -44,6 +41,10 @@ import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.CommonUtil;
 
 import java.util.LinkedList;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceViewHolder;
 
 public class AvailableUpdatesPreferenceCategory extends PreferenceCategory implements UpdatePreference.OnActionListener {
 

@@ -26,9 +26,6 @@ import android.content.ServiceConnection;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.IBinder;
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceFragmentCompat;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.MenuItem;
@@ -49,6 +46,7 @@ import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
 import com.mokee.center.controller.UpdaterController;
+import com.mokee.center.controller.UpdaterService;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.misc.State;
 import com.mokee.center.model.DonationInfo;
@@ -61,7 +59,6 @@ import com.mokee.center.preference.UpdatePreference;
 import com.mokee.center.preference.UpdateTypePreference;
 import com.mokee.center.preference.VerifiedUpdatesPreference;
 import com.mokee.center.receiver.UpdatesCheckReceiver;
-import com.mokee.center.controller.UpdaterService;
 import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
 import com.mokee.center.util.FileUtil;
@@ -74,6 +71,10 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
+
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceFragmentCompat;
 
 import static com.mokee.center.misc.Constants.DONATION_RESULT_OK;
 import static com.mokee.center.misc.Constants.DONATION_RESULT_SUCCESS;
@@ -121,8 +122,12 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             mWelcomeInterstitialAd.setAdListener(new AdListener() {
                 @Override
                 public void onAdLoaded() {
-                    super.onAdLoaded();
                     mWelcomeInterstitialAd.show();
+                }
+
+                @Override
+                public void onAdClosed() {
+                    mWelcomeInterstitialAd.loadAd(new AdRequest.Builder().build());
                 }
             });
             mWelcomeInterstitialAd.loadAd(adRequest);
@@ -294,7 +299,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             State.saveState(updates, jsonNew);
             loadUpdatesList(updates, manualRefresh);
             mMainPrefs.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
-            ((LastUpdateCheckPreference)findPreference(PREF_LAST_UPDATE_CHECK)).updateSummary();
+            ((LastUpdateCheckPreference) findPreference(PREF_LAST_UPDATE_CHECK)).updateSummary();
             if (json.exists() && CommonUtil.checkForNewUpdates(json, jsonNew)) {
                 UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getContext());
             }
@@ -397,7 +402,8 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         if (preference instanceof UpdateTypePreference) {
-            if (TextUtils.equals(mUpdateTypePreference.getValue(), newValue.toString())) return false;
+            if (TextUtils.equals(mUpdateTypePreference.getValue(), newValue.toString()))
+                return false;
             File jsonFile = FileUtil.getCachedUpdateList(getContext());
             jsonFile.delete();
             mMainPrefs.edit().putString(PREF_UPDATE_TYPE, newValue.toString()).apply();
