@@ -30,6 +30,8 @@
     <string name="action_download">Prenesi</string>
     <!-- Menu -->
     <string name="menu_restore">Obnovi</string>
+    <string name="menu_donation">Prispevek</string>
+    <string name="menu_unlock_features">Odklep funkcij</string>
     <string name="menu_refresh">Osveži</string>
     <string name="menu_delete_update">Izbriši</string>
     <!-- Preference -->
@@ -60,6 +62,9 @@
     <string name="no_available_updates_intro">Ob zadnjem preverjanju ni bilo najdenih novih posodobitev. Da ročno preverite za posodobitve, uporabite gumb Osveži.</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Odklenete funkcije</string>
+    <string name="unlock_features_incremental_updates_title">Prispevajte %d CNY za odklep delnih posobobitv in prenos s polno hitrostjo.</string>
+    <string name="unlock_features_verified_updates_title">Prispevajte %d CNY za odklep preverjenih posodobitv in odstranjene Google oglase.</string>
+    <string name="unlock_features_all_title">Prispevajte %d CNY za odklep delnih posobobitv, prenos s polno hitrostjo, preverjene posodobitve in odstranjeni Google oglasi.</string>
     <string name="unlock_features_request_summary">(na voljo po prispevku %d CNY)</string>
     <string name="unlock_features_pending_summary">(prispevano %1$d CNY, če želite neomejeno uporabo, prispevajte še %2$d CNY)</string>
     <!-- Incremental Updates -->
@@ -73,10 +78,15 @@
     <string name="update_type_nightly">Nightly</string>
     <string name="update_type_unofficial">Neuradna</string>
     <!-- Donation Info -->
+    <string name="donation_record_title">Zapis o prispevku</string>
+    <string name="donation_record_without_rank">Skupno ste prispevali %1$d CNY.</string>
     <string name="donation_record_with_rank">Skupno ste prispevali CNY %1$d, več kot %2$s donatorjev v svetovnem merilu, uvrstitev št.%3$d!</string>
     <string name="donation_record_none">Niste še prispevali</string>
+    <string name="donation_restore_success">Zapis o prispevku je bil uspešno obnovljen!</string>
+    <string name="donation_restore_failure">Preverite svojo internetno povezavo in poskusite ponovno.</string>
     <string name="donation_payment_success">Zahvaljujemo se vam za vaš prispevek!</string>
     <string name="donation_dialog_title">Prispevam k MoKee OpenSource</string>
+    <string name="donation_dialog_message_extra">Po prispevku bomo aktivirali določene funkcije, ki so na voljo samo donatorjem, doživljensko!</string>
     <!-- Snackbar Update -->
     <string name="updates_found">Najdene so nove posodobitve</string>
     <string name="no_updates_found">Ni novih posodobitev</string>
