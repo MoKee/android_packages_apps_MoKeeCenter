@@ -124,11 +124,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                 public void onAdLoaded() {
                     mWelcomeInterstitialAd.show();
                 }
-
-                @Override
-                public void onAdClosed() {
-                    mWelcomeInterstitialAd.loadAd(adRequest);
-                }
             });
             mWelcomeInterstitialAd.loadAd(adRequest);
         }
