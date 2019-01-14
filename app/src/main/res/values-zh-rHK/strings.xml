@@ -21,6 +21,8 @@
     <string name="app_name">MoKee 中心</string>
     <string name="navigation_drawer_open">開啟導航欄</string>
     <string name="navigation_drawer_close">關閉導航欄</string>
+    <string name="nav_header_subtitle">Android 社區作業系統</string>
+    <string name="nav_header_desc">導航標頭</string>
     <!-- Action -->
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">解決方案</string>
@@ -32,11 +34,16 @@
     <string name="menu_preferences">偏好設定</string>
     <string name="menu_restore">恢復</string>
     <string name="menu_donation">捐贈</string>
+    <string name="menu_unlock_features">解鎖功能</string>
     <string name="menu_refresh">重新整理</string>
     <string name="menu_delete_update">刪除</string>
     <!-- Preference -->
+    <string name="pref_auto_delete_updates">在安裝或不推薦使用時刪除更新</string>
+    <string name="pref_ab_perf_mode">優先更新過程</string>
+    <string name="pref_mobile_data_warning">對移動資料的警告</string>
     <!-- Nav Main -->
     <string name="nav_main_forum_title">論壇</string>
+    <string name="nav_main_guide_title">指南</string>
     <string name="nav_main_source_title">原始碼</string>
     <string name="nav_main_bug_reports_title">錯誤回報</string>
     <!-- Nav Social -->
@@ -61,13 +68,16 @@
     <string name="verified_updates_summary">僅檢查經過其它使用者刷入驗證的新版本</string>
     <string name="available_updates_title">可用的更新</string>
     <string name="no_available_updates_intro">上次檢查未發現可用更新。請使用重新整理按鈕手動檢查。</string>
+    <string name="pending_available_updates_intro">查找可用的更新</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">功能解鎖</string>
     <string name="unlock_features_incremental_updates_title">捐贈 %d 人民幣, 以解鎖增量更新並全速下載。</string>
     <string name="unlock_features_verified_updates_title">捐贈 %d 元人民幣，開啟驗證更新和去 Google 廣告</string>
+    <string name="unlock_features_all_title">捐贈 %d 人民幣解鎖增量更新、全速下載、驗證更新並刪除 google 廣告。</string>
     <string name="unlock_features_request_summary">（累計捐贈人民幣 %d 元後永久可用）</string>
     <string name="unlock_features_pending_summary">（已捐贈人民幣 %1$d 元，再捐贈人民幣 %2$d 元後永久可用）</string>
     <!-- Incremental Updates -->
+    <string name="incremental_updates_not_support_summary">不支援此版本的增量更新。</string>
     <string name="incremental_updates_supported_full_summary">開啟增量更新可節省 %s 流量</string>
     <string name="incremental_updates_supported_ota_summary">與完整 ROM 相比可為您節省 %s 流量</string>
     <!-- Update Type -->
@@ -79,24 +89,32 @@
     <string name="update_type_unofficial">非官方版</string>
     <!-- Donation Info -->
     <string name="donation_record_title">捐贈記錄</string>
+    <string name="donation_record_without_rank">您捐贈了 %1$d 元。</string>
     <string name="donation_record_with_rank">你共捐贈了￥ %1$d 元，已超過全球 %2$s 的捐助者，排名 No.%3$d ！</string>
     <string name="donation_record_none">捐贈是國際上通行的一種支持免費軟件的方式，完成一次光榮的捐贈，使我們能夠做的更好！</string>
+    <string name="donation_restore_success">捐贈記錄恢復成功！</string>
+    <string name="donation_restore_failure">請檢查您的網路連線，請稍後再試。</string>
+    <string name="donation_restore_not_found">沒有找到此裝置的捐贈記錄。</string>
     <string name="donation_payment_success">多謝你的捐贈！</string>
     <string name="donation_dialog_title">Donate to MoKee Open Source</string>
     <string name="donation_dialog_message">Mokee 開源是一個純粹的非營利專案, 誕生的愛好和激情。為了維持這個專案, 我們大部分時間都要掏錢, 或者依靠捐款和廣告。您的捐款可以説明減少我們的財務負擔和維持未來的發展!</string>
+    <string name="donation_dialog_message_extra">捐款後, 我們將啟動某些功能, 這些功能只提供給捐獻者終身!</string>
     <!-- Snackbar Update -->
     <string name="updates_found">發現新的更新</string>
     <string name="no_updates_found">沒有找到新的更新</string>
     <string name="updates_check_failed">更新檢查失敗。請檢查你的網絡連綫並於稍後重試。</string>
     <!-- Common -->
+    <string name="text_copied">文字已複製到剪貼簿</string>
     <string name="unknown">不明</string>
     <string name="never">永不</string>
     <string name="alipay">支付寶</string>
     <string name="wechat">微信</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">尚未安裝應用程式。</string>
+    <string name="payment_not_found">未安裝 MoKee 支付應用程式。</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">新的更新</string>
+    <string name="new_updates_found_title">新的系統更新</string>
     <string name="ongoing_channel_title">目前下載</string>
     <!-- Download Status -->
     <string name="downloading_notification">下載中...</string>
@@ -104,9 +122,15 @@
     <string name="download_paused_notification">下載暫停</string>
     <string name="download_waiting_network_notification">正在等待網路連接</string>
     <string name="download_completed_notification">下載已完成</string>
+    <string name="download_verification_failed_notification">更新包驗證失敗，請重新下載</string>
+    <string name="download_file_not_found_notification">下載連結已過期，請點「重新整理」按鈕，然後重試</string>
+    <string name="download_remaining">還剩 <xliff:g example="3 minutes" id="duration">%s</xliff:g></string>
+    <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">已經有一個下載在執行</string>
+    <string name="download_limited_mode">目前是限速下載模式，累計捐贈達到 30 元人民幣即可享受全速下載。</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">警告</string>
+    <string name="update_on_mobile_data_message">您將要透過移動數據網路下載更新包，這可能會導致較大的數據用量。您確定要繼續嗎？</string>
     <string name="checkbox_mobile_data_warning">不再顯示</string>
     <!-- Battery check -->
     <string name="dialog_battery_low_title">低電量</string>
