@@ -29,15 +29,19 @@
     <string name="action_resume">Nadaljuj</string>
     <string name="action_download">Prenesi</string>
     <!-- Menu -->
+    <string name="menu_preferences">Nastavitve</string>
     <string name="menu_restore">Obnovi</string>
     <string name="menu_donation">Prispevek</string>
     <string name="menu_unlock_features">Odklep funkcij</string>
     <string name="menu_refresh">Osveži</string>
     <string name="menu_delete_update">Izbriši</string>
     <!-- Preference -->
+    <string name="pref_auto_delete_updates">Izbriši nameščene ali opuščene posodobitve</string>
+    <string name="pref_ab_perf_mode">Prednost posodobitvenemu procesu</string>
     <string name="pref_mobile_data_warning">Opozorilo, če ste na mobilnih podatkih</string>
     <!-- Nav Main -->
     <string name="nav_main_forum_title">Forum</string>
+    <string name="nav_main_guide_title">Vodič</string>
     <string name="nav_main_source_title">Izvorna koda</string>
     <string name="nav_main_bug_reports_title">Prijavljeni hrošči</string>
     <!-- Nav Social -->
@@ -45,6 +49,7 @@
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
     <string name="nav_social_google_plus_title">Google+</string>
+    <string name="nav_social_qqchat_title">QQ skupine</string>
     <!-- Nav Contribute -->
     <string name="nav_contribute_title">Sodelovanje</string>
     <string name="nav_contribute_code_title">Koda</string>
@@ -54,12 +59,14 @@
     <string name="mokee_version_title">MoKee različica</string>
     <string name="unique_id_title">Edinstven ID</string>
     <string name="last_update_check_title">Na zadnje preverjano</string>
+    <string name="update_settings_title">Posodobitvene nastavitve</string>
     <string name="incremental_updates_title">Delne posodobitve</string>
     <string name="incremental_updates_summary">Z delnimi posodobitvami priihranite čas in pasovno širino</string>
     <string name="verified_updates_title">Preverjene posodobitve</string>
     <string name="verified_updates_summary">Prikazane so le posodobitve, ki so jih potrdili drugi uporabniki</string>
     <string name="available_updates_title">Posodobitve na voljo</string>
     <string name="no_available_updates_intro">Ob zadnjem preverjanju ni bilo najdenih novih posodobitev. Da ročno preverite za posodobitve, uporabite gumb Osveži.</string>
+    <string name="pending_available_updates_intro">Preverjam, če so na voljo posodobitve</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Odklenete funkcije</string>
     <string name="unlock_features_incremental_updates_title">Prispevajte %d CNY za odklep delnih posobobitv in prenos s polno hitrostjo.</string>
@@ -68,6 +75,7 @@
     <string name="unlock_features_request_summary">(na voljo po prispevku %d CNY)</string>
     <string name="unlock_features_pending_summary">(prispevano %1$d CNY, če želite neomejeno uporabo, prispevajte še %2$d CNY)</string>
     <!-- Incremental Updates -->
+    <string name="incremental_updates_not_support_summary">Delne posodobitve za to različico niso podprte.</string>
     <string name="incremental_updates_supported_full_summary">Delne posodobitve bi lahko prihranile %s</string>
     <string name="incremental_updates_supported_ota_summary">Prihrani %s v primerjavi z polnim ROM-om</string>
     <!-- Update Type -->
@@ -84,8 +92,10 @@
     <string name="donation_record_none">Niste še prispevali</string>
     <string name="donation_restore_success">Zapis o prispevku je bil uspešno obnovljen!</string>
     <string name="donation_restore_failure">Preverite svojo internetno povezavo in poskusite ponovno.</string>
+    <string name="donation_restore_not_found">Zapis o prispevku ni najden.</string>
     <string name="donation_payment_success">Zahvaljujemo se vam za vaš prispevek!</string>
     <string name="donation_dialog_title">Prispevam k MoKee OpenSource</string>
+    <string name="donation_dialog_message">MoKee Open Source je povsem neprofitni projekt, ki je nastal zaradi hobija in strasti. Da bi ohranili ta projekt, moramo večino časa prispevati svoj lasten denar ali se zanašati na donacije in oglase. Vaše donacije lahko pomagajo zmanjšati naše finančne obremenitve in ohraniti prihodnji razvoj!</string>
     <string name="donation_dialog_message_extra">Po prispevku bomo aktivirali določene funkcije, ki so na voljo samo donatorjem, doživljensko!</string>
     <!-- Snackbar Update -->
     <string name="updates_found">Najdene so nove posodobitve</string>
@@ -99,6 +109,7 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikacija ni nameščena.</string>
+    <string name="payment_not_found">MoKee plačilo ni nameščeno.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Nove posodobitve</string>
     <string name="new_updates_found_title">Nove posodobiteve sistema</string>
@@ -109,14 +120,20 @@
     <string name="download_paused_notification">Prenos začasno ustavljen</string>
     <string name="download_waiting_network_notification">Čakam na omrežje</string>
     <string name="download_completed_notification">Prenos je končan</string>
+    <string name="download_verification_failed_notification">Posodobitvenega paketa ni mogoče preveriti, prenesite ga ponovno</string>
+    <string name="download_file_not_found_notification">Povezava za prenos je potekla, kliknite gumb osveži in poskusite znova</string>
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> do konca</string>
+    <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Prenos se že izvaja</string>
+    <string name="download_limited_mode">Prenos z omejeno hitrostjo, darujte 30 CNY za prenos s polno hitrostjo.</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Opozorilo</string>
+    <string name="update_on_mobile_data_message">Ste pred prenosom posodobitvenega paketa z uporabo mobilnih podatkov, kar bo verjetno povzročilo visoko porabo podatkov. Ali želite nadaljevati?</string>
     <string name="checkbox_mobile_data_warning">Ne prikaži ponovno</string>
     <!-- Battery check -->
     <string name="dialog_battery_low_title">Nizko stanje baterije</string>
     <string name="dialog_battery_low_message_pct">Raven napolnjenosti akumulatorja je prenizka, potrebnih je vsaj <xliff:g id="percent_discharging">%1$d</xliff:g>%% akumulatorja za nadaljevanje, ali <xliff:g id="percent_charging">%2$d</xliff:g>%% če se polni.</string>
     <!-- Apply update -->
     <string name="apply_update_dialog_title">Uveljavi posodbitev</string>
+    <string name="apply_update_dialog_message">Ste pred nadgradnjo na <xliff:g id="update_name">%1$s</xliff:g>.\n\nČe pritisnete <xliff:g id="ok">%2$s</xliff:g>, se bo naprava ponovno zagnala v obnovitvenem načinu, da se namesti posodobitev.\n\nOpomba: Ta funkcija zahteva združljivo obnovitev, drugače je potrebno posodobitv namestiti ročno.</string>
 </resources>
