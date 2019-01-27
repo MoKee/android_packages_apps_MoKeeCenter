@@ -21,35 +21,64 @@
     <string name="app_name">Centrum MoKee</string>
     <string name="navigation_drawer_open">Otwórz szufladę naiwigacji</string>
     <string name="navigation_drawer_close">Zamknij szufladę naiwigacji</string>
+    <string name="nav_header_title">MoKee Open Source</string>
+    <string name="nav_header_subtitle">Android Community Operating System</string>
+    <string name="nav_header_desc">Pasek nawigacji</string>
     <!-- Action -->
+    <string name="action_faq">Pytania&amp;odpowiedzi</string>
     <string name="action_solution">Rozwiązanie</string>
     <string name="action_next">Następny</string>
     <string name="action_pause">Pauza</string>
     <string name="action_resume">Wznów</string>
     <string name="action_download">Pobierz</string>
     <!-- Menu -->
+    <string name="menu_preferences">Ustawienia</string>
     <string name="menu_restore">Przywróć</string>
+    <string name="menu_donation">Darowizna</string>
+    <string name="menu_unlock_features">Odblokuj funkcje</string>
     <string name="menu_refresh">Odśwież</string>
     <string name="menu_delete_update">Usuń</string>
     <!-- Preference -->
+    <string name="pref_auto_delete_updates">Usuń aktualizacje po zainstalowaniu lub wycofaniu</string>
+    <string name="pref_ab_perf_mode">Nadaj wyższy priorytet procesowi aktualizacji</string>
+    <string name="pref_mobile_data_warning">Ostrzeżenie w przypadku danych mobilnych</string>
     <!-- Nav Main -->
+    <string name="nav_main_forum_title">Forum</string>
+    <string name="nav_main_guide_title">Przewodnik</string>
+    <string name="nav_main_source_title">Kod źródłowy</string>
+    <string name="nav_main_bug_reports_title">Raportowanie błędów</string>
     <!-- Nav Social -->
+    <string name="nav_social_title">Media społecznościowe</string>
+    <string name="nav_social_telegram_title">Telegram</string>
+    <string name="nav_social_weibo_title">Weibo</string>
+    <string name="nav_social_google_plus_title">Google+</string>
+    <string name="nav_social_qqchat_title">Grupa QQ</string>
     <!-- Nav Contribute -->
+    <string name="nav_contribute_title">Weź udział</string>
+    <string name="nav_contribute_code_title">Kod</string>
+    <string name="nav_contribute_translate_title">Tłumaczenie</string>
     <!-- Preference list -->
     <string name="mokee_information_title">Informacje o wersji</string>
     <string name="mokee_version_title">Wersja Mokee</string>
     <string name="unique_id_title">Unikalne ID</string>
+    <string name="last_update_check_title">Ostatnie sprawdzenie</string>
+    <string name="update_settings_title">Ustawienia aktualizacji</string>
     <string name="incremental_updates_title">Aktualizacje przyrostowe</string>
     <string name="incremental_updates_summary">Pobierz aktualizacje przyrostowe, aby zaoszczędzić czas i transfer</string>
     <string name="verified_updates_title">Sprawdzone aktualizacje</string>
     <string name="verified_updates_summary">Pokaż tylko te aktualizacje, które zostały sprawdzone przez innych</string>
     <string name="available_updates_title">Dostępne aktualizacje</string>
     <string name="no_available_updates_intro">Brak dostępnej aktualizacji po ostatnim sprawdzaniu. Aby sprawdzić dostępność ręcznie, naciśnij \"Odśwież\".</string>
+    <string name="pending_available_updates_intro">Wyszukaj dostępne aktualizacje</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Gest odblokowania</string>
+    <string name="unlock_features_incremental_updates_title">Przekaż %d CNY, aby odblokować aktualizacje przyrostowe i pobieranie z pełną prędkością.</string>
+    <string name="unlock_features_verified_updates_title">Przekaż %d CNY dla zweryfikowanych aktualizacji i usunięcia reklam Google.</string>
+    <string name="unlock_features_all_title">Przekaż %d CNY, aby odblokować aktualizacje przyrostowe, pobieranie z pełną prędkością, zweryfikowane aktualizacje i usunąć reklamy Google.</string>
     <string name="unlock_features_request_summary">(dostępne po dotacji %d CNY)</string>
     <string name="unlock_features_pending_summary">(przekazano %1$d CNY, dostępne dożywotnio po przekazaniu więcej %2$d CNY)</string>
     <!-- Incremental Updates -->
+    <string name="incremental_updates_not_support_summary">Aktualizacje przyrostowe do tej wersji nie są obsługiwane.</string>
     <string name="incremental_updates_supported_full_summary">Aktualizacje przyrostowe mogą zaoszczędzić %s</string>
     <string name="incremental_updates_supported_ota_summary">Oszczędza %s w porównaniu do pełnego ROMu</string>
     <!-- Update Type -->
@@ -60,28 +89,54 @@
     <string name="update_type_nightly">Nocne</string>
     <string name="update_type_unofficial">Nieoficjalne</string>
     <!-- Donation Info -->
+    <string name="donation_record_title">Zapis darowizny</string>
+    <string name="donation_record_without_rank">Przekazałeś w sumie %1$d CNY.</string>
     <string name="donation_record_with_rank">Przekazałeś w sumie %1$d juanów, więcej niż %2$s przekazujących dotację. Miejsce numer %3$d!</string>
     <string name="donation_record_none">Nie przekazałeś dotacji</string>
+    <string name="donation_restore_success">Zapis darowizny został przywrócony pomyślnie!</string>
+    <string name="donation_restore_failure">Proszę sprawdź swoje połączenie internetowe i spróbuj ponownie później.</string>
+    <string name="donation_restore_not_found">Nie znaleziono zapisu darowizny.</string>
     <string name="donation_payment_success">Dziękujemy za wsparcie!</string>
     <string name="donation_dialog_title">Wspomóż MoKee OpenSource</string>
+    <string name="donation_dialog_message">MoKee Open Source to projekt czysto non-profit zrodzony z hobby i pasji. Aby utrzymać ten projekt, musimy przez większość czasu rozdawać własne pieniądze lub polegać na darowiznach i reklamach. Twoje darowizny mogą pomóc zmniejszyć obciążenie finansowe i utrzymać rozwój w przyszłości!</string>
+    <string name="donation_dialog_message_extra">Po dokonaniu darowizny aktywujemy pewne funkcje, które są dostępne tylko dla darczyńców na całe życie!</string>
     <!-- Snackbar Update -->
+    <string name="updates_found">Znaleziono nowe aktualizacje</string>
     <string name="no_updates_found">Brak dostępnych aktualizacji</string>
     <string name="updates_check_failed">Nie udało się wyszukać aktualizacji. Sprawdź połączenie internetowe i spróbuj ponownie.</string>
     <!-- Common -->
+    <string name="text_copied">Tekst skopiowany do schowka.</string>
     <string name="unknown">Brak informacji</string>
     <string name="never">Nigdy</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikacja nie jest zainstalowana.</string>
+    <string name="payment_not_found">Płatność MoKee nie są zainstalowane.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Nowe aktualizacje</string>
+    <string name="new_updates_found_title">Nowe aktualizacje systemu</string>
+    <string name="ongoing_channel_title">Trwające pobierania</string>
     <!-- Download Status -->
+    <string name="downloading_notification">Pobieranie</string>
+    <string name="download_starting_notification">Rozpoczęcie pobierania</string>
+    <string name="download_paused_notification">Pobieranie wstrzymane</string>
+    <string name="download_waiting_network_notification">Oczekiwanie na sieć</string>
+    <string name="download_completed_notification">Pobieranie zakończone</string>
+    <string name="download_verification_failed_notification">Nie można zweryfikować pakietu aktualizacji, pobierz ponownie</string>
+    <string name="download_file_not_found_notification">Link pobierania wygasł, kliknij przycisk Odśwież i spróbuj ponownie</string>
+    <string name="download_remaining"><xliff:g example="3 minuty" id="trwanie>%s</xliff:g> pozostały</string>
+    <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Pobieranie w toku</string>
+    <string name="download_limited_mode">Pobieranie z ograniczoną prędkością, proszę wesprzyj projekt za pomocą 30 CNY aby cieszyć się pełną szybkością.</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Ostrzeżenie</string>
+    <string name="update_on_mobile_data_message">Zamierzasz pobrać pakiet aktualizacji przy użyciu sieci komórkowej co spowoduje duże zużycie transferu danych. Czy chcesz kontynuować?</string>
     <string name="checkbox_mobile_data_warning">Nie pokazuj ponownie</string>
     <!-- Battery check -->
+    <string name="dialog_battery_low_title">Niski stan baterii</string>
+    <string name="dialog_battery_low_message_pct">Poziom naładowania baterii jest zbyt niski, musisz mieć co najmniej <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterii lub <xliff:g id="percent_charging">%2$d</xliff:g>%% w trakcie ładowania.</string>
     <!-- Apply update -->
     <string name="apply_update_dialog_title">Zatwierdź aktualizację</string>
+    <string name="apply_update_dialog_message">Masz zamiar zaktualizować do <xliff:g id="update_name">%1$s</xliff:g>.\n\nGdy naciśniesz <xliff:g id="ok">%2$s</xliff:g>, urządzenie uruchomi się ponownie w trybie recovery, aby zainstalować aktualizację.\n\nUwaga: Ta funkcja wymaga kompatybilnego recovery, w innym przypadku aktualizację należy zainstalować ręcznie.</string>
 </resources>
