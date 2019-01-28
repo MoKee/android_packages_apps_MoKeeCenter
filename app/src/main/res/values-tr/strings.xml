@@ -45,26 +45,26 @@
     <!-- Nav Main -->
     <string name="nav_main_forum_title">Forum</string>
     <string name="nav_main_guide_title">Kılavuz</string>
-    <string name="nav_main_source_title">Kaynak kodu</string>
-    <string name="nav_main_bug_reports_title">Hata raporu</string>
+    <string name="nav_main_source_title">Kaynak Kodu</string>
+    <string name="nav_main_bug_reports_title">Hata Bildirme</string>
     <!-- Nav Social -->
-    <string name="nav_social_title">Sosyal medya</string>
+    <string name="nav_social_title">Sosyal Medya</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
-    <string name="nav_social_google_plus_title">Google+</string>
+    <string name="nav_social_google_plus_title">Google +</string>
     <string name="nav_social_qqchat_title">QQ Grup</string>
     <!-- Nav Contribute -->
     <string name="nav_contribute_title">Katkıda bulunun</string>
     <string name="nav_contribute_code_title">Kod</string>
     <string name="nav_contribute_translate_title">Çeviri</string>
     <!-- Preference list -->
-    <string name="mokee_information_title">Sürüm bilgisi</string>
-    <string name="mokee_version_title">MoKee sürümü</string>
+    <string name="mokee_information_title">Versiyon Bilgisi</string>
+    <string name="mokee_version_title">MoKee Versiyonu</string>
     <string name="unique_id_title">Benzersiz kimlik</string>
     <string name="last_update_check_title">Son kontrol</string>
     <string name="update_settings_title">Güncelleme ayarları</string>
-    <string name="incremental_updates_title">Artırımlı güncellemeler</string>
-    <string name="incremental_updates_summary">İndirme süresinden ve bant genişliğinden tasarruf etmek için artırımlı güncellemeler alın</string>
+    <string name="incremental_updates_title">OTA güncellemeleri</string>
+    <string name="incremental_updates_summary">İndirme süresinden kazanmak ve veri tasarrufu için Ota güncellemeleri alın</string>
     <string name="verified_updates_title">Doğrulanmış güncellemeler</string>
     <string name="verified_updates_summary">Yalnızca diğer kullanıcılar tarafından doğrulanan güncellemeleri görüntüleyin</string>
     <string name="available_updates_title">Mevcut güncellemeler</string>
@@ -78,8 +78,8 @@
     <string name="unlock_features_request_summary">(%d CNY bağışta bulunulduğunda kullanılabilir)</string>
     <string name="unlock_features_pending_summary">(bağış %1$d CNY %2$d CNY daha bağış yaptıktan sonra ömür boyu kullanılabilir)</string>
     <!-- Incremental Updates -->
-    <string name="incremental_updates_not_support_summary">Bu sürüme artırımlı güncellemeler desteklenmiyor.</string>
-    <string name="incremental_updates_supported_full_summary">Artırımlı güncellemeler %s kaydedebilir</string>
+    <string name="incremental_updates_not_support_summary">Bu sürüme yapılan güncellemeleri desteklenmiyor.</string>
+    <string name="incremental_updates_supported_full_summary">Artan güncellemeler %s kaydedebilir</string>
     <string name="incremental_updates_supported_ota_summary">Tam ROM için karşılaştırıldığında %s kaydeder</string>
     <!-- Update Type -->
     <string name="update_type_title">Güncelleme türü</string>

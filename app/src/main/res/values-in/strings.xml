@@ -125,7 +125,7 @@
     <string name="download_completed_notification">Unduhan selesai</string>
     <string name="download_verification_failed_notification">Gagal memverifikasi paket pembaruan, silakan unduh lagi</string>
     <string name="download_file_not_found_notification">Tautan unduhan kedaluwarsa, klik tombol Refresh dan coba lagi</string>
-    <string name="download_remaining"><xliff:g example="3 menit" id="duration">%s</xliff:g> tersisa</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> tersisa</string>
     <string name="download_speed">%1$s, %2$s/d</string>
     <string name="download_already_running">Unduhan sedang berjalan</string>
     <string name="download_limited_mode">Mengunduh dengan kecepatan terbatas, silakan menyumbang 30 CNY untuk menikmati kecepatan penuh.</string>
