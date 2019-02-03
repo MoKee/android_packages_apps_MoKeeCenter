@@ -21,7 +21,6 @@
     <string name="app_name">MoKee Center</string>
     <string name="navigation_drawer_open">Öffne Navigations-Menü</string>
     <string name="navigation_drawer_close">Schließe Navigations-Menü</string>
-    <string name="nav_header_title">MoKee OpenSource</string>
     <string name="nav_header_subtitle">Android Community Betriebssystem</string>
     <string name="nav_header_desc">Navigationsleiste</string>
     <!-- Action -->

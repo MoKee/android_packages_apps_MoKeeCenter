@@ -22,7 +22,7 @@
     <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
     <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
     <string name="nav_header_title">MoKee OpenSource</string>
-    <string name="nav_header_subtitle">ASOP</string>
+    <string name="nav_header_subtitle">Asop</string>
     <string name="nav_header_desc">Barre de navigation</string>
     <!-- Action -->
     <string name="action_faq">Q&amp;A</string>
@@ -41,7 +41,7 @@
     <!-- Preference -->
     <string name="pref_auto_delete_updates">Supprimer les mises à jour une fois installées ou devenues obsolètes</string>
     <string name="pref_ab_perf_mode">Privilégier le processus de mise à jour</string>
-    <string name="pref_mobile_data_warning">Alerter lors de l\'utilisation de données mobiles</string>
+    <string name="pref_mobile_data_warning">Alerter lors de l\'utilisation ded données mobiles</string>
     <!-- Nav Main -->
     <string name="nav_main_forum_title">Forum</string>
     <string name="nav_main_guide_title">Guide</string>
@@ -86,7 +86,7 @@
     <string name="update_type_release">Release</string>
     <string name="update_type_history">Historique</string>
     <string name="update_type_experimental">Expérimental</string>
-    <string name="update_type_nightly">Béta</string>
+    <string name="update_type_nightly">Nightly</string>
     <string name="update_type_unofficial">Non officiel</string>
     <!-- Donation Info -->
     <string name="donation_record_title">Enregistrement de la donation</string>
