@@ -92,6 +92,7 @@
     <string name="donation_record_without_rank">Sie haben insgesamt %1$d CNY gespendet.</string>
     <string name="donation_record_with_rank">Sie spendeten insgesamt CNY %1$d, mehr als %2$s der Spender, weltweiter Rang Nr.%3$d!</string>
     <string name="donation_record_none">Sie haben nicht gespendet</string>
+    <string name="donation_restore_success">Die Daten werden erfolgreich erneut!</string>
     <string name="donation_payment_success">Vielen Dank für Ihre Spende!</string>
     <string name="donation_dialog_title">Spenden Sie an MoKee Open Source</string>
     <!-- Snackbar Update -->
