@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,6 +32,7 @@ import com.lzy.okgo.model.Progress;
 import com.mokee.center.R;
 import com.mokee.center.controller.UpdaterController;
 import com.mokee.center.model.UpdateInfo;
+import com.mokee.center.model.UpdateStatus;
 import com.mokee.center.util.BuildInfoUtil;
 
 import java.net.UnknownHostException;
@@ -76,7 +77,6 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         mTitleView = (TextView) holder.findViewById(android.R.id.title);
 
         mFileSizeView = (TextView) holder.findViewById(R.id.file_size);
-        mFileSizeView.setText(Formatter.formatFileSize(getContext(), updateInfo.getFileSize()));
 
         mDownloadProgress = (ProgressBar) holder.findViewById(R.id.download_progress);
         mActionProgress = (ProgressBar) holder.findViewById(R.id.action_progress);
@@ -93,8 +93,13 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         }
         Progress progress = updateInfo.getProgress();
         if (progress != null) {
-            mDownloadProgress.setMax((int) progress.totalSize);
-            mDownloadProgress.setProgress((int) progress.currentSize);
+            if (updateInfo.getStatus() == UpdateStatus.INSTALLING) {
+                mDownloadProgress.setMax(100);
+                mDownloadProgress.setProgress(Math.round(updateInfo.getInstallProgress() * 100));
+            } else {
+                mDownloadProgress.setMax((int) progress.totalSize);
+                mDownloadProgress.setProgress((int) progress.currentSize);
+            }
             switch (progress.status) {
                 case Progress.WAITING:
                     mIconView.setVisibility(View.GONE);
@@ -103,6 +108,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     mSummaryView.setText(R.string.download_starting_notification);
                     mActionProgress.setVisibility(View.VISIBLE);
                     mUpdateButton.setEnabled(false);
+                    mFileSizeView.setText(NumberFormat.getPercentInstance().format(progress.fraction));
                     break;
                 case Progress.LOADING:
                     mIconView.setImageResource(R.drawable.ic_action_pause);
@@ -110,14 +116,11 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     mDownloadProgress.setIndeterminate(false);
                     mDownloadProgress.setVisibility(View.VISIBLE);
                     if (progress.extra1 != null) {
-                        mSummaryView.setText(getContext().getString(R.string.download_progress_eta_new,
-                                Formatter.formatFileSize(getContext(), progress.currentSize),
-                                Formatter.formatFileSize(getContext(), progress.totalSize),
-                                progress.extra1,
-                                NumberFormat.getPercentInstance().format(progress.fraction)));
+                        mSummaryView.setText(progress.extra1.toString());
                     }
                     mActionProgress.setVisibility(View.GONE);
                     mUpdateButton.setEnabled(true);
+                    mFileSizeView.setText(NumberFormat.getPercentInstance().format(progress.fraction));
                     break;
                 case Progress.PAUSE:
                     mIconView.setImageResource(R.drawable.ic_action_download);
@@ -127,17 +130,43 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     mSummaryView.setText(R.string.download_paused_notification);
                     mActionProgress.setVisibility(View.GONE);
                     mUpdateButton.setEnabled(true);
+                    mFileSizeView.setText(NumberFormat.getPercentInstance().format(progress.fraction));
                     break;
                 case Progress.FINISH:
-                    mIconView.setImageResource(R.drawable.ic_action_install);
-                    mIconView.setVisibility(View.VISIBLE);
-                    mDownloadProgress.setIndeterminate(false);
-                    mDownloadProgress.setVisibility(View.GONE);
-                    mSummaryView.setText(R.string.download_completed_notification);
-                    mActionProgress.setVisibility(View.GONE);
-                    mUpdateButton.setEnabled(true);
-                    break;
+                    if (updateInfo.getStatus() == UpdateStatus.INSTALLING) {
+                        mIconView.setVisibility(View.GONE);
+                        mDownloadProgress.setIndeterminate(false);
+                        mDownloadProgress.setVisibility(View.VISIBLE);
+                        mSummaryView.setText(updateInfo.getFinalizing() ?
+                                R.string.finalizing_package_notification : R.string.preparing_ota_first_boot_notification);
+                        mActionProgress.setVisibility(View.VISIBLE);
+                        mUpdateButton.setEnabled(false);
+                        mFileSizeView.setText(NumberFormat.getPercentInstance().format(updateInfo.getInstallProgress()));
+                        break;
+                    } else if (updateInfo.getStatus() == UpdateStatus.INSTALLED
+                        || mUpdaterController.isWaitingForReboot(getKey())) {
+                        mIconView.setImageResource(R.drawable.ic_action_reboot);
+                        mIconView.setVisibility(View.VISIBLE);
+                        mDownloadProgress.setIndeterminate(false);
+                        mDownloadProgress.setVisibility(View.GONE);
+                        mSummaryView.setText(R.string.installing_update_finished_notification);
+                        mActionProgress.setVisibility(View.GONE);
+                        mUpdateButton.setEnabled(true);
+                        mFileSizeView.setText(NumberFormat.getPercentInstance().format(progress.fraction));
+                        break;
+                    } else {
+                        mIconView.setImageResource(R.drawable.ic_action_install);
+                        mIconView.setVisibility(View.VISIBLE);
+                        mDownloadProgress.setIndeterminate(false);
+                        mDownloadProgress.setVisibility(View.GONE);
+                        mSummaryView.setText(R.string.download_completed_notification);
+                        mActionProgress.setVisibility(View.GONE);
+                        mUpdateButton.setEnabled(true);
+                        mFileSizeView.setText(NumberFormat.getPercentInstance().format(progress.fraction));
+                        break;
+                    }
                 case Progress.ERROR:
+                    mFileSizeView.setText(Formatter.formatFileSize(getContext(), updateInfo.getFileSize()));
                     if (progress.exception instanceof SSLException || progress.exception instanceof UnknownHostException) {
                         mIconView.setVisibility(View.GONE);
                         mDownloadProgress.setIndeterminate(true);
@@ -173,10 +202,10 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     mDownloadProgress.setVisibility(View.VISIBLE);
                     mSummaryView.setText(getContext().getString(R.string.download_progress_new,
                             Formatter.formatFileSize(getContext(), progress.currentSize),
-                            Formatter.formatFileSize(getContext(), progress.totalSize),
-                            NumberFormat.getPercentInstance().format(progress.fraction)));
+                            Formatter.formatFileSize(getContext(), progress.totalSize)));
                     mActionProgress.setVisibility(View.GONE);
                     mUpdateButton.setEnabled(true);
+                    mFileSizeView.setText(NumberFormat.getPercentInstance().format(progress.fraction));
             }
         } else {
             mIconView.setImageResource(R.drawable.ic_action_download);
@@ -194,6 +223,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
             }
             mActionProgress.setVisibility(View.GONE);
             mUpdateButton.setEnabled(true);
+            mFileSizeView.setText(Formatter.formatFileSize(getContext(), updateInfo.getFileSize()));
         }
     }
 
@@ -234,14 +264,20 @@ public class UpdatePreference extends Preference implements View.OnClickListener
     @Override
     public void onClick(View view) {
         if (mOnActionListener == null) return;
-        Progress progress = mUpdaterController.getUpdate(getKey()).getProgress();
+        UpdateInfo updateInfo = mUpdaterController.getUpdate(getKey());
+        Progress progress = updateInfo.getProgress();
         if (progress == null || progress.status == Progress.PAUSE
                 || progress.status == Progress.ERROR || progress.status == Progress.NONE) {
             onStartAction(progress);
         } else if (progress.status == Progress.LOADING) {
             mOnActionListener.onPauseDownload(getKey());
         } else if (progress.status == Progress.FINISH) {
-            mOnActionListener.onInstallUpdate(getKey());
+            if (updateInfo.getStatus() == UpdateStatus.INSTALLED
+                || mUpdaterController.isWaitingForReboot(getKey())) {
+                mOnActionListener.onReboot();
+            } else {
+                mOnActionListener.onInstallUpdate(getKey());
+            }
         }
     }
 
@@ -261,6 +297,8 @@ public class UpdatePreference extends Preference implements View.OnClickListener
         void onDeleteDownload(String downloadId);
 
         void onInstallUpdate(String downloadId);
+
+        void onReboot();
     }
 
 }

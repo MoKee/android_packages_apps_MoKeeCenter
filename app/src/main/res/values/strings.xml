@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     Copyright (C) 2018 The MoKee Open Source Project
+     Copyright (C) 2018-2019 The MoKee Open Source Project
 
      This program is free software: you can redistribute it and/or modify
      it under the terms of the GNU General Public License as published by
@@ -32,6 +32,7 @@
     <string name="action_pause">Pause</string>
     <string name="action_resume">Resume</string>
     <string name="action_download">Download</string>
+    <string name="action_reboot">Reboot</string>
 
     <!-- Menu -->
     <string name="menu_preferences">Preferences</string>
@@ -142,9 +143,18 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> left</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">A download is already running</string>
-    <string name="download_progress_new" translatable="false"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> • <xliff:g example="56" id="percentage">%3$s</xliff:g></string>
-    <string name="download_progress_eta_new" translatable="false"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g> (<xliff:g example="3 minutes left, 1.56 MB/s" id="eta">%3$s</xliff:g>) • <xliff:g example="56" id="percentage">%4$s</xliff:g></string>
+    <string name="download_progress_new" translatable="false"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g></string>
+    <string name="download_progress_eta_new" translatable="false"><xliff:g example="3 minutes left, 1.56 MB/s" id="eta">%1$s</xliff:g></string>
     <string name="download_limited_mode">Downloading at limited speed, please donate 30 CNY to enjoy full speed.</string>
+
+    <!-- Install Status -->
+    <string name="install_already_running">An install is already running</string>
+    <string name="installing_update_notification">Installing update package</string>
+    <string name="installing_update_error_notification">Install error</string>
+    <string name="installing_update_finished_notification">Update installed</string>
+    <string name="finalizing_package_notification">Finalizing package installation</string>
+    <string name="preparing_ota_first_boot_notification">Preparing for first boot</string>
+    <string name="dialog_prepare_zip_message_notification">Preliminary update preparation</string>
 
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Warning</string>

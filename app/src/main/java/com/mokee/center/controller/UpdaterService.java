@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -45,7 +45,12 @@ import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadTask;
 import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
+import com.mokee.center.model.UpdateInfo;
+import com.mokee.center.model.UpdateStatus;
+import com.mokee.center.receiver.UpdaterReceiver;
+import com.mokee.center.util.CommonUtil;
 
+import java.io.IOException;
 import java.net.UnknownHostException;
 import java.text.NumberFormat;
 
@@ -60,6 +65,7 @@ public class UpdaterService extends Service {
     public static final String EXTRA_DOWNLOAD_ID = "extra_download_id";
     public static final String EXTRA_DOWNLOAD_CONTROL = "extra_download_control";
     public static final String ACTION_INSTALL_UPDATE = "action_install_update";
+    public static final String ACTION_INSTALL_STOP = "action_install_stop";
 
     private static final String ONGOING_NOTIFICATION_CHANNEL =
             "ongoing_notification_channel";
@@ -70,6 +76,7 @@ public class UpdaterService extends Service {
     public static final int DOWNLOAD_RESTART = 3;
 
     public static final int NOTIFICATION_ID = 10;
+    public static final int NOTIFICATION_INSTALL_ID = 11;
 
     private final IBinder mBinder = new LocalBinder();
     private boolean mHasClients;
@@ -122,11 +129,10 @@ public class UpdaterService extends Service {
                 } else if (UpdaterController.ACTION_DOWNLOAD_PROGRESS.equals(intent.getAction())) {
                     DownloadTask downloadTask = mOkDownload.getTask(downloadId);
                     handleDownloadProgressChange(downloadTask);
-                }/* else if (UpdaterController.ACTION_INSTALL_PROGRESS.equals(intent.getAction())) {
+                } else if (UpdaterController.ACTION_INSTALL_PROGRESS.equals(intent.getAction())) {
                     UpdateInfo update = mUpdaterController.getUpdate(downloadId);
-                    setNotificationTitle(update);
                     handleInstallProgress(update);
-                }*/ else if (UpdaterController.ACTION_UPDATE_REMOVED.equals(intent.getAction())) {
+                } else if (UpdaterController.ACTION_UPDATE_REMOVED.equals(intent.getAction())) {
                     Bundle extras = mNotificationBuilder.getExtras();
                     if (extras != null && downloadId.equals(
                             extras.getString(UpdaterController.EXTRA_DOWNLOAD_ID))) {
@@ -140,7 +146,7 @@ public class UpdaterService extends Service {
         };
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(UpdaterController.ACTION_DOWNLOAD_PROGRESS);
-//        intentFilter.addAction(UpdaterController.ACTION_INSTALL_PROGRESS);
+        intentFilter.addAction(UpdaterController.ACTION_INSTALL_PROGRESS);
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_STATUS);
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_REMOVED);
         LocalBroadcastManager.getInstance(this).registerReceiver(mBroadcastReceiver, intentFilter);
@@ -199,7 +205,14 @@ public class UpdaterService extends Service {
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         Log.d(TAG, "Starting service");
-        if (ACTION_DOWNLOAD_CONTROL.equals(intent.getAction())) {
+        if (intent == null || intent.getAction() == null) {
+            if (ABUpdateInstaller.isInstallingUpdate(this)) {
+                // The service is being restarted.
+                ABUpdateInstaller installer = ABUpdateInstaller.getInstance(this,
+                        mUpdaterController);
+                installer.reconnect();
+            }
+        } else if (ACTION_DOWNLOAD_CONTROL.equals(intent.getAction())) {
             String downloadId = intent.getStringExtra(EXTRA_DOWNLOAD_ID);
             int action = intent.getIntExtra(EXTRA_DOWNLOAD_CONTROL, -1);
             if (action == DOWNLOAD_RESUME) {
@@ -213,10 +226,28 @@ public class UpdaterService extends Service {
             }
         } else if (ACTION_INSTALL_UPDATE.equals(intent.getAction())) {
             String downloadId = intent.getStringExtra(EXTRA_DOWNLOAD_ID);
-            UpdateInstaller installer = UpdateInstaller.getInstance(this, mUpdaterController);
-            installer.install(downloadId);
+            try {
+                if (CommonUtil.isABUpdate(mUpdaterController.getUpdate(downloadId).getFile())) {
+                    ABUpdateInstaller installer = ABUpdateInstaller.getInstance(this, mUpdaterController);
+                    installer.install(downloadId);
+                } else {
+                    UpdateInstaller installer = UpdateInstaller.getInstance(this, mUpdaterController);
+                    installer.install(downloadId);
+                }
+            } catch (IOException e) {
+                Log.e(TAG, "Could not install update", e);
+                mUpdaterController.getUpdate(downloadId).setStatus(UpdateStatus.INSTALLATION_FAILED);
+                mUpdaterController.notifyUpdateChange(downloadId);
+            }
+        } else if (ACTION_INSTALL_STOP.equals(intent.getAction())) {
+            if (ABUpdateInstaller.isInstallingUpdate(this)) {
+                ABUpdateInstaller installer = ABUpdateInstaller.getInstance(this,
+                        mUpdaterController);
+                installer.reconnect();
+                installer.cancel();
+            }
         }
-        return START_NOT_STICKY;
+        return ABUpdateInstaller.isInstallingUpdate(this) ? START_STICKY : START_NOT_STICKY;
     }
 
     public UpdaterController getUpdaterController() {
@@ -283,18 +314,53 @@ public class UpdaterService extends Service {
                 break;
             }
             case Progress.FINISH: {
-                stopForeground(STOP_FOREGROUND_DETACH);
-                mNotificationBuilder.mActions.clear();
-                mNotificationBuilder.setProgress(0, 0, false);
-                mNotificationBuilder.setStyle(null);
-                mNotificationBuilder.setSmallIcon(R.drawable.ic_system_update);
-                String text = getString(R.string.download_completed_notification);
-                mNotificationBuilder.setContentText(text);
-                mNotificationBuilder.setTicker(text);
-                mNotificationBuilder.setOngoing(false);
-                mNotificationBuilder.setAutoCancel(true);
-                mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
-                tryStopSelf();
+                UpdateInfo updateInfo = mUpdaterController.getUpdate(progress.tag);
+                if (updateInfo.getStatus() == UpdateStatus.INSTALLING) {
+                    mNotificationBuilder.mActions.clear();
+                    mNotificationBuilder.setProgress(0, 0, false);
+                    mNotificationBuilder.setStyle(mNotificationStyle);
+                    mNotificationBuilder.setSmallIcon(R.drawable.ic_system_update);
+                    mNotificationStyle.setSummaryText(null);
+                    String text = UpdateInstaller.isInstalling() ?
+                            getString(R.string.dialog_prepare_zip_message_notification) :
+                            getString(R.string.installing_update_notification);
+                    mNotificationStyle.bigText(text);
+                    mNotificationBuilder.setContentText(null);
+                    mNotificationBuilder.setTicker(text);
+                    mNotificationBuilder.setOngoing(true);
+                    mNotificationBuilder.setAutoCancel(false);
+                    startForeground(NOTIFICATION_ID, mNotificationBuilder.build());
+                    mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
+                } else if (updateInfo.getStatus() == UpdateStatus.INSTALLED) {
+                    stopForeground(STOP_FOREGROUND_DETACH);
+                    mNotificationBuilder.setProgress(0, 0, false);
+                    mNotificationBuilder.setStyle(null);
+                    mNotificationBuilder.setSmallIcon(R.drawable.ic_system_update);
+                    String text = getString(R.string.installing_update_finished_notification);
+                    mNotificationBuilder.setContentText(text);
+                    mNotificationBuilder.addAction(R.drawable.ic_action_reboot,
+                            getString(R.string.action_reboot),
+                            getRebootPendingIntent());
+                    mNotificationBuilder.setTicker(text);
+                    mNotificationBuilder.setOngoing(false);
+                    mNotificationBuilder.setAutoCancel(true);
+                    mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
+                    tryStopSelf();
+                    break;
+                } else {
+                    stopForeground(STOP_FOREGROUND_DETACH);
+                    mNotificationBuilder.mActions.clear();
+                    mNotificationBuilder.setProgress(0, 0, false);
+                    mNotificationBuilder.setStyle(null);
+                    mNotificationBuilder.setSmallIcon(R.drawable.ic_system_update);
+                    String text = getString(R.string.download_completed_notification);
+                    mNotificationBuilder.setContentText(text);
+                    mNotificationBuilder.setTicker(text);
+                    mNotificationBuilder.setOngoing(false);
+                    mNotificationBuilder.setAutoCancel(true);
+                    mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
+                    tryStopSelf();
+                }
                 break;
             }
             case Progress.ERROR: {
@@ -374,19 +440,19 @@ public class UpdaterService extends Service {
         mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
     }
 
-//    private void handleInstallProgress(UpdateInfo update) {
-//        setNotificationTitle(update);
-//        int progress = update.getInstallProgress();
-//        mNotificationBuilder.setProgress(100, progress, false);
-//        String percent = NumberFormat.getPercentInstance().format(progress / 100.f);
-//        mNotificationStyle.setSummaryText(percent);
-//        boolean notAB = UpdateInstaller.isInstalling();
-//        mNotificationStyle.bigText(notAB ? getString(R.string.dialog_prepare_zip_message) :
-//                update.getFinalizing() ?
-//                        getString(R.string.finalizing_package) :
-//                        getString(R.string.preparing_ota_first_boot));
-//        mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
-//    }
+    private void handleInstallProgress(UpdateInfo update) {
+        setNotificationTitle(update.getDisplayVersion());
+        float progress = update.getInstallProgress();
+        mNotificationBuilder.setProgress(100, Math.round(progress * 100), false);
+        String percent = NumberFormat.getPercentInstance().format(progress);
+        mNotificationStyle.setSummaryText(percent);
+        boolean notAB = UpdateInstaller.isInstalling();
+        mNotificationStyle.bigText(notAB ? getString(R.string.dialog_prepare_zip_message_notification) :
+                update.getFinalizing() ?
+                        getString(R.string.finalizing_package_notification) :
+                        getString(R.string.preparing_ota_first_boot_notification));
+        mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
+    }
 
     private void setNotificationTitle(String version) {
         mNotificationStyle.setBigContentTitle(version);
@@ -417,10 +483,10 @@ public class UpdaterService extends Service {
         return PendingIntent.getService(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 
-    //    private PendingIntent getRebootPendingIntent() {
-//        final Intent intent = new Intent(this, UpdaterReceiver.class);
-//        intent.setAction(UpdaterReceiver.ACTION_INSTALL_REBOOT);
-//        return PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-//    }
+    private PendingIntent getRebootPendingIntent() {
+        final Intent intent = new Intent(this, UpdaterReceiver.class);
+        intent.setAction(UpdaterReceiver.ACTION_INSTALL_REBOOT);
+        return PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
 
 }

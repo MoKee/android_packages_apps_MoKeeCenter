@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -48,6 +48,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -57,6 +58,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.zip.ZipFile;
 
 import static com.mokee.center.misc.Constants.ACTION_PAYMENT_REQUEST;
 
@@ -207,6 +209,18 @@ public class CommonUtil {
 
     public static boolean isABDevice() {
         return SystemProperties.getBoolean(Constants.PROP_AB_DEVICE, false);
+    }
+
+    public static boolean isABUpdate(ZipFile zipFile) {
+        return zipFile.getEntry(Constants.AB_PAYLOAD_BIN_PATH) != null &&
+                zipFile.getEntry(Constants.AB_PAYLOAD_PROPERTIES_PATH) != null;
+    }
+
+    public static boolean isABUpdate(File file) throws IOException {
+        ZipFile zipFile = new ZipFile(file);
+        boolean isAB = isABUpdate(zipFile);
+        zipFile.close();
+        return isAB;
     }
 
     public static void triggerUpdate(Context context, String downloadId) {

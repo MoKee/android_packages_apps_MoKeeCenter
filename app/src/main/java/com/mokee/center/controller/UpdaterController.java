@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -202,6 +202,13 @@ public class UpdaterController {
         mBroadcastManager.sendBroadcast(intent);
     }
 
+    void notifyInstallProgress(String downloadId) {
+        Intent intent = new Intent();
+        intent.setAction(ACTION_INSTALL_PROGRESS);
+        intent.putExtra(EXTRA_DOWNLOAD_ID, downloadId);
+        mBroadcastManager.sendBroadcast(intent);
+    }
+
     private void tryReleaseWakelock() {
         if (!hasActiveDownloads()) {
             mWakeLock.release();
@@ -257,10 +264,6 @@ public class UpdaterController {
         return !TextUtils.isEmpty(mActiveDownloadTag);
     }
 
-    public boolean isInstallingUpdate() {
-        return UpdateInstaller.isInstalling();
-    }
-
     public UpdateInfo getUpdate(String downloadId) {
         return mAvailableUpdates.get(downloadId);
     }
@@ -299,7 +302,7 @@ public class UpdaterController {
                     if (speed != 0) {
                         CharSequence eta = CommonUtil.calculateEta(mContext, speed, progress.totalSize, progress.currentSize);
                         CharSequence etaWithSpeed = mContext.getString(R.string.download_speed, eta, Formatter.formatFileSize(mContext, speed));
-                        progress.extra1 = etaWithSpeed.toString();
+                        progress.extra1 = mContext.getString(R.string.download_progress_eta_new, etaWithSpeed);
                     }
 
                     notifyDownloadProgress(progress.tag);
@@ -327,10 +330,28 @@ public class UpdaterController {
         }
     }
 
-//    public void setPerformanceMode(boolean enable) {
-//        if (!CommonUtil.isABDevice()) {
-//            return;
-//        }
-//        ABUpdateInstaller.getInstance(mContext, this).setPerformanceMode(enable);
-//    }
+    public boolean isInstallingUpdate() {
+        return UpdateInstaller.isInstalling() ||
+                ABUpdateInstaller.isInstallingUpdate(mContext);
+    }
+
+    public boolean isInstallingUpdate(String downloadId) {
+        return UpdateInstaller.isInstalling(downloadId) ||
+                ABUpdateInstaller.isInstallingUpdate(mContext, downloadId);
+    }
+
+    public boolean isInstallingABUpdate() {
+        return ABUpdateInstaller.isInstallingUpdate(mContext);
+    }
+
+    public boolean isWaitingForReboot(String downloadId) {
+        return ABUpdateInstaller.isWaitingForReboot(mContext, downloadId);
+    }
+
+    public void setPerformanceMode(boolean enable) {
+        if (!CommonUtil.isABDevice()) {
+            return;
+        }
+        ABUpdateInstaller.getInstance(mContext, this).setPerformanceMode(enable);
+    }
 }

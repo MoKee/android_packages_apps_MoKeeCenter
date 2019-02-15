@@ -31,6 +31,7 @@
     <string name="action_pause">暂停</string>
     <string name="action_resume">继续</string>
     <string name="action_download">下载</string>
+    <string name="action_reboot">重启</string>
     <!-- Menu -->
     <string name="menu_preferences">首选项</string>
     <string name="menu_restore">恢复授权</string>
@@ -129,6 +130,14 @@
     <string name="download_speed">%1$s, %2$s/秒</string>
     <string name="download_already_running">已有一个正在运行的下载</string>
     <string name="download_limited_mode">当前是限速下载模式，累计捐赠达到30元即可享受全速下载。</string>
+    <!-- Install Status -->
+    <string name="install_already_running">已有一个正在运行的安装进程</string>
+    <string name="installing_update_notification">正在安装更新包</string>
+    <string name="installing_update_error_notification">安装错误</string>
+    <string name="installing_update_finished_notification">更新已安装</string>
+    <string name="finalizing_package_notification">正在完成包安装</string>
+    <string name="preparing_ota_first_boot_notification">正在为第一次启动进行准备</string>
+    <string name="dialog_prepare_zip_message_notification">预备更新准备</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">警告</string>
     <string name="update_on_mobile_data_message">您将要通过移动数据网络下载更新包，这可能会导致较大的数据用量。您确定要继续吗？</string>

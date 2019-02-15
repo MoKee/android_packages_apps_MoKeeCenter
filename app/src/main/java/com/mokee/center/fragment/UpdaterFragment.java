@@ -359,9 +359,11 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     private void updateFeatureStatus() {
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
         mIncrementalUpdatesPreference.setEnabled(donationInfo.isBasic()
-                && !mUpdaterService.getUpdaterController().hasActiveDownloads());
+                && !mUpdaterService.getUpdaterController().hasActiveDownloads()
+                && !mUpdaterService.getUpdaterController().isInstallingUpdate());
         mVerifiedUpdatesPreference.setEnabled(donationInfo.isAdvanced()
-                && !mUpdaterService.getUpdaterController().hasActiveDownloads());
+                && !mUpdaterService.getUpdaterController().hasActiveDownloads()
+                && !mUpdaterService.getUpdaterController().isInstallingUpdate());
     }
 
     @Override

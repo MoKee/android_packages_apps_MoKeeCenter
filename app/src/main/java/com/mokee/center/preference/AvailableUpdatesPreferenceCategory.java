@@ -23,6 +23,7 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.BatteryManager;
+import android.os.PowerManager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -133,6 +134,8 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
     private void onCheckWarn(String downloadId, int action) {
         if (mUpdaterController.hasActiveDownloads()) {
             Snackbar.make(mItemView, R.string.download_already_running, Snackbar.LENGTH_SHORT).show();
+        } else if (mUpdaterController.isInstallingUpdate()) {
+            Snackbar.make(mItemView, R.string.install_already_running, Snackbar.LENGTH_SHORT).show();
         } else {
             SharedPreferences mMainPrefs = CommonUtil.getMainPrefs(getContext());
             boolean warn = mMainPrefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
@@ -187,6 +190,13 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
     @Override
     public void onDeleteDownload(String downloadId) {
         mUpdaterController.deleteDownload(downloadId);
+    }
+
+    @Override
+    public void onReboot() {
+        PowerManager pm =
+                (PowerManager) getContext().getSystemService(Context.POWER_SERVICE);
+        pm.reboot(null);
     }
 
     @Override

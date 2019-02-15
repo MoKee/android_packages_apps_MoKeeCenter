@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -75,6 +75,7 @@ public class Constants {
     public static final String PREF_INCREMENTAL_UPDATES = "incremental_updates";
     public static final String PREF_UPDATES_CATEGORY = "updates_category";
     public static final String PREF_MOBILE_DATA_WARNING = "pref_mobile_data_warning";
+    public static final String PREF_NEEDS_REBOOT_ID = "needs_reboot_id";
 
     // HTTP Params
     public static final String PARAM_UNIQUE_IDS = "user_ids";
@@ -84,5 +85,6 @@ public class Constants {
 
     // Props
     public static final String PROP_AB_DEVICE = "ro.build.ab_update";
-
+    public static final String AB_PAYLOAD_BIN_PATH = "payload.bin";
+    public static final String AB_PAYLOAD_PROPERTIES_PATH = "payload_properties.txt";
 }

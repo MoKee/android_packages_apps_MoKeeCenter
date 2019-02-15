@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -63,7 +63,7 @@ public class UpdateInstaller {
         }
 
         UpdateInfo updateInfo = mUpdaterController.getUpdate(downloadId);
-        installPackage(new File(updateInfo.getProgress().filePath));
+        installPackage(updateInfo.getFile());
     }
 
     private void installPackage(File update) {

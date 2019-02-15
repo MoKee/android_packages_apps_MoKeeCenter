@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014-2018 The MoKee Open Source Project
+ * Copyright (C) 2014-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,6 +22,7 @@ import android.os.Parcelable;
 
 import com.lzy.okgo.model.Progress;
 
+import java.io.File;
 import java.io.Serializable;
 
 import androidx.annotation.Keep;
@@ -49,6 +50,9 @@ public class UpdateInfo implements Parcelable, Serializable {
     private String mChangelogUrl;
     private Progress mProgress;
     private String mDisplayVersion;
+    private UpdateStatus mStatus = UpdateStatus.UNKNOWN;
+    private boolean mIsFinalizing;
+    private float mInstallProgress;
 
     public UpdateInfo() {
     }
@@ -95,6 +99,34 @@ public class UpdateInfo implements Parcelable, Serializable {
 
     public void setProgress(Progress progress) {
         this.mProgress = progress;
+    }
+
+    public UpdateStatus getStatus() {
+        return mStatus;
+    }
+
+    public void setStatus(UpdateStatus status) {
+        this.mStatus = status;
+    }
+
+    public boolean getFinalizing() {
+        return mIsFinalizing;
+    }
+
+    public void setFinalizing(boolean finalizing) {
+        this.mIsFinalizing = finalizing;
+    }
+
+    public File getFile() {
+        return new File(this.mProgress.filePath);
+    }
+
+    public float getInstallProgress() {
+        return mInstallProgress;
+    }
+
+    public void setInstallProgress(float progress) {
+        this.mInstallProgress = progress;
     }
 
     @Override
