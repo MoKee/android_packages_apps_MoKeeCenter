@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -39,16 +39,16 @@ public class PreferencesDialogBuilder extends AlertDialog.Builder {
         View view = LayoutInflater.from(getContext()).inflate(R.layout.preferences_dialog, null);
         Switch autoDelete = view.findViewById(R.id.preferences_auto_delete_updates);
         Switch dataWarning = view.findViewById(R.id.preferences_mobile_data_warning);
-//        Switch abPerfMode = view.findViewById(R.id.preferences_ab_perf_mode);
-//
-//        if (!CommonUtil.isABDevice()) {
-//            abPerfMode.setVisibility(View.GONE);
-//        }
+        Switch abPerfMode = view.findViewById(R.id.preferences_ab_perf_mode);
+
+        if (!CommonUtil.isABDevice()) {
+            abPerfMode.setVisibility(View.GONE);
+        }
 
         SharedPreferences prefs = CommonUtil.getMainPrefs(getContext());
         autoDelete.setChecked(prefs.getBoolean(Constants.PREF_AUTO_DELETE_UPDATES, false));
         dataWarning.setChecked(prefs.getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true));
-//        abPerfMode.setChecked(prefs.getBoolean(Constants.PREF_AB_PERF_MODE, false));
+        abPerfMode.setChecked(prefs.getBoolean(Constants.PREF_AB_PERF_MODE, false));
 
         setTitle(R.string.menu_preferences);
         setView(view);
@@ -58,8 +58,8 @@ public class PreferencesDialogBuilder extends AlertDialog.Builder {
                             autoDelete.isChecked())
                     .putBoolean(Constants.PREF_MOBILE_DATA_WARNING,
                             dataWarning.isChecked())
-//                            .putBoolean(Constants.PREF_AB_PERF_MODE,
-//                                    abPerfMode.isChecked())
+                            .putBoolean(Constants.PREF_AB_PERF_MODE,
+                                    abPerfMode.isChecked())
                     .apply();
 
 //                    boolean enableABPerfMode = abPerfMode.isChecked();
