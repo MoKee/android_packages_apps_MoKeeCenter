@@ -31,6 +31,7 @@
     <string name="action_pause">إيقاف مؤقت</string>
     <string name="action_resume">استئناف</string>
     <string name="action_download">تنزيل</string>
+    <string name="action_reboot">إعادة تشغيل</string>
     <!-- Menu -->
     <string name="menu_preferences">التفضيلات</string>
     <string name="menu_restore">استعادة</string>
@@ -130,6 +131,13 @@
     <string name="download_already_running">بالفعل جار التنزيل</string>
     <string name="download_limited_mode">تحميل بسرعة محدودة، الرجاء التبرع CNY 30 للتمتع بأقصى سرعة.</string>
     <!-- Install Status -->
+    <string name="install_already_running">تثبيت قيد التشغيل بالفعل</string>
+    <string name="installing_update_notification">جارٍ تثبيت حزمة التحديث</string>
+    <string name="installing_update_error_notification">خطأ في التثبيت</string>
+    <string name="installing_update_finished_notification">تم تثبيت التحديث</string>
+    <string name="finalizing_package_notification">جارٍ إنهاء تثبيت الحزمة</string>
+    <string name="preparing_ota_first_boot_notification">جارٍ الإعداد للتشغيل الأول</string>
+    <string name="dialog_prepare_zip_message_notification">التجهيز للتحديث الأولي</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">تحذير</string>
     <string name="update_on_mobile_data_message">أنت على وشك أن تقوم بتنزيل حزمة تحديث باستخدام البيانات مما سيتسبب في استخدام عالي للبيانات. هل تريد المتابعة؟</string>

@@ -31,6 +31,7 @@
     <string name="action_pause">Pozastavit</string>
     <string name="action_resume">Pokračovat</string>
     <string name="action_download">Stáhnout</string>
+    <string name="action_reboot">Restartovat</string>
     <!-- Menu -->
     <string name="menu_preferences">Předvolby</string>
     <string name="menu_restore">Obnovit</string>
@@ -130,6 +131,13 @@
     <string name="download_already_running">Stahování již běží</string>
     <string name="download_limited_mode">Stahování omezenou rychlostí, prosím přispějte 30 CNY pro povolení plné rychlosti stahování.</string>
     <!-- Install Status -->
+    <string name="install_already_running">Instalace je již spuštěna</string>
+    <string name="installing_update_notification">Instalace balíčku aktualizace</string>
+    <string name="installing_update_error_notification">Chyba instalace</string>
+    <string name="installing_update_finished_notification">Aktualizace byla nainstalována</string>
+    <string name="finalizing_package_notification">Dokončování instalace balíčku</string>
+    <string name="preparing_ota_first_boot_notification">Příprava na první spuštění</string>
+    <string name="dialog_prepare_zip_message_notification">Příprava předběžné aktualizace</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Varování</string>
     <string name="update_on_mobile_data_message">Chystáte se stáhnout aktualizaci pomocí mobilních dat, což pravděpodobně zapříčiní vysoké využití dat. Přejete si pokračovat?</string>
