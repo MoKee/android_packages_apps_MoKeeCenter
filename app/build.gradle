@@ -14,13 +14,13 @@ android {
         debug {
             storeFile file("platform.jks")
             storePassword 'android'
-            keyAlias 'oreo'
+            keyAlias 'pie'
             keyPassword 'android'
         }
         release {
             storeFile file("platform.jks")
             storePassword 'android'
-            keyAlias 'oreo'
+            keyAlias 'pie'
             keyPassword 'android'
             android.applicationVariants.all { variant ->
                 variant.outputs.all {
