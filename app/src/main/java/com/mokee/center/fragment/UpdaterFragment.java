@@ -252,7 +252,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
 
         @Override
         public void onServiceDisconnected(ComponentName componentName) {
-            //mUpdatesCategory.setUpdaterController(null);
+            mUpdatesCategory.setUpdaterController(null);
             mUpdaterService = null;
         }
     };
