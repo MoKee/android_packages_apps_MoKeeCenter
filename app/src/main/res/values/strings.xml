@@ -79,9 +79,12 @@
 
     <!-- Unlock Features -->
     <string name="unlock_features_title">Unlock features</string>
-    <string name="unlock_features_incremental_updates_title">Donate %d CNY to unlock incremental updates and download at full speed.</string>
-    <string name="unlock_features_verified_updates_title">Donate %d CNY for verified updates and remove Google Ads.</string>
-    <string name="unlock_features_all_title">Donate %d CNY to unlock incremental updates, download at full speed, verified updates and remove Google Ads.</string>
+    <string name="unlock_features_plan_a_title">Donate %d CNY to unlock incremental updates and download at full speed.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Donate %d CNY to unlock download at full speed.</string>
+    <string name="unlock_features_plan_b_title">Donate %d CNY for verified updates and remove Google Ads.</string>
+    <string name="unlock_features_plan_unlimited_title">Donate %d CNY to unlock incremental updates, download at full speed, verified updates and remove Google Ads.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Donate %d CNY to unlock download at full speed, verified updates and remove Google Ads.</string>
+
     <string name="unlock_features_request_summary">(available after donating %d CNY)</string>
     <string name="unlock_features_pending_summary">(donated %1$d CNY, available for lifetime after donating %2$d CNY more)</string>
 

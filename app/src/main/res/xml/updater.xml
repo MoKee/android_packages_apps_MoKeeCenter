@@ -35,7 +35,8 @@
         android:key="last_update_check"
         android:title="@string/last_update_check_title" />
 
-    <PreferenceCategory>
+    <PreferenceCategory
+        android:key="features_category">
         <com.mokee.center.preference.UpdateTypePreference
             android:dependency="incremental_updates"
             android:icon="@drawable/ic_pref_update_type"

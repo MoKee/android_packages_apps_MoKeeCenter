@@ -74,12 +74,14 @@ import java.util.UUID;
 
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceFragmentCompat;
 
 import static com.mokee.center.misc.Constants.DONATION_RESULT_OK;
 import static com.mokee.center.misc.Constants.DONATION_RESULT_SUCCESS;
 import static com.mokee.center.misc.Constants.KEY_DONATION_AMOUNT;
 import static com.mokee.center.misc.Constants.PREF_DONATION_RECORD;
+import static com.mokee.center.misc.Constants.PREF_FEATURES_CATEGORY;
 import static com.mokee.center.misc.Constants.PREF_INCREMENTAL_UPDATES;
 import static com.mokee.center.misc.Constants.PREF_LAST_UPDATE_CHECK;
 import static com.mokee.center.misc.Constants.PREF_UPDATES_CATEGORY;
@@ -101,6 +103,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     private InterstitialAd mWelcomeInterstitialAd;
 
     private AvailableUpdatesPreferenceCategory mUpdatesCategory;
+    private PreferenceCategory mFeaturesCategory;
     private DonationRecordPreference mDonationRecordPreference;
     private IncrementalUpdatesPreference mIncrementalUpdatesPreference;
     private VerifiedUpdatesPreference mVerifiedUpdatesPreference;
@@ -167,6 +170,12 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         mUpdateTypePreference = findPreference(PREF_UPDATE_TYPE);
         mUpdateTypePreference.setOnPreferenceChangeListener(this);
         mUpdatesCategory = findPreference(PREF_UPDATES_CATEGORY);
+        mFeaturesCategory = findPreference(PREF_FEATURES_CATEGORY);
+        if (CommonUtil.isABDevice()) {
+            mFeaturesCategory.removePreference(mIncrementalUpdatesPreference);
+            mIncrementalUpdatesPreference = null;
+            mUpdateTypePreference.setDependency(null);
+        }
     }
 
     @Override
@@ -184,7 +193,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                 CommonUtil.updateDonationInfo(getContext());
                 mDonationRecordPreference.updateRankInfo();
                 mUpdateTypePreference.refreshPreference();
-                mIncrementalUpdatesPreference.refreshPreference();
+                if (mIncrementalUpdatesPreference != null) {
+                    mIncrementalUpdatesPreference.refreshPreference();
+                }
                 mVerifiedUpdatesPreference.refreshPreference();
                 mUpdatesCategory.setInterstitialAd();
                 updateFeatureStatus();
@@ -342,7 +353,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             mRefreshAnimation.setRepeatCount(Animation.INFINITE);
             mRefreshIconView.startAnimation(mRefreshAnimation);
             mRefreshIconView.setEnabled(false);
-            mIncrementalUpdatesPreference.setEnabled(false);
+            if (mIncrementalUpdatesPreference != null) {
+                mIncrementalUpdatesPreference.setEnabled(false);
+            }
             mVerifiedUpdatesPreference.setEnabled(false);
             mUpdatesCategory.setPendingListPreferences();
         }
@@ -358,9 +371,11 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
 
     private void updateFeatureStatus() {
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
-        mIncrementalUpdatesPreference.setEnabled(donationInfo.isBasic()
-                && !mUpdaterService.getUpdaterController().hasActiveDownloads()
-                && !mUpdaterService.getUpdaterController().isInstallingUpdate());
+        if (mIncrementalUpdatesPreference != null) {
+            mIncrementalUpdatesPreference.setEnabled(donationInfo.isBasic()
+                    && !mUpdaterService.getUpdaterController().hasActiveDownloads()
+                    && !mUpdaterService.getUpdaterController().isInstallingUpdate());
+        }
         mVerifiedUpdatesPreference.setEnabled(donationInfo.isAdvanced()
                 && !mUpdaterService.getUpdaterController().hasActiveDownloads()
                 && !mUpdaterService.getUpdaterController().isInstallingUpdate());

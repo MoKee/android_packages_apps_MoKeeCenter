@@ -60,7 +60,10 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
         final SeekBar seekBar = donationView.findViewById(R.id.price);
         final RadioGroup via = donationView.findViewById(R.id.via);
         final TextView message = donationView.findViewById(R.id.message);
-
+        int planAResId = !CommonUtil.isABDevice() ?
+                R.string.unlock_features_plan_a_title : R.string.unlock_features_plan_a_abdevice_title;
+        int planUnlimited = !CommonUtil.isABDevice() ?
+                R.string.unlock_features_plan_unlimited_title : R.string.unlock_features_plan_unlimited_abdevice_title;
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
         if (donationInfo.isAdvanced()) {
             seekBar.setMax(DONATION_MAX - DONATION_MIN);
@@ -70,8 +73,8 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
             seekBar.setMax(DONATION_ADVANCED);
             seekBar.setProgress(donationInfo.getPaid() >= DONATION_BASIC ? DONATION_ADVANCED : DONATION_BASIC);
             tips.setText(donationInfo.getPaid() >= DONATION_BASIC
-                    ? getContext().getString(R.string.unlock_features_verified_updates_title, DONATION_ADVANCED - donationInfo.getPaid())
-                    : getContext().getString(R.string.unlock_features_incremental_updates_title, DONATION_BASIC - donationInfo.getPaid()));
+                    ? getContext().getString(R.string.unlock_features_plan_b_title, DONATION_ADVANCED - donationInfo.getPaid())
+                    : getContext().getString(planAResId, DONATION_BASIC - donationInfo.getPaid()));
             message.setText(TextUtils.join("\n\n", Arrays.asList(getContext().getString(R.string.donation_dialog_message),
                     getContext().getString(R.string.donation_dialog_message_extra))));
         }
@@ -82,16 +85,16 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
                     seekBar.setProgress(progress / 10 * 10);
                     tips.setText(getContext().getString(R.string.donation_payment_currency, seekBar.getProgress() + DONATION_MIN));
                 } else {
-                    if (progress > DONATION_BASIC || donationInfo.getPaid() >= DONATION_BASIC) {
+                    if (progress > DONATION_BASIC || donationInfo.getPaid() >= DONATION_BASIC) /* Lock min */ {
                         seekBar.setProgress(DONATION_ADVANCED);
                         if (donationInfo.getPaid() >= DONATION_BASIC) {
-                            tips.setText(getContext().getString(R.string.unlock_features_verified_updates_title, DONATION_ADVANCED - donationInfo.getPaid()));
+                            tips.setText(getContext().getString(R.string.unlock_features_plan_b_title, DONATION_ADVANCED - donationInfo.getPaid()));
                         } else {
-                            tips.setText(getContext().getString(R.string.unlock_features_incremental_updates_title, DONATION_ADVANCED - donationInfo.getPaid()));
+                            tips.setText(getContext().getString(planUnlimited, DONATION_ADVANCED - donationInfo.getPaid()));
                         }
                     } else {
                         seekBar.setProgress(DONATION_BASIC);
-                        tips.setText(getContext().getString(R.string.unlock_features_incremental_updates_title, DONATION_BASIC - donationInfo.getPaid()));
+                        tips.setText(getContext().getString(planAResId, DONATION_BASIC - donationInfo.getPaid()));
                     }
                 }
             }

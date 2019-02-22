@@ -52,7 +52,7 @@ public class RequestUtil {
         }
 
         String url;
-        if (mMainPrefs.getBoolean(PREF_INCREMENTAL_UPDATES, false) && donationInfo.isBasic()) {
+        if (mMainPrefs.getBoolean(PREF_INCREMENTAL_UPDATES, false) && donationInfo.isBasic() && !CommonUtil.isABDevice()) {
             url = context.getString(R.string.conf_fetch_ota_update_url_def);
         } else {
             url = context.getString(R.string.conf_fetch_full_update_url_def);

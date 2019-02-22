@@ -74,6 +74,7 @@ public class Constants {
     public static final String PREF_VERIFIED_UPDATES = "verified_updates";
     public static final String PREF_INCREMENTAL_UPDATES = "incremental_updates";
     public static final String PREF_UPDATES_CATEGORY = "updates_category";
+    public static final String PREF_FEATURES_CATEGORY = "features_category";
     public static final String PREF_MOBILE_DATA_WARNING = "pref_mobile_data_warning";
     public static final String PREF_NEEDS_REBOOT_ID = "needs_reboot_id";
 
