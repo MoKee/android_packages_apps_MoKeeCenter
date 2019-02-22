@@ -136,7 +136,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                 }
                 String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
                 UpdateInfo updateInfo = mUpdaterService.getUpdaterController().getUpdate(downloadId);
-                UpdatePreference updatePreference = (UpdatePreference) findPreference(downloadId);
+                UpdatePreference updatePreference = findPreference(downloadId);
                 if (updatePreference != null) {
                     updatePreference.updatePreferenceView(updateInfo);
                 }
@@ -159,14 +159,14 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         setHasOptionsMenu(true);
         mDonationPrefs = CommonUtil.getDonationPrefs(getContext());
         mMainPrefs = CommonUtil.getMainPrefs(getContext());
-        mDonationRecordPreference = (DonationRecordPreference) findPreference(PREF_DONATION_RECORD);
-        mIncrementalUpdatesPreference = (IncrementalUpdatesPreference) findPreference(PREF_INCREMENTAL_UPDATES);
+        mDonationRecordPreference = findPreference(PREF_DONATION_RECORD);
+        mIncrementalUpdatesPreference = findPreference(PREF_INCREMENTAL_UPDATES);
         mIncrementalUpdatesPreference.setOnPreferenceClickListener(this);
-        mVerifiedUpdatesPreference = (VerifiedUpdatesPreference) findPreference(PREF_VERIFIED_UPDATES);
+        mVerifiedUpdatesPreference = findPreference(PREF_VERIFIED_UPDATES);
         mVerifiedUpdatesPreference.setOnPreferenceClickListener(this);
-        mUpdateTypePreference = (UpdateTypePreference) findPreference(PREF_UPDATE_TYPE);
+        mUpdateTypePreference = findPreference(PREF_UPDATE_TYPE);
         mUpdateTypePreference.setOnPreferenceChangeListener(this);
-        mUpdatesCategory = (AvailableUpdatesPreferenceCategory) findPreference(PREF_UPDATES_CATEGORY);
+        mUpdatesCategory = findPreference(PREF_UPDATES_CATEGORY);
     }
 
     @Override
