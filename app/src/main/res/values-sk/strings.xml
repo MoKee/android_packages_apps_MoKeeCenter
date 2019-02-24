@@ -71,9 +71,9 @@
     <string name="pending_available_updates_intro">Vyhľadávam dostupné aktualizácie</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Odomknúť funkcie</string>
-    <string name="unlock_features_incremental_updates_title">Prispejte %d CNY na odomknutie prírastkových aktualizácii a sťahovania v plnej rýchlosti.</string>
-    <string name="unlock_features_verified_updates_title">Prispejte %d CNY pre overené aktualizácie a odstránenie reklám Google.</string>
-    <string name="unlock_features_all_title">Prispejte %d CNY na odomknutie prírastkových aktualizácii, sťahovania v plnej rýchlosti, overených aktualizácii a odstránenie reklám Google.</string>
+    <string name="unlock_features_plan_a_title">Prispejte %d CNY na odomknutie prírastkových aktualizácii a sťahovania v plnej rýchlosti.</string>
+    <string name="unlock_features_plan_b_title">Prispejte %d CNY pre overené aktualizácie a odstránenie reklám Google.</string>
+    <string name="unlock_features_plan_unlimited_title">Prispejte %d CNY na odomknutie prírastkových aktualizácii, sťahovania v plnej rýchlosti, overených aktualizácii a odstránenie reklám Google.</string>
     <string name="unlock_features_request_summary">(k dispozícii po darovaní %d CNY)</string>
     <string name="unlock_features_pending_summary">(darované %1$d CNY, k dispozícii doživotne po darovaní o %2$d CNY viac)</string>
     <!-- Incremental Updates -->

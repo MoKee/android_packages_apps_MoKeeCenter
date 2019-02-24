@@ -73,9 +73,11 @@
     <string name="pending_available_updates_intro">Az elérhető frissítések keresése</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Feloldási lehetőségek</string>
-    <string name="unlock_features_incremental_updates_title">%d kínai jüan adományozásával megnyílik a növekményes frissítések teljes sebességű letöltésének lehetősége.</string>
-    <string name="unlock_features_verified_updates_title">%d kínai jüan adományozásával ellenőrzött frissítésekhez juthat és eltűnnek a Google Reklámok.</string>
-    <string name="unlock_features_all_title">%d kínai jüan adományozásával megnyílik a növekményes frissítések teljes sebességű letöltésének lehetősége és ellenőrzött frissítésekhez juthat a Google Reklámok nélkül.</string>
+    <string name="unlock_features_plan_a_title">%d kínai jüan adományozásával megnyílik a növekményes frissítések teljes sebességű letöltésének lehetősége.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Adományozzon %d jüant, hogy teljes sebességgel tölthessen le.</string>
+    <string name="unlock_features_plan_b_title">%d kínai jüan adományozásával ellenőrzött frissítésekhez juthat és eltűnnek a Google Reklámok.</string>
+    <string name="unlock_features_plan_unlimited_title">%d kínai jüan adományozásával megnyílik a növekményes frissítések teljes sebességű letöltésének lehetősége és ellenőrzött frissítésekhez juthat a Google Reklámok nélkül.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">%d kínai jüan adományozásával megnyílik a teljes sebességű letöltés lehetősége és ellenőrzött frissítésekhez juthat Google-reklámok nélkül.</string>
     <string name="unlock_features_request_summary">(%d kínai jüan adományozása után érhető el)</string>
     <string name="unlock_features_pending_summary">(%1$d kínai jüant adományozott, ha még adományoz %2$d összeget állandóan elérhető lesz)</string>
     <!-- Incremental Updates -->

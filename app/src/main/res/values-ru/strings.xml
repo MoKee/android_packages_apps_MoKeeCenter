@@ -31,6 +31,7 @@
     <string name="action_pause">Пауза</string>
     <string name="action_resume">Продолжить</string>
     <string name="action_download">Скачать</string>
+    <string name="action_reboot">Перезапустить</string>
     <!-- Menu -->
     <string name="menu_preferences">Настройки</string>
     <string name="menu_restore">Восстановление</string>
@@ -72,9 +73,11 @@
     <string name="pending_available_updates_intro">Поиск доступных обновлений</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Разблок. все функции</string>
-    <string name="unlock_features_incremental_updates_title">Пожертвуйте %d юаней, чтобы разблокировать обновления по воздуху (ОТА) и возможность скачивания на полной скорости.</string>
-    <string name="unlock_features_verified_updates_title">Пожертвуйте %d юаней для доступа к проверенным обновлениям и отключению рекламы Google.</string>
-    <string name="unlock_features_all_title">Пожертвуйте %d юаней, чтобы разблокировать обновления по воздуху, а также возможность скачивания обновлений на полной скорости, доступа к проверенным обновлениям и отключению рекламы Google.</string>
+    <string name="unlock_features_plan_a_title">Пожертвуйте %d юаней, чтобы разблокировать обновления по воздуху (ОТА) и возможность скачивания на полной скорости.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Пожертвуйте %d юаней чтобы разблокировать загрузку с полной скоростью.</string>
+    <string name="unlock_features_plan_b_title">Пожертвуйте %d юаней для доступа к проверенным обновлениям и отключению рекламы Google.</string>
+    <string name="unlock_features_plan_unlimited_title">Пожертвуйте %d юаней, чтобы разблокировать обновления по воздуху, а также возможность скачивания обновлений на полной скорости, доступа к проверенным обновлениям и отключению рекламы Google.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Пожертвуйте %d юаней, чтобы разблокировать загрузку на полной скорости, а также для доступа к проверенным обновлениям и отключению рекламы Google.</string>
     <string name="unlock_features_request_summary">(доступно после пожертвования в %d юаней)</string>
     <string name="unlock_features_pending_summary">(пожертвовано %1$d юаней, будет доступно навсегда после пожертвования ещё %2$d юаней и более)</string>
     <!-- Incremental Updates -->
@@ -130,6 +133,13 @@
     <string name="download_already_running">Загрузка уже выполняется</string>
     <string name="download_limited_mode">Скорость скачивания ограничена, пожалуйста, пожертвуйте 30 юаней, чтобы насладиться полной скоростью.</string>
     <!-- Install Status -->
+    <string name="install_already_running">Обновление уже запущено</string>
+    <string name="installing_update_notification">Установка обновлений</string>
+    <string name="installing_update_error_notification">Ошибка установки</string>
+    <string name="installing_update_finished_notification">Обновление установлено</string>
+    <string name="finalizing_package_notification">Завершение установки</string>
+    <string name="preparing_ota_first_boot_notification">Подготовка к первому запуску</string>
+    <string name="dialog_prepare_zip_message_notification">Подготовка обновления</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Внимание</string>
     <string name="update_on_mobile_data_message">Вы собираетесь загрузить пакет обновления с использованием мобильных данных, что, вероятно, приведет использованию большого объема трафика. Хотите продолжить?</string>

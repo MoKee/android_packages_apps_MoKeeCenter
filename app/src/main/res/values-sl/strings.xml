@@ -69,9 +69,9 @@
     <string name="pending_available_updates_intro">Preverjam, če so na voljo posodobitve</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Odklenete funkcije</string>
-    <string name="unlock_features_incremental_updates_title">Prispevajte %d CNY za odklep delnih posobobitv in prenos s polno hitrostjo.</string>
-    <string name="unlock_features_verified_updates_title">Prispevajte %d CNY za odklep preverjenih posodobitv in odstranjene Google oglase.</string>
-    <string name="unlock_features_all_title">Prispevajte %d CNY za odklep delnih posobobitv, prenos s polno hitrostjo, preverjene posodobitve in odstranjeni Google oglasi.</string>
+    <string name="unlock_features_plan_a_title">Prispevajte %d CNY za odklep delnih posobobitv in prenos s polno hitrostjo.</string>
+    <string name="unlock_features_plan_b_title">Prispevajte %d CNY za odklep preverjenih posodobitv in odstranjene Google oglase.</string>
+    <string name="unlock_features_plan_unlimited_title">Prispevajte %d CNY za odklep delnih posobobitv, prenos s polno hitrostjo, preverjene posodobitve in odstranjeni Google oglasi.</string>
     <string name="unlock_features_request_summary">(na voljo po prispevku %d CNY)</string>
     <string name="unlock_features_pending_summary">(prispevano %1$d CNY, če želite neomejeno uporabo, prispevajte še %2$d CNY)</string>
     <!-- Incremental Updates -->

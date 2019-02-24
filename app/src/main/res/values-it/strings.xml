@@ -31,6 +31,7 @@
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Riprendi</string>
     <string name="action_download">Download</string>
+    <string name="action_reboot">Riavvio</string>
     <!-- Menu -->
     <string name="menu_preferences">Preferenze</string>
     <string name="menu_restore">Ripristina</string>
@@ -72,9 +73,9 @@
     <string name="pending_available_updates_intro">Cercando aggiornamenti disponibili</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Sblocca altre funzioni</string>
-    <string name="unlock_features_incremental_updates_title">Dona %d CNY per sbloccare aggiornamenti incrementali e scaricare a tutta velocità.</string>
-    <string name="unlock_features_verified_updates_title">Dona %d CNY per gli aggiornamenti verificati e rimuovere Annunci Google.</string>
-    <string name="unlock_features_all_title">Dona %d CNY per sbloccare aggiornamenti incrementali, scaricare a tutta velocità, aggiornamenti verificati e rimuovere annunci Google.</string>
+    <string name="unlock_features_plan_a_title">Dona %d CNY per sbloccare aggiornamenti incrementali e scaricare a tutta velocità.</string>
+    <string name="unlock_features_plan_b_title">Dona %d CNY per gli aggiornamenti verificati e rimuovere Annunci Google.</string>
+    <string name="unlock_features_plan_unlimited_title">Dona %d CNY per sbloccare aggiornamenti incrementali, scaricare a tutta velocità, aggiornamenti verificati e rimuovere annunci Google.</string>
     <string name="unlock_features_request_summary">(disponibile dopo la donazione %d CNY)</string>
     <string name="unlock_features_pending_summary">(Donato %1$d CNY, disponibile per tutta la vita dopo la donazione più di %2$d CNY)</string>
     <!-- Incremental Updates -->
@@ -130,6 +131,13 @@
     <string name="download_already_running">Un download è già in corso</string>
     <string name="download_limited_mode">Scaricando a velocità limitata, ti preghiamo di donare 30 CNY per goderti la massima velocità.</string>
     <!-- Install Status -->
+    <string name="install_already_running">Una installazione è già in esecuzione</string>
+    <string name="installing_update_notification">Installazione del pacchetto aggiornamento</string>
+    <string name="installing_update_error_notification">Errore d\'installazione</string>
+    <string name="installing_update_finished_notification">Aggiornamento installato</string>
+    <string name="finalizing_package_notification">Finalizzalizzazione del pachetto d\'installazione in corso</string>
+    <string name="preparing_ota_first_boot_notification">Preparazione per il primo avvio</string>
+    <string name="dialog_prepare_zip_message_notification">Preparazione aggiornamento preliminare</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Caldi</string>
     <string name="update_on_mobile_data_message">Stai per scaricare un pacchetto di aggiornamento utilizzando dati mobili che probabilmente causerà un utilizzo elevato dei dati. Vuoi continuare?</string>

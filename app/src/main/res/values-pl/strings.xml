@@ -72,9 +72,9 @@
     <string name="pending_available_updates_intro">Wyszukaj dostępne aktualizacje</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Gest odblokowania</string>
-    <string name="unlock_features_incremental_updates_title">Przekaż %d CNY, aby odblokować aktualizacje przyrostowe i pobieranie z pełną prędkością.</string>
-    <string name="unlock_features_verified_updates_title">Przekaż %d CNY dla zweryfikowanych aktualizacji i usunięcia reklam Google.</string>
-    <string name="unlock_features_all_title">Przekaż %d CNY, aby odblokować aktualizacje przyrostowe, pobieranie z pełną prędkością, zweryfikowane aktualizacje i usunąć reklamy Google.</string>
+    <string name="unlock_features_plan_a_title">Przekaż %d CNY, aby odblokować aktualizacje przyrostowe i pobieranie z pełną prędkością.</string>
+    <string name="unlock_features_plan_b_title">Przekaż %d CNY dla zweryfikowanych aktualizacji i usunięcia reklam Google.</string>
+    <string name="unlock_features_plan_unlimited_title">Przekaż %d CNY, aby odblokować aktualizacje przyrostowe, pobieranie z pełną prędkością, zweryfikowane aktualizacje i usunąć reklamy Google.</string>
     <string name="unlock_features_request_summary">(dostępne po dotacji %d CNY)</string>
     <string name="unlock_features_pending_summary">(przekazano %1$d CNY, dostępne dożywotnio po przekazaniu więcej %2$d CNY)</string>
     <!-- Incremental Updates -->

@@ -21,6 +21,7 @@
     <string name="app_name">MoKee Center</string>
     <string name="navigation_drawer_open">Öffne Navigations-Menü</string>
     <string name="navigation_drawer_close">Schließe Navigations-Menü</string>
+    <string name="nav_header_title">MoKee OpenSource</string>
     <string name="nav_header_subtitle">Android Community Betriebssystem</string>
     <string name="nav_header_desc">Navigationsleiste</string>
     <!-- Action -->
@@ -71,9 +72,9 @@
     <string name="pending_available_updates_intro">Nach verfügbaren Updates suchen</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Funktionen freischalten</string>
-    <string name="unlock_features_incremental_updates_title">Spenden Sie %d CNY, um inkrementelle Updates und Downloads bei voller Geschwindigkeit freizuschalten.</string>
-    <string name="unlock_features_verified_updates_title">Spenden Sie %d CNY, um verifizierte Updates freizuschalten und Google Ads zu entfernen.</string>
-    <string name="unlock_features_all_title">Spenden Sie %d CNY, um sowohl inkrementelle Updates, Downloads bei voller Geschwindigkeit und verifizierte Updates freizuschalten, als auf Google Ads zu entfernen.</string>
+    <string name="unlock_features_plan_a_title">Spenden Sie %d CNY, um inkrementelle Updates und Downloads bei voller Geschwindigkeit freizuschalten.</string>
+    <string name="unlock_features_plan_b_title">Spenden Sie %d CNY, um verifizierte Updates freizuschalten und Google Ads zu entfernen.</string>
+    <string name="unlock_features_plan_unlimited_title">Spenden Sie %d CNY, um sowohl inkrementelle Updates, Downloads bei voller Geschwindigkeit und verifizierte Updates freizuschalten, als auf Google Ads zu entfernen.</string>
     <string name="unlock_features_request_summary">(Verfügbar nach einer Spende von %d CNY)</string>
     <string name="unlock_features_pending_summary">(Bereits %1$d gespendet, für Lebenslänglich noch %2$d CNY mehr spenden)</string>
     <!-- Incremental Updates -->
@@ -96,24 +97,35 @@
     <string name="donation_payment_success">Vielen Dank für Ihre Spende!</string>
     <string name="donation_dialog_title">Spenden Sie an MoKee Open Source</string>
     <!-- Snackbar Update -->
+    <string name="updates_found">Neue Updates gefunden</string>
     <string name="no_updates_found">Keine neuen Updates gefunden</string>
     <string name="updates_check_failed">Die Suche nach Updates ist fehlgeschlagen. Bitte überprüfen Sie Ihre Internetverbindung und versuchen es erneut.</string>
     <!-- Common -->
+    <string name="text_copied">Text in Zwischenablage kopiert.</string>
     <string name="unknown">Unbekannt</string>
     <string name="never">Niemals</string>
     <string name="alipay">AliPay (CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal (EUR)</string>
     <string name="activity_not_found">App ist nicht installiert.</string>
+    <string name="payment_not_found">MoKee Payment ist nicht installiert.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Neue Updates</string>
+    <string name="new_updates_found_title">Neue Systemaktualisierung gefunden</string>
+    <string name="ongoing_channel_title">Laufende Downloads</string>
     <!-- Download Status -->
+    <string name="downloading_notification">Lade herunter</string>
+    <string name="download_starting_notification">Herunterladen wird gestartet</string>
+    <string name="download_paused_notification">Download pausiert</string>
+    <string name="download_waiting_network_notification">Warte auf Netzwerk</string>
+    <string name="download_completed_notification">Download abgeschlossen</string>
     <string name="download_already_running">Es ist bereits ein Download aktiv</string>
     <!-- Install Status -->
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Achtung</string>
     <string name="checkbox_mobile_data_warning">Nicht wieder anzeigen</string>
     <!-- Battery check -->
+    <string name="dialog_battery_low_title">Niedriger Akkustand</string>
     <!-- Apply update -->
     <string name="apply_update_dialog_title">Update durchführen</string>
 </resources>

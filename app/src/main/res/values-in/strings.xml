@@ -72,9 +72,9 @@
     <string name="pending_available_updates_intro">Mencari pembaruan yang tersedia</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Buka fitur</string>
-    <string name="unlock_features_incremental_updates_title">Donasi %d CNY untuk membuka pembaruan tambahan dan mengunduh dengan kecepatan penuh.</string>
-    <string name="unlock_features_verified_updates_title">Donasikan %d CNY untuk pembaruan terverifikasi dan hapus Iklan Google.</string>
-    <string name="unlock_features_all_title">Donasikan %d CNY untuk membuka pembaruan bertahap, unduh dengan kecepatan penuh, pembaruan terverifikasi, dan hapus Iklan Google.</string>
+    <string name="unlock_features_plan_a_title">Donasi %d CNY untuk membuka pembaruan tambahan dan mengunduh dengan kecepatan penuh.</string>
+    <string name="unlock_features_plan_b_title">Donasikan %d CNY untuk pembaruan terverifikasi dan hapus Iklan Google.</string>
+    <string name="unlock_features_plan_unlimited_title">Donasikan %d CNY untuk membuka pembaruan bertahap, unduh dengan kecepatan penuh, pembaruan terverifikasi, dan hapus Iklan Google.</string>
     <string name="unlock_features_request_summary">(tersedia setelah donasi %d CNY)</string>
     <string name="unlock_features_pending_summary">(donasikan %1$d CNY, tersedia untuk seumur hidup setelah donasi %2$d CNY lebih)</string>
     <!-- Incremental Updates -->

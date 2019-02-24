@@ -73,9 +73,11 @@
     <string name="pending_available_updates_intro">بحث عن تحديثات متوفرة</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">فتح كافة الميزات</string>
-    <string name="unlock_features_incremental_updates_title">تبرع %d CNY لفتح التحديثات التدريجية والتنزيل بأقصى سرعة.</string>
-    <string name="unlock_features_verified_updates_title">تبرع%d CNY للتحديثات التي تم التحقق منها وإزالة الإعلانات.</string>
-    <string name="unlock_features_all_title">تبرع %d CNY لفتح التحديثات المتزايدة والتنزيل بأقصى سرعة والتحديثات التي تم التحقق منها وإزالة إعلانات Google.</string>
+    <string name="unlock_features_plan_a_title">تبرع %d CNY لفتح التحديثات التدريجية والتنزيل بأقصى سرعة.</string>
+    <string name="unlock_features_plan_a_abdevice_title">التبرع %d CNY لإلغاء قفل التنزيل بأقصى سرعة.</string>
+    <string name="unlock_features_plan_b_title">تبرع%d CNY للتحديثات التي تم التحقق منها وإزالة الإعلانات.</string>
+    <string name="unlock_features_plan_unlimited_title">تبرع %d CNY لفتح التحديثات المتزايدة والتنزيل بأقصى سرعة والتحديثات التي تم التحقق منها وإزالة إعلانات Google.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">تبرع %d CNY لفتح التحديثات المتزايدة والتنزيل بأقصى سرعة والتحديثات التي تم التحقق منها وإزالة إعلانات Google.</string>
     <string name="unlock_features_request_summary">(متوفر بعد التبرع%d CNY)</string>
     <string name="unlock_features_pending_summary">(donated %1$d CNY, available for lifetime after donating %2$d CNY more)</string>
     <!-- Incremental Updates -->

@@ -71,9 +71,9 @@
     <string name="pending_available_updates_intro">À la recherche de mises à jour disponibles</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">Débloquer des fonctions</string>
-    <string name="unlock_features_incremental_updates_title">Faire un don de %d CNY pour débloquer les mises à jour incrémentielles et télécharger à pleine vitesse.</string>
-    <string name="unlock_features_verified_updates_title">Donner %d CYN pour des mise à jour vérifiée et enlever la publicité.</string>
-    <string name="unlock_features_all_title">Faire un don de %d CNY pour déverrouiller les mises à jour incrémentielles, télécharger à pleine vitesse, vérifiées mises à jour et supprimer Google Ads.</string>
+    <string name="unlock_features_plan_a_title">Faire un don de %d CNY pour débloquer les mises à jour incrémentielles et télécharger à pleine vitesse.</string>
+    <string name="unlock_features_plan_b_title">Donner %d CYN pour des mise à jour vérifiée et enlever la publicité.</string>
+    <string name="unlock_features_plan_unlimited_title">Faire un don de %d CNY pour déverrouiller les mises à jour incrémentielles, télécharger à pleine vitesse, vérifiées mises à jour et supprimer Google Ads.</string>
     <string name="unlock_features_request_summary">(proposé après un don de %d CNY)</string>
     <string name="unlock_features_pending_summary">(don effectué de %1$d CNY, proposé à vie après un don d’encore %2$d CNY)</string>
     <!-- Incremental Updates -->

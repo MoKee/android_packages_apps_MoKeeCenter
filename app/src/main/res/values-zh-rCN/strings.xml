@@ -73,9 +73,11 @@
     <string name="pending_available_updates_intro">正在查找可用的更新</string>
     <!-- Unlock Features -->
     <string name="unlock_features_title">功能解锁</string>
-    <string name="unlock_features_incremental_updates_title">捐赠 %d 元，解锁增量更新和高速下载。</string>
-    <string name="unlock_features_verified_updates_title">捐赠 %d 元，解锁放心刷™并移除谷歌广告。</string>
-    <string name="unlock_features_all_title">捐赠 %d 元，解锁增量更新、高速下载、放心刷™并移除谷歌广告。</string>
+    <string name="unlock_features_plan_a_title">捐赠 %d 元，解锁增量更新和高速下载。</string>
+    <string name="unlock_features_plan_a_abdevice_title">捐赠 %d 元，解锁高速下载。</string>
+    <string name="unlock_features_plan_b_title">捐赠 %d 元，解锁放心刷™并移除谷歌广告。</string>
+    <string name="unlock_features_plan_unlimited_title">捐赠 %d 元，解锁增量更新、高速下载、放心刷™并移除谷歌广告。</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">捐赠 %d 元，解锁高速下载、放心刷™并移除谷歌广告。</string>
     <string name="unlock_features_request_summary">（累计捐赠 %d 元激活选项）</string>
     <string name="unlock_features_pending_summary">（已捐赠 %1$d 元，再捐赠 %2$d 元激活选项）</string>
     <!-- Incremental Updates -->
