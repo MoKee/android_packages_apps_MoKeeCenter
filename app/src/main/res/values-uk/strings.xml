@@ -35,7 +35,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Інформація про версію</string>
     <string name="mokee_version_title">Версія MoKee</string>
     <string name="unique_id_title">Унікальний ідентифікатор</string>
     <string name="incremental_updates_title">OTA оновлення</string>
@@ -54,10 +53,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Тип оновлення</string>
     <string name="update_type_release">Реліз</string>
-    <string name="update_type_history">Історія версій</string>
-    <string name="update_type_experimental">Експериментальна</string>
     <string name="update_type_nightly">Нічна</string>
-    <string name="update_type_unofficial">Неофіційна</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">Ви пожертвували всього CNY %1$d, це більше, ніж %2$s людей всього, Ваш рейтинг %3$d!</string>
     <string name="donation_record_none">Ви не пожертвували</string>

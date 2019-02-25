@@ -52,18 +52,15 @@
     <string name="nav_social_title">Közösségi média</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
-    <string name="nav_social_google_plus_title">Google+</string>
     <string name="nav_social_qqchat_title">QQ csoport</string>
     <!-- Nav Contribute -->
     <string name="nav_contribute_title">Közreműködés</string>
     <string name="nav_contribute_code_title">Kód</string>
     <string name="nav_contribute_translate_title">Fordítás</string>
     <!-- Preference list -->
-    <string name="mokee_information_title">Verzió információ</string>
     <string name="mokee_version_title">MoKee verzió</string>
     <string name="unique_id_title">Egyedi azonosító</string>
     <string name="last_update_check_title">Utolsó ellenőrzés</string>
-    <string name="update_settings_title">Frissítési beállítások</string>
     <string name="incremental_updates_title">Növekményes frissítések</string>
     <string name="incremental_updates_summary">Növekményes frissítések használata a letöltési idő és sávszélesség kímélése érdekében</string>
     <string name="verified_updates_title">Ellenőrzött frissitések</string>
@@ -87,10 +84,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Frissítés típusa</string>
     <string name="update_type_release">Kiadás</string>
-    <string name="update_type_history">Elözmény</string>
-    <string name="update_type_experimental">Kísérleti</string>
     <string name="update_type_nightly">Napi (Nightly)</string>
-    <string name="update_type_unofficial">Nem hivatalos</string>
     <!-- Donation Info -->
     <string name="donation_record_title">Támogatási nyilvántartás</string>
     <string name="donation_record_without_rank">Ön összesen %1$d kínai jüant adományozott.</string>
@@ -115,7 +109,6 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Az alkalmazás nincs telepítve.</string>
-    <string name="payment_not_found">A MoKee Fizetés nincs telepítve.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Új frissítések</string>
     <string name="new_updates_found_title">Új rendszerfrissítések</string>
@@ -135,7 +128,6 @@
     <!-- Install Status -->
     <string name="install_already_running">Egy telepítés jelenleg is fut</string>
     <string name="installing_update_notification">Frissítőcsomag-telepítés</string>
-    <string name="installing_update_error_notification">Telepítési hiba</string>
     <string name="installing_update_finished_notification">A frissítés telepítve</string>
     <string name="finalizing_package_notification">A csomagtelepítés véglegesítése</string>
     <string name="preparing_ota_first_boot_notification">Felkészülés az első indításra</string>

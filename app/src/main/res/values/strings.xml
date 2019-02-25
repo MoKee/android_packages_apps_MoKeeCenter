@@ -56,7 +56,6 @@
     <string name="nav_social_title">Social Media</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
-    <string name="nav_social_google_plus_title">Google+</string>
     <string name="nav_social_qqchat_title">QQ Group</string>
     <!-- Nav Contribute -->
     <string name="nav_contribute_title">Contribute</string>
@@ -64,11 +63,9 @@
     <string name="nav_contribute_translate_title">Translation</string>
 
     <!-- Preference list -->
-    <string name="mokee_information_title">Version Info</string>
     <string name="mokee_version_title">MoKee Version</string>
     <string name="unique_id_title">Unique ID</string>
     <string name="last_update_check_title">Last check</string>
-    <string name="update_settings_title">Update Settings</string>
     <string name="incremental_updates_title">Incremental updates</string>
     <string name="incremental_updates_summary">Get incremental updates to save download time and bandwidth</string>
     <string name="verified_updates_title">Verified updates</string>
@@ -96,8 +93,6 @@
     <!-- Update Type -->
     <string name="update_type_title">Update type</string>
     <string name="update_type_release">Release</string>
-    <string name="update_type_history">History</string>
-    <string name="update_type_experimental">Experimental</string>
     <string name="update_type_nightly">Nightly</string>
     <string name="update_type_premium">Premium</string>
 
@@ -128,7 +123,6 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">App isn\'t installed.</string>
-    <string name="payment_not_found">MoKee Payment isn\'t installed.</string>
 
     <!-- Notification -->
     <string name="new_updates_channel_title">New updates</string>
@@ -153,7 +147,6 @@
     <!-- Install Status -->
     <string name="install_already_running">An install is already running</string>
     <string name="installing_update_notification">Installing update package</string>
-    <string name="installing_update_error_notification">Install error</string>
     <string name="installing_update_finished_notification">Update installed</string>
     <string name="finalizing_package_notification">Finalizing package installation</string>
     <string name="preparing_ota_first_boot_notification">Preparing for first boot</string>

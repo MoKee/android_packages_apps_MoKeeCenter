@@ -50,18 +50,15 @@
     <string name="nav_social_title">Réseau Social</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
-    <string name="nav_social_google_plus_title">Google+</string>
     <string name="nav_social_qqchat_title">Groupe QQ</string>
     <!-- Nav Contribute -->
     <string name="nav_contribute_title">Contribuer</string>
     <string name="nav_contribute_code_title">Code</string>
     <string name="nav_contribute_translate_title">Traduction</string>
     <!-- Preference list -->
-    <string name="mokee_information_title">Informations de version</string>
     <string name="mokee_version_title">Version de MoKee</string>
     <string name="unique_id_title">ID unique</string>
     <string name="last_update_check_title">Dernière vérification</string>
-    <string name="update_settings_title">Paramètres de mise à jour</string>
     <string name="incremental_updates_title">Mises à jour incrémentielles</string>
     <string name="incremental_updates_summary">Obtenir des mises à jour incrémentielles pour gagner du temps et économiser de la bande passante</string>
     <string name="verified_updates_title">Mises à jour vérifiées</string>
@@ -83,10 +80,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Type de mise à jour</string>
     <string name="update_type_release">Release</string>
-    <string name="update_type_history">Historique</string>
-    <string name="update_type_experimental">Expérimental</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_unofficial">Non officiel</string>
     <!-- Donation Info -->
     <string name="donation_record_title">Enregistrement de la donation</string>
     <string name="donation_record_without_rank">Vous avez fait don d’un total de %1$d CNY.</string>
@@ -111,7 +105,6 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal (USD)</string>
     <string name="activity_not_found">L’appli n’est pas installée.</string>
-    <string name="payment_not_found">MoKee paiement n’est pas installé.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Nouvelles mises à jour</string>
     <string name="new_updates_found_title">Nouvelle mise à jour du système trouvée</string>

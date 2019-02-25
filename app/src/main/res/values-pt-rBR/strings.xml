@@ -49,7 +49,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Informações da versão</string>
     <string name="mokee_version_title">Versão MoKee</string>
     <string name="unique_id_title">ID Unico</string>
     <string name="incremental_updates_title">Atualizações incrementais</string>
@@ -68,10 +67,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Tipo de atualização</string>
     <string name="update_type_release">Lançamento</string>
-    <string name="update_type_history">Histórico</string>
-    <string name="update_type_experimental">Experimental</string>
     <string name="update_type_nightly">Noturna</string>
-    <string name="update_type_unofficial">Não oficial</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">Você doou um total de %1$d CNY, mais do que %2$s de doadores globalmente, rank No.%3$d!</string>
     <string name="donation_record_none">Você ainda não doou</string>

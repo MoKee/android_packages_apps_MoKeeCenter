@@ -34,7 +34,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">ಆವೃತ್ತಿಯ ಮಾಹಿತಿ</string>
     <string name="mokee_version_title">MoKee ಆವೃತ್ತಿ</string>
     <string name="unique_id_title">ಏಕಮಾತ್ರ ಗುರುತು</string>
     <string name="incremental_updates_title">ಹೆಚ್ಚಿನ ನವೀಕರಣೆಗಳು</string>
@@ -53,10 +52,7 @@
     <!-- Update Type -->
     <string name="update_type_title">ನವೀಕರಣ ಮಾದರಿ</string>
     <string name="update_type_release">ಬಿಡುಗಡೆ</string>
-    <string name="update_type_history">ಇತಿಹಾಸ</string>
-    <string name="update_type_experimental">ಪ್ರಾಯೋಗಿಕ</string>
     <string name="update_type_nightly">ರಾತ್ರಿಯ</string>
-    <string name="update_type_unofficial">ಅನಧಿಕೃತ</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">ನೀವು ಒಟ್ಟು CNY ನ %1$d, ವಿಶ್ವದಾದ್ಯಂತ %2$s ದಾನಿಗಳಿಗಿಂತ ಹೆಚ್ಚು ಕಾಣಿಕೆ ನೀಡಿದ್ದೀರಿ, ಶ್ರೇಣಿ ಸಂಖ್ಯೆ %3$d!</string>
     <string name="donation_record_none">ನೀವು ಕಾಣಿಕೆ ನೀಡಿಲ್ಲ</string>

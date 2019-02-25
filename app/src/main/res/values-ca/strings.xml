@@ -35,7 +35,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Informació de la versió</string>
     <string name="mokee_version_title">Versió MoKee</string>
     <string name="incremental_updates_title">OTA actualitzacions</string>
     <string name="incremental_updates_summary">Obtenir actualitzacions incrementals per estalviar temps de descàrrega i ample de banda</string>
@@ -46,10 +45,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Tipus d\'actualització</string>
     <string name="update_type_release">Release</string>
-    <string name="update_type_history">Històrial</string>
-    <string name="update_type_experimental">Experimental</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_unofficial">No oficial</string>
     <!-- Donation Info -->
     <string name="donation_payment_success">Gràcies per la vostra donació!</string>
     <!-- Snackbar Update -->

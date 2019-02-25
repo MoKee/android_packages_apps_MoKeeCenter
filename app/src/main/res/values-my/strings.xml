@@ -31,7 +31,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">ဗားရှင်း အကြောင်း</string>
     <string name="mokee_version_title">MoKee ဗားရှင်း</string>
     <string name="unique_id_title">ကိုယ်ပိုင် နံပါတ်</string>
     <string name="available_updates_title">ရရှိနိူင်သော update များ</string>
@@ -40,10 +39,7 @@
     <!-- Incremental Updates -->
     <!-- Update Type -->
     <string name="update_type_release">ထွက်ရှိမှု့</string>
-    <string name="update_type_history">မှတ်တမ်း</string>
-    <string name="update_type_experimental">စမ်းသပ်အဆင့်</string>
     <string name="update_type_nightly">မတည်ငြိမ်</string>
-    <string name="update_type_unofficial">တရားမဝင်</string>
     <!-- Donation Info -->
     <string name="donation_record_none">မလှူဒါန်းရသေးပါ။</string>
     <string name="donation_payment_success">လှူဒါန်းမှု့အတွက် ကျေးဇူးတင်ပါတယ်။</string>

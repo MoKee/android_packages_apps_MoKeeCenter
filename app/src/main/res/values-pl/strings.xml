@@ -51,18 +51,15 @@
     <string name="nav_social_title">Media społecznościowe</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
-    <string name="nav_social_google_plus_title">Google+</string>
     <string name="nav_social_qqchat_title">Grupa QQ</string>
     <!-- Nav Contribute -->
     <string name="nav_contribute_title">Weź udział</string>
     <string name="nav_contribute_code_title">Kod</string>
     <string name="nav_contribute_translate_title">Tłumaczenie</string>
     <!-- Preference list -->
-    <string name="mokee_information_title">Informacje o wersji</string>
     <string name="mokee_version_title">Wersja Mokee</string>
     <string name="unique_id_title">Unikalne ID</string>
     <string name="last_update_check_title">Ostatnie sprawdzenie</string>
-    <string name="update_settings_title">Ustawienia aktualizacji</string>
     <string name="incremental_updates_title">Aktualizacje przyrostowe</string>
     <string name="incremental_updates_summary">Pobierz aktualizacje przyrostowe, aby zaoszczędzić czas i transfer</string>
     <string name="verified_updates_title">Sprawdzone aktualizacje</string>
@@ -84,10 +81,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Rodzaj aktualizacji</string>
     <string name="update_type_release">Wydanie</string>
-    <string name="update_type_history">Historia</string>
-    <string name="update_type_experimental">Eksperymentalne</string>
     <string name="update_type_nightly">Nocne</string>
-    <string name="update_type_unofficial">Nieoficjalne</string>
     <!-- Donation Info -->
     <string name="donation_record_title">Zapis darowizny</string>
     <string name="donation_record_without_rank">Przekazałeś w sumie %1$d CNY.</string>
@@ -112,7 +106,6 @@
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikacja nie jest zainstalowana.</string>
-    <string name="payment_not_found">Płatność MoKee nie są zainstalowane.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Nowe aktualizacje</string>
     <string name="new_updates_found_title">Nowe aktualizacje systemu</string>

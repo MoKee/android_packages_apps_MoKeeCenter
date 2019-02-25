@@ -52,18 +52,15 @@
     <string name="nav_social_title">Sociální média</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
-    <string name="nav_social_google_plus_title">Google+</string>
     <string name="nav_social_qqchat_title">Skupina QQ</string>
     <!-- Nav Contribute -->
     <string name="nav_contribute_title">Přispět</string>
     <string name="nav_contribute_code_title">Kód</string>
     <string name="nav_contribute_translate_title">Překlady</string>
     <!-- Preference list -->
-    <string name="mokee_information_title">Informace o verzi</string>
     <string name="mokee_version_title">Verze MoKee</string>
     <string name="unique_id_title">Jedinečné ID</string>
     <string name="last_update_check_title">Poslední kontrola</string>
-    <string name="update_settings_title">Aktualizovat nastavení</string>
     <string name="incremental_updates_title">Přírůstkové aktualizace</string>
     <string name="incremental_updates_summary">Stahovat OTA aktualizace, aby jste ušetřili data a čas</string>
     <string name="verified_updates_title">Ověřené aktualizace</string>
@@ -85,10 +82,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Typ aktualizace</string>
     <string name="update_type_release">Vydání</string>
-    <string name="update_type_history">History</string>
-    <string name="update_type_experimental">Experimentální</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_unofficial">Neoficiální</string>
     <!-- Donation Info -->
     <string name="donation_record_title">Záznam darování</string>
     <string name="donation_record_without_rank">Celkem jste darovali %1$d CNY.</string>
@@ -113,7 +107,6 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikace není nainstalována.</string>
-    <string name="payment_not_found">MoKee Payment není nainstalován.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Nové aktualizace</string>
     <string name="new_updates_found_title">Nová systémové aktualizace</string>
@@ -133,7 +126,6 @@
     <!-- Install Status -->
     <string name="install_already_running">Instalace je již spuštěna</string>
     <string name="installing_update_notification">Instalace balíčku aktualizace</string>
-    <string name="installing_update_error_notification">Chyba instalace</string>
     <string name="installing_update_finished_notification">Aktualizace byla nainstalována</string>
     <string name="finalizing_package_notification">Dokončování instalace balíčku</string>
     <string name="preparing_ota_first_boot_notification">Příprava na první spuštění</string>

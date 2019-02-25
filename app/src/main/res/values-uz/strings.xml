@@ -27,7 +27,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Versiya Haqida Ma\'lumot</string>
     <string name="mokee_version_title">MoKee Versiya</string>
     <string name="unique_id_title">Qurilma ID</string>
     <string name="available_updates_title">Mavjud yangilanishlar</string>
@@ -35,10 +34,7 @@
     <!-- Incremental Updates -->
     <!-- Update Type -->
     <string name="update_type_release">Release</string>
-    <string name="update_type_history">Tarixi</string>
-    <string name="update_type_experimental">Tajriba</string>
     <string name="update_type_nightly">Tungi</string>
-    <string name="update_type_unofficial">Norasmiy</string>
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->

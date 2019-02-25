@@ -52,18 +52,15 @@
     <string name="nav_social_title">社群媒體</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">微博</string>
-    <string name="nav_social_google_plus_title">Google+</string>
     <string name="nav_social_qqchat_title">QQ 群</string>
     <!-- Nav Contribute -->
     <string name="nav_contribute_title">貢獻</string>
     <string name="nav_contribute_code_title">程式碼</string>
     <string name="nav_contribute_translate_title">翻譯</string>
     <!-- Preference list -->
-    <string name="mokee_information_title">版本資訊</string>
     <string name="mokee_version_title">MoKee 版本</string>
     <string name="unique_id_title">唯一識別碼</string>
     <string name="last_update_check_title">上次檢查：</string>
-    <string name="update_settings_title">更新設定</string>
     <string name="incremental_updates_title">增量更新</string>
     <string name="incremental_updates_summary">取得增量更新以節省時間和流量</string>
     <string name="verified_updates_title">已驗證的更新</string>
@@ -87,10 +84,7 @@
     <!-- Update Type -->
     <string name="update_type_title">更新類型</string>
     <string name="update_type_release">釋出版</string>
-    <string name="update_type_history">歷史版</string>
-    <string name="update_type_experimental">實驗版</string>
     <string name="update_type_nightly">每夜版</string>
-    <string name="update_type_unofficial">非官方版</string>
     <!-- Donation Info -->
     <string name="donation_record_title">捐贈記錄</string>
     <string name="donation_record_without_rank">您捐贈了 %1$d 元。</string>
@@ -115,7 +109,6 @@
     <string name="wechat">微信 (WeChat)</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">應用程式未安裝。</string>
-    <string name="payment_not_found">未安裝 MoKee 支付應用程式。</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">新的更新</string>
     <string name="new_updates_found_title">新的系統更新</string>
@@ -135,7 +128,6 @@
     <!-- Install Status -->
     <string name="install_already_running">安裝已在運行</string>
     <string name="installing_update_notification">正在安裝更新套件</string>
-    <string name="installing_update_error_notification">安裝錯誤</string>
     <string name="installing_update_finished_notification">更新已安裝</string>
     <string name="finalizing_package_notification">正在完成套件安裝</string>
     <string name="preparing_ota_first_boot_notification">正在準備第一次啟動</string>

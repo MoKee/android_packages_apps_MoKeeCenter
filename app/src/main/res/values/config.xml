@@ -24,6 +24,5 @@
 
     <!-- Google Mobile Ads -->
     <string name="app_id" translatable="false">ca-app-pub-1229799408538170~5022945496</string>
-    <string name="banner_ad_unit_id" translatable="false">ca-app-pub-1229799408538170/6499678696</string>
     <string name="interstitial_ad_unit_id" translatable="false">ca-app-pub-1229799408538170/2292662299</string>
 </resources>

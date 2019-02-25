@@ -36,7 +36,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Impormasyon sa Bersyon</string>
     <string name="mokee_version_title">Bersyon ng MoKee</string>
     <string name="unique_id_title">Natatanging ID</string>
     <string name="incremental_updates_title">Incremental na mga update</string>
@@ -55,10 +54,7 @@
     <!-- Update Type -->
     <string name="update_type_title">I-update ang uri</string>
     <string name="update_type_release">Pakawalan</string>
-    <string name="update_type_history">Kasaysayan</string>
-    <string name="update_type_experimental">Eksperimental</string>
     <string name="update_type_nightly">Gabi-gabi</string>
-    <string name="update_type_unofficial">Hindi opisyal</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">Ikaw ay nagbigay ng kabuuang %1$d CNY na donasyon, higit pa sa %2$s ng mga donor sa buong mundo, numero ng ranggo na %3$d!</string>
     <string name="donation_record_none">Hindi ka pa nakapagbigay</string>

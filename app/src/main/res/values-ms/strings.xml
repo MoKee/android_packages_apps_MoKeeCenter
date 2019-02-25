@@ -32,7 +32,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Maklumat versi</string>
     <string name="mokee_version_title">Versi MoKee</string>
     <string name="unique_id_title">Unik ID</string>
     <string name="incremental_updates_title">Kemaskini tambahan</string>
@@ -51,10 +50,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Jenis kemaskini</string>
     <string name="update_type_release">Keluaran</string>
-    <string name="update_type_history">Sejarah</string>
-    <string name="update_type_experimental">Eksperimen</string>
     <string name="update_type_nightly">Percubaan</string>
-    <string name="update_type_unofficial">Tidak rasmi</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">Anda telah menderma sejumlah %1$d CNY, lebih daripada %2$s penderma di seluruh dunia, No taraf %3$d!</string>
     <string name="donation_record_none">Anda tidak donasi</string>

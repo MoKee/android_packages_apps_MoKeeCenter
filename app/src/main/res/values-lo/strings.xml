@@ -31,7 +31,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">ຂໍ້ມູນເວີຊັ່ນ</string>
     <string name="mokee_version_title">ເວີຊັ່ນ MoKee</string>
     <string name="unique_id_title">Unique ID</string>
     <string name="verified_updates_title">ຢືນຢັນການອັບເດດ</string>
@@ -43,10 +42,7 @@
     <!-- Update Type -->
     <string name="update_type_title">ຮູບແບບການອັບເດດ</string>
     <string name="update_type_release">ປ່ອຍ</string>
-    <string name="update_type_history">ປະຫວັດ</string>
-    <string name="update_type_experimental">ທົດລອງ</string>
     <string name="update_type_nightly">ບໍ່ສົມບູນ</string>
-    <string name="update_type_unofficial">ບໍ່ເປັນທາງການ</string>
     <!-- Donation Info -->
     <string name="donation_payment_success">ຂອບໃຈສຳລັບການບໍລິຈາກ!</string>
     <!-- Snackbar Update -->

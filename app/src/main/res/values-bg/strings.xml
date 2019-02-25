@@ -36,7 +36,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Информация за версията</string>
     <string name="mokee_version_title">Версия на MoKee</string>
     <string name="unique_id_title">Уникален ID</string>
     <string name="incremental_updates_title">Incremental ъпдейти</string>
@@ -50,10 +49,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Тип ъпдейт</string>
     <string name="update_type_release">Издание</string>
-    <string name="update_type_history">История</string>
-    <string name="update_type_experimental">Експериментално</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_unofficial">Неофициално</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">Ти дари общо CNY %1$d повече от %2$s на донорите в световен мащаб, ранг No.%3$d!</string>
     <string name="donation_record_none">Нямате дарения</string>

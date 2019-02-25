@@ -34,9 +34,6 @@
     <!-- Incremental Updates -->
     <!-- Update Type -->
     <string name="update_type_release">เวอร์ชันเสถียร</string>
-    <string name="update_type_history">ประวัติ</string>
-    <string name="update_type_experimental">กำลังทดลอง</string>
-    <string name="update_type_unofficial">อย่างไม่เป็นทางการ</string>
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->

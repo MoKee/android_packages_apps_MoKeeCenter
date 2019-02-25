@@ -32,14 +32,10 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">اطلاعات نسخه</string>
     <!-- Unlock Features -->
     <!-- Incremental Updates -->
     <!-- Update Type -->
-    <string name="update_type_history">تاریخچه</string>
-    <string name="update_type_experimental">آزمایشی</string>
     <string name="update_type_nightly">شبانه</string>
-    <string name="update_type_unofficial">غیر رسمی</string>
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <string name="no_updates_found">هیچ به روز رسانی جدید پیدا کردم</string>

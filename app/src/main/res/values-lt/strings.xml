@@ -31,16 +31,12 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Versijos informacija</string>
     <string name="mokee_version_title">MoKee versija</string>
     <!-- Unlock Features -->
     <!-- Incremental Updates -->
     <!-- Update Type -->
     <string name="update_type_release">Leidimas</string>
-    <string name="update_type_history">MoKee versijos istorija</string>
-    <string name="update_type_experimental">MoKee eksperimentinė versija</string>
     <string name="update_type_nightly">MoKee naktinė versija</string>
-    <string name="update_type_unofficial">MoKee neoficiali versija</string>
     <!-- Donation Info -->
     <string name="donation_payment_success">Dėkojame jums už paramą!</string>
     <!-- Snackbar Update -->

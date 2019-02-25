@@ -52,18 +52,15 @@
     <string name="nav_social_title">التواصل الاجتماعي</string>
     <string name="nav_social_telegram_title">تليجرام</string>
     <string name="nav_social_weibo_title">Weibo</string>
-    <string name="nav_social_google_plus_title">Google+</string>
     <string name="nav_social_qqchat_title">مجموعة QQ</string>
     <!-- Nav Contribute -->
     <string name="nav_contribute_title">ساهم</string>
     <string name="nav_contribute_code_title">الرمز</string>
     <string name="nav_contribute_translate_title">الترجمة</string>
     <!-- Preference list -->
-    <string name="mokee_information_title">معلومات الإصدار</string>
     <string name="mokee_version_title">إصدار موكي</string>
     <string name="unique_id_title">معرف فريد</string>
     <string name="last_update_check_title">أخر فحص</string>
-    <string name="update_settings_title">إعدادات التحديث</string>
     <string name="incremental_updates_title">تحديثات عن طريق الهواء OTA</string>
     <string name="incremental_updates_summary">الحصول على التحديثات التزايدية لحفظ وقت التحميل وعرض حجم البيانات</string>
     <string name="verified_updates_title">تحديثات تم التحقق منها</string>
@@ -87,10 +84,7 @@
     <!-- Update Type -->
     <string name="update_type_title">نوع التحديث</string>
     <string name="update_type_release">النهائية</string>
-    <string name="update_type_history">السجل</string>
-    <string name="update_type_experimental">اختبارية</string>
     <string name="update_type_nightly">النسخة الليلية</string>
-    <string name="update_type_unofficial">نسخة غير رسمية</string>
     <!-- Donation Info -->
     <string name="donation_record_title">سجل التبرع</string>
     <string name="donation_record_without_rank">أنت تبرعت ما مجموعه %1$d CNY.</string>
@@ -115,7 +109,6 @@
     <string name="wechat">Wechat</string>
     <string name="paypal">تبرع باستخدام باي بال</string>
     <string name="activity_not_found">لم يتم تثبيت التطبيق.</string>
-    <string name="payment_not_found">لم يتم تثبيت خدمة دفع الخاصة بموكي.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">تحديثات جديدة</string>
     <string name="new_updates_found_title">يوجد تحديث نظام جديد</string>
@@ -135,7 +128,6 @@
     <!-- Install Status -->
     <string name="install_already_running">تثبيت قيد التشغيل بالفعل</string>
     <string name="installing_update_notification">جارٍ تثبيت حزمة التحديث</string>
-    <string name="installing_update_error_notification">خطأ في التثبيت</string>
     <string name="installing_update_finished_notification">تم تثبيت التحديث</string>
     <string name="finalizing_package_notification">جارٍ إنهاء تثبيت الحزمة</string>
     <string name="preparing_ota_first_boot_notification">جارٍ الإعداد للتشغيل الأول</string>

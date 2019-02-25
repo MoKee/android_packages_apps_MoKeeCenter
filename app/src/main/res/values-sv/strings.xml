@@ -34,7 +34,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Versionsinfo</string>
     <string name="mokee_version_title">MoKee Version</string>
     <string name="unique_id_title">Unikt ID</string>
     <string name="incremental_updates_title">Inkrementella uppdateringar</string>
@@ -48,10 +47,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Uppdateringstyp</string>
     <string name="update_type_release">Utgåva</string>
-    <string name="update_type_history">Historia</string>
-    <string name="update_type_experimental">Experimentell</string>
     <string name="update_type_nightly">Nattlig</string>
-    <string name="update_type_unofficial">Inofficiella</string>
     <!-- Donation Info -->
     <string name="donation_record_none">Du har inte donerat</string>
     <string name="donation_payment_success">Tack för din donation!</string>

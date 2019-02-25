@@ -29,7 +29,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">సంస్కరణ సమాచారం</string>
     <string name="mokee_version_title">మోకీ వెర్షన్</string>
     <string name="unique_id_title">ప్రత్యేక ID</string>
     <string name="available_updates_title">అందుబాటులో ఉన్న నవీకరణలు</string>
@@ -38,10 +37,7 @@
     <!-- Incremental Updates -->
     <!-- Update Type -->
     <string name="update_type_release">విడుదల</string>
-    <string name="update_type_history">చరిత్ర</string>
-    <string name="update_type_experimental">ప్రయోగాత్మక</string>
     <string name="update_type_nightly">నైట్లీ</string>
-    <string name="update_type_unofficial">అనధికారిక</string>
     <!-- Donation Info -->
     <string name="donation_payment_success">మీ విరాళం కోసం ధన్యవాదాలు!</string>
     <string name="donation_dialog_title">ఓపెన్ సోర్స్ మోకికి విరాళంగా</string>

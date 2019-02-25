@@ -30,7 +30,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Version Info</string>
     <string name="mokee_version_title">MoKee Version</string>
     <string name="unique_id_title">Unique ID</string>
     <string name="available_updates_title">আপডেট এসেছে</string>
@@ -39,10 +38,7 @@
     <!-- Update Type -->
     <string name="update_type_title">আপডেটের ধরণ</string>
     <string name="update_type_release">রিলিজ</string>
-    <string name="update_type_history">ইতিহাস</string>
-    <string name="update_type_experimental">পরীক্ষামূলক</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_unofficial">আন-অফিসিয়াল</string>
     <!-- Donation Info -->
     <!-- Snackbar Update -->
     <!-- Common -->

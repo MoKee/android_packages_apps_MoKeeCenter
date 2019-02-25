@@ -36,7 +36,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Informatii versiune</string>
     <string name="mokee_version_title">Versiunea MoKee</string>
     <string name="unique_id_title">ID Unic</string>
     <string name="incremental_updates_title">Actualizări incrementale</string>
@@ -55,10 +54,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Tipul de actualizare</string>
     <string name="update_type_release">Lansare</string>
-    <string name="update_type_history">Istorie</string>
-    <string name="update_type_experimental">Experimental</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_unofficial">Neoficial</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">Ai donat un total de CNY %1$d, mai mult de %2$s de donatori la nivel global, rang No.%3$d!</string>
     <string name="donation_record_none">Nu ai donat</string>

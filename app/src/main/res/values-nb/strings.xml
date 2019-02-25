@@ -32,7 +32,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Versjons informasjon</string>
     <string name="mokee_version_title">MoKee versjon</string>
     <string name="unique_id_title">Unik ID</string>
     <string name="incremental_updates_title">Trinnvise oppdateringer</string>
@@ -44,10 +43,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Oppdateringstyper</string>
     <string name="update_type_release">Utgivelse</string>
-    <string name="update_type_history">Logg</string>
-    <string name="update_type_experimental">Eksperimentell</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_unofficial">Uoffisiell</string>
     <!-- Donation Info -->
     <string name="donation_record_none">Du ikke har donert</string>
     <string name="donation_payment_success">Takk for din donasjon!</string>

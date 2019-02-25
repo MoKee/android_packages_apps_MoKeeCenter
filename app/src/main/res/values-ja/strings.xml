@@ -47,18 +47,15 @@
     <string name="nav_social_title">ソーシャルメディア</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
-    <string name="nav_social_google_plus_title">Google+</string>
     <string name="nav_social_qqchat_title">QQ 群</string>
     <!-- Nav Contribute -->
     <string name="nav_contribute_title">貢献</string>
     <string name="nav_contribute_code_title">コード</string>
     <string name="nav_contribute_translate_title">翻訳</string>
     <!-- Preference list -->
-    <string name="mokee_information_title">バージョン情報</string>
     <string name="mokee_version_title">MoKeeバージョン</string>
     <string name="unique_id_title">ユニークID</string>
     <string name="last_update_check_title">最後の確認:</string>
-    <string name="update_settings_title">更新の設定</string>
     <string name="incremental_updates_title">差分アップデート</string>
     <string name="incremental_updates_summary">ダウンロード時間と帯域を節約する差分アップデートを入手</string>
     <string name="verified_updates_title">検証済みの更新</string>
@@ -75,10 +72,7 @@
     <!-- Update Type -->
     <string name="update_type_title">アップデートタイプ</string>
     <string name="update_type_release">リリース</string>
-    <string name="update_type_history">履歴</string>
-    <string name="update_type_experimental">実験的</string>
     <string name="update_type_nightly">ナイトリー</string>
-    <string name="update_type_unofficial">非公式</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">あなたは CNY %1$dを寄付してくださり、世界で %2$s 人より多くの寄付をし、順位は %3$d 位です！</string>
     <string name="donation_record_none">また寄付していません</string>

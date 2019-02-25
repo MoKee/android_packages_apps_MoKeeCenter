@@ -34,7 +34,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Oplysninger om version</string>
     <string name="mokee_version_title">MoKee-version</string>
     <string name="unique_id_title">Unikt ID</string>
     <string name="incremental_updates_title">Trinvise opdateringer</string>
@@ -46,10 +45,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Opdateringstype</string>
     <string name="update_type_release">Udgivelse</string>
-    <string name="update_type_history">Historik</string>
-    <string name="update_type_experimental">Eksperimenterende</string>
     <string name="update_type_nightly">Natlige</string>
-    <string name="update_type_unofficial">Uofficiel</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">Du donerede i alt CNY %1$d, mere end %2$s af donorerne globalt, rangering %3$d!</string>
     <string name="donation_record_none">Du ikke har doneret</string>

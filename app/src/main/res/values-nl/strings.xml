@@ -36,7 +36,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Versie Info</string>
     <string name="mokee_version_title">MoKee versie</string>
     <string name="unique_id_title">Unieke ID</string>
     <string name="incremental_updates_title">Incrementele updates</string>
@@ -55,10 +54,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Type update</string>
     <string name="update_type_release">Uitgave</string>
-    <string name="update_type_history">Geschiedenis</string>
-    <string name="update_type_experimental">Experimenteel</string>
     <string name="update_type_nightly">Nachtelijks</string>
-    <string name="update_type_unofficial">Onofficieel</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">U geschonk CNY %1$d, in totaal meer dan %2$s van donors wereldwijd, rang No.%3$d!</string>
     <string name="donation_record_none">U hebt geen donatie gedaan</string>

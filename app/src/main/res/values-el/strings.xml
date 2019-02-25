@@ -35,7 +35,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Πληροφορίες έκδοσης</string>
     <string name="mokee_version_title">Έκδοση MoKee</string>
     <string name="unique_id_title">Μοναδικό ID</string>
     <string name="incremental_updates_title">Ενημερώσεις ΟΤΑ</string>
@@ -49,10 +48,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Τύπος ενημερώσεων</string>
     <string name="update_type_release">Έκδοση</string>
-    <string name="update_type_history">Ιστορικό</string>
-    <string name="update_type_experimental">Πειραματική έκδοση</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_unofficial">Ανεπίσημη</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">Δωρίσατε ένα ποσό CNY %1$d, περισσότερα από %2$s δωρεές παγκοσμίως, κατάταξη Νο.%3$d!</string>
     <string name="donation_record_none">Δεν έχετε κάνει δωρεά</string>

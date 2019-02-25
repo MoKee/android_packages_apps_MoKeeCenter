@@ -48,18 +48,15 @@
     <string name="nav_social_title">Družbena omrežja</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
-    <string name="nav_social_google_plus_title">Google+</string>
     <string name="nav_social_qqchat_title">QQ skupine</string>
     <!-- Nav Contribute -->
     <string name="nav_contribute_title">Sodelovanje</string>
     <string name="nav_contribute_code_title">Koda</string>
     <string name="nav_contribute_translate_title">Prevod</string>
     <!-- Preference list -->
-    <string name="mokee_information_title">Informacije o različici</string>
     <string name="mokee_version_title">MoKee različica</string>
     <string name="unique_id_title">Edinstven ID</string>
     <string name="last_update_check_title">Na zadnje preverjano</string>
-    <string name="update_settings_title">Posodobitvene nastavitve</string>
     <string name="incremental_updates_title">Delne posodobitve</string>
     <string name="incremental_updates_summary">Z delnimi posodobitvami priihranite čas in pasovno širino</string>
     <string name="verified_updates_title">Preverjene posodobitve</string>
@@ -81,10 +78,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Tip posodobitve</string>
     <string name="update_type_release">Release</string>
-    <string name="update_type_history">Zgodovina</string>
-    <string name="update_type_experimental">Preizkusno</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_unofficial">Neuradna</string>
     <!-- Donation Info -->
     <string name="donation_record_title">Zapis o prispevku</string>
     <string name="donation_record_without_rank">Skupno ste prispevali %1$d CNY.</string>
@@ -109,7 +103,6 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikacija ni nameščena.</string>
-    <string name="payment_not_found">MoKee plačilo ni nameščeno.</string>
     <!-- Notification -->
     <string name="new_updates_channel_title">Nove posodobitve</string>
     <string name="new_updates_found_title">Nove posodobiteve sistema</string>

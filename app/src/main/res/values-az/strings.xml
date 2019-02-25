@@ -33,17 +33,13 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Versiya Məlumat</string>
     <string name="mokee_version_title">MoKee versiyası</string>
     <string name="available_updates_title">Mövcud yeniləmələr</string>
     <!-- Unlock Features -->
     <!-- Incremental Updates -->
     <!-- Update Type -->
     <string name="update_type_title">Yeniləmə növü</string>
-    <string name="update_type_history">Tarixçə</string>
-    <string name="update_type_experimental">Təcrübi</string>
     <string name="update_type_nightly">Gecəlik</string>
-    <string name="update_type_unofficial">Rəsmi olmayan</string>
     <!-- Donation Info -->
     <string name="donation_record_none">İanə verməmisiniz</string>
     <string name="donation_payment_success">İanəniz üçün təşəkkürlər!</string>

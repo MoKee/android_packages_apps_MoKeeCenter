@@ -35,7 +35,6 @@
     <!-- Nav Social -->
     <!-- Nav Contribute -->
     <!-- Preference list -->
-    <string name="mokee_information_title">Versiotiedot</string>
     <string name="mokee_version_title">MoKee-versio</string>
     <string name="unique_id_title">Yksilöllinen ID</string>
     <string name="incremental_updates_title">Inkrementaaliset päivitykset</string>
@@ -49,10 +48,7 @@
     <!-- Update Type -->
     <string name="update_type_title">Päivitystyyppi</string>
     <string name="update_type_release">Release</string>
-    <string name="update_type_history">History</string>
-    <string name="update_type_experimental">Experimental</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_unofficial">Unofficial</string>
     <!-- Donation Info -->
     <string name="donation_record_with_rank">Lahjoitit yhteensä CNY %1$d enemmän kuin %2$s lahjoittajat maailmanlaajuisesti, sijoitus No.%3$d!</string>
     <string name="donation_record_none">Et ole lahjoittanut</string>
