@@ -26,6 +26,7 @@ import android.util.AttributeSet;
 
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
+import com.mokee.center.model.DonationInfo;
 import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
 
@@ -48,17 +49,17 @@ public class UpdateTypePreference extends ListPreference {
 
     public void refreshPreference() {
         Resources resources = getContext().getResources();
-        // Reset update type for unofficial version or different version
+        DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
+        // Reset update type for premium version or different version
         String suggestUpdateType = BuildInfoUtil.getSuggestUpdateType();
         String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, String.valueOf(suggestUpdateType));
         if (!suggestUpdateType.equals("3") && configUpdateType.equals("3")
-                || !MKCenterApplication.getInstance().getDonationInfo().isBasic()
-                && !TextUtils.equals(suggestUpdateType, configUpdateType)) {
+                || !donationInfo.isBasic() && !TextUtils.equals(suggestUpdateType, configUpdateType)) {
             configUpdateType = String.valueOf(suggestUpdateType);
             mMainPrefs.edit().putString(PREF_UPDATE_TYPE, configUpdateType).apply();
         }
 
-        if (suggestUpdateType.equals("3")) {
+        if (donationInfo.isAdvanced()) {
             setEntries(resources.getStringArray(R.array.all_type_entries));
             setEntryValues(resources.getStringArray(R.array.all_type_values));
         } else {

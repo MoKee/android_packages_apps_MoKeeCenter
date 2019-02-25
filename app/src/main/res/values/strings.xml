@@ -99,7 +99,7 @@
     <string name="update_type_history">History</string>
     <string name="update_type_experimental">Experimental</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_unofficial">Unofficial</string>
+    <string name="update_type_premium">Premium</string>
 
     <!-- Donation Info -->
     <string name="donation_record_title">Donation record</string>

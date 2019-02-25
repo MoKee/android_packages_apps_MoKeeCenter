@@ -44,7 +44,7 @@ public class RequestUtil {
 
         String suggestUpdateType = BuildInfoUtil.getSuggestUpdateType();
         String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, String.valueOf(suggestUpdateType));
-        // Reset update type for unofficial version or different version
+        // Reset update type for premium version or different version
         if (!suggestUpdateType.equals("3") && configUpdateType.equals("3")
                 || !donationInfo.isBasic() && !TextUtils.equals(suggestUpdateType, configUpdateType)) {
             configUpdateType = String.valueOf(suggestUpdateType);

@@ -88,7 +88,7 @@ public class BuildInfoUtil {
         switch (Build.RELEASE_TYPE.toLowerCase(Locale.ENGLISH)) {
             case "release":
                 return "0";
-            case "unofficial":
+            case "premium":
                 return "3";
             default:
                 return "1";

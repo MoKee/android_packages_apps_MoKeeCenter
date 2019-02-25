@@ -19,7 +19,7 @@
     <string-array name="all_type_entries" translatable="false">
         <item>@string/update_type_release</item>
         <item>@string/update_type_nightly</item>
-        <item>@string/update_type_unofficial</item>
+        <item>@string/update_type_premium</item>
     </string-array>
 
     <string-array name="all_type_values" translatable="false">

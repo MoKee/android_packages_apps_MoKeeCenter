@@ -90,7 +90,7 @@
     <string name="update_type_history">历史版</string>
     <string name="update_type_experimental">测试版</string>
     <string name="update_type_nightly">每夜版</string>
-    <string name="update_type_unofficial">适配版</string>
+    <string name="update_type_premium">优选版</string>
     <!-- Donation Info -->
     <string name="donation_record_title">捐赠记录</string>
     <string name="donation_record_without_rank">您捐赠了 %d 元！</string>
