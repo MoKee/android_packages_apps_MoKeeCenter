@@ -85,7 +85,7 @@
     <string name="update_type_title">更新类型</string>
     <string name="update_type_release">正式版</string>
     <string name="update_type_nightly">每夜版</string>
-    <string name="update_type_premium">优选版</string>
+    <string name="update_type_premium">高级版</string>
     <!-- Donation Info -->
     <string name="donation_record_title">捐赠记录</string>
     <string name="donation_record_without_rank">您捐赠了 %d 元！</string>

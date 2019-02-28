@@ -71,8 +71,10 @@
     <!-- Unlock Features -->
     <string name="unlock_features_title">Odemknout funkce</string>
     <string name="unlock_features_plan_a_title">Darovat %d CNY pro odemknutí přírůstkových aktualizací a stahování v plné rychlosti.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Darovat %d CNY pro odemknutí stahování v plné rychlosti.</string>
     <string name="unlock_features_plan_b_title">Darovat %d CNY pro ověřené aktualizace a odstranění reklam Google.</string>
     <string name="unlock_features_plan_unlimited_title">Darovat %d CNY pro odemknutí přírůstkových a ověřených aktualizací, stahování v plné rychlosti a odstranění reklam Google.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Darovat %d CNY pro odemknutí stahování v plné rychlosti, ověřených aktualizací a odstranění reklam Google.</string>
     <string name="unlock_features_request_summary">(k dispozici po darování %d CNY)</string>
     <string name="unlock_features_pending_summary">(darováno %1$d CNY, doživotně k dispozici po darování o %2$d CNY více)</string>
     <!-- Incremental Updates -->
@@ -83,6 +85,7 @@
     <string name="update_type_title">Typ aktualizace</string>
     <string name="update_type_release">Vydání</string>
     <string name="update_type_nightly">Nightly</string>
+    <string name="update_type_premium">Prémium</string>
     <!-- Donation Info -->
     <string name="donation_record_title">Záznam darování</string>
     <string name="donation_record_without_rank">Celkem jste darovali %1$d CNY.</string>

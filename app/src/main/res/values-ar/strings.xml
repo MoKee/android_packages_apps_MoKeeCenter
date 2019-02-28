@@ -85,6 +85,7 @@
     <string name="update_type_title">نوع التحديث</string>
     <string name="update_type_release">النهائية</string>
     <string name="update_type_nightly">النسخة الليلية</string>
+    <string name="update_type_premium">النسخة المتميزة</string>
     <!-- Donation Info -->
     <string name="donation_record_title">سجل التبرع</string>
     <string name="donation_record_without_rank">أنت تبرعت ما مجموعه %1$d CNY.</string>

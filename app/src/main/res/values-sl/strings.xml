@@ -21,6 +21,9 @@
     <string name="app_name">MoKee center</string>
     <string name="navigation_drawer_open">Odpri predal za krmarjenje</string>
     <string name="navigation_drawer_close">Zapri predal za krmarjenje</string>
+    <string name="nav_header_title">MoKee Open Source</string>
+    <string name="nav_header_subtitle">Operacijski sistem Android skupnosti</string>
+    <string name="nav_header_desc">Glava krmarjenja</string>
     <!-- Action -->
     <string name="action_faq">V&amp;O</string>
     <string name="action_solution">Rešitev</string>
@@ -28,6 +31,7 @@
     <string name="action_pause">Premor</string>
     <string name="action_resume">Nadaljuj</string>
     <string name="action_download">Prenesi</string>
+    <string name="action_reboot">Vnovično zaženi</string>
     <!-- Menu -->
     <string name="menu_preferences">Nastavitve</string>
     <string name="menu_restore">Obnovi</string>
@@ -67,8 +71,10 @@
     <!-- Unlock Features -->
     <string name="unlock_features_title">Odklenete funkcije</string>
     <string name="unlock_features_plan_a_title">Prispevajte %d CNY za odklep delnih posobobitv in prenos s polno hitrostjo.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Prispevajte %d CNY za odklep prenosa pri polni hitrosti.</string>
     <string name="unlock_features_plan_b_title">Prispevajte %d CNY za odklep preverjenih posodobitv in odstranjene Google oglase.</string>
     <string name="unlock_features_plan_unlimited_title">Prispevajte %d CNY za odklep delnih posobobitv, prenos s polno hitrostjo, preverjene posodobitve in odstranjeni Google oglasi.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Prispevajte %d CNY za odklep prenosa pri polni hitrosti, preverjenih posodobitev in odstranitev Google oglasov.</string>
     <string name="unlock_features_request_summary">(na voljo po prispevku %d CNY)</string>
     <string name="unlock_features_pending_summary">(prispevano %1$d CNY, če želite neomejeno uporabo, prispevajte še %2$d CNY)</string>
     <!-- Incremental Updates -->
@@ -79,6 +85,7 @@
     <string name="update_type_title">Tip posodobitve</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
+    <string name="update_type_premium">Premium</string>
     <!-- Donation Info -->
     <string name="donation_record_title">Zapis o prispevku</string>
     <string name="donation_record_without_rank">Skupno ste prispevali %1$d CNY.</string>
@@ -120,6 +127,12 @@
     <string name="download_already_running">Prenos se že izvaja</string>
     <string name="download_limited_mode">Prenos z omejeno hitrostjo, darujte 30 CNY za prenos s polno hitrostjo.</string>
     <!-- Install Status -->
+    <string name="install_already_running">Namestitev se že izvaja</string>
+    <string name="installing_update_notification">Nameščanje posodobitvenega paketa</string>
+    <string name="installing_update_finished_notification">Posodobitev nameščena</string>
+    <string name="finalizing_package_notification">Zaključevanje namestitve paketa</string>
+    <string name="preparing_ota_first_boot_notification">Priprava na prvi zagon</string>
+    <string name="dialog_prepare_zip_message_notification">Predhodna priprava posodobitve</string>
     <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Opozorilo</string>
     <string name="update_on_mobile_data_message">Ste pred prenosom posodobitvenega paketa z uporabo mobilnih podatkov, kar bo verjetno povzročilo visoko porabo podatkov. Ali želite nadaljevati?</string>

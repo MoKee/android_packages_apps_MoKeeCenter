@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- App Main -->
-    <string name="app_name">MoKee Merkezi</string>
+    <string name="app_name">MoKee merkezi</string>
     <string name="navigation_drawer_open">Gezinme çekmecesini aç</string>
     <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
     <string name="nav_header_title">MoKee Open Source</string>
@@ -71,8 +71,10 @@
     <!-- Unlock Features -->
     <string name="unlock_features_title">Özelliklerin kilidini aç</string>
     <string name="unlock_features_plan_a_title">Artımlı güncellemeleri açmak ve tam hızda indirmek için %d CNY\'ye bağış yapın.</string>
+    <string name="unlock_features_plan_a_abdevice_title">İndirme kilidini açmak için %d CNY bağış yapın.</string>
     <string name="unlock_features_plan_b_title">Doğrulanmış güncellemeler için %d CNY\'ye bağış yapın ve Google reklamlarını kaldırın.</string>
     <string name="unlock_features_plan_unlimited_title">Artımlı güncellemelerin kilidini açmak, tam hızla indirmek, Güncellemeleri güncellemek ve google reklamları kaldırmak için %d CNY\'ye bağış yapın.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">İndirmenin tam hızıyla kilidini açmak, güncellemeleri doğrulamak ve Google Reklamlarını kaldırmak için %d CNY bağış yapın.</string>
     <string name="unlock_features_request_summary">(%d CNY bağışta bulunulduğunda kullanılabilir)</string>
     <string name="unlock_features_pending_summary">(bağış %1$d CNY %2$d CNY daha bağış yaptıktan sonra ömür boyu kullanılabilir)</string>
     <!-- Incremental Updates -->
@@ -125,9 +127,9 @@
     <string name="download_limited_mode">Sınırlı hızda indiriliyor, tam hızın tadını çıkarmak için lütfen 30 CNY bağışında bulunun.</string>
     <!-- Install Status -->
     <string name="install_already_running">Bir yükleme zaten çalışıyor</string>
-    <string name="installing_update_notification">Güncelleştirme paketi yükleniyor</string>
-    <string name="installing_update_finished_notification">Güncelleştirme kuruldu</string>
-    <string name="finalizing_package_notification">Paket kurulumu tamamlanıyor</string>
+    <string name="installing_update_notification">Güncelleme paketi yükleniyor</string>
+    <string name="installing_update_finished_notification">Güncelleme yüklendi</string>
+    <string name="finalizing_package_notification">Paket yüklenimi tamamlanıyor</string>
     <string name="preparing_ota_first_boot_notification">İlk yüklemeye hazırlanıyor</string>
     <string name="dialog_prepare_zip_message_notification">Güncelleme ön hazırlığı</string>
     <!-- Mobile data -->

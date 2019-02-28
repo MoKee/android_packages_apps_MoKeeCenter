@@ -85,6 +85,7 @@
     <string name="update_type_title">Frissítés típusa</string>
     <string name="update_type_release">Kiadás</string>
     <string name="update_type_nightly">Napi (Nightly)</string>
+    <string name="update_type_premium">Prémium</string>
     <!-- Donation Info -->
     <string name="donation_record_title">Támogatási nyilvántartás</string>
     <string name="donation_record_without_rank">Ön összesen %1$d kínai jüant adományozott.</string>
