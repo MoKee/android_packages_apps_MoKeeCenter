@@ -59,7 +59,7 @@ public class UpdateTypePreference extends ListPreference {
             mMainPrefs.edit().putString(PREF_UPDATE_TYPE, configUpdateType).apply();
         }
 
-        if (donationInfo.isAdvanced()) {
+        if (donationInfo.isAdvanced() || suggestUpdateType == "3") {
             setEntries(resources.getStringArray(R.array.all_type_entries));
             setEntryValues(resources.getStringArray(R.array.all_type_values));
         } else {

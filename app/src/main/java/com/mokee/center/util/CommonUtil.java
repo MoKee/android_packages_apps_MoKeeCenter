@@ -26,6 +26,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.SystemProperties;
 import androidx.preference.PreferenceManager;
+
 import android.text.format.DateUtils;
 import android.util.Log;
 
@@ -49,6 +50,7 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
@@ -60,6 +62,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.zip.ZipFile;
 
+import static com.mokee.center.misc.Constants.ACTION_LICENSE_CHANGED;
 import static com.mokee.center.misc.Constants.ACTION_PAYMENT_REQUEST;
 
 public class CommonUtil {
@@ -103,6 +106,31 @@ public class CommonUtil {
         donationInfo.setPaid(getAmountPaid(context).intValue());
         donationInfo.setBasic(donationInfo.getPaid() >= Constants.DONATION_BASIC);
         donationInfo.setAdvanced(donationInfo.getPaid() >= Constants.DONATION_ADVANCED);
+        if (donationInfo.getPaid() > 0) {
+            try {
+                String[] license = splitToNChar(License.readLicense(Constants.LICENSE_FILE), 50);
+                SystemProperties.set(Constants.LICENSE_SPLIT_NUMS_PROPERTY, String.valueOf(license.length));
+                for (int i = 0; i < license.length; i++) {
+                    SystemProperties.set(Constants.LICENSE_SPLIT_PART_PROPERTY + i, license[i]);
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        } else {
+            SystemProperties.set(Constants.LICENSE_SPLIT_NUMS_PROPERTY, null);
+        }
+        Intent intent = new Intent(ACTION_LICENSE_CHANGED);
+        context.sendBroadcast(intent);
+    }
+
+    private static String[] splitToNChar(String text, int size) {
+        List<String> parts = new ArrayList<>();
+
+        int length = text.length();
+        for (int i = 0; i < length; i += size) {
+            parts.add(text.substring(i, Math.min(length, i + size)));
+        }
+        return parts.toArray(new String[0]);
     }
 
     public static Float getAmountPaid(Context context) {

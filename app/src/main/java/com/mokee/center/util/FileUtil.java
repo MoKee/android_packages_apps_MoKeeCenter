@@ -24,13 +24,17 @@ import android.util.Log;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.channels.FileChannel;
 import java.util.Enumeration;
 import java.util.Locale;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
 public class FileUtil {
+
+    private static final String TAG = "FileUtils";
 
     public static File getDownloadPath() {
         return new File(Environment.getExternalStorageDirectory(), "mokee_updates");
@@ -76,17 +80,31 @@ public class FileUtil {
     }
 
     public static boolean checkMd5(String md5, File file) {
-        try {
-            return TextUtils.equals(md5, calculateMd5(file));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return false;
+        return TextUtils.equals(md5, calculateMd5(file));
     }
 
-    public static String calculateMd5(File file) throws IOException {
-        FileInputStream inputSource = new FileInputStream(file);
-        return StreamUtil.calculateMd5(inputSource).toUpperCase(Locale.ENGLISH);
+    public static String calculateMd5(File file) {
+        try {
+            FileInputStream inputSource = new FileInputStream(file);
+            return StreamUtil.calculateMd5(inputSource).toUpperCase(Locale.ENGLISH);
+        } catch (Exception e) {
+            return null;
+        }
+    }
+
+
+    public static void copyFile(File sourceFile, File destFile)
+            throws IOException {
+        try (FileChannel sourceChannel = new FileInputStream(sourceFile).getChannel();
+             FileChannel destChannel = new FileOutputStream(destFile).getChannel()) {
+            destChannel.transferFrom(sourceChannel, 0, sourceChannel.size());
+        } catch (IOException e) {
+            Log.e(TAG, "Could not copy file", e);
+            if (destFile.exists()) {
+                destFile.delete();
+            }
+            throw e;
+        }
     }
 
 }
