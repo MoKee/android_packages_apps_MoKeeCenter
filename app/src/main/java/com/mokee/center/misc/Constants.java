@@ -47,8 +47,6 @@ public class Constants {
                     "dXik/DO+Kw6+q7nIZjTh4qpPL3Gyoa7A3MI01gTRKaM+MU2+zkiZND8qoB8EGlF6" +
                     "BfDfi9BLyFyx+nOTgz3KDEYutLJhopS18DfrdZTohNXsM7+MEsk5y+GHFjYHePXN" +
                     "oE4fjtfCg3xbtwU29wIDAQAB";
-    public static final String LICENSE_SPLIT_NUMS_PROPERTY = "persist.sys.license.split.nums";
-    public static final String LICENSE_SPLIT_PART_PROPERTY = "persist.sys.license.split.part.";
 
     // Donation
     public static final String DONATION_PREF = "DonationPrefs";
