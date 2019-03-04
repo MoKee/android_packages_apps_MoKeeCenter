@@ -19,6 +19,7 @@ package com.mokee.center.controller;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.os.PowerManager;
 import android.os.RecoverySystem;
 import android.os.SystemClock;
@@ -165,6 +166,9 @@ public class UpdaterController {
     }
 
     private boolean verifyPackage(File file) {
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.O_MR1) {
+            return true;
+        }
         try {
             RecoverySystem.verifyPackage(file, null, null);
             Log.e(TAG, "Verification successful");
