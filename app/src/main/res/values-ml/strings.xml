@@ -17,48 +17,28 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">മോക്കീ കേന്ദ്രം</string>
-    <!-- Action -->
-    <string name="action_next">&quot;അടുത്തത്&quot;</string>
+    <string name="action_next">"അടുത്തത്"</string>
     <string name="action_download">ഡൗൺലോഡ്</string>
-    <!-- Menu -->
     <string name="menu_restore">പുനസ്ഥാപിക്കുക</string>
     <string name="menu_refresh">പുതുക്കുക</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">മോക്കീ വേർഷൻ</string>
     <string name="unique_id_title">തിരിച്ചറിയൽ നമ്പർ</string>
     <string name="incremental_updates_title">ഇൻക്രിമെന്റൽ അപ്ഡേറ്റുകൾ</string>
     <string name="available_updates_title">ലഭ്യമായ അപ്ഡേറ്റുകൾ</string>
     <string name="no_available_updates_intro">അവസാന അന്വേഷണത്തിൽ പുതിയ അപ്ഡേറ്റുകൾ കണ്ടെത്താൻ കഴിഞ്ഞില്ല. സ്വയം അന്വേഷിക്കാനായി പുതുക്കക എന്ന ബട്ടൺ ഉപയോഗിക്കുക.</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_title">പരിഷ്കരിക്കുന്ന തരം</string>
     <string name="update_type_release">റിലീസ്</string>
     <string name="update_type_nightly">നെെറ്റ്ലി</string>
-    <!-- Donation Info -->
     <string name="donation_record_none">നിങ്ങൾ സംഭാവന നൽകിയിട്ടില്ല</string>
     <string name="donation_payment_success">സംഭാവന നൽകിയതിന് നന്ദി!</string>
-    <!-- Snackbar Update -->
     <string name="updates_check_failed">അപ്ഡേറ്റ് പരിശോധന പരാജയപ്പെട്ടു. നിങ്ങളുടെ ഇന്റർനെറ്റ് കണക്ഷൻ പരിശോധിച്ച് പിന്നീട് വീണ്ടും ശ്രമിക്കുക.</string>
-    <!-- Common -->
     <string name="unknown">ലഭ്യമല്ല</string>
     <string name="never">ഇതുവരെയില്ല</string>
     <string name="alipay">അലിപേ</string>
     <string name="paypal">പേപാൽ</string>
     <string name="activity_not_found">അപ്ലിക്കേഷൻ ഇൻസ്‌റ്റാളുചെ‌യ്‌തിട്ടില്ല.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">പുതിയ അപ്ഡേറ്റുകൾ</string>
-    <!-- Download Status -->
     <string name="download_already_running">ഒരു ഡൗൺലോഡ് ഇതിനകം പ്രവർത്തിക്കുന്നുണ്ട്</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">അപ്ഡേറ്റ് ചെയ്യുക</string>
 </resources>

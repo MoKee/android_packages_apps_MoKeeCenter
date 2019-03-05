@@ -17,34 +17,14 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee Markazi</string>
-    <!-- Action -->
-    <!-- Menu -->
     <string name="menu_refresh">Yangilash</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee Versiya</string>
     <string name="unique_id_title">Qurilma ID</string>
     <string name="available_updates_title">Mavjud yangilanishlar</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Tungi</string>
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="unknown">Ko`rsatilmagan</string>
     <string name="never">Hech qachon</string>
     <string name="activity_not_found">Ilova o‘rnatilmadi.</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

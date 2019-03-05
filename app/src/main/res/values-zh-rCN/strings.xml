@@ -17,14 +17,12 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">魔趣中心</string>
     <string name="navigation_drawer_open">开启导航抽屉</string>
     <string name="navigation_drawer_close">关闭导航抽屉</string>
     <string name="nav_header_title">魔趣开源项目</string>
     <string name="nav_header_subtitle">可能是中国最好的安卓开源ROM</string>
     <string name="nav_header_desc">导航标题</string>
-    <!-- Action -->
     <string name="action_faq">疑问解答</string>
     <string name="action_solution">解决方案</string>
     <string name="action_next">下一步</string>
@@ -32,32 +30,26 @@
     <string name="action_resume">继续</string>
     <string name="action_download">下载</string>
     <string name="action_reboot">重启</string>
-    <!-- Menu -->
     <string name="menu_preferences">首选项</string>
     <string name="menu_restore">恢复授权</string>
     <string name="menu_donation">捐赠</string>
     <string name="menu_unlock_features">功能解锁</string>
     <string name="menu_refresh">刷新</string>
     <string name="menu_delete_update">删除</string>
-    <!-- Preference -->
     <string name="pref_auto_delete_updates">删除已安装或过时的更新</string>
     <string name="pref_ab_perf_mode">更快的安装更新</string>
     <string name="pref_mobile_data_warning">移动数据警告</string>
-    <!-- Nav Main -->
     <string name="nav_main_forum_title">魔趣论坛</string>
     <string name="nav_main_guide_title">使用指南</string>
     <string name="nav_main_source_title">开源代码</string>
     <string name="nav_main_bug_reports_title">问题报告</string>
-    <!-- Nav Social -->
     <string name="nav_social_title">社交</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">新浪微博</string>
     <string name="nav_social_qqchat_title">QQ 群</string>
-    <!-- Nav Contribute -->
     <string name="nav_contribute_title">贡献</string>
     <string name="nav_contribute_code_title">提交代码</string>
     <string name="nav_contribute_translate_title">语言翻译</string>
-    <!-- Preference list -->
     <string name="mokee_version_title">魔趣版本</string>
     <string name="unique_id_title">设备标识</string>
     <string name="last_update_check_title">最后检查</string>
@@ -68,7 +60,6 @@
     <string name="available_updates_title">可用更新</string>
     <string name="no_available_updates_intro">最后一次检测并未找到可用的更新，请点击右上角的刷新按钮尝试手动检查更新。</string>
     <string name="pending_available_updates_intro">正在查找可用的更新</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">功能解锁</string>
     <string name="unlock_features_plan_a_title">捐赠 %d 元，解锁增量更新和高速下载。</string>
     <string name="unlock_features_plan_a_abdevice_title">捐赠 %d 元，解锁高速下载。</string>
@@ -77,16 +68,13 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">捐赠 %d 元，解锁高速下载、放心刷™并移除谷歌广告。</string>
     <string name="unlock_features_request_summary">（累计捐赠 %d 元激活选项）</string>
     <string name="unlock_features_pending_summary">（已捐赠 %1$d 元，再捐赠 %2$d 元激活选项）</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_not_support_summary">暂不支持增量更新到此版本</string>
     <string name="incremental_updates_supported_full_summary">开启增量更新可为您节省 %s 流量</string>
     <string name="incremental_updates_supported_ota_summary">与完整包相比可为您节省 %s 流量</string>
-    <!-- Update Type -->
     <string name="update_type_title">更新类型</string>
     <string name="update_type_release">正式版</string>
     <string name="update_type_nightly">每夜版</string>
     <string name="update_type_premium">优选版</string>
-    <!-- Donation Info -->
     <string name="donation_record_title">捐赠记录</string>
     <string name="donation_record_without_rank">您捐赠了 %d 元！</string>
     <string name="donation_record_with_rank">您捐赠了 %1$d 元，击败了全球 %2$s 的用户，排名第 %3$d！</string>
@@ -98,11 +86,9 @@
     <string name="donation_dialog_title">捐赠魔趣开源项目</string>
     <string name="donation_dialog_message">魔趣开源项目是民间非营利性组织，我们需要通过接收用户捐赠与展示谷歌广告的方式来维持运作。\n\n如果您愿意为我们做力所能及的捐赠，这将使我们有更多资金用于发展，开发更好用的ROM。\n\n您的捐赠将用作服务器、带宽、日常维护、技术升级、商业接口授权等各项开支。</string>
     <string name="donation_dialog_message_extra">捐赠完成后，我们会为您激活捐赠用户独享功能的永久使用权！</string>
-    <!-- Snackbar Update -->
     <string name="updates_found">找到新的更新</string>
     <string name="no_updates_found">没有找到新的更新</string>
     <string name="updates_check_failed">检查更新失败，请检查您的网络连接并稍后重试。</string>
-    <!-- Common -->
     <string name="text_copied">文本已复制到剪贴板。</string>
     <string name="unknown">未知</string>
     <string name="never">从未</string>
@@ -110,11 +96,9 @@
     <string name="wechat">微信</string>
     <string name="paypal">贝宝</string>
     <string name="activity_not_found">未安装该应用。</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">新的系统更新</string>
     <string name="new_updates_found_title">新的系统更新</string>
     <string name="ongoing_channel_title">正在下载</string>
-    <!-- Download Status -->
     <string name="downloading_notification">下载中</string>
     <string name="download_starting_notification">正在开始下载</string>
     <string name="download_paused_notification">下载已暂停</string>
@@ -126,21 +110,17 @@
     <string name="download_speed">%1$s, %2$s/秒</string>
     <string name="download_already_running">已有一个正在运行的下载</string>
     <string name="download_limited_mode">当前是限速下载模式，累计捐赠达到30元即可享受全速下载。</string>
-    <!-- Install Status -->
     <string name="install_already_running">已有一个正在运行的安装进程</string>
     <string name="installing_update_notification">正在安装更新包</string>
     <string name="installing_update_finished_notification">更新已安装</string>
     <string name="finalizing_package_notification">正在完成包安装</string>
     <string name="preparing_ota_first_boot_notification">正在为第一次启动进行准备</string>
     <string name="dialog_prepare_zip_message_notification">预备更新准备</string>
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">警告</string>
     <string name="update_on_mobile_data_message">您将要通过移动数据网络下载更新包，这可能会导致较大的数据用量。您确定要继续吗？</string>
     <string name="checkbox_mobile_data_warning">不再显示</string>
-    <!-- Battery check -->
     <string name="dialog_battery_low_title">低电量</string>
     <string name="dialog_battery_low_message_pct">电池电量过低，您需要至少 <xliff:g id="percent_discharging">%1$d</xliff:g>%% 的电量才能继续；如果正在充电，则需要 <xliff:g id="percent_charging">%2$d</xliff:g>%% 的电量才能继续。</string>
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">应用更新</string>
     <string name="apply_update_dialog_message">您将要更新到 <xliff:g id="update_name">%1$s</xliff:g>。\n\n如果您按下<xliff:g id="ok">%2$s</xliff:g>，您的设备将会重启到恢复模式并安装更新。\n\n注意：此功能需要一个兼容的恢复程序，否则您将需要手动安装更新。</string>
 </resources>

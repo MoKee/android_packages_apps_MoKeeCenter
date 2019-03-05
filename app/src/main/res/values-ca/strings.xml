@@ -17,55 +17,35 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Centre Mokee</string>
     <string name="navigation_drawer_open">Obre el calaix de navegació</string>
     <string name="navigation_drawer_close">Tanca el calaix de navegació</string>
-    <!-- Action -->
     <string name="action_next">Següent</string>
     <string name="action_pause">Posa en pausa</string>
     <string name="action_resume">Reprèn</string>
     <string name="action_download">Descarregar</string>
-    <!-- Menu -->
     <string name="menu_restore">Restaura</string>
     <string name="menu_refresh">Recarregar</string>
     <string name="menu_delete_update">Suprimeix</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">Versió MoKee</string>
     <string name="incremental_updates_title">OTA actualitzacions</string>
     <string name="incremental_updates_summary">Obtenir actualitzacions incrementals per estalviar temps de descàrrega i ample de banda</string>
     <string name="available_updates_title">Actualitzacions disponibles</string>
     <string name="no_available_updates_intro">La darrera vegada que s\'ha buscat no s\'ha trobat cap actualització disponible. Per buscar manualment noves actualitzacions, utilitza el botó Refresca.</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_title">Tipus d\'actualització</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
-    <!-- Donation Info -->
     <string name="donation_payment_success">Gràcies per la vostra donació!</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">No s\'han trobat noves actualitzacions</string>
     <string name="updates_check_failed">Ha fallat la comprovació d\'actualitzacions. Si us plau, verifiqueu la connexió d\'internet i comproveu una altra vegada.</string>
-    <!-- Common -->
     <string name="unknown">Desconeguda</string>
     <string name="never">Mai</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="paypal">PayPal(USD)</string>
     <string name="activity_not_found">L\'app no està instal·lada.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Noves actualitzacions</string>
-    <!-- Download Status -->
     <string name="download_already_running">Ja s\'està descarregant</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Alerta</string>
     <string name="checkbox_mobile_data_warning">No ho tornis a mostrar</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Aplica actualització</string>
 </resources>

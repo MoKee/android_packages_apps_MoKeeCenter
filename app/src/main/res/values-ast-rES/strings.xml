@@ -17,33 +17,13 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="navigation_drawer_open">Abrir caxón de navegación</string>
     <string name="navigation_drawer_close">Zarrar caxón de navegación</string>
-    <!-- Action -->
     <string name="action_next">Siguiente</string>
     <string name="action_pause">Posar</string>
     <string name="action_resume">Siguir</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Desaniciar</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="never">Enxamás</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Alvertencia</string>
     <string name="checkbox_mobile_data_warning">Nun amosar de nueves</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

@@ -17,51 +17,31 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee மையம்</string>
-    <!-- Action -->
-    <string name="action_next">&quot;அடுத்து&quot;</string>
+    <string name="action_next">"அடுத்து"</string>
     <string name="action_download">பதிவிறக்கம்</string>
-    <!-- Menu -->
     <string name="menu_restore">மீட்டெடுத்தல்</string>
     <string name="menu_refresh">புதுப்பி</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee பதிப்பு</string>
     <string name="unique_id_title">பிரத்யேக ID</string>
     <string name="incremental_updates_title">கூடுதல் மேம்படுத்தல்</string>
     <string name="incremental_updates_summary">பதிவிறக்க நேரத்தை மற்றும் அலைவரிசையை காப்பாற்ற கிடைக்கும் கூடுதல் மேம்படுத்தல்களை பயன்படுத்தவும்</string>
     <string name="available_updates_title">பெறக்கூடிய புதுப்பித்தல்</string>
     <string name="no_available_updates_intro">கடந்த சோதனை எந்த கிடைக்க மேம்படுத்தல்கள் கண்டுபிடிக்க முடியவில்லை. கைமுறையாக புதிய புதுப்பிப்புகளைப் பார்க்க, புதுப்பி பொத்தானை பயன்படுத்த வேண்டும்.</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_title">புதுப்பிக்க வகை</string>
     <string name="update_type_release">வெளியீடு</string>
     <string name="update_type_nightly">இரவில் நிகழ்கிற</string>
-    <!-- Donation Info -->
     <string name="donation_record_with_rank">நீங்கள் மொத்தம் CNY %1$d, உலகளவில் %2$s விட நன்கொடையாக கொடுக்கப்பட்டுள்ளது, அந்தஸ்து %3$d!</string>
     <string name="donation_record_none">நீங்கள் நன்கொடையாக இல்லை</string>
     <string name="donation_payment_success">உங்கள் நன்கொடை நன்றி!</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">புதிய மேம்படுத்தல்கள் இல்லை</string>
     <string name="updates_check_failed">மேம்படுத்தல் சோதனை தோல்வியுற்றது. உங்கள் இணைய இணைப்பைச் சரிபார்த்து, பிறகு மீண்டும் முயலவும்.</string>
-    <!-- Common -->
     <string name="unknown">அறியாத</string>
     <string name="never">ஒருபோதுமில்லை</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">செயலி நிறுவப்படவில்லை.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">புதிய மேம்பாடு</string>
-    <!-- Download Status -->
     <string name="download_already_running">பதிவிறக்கம் இயங்கிக்கொண்டிருக்கிறது</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">மேம்படுத்தல் விண்ணப்பிக்க</string>
 </resources>

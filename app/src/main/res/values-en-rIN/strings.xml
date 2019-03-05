@@ -17,39 +17,19 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee Center</string>
-    <!-- Action -->
     <string name="action_next">Next</string>
     <string name="action_download">Download</string>
-    <!-- Menu -->
     <string name="menu_refresh">Refresh</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee Version</string>
     <string name="available_updates_title">Available updates</string>
     <string name="no_available_updates_intro">The last check did not find any available updates. To manually check for new updates, use the Refresh button.</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
-    <!-- Donation Info -->
     <string name="donation_payment_success">Thank you for your donation!</string>
-    <!-- Snackbar Update -->
     <string name="updates_check_failed">The update check failed. Please check your internet connection and try again later.</string>
-    <!-- Common -->
     <string name="unknown">Unknown</string>
     <string name="never">Never</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

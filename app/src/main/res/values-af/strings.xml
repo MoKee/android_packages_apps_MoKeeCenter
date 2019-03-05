@@ -17,32 +17,12 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
-    <!-- Action -->
     <string name="action_next">Volgende</string>
     <string name="action_pause">Laat wag</string>
     <string name="action_resume">Hervat</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Vee uit</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="unknown">Onbekend</string>
     <string name="never">Nooit</string>
     <string name="activity_not_found">Program is nie geïnstalleer nie.</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Waarskuwing</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

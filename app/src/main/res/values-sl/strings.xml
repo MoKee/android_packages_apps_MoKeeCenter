@@ -17,14 +17,12 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee center</string>
     <string name="navigation_drawer_open">Odpri predal za krmarjenje</string>
     <string name="navigation_drawer_close">Zapri predal za krmarjenje</string>
     <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Operacijski sistem Android skupnosti</string>
     <string name="nav_header_desc">Glava krmarjenja</string>
-    <!-- Action -->
     <string name="action_faq">V&amp;O</string>
     <string name="action_solution">Rešitev</string>
     <string name="action_next">Naprej</string>
@@ -32,32 +30,26 @@
     <string name="action_resume">Nadaljuj</string>
     <string name="action_download">Prenesi</string>
     <string name="action_reboot">Vnovično zaženi</string>
-    <!-- Menu -->
     <string name="menu_preferences">Nastavitve</string>
     <string name="menu_restore">Obnovi</string>
     <string name="menu_donation">Prispevek</string>
     <string name="menu_unlock_features">Odklep funkcij</string>
     <string name="menu_refresh">Osveži</string>
     <string name="menu_delete_update">Izbriši</string>
-    <!-- Preference -->
     <string name="pref_auto_delete_updates">Izbriši nameščene ali opuščene posodobitve</string>
     <string name="pref_ab_perf_mode">Prednost posodobitvenemu procesu</string>
     <string name="pref_mobile_data_warning">Opozorilo, če ste na mobilnih podatkih</string>
-    <!-- Nav Main -->
     <string name="nav_main_forum_title">Forum</string>
     <string name="nav_main_guide_title">Vodič</string>
     <string name="nav_main_source_title">Izvorna koda</string>
     <string name="nav_main_bug_reports_title">Prijavljeni hrošči</string>
-    <!-- Nav Social -->
     <string name="nav_social_title">Družbena omrežja</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
     <string name="nav_social_qqchat_title">QQ skupine</string>
-    <!-- Nav Contribute -->
     <string name="nav_contribute_title">Sodelovanje</string>
     <string name="nav_contribute_code_title">Koda</string>
     <string name="nav_contribute_translate_title">Prevod</string>
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee različica</string>
     <string name="unique_id_title">Edinstven ID</string>
     <string name="last_update_check_title">Na zadnje preverjano</string>
@@ -68,7 +60,6 @@
     <string name="available_updates_title">Posodobitve na voljo</string>
     <string name="no_available_updates_intro">Ob zadnjem preverjanju ni bilo najdenih novih posodobitev. Da ročno preverite za posodobitve, uporabite gumb Osveži.</string>
     <string name="pending_available_updates_intro">Preverjam, če so na voljo posodobitve</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">Odklenete funkcije</string>
     <string name="unlock_features_plan_a_title">Prispevajte %d CNY za odklep delnih posobobitv in prenos s polno hitrostjo.</string>
     <string name="unlock_features_plan_a_abdevice_title">Prispevajte %d CNY za odklep prenosa pri polni hitrosti.</string>
@@ -77,16 +68,13 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">Prispevajte %d CNY za odklep prenosa pri polni hitrosti, preverjenih posodobitev in odstranitev Google oglasov.</string>
     <string name="unlock_features_request_summary">(na voljo po prispevku %d CNY)</string>
     <string name="unlock_features_pending_summary">(prispevano %1$d CNY, če želite neomejeno uporabo, prispevajte še %2$d CNY)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_not_support_summary">Delne posodobitve za to različico niso podprte.</string>
     <string name="incremental_updates_supported_full_summary">Delne posodobitve bi lahko prihranile %s</string>
     <string name="incremental_updates_supported_ota_summary">Prihrani %s v primerjavi z polnim ROM-om</string>
-    <!-- Update Type -->
     <string name="update_type_title">Tip posodobitve</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
     <string name="update_type_premium">Premium</string>
-    <!-- Donation Info -->
     <string name="donation_record_title">Zapis o prispevku</string>
     <string name="donation_record_without_rank">Skupno ste prispevali %1$d CNY.</string>
     <string name="donation_record_with_rank">Skupno ste prispevali CNY %1$d, več kot %2$s donatorjev v svetovnem merilu, uvrstitev št.%3$d!</string>
@@ -98,11 +86,9 @@
     <string name="donation_dialog_title">Prispevam k MoKee OpenSource</string>
     <string name="donation_dialog_message">MoKee Open Source je povsem neprofitni projekt, ki je nastal zaradi hobija in strasti. Da bi ohranili ta projekt, moramo večino časa prispevati svoj lasten denar ali se zanašati na donacije in oglase. Vaše donacije lahko pomagajo zmanjšati naše finančne obremenitve in ohraniti prihodnji razvoj!</string>
     <string name="donation_dialog_message_extra">Po prispevku bomo aktivirali določene funkcije, ki so na voljo samo donatorjem, doživljensko!</string>
-    <!-- Snackbar Update -->
     <string name="updates_found">Najdene so nove posodobitve</string>
     <string name="no_updates_found">Ni novih posodobitev</string>
     <string name="updates_check_failed">Preverjanje posodobitev spodletelo. Preverite povezavo z internetom in poskusite znova pozneje.</string>
-    <!-- Common -->
     <string name="text_copied">Besedilo je kopirano v odložišče.</string>
     <string name="unknown">Neznano</string>
     <string name="never">Nikoli</string>
@@ -110,11 +96,9 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikacija ni nameščena.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Nove posodobitve</string>
     <string name="new_updates_found_title">Nove posodobiteve sistema</string>
     <string name="ongoing_channel_title">Prenosi v teku</string>
-    <!-- Download Status -->
     <string name="downloading_notification">Prenešam</string>
     <string name="download_starting_notification">Začetek prenosa</string>
     <string name="download_paused_notification">Prenos začasno ustavljen</string>
@@ -126,21 +110,17 @@
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Prenos se že izvaja</string>
     <string name="download_limited_mode">Prenos z omejeno hitrostjo, darujte 30 CNY za prenos s polno hitrostjo.</string>
-    <!-- Install Status -->
     <string name="install_already_running">Namestitev se že izvaja</string>
     <string name="installing_update_notification">Nameščanje posodobitvenega paketa</string>
     <string name="installing_update_finished_notification">Posodobitev nameščena</string>
     <string name="finalizing_package_notification">Zaključevanje namestitve paketa</string>
     <string name="preparing_ota_first_boot_notification">Priprava na prvi zagon</string>
     <string name="dialog_prepare_zip_message_notification">Predhodna priprava posodobitve</string>
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Opozorilo</string>
     <string name="update_on_mobile_data_message">Ste pred prenosom posodobitvenega paketa z uporabo mobilnih podatkov, kar bo verjetno povzročilo visoko porabo podatkov. Ali želite nadaljevati?</string>
     <string name="checkbox_mobile_data_warning">Ne prikaži ponovno</string>
-    <!-- Battery check -->
     <string name="dialog_battery_low_title">Nizko stanje baterije</string>
     <string name="dialog_battery_low_message_pct">Raven napolnjenosti akumulatorja je prenizka, potrebnih je vsaj <xliff:g id="percent_discharging">%1$d</xliff:g>%% akumulatorja za nadaljevanje, ali <xliff:g id="percent_charging">%2$d</xliff:g>%% če se polni.</string>
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Uveljavi posodbitev</string>
     <string name="apply_update_dialog_message">Ste pred nadgradnjo na <xliff:g id="update_name">%1$s</xliff:g>.\n\nČe pritisnete <xliff:g id="ok">%2$s</xliff:g>, se bo naprava ponovno zagnala v obnovitvenem načinu, da se namesti posodobitev.\n\nOpomba: Ta funkcija zahteva združljivo obnovitev, drugače je potrebno posodobitv namestiti ročno.</string>
 </resources>

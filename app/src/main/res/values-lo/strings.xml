@@ -17,50 +17,30 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee Center</string>
-    <!-- Action -->
     <string name="action_next">ຕໍ່ໄປ</string>
     <string name="action_download">ດາວໂຫລດ</string>
-    <!-- Menu -->
     <string name="menu_restore">ຄືນຄ່າ</string>
     <string name="menu_refresh">ໂຫຼດໃໝ່</string>
     <string name="menu_delete_update">ລຶບ</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">ເວີຊັ່ນ MoKee</string>
     <string name="unique_id_title">Unique ID</string>
     <string name="verified_updates_title">ຢືນຢັນການອັບເດດ</string>
     <string name="verified_updates_summary">ສະແດງການອັບເດດທີ່ຢືນຢັນໂດຍຜູ້ໃຊ້ຄົນອື່ນເທົ່ານັ້ນ</string>
     <string name="available_updates_title">ການອັບເດດພ້ອມແລ້ວ</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">ປົດລ໋ອກຄວາມສາມາດ</string>
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_title">ຮູບແບບການອັບເດດ</string>
     <string name="update_type_release">ປ່ອຍ</string>
     <string name="update_type_nightly">ບໍ່ສົມບູນ</string>
-    <!-- Donation Info -->
     <string name="donation_payment_success">ຂອບໃຈສຳລັບການບໍລິຈາກ!</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">ບໍ່ພົບອັບເດດໃໝ່</string>
     <string name="updates_check_failed">ກວດສອບອັບເດດລົ້ມເຫລວ. ກະລຸນາກວດສອບອິນເຕີເນັດ ແລະ ລອງໃຫມ່.</string>
-    <!-- Common -->
     <string name="unknown">ບໍ່ຮູ້ຈັກ</string>
     <string name="never">ບໍ່ເຄີຍ</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">ແອັບຯບໍ່ໄດ້ຖືກຕິດຕັ້ງ.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">ອັບເດດໃຫມ່</string>
-    <!-- Download Status -->
     <string name="download_already_running">ກຳລັງດາວໂຫຼດຢູ່</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

@@ -17,30 +17,10 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee ცენტრი</string>
-    <!-- Action -->
     <string name="action_pause">პაუზა</string>
     <string name="action_resume">გაგრძელება</string>
-    <!-- Menu -->
     <string name="menu_delete_update">წაშლა</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="unknown">უცნობი</string>
     <string name="activity_not_found">აპი არ არის დაყენებული.</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

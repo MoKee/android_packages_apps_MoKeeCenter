@@ -17,24 +17,16 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee-keskus</string>
     <string name="navigation_drawer_open">Avaa navigointivalikko</string>
     <string name="navigation_drawer_close">Sulje navigointivalikko</string>
-    <!-- Action -->
     <string name="action_next">Seuraava</string>
     <string name="action_pause">Keskeytä</string>
     <string name="action_resume">Jatka</string>
     <string name="action_download">Lataa</string>
-    <!-- Menu -->
     <string name="menu_restore">Palauta</string>
     <string name="menu_refresh">Päivitä</string>
     <string name="menu_delete_update">Poista</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee-versio</string>
     <string name="unique_id_title">Yksilöllinen ID</string>
     <string name="incremental_updates_title">Inkrementaaliset päivitykset</string>
@@ -43,35 +35,23 @@
     <string name="verified_updates_summary">Näytä vain päivitykset, jotka muut käyttäjät ovat todentaneet</string>
     <string name="available_updates_title">Saatavilla olevat päivitykset</string>
     <string name="no_available_updates_intro">Viimeisin tarkistus ei löytänyt yhtään päivitystä. Tarkistaaksesi päivitykset, paina Päivitä.</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_title">Päivitystyyppi</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
-    <!-- Donation Info -->
     <string name="donation_record_with_rank">Lahjoitit yhteensä CNY %1$d enemmän kuin %2$s lahjoittajat maailmanlaajuisesti, sijoitus No.%3$d!</string>
     <string name="donation_record_none">Et ole lahjoittanut</string>
     <string name="donation_payment_success">Kiitos lahjoituksestasi!</string>
     <string name="donation_dialog_title">Lahjoita MoKee OpenSourcelle</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">Päivityksiä ei löytynyt</string>
     <string name="updates_check_failed">Päivitysten tarkistaminen epäonnistui. Tarkista internet-yhteytesi ja yritä uudelleen.</string>
-    <!-- Common -->
     <string name="unknown">Tuntematon</string>
     <string name="never">Ei koskaan</string>
     <string name="alipay">Alipay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Sovellusta ei ole asennettu.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Uudet päivitykset</string>
-    <!-- Download Status -->
     <string name="download_already_running">Lataus on jo käynnissä</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Varoitus</string>
     <string name="checkbox_mobile_data_warning">Älä näytä uudelleen</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Asenna päivitys</string>
 </resources>

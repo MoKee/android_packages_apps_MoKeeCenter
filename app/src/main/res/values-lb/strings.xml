@@ -17,27 +17,7 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
-    <!-- Action -->
     <string name="action_next">Weider</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Läschen</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="unknown">Onbekannt</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

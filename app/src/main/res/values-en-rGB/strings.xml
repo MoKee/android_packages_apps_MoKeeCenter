@@ -17,50 +17,30 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee Centre</string>
-    <!-- Action -->
     <string name="action_next">Next</string>
     <string name="action_download">Download</string>
-    <!-- Menu -->
     <string name="menu_restore">Restore</string>
     <string name="menu_refresh">Refresh</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee Version</string>
     <string name="unique_id_title">Unique ID</string>
     <string name="incremental_updates_title">Incremental updates</string>
     <string name="incremental_updates_summary">Get incremental updates to save download time and bandwidth</string>
     <string name="available_updates_title">Available updates</string>
     <string name="no_available_updates_intro">The last check did not find any available updates. To manually check for new updates, use the Refresh button.</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_title">Update type</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
-    <!-- Donation Info -->
     <string name="donation_record_with_rank">You donated a total of CNY %1$d, more than %2$s of donors globally, rank No.%3$d!</string>
     <string name="donation_record_none">You haven\'t donated</string>
     <string name="donation_payment_success">Thanks !</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">No new updates found</string>
     <string name="updates_check_failed">The update check failed. Please check your internet connection and try again later.</string>
-    <!-- Common -->
     <string name="unknown">Unknown</string>
     <string name="never">Never</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">New updates</string>
-    <!-- Download Status -->
     <string name="download_already_running">A download is already running</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Apply update</string>
 </resources>

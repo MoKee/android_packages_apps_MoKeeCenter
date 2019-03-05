@@ -17,45 +17,37 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Mokee ಕೇಂದ್ರ</string>
     <string name="navigation_drawer_open">ದಿಕ್ಸೂಚಿ ಡ್ರಾಯರ್ ತೆರೆಯಿರಿ</string>
     <string name="navigation_drawer_close">ದಿಕ್ಸೂಚಿ ಡ್ರಾಯರ್ ಮುಚ್ಚಿರಿ</string>
     <string name="nav_header_subtitle">ಅಂಡ್ರಾಯ್ಡ್ ಸಮುದಾಯ ಕಾರ್ಯನಿರ್ವಹಿಸುವ ವ್ಯವಸ್ಥೆ</string>
     <string name="nav_header_desc">ದಿಕ್ಸೂಚಿ ಪಟ್ಟಿ</string>
-    <!-- Action -->
     <string name="action_faq">ಪ್ರ&amp;ಉ</string>
     <string name="action_solution">ಪರಿಹಾರ</string>
     <string name="action_next">ಮುಂದಿನ</string>
     <string name="action_pause">ವಿರಮಿಸಿ</string>
     <string name="action_resume">ಮುಂದುವರಿಸಿ</string>
     <string name="action_download">ಡೌನ್‍ಲೋಡ್</string>
-    <!-- Menu -->
     <string name="menu_preferences">ಆದ್ಯತೆಗಳು</string>
     <string name="menu_restore">ಮರುಸಂಗ್ರಹಿಸಿ</string>
     <string name="menu_donation">ಕಾಣಿಕೆ</string>
     <string name="menu_unlock_features">ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ</string>
     <string name="menu_refresh">ಹೊಸತಾಗಿಸಿ</string>
     <string name="menu_delete_update">ಅಳಿಸು</string>
-    <!-- Preference -->
     <string name="pref_auto_delete_updates">ನವೀಕರಣಗಳನ್ನು ಅಳವಡಿಸಿದಾಗ ಅಥವಾ ತಡೆಹಿಡಿದಾಗ ಅಳಿಸು</string>
     <string name="pref_ab_perf_mode">ನವೀಕರಣ ಪ್ರಕ್ರಿಯೆ ಆದ್ಯತೆಕೊಡು</string>
     <string name="pref_mobile_data_warning">ಮೊಬೈಲ್ ಡೇಟಾ ಇದ್ದಲ್ಲಿ ಸೂಚಿಸು</string>
-    <!-- Nav Main -->
     <string name="nav_main_forum_title">ವೇದಿಕೆಗಳು</string>
     <string name="nav_main_guide_title">ಮಾರ್ಗದರ್ಶಿ</string>
     <string name="nav_main_source_title">ಮೂಲ ಕೊಡ್</string>
     <string name="nav_main_bug_reports_title">ದೋಷ ವರದಿಗಳು</string>
-    <!-- Nav Social -->
     <string name="nav_social_title">ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮ</string>
     <string name="nav_social_telegram_title">ಟೆಲಿಗ್ರಾಂ</string>
     <string name="nav_social_weibo_title">ವೆಬೊ</string>
     <string name="nav_social_qqchat_title">QQ ಗುಂಪು</string>
-    <!-- Nav Contribute -->
     <string name="nav_contribute_title">ಕಾಣಿಕೆ ನೀಡು</string>
     <string name="nav_contribute_code_title">ಕೊಡ್</string>
     <string name="nav_contribute_translate_title">ಅನುವಾದ</string>
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee ಆವೃತ್ತಿ</string>
     <string name="unique_id_title">ಏಕಮಾತ್ರ ಗುರುತು</string>
     <string name="last_update_check_title">ಕೊನೆಯ ಪರಿಶೀಲನೆ</string>
@@ -66,22 +58,18 @@
     <string name="available_updates_title">ಲಭ್ಯವಿರುವ ನವೀಕರಣಗಳು</string>
     <string name="no_available_updates_intro">ಕೊನೆಯ ಪರೀಕ್ಷೆಯು ಯಾವುದೇ ಲಭ್ಯವಿರುವ ನವೀಕರಣಗಳನ್ನು ಕಂಡು ಹಿಡಿದಿಲ್ಲ. ದೈಹಿಕವಾಗಿ ನೀವು ಹೊಸ ನವೀಕರಣಗಳನ್ನು ಪರೀಕ್ಷಿಸಲು ಮರುಹೊಸದಾಗಿಸಿ ಗುಂಡಿ ಬಳಸಿ.</string>
     <string name="pending_available_updates_intro">ಲಭ್ಯವಿರುವ ನವೀಕರಣಗಳಿಗೆ ಹುಡುಕಲಾಗುತ್ತಿದೆ</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ</string>
     <string name="unlock_features_plan_a_title">ಹೆಚ್ಚಿನ ನವೀಕರಣಗಳನ್ನು ಅನ್ ಲಾಕ್ ಮಾಡಲು ಮತ್ತು ಪೂರ್ಣ ವೇಗದಲ್ಲಿ ಡೌನ್ಲೋಡ್ ಮಾಡಲು %d CNY ಕಾಣಿಕೆ ನೀಡಿ.</string>
     <string name="unlock_features_plan_b_title">ಪರಿಶೀಲಿಸಿದ ನವೀಕರಣಗಳಿಗೆ ಮತ್ತು ಜಾಹೀರಾತುಗಳನ್ನು ತೆಗೆಯಲು %d CNY ಕಾಣಿಕೆ ನೀಡಿ.</string>
     <string name="unlock_features_plan_unlimited_title">ಹೆಚ್ಚಿನ ನವೀಕರಣಗಳನ್ನು ಅನ್ ಲಾಕ್ ಮಾಡಲು, ಪೂರ್ಣ ವೇಗದಲ್ಲಿ ಡೌನ್ಲೋಡ್ ಮಾಡಲು, ಪರಿಶೀಲಿಸಿದ ನವೀಕರಣಗಳನ್ನು ಮತ್ತು ಗೂಗಲ್ ಜಾಹೀರಾತುಗಳನ್ನು ತೆಗೆಯಲು %d CNY ಕಾಣಿಕೆ ನೀಡಿ.</string>
     <string name="unlock_features_request_summary">(%d CNY ಕಾಣಿಕೆ ನೀಡಿದ ನಂತರ ಲಭ್ಯವಿರುವುದು)</string>
     <string name="unlock_features_pending_summary">(%1$d CNY ಕಾಣಿಕೆ ನೀಡಿದ್ದೀರಿ. %2$d CNY ಅಥವಾ ಹೆಚ್ಚು ಕಾಣಿಕೆ ನೀಡಿದ ನಂತರ ಜೀವಮಾನಕ್ಕಾಗಿ ಲಭ್ಯವಿರುತ್ತದೆ)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_not_support_summary">ಈ ಆವೃತ್ತಿಗೆ ಹೆಚ್ಚಿನ ನವೀಕರಣಗಳು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.</string>
     <string name="incremental_updates_supported_full_summary">ಉನ್ನತ ನವೀಕರಣಗಳು %s ಉಳಿಸಬಹುದು</string>
     <string name="incremental_updates_supported_ota_summary">ಪೂರ್ಣ ROM ಗೆ ಹೋಲಿಕೆ ಮಾಡಿದಾಗ %s ಉಳಿಯುತ್ತದೆ</string>
-    <!-- Update Type -->
     <string name="update_type_title">ನವೀಕರಣ ಮಾದರಿ</string>
     <string name="update_type_release">ಬಿಡುಗಡೆ</string>
     <string name="update_type_nightly">ರಾತ್ರಿಯ</string>
-    <!-- Donation Info -->
     <string name="donation_record_title">ಕಾಣಿಕೆ ದಾಖಲೆ</string>
     <string name="donation_record_without_rank">ನೀವು ಒಟ್ಟು %1$d CNY ಕಾಣಿಕೆ ನೀಡಿದ್ದೀರಿ.</string>
     <string name="donation_record_with_rank">ನೀವು ಒಟ್ಟು CNY ನ %1$d, ವಿಶ್ವದಾದ್ಯಂತ %2$s ದಾನಿಗಳಿಗಿಂತ ಹೆಚ್ಚು ಕಾಣಿಕೆ ನೀಡಿದ್ದೀರಿ, ಶ್ರೇಣಿ ಸಂಖ್ಯೆ %3$d!</string>
@@ -92,11 +80,9 @@
     <string name="donation_payment_success">ನಿಮ್ಮ ಕಾಣಿಕೆಗೆ ಧನ್ಯವಾದಗಳು!</string>
     <string name="donation_dialog_title">MoKee Open Source ಗೆ ಕಾಣಿಕೆ ನೀಡಿ</string>
     <string name="donation_dialog_message_extra">ಕಾಣಿಕೆ ನೀಡಿದ ನಂತರ ನಾವು ಕೆಲವು ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಕಾಣಿಕೆ ನೀಡಿದವರಿಗೆ ಜೀವಮಾನಕ್ಕೆ ಸಕ್ರಿಯಗೊಳಿಸುತ್ತೇವೆ!</string>
-    <!-- Snackbar Update -->
     <string name="updates_found">ಹೊಸ ನವೀಕರಣಗಳು ಕಂಡುಬಂದಿವೆ</string>
     <string name="no_updates_found">ಯಾವುದೇ ಹೊಸ ನವೀಕರಣೆಗಳು ಕಂಡುಬಂದಿಲ್ಲ</string>
     <string name="updates_check_failed">ನವೀಕರಣೆ ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅಂತರ್ಜಾಲ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ನಂತರ ಪ್ರಯತ್ನಿಸಿ.</string>
-    <!-- Common -->
     <string name="text_copied">ಪಠ್ಯವನ್ನು ಕ್ಲಿಪ್‌ಬೋರ್ಡಿಗೆ ನಕಲಿಸಿದೆ.</string>
     <string name="unknown">ಅಪರಿಚಿತ</string>
     <string name="never">ಎಂದಿಗೂ</string>
@@ -104,11 +90,9 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">ಅಪ್ಲಿಕೇಶನ್‌ ಅನ್ನು ಸ್ಥಾಪಿಸಲಾಗಿಲ್ಲ</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">ಹೊಸ ನವೀಕರಣೆಗಳು</string>
     <string name="new_updates_found_title">ಹೊಸ ವ್ಯವಸ್ಥೆ ನವೀಕರಣಗಳು</string>
     <string name="ongoing_channel_title">ಪ್ರಗತಿಯಲ್ಲಿರುವ ಡೌನ್ಲೋಡ್ ಗಳು</string>
-    <!-- Download Status -->
     <string name="downloading_notification">ಡೌನ್ಲೋಡ್ ಮಾಡಲಾಗುತ್ತಿದೆ</string>
     <string name="download_starting_notification">ಡೌನ್‌ಲೋಡ್ ಪ್ರಾರಂಭಿಸಲಾಗುತ್ತಿದೆ</string>
     <string name="download_paused_notification">ಡೌನ್‌ಲೋಡ್‌ ವಿರಾಮಗೊಳಿಸಿದೆ</string>
@@ -117,10 +101,6 @@
     <string name="download_verification_failed_notification">ನವೀಕರಣ ಪ್ಯಾಕೇಜ್ ಪರಿಶೀಲನೆ ವಿಫಲಗೊಂಡಿದೆ, ದಯಮಾಡಿ ಮತ್ತೊಮ್ಮೆ ಡೌನ್ಲೋಡ್ ಮಾಡಿ</string>
     <string name="download_file_not_found_notification">ಡೌನ್ಲೋಡ್ ಲಿಂಕ್ ಅವಧಿ ಮುಗಿದುಹೋಗಿದೆ, ದಯವಿಟ್ಟು ಮರುಹೊಸದಾಗಿಸಿ ಗುಂಡಿಯನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ ಮತ್ತು ಇನ್ನೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
     <string name="download_already_running">ಒಂದು ಡೌನ್‍ಲೋಡ್ ಈಗಾಗಲೇ ಚಾಲನೆಯಲ್ಲಿದೆ</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">ಎಚ್ಚರಿಕೆ</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">ನವೀಕರಣ ಅನ್ವಯಿಸಿ</string>
 </resources>

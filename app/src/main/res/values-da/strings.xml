@@ -17,56 +17,36 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee Center</string>
     <string name="navigation_drawer_open">Åbn sidemenu</string>
     <string name="navigation_drawer_close">Luk sidemenu</string>
-    <!-- Action -->
     <string name="action_next">Næste</string>
     <string name="action_resume">Genoptag</string>
     <string name="action_download">Download</string>
-    <!-- Menu -->
     <string name="menu_restore">Gendan</string>
     <string name="menu_refresh">Opdatér</string>
     <string name="menu_delete_update">Slet</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee-version</string>
     <string name="unique_id_title">Unikt ID</string>
     <string name="incremental_updates_title">Trinvise opdateringer</string>
     <string name="incremental_updates_summary">Få trinvise opdateringer for at spare downloadtid og båndbredde</string>
     <string name="available_updates_title">Tilgængelige opdateringer</string>
     <string name="no_available_updates_intro">Sidste tjek fandt ingen tilgængelige opdateringer. Benyt knappen Opfrisk for manuelt at søge efter opdateringer.</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_title">Opdateringstype</string>
     <string name="update_type_release">Udgivelse</string>
     <string name="update_type_nightly">Natlige</string>
-    <!-- Donation Info -->
     <string name="donation_record_with_rank">Du donerede i alt CNY %1$d, mere end %2$s af donorerne globalt, rangering %3$d!</string>
     <string name="donation_record_none">Du ikke har doneret</string>
     <string name="donation_payment_success">Tak for dit bidrag!</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">Ingen nye opdateringer fundet</string>
     <string name="updates_check_failed">Opdateringstjek mislykkedes. Tjek venligst Internetforbindelsen, og forsøg igen senere.</string>
-    <!-- Common -->
     <string name="unknown">Ukendt</string>
     <string name="never">Aldrig</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Appen er ikke installeret.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Nye opdateringer</string>
-    <!-- Download Status -->
     <string name="download_already_running">En download er allerede i gang</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Advarsel</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Anvend opdatering</string>
 </resources>

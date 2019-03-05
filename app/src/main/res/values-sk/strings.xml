@@ -17,45 +17,37 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Mokee centrum</string>
     <string name="navigation_drawer_open">Otvoriť navigačný panel</string>
     <string name="navigation_drawer_close">Zavrieť navigačný panel</string>
     <string name="nav_header_subtitle">Komunitný operačný systém Android</string>
     <string name="nav_header_desc">Hlavička navigačného panela</string>
-    <!-- Action -->
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Riešenie</string>
     <string name="action_next">Ďalší</string>
     <string name="action_pause">Pozastaviť</string>
     <string name="action_resume">Pokračovať</string>
     <string name="action_download">Stiahnuť</string>
-    <!-- Menu -->
     <string name="menu_preferences">Nastavenia</string>
     <string name="menu_restore">Obnoviť</string>
     <string name="menu_donation">Príspevok</string>
     <string name="menu_unlock_features">Odomknúť funkcie</string>
     <string name="menu_refresh">Obnoviť</string>
     <string name="menu_delete_update">Vymazať</string>
-    <!-- Preference -->
     <string name="pref_auto_delete_updates">Vymazať nainštalované alebo zastarané aktualizácie</string>
     <string name="pref_ab_perf_mode">Uprednostniť proces aktualizácie</string>
     <string name="pref_mobile_data_warning">Upozorniť, ak na mobilných dátach</string>
-    <!-- Nav Main -->
     <string name="nav_main_forum_title">Fórum</string>
     <string name="nav_main_guide_title">Sprievodca</string>
     <string name="nav_main_source_title">Zdrojový kód</string>
     <string name="nav_main_bug_reports_title">Hlásenie chýb</string>
-    <!-- Nav Social -->
     <string name="nav_social_title">Sociálne siete</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
     <string name="nav_social_qqchat_title">Skupina QQ</string>
-    <!-- Nav Contribute -->
     <string name="nav_contribute_title">Prispieť</string>
     <string name="nav_contribute_code_title">Kód</string>
     <string name="nav_contribute_translate_title">Preklad</string>
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee verzia</string>
     <string name="unique_id_title">Unikátne ID</string>
     <string name="last_update_check_title">Posledná kontrola</string>
@@ -66,22 +58,18 @@
     <string name="available_updates_title">Dostupné aktualizácie</string>
     <string name="no_available_updates_intro">Poslednou kontrolou sa nenašli žiadne dostupné aktualizácie. Použite tlačidlo Obnoviť na ručnú kontrolu nových aktualizácií.</string>
     <string name="pending_available_updates_intro">Vyhľadávam dostupné aktualizácie</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">Odomknúť funkcie</string>
     <string name="unlock_features_plan_a_title">Prispejte %d CNY na odomknutie prírastkových aktualizácii a sťahovania v plnej rýchlosti.</string>
     <string name="unlock_features_plan_b_title">Prispejte %d CNY pre overené aktualizácie a odstránenie reklám Google.</string>
     <string name="unlock_features_plan_unlimited_title">Prispejte %d CNY na odomknutie prírastkových aktualizácii, sťahovania v plnej rýchlosti, overených aktualizácii a odstránenie reklám Google.</string>
     <string name="unlock_features_request_summary">(k dispozícii po darovaní %d CNY)</string>
     <string name="unlock_features_pending_summary">(darované %1$d CNY, k dispozícii doživotne po darovaní o %2$d CNY viac)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_not_support_summary">Prírastkové aktualizácie tejto verzie nie sú podporované.</string>
     <string name="incremental_updates_supported_full_summary">Prírastkové aktualizácie môžu ušetriť %s</string>
     <string name="incremental_updates_supported_ota_summary">Ušetrí %s v porovnaní s plnou ROM</string>
-    <!-- Update Type -->
     <string name="update_type_title">Typ aktualizácie</string>
     <string name="update_type_release">Vydanie</string>
     <string name="update_type_nightly">Nočná</string>
-    <!-- Donation Info -->
     <string name="donation_record_title">Zoznam príspevkov</string>
     <string name="donation_record_without_rank">Prispeli ste celkovo %1$d CNY.</string>
     <string name="donation_record_with_rank">Darovali ste  celkom CNY %1$d, viac než %2$s darcov celkom, hodnotenie No.%3$d!</string>
@@ -93,11 +81,9 @@
     <string name="donation_dialog_title">Podporte MoKee OpenSource</string>
     <string name="donation_dialog_message">MoKee Open Source je čisto neziskový projekt zrodený z hobby a vášne. Aby sme mohli tento projekt udržiavať, musíme väčšinu času využívať vlastné peniaze, alebo sa spoliehať na príspevky a reklamy. Vaše príspevky nám môžu pomôcť znížiť naše finančné zaťaženie a udržať budúci vývoj!</string>
     <string name="donation_dialog_message_extra">Po prispení vám aktivujeme niektoré funkcie dostupné iba pre darcov, už navždy!</string>
-    <!-- Snackbar Update -->
     <string name="updates_found">Našli sa nové aktualizácie</string>
     <string name="no_updates_found">Nenašli sa žiadne nové aktualizácie</string>
     <string name="updates_check_failed">Kontrola aktualizácií zlyhala. Skontrolujte prosím svoje internetové pripojenie a skúste to znova neskôr.</string>
-    <!-- Common -->
     <string name="text_copied">Text skopírovaný do schránky.</string>
     <string name="unknown">Neznáme</string>
     <string name="never">Nikdy</string>
@@ -105,11 +91,9 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">Paypal</string>
     <string name="activity_not_found">Aplikácia nie je nainštalovaná.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Nové aktualizácie</string>
     <string name="new_updates_found_title">Nové systémové aktualizácie</string>
     <string name="ongoing_channel_title">Prebiehajúce sťahovania</string>
-    <!-- Download Status -->
     <string name="downloading_notification">Sťahuje sa</string>
     <string name="download_starting_notification">Spúšťam sťahovanie</string>
     <string name="download_paused_notification">Sťahovanie pozastavené</string>
@@ -121,15 +105,11 @@
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Sťahovanie je už spustené</string>
     <string name="download_limited_mode">Sťahovanie obmedzenou rýchlosťou, prosím prispejte 30 CNY pre povolenie plnej rýchlosti.</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Upozornenie</string>
     <string name="update_on_mobile_data_message">Chystáte sa stiahnuť aktualizáciu pomocou mobilných dát, čo pravdepodobne zapríčiní veľkú spotrebu mobilných dát. Prajete si pokračovať?</string>
     <string name="checkbox_mobile_data_warning">Už nezobrazovať</string>
-    <!-- Battery check -->
     <string name="dialog_battery_low_title">Slabá batéria</string>
     <string name="dialog_battery_low_message_pct">Úroveň nabitia batérie je príliš nízka, budete potrebovať aspoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% batérie na pokračovanie, <xliff:g id="percent_charging">%2$d</xliff:g>%% pri nabíjaní.</string>
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Aplikovať aktualizáciu</string>
     <string name="apply_update_dialog_message">Chystáte sa aktualizovať na <xliff:g id="update_name">%1$s</xliff:g>.\n\nAk stlačíte <xliff:g id="ok">%2$s</xliff:g>, zariadenie sa reštartuje do recovery režimu na inštaláciu aktualizácie.\n\nPoznámka: Táto funkcia vyžaduje kompatibilné Recovery alebo treba aktualizácie nainštalovať ručne.</string>
 </resources>

@@ -17,24 +17,16 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Центр MoKee</string>
     <string name="navigation_drawer_open">Відкрити навігаційну панель</string>
     <string name="navigation_drawer_close">Закрити навігаційну панель</string>
-    <!-- Action -->
     <string name="action_solution">Рішення</string>
     <string name="action_next">Далі</string>
     <string name="action_resume">Продовжити</string>
     <string name="action_download">Завантажити</string>
-    <!-- Menu -->
     <string name="menu_restore">Відновити</string>
     <string name="menu_refresh">Оновити</string>
     <string name="menu_delete_update">Видалити</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">Версія MoKee</string>
     <string name="unique_id_title">Унікальний ідентифікатор</string>
     <string name="incremental_updates_title">OTA оновлення</string>
@@ -43,41 +35,29 @@
     <string name="verified_updates_summary">Показувати лише оновлення, підтверджені іншими користувачами</string>
     <string name="available_updates_title">Доступні оновлення</string>
     <string name="no_available_updates_intro">Остання перевірка не виявила доступних оновлень. Щоб перевірити наявність оновлень вручну, натисніть кнопку \"Оновити\".</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">Розблокувати більше можливостей</string>
     <string name="unlock_features_request_summary">(доступні після пожертвування %d CNY)</string>
     <string name="unlock_features_pending_summary">(пожертвувані %1$d CNY, доступні для життя післи жертви в %2$d CNY, або більше)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_supported_full_summary">Інкрементне оновлення може зекономити %s</string>
     <string name="incremental_updates_supported_ota_summary">Зберігає %s у порівнянні з повним пакетом прошивки</string>
-    <!-- Update Type -->
     <string name="update_type_title">Тип оновлення</string>
     <string name="update_type_release">Реліз</string>
     <string name="update_type_nightly">Нічна</string>
-    <!-- Donation Info -->
     <string name="donation_record_with_rank">Ви пожертвували всього CNY %1$d, це більше, ніж %2$s людей всього, Ваш рейтинг %3$d!</string>
     <string name="donation_record_none">Ви не пожертвували</string>
     <string name="donation_payment_success">Дякуємо вам за ваш внесок!</string>
     <string name="donation_dialog_title">Пожертвувати MoKee Open Source</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">Оновлень не знайдено</string>
     <string name="updates_check_failed">Не вдалося перевірити оновлення. Будь-ласка, перевірте підключення до Інтернету і повторіть спробу пізніше.</string>
-    <!-- Common -->
     <string name="unknown">Невідомо</string>
     <string name="never">Ніколи</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Додаток видалено.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Нові оновлення</string>
-    <!-- Download Status -->
     <string name="download_already_running">Завантаження вже відбувається</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Попередження</string>
     <string name="checkbox_mobile_data_warning">Не показувати знову</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Застосувати оновлення</string>
 </resources>

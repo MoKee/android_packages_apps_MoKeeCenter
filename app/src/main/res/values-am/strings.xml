@@ -17,29 +17,9 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
-    <!-- Action -->
     <string name="action_pause">ለአፍታ አቁም</string>
     <string name="action_resume">ከቆመብት ቀጥል</string>
-    <!-- Menu -->
     <string name="menu_delete_update">ሰርዝ</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="unknown">ያልታወቀ</string>
     <string name="activity_not_found">መተግበሪያ አልተጫነም።</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

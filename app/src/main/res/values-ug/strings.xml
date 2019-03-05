@@ -17,32 +17,12 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKeeمەركىزى</string>
-    <!-- Action -->
     <string name="action_next">كېيىنكى</string>
-    <!-- Menu -->
     <string name="menu_refresh">يېڭىلاڭ</string>
     <string name="menu_delete_update">ئۆچۈر</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="unique_id_title">بىردىنبىر كىملىك</string>
     <string name="available_updates_title">ئىشلىتىلىشچان يېڭىلاشلار</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="unknown">نامەلۇم</string>
     <string name="never">ھەرگىز</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

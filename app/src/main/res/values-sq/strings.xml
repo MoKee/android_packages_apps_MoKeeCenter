@@ -17,31 +17,11 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Mokee مركز</string>
-    <!-- Action -->
     <string name="action_next">Vazhdo</string>
     <string name="action_pause">Ndërprit</string>
     <string name="action_resume">Rifillo</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Fshi</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="activity_not_found">Aplikacioni nuk është i instaluar.</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Kujdes</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

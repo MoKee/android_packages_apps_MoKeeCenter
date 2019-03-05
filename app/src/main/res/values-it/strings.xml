@@ -17,14 +17,12 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Centro Mokee</string>
     <string name="navigation_drawer_open">Apri navigation drawer</string>
     <string name="navigation_drawer_close">Chiudi navigation drawer</string>
     <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Sistema operativo della comunità Android</string>
     <string name="nav_header_desc">Intestazione di navigazione</string>
-    <!-- Action -->
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Soluzione</string>
     <string name="action_next">Successivo</string>
@@ -32,32 +30,26 @@
     <string name="action_resume">Riprendi</string>
     <string name="action_download">Download</string>
     <string name="action_reboot">Riavvio</string>
-    <!-- Menu -->
     <string name="menu_preferences">Preferenze</string>
     <string name="menu_restore">Ripristina</string>
     <string name="menu_donation">Donazione</string>
     <string name="menu_unlock_features">Sblocca funzioni</string>
     <string name="menu_refresh">Aggiorna</string>
     <string name="menu_delete_update">Elimina</string>
-    <!-- Preference -->
     <string name="pref_auto_delete_updates">Eliminare gli aggiornamenti quando installati o deprecati</string>
     <string name="pref_ab_perf_mode">Dare priorità al processo di aggiornamento</string>
     <string name="pref_mobile_data_warning">Avviso se su dati mobili</string>
-    <!-- Nav Main -->
     <string name="nav_main_forum_title">Forum</string>
     <string name="nav_main_guide_title">Guida</string>
     <string name="nav_main_source_title">Codice Sorgente</string>
     <string name="nav_main_bug_reports_title">Segnalazioni errori</string>
-    <!-- Nav Social -->
     <string name="nav_social_title">Social Media</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
     <string name="nav_social_qqchat_title">Gruppo QQ</string>
-    <!-- Nav Contribute -->
     <string name="nav_contribute_title">Contribuire</string>
     <string name="nav_contribute_code_title">Codice</string>
     <string name="nav_contribute_translate_title">Traduzione</string>
-    <!-- Preference list -->
     <string name="mokee_version_title">Versione Mokee</string>
     <string name="unique_id_title">ID Univoco</string>
     <string name="last_update_check_title">Ultimo controllo</string>
@@ -68,22 +60,18 @@
     <string name="available_updates_title">Aggiornamenti disponibili</string>
     <string name="no_available_updates_intro">L\'ultimo controllo non ha trovato aggiornamenti disponibili. Per verificare manualmente nuovi aggiornamenti, usa il pulsante Aggiorna.</string>
     <string name="pending_available_updates_intro">Cercando aggiornamenti disponibili</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">Sblocca altre funzioni</string>
     <string name="unlock_features_plan_a_title">Dona %d CNY per sbloccare aggiornamenti incrementali e scaricare a tutta velocità.</string>
     <string name="unlock_features_plan_b_title">Dona %d CNY per gli aggiornamenti verificati e rimuovere Annunci Google.</string>
     <string name="unlock_features_plan_unlimited_title">Dona %d CNY per sbloccare aggiornamenti incrementali, scaricare a tutta velocità, aggiornamenti verificati e rimuovere annunci Google.</string>
     <string name="unlock_features_request_summary">(disponibile dopo la donazione %d CNY)</string>
     <string name="unlock_features_pending_summary">(Donato %1$d CNY, disponibile per tutta la vita dopo la donazione più di %2$d CNY)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_not_support_summary">Gli aggiornamenti incrementali di questa versione non sono supportati.</string>
     <string name="incremental_updates_supported_full_summary">Gli aggiornamenti incrementali possono salvare %s</string>
     <string name="incremental_updates_supported_ota_summary">Risparmio del %s se comparato alla ROM completa</string>
-    <!-- Update Type -->
     <string name="update_type_title">Tipo di aggiornamento</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
-    <!-- Donation Info -->
     <string name="donation_record_title">Record di donazione</string>
     <string name="donation_record_without_rank">Hai donato un totale di %1$d CNY.</string>
     <string name="donation_record_with_rank">Hai donato un totale di %1$d, più del %2$s dei donatori a livello mondiale, posizione No. %3$d!</string>
@@ -95,11 +83,9 @@
     <string name="donation_dialog_title">Dona a Mokee Opensource</string>
     <string name="donation_dialog_message">MoKee Open Source è un progetto puramente no-profit nato dall\'hobby e dalla passione. Per mantenere questo progetto, dobbiamo spendere i nostri soldi la maggior parte del tempo o fare affidamento su donazioni e pubblicità. Le tue donazioni possono aiutare a ridurre il nostro carico finanziario e sostenere lo sviluppo futuro!</string>
     <string name="donation_dialog_message_extra">Dopo la donazione, attiveremo determinate funzionalità che sono disponibili solo per i donatori a vita!</string>
-    <!-- Snackbar Update -->
     <string name="updates_found">Nuovi aggiornamenti trovati</string>
     <string name="no_updates_found">Nessun nuovo aggiornamento trovato</string>
     <string name="updates_check_failed">Controllo degli aggiornamenti non riuscito. Controlla la connessione ad internet e riprova.</string>
-    <!-- Common -->
     <string name="text_copied">Testo copiato negli appunti.</string>
     <string name="unknown">Sconosciuto</string>
     <string name="never">Mai</string>
@@ -107,11 +93,9 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">L\'app non è installata.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Nuovi aggiornamenti</string>
     <string name="new_updates_found_title">Nuovi aggiornamenti del sistema</string>
     <string name="ongoing_channel_title">Download in corso</string>
-    <!-- Download Status -->
     <string name="downloading_notification">Download in corso</string>
     <string name="download_starting_notification">Avvio download</string>
     <string name="download_paused_notification">Download in pausa</string>
@@ -123,21 +107,17 @@
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Un download è già in corso</string>
     <string name="download_limited_mode">Scaricando a velocità limitata, ti preghiamo di donare 30 CNY per goderti la massima velocità.</string>
-    <!-- Install Status -->
     <string name="install_already_running">Una installazione è già in esecuzione</string>
     <string name="installing_update_notification">Installazione del pacchetto aggiornamento</string>
     <string name="installing_update_finished_notification">Aggiornamento installato</string>
     <string name="finalizing_package_notification">Finalizzalizzazione del pachetto d\'installazione in corso</string>
     <string name="preparing_ota_first_boot_notification">Preparazione per il primo avvio</string>
     <string name="dialog_prepare_zip_message_notification">Preparazione aggiornamento preliminare</string>
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Caldi</string>
     <string name="update_on_mobile_data_message">Stai per scaricare un pacchetto di aggiornamento utilizzando dati mobili che probabilmente causerà un utilizzo elevato dei dati. Vuoi continuare?</string>
     <string name="checkbox_mobile_data_warning">Non mostrare più</string>
-    <!-- Battery check -->
     <string name="dialog_battery_low_title">Batteria scarica</string>
     <string name="dialog_battery_low_message_pct">Il livello della batteria è troppo basso, è necessario almeno <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria per continuare, <xliff:g id="percent_charging">%2$d</xliff:g>%% se in carica.</string>
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Applica l\'aggiornamento</string>
     <string name="apply_update_dialog_message">Stai per eseguire l\'upgrade a <xliff:g id="update_name">%1$s</xliff:g>.\n\n Se premi <xliff:g id="ok">%2$s</xliff:g> il dispositivo si riavvierà da solo in modalità di ripristino per installare l\'aggiornamento.\n\nNota: questa funzione richiede una Recovery compatibile o gli aggiornamenti dovranno essere installati manualmente.</string>
 </resources>

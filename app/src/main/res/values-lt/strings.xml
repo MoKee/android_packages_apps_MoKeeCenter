@@ -17,39 +17,19 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee centras</string>
     <string name="navigation_drawer_open">Atidaryti navigacijos stalčių</string>
     <string name="navigation_drawer_close">Uždaryti navigacijos stalčių</string>
-    <!-- Action -->
     <string name="action_next">Kitas</string>
     <string name="action_download">Atsisiųsti</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Ištrinti</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee versija</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_release">Leidimas</string>
     <string name="update_type_nightly">MoKee naktinė versija</string>
-    <!-- Donation Info -->
     <string name="donation_payment_success">Dėkojame jums už paramą!</string>
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="unknown">Nežinoma</string>
     <string name="never">Niekada</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Programa neįdiegta.</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

@@ -17,46 +17,38 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Pusat MoKee</string>
     <string name="navigation_drawer_open">Buka navigasi rinci</string>
     <string name="navigation_drawer_close">Tutup navigasi rinci</string>
     <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Komunitas Sistem Operasi Android</string>
     <string name="nav_header_desc">Header navigasi</string>
-    <!-- Action -->
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Solusi</string>
     <string name="action_next">Berikutnya</string>
     <string name="action_pause">Jeda</string>
     <string name="action_resume">Lanjutkan</string>
     <string name="action_download">Unduh</string>
-    <!-- Menu -->
     <string name="menu_preferences">Preferensi</string>
     <string name="menu_restore">Pulihkan</string>
     <string name="menu_donation">Donasi</string>
     <string name="menu_unlock_features">Buka fitur</string>
     <string name="menu_refresh">Segarkan</string>
     <string name="menu_delete_update">Hapus</string>
-    <!-- Preference -->
     <string name="pref_auto_delete_updates">Hapus pembaruan ketika diinstal atau usang</string>
     <string name="pref_ab_perf_mode">Prioritaskan proses pembaruan</string>
     <string name="pref_mobile_data_warning">Peringatan jika pada data seluler</string>
-    <!-- Nav Main -->
     <string name="nav_main_forum_title">Forum</string>
     <string name="nav_main_guide_title">Panduan</string>
     <string name="nav_main_source_title">Kode Sumber</string>
     <string name="nav_main_bug_reports_title">Laporkan Masalah</string>
-    <!-- Nav Social -->
     <string name="nav_social_title">Media Sosial</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
     <string name="nav_social_qqchat_title">QQ Group</string>
-    <!-- Nav Contribute -->
     <string name="nav_contribute_title">Berkontribusi</string>
     <string name="nav_contribute_code_title">Kode</string>
     <string name="nav_contribute_translate_title">Terjemahan</string>
-    <!-- Preference list -->
     <string name="mokee_version_title">Versi MoKee</string>
     <string name="unique_id_title">ID Unik</string>
     <string name="last_update_check_title">Pemeriksaan terakhir</string>
@@ -67,22 +59,18 @@
     <string name="available_updates_title">Pembaruan tersedia</string>
     <string name="no_available_updates_intro">Pemeriksaan tidak menemukan adanya pembaruan tersedia. Untuk memeriksa secara manual pembaruan terkini, gunakan tombol Segarkan.</string>
     <string name="pending_available_updates_intro">Mencari pembaruan yang tersedia</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">Buka fitur</string>
     <string name="unlock_features_plan_a_title">Donasi %d CNY untuk membuka pembaruan tambahan dan mengunduh dengan kecepatan penuh.</string>
     <string name="unlock_features_plan_b_title">Donasikan %d CNY untuk pembaruan terverifikasi dan hapus Iklan Google.</string>
     <string name="unlock_features_plan_unlimited_title">Donasikan %d CNY untuk membuka pembaruan bertahap, unduh dengan kecepatan penuh, pembaruan terverifikasi, dan hapus Iklan Google.</string>
     <string name="unlock_features_request_summary">(tersedia setelah donasi %d CNY)</string>
     <string name="unlock_features_pending_summary">(donasikan %1$d CNY, tersedia untuk seumur hidup setelah donasi %2$d CNY lebih)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_not_support_summary">Pembaruan bertahap untuk versi ini tidak didukung.</string>
     <string name="incremental_updates_supported_full_summary">Pembaruan inkremental bisa menghemat %s</string>
     <string name="incremental_updates_supported_ota_summary">Hemat %s bila dibandingkan dengan full ROM</string>
-    <!-- Update Type -->
     <string name="update_type_title">Tipe pembaruan</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
-    <!-- Donation Info -->
     <string name="donation_record_title">Catatan donasi</string>
     <string name="donation_record_without_rank">Anda menyumbangkan total %1$d CNY.</string>
     <string name="donation_record_with_rank">Total donasi anda CNY %1$d, lebih dari %2$s dari para donatur global, peringkat No.%3$d!</string>
@@ -94,11 +82,9 @@
     <string name="donation_dialog_title">Donasi untuk MoKee Open Source</string>
     <string name="donation_dialog_message">Open Source MoKee adalah proyek murni nirlaba yang lahir dari hobi dan keinginan. Untuk mempertahankan proyek ini, kita harus membayar sebagian besar uang kita sendiri atau mengandalkan sumbangan dan iklan. Sumbangan Anda dapat membantu mengurangi beban keuangan kami dan mempertahankan pengembangan di masa depan!</string>
     <string name="donation_dialog_message_extra">Setelah menyumbang, kami akan mengaktifkan fitur-fitur tertentu yang hanya tersedia untuk para donatur seumur hidup!</string>
-    <!-- Snackbar Update -->
     <string name="updates_found">Pembaruan baru ditemukan</string>
     <string name="no_updates_found">Tidak ada pembaruan baru ditemukan</string>
     <string name="updates_check_failed">Pemeriksaan pembaruan gagal. Silakan periksa koneksi internet anda dan coba lagi nanti.</string>
-    <!-- Common -->
     <string name="text_copied">Teks disalin ke clipboard.</string>
     <string name="unknown">Tidak diketahui</string>
     <string name="never">Tidak pernah</string>
@@ -106,11 +92,9 @@
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikasi tidak dipasang.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Pembaruan baru</string>
     <string name="new_updates_found_title">Pembaruan sistem baru</string>
     <string name="ongoing_channel_title">Pengunduhan sedang berlangsung</string>
-    <!-- Download Status -->
     <string name="downloading_notification">Mengunduh</string>
     <string name="download_starting_notification">Memulai unduhan</string>
     <string name="download_paused_notification">Unduhan dijeda</string>
@@ -122,15 +106,11 @@
     <string name="download_speed">%1$s, %2$s/d</string>
     <string name="download_already_running">Unduhan sedang berjalan</string>
     <string name="download_limited_mode">Mengunduh dengan kecepatan terbatas, silakan menyumbang 30 CNY untuk menikmati kecepatan penuh.</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Peringatan</string>
     <string name="update_on_mobile_data_message">Anda akan mengunduh paket pembaruan menggunakan data seluler yang kemungkinan akan menyebabkan penggunaan data tinggi. Apakah Anda ingin melanjutkan?</string>
     <string name="checkbox_mobile_data_warning">Jangan tampilkan lagi</string>
-    <!-- Battery check -->
     <string name="dialog_battery_low_title">Baterai lemah</string>
     <string name="dialog_battery_low_message_pct">Baterai terlalu rendah, Anda memerlukan setidaknya <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterai untuk melanjutkan, <xliff:g id="percent_charging">%2$d</xliff:g>%% jika saat pengisian.</string>
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Terapkan pembaruan</string>
     <string name="apply_update_dialog_message">Anda akan meningkatkan ke <xliff:g id="update_name">%1$s</xliff:g>.\n\nJika Anda menekan <xliff:g id="ok">%2$s</xliff:g>, perangkat akan mulai ulang sendiri dalam mode recovery untuk memasang pembaruan.\n\nCatatan: Fitur ini memerlukan Recovery yang kompatibel atau pembaruan perlu dipasang secara manual.</string>
 </resources>

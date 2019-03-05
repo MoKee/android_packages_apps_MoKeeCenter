@@ -17,29 +17,9 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
-    <!-- Action -->
-    <string name="action_next">&quot;આગામી&quot;</string>
+    <string name="action_next">"આગામી"</string>
     <string name="action_pause">થોભાવો</string>
     <string name="action_resume">ફરી શરૂ કરો</string>
-    <!-- Menu -->
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="unknown">અજાણ્યો</string>
     <string name="activity_not_found">ઍપ્લિકેશન ઇન્સ્ટોલ થઈ નથી.</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

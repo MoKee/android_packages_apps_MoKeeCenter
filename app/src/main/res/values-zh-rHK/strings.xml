@@ -17,13 +17,11 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee 中心</string>
     <string name="navigation_drawer_open">開啟導航欄</string>
     <string name="navigation_drawer_close">關閉導航欄</string>
     <string name="nav_header_subtitle">Android 社區作業系統</string>
     <string name="nav_header_desc">導航標頭</string>
-    <!-- Action -->
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">解決方案</string>
     <string name="action_next">下一首</string>
@@ -31,32 +29,26 @@
     <string name="action_resume">恢復</string>
     <string name="action_download">下載</string>
     <string name="action_reboot">重新啟動</string>
-    <!-- Menu -->
     <string name="menu_preferences">偏好設定</string>
     <string name="menu_restore">恢復</string>
     <string name="menu_donation">捐贈</string>
     <string name="menu_unlock_features">解鎖功能</string>
     <string name="menu_refresh">重新整理</string>
     <string name="menu_delete_update">刪除</string>
-    <!-- Preference -->
     <string name="pref_auto_delete_updates">在安裝或不推薦使用時刪除更新</string>
     <string name="pref_ab_perf_mode">優先更新過程</string>
     <string name="pref_mobile_data_warning">對移動資料的警告</string>
-    <!-- Nav Main -->
     <string name="nav_main_forum_title">論壇</string>
     <string name="nav_main_guide_title">指南</string>
     <string name="nav_main_source_title">原始碼</string>
     <string name="nav_main_bug_reports_title">錯誤回報</string>
-    <!-- Nav Social -->
     <string name="nav_social_title">社群媒體</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">微博</string>
     <string name="nav_social_qqchat_title">QQ群</string>
-    <!-- Nav Contribute -->
     <string name="nav_contribute_title">貢獻</string>
     <string name="nav_contribute_code_title">程式碼</string>
     <string name="nav_contribute_translate_title">翻譯</string>
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee 版本</string>
     <string name="unique_id_title">唯一的 ID</string>
     <string name="last_update_check_title">上次檢查：</string>
@@ -67,7 +59,6 @@
     <string name="available_updates_title">可用的更新</string>
     <string name="no_available_updates_intro">上次檢查未發現可用更新。請使用重新整理按鈕手動檢查。</string>
     <string name="pending_available_updates_intro">查找可用的更新</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">功能解鎖</string>
     <string name="unlock_features_plan_a_title">捐贈 %d 人民幣, 以解鎖增量更新並全速下載。</string>
     <string name="unlock_features_plan_a_abdevice_title">捐贈 %d 人民幣於解鎖全速下載。</string>
@@ -76,16 +67,13 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">捐贈 %d 人民幣於解鎖全速下載、驗證更新和去除 Google 廣告。</string>
     <string name="unlock_features_request_summary">（累計捐贈人民幣 %d 元後永久可用）</string>
     <string name="unlock_features_pending_summary">（已捐贈人民幣 %1$d 元，再捐贈人民幣 %2$d 元後永久可用）</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_not_support_summary">不支援此版本的增量更新。</string>
     <string name="incremental_updates_supported_full_summary">開啟增量更新可節省 %s 流量</string>
     <string name="incremental_updates_supported_ota_summary">與完整 ROM 相比可為您節省 %s 流量</string>
-    <!-- Update Type -->
     <string name="update_type_title">更新類型</string>
     <string name="update_type_release">正式版</string>
     <string name="update_type_nightly">夜版</string>
     <string name="update_type_premium">進階版</string>
-    <!-- Donation Info -->
     <string name="donation_record_title">捐贈記錄</string>
     <string name="donation_record_without_rank">您捐贈了 %1$d 元。</string>
     <string name="donation_record_with_rank">你共捐贈了￥ %1$d 元，已超過全球 %2$s 的捐助者，排名 No.%3$d ！</string>
@@ -97,11 +85,9 @@
     <string name="donation_dialog_title">Donate to MoKee Open Source</string>
     <string name="donation_dialog_message">Mokee 開源是一個純粹的非營利專案, 誕生的愛好和激情。為了維持這個專案, 我們大部分時間都要掏錢, 或者依靠捐款和廣告。您的捐款可以説明減少我們的財務負擔和維持未來的發展!</string>
     <string name="donation_dialog_message_extra">捐款後, 我們將啟動某些功能, 這些功能只提供給捐獻者終身!</string>
-    <!-- Snackbar Update -->
     <string name="updates_found">發現新的更新</string>
     <string name="no_updates_found">沒有找到新的更新</string>
     <string name="updates_check_failed">更新檢查失敗。請檢查你的網絡連綫並於稍後重試。</string>
-    <!-- Common -->
     <string name="text_copied">文字已複製到剪貼簿</string>
     <string name="unknown">不明</string>
     <string name="never">永不</string>
@@ -109,11 +95,9 @@
     <string name="wechat">微信</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">尚未安裝應用程式。</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">新的更新</string>
     <string name="new_updates_found_title">新的系統更新</string>
     <string name="ongoing_channel_title">目前下載</string>
-    <!-- Download Status -->
     <string name="downloading_notification">下載中...</string>
     <string name="download_starting_notification">正在開始下載</string>
     <string name="download_paused_notification">下載暫停</string>
@@ -125,21 +109,17 @@
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">已經有一個下載在執行</string>
     <string name="download_limited_mode">目前是限速下載模式，累計捐贈達到 30 元人民幣即可享受全速下載。</string>
-    <!-- Install Status -->
     <string name="install_already_running">安裝已在運行</string>
     <string name="installing_update_notification">正在安裝更新套件</string>
     <string name="installing_update_finished_notification">更新已安裝</string>
     <string name="finalizing_package_notification">正在完成套件安裝</string>
     <string name="preparing_ota_first_boot_notification">正在準備第一次啟動</string>
     <string name="dialog_prepare_zip_message_notification">正在準備更新</string>
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">警告</string>
     <string name="update_on_mobile_data_message">您將要透過移動數據網路下載更新包，這可能會導致較大的數據用量。您確定要繼續嗎？</string>
     <string name="checkbox_mobile_data_warning">不再顯示</string>
-    <!-- Battery check -->
     <string name="dialog_battery_low_title">低電量</string>
     <string name="dialog_battery_low_message_pct">電池電量過低，您需要至少 <xliff:g id="percent_discharging">%1$d</xliff:g>%% 的電量才能繼續；如果正在充電，則需要 <xliff:g id="percent_charging">%2$d</xliff:g>%% 的電量才能繼續。</string>
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">套用更新</string>
     <string name="apply_update_dialog_message">您將更新至 <xliff:g id="update_name">%1$s</xliff:g>。\n\n如果您按下 「<xliff:g id="ok">%2$s</xliff:g>」，裝置將重新啟動進入 Recovery 模式並安裝更新。\n\n注意：這項功能需要相容的 Recovery，否則將需要手動安裝更新。</string>
 </resources>

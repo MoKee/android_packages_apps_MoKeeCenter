@@ -17,33 +17,25 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Панэль MoKee</string>
     <string name="navigation_drawer_open">Адкрыць панэль</string>
     <string name="navigation_drawer_close">Зачыніць панель</string>
     <string name="nav_header_title">Адкрыты рэсурс MoKee</string>
     <string name="nav_header_desc">Навігацыйны радок</string>
-    <!-- Action -->
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Рашэнне</string>
     <string name="action_next">Наступны трэк</string>
     <string name="action_pause">Прыпыніць</string>
     <string name="action_resume">Узнавіць</string>
     <string name="action_download">Спампаваць</string>
-    <!-- Menu -->
     <string name="menu_preferences">Налады</string>
     <string name="menu_restore">Аднавіць з рэзервовай копіі</string>
     <string name="menu_donation">Дарэнне</string>
     <string name="menu_unlock_features">Функцыі разблакоўкі</string>
     <string name="menu_refresh">Абнавiць</string>
     <string name="menu_delete_update">Выдаліць</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
     <string name="nav_main_forum_title">Форум</string>
     <string name="nav_main_source_title">Зыходны код</string>
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">Версiя MoKee</string>
     <string name="unique_id_title">Унікальны ідэнтыфікатар</string>
     <string name="incremental_updates_title">OTA абнаўленнi</string>
@@ -52,41 +44,29 @@
     <string name="verified_updates_summary">Паказваць толькі правераныя іншымі карыстальнікамі абнаўлення</string>
     <string name="available_updates_title">Даступныя абнаўленнi</string>
     <string name="no_available_updates_intro">Апошняя праверка не знайшла даступных абнаўленняў. Каб уручную праверыць наяўнасць новых абнаўленняў, націсніце кнопку «Абнавіць».</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">Функцыі разблакоўкі</string>
     <string name="unlock_features_request_summary">(даступна пасля ахвяравання ў %d юаняў)</string>
     <string name="unlock_features_pending_summary">(ахвяруйце %1$d юаняў, будзе даступна назаўжды пасля ахвяраванні яшчэ %2$d юаняў і больш)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_supported_full_summary">Дадатковыя абнаўлення можна захаваць %s</string>
     <string name="incremental_updates_supported_ota_summary">Зэканоміць %s у параўнанні з поўным пакетам абнаўлення</string>
-    <!-- Update Type -->
     <string name="update_type_title">Тып абнаўлення</string>
     <string name="update_type_release">Рэліз</string>
     <string name="update_type_nightly">Начная</string>
-    <!-- Donation Info -->
     <string name="donation_record_with_rank">Ваша ахвяраванне складае CYN: %1$d. Яно больш, чым %2$s з усіх ахвяравальнікаў! Ваш рэйтынг %3$d!</string>
     <string name="donation_record_none">Вы не рабілі ахвяраванняў</string>
     <string name="donation_payment_success">Дзякуй Вам за ахвяраванне!</string>
     <string name="donation_dialog_title">Ахвяраваць MoKee OpenSource</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">Новыя абнаўленнi не знойдзены</string>
     <string name="updates_check_failed">Праверка абнаўленняў не ўдалася. Калі ласка, праверце ваша інтэрнэт-злучэнне і паспрабуйце ізноў пазней.</string>
-    <!-- Common -->
     <string name="unknown">Невядома</string>
     <string name="never">Ніколі</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>
     <string name="activity_not_found">Праграма не ўсталявана.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Новыя абнаўленнi</string>
-    <!-- Download Status -->
     <string name="download_already_running">Спампоўка ўжо адбываецца</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Увага</string>
     <string name="checkbox_mobile_data_warning">Не паказваць зноў</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Прымяніць абнаўленне</string>
 </resources>

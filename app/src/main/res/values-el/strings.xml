@@ -17,24 +17,16 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Κέντρο MoKee</string>
     <string name="navigation_drawer_open">Άνοιγμα μενού πλοήγησης</string>
     <string name="navigation_drawer_close">Κλείσιμο μενού πλοήγησης</string>
-    <!-- Action -->
     <string name="action_next">Επόμενο</string>
     <string name="action_pause">Παύση</string>
     <string name="action_resume">Συνέχιση</string>
     <string name="action_download">Λήψη αρχείου</string>
-    <!-- Menu -->
     <string name="menu_restore">Επαναφορά</string>
     <string name="menu_refresh">Ανανέωση</string>
     <string name="menu_delete_update">Διαγραφή</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">Έκδοση MoKee</string>
     <string name="unique_id_title">Μοναδικό ID</string>
     <string name="incremental_updates_title">Ενημερώσεις ΟΤΑ</string>
@@ -43,35 +35,23 @@
     <string name="verified_updates_summary">Εμφάνιση μόνο των ενημερώσεων που είναι επαληθευμένες από άλλους χρήστες</string>
     <string name="available_updates_title">Διαθέσιμες ενημερώσεις</string>
     <string name="no_available_updates_intro">Ο τελευταίος έλεγχος δεν βρήκε διαθέσιμες ενημερώσεις. Για να ελέγξετε για νέες ενημερώσεις, πατήστε το κουμπί Ανανέωση.</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_title">Τύπος ενημερώσεων</string>
     <string name="update_type_release">Έκδοση</string>
     <string name="update_type_nightly">Nightly</string>
-    <!-- Donation Info -->
     <string name="donation_record_with_rank">Δωρίσατε ένα ποσό CNY %1$d, περισσότερα από %2$s δωρεές παγκοσμίως, κατάταξη Νο.%3$d!</string>
     <string name="donation_record_none">Δεν έχετε κάνει δωρεά</string>
     <string name="donation_payment_success">Σας ευχαριστούμε για τη δωρεά σας!</string>
     <string name="donation_dialog_title">Κάντε δωρεά στο MoKee OpenSource</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">Δεν βρέθηκαν ενημερώσεις</string>
     <string name="updates_check_failed">Ο έλεγχος για ενημερώσεις απέτυχε. Παρακαλώ ελέγξτε την σύνδεσή σας στο διαδίκτυο και προσπαθήστε αργότερα.</string>
-    <!-- Common -->
     <string name="unknown">Άγνωστο</string>
     <string name="never">Ποτέ</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Η εφαρμογή δεν είναι εγκατεστημένη.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Νέες ενημερώσεις</string>
-    <!-- Download Status -->
     <string name="download_already_running">Μια λήψη εκτελείται ήδη</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Προειδοποίηση</string>
     <string name="checkbox_mobile_data_warning">Να μην εμφανιστεί ξανά</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Εφαρμογή ενημέρωσης</string>
 </resources>

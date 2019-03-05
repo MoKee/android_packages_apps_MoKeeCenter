@@ -17,39 +17,19 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee केंद्र</string>
-    <!-- Action -->
     <string name="action_next">अगला</string>
     <string name="action_pause">पॉज़ करें</string>
     <string name="action_resume">फिर से शुरू करें</string>
     <string name="action_download">डाउनलोड करें</string>
-    <!-- Menu -->
     <string name="menu_restore">आयात</string>
     <string name="menu_delete_update">हटाएं</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="incremental_updates_summary">डाउनलोड समय और बैंडविड्थ को बचाने के लिए वृद्धिशील अपडेट प्राप्त करें</string>
     <string name="no_available_updates_intro">अंतिम जांच में कोई भी उपलब्ध अपडेट नहीं मिला। नए अपडेट की मैन्युअल रूप से जांच करने के लिए, ताज़ा करें बटन का उपयोग करें।</string>
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
     <string name="no_updates_found">कोई नया अपडेट नहीं मिला</string>
     <string name="updates_check_failed">अद्यतन जांच असफल रही कृपया अपना इंटरनेट कनेक्शन जांचें और बाद में फिर से प्रयास करें।</string>
-    <!-- Common -->
     <string name="unknown">अज्ञात</string>
     <string name="never">कभी नहीं</string>
     <string name="activity_not_found">ऐप स्थापित नहीं है।</string>
-    <!-- Notification -->
-    <!-- Download Status -->
     <string name="download_already_running">एक डाउनलोड पहले से ही चल रहा है</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

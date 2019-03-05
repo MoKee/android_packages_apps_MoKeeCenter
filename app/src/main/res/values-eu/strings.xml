@@ -17,34 +17,14 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
-    <!-- Action -->
     <string name="action_next">Hurrengoa</string>
     <string name="action_pause">Pausatu</string>
     <string name="action_resume">Berrekin</string>
     <string name="action_download">Deskarga</string>
-    <!-- Menu -->
     <string name="menu_delete_update">Ezabatu</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="unknown">Ezezaguna</string>
     <string name="never">Inoiz ez</string>
     <string name="activity_not_found">Aplikazioa instalatu gabe dago.</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Abisua</string>
     <string name="checkbox_mobile_data_warning">Ez erakutsi berriro</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

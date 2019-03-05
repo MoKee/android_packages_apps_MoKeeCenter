@@ -17,21 +17,13 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Pusat MoKee</string>
-    <!-- Action -->
     <string name="action_solution">Penyelesaian</string>
     <string name="action_next">Selepas</string>
     <string name="action_download">Muat turun</string>
-    <!-- Menu -->
     <string name="menu_restore">Pulihkan</string>
     <string name="menu_refresh">Kemaskini</string>
     <string name="menu_delete_update">Padam</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">Versi MoKee</string>
     <string name="unique_id_title">Unik ID</string>
     <string name="incremental_updates_title">Kemaskini tambahan</string>
@@ -40,39 +32,27 @@
     <string name="verified_updates_summary">Hanya memaparkan kemaskini yang disahkan oleh pengguna-pengguna lain</string>
     <string name="available_updates_title">Kemaskini tersedia</string>
     <string name="no_available_updates_intro">Semakan terakhir tidak menjumpai sebarang kemaskini. Untuk semak secara manual, gunakan butang kemaskini semula.</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">Buka kunci ciri-ciri</string>
     <string name="unlock_features_request_summary">(akan disediakan selepas menderma %d CNY)</string>
     <string name="unlock_features_pending_summary">(didermakan %1$d CNY, akan disediakan untuk seumur hidup selapas menderma %2$d CNY banyak lagi)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_supported_full_summary">Kemaskini tambahan boleh menjimat %s</string>
     <string name="incremental_updates_supported_ota_summary">Menjimatkan %s apabila berbanding dengan ROM penuh</string>
-    <!-- Update Type -->
     <string name="update_type_title">Jenis kemaskini</string>
     <string name="update_type_release">Keluaran</string>
     <string name="update_type_nightly">Percubaan</string>
-    <!-- Donation Info -->
     <string name="donation_record_with_rank">Anda telah menderma sejumlah %1$d CNY, lebih daripada %2$s penderma di seluruh dunia, No taraf %3$d!</string>
     <string name="donation_record_none">Anda tidak donasi</string>
     <string name="donation_payment_success">Terima kasih atas sumbangan anda!</string>
     <string name="donation_dialog_title">Menderma kepada MoKee Open Source</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">Tiada kemaskini dijumpai</string>
     <string name="updates_check_failed">Semakan kemaskini gagal. Sila semak sambungan internet anda dan cuba lagi kemudian.</string>
-    <!-- Common -->
     <string name="unknown">Tidak diketahui</string>
     <string name="never">Tidak pernah</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Apl tidak dipasang.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Kemaskini baru</string>
-    <!-- Download Status -->
     <string name="download_already_running">Muat turun sedang berjalan</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Terima kemaskini</string>
 </resources>

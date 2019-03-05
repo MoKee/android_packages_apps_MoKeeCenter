@@ -17,14 +17,12 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee Központ</string>
     <string name="navigation_drawer_open">Navigációs fiók megnyitása</string>
     <string name="navigation_drawer_close">Navigációs fiók bezárása</string>
     <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Az Android közösség operációs rendszere</string>
     <string name="nav_header_desc">Navigációs sáv</string>
-    <!-- Action -->
     <string name="action_faq">GYIK</string>
     <string name="action_solution">Megoldás</string>
     <string name="action_next">Következő</string>
@@ -32,32 +30,26 @@
     <string name="action_resume">Folytatás</string>
     <string name="action_download">Letöltés</string>
     <string name="action_reboot">Újraindítás</string>
-    <!-- Menu -->
     <string name="menu_preferences">Beállítások</string>
     <string name="menu_restore">Visszaállítás</string>
     <string name="menu_donation">Adományozás</string>
     <string name="menu_unlock_features">Feloldási lehetőségek</string>
     <string name="menu_refresh">Frissités</string>
     <string name="menu_delete_update">Törlés</string>
-    <!-- Preference -->
     <string name="pref_auto_delete_updates">Frissítések törlése telepítés vagy elavulás után</string>
     <string name="pref_ab_perf_mode">Frissítési folyamat fontossági sorrendbe állítása</string>
     <string name="pref_mobile_data_warning">Figyelmeztetés, ha mobiladatot használ</string>
-    <!-- Nav Main -->
     <string name="nav_main_forum_title">Fórum</string>
     <string name="nav_main_guide_title">Útmutató</string>
     <string name="nav_main_source_title">Forráskód</string>
     <string name="nav_main_bug_reports_title">Hibajelentés</string>
-    <!-- Nav Social -->
     <string name="nav_social_title">Közösségi média</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
     <string name="nav_social_qqchat_title">QQ csoport</string>
-    <!-- Nav Contribute -->
     <string name="nav_contribute_title">Közreműködés</string>
     <string name="nav_contribute_code_title">Kód</string>
     <string name="nav_contribute_translate_title">Fordítás</string>
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee verzió</string>
     <string name="unique_id_title">Egyedi azonosító</string>
     <string name="last_update_check_title">Utolsó ellenőrzés</string>
@@ -68,7 +60,6 @@
     <string name="available_updates_title">Elérhető frissítések</string>
     <string name="no_available_updates_intro">Az utolsó ellenőrzés nem talált elérhető frissítést. A manuális ellenőrizéshez használja a Frissítés gombot.</string>
     <string name="pending_available_updates_intro">Az elérhető frissítések keresése</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">Feloldási lehetőségek</string>
     <string name="unlock_features_plan_a_title">%d kínai jüan adományozásával megnyílik a növekményes frissítések teljes sebességű letöltésének lehetősége.</string>
     <string name="unlock_features_plan_a_abdevice_title">Adományozzon %d jüant, hogy teljes sebességgel tölthessen le.</string>
@@ -77,16 +68,13 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">%d kínai jüan adományozásával megnyílik a teljes sebességű letöltés lehetősége és ellenőrzött frissítésekhez juthat Google-reklámok nélkül.</string>
     <string name="unlock_features_request_summary">(%d kínai jüan adományozása után érhető el)</string>
     <string name="unlock_features_pending_summary">(%1$d kínai jüant adományozott, ha még adományoz %2$d összeget állandóan elérhető lesz)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_not_support_summary">Az Ön verziójában a növekményes frissítés nem támogatott.</string>
     <string name="incremental_updates_supported_full_summary">Csak a frissülő növekményeket tartalmazó fájllal ennyit takaríthat meg %s</string>
     <string name="incremental_updates_supported_ota_summary">Összehasonlítva a teljes ROM-mal a megtakarítás ennyi %s</string>
-    <!-- Update Type -->
     <string name="update_type_title">Frissítés típusa</string>
     <string name="update_type_release">Kiadás</string>
     <string name="update_type_nightly">Napi (Nightly)</string>
     <string name="update_type_premium">Prémium</string>
-    <!-- Donation Info -->
     <string name="donation_record_title">Támogatási nyilvántartás</string>
     <string name="donation_record_without_rank">Ön összesen %1$d kínai jüant adományozott.</string>
     <string name="donation_record_with_rank">Te a lehető legnagyobb összeget adományoztad CNY-ból %1$d, ez több mint %2$s az adományozóink világszerte, rang No.%3$d!</string>
@@ -98,11 +86,9 @@
     <string name="donation_dialog_title">Támogassa a MoKee OpenSource-ot</string>
     <string name="donation_dialog_message">A MoKee Open Source egy tisztán non-profit fejlesztés, amely hobbiból és szenvedélyből született. A projekt fenntartása érdekében leginkább a saját pénzünket és időnket kell elhasználnunk, vagy adományokra és hirdetésekre támaszkodnunk. Az Ön adományai segítenek csökkenteni pénzügyi terheinket és fenntartani a jövőbeli fejlesztés lehetőségét!</string>
     <string name="donation_dialog_message_extra">Az adományozás után olyan funkciók aktiválódnak, amelyek csak az adományozók számára állnak rendelkezésre!</string>
-    <!-- Snackbar Update -->
     <string name="updates_found">Új frissítés érhető el !</string>
     <string name="no_updates_found">Nem található új frissítés</string>
     <string name="updates_check_failed">Nem sikerült a frissítések ellenőrzése. Ellenőrizze internetkapcsolatot, majd próbálja újra.</string>
-    <!-- Common -->
     <string name="text_copied">A szöveg a vágólapra másolódott.</string>
     <string name="unknown">Ismeretlen</string>
     <string name="never">Soha</string>
@@ -110,11 +96,9 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Az alkalmazás nincs telepítve.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Új frissítések</string>
     <string name="new_updates_found_title">Új rendszerfrissítések</string>
     <string name="ongoing_channel_title">Folyamatban lévő letöltések</string>
-    <!-- Download Status -->
     <string name="downloading_notification">Letöltés</string>
     <string name="download_starting_notification">Letöltés indítása</string>
     <string name="download_paused_notification">Letöltés szünetelve</string>
@@ -126,21 +110,17 @@
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">A letöltés jelenleg is fut</string>
     <string name="download_limited_mode">Csak korlátozott sebességgel tölthet le, támogasson minket 30 kínai jüannal, hogy teljes sebességgel tölthessen le.</string>
-    <!-- Install Status -->
     <string name="install_already_running">Egy telepítés jelenleg is fut</string>
     <string name="installing_update_notification">Frissítőcsomag-telepítés</string>
     <string name="installing_update_finished_notification">A frissítés telepítve</string>
     <string name="finalizing_package_notification">A csomagtelepítés véglegesítése</string>
     <string name="preparing_ota_first_boot_notification">Felkészülés az első indításra</string>
     <string name="dialog_prepare_zip_message_notification">A frissítés előzetes előkészítése</string>
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Figyelmeztetés</string>
     <string name="update_on_mobile_data_message">A frissítés mobilinterneten fog letöltődni, ami magas adathasználatot eredményezhet. Szeretné folytatni?</string>
     <string name="checkbox_mobile_data_warning">Ne mutassa újra</string>
-    <!-- Battery check -->
     <string name="dialog_battery_low_title">Alacsony akkufeszültség</string>
     <string name="dialog_battery_low_message_pct">Az akkumulátortöltöttség túl alacsony, a folytatáshoz legalább <xliff:g id="percent_discharging">%1$d</xliff:g>%% töltöttségre lenne szüksége, illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:g>%% töltés szükséges.</string>
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Frissítés alkalmazása</string>
     <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> változatra fog frissíteni.\n\nHa megnyomja a <xliff:g id="ok">%2$s</xliff:g> gombot, a készülék újraindul recovery módban a frissítés telepítéséhez.\n\nMegjegyzés: Ehhez kompatibilis Recovery-re van szüksége, enélkül manuálisan kell a telepítenie a frissítéseket.</string>
 </resources>

@@ -17,33 +17,13 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="navigation_drawer_open">เปิด Navigation Drawer</string>
     <string name="navigation_drawer_close">ปิด Navigation Drawer</string>
-    <!-- Action -->
     <string name="action_next">ถัดไป</string>
-    <!-- Menu -->
     <string name="menu_refresh">รีเฟรช</string>
     <string name="menu_delete_update">ลบ</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
-    <!-- Unlock Features -->
-    <!-- Incremental Updates -->
-    <!-- Update Type -->
     <string name="update_type_release">เวอร์ชันเสถียร</string>
-    <!-- Donation Info -->
-    <!-- Snackbar Update -->
-    <!-- Common -->
     <string name="unknown">ไม่รู้จัก</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">ไม่ได้ติดตั้งแอป</string>
-    <!-- Notification -->
-    <!-- Download Status -->
-    <!-- Install Status -->
-    <!-- Mobile data -->
-    <!-- Battery check -->
-    <!-- Apply update -->
 </resources>

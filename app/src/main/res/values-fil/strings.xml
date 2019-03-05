@@ -17,25 +17,17 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Mokee Center</string>
     <string name="navigation_drawer_open">Buksan ang navigation drawer</string>
     <string name="navigation_drawer_close">Isara ang navigation driver</string>
-    <!-- Action -->
     <string name="action_solution">Solusyon</string>
     <string name="action_next">Susunod</string>
     <string name="action_pause">Naka-tigil</string>
     <string name="action_resume">Ipagpatuloy</string>
     <string name="action_download">I-download</string>
-    <!-- Menu -->
     <string name="menu_restore">Pgsasabalik</string>
     <string name="menu_refresh">I-refresh</string>
     <string name="menu_delete_update">Burahin</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">Bersyon ng MoKee</string>
     <string name="unique_id_title">Natatanging ID</string>
     <string name="incremental_updates_title">Incremental na mga update</string>
@@ -44,41 +36,29 @@
     <string name="verified_updates_summary">Ipakita lamang ang mga update na napatunayan na ng ibang mga gumagamit</string>
     <string name="available_updates_title">Magagamit na mga update</string>
     <string name="no_available_updates_intro">Ang huling tseke ay hindi nakahanap ng anumang available na mga update. Upang manu-manong suriin para sa mga bagong update, gamitin ang pindutan ng I-refresh.</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">I-unlock ang mga katangian</string>
     <string name="unlock_features_request_summary">(magagamit pagkatapos ng donasyon%d CNY)</string>
     <string name="unlock_features_pending_summary">(nagbigay %1$d CNY, magagamit ng lubos kapag nagbigay ng ganitong donasyon %2$d CNY pa)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_supported_full_summary">ota_diff_I-update_buod</string>
     <string name="incremental_updates_supported_ota_summary">Buong_diff_I-update_buod</string>
-    <!-- Update Type -->
     <string name="update_type_title">Uri ng update</string>
     <string name="update_type_release">Pagkakawalan</string>
     <string name="update_type_nightly">Gabi-gabi</string>
-    <!-- Donation Info -->
     <string name="donation_record_with_rank">Ikaw ay nag-donate ng %1$d CNY sa kabuuan, higit pa sa %2$s ng mga donor sa buong mundo, ika-%3$d na ranggo!</string>
     <string name="donation_record_none">Hindi ka pa nakapagbigay</string>
     <string name="donation_payment_success">Salamat sa inyong donasyon!</string>
     <string name="donation_dialog_title">Magbigay ng donasyon sa MoKee Open Source</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">Walang nakita na mga bagong update</string>
     <string name="updates_check_failed">Nabigo ang pag-check ng update. Mangyaring suriin ang iyong koneksyon sa internet at subukan muli sa ibang pagkakataon.</string>
-    <!-- Common -->
     <string name="unknown">Hindi alam</string>
     <string name="never">Hindi kailanman</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Hindi naka-install ang app.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Mga bagong update</string>
-    <!-- Download Status -->
     <string name="download_already_running">Mayroon nang dinadownload</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Ang babala</string>
     <string name="checkbox_mobile_data_warning">Huwag ipakita pang muli</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">I-apply ang update</string>
 </resources>

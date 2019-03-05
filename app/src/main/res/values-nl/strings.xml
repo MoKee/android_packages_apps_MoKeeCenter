@@ -17,25 +17,17 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">MoKee Center</string>
     <string name="navigation_drawer_open">Open navigatie menu</string>
     <string name="navigation_drawer_close">Sluit navigatie menu</string>
-    <!-- Action -->
     <string name="action_solution">Oplossing</string>
     <string name="action_next">Volgende</string>
     <string name="action_pause">Pauze</string>
     <string name="action_resume">Hervatten</string>
     <string name="action_download">Download</string>
-    <!-- Menu -->
     <string name="menu_restore">Terugzetten</string>
     <string name="menu_refresh">Vernieuw</string>
     <string name="menu_delete_update">Verwijderen</string>
-    <!-- Preference -->
-    <!-- Nav Main -->
-    <!-- Nav Social -->
-    <!-- Nav Contribute -->
-    <!-- Preference list -->
     <string name="mokee_version_title">MoKee versie</string>
     <string name="unique_id_title">Unieke ID</string>
     <string name="incremental_updates_title">Incrementele updates</string>
@@ -44,41 +36,29 @@
     <string name="verified_updates_summary">Alleen updates die worden geverifieerd door andere gebruikers worden weergegeven</string>
     <string name="available_updates_title">Beschikbare updates</string>
     <string name="no_available_updates_intro">De laatste keer zijn er geen updates gevonden. Om handmatig te controleren, tikt u op \'Vernieuwen\'.</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">Onderdelen ontgrendelen</string>
     <string name="unlock_features_request_summary">(Beschikbaar na %d CNY gedoneerd te hebben)</string>
     <string name="unlock_features_pending_summary">(%1$d CNY gedoneerd, beschikbaar voor altijd na %2$d CNY)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_supported_full_summary">Incrementele updates kunnen %s opslaan</string>
     <string name="incremental_updates_supported_ota_summary">Slaat %s op wanneer vergeleken met volledige ROM</string>
-    <!-- Update Type -->
     <string name="update_type_title">Type update</string>
     <string name="update_type_release">Uitgave</string>
     <string name="update_type_nightly">Nachtelijks</string>
-    <!-- Donation Info -->
     <string name="donation_record_with_rank">U geschonk CNY %1$d, in totaal meer dan %2$s van donors wereldwijd, rang No.%3$d!</string>
     <string name="donation_record_none">U hebt geen donatie gedaan</string>
     <string name="donation_payment_success">Dank u voor uw donatie!</string>
     <string name="donation_dialog_title">Doneer aan MoKee OpenSource</string>
-    <!-- Snackbar Update -->
     <string name="no_updates_found">Geen nieuwe updates gevonden</string>
     <string name="updates_check_failed">Kan niet controleren op updates. Controleer uw internetverbinding en probeer het later opnieuw.</string>
-    <!-- Common -->
     <string name="unknown">Onbekend</string>
     <string name="never">Nooit</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">App is niet geïnstalleerd.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Nieuwe updates</string>
-    <!-- Download Status -->
     <string name="download_already_running">Er is al een andere download bezig</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Let op</string>
     <string name="checkbox_mobile_data_warning">Niet opnieuw tonen</string>
-    <!-- Battery check -->
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Update toepassen</string>
 </resources>

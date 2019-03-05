@@ -17,46 +17,38 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- App Main -->
     <string name="app_name">Centre Mokee</string>
     <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
     <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
     <string name="nav_header_title">MoKee OpenSource</string>
     <string name="nav_header_subtitle">Asop</string>
     <string name="nav_header_desc">Barre de navigation</string>
-    <!-- Action -->
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Solution</string>
     <string name="action_next">Suivant</string>
     <string name="action_pause">Pause</string>
     <string name="action_resume">Reprendre</string>
     <string name="action_download">Télécharger</string>
-    <!-- Menu -->
     <string name="menu_preferences">Préférences</string>
     <string name="menu_restore">Restaurer</string>
     <string name="menu_donation">Don</string>
     <string name="menu_unlock_features">Débloquer les fonctionnalités</string>
     <string name="menu_refresh">Actualiser</string>
     <string name="menu_delete_update">Supprimer</string>
-    <!-- Preference -->
     <string name="pref_auto_delete_updates">Supprimer les mises à jour une fois installées ou devenues obsolètes</string>
     <string name="pref_ab_perf_mode">Privilégier le processus de mise à jour</string>
     <string name="pref_mobile_data_warning">Alerter lors de l\'utilisation ded données mobiles</string>
-    <!-- Nav Main -->
     <string name="nav_main_forum_title">Forum</string>
     <string name="nav_main_guide_title">Guide</string>
     <string name="nav_main_source_title">Code source</string>
     <string name="nav_main_bug_reports_title">Rapports de bogues</string>
-    <!-- Nav Social -->
     <string name="nav_social_title">Réseau Social</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
     <string name="nav_social_qqchat_title">Groupe QQ</string>
-    <!-- Nav Contribute -->
     <string name="nav_contribute_title">Contribuer</string>
     <string name="nav_contribute_code_title">Code</string>
     <string name="nav_contribute_translate_title">Traduction</string>
-    <!-- Preference list -->
     <string name="mokee_version_title">Version de MoKee</string>
     <string name="unique_id_title">ID unique</string>
     <string name="last_update_check_title">Dernière vérification</string>
@@ -67,22 +59,18 @@
     <string name="available_updates_title">Mises à jour proposées</string>
     <string name="no_available_updates_intro">La dernière vérification n’a trouvé aucune mise à jour. Pour vérifier manuellement les nouvelles mises à jour, utiliser le bouton Actualiser.</string>
     <string name="pending_available_updates_intro">À la recherche de mises à jour disponibles</string>
-    <!-- Unlock Features -->
     <string name="unlock_features_title">Fonctionnalités de déverrouillage</string>
     <string name="unlock_features_plan_a_title">Faire un don de %d CNY pour débloquer les mises à jour incrémentielles et télécharger à pleine vitesse.</string>
     <string name="unlock_features_plan_b_title">Donner %d CYN pour des mise à jour vérifiée et enlever la publicité.</string>
     <string name="unlock_features_plan_unlimited_title">Faire un don de %d CNY pour déverrouiller les mises à jour incrémentielles, télécharger à pleine vitesse, vérifiées mises à jour et supprimer Google Ads.</string>
     <string name="unlock_features_request_summary">(proposé après un don de %d CNY)</string>
     <string name="unlock_features_pending_summary">(don effectué de %1$d CNY, proposé à vie après un don d’encore %2$d CNY)</string>
-    <!-- Incremental Updates -->
     <string name="incremental_updates_not_support_summary">Mises à jour incrémentielles vers cette version ne sont pas supportés.</string>
     <string name="incremental_updates_supported_full_summary">Les mises à jour incrémentielles peuvent économiser %s</string>
     <string name="incremental_updates_supported_ota_summary">Permet d’économiser %s par rapport à la ROM complète</string>
-    <!-- Update Type -->
     <string name="update_type_title">Type de mise à jour</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
-    <!-- Donation Info -->
     <string name="donation_record_title">Enregistrement de la donation</string>
     <string name="donation_record_without_rank">Vous avez fait don d’un total de %1$d CNY.</string>
     <string name="donation_record_with_rank">Vous avez fait un don total de %1$d CNY, plus que %2$s de tous les donateurs à l’échelle mondiale ! Vous êtes au %3$de rang !</string>
@@ -94,11 +82,9 @@
     <string name="donation_dialog_title">Faire un don au projet OpenSource MoKee</string>
     <string name="donation_dialog_message">MoKee Open Source est un projet purement à but non lucratif née de passe-temps et de passion. Afin de maintenir ce projet, il faut débourser de notre propre argent la plupart du temps ou dépendent des dons et des publicités. Vos dons peuvent aider à réduire notre charge financière et soutenir le développement futur !</string>
     <string name="donation_dialog_message_extra">Après un don, nous allons activer certaines fonctionnalités qui sont accessibles seulement aux bailleurs de fonds pour la vie !</string>
-    <!-- Snackbar Update -->
     <string name="updates_found">Nouvelles mises à jour disponibles</string>
     <string name="no_updates_found">Aucune nouvelle mise à jour n’est proposée</string>
     <string name="updates_check_failed">La vérification de mise à jour a échoué. Veuillez vérifier votre connexion internet et réessayez plus tard.</string>
-    <!-- Common -->
     <string name="text_copied">Le texte a été copié dans le presse-papier.</string>
     <string name="unknown">Inconnu</string>
     <string name="never">Jamais</string>
@@ -106,11 +92,9 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">L\'application n\'est pas installée.</string>
-    <!-- Notification -->
     <string name="new_updates_channel_title">Nouvelles mises à jour</string>
     <string name="new_updates_found_title">Nouvelle mise à jour du système trouvée</string>
     <string name="ongoing_channel_title">Téléchargements en cours</string>
-    <!-- Download Status -->
     <string name="downloading_notification">Téléchargement</string>
     <string name="download_starting_notification">Début du téléchargement</string>
     <string name="download_paused_notification">Téléchargement mis en pause</string>
@@ -122,15 +106,11 @@
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Un téléchargement est déjà en cours</string>
     <string name="download_limited_mode">Téléchargement à vitesse limitée, faites un don pour profiter pleinement de la vitesse.</string>
-    <!-- Install Status -->
-    <!-- Mobile data -->
     <string name="update_on_mobile_data_title">Avertissement</string>
     <string name="update_on_mobile_data_message">Vous allez télécharger une mise à jour en utilisant les données mobiles et beaucoup de data va donc être utilisée. Voulez-vous continuer ?</string>
     <string name="checkbox_mobile_data_warning">Ne plus afficher</string>
-    <!-- Battery check -->
     <string name="dialog_battery_low_title">Batterie faible</string>
     <string name="dialog_battery_low_message_pct">Le niveau de batterie est trop faible. Pour continuer, vous devez avoir au moins <xliff:g id="percent_discharging">%1$d</xliff:g> %% de batterie restante, ou <xliff:g id="percent_charging">%2$d</xliff:g> %% si l\'appareil est en charge.</string>
-    <!-- Apply update -->
     <string name="apply_update_dialog_title">Appliquer la mise à jour</string>
     <string name="apply_update_dialog_message">Vous êtes sur le point d\'installer <xliff:g id="update_name">%1$s</xliff:g>.\n\nLorsque vous appuierez sur <xliff:g id="ok">%2$s</xliff:g>, votre appareil redémarrera automatiquement en mode recovery pour installer la mise à jour.\n\nRemarque : Cette opération nécessite un recovery compatible, sinon les mises à jour devront être installées manuellement.</string>
 </resources>
