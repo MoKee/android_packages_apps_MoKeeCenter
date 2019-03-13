@@ -17,10 +17,6 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">MoKee ცენტრი</string>
-    <string name="action_pause">პაუზა</string>
-    <string name="action_resume">გაგრძელება</string>
-    <string name="menu_delete_update">წაშლა</string>
-    <string name="unknown">უცნობი</string>
-    <string name="activity_not_found">აპი არ არის დაყენებული.</string>
+    <string name="action_next">"পৰৱৰ্তী"</string>
+    <string name="unknown">অজ্ঞাত</string>
 </resources>
