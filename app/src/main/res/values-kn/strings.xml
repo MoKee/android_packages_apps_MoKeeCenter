@@ -102,5 +102,6 @@
     <string name="download_file_not_found_notification">ಡೌನ್ಲೋಡ್ ಲಿಂಕ್ ಅವಧಿ ಮುಗಿದುಹೋಗಿದೆ, ದಯವಿಟ್ಟು ಮರುಹೊಸದಾಗಿಸಿ ಗುಂಡಿಯನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ ಮತ್ತು ಇನ್ನೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
     <string name="download_already_running">ಒಂದು ಡೌನ್‍ಲೋಡ್ ಈಗಾಗಲೇ ಚಾಲನೆಯಲ್ಲಿದೆ</string>
     <string name="update_on_mobile_data_title">ಎಚ್ಚರಿಕೆ</string>
+    <string name="dialog_battery_low_title">ಕಡಿಮೆ ಬ್ಯಾಟರಿ</string>
     <string name="apply_update_dialog_title">ನವೀಕರಣ ಅನ್ವಯಿಸಿ</string>
 </resources>

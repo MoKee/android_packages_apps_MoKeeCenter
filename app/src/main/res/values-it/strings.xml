@@ -62,8 +62,10 @@
     <string name="pending_available_updates_intro">Cercando aggiornamenti disponibili</string>
     <string name="unlock_features_title">Sblocca altre funzioni</string>
     <string name="unlock_features_plan_a_title">Dona %d CNY per sbloccare aggiornamenti incrementali e scaricare a tutta velocità.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Dona %d CNY per sbloccare il download alla massima velocità.</string>
     <string name="unlock_features_plan_b_title">Dona %d CNY per gli aggiornamenti verificati e rimuovere Annunci Google.</string>
     <string name="unlock_features_plan_unlimited_title">Dona %d CNY per sbloccare aggiornamenti incrementali, scaricare a tutta velocità, aggiornamenti verificati e rimuovere annunci Google.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Dona %d CNY per sbloccare aggiornamenti incrementali, scaricare a tutta velocità, aggiornamenti verificati e rimuovere annunci Google.</string>
     <string name="unlock_features_request_summary">(disponibile dopo la donazione %d CNY)</string>
     <string name="unlock_features_pending_summary">(Donato %1$d CNY, disponibile per tutta la vita dopo la donazione più di %2$d CNY)</string>
     <string name="incremental_updates_not_support_summary">Gli aggiornamenti incrementali di questa versione non sono supportati.</string>
@@ -72,6 +74,7 @@
     <string name="update_type_title">Tipo di aggiornamento</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
+    <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Record di donazione</string>
     <string name="donation_record_without_rank">Hai donato un totale di %1$d CNY.</string>
     <string name="donation_record_with_rank">Hai donato un totale di %1$d, più del %2$s dei donatori a livello mondiale, posizione No. %3$d!</string>
