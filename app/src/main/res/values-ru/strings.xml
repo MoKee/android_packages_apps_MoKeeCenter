@@ -25,7 +25,7 @@
     <string name="nav_header_desc">Панель навигации</string>
     <string name="action_faq">Вопросы и ответы</string>
     <string name="action_solution">Решение</string>
-    <string name="action_next">Следующее видео</string>
+    <string name="action_next">Далее</string>
     <string name="action_pause">Пауза</string>
     <string name="action_resume">Продолжить</string>
     <string name="action_download">Скачать</string>
