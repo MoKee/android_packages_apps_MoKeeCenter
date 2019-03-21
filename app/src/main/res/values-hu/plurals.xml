@@ -22,7 +22,7 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> frissítés tölthető le</item>
     </plurals>
     <plurals name="new_updates_found_additional_count">
-        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> darab</item>
-        <item quantity="other">+ <xliff:g id="count">%d </xliff:g> több</item>
+        <item quantity="one">+ további <xliff:g id="count">%d</xliff:g></item>
+        <item quantity="other">+ további <xliff:g id="count">%d </xliff:g></item>
     </plurals>
 </resources>
