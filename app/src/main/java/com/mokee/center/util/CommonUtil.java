@@ -40,9 +40,8 @@ import com.mokee.center.misc.Constants;
 import com.mokee.center.misc.State;
 import com.mokee.center.model.DonationInfo;
 import com.mokee.center.model.UpdateInfo;
-import com.mokee.os.Build;
 import com.mokee.security.License;
-import com.mokee.security.LicenseInfo;
+import com.mokee.utils.DonationUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -50,7 +49,6 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -102,13 +100,11 @@ public class CommonUtil {
 
     public static void updateDonationInfo(Context context) {
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
-        donationInfo.setPaid(getAmountPaid(context).intValue());
-        donationInfo.setBasic(donationInfo.getPaid() >= Constants.DONATION_BASIC);
-        donationInfo.setAdvanced(donationInfo.getPaid() >= Constants.DONATION_ADVANCED);
+        DonationUtils.updateDonationInfo(context, donationInfo, Constants.LICENSE_PATH, Constants.LICENSE_PUB_KEY);
         Intent intent = new Intent(ACTION_LICENSE_CHANGED);
         if (donationInfo.getPaid() > 0) {
             try {
-                intent.putExtra("data", License.readLicense(Constants.LICENSE_FILE));
+                intent.putExtra("data", License.readLicense(Constants.LICENSE_PATH));
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -116,24 +112,6 @@ public class CommonUtil {
             intent.putExtra("data", "");
         }
         context.sendBroadcast(intent);
-    }
-
-    public static Float getAmountPaid(Context context) {
-        if (new File(Constants.LICENSE_FILE).exists()) {
-            try {
-                LicenseInfo licenseInfo = License.readLicense(Constants.LICENSE_FILE, Constants.LICENSE_PUB_KEY);
-                String unique_ids = Build.getUniqueIDS(context);
-                if (Arrays.asList(unique_ids.split(",")).contains(licenseInfo.getUniqueID())
-                        && licenseInfo.getPackageName().equals(context.getPackageName())) {
-                    return licenseInfo.getPrice();
-                }
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        } else {
-            return 0f;
-        }
-        return 0f;
     }
 
     public static void sendPaymentRequest(Activity context, String channel, String description, String price, String type) {
