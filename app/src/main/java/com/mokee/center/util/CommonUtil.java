@@ -104,7 +104,7 @@ public class CommonUtil {
         Intent intent = new Intent(ACTION_LICENSE_CHANGED);
         if (donationInfo.getPaid() > 0) {
             try {
-                intent.putExtra("data", License.readLicense(Constants.LICENSE_PATH));
+                intent.putExtra("data", License.loadLicense(Constants.LICENSE_PATH));
             } catch (Exception e) {
                 e.printStackTrace();
             }
