@@ -20,7 +20,7 @@ package com.mokee.center.misc;
 import android.app.Activity;
 import android.os.Environment;
 
-public class Constants {
+public class Constants extends ConstantsBase {
 
     public static final String USER_AGENT = "com.mokee.center/2.0";
 
@@ -51,8 +51,6 @@ public class Constants {
     // Donation
     public static final String DONATION_PREF = "DonationPrefs";
     public static final int DONATION_MAX = 1000;
-    public static final int DONATION_ADVANCED = 68;
-    public static final int DONATION_BASIC = 30;
     public static final int DONATION_MIN = 10;
     public static final int DONATION_RESULT_OK = Activity.RESULT_OK;
     public static final int DONATION_RESULT_SUCCESS = 200;
