@@ -1,0 +1,36 @@
+{
+  "project_info": {
+    "project_number": "362482270164",
+    "firebase_url": "https://mkcenter-ca06b.firebaseio.com",
+    "project_id": "mkcenter-ca06b",
+    "storage_bucket": "mkcenter-ca06b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:362482270164:android:41396859d9949570",
+        "android_client_info": {
+          "package_name": "com.mokee.center"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC85gdaYfInAmlbfSzVyyMk8DXMtIZFOQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "362482270164-vot2kd4iu4pqik8qgogt8qv7808uhbah.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      },
+      "admob_app_id": "ca-app-pub-1229799408538170~5022945496"
+    }
+  ],
+  "configuration_version": "1"
+}
