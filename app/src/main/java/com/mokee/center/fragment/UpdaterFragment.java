@@ -34,10 +34,6 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 
-import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
-import com.google.android.gms.ads.MobileAds;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
@@ -100,7 +96,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     private RotateAnimation mRefreshAnimation;
 
     private MainActivity mMainActivity;
-    private InterstitialAd mWelcomeInterstitialAd;
 
     private AvailableUpdatesPreferenceCategory mUpdatesCategory;
     private PreferenceCategory mFeaturesCategory;
@@ -117,19 +112,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (!MKCenterApplication.getInstance().getDonationInfo().isAdvanced()) {
-            MobileAds.initialize(getContext(), getString(R.string.app_id));
-            mWelcomeInterstitialAd = new InterstitialAd(getContext());
-            mWelcomeInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
-            AdRequest adRequest = new AdRequest.Builder().build();
-            mWelcomeInterstitialAd.setAdListener(new AdListener() {
-                @Override
-                public void onAdLoaded() {
-                    mWelcomeInterstitialAd.show();
-                }
-            });
-            mWelcomeInterstitialAd.loadAd(adRequest);
-        }
 
         mBroadcastReceiver = new BroadcastReceiver() {
             @Override

@@ -22,6 +22,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import androidx.fragment.app.Fragment;
@@ -47,6 +52,9 @@ import static com.mokee.center.misc.Constants.DONATION_RESULT_SUCCESS;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private InterstitialAd mWelcomeInterstitialAd;
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -94,6 +102,19 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+        if (!MKCenterApplication.getInstance().getDonationInfo().isAdvanced()) {
+            MobileAds.initialize(this, getString(R.string.app_id));
+            mWelcomeInterstitialAd = new InterstitialAd(this);
+            mWelcomeInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
+            AdRequest adRequest = new AdRequest.Builder().build();
+            mWelcomeInterstitialAd.setAdListener(new AdListener() {
+                @Override
+                public void onAdLoaded() {
+                    mWelcomeInterstitialAd.show();
+                }
+            });
+            mWelcomeInterstitialAd.loadAd(adRequest);
+        }
     }
 
     @Override
