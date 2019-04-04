@@ -108,7 +108,6 @@
     <string name="download_remaining">&lt;xliff:g example="3 minuty" id="trwanie&gt;%s&lt;/xliff:g&gt; pozostały</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Pobieranie w toku</string>
-    <string name="download_limited_mode">Pobieranie z ograniczoną prędkością, proszę wesprzyj projekt za pomocą 30 CNY aby cieszyć się pełną szybkością.</string>
     <string name="install_already_running">Instalacja jest już uruchomiona</string>
     <string name="installing_update_notification">Instalowanie pakietu aktualizacji</string>
     <string name="installing_update_finished_notification">Zainstalowano aktualizację</string>

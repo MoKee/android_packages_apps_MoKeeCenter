@@ -109,7 +109,6 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> اليسار</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">بالفعل جار التنزيل</string>
-    <string name="download_limited_mode">تحميل بسرعة محدودة، الرجاء التبرع CNY 30 للتمتع بأقصى سرعة.</string>
     <string name="install_already_running">تثبيت قيد التشغيل بالفعل</string>
     <string name="installing_update_notification">جارٍ تثبيت حزمة التحديث</string>
     <string name="installing_update_finished_notification">تم تثبيت التحديث</string>

@@ -109,7 +109,6 @@
     <string name="download_remaining">Осталось <xliff:g example="3 minutes" id="duration">%s</xliff:g></string>
     <string name="download_speed">%1$s, %2$s/сек</string>
     <string name="download_already_running">Загрузка уже выполняется</string>
-    <string name="download_limited_mode">Скорость скачивания ограничена, пожалуйста, пожертвуйте 30 юаней, чтобы насладиться полной скоростью.</string>
     <string name="install_already_running">Обновление уже запущено</string>
     <string name="installing_update_notification">Установка обновлений</string>
     <string name="installing_update_finished_notification">Обновление установлено</string>

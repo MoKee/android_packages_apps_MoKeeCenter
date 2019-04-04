@@ -104,7 +104,6 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> ostáva</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Sťahovanie je už spustené</string>
-    <string name="download_limited_mode">Sťahovanie obmedzenou rýchlosťou, prosím prispejte 30 CNY pre povolenie plnej rýchlosti.</string>
     <string name="update_on_mobile_data_title">Upozornenie</string>
     <string name="update_on_mobile_data_message">Chystáte sa stiahnuť aktualizáciu pomocou mobilných dát, čo pravdepodobne zapríčiní veľkú spotrebu mobilných dát. Prajete si pokračovať?</string>
     <string name="checkbox_mobile_data_warning">Už nezobrazovať</string>

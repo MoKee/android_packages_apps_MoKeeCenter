@@ -105,7 +105,6 @@
     <string name="download_remaining"><xliff:g example="3 menit" id="duration">%s</xliff:g> tersisa</string>
     <string name="download_speed">%1$s, %2$s/d</string>
     <string name="download_already_running">Unduhan sedang berjalan</string>
-    <string name="download_limited_mode">Mengunduh dengan kecepatan terbatas, silakan menyumbang 30 CNY untuk menikmati kecepatan penuh.</string>
     <string name="update_on_mobile_data_title">Peringatan</string>
     <string name="update_on_mobile_data_message">Anda akan mengunduh paket pembaruan menggunakan data seluler yang kemungkinan akan menyebabkan penggunaan data tinggi. Apakah Anda ingin melanjutkan?</string>
     <string name="checkbox_mobile_data_warning">Jangan tampilkan lagi</string>

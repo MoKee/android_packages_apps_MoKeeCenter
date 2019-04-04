@@ -109,7 +109,6 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> do konca</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Prenos se že izvaja</string>
-    <string name="download_limited_mode">Prenos z omejeno hitrostjo, darujte 30 CNY za prenos s polno hitrostjo.</string>
     <string name="install_already_running">Namestitev se že izvaja</string>
     <string name="installing_update_notification">Nameščanje posodobitvenega paketa</string>
     <string name="installing_update_finished_notification">Posodobitev nameščena</string>
