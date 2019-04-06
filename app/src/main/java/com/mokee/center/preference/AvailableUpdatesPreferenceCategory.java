@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -66,19 +66,18 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
         super.onBindViewHolder(holder);
         mItemView = holder.itemView;
         if (!MKCenterApplication.getInstance().getDonationInfo().isAdvanced()) {
-            AdRequest adRequest = new AdRequest.Builder().build();
             mDownloadInterstitialAd = new InterstitialAd(getContext());
             mDownloadInterstitialAd.setAdUnitId(getContext().getString(R.string.interstitial_ad_unit_id));
             mDownloadInterstitialAd.setAdListener(new AdListener() {
                 @Override
                 public void onAdClosed() {
-                    mDownloadInterstitialAd.loadAd(adRequest);
+                    mDownloadInterstitialAd.loadAd(new AdRequest.Builder().build());
                     if (!MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
                         Snackbar.make(mItemView, R.string.download_limited_mode, Snackbar.LENGTH_LONG).show();
                     }
                 }
             });
-            mDownloadInterstitialAd.loadAd(adRequest);
+            mDownloadInterstitialAd.loadAd(new AdRequest.Builder().build());
         }
     }
 
