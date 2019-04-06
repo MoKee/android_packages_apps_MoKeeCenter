@@ -191,9 +191,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         mDonationPrefs.registerOnSharedPreferenceChangeListener(this);
         mMainPrefs.registerOnSharedPreferenceChangeListener(this);
 
-        Intent intent = new Intent(mMainActivity, UpdaterService.class);
-        mMainActivity.startService(intent);
-        mMainActivity.bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+        Intent intent = new Intent(getContext(), UpdaterService.class);
+        getContext().startService(intent);
+        getContext().bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
 
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_STATUS);
@@ -209,7 +209,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         mMainPrefs.unregisterOnSharedPreferenceChangeListener(this);
         LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mBroadcastReceiver);
         if (mUpdaterService != null) {
-            mMainActivity.unbindService(mConnection);
+            getContext().unbindService(mConnection);
         }
         super.onStop();
     }
