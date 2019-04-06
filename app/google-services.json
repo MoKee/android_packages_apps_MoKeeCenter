@@ -13,7 +13,16 @@
           "package_name": "com.mokee.center"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "362482270164-mckuof9rrogsqraaf5b5lbk6eogr1i5b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mokee.center",
+            "certificate_hash": "411da1863f3be8609807fb3f93dd7357a53b94a2"
+          }
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyC85gdaYfInAmlbfSzVyyMk8DXMtIZFOQg"
