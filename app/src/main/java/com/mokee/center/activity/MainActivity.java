@@ -106,14 +106,13 @@ public class MainActivity extends AppCompatActivity
             MobileAds.initialize(this, getString(R.string.app_id));
             mWelcomeInterstitialAd = new InterstitialAd(this);
             mWelcomeInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
-            AdRequest adRequest = new AdRequest.Builder().build();
+            mWelcomeInterstitialAd.loadAd(new AdRequest.Builder().build());
             mWelcomeInterstitialAd.setAdListener(new AdListener() {
                 @Override
                 public void onAdLoaded() {
                     mWelcomeInterstitialAd.show();
                 }
             });
-            mWelcomeInterstitialAd.loadAd(adRequest);
         }
     }
 
