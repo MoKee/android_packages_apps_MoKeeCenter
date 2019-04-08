@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,6 +31,7 @@ import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
@@ -135,7 +136,7 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
                         break;
                 }
             } catch (ActivityNotFoundException ex) {
-                mActivity.makeSnackbar(R.string.activity_not_found).show();
+                mActivity.makeSnackbar(R.string.activity_not_found, Snackbar.LENGTH_LONG).show();
             }
         });
         return super.create();

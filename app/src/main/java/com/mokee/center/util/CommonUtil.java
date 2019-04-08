@@ -18,6 +18,7 @@
 package com.mokee.center.util;
 
 import android.app.Activity;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -30,6 +31,7 @@ import androidx.preference.PreferenceManager;
 import android.text.format.DateUtils;
 import android.util.Log;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.lzy.okgo.db.DownloadManager;
 import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadTask;
@@ -147,8 +149,12 @@ public class CommonUtil {
     }
 
     public static void restoreLicenseRequest(Activity context) {
-        Intent intent = new Intent(Constants.ACTION_RESTORE_REQUEST);
-        context.startActivityForResult(intent, 0);
+        try {
+            Intent intent = new Intent(Constants.ACTION_RESTORE_REQUEST);
+            context.startActivityForResult(intent, 0);
+        } catch (ActivityNotFoundException ex) {
+             Snackbar.make(context.findViewById(R.id.updater), R.string.activity_not_found, Snackbar.LENGTH_LONG).show();
+        }
     }
 
     public static boolean checkForNewUpdates(File oldJson, File newJson) {
