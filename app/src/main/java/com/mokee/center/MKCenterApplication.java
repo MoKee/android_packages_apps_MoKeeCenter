@@ -56,7 +56,7 @@ public class MKCenterApplication extends Application {
         return builder;
     }
 
-    public static final List<String> WHITELIST_HOSTNAME = Arrays.asList("ota.mokeedev.com", "cloud.mokeedev.com");
+    public static final List<String> WHITELIST_HOSTNAME = Arrays.asList("api.mokeedev.com", "cloud.mokeedev.com", "ota.mokeedev.com");
 
     @Override
     public void onCreate() {
