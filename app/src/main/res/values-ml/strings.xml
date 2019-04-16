@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">മോക്കീ കേന്ദ്രം</string>
-    <string name="action_next">"അടുത്തത്"</string>
+    <string name="action_next">അടുത്തത്</string>
     <string name="action_download">ഡൗൺലോഡ്</string>
     <string name="menu_restore">പുനസ്ഥാപിക്കുക</string>
     <string name="menu_refresh">പുതുക്കുക</string>

@@ -109,6 +109,7 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> van hátra</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">A letöltés jelenleg is fut</string>
+    <string name="download_limited_speed">Csak korlátozott sebességgel tölthet le, támogasson minket %d kínai jüannal, hogy teljes sebességgel tölthessen le.</string>
     <string name="install_already_running">Egy telepítés jelenleg is fut</string>
     <string name="installing_update_notification">Frissítőcsomag-telepítés</string>
     <string name="installing_update_finished_notification">A frissítés telepítve</string>

@@ -109,6 +109,7 @@
     <string name="download_remaining">Zbývá <xliff:g example="3 minutes" id="duration">%s</xliff:g></string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Stahování již běží</string>
+    <string name="download_limited_speed">Stahování omezenou rychlostí, prosím přispějte %d CNY pro povolení plné rychlosti stahování.</string>
     <string name="install_already_running">Instalace je již spuštěna</string>
     <string name="installing_update_notification">Instalace balíčku aktualizace</string>
     <string name="installing_update_finished_notification">Aktualizace byla nainstalována</string>

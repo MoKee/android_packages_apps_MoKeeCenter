@@ -105,7 +105,7 @@
     <string name="download_completed_notification">Pobieranie zakończone</string>
     <string name="download_verification_failed_notification">Nie można zweryfikować pakietu aktualizacji, pobierz ponownie</string>
     <string name="download_file_not_found_notification">Link pobierania wygasł, kliknij przycisk Odśwież i spróbuj ponownie</string>
-    <string name="download_remaining">&lt;xliff:g example="3 minuty" id="trwanie&gt;%s&lt;/xliff:g&gt; pozostały</string>
+    <string name="download_remaining">&lt;xliff:g example=\"3 minuty\" id=\"trwanie&gt;%s&lt;/xliff:g&gt; pozostały</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Pobieranie w toku</string>
     <string name="install_already_running">Instalacja jest już uruchomiona</string>

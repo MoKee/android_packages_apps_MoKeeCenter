@@ -109,6 +109,7 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> kaldı</string>
     <string name="download_speed">%1$s, %2$s/sn</string>
     <string name="download_already_running">Bir indirme işlemi devam ediyor</string>
+    <string name="download_limited_speed">Sınırlı hızda indiriliyor, tam hızın tadını çıkarmak için lütfen %d CNY bağışında bulunun.</string>
     <string name="install_already_running">Bir yükleme zaten çalışıyor</string>
     <string name="installing_update_notification">Güncelleme paketi yükleniyor</string>
     <string name="installing_update_finished_notification">Güncelleme yüklendi</string>

@@ -108,6 +108,7 @@
     <string name="download_remaining">還剩 <xliff:g example="3 minutes" id="duration">%s</xliff:g></string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">已經有一個下載在執行</string>
+    <string name="download_limited_speed">目前是限速下載模式，累計捐贈達到 %d 元人民幣即可享受全速下載。</string>
     <string name="install_already_running">安裝已在運行</string>
     <string name="installing_update_notification">正在安裝更新套件</string>
     <string name="installing_update_finished_notification">更新已安裝</string>
