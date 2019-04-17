@@ -76,8 +76,8 @@
     <string name="update_type_nightly">每夜版</string>
     <string name="update_type_premium">优选版</string>
     <string name="donation_record_title">捐赠记录</string>
-    <string name="donation_record_without_rank">您捐赠了 %d 元！</string>
-    <string name="donation_record_with_rank">您捐赠了 %1$d 元，击败了全球 %2$s 的用户，排名第 %3$d！</string>
+    <string name="donation_record_without_rankings">您捐赠了 %d 元！</string>
+    <string name="donation_record_with_rankings">您捐赠了 %1$d 元，击败了全球 %2$s 的用户，排名第 %3$d！</string>
     <string name="donation_record_none">当前您还没有光荣的捐赠行为</string>
     <string name="donation_restore_success">捐赠记录恢复成功！</string>
     <string name="donation_restore_failure">请检查您的网络连接并稍后重试。</string>

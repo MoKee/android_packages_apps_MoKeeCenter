@@ -59,7 +59,7 @@ public class Constants extends ConstantsBase {
 
     // Donation Keys
     public static final String KEY_DONATION_PERCENT = "percent";
-    public static final String KEY_DONATION_RANK = "rank";
+    public static final String KEY_DONATION_RANKINGS = "rankings";
     public static final String KEY_DONATION_AMOUNT = "amount";
     public static final String KEY_DONATION_FIRST_CHECK_COMPLETED = "first_check_completed";
     public static final String KEY_DONATION_LAST_CHECK_TIME = "last_check_time";
