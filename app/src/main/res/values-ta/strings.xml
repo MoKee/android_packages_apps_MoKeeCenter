@@ -31,7 +31,6 @@
     <string name="update_type_title">புதுப்பிக்க வகை</string>
     <string name="update_type_release">வெளியீடு</string>
     <string name="update_type_nightly">இரவில் நிகழ்கிற</string>
-    <string name="donation_record_with_rank">நீங்கள் மொத்தம் CNY %1$d, உலகளவில் %2$s விட நன்கொடையாக கொடுக்கப்பட்டுள்ளது, அந்தஸ்து %3$d!</string>
     <string name="donation_record_none">நீங்கள் நன்கொடையாக இல்லை</string>
     <string name="donation_payment_success">உங்கள் நன்கொடை நன்றி!</string>
     <string name="no_updates_found">புதிய மேம்படுத்தல்கள் இல்லை</string>

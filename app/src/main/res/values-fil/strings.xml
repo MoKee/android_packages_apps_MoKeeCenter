@@ -44,7 +44,6 @@
     <string name="update_type_title">Uri ng update</string>
     <string name="update_type_release">Pagkakawalan</string>
     <string name="update_type_nightly">Gabi-gabi</string>
-    <string name="donation_record_with_rank">Ikaw ay nag-donate ng %1$d CNY sa kabuuan, higit pa sa %2$s ng mga donor sa buong mundo, ika-%3$d na ranggo!</string>
     <string name="donation_record_none">Hindi ka pa nakapagbigay</string>
     <string name="donation_payment_success">Salamat sa inyong donasyon!</string>
     <string name="donation_dialog_title">Magbigay ng donasyon sa MoKee Open Source</string>

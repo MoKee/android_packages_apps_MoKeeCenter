@@ -40,7 +40,6 @@
     <string name="update_type_title">Jenis kemaskini</string>
     <string name="update_type_release">Keluaran</string>
     <string name="update_type_nightly">Percubaan</string>
-    <string name="donation_record_with_rank">Anda telah menderma sejumlah %1$d CNY, lebih daripada %2$s penderma di seluruh dunia, No taraf %3$d!</string>
     <string name="donation_record_none">Anda tidak donasi</string>
     <string name="donation_payment_success">Terima kasih atas sumbangan anda!</string>
     <string name="donation_dialog_title">Menderma kepada MoKee Open Source</string>

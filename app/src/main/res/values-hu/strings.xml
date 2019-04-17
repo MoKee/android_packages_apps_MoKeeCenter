@@ -76,8 +76,6 @@
     <string name="update_type_nightly">Napi (Nightly)</string>
     <string name="update_type_premium">Prémium</string>
     <string name="donation_record_title">Adományozási nyilvántartás</string>
-    <string name="donation_record_without_rank">Ön összesen %1$d kínai jüant adományozott.</string>
-    <string name="donation_record_with_rank">Ön a lehető legnagyobb összeget adományozta %1$d CNY, ez több mint %2$s az adományozó világszerte, az Ön rangja No.%3$d!</string>
     <string name="donation_record_none">Még nem adományozott</string>
     <string name="donation_restore_success">Az Adományozási nyilvántartás sikeresen visszaállításra került!</string>
     <string name="donation_restore_failure">Kérjük, ellenőrizze az internetkapcsolatát, majd próbálja meg újra.</string>

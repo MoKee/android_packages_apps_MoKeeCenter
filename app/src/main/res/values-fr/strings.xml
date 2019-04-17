@@ -76,8 +76,6 @@
     <string name="update_type_nightly">Béta</string>
     <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Enregistrement de la donation</string>
-    <string name="donation_record_without_rank">Vous avez fait don d’un total de %1$d CNY.</string>
-    <string name="donation_record_with_rank">Vous avez fait un don total de %1$d CNY, plus que %2$s de tous les donateurs à l’échelle mondiale ! Vous êtes au %3$de rang !</string>
     <string name="donation_record_none">Vous n’avez fait aucun don</string>
     <string name="donation_restore_success">L’enregistrement de la donation a été restauré avec succès !</string>
     <string name="donation_restore_failure">Veuillez vérifier votre connexion internet et réessayer plus tard.</string>

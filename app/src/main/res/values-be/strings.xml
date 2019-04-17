@@ -52,7 +52,6 @@
     <string name="update_type_title">Тып абнаўлення</string>
     <string name="update_type_release">Рэліз</string>
     <string name="update_type_nightly">Начная</string>
-    <string name="donation_record_with_rank">Ваша ахвяраванне складае CYN: %1$d. Яно больш, чым %2$s з усіх ахвяравальнікаў! Ваш рэйтынг %3$d!</string>
     <string name="donation_record_none">Вы не рабілі ахвяраванняў</string>
     <string name="donation_payment_success">Дзякуй Вам за ахвяраванне!</string>
     <string name="donation_dialog_title">Ахвяраваць MoKee OpenSource</string>

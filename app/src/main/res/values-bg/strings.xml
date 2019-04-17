@@ -39,7 +39,6 @@
     <string name="update_type_title">Тип ъпдейт</string>
     <string name="update_type_release">Издание</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="donation_record_with_rank">Ти дари общо CNY %1$d повече от %2$s на донорите в световен мащаб, ранг No.%3$d!</string>
     <string name="donation_record_none">Нямате дарения</string>
     <string name="donation_payment_success">Благодарим Ви за вашето дарение!</string>
     <string name="donation_dialog_title">Дарение за MoKee OpenSource</string>

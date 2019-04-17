@@ -72,8 +72,6 @@
     <string name="update_type_release">Lançamento</string>
     <string name="update_type_nightly">Beta</string>
     <string name="donation_record_title">Registro de Doação</string>
-    <string name="donation_record_without_rank">Você doou um total de %1$d CNY.</string>
-    <string name="donation_record_with_rank">Doou um total de %1$d CNY, mais do que %2$s do dadores globalmente, rank No.%3$d!</string>
     <string name="donation_record_none">Não fez nenhuma doação</string>
     <string name="donation_restore_success">O registro de doação foi restaurado com sucesso!</string>
     <string name="donation_restore_failure">Por favor, verifique a sua ligação à internet e tente novamente mais tarde</string>

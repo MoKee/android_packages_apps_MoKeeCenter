@@ -34,7 +34,6 @@
     <string name="update_type_title">סוג עדכון</string>
     <string name="update_type_release">מהדורה</string>
     <string name="update_type_nightly">ליליות</string>
-    <string name="donation_record_with_rank">תרמת סך של %1$d CNY, יותר מ%2$s מהתורמים בעולם, דירוג מס\' %3$d!</string>
     <string name="donation_record_none">לא תרמת</string>
     <string name="donation_payment_success">תודה על תרומתך!</string>
     <string name="no_updates_found">לא נמצאו עדכונים חדשים</string>

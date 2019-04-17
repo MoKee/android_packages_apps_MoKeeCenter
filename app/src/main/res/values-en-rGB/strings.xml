@@ -31,7 +31,6 @@
     <string name="update_type_title">Update type</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="donation_record_with_rank">You donated a total of CNY %1$d, more than %2$s of donors globally, rank No.%3$d!</string>
     <string name="donation_record_none">You haven\'t donated</string>
     <string name="donation_payment_success">Thanks !</string>
     <string name="no_updates_found">No new updates found</string>
