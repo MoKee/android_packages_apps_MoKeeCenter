@@ -76,8 +76,6 @@
     <string name="update_type_nightly">Nightly</string>
     <string name="update_type_premium">Prémium</string>
     <string name="donation_record_title">Záznam darování</string>
-    <string name="donation_record_without_rank">Celkem jste darovali %1$d CNY.</string>
-    <string name="donation_record_with_rank">Daroval celkem CNY %1$d, více než %2$s dárců celkem, hodnost No.%3$d!</string>
     <string name="donation_record_none">Nebylo darováno</string>
     <string name="donation_restore_success">Záznam darování byl úspěšně obnoven!</string>
     <string name="donation_restore_failure">Zkontrolujte své připojení k Internetu a zkuste to znovu později.</string>

@@ -62,7 +62,6 @@
     <string name="update_type_title">アップデートタイプ</string>
     <string name="update_type_release">リリース</string>
     <string name="update_type_nightly">ナイトリー</string>
-    <string name="donation_record_with_rank">あなたは CNY %1$dを寄付してくださり、世界で %2$s 人より多くの寄付をし、順位は %3$d 位です！</string>
     <string name="donation_record_none">また寄付していません</string>
     <string name="donation_restore_failure">インターネット接続を確認し、やり直してください</string>
     <string name="donation_payment_success">寄付していただきありがとうございます！</string>

@@ -76,8 +76,6 @@
     <string name="update_type_nightly">Nightly</string>
     <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Record di donazione</string>
-    <string name="donation_record_without_rank">Hai donato un totale di %1$d CNY.</string>
-    <string name="donation_record_with_rank">Hai donato un totale di %1$d, più del %2$s dei donatori a livello mondiale, posizione No. %3$d!</string>
     <string name="donation_record_none">Non hai donato</string>
     <string name="donation_restore_success">Il record di donazione è stato ripristinato con successo!</string>
     <string name="donation_restore_failure">Per favore controlla la tua connessione Internet e riprova più tardi.</string>

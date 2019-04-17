@@ -38,7 +38,6 @@
     <string name="update_type_title">Päivitystyyppi</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="donation_record_with_rank">Lahjoitit yhteensä CNY %1$d enemmän kuin %2$s lahjoittajat maailmanlaajuisesti, sijoitus No.%3$d!</string>
     <string name="donation_record_none">Et ole lahjoittanut</string>
     <string name="donation_payment_success">Kiitos lahjoituksestasi!</string>
     <string name="donation_dialog_title">Lahjoita MoKee OpenSourcelle</string>

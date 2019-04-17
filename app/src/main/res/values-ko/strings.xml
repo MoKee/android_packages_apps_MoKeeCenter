@@ -44,7 +44,6 @@
     <string name="update_type_title">업데이트 유형</string>
     <string name="update_type_release">릴리스</string>
     <string name="update_type_nightly">나이틀리</string>
-    <string name="donation_record_with_rank">You donated a total of CNY %1$d, more than %2$s of donors globally, rank No.%3$d!</string>
     <string name="donation_record_none">기부안함</string>
     <string name="donation_payment_success">기부 주셔서 감사합니다!</string>
     <string name="donation_dialog_title">MoKee OpenSource에 기부하기</string>

@@ -35,7 +35,6 @@
     <string name="update_type_title">Opdateringstype</string>
     <string name="update_type_release">Udgivelse</string>
     <string name="update_type_nightly">Natlige</string>
-    <string name="donation_record_with_rank">Du donerede i alt CNY %1$d, mere end %2$s af donorerne globalt, rangering %3$d!</string>
     <string name="donation_record_none">Du ikke har doneret</string>
     <string name="donation_payment_success">Tak for dit bidrag!</string>
     <string name="no_updates_found">Ingen nye opdateringer fundet</string>

@@ -45,7 +45,6 @@
     <string name="update_type_title">Kiểu cập nhật</string>
     <string name="update_type_release">Ổn định</string>
     <string name="update_type_nightly">Hàng ngày</string>
-    <string name="donation_record_with_rank">Bạn tặng tổng cộng của CNY %1$d, nhiều hơn %2$s của các nhà tài trợ toàn cầu, xếp hạng Thứ %3$d!</string>
     <string name="donation_record_none">Bạn không ủng hộ</string>
     <string name="donation_payment_success">Cảm ơn sự ủng hộ của bạn!</string>
     <string name="donation_dialog_title">Ủng hộ Dự án nguồn mở MoKee</string>

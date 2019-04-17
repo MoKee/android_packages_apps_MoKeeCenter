@@ -38,7 +38,6 @@
     <string name="update_type_title">Τύπος ενημερώσεων</string>
     <string name="update_type_release">Έκδοση</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="donation_record_with_rank">Δωρίσατε ένα ποσό CNY %1$d, περισσότερα από %2$s δωρεές παγκοσμίως, κατάταξη Νο.%3$d!</string>
     <string name="donation_record_none">Δεν έχετε κάνει δωρεά</string>
     <string name="donation_payment_success">Σας ευχαριστούμε για τη δωρεά σας!</string>
     <string name="donation_dialog_title">Κάντε δωρεά στο MoKee OpenSource</string>

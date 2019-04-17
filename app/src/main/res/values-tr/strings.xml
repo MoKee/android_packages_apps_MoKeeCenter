@@ -76,8 +76,6 @@
     <string name="update_type_nightly">Gecelik</string>
     <string name="update_type_premium">Özel</string>
     <string name="donation_record_title">Bağış kaydı</string>
-    <string name="donation_record_without_rank">Toplamda %1$d CNY bağışladınız.</string>
-    <string name="donation_record_with_rank">Toplamda CNY %1$d bağışta bulundun, diğer bağışçılaradan %2$s daha fazla bağışta bulundun, sıra no %3$d!</string>
     <string name="donation_record_none">Bağiş yapılmadı</string>
     <string name="donation_restore_success">Bağış kaydı başarıyla geri yüklendi!</string>
     <string name="donation_restore_failure">Lütfen internet bağlantınızı kontrol edip daha sonra tekrar deneyin.</string>

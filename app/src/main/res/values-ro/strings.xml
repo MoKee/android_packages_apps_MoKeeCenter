@@ -44,7 +44,6 @@
     <string name="update_type_title">Tipul de actualizare</string>
     <string name="update_type_release">Lansare</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="donation_record_with_rank">Ai donat un total de CNY %1$d, mai mult de %2$s de donatori la nivel global, rang No.%3$d!</string>
     <string name="donation_record_none">Nu ai donat</string>
     <string name="donation_payment_success">Va multumim pentru donatie!</string>
     <string name="donation_dialog_title">Donați pentru MoKee OpenSource</string>

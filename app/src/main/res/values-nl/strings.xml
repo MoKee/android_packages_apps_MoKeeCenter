@@ -44,7 +44,6 @@
     <string name="update_type_title">Type update</string>
     <string name="update_type_release">Uitgave</string>
     <string name="update_type_nightly">Nachtelijks</string>
-    <string name="donation_record_with_rank">U geschonk CNY %1$d, in totaal meer dan %2$s van donors wereldwijd, rang No.%3$d!</string>
     <string name="donation_record_none">U hebt geen donatie gedaan</string>
     <string name="donation_payment_success">Dank u voor uw donatie!</string>
     <string name="donation_dialog_title">Doneer aan MoKee OpenSource</string>

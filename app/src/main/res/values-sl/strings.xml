@@ -76,8 +76,6 @@
     <string name="update_type_nightly">Nightly</string>
     <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Zapis o prispevku</string>
-    <string name="donation_record_without_rank">Skupno ste prispevali %1$d CNY.</string>
-    <string name="donation_record_with_rank">Skupno ste prispevali CNY %1$d, več kot %2$s donatorjev v svetovnem merilu, uvrstitev št.%3$d!</string>
     <string name="donation_record_none">Niste še prispevali</string>
     <string name="donation_restore_success">Zapis o prispevku je bil uspešno obnovljen!</string>
     <string name="donation_restore_failure">Preverite svojo internetno povezavo in poskusite ponovno.</string>

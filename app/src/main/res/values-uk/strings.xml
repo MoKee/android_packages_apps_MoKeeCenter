@@ -43,7 +43,6 @@
     <string name="update_type_title">Тип оновлення</string>
     <string name="update_type_release">Реліз</string>
     <string name="update_type_nightly">Нічна</string>
-    <string name="donation_record_with_rank">Ви пожертвували всього CNY %1$d, це більше, ніж %2$s людей всього, Ваш рейтинг %3$d!</string>
     <string name="donation_record_none">Ви не пожертвували</string>
     <string name="donation_payment_success">Дякуємо вам за ваш внесок!</string>
     <string name="donation_dialog_title">Пожертвувати MoKee Open Source</string>
