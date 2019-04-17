@@ -29,7 +29,7 @@ import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
-import com.mokee.center.model.RankInfo;
+import com.mokee.center.model.RankingsInfo;
 import com.mokee.center.util.CommonUtil;
 import com.mokee.os.Build;
 
@@ -37,7 +37,7 @@ import static com.mokee.center.misc.Constants.KEY_DONATION_AMOUNT;
 import static com.mokee.center.misc.Constants.KEY_DONATION_FIRST_CHECK_COMPLETED;
 import static com.mokee.center.misc.Constants.KEY_DONATION_LAST_CHECK_TIME;
 import static com.mokee.center.misc.Constants.KEY_DONATION_PERCENT;
-import static com.mokee.center.misc.Constants.KEY_DONATION_RANK;
+import static com.mokee.center.misc.Constants.KEY_DONATION_RANKINGS;
 import static com.mokee.center.misc.Constants.PARAM_UNIQUE_IDS;
 
 public class DonationRecordPreference extends Preference {
@@ -45,7 +45,7 @@ public class DonationRecordPreference extends Preference {
     private static final String TAG = DonationRecordPreference.class.getName();
 
     private SharedPreferences mDonationPrefs;
-    private int mPaid, mPercent, mRank;
+    private int mPaid, mPercent, mRankings;
 
     public DonationRecordPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -57,49 +57,49 @@ public class DonationRecordPreference extends Preference {
         super.onAttached();
         mPaid = MKCenterApplication.getInstance().getDonationInfo().getPaid();
         mPercent = mDonationPrefs.getInt(KEY_DONATION_PERCENT, 0);
-        mRank = mDonationPrefs.getInt(KEY_DONATION_RANK, 0);
-        setSummary(mPaid, mPercent, mRank);
+        mRankings = mDonationPrefs.getInt(KEY_DONATION_RANKINGS, 0);
+        setSummary(mPaid, mPercent, mRankings);
 
         if (mPaid > 0 && mDonationPrefs.getLong(KEY_DONATION_LAST_CHECK_TIME, 0) + DateUtils.DAY_IN_MILLIS < System.currentTimeMillis()
                 || !mDonationPrefs.getBoolean(KEY_DONATION_FIRST_CHECK_COMPLETED, false)) {
-            fetchRankInfo();
+            fetchRankingsInfo();
         }
     }
 
-    public void updateRankInfo() {
-        setSummary(MKCenterApplication.getInstance().getDonationInfo().getPaid(), mPercent, mRank);
-        fetchRankInfo();
+    public void updateRankingsInfo() {
+        setSummary(MKCenterApplication.getInstance().getDonationInfo().getPaid(), mPercent, mRankings);
+        fetchRankingsInfo();
     }
 
-    public void fetchRankInfo() {
+    public void fetchRankingsInfo() {
         OkGo.<String>post(getContext().getString(R.string.conf_fetch_donation_ranking_url_def))
                 .tag(TAG).params(PARAM_UNIQUE_IDS, Build.getUniqueIDS(getContext())).execute(new StringCallback() {
             @Override
             public void onSuccess(Response<String> response) {
                 Gson gson = new Gson();
-                RankInfo rankInfo = gson.fromJson(response.body(), RankInfo.class);
-                if (rankInfo != null) {
+                RankingsInfo rankingsInfo = gson.fromJson(response.body(), RankingsInfo.class);
+                if (rankingsInfo != null) {
                     mDonationPrefs.edit()
-                            .putInt(KEY_DONATION_AMOUNT, rankInfo.getAmount())
-                            .putInt(KEY_DONATION_PERCENT, rankInfo.getPercent())
-                            .putInt(KEY_DONATION_RANK, rankInfo.getRank())
+                            .putInt(KEY_DONATION_AMOUNT, rankingsInfo.getAmount())
+                            .putInt(KEY_DONATION_PERCENT, rankingsInfo.getPercent())
+                            .putInt(KEY_DONATION_RANKINGS, rankingsInfo.getRankings())
                             .putLong(KEY_DONATION_LAST_CHECK_TIME, System.currentTimeMillis())
                             .putBoolean(KEY_DONATION_FIRST_CHECK_COMPLETED, true).apply();
-                    mPercent = rankInfo.getPercent();
-                    mRank = rankInfo.getRank();
-                    setSummary(rankInfo.getAmount(), rankInfo.getPercent(), rankInfo.getRank());
+                    mPercent = rankingsInfo.getPercent();
+                    mRankings = rankingsInfo.getRankings();
+                    setSummary(rankingsInfo.getAmount(), rankingsInfo.getPercent(), rankingsInfo.getRankings());
                 }
             }
         });
     }
 
-    private void setSummary(int paid, int percent, int rank) {
+    private void setSummary(int paid, int percent, int rankings) {
         if (paid == 0) {
             setSummary(R.string.donation_record_none);
-        } else if (rank == 0) {
-            setSummary(getContext().getString(R.string.donation_record_without_rank, paid));
+        } else if (rankings == 0) {
+            setSummary(getContext().getString(R.string.donation_record_without_rankings, paid));
         } else {
-            setSummary(getContext().getString(R.string.donation_record_with_rank, paid, percent + "%", rank));
+            setSummary(getContext().getString(R.string.donation_record_with_rankings, paid, percent + "%", rankings));
         }
     }
 }

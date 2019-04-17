@@ -98,8 +98,8 @@
 
     <!-- Donation Info -->
     <string name="donation_record_title">Donation record</string>
-    <string name="donation_record_without_rank">You donated a total of %1$d CNY.</string>
-    <string name="donation_record_with_rank">You donated a total of %1$d CNY, more than %2$s of donors globally, rank No.%3$d!</string>
+    <string name="donation_record_without_rankings">You donated a total of %1$d CNY.</string>
+    <string name="donation_record_with_rankings">You donated a total of %1$d CNY, more than %2$s of donors globally, rankings No.%3$d!</string>
     <string name="donation_record_none">You haven\'t donated</string>
     <string name="donation_restore_success">The donation record was restored successfully!</string>
     <string name="donation_restore_failure">Please check your internet connection and try again later.</string>

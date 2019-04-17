@@ -21,12 +21,12 @@ import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class RankInfo implements Serializable {
+public class RankingsInfo implements Serializable {
 
     @SerializedName("amount")
     private int amount;
-    @SerializedName("rank")
-    private int rank;
+    @SerializedName("rankings")
+    private int rankings;
     @SerializedName("percent")
     private int percent;
 
@@ -38,12 +38,12 @@ public class RankInfo implements Serializable {
         this.amount = amount;
     }
 
-    public int getRank() {
-        return rank;
+    public int getRankings() {
+        return rankings;
     }
 
-    public void setRank(int rank) {
-        this.rank = rank;
+    public void setRankings(int rankings) {
+        this.rankings = rankings;
     }
 
     public int getPercent() {
