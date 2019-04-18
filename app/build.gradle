@@ -4,6 +4,7 @@ apply plugin: 'io.fabric'
 
 android {
     compileSdkVersion 28
+    buildToolsVersion = '28.0.3'
     defaultConfig {
         applicationId "com.mokee.center"
         minSdkVersion 27
@@ -13,12 +14,6 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
-        debug {
-            storeFile file("platform.jks")
-            storePassword 'android'
-            keyAlias 'oreo'
-            keyPassword 'android'
-        }
         release {
             storeFile file("platform.jks")
             storePassword 'android'
@@ -33,6 +28,7 @@ android {
     }
     buildTypes {
         release {
+            multiDexEnabled = true
             minifyEnabled true
             signingConfig signingConfigs.release
         }
@@ -42,8 +38,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
     }
     lintOptions {
         disable 'GoogleAppIndexingWarning'
@@ -54,7 +50,7 @@ android {
 dependencies {
     compileOnly fileTree(include: ['*.jar'], dir: 'ext-libs')
     compileOnly files('../../../../vendor/mk-priv/build/tools/sdks/cloud/cloud.jar')
-    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.0-alpha4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.preference:preference:1.1.0-alpha04'
@@ -66,9 +62,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.lzy.net:okgo:3.0.4'
     implementation 'com.lzy.net:okserver:2.0.5'
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    testImplementation 'junit:junit:4.13-beta-2'
+    androidTestImplementation 'androidx.test:runner:1.2.0-alpha03'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0-alpha03'
 }
 
 private static gitVersionCode() {
