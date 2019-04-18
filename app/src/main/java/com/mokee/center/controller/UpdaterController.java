@@ -298,7 +298,7 @@ public class UpdaterController {
                 mStatus = progress.status;
             } else {
                 final long now = SystemClock.elapsedRealtime();
-                if (now - DateUtils.SECOND_IN_MILLIS >= mLastUpdate) {
+                if (now - DateUtils.SECOND_IN_MILLIS >= mLastUpdate && progress.currentSize != 0) {
                     mLastUpdate = now;
 
                     long spendTime = (System.currentTimeMillis() - progress.date) / DateUtils.SECOND_IN_MILLIS;
