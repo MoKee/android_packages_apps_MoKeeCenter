@@ -72,6 +72,7 @@
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
     <string name="donation_record_title">Catatan donasi</string>
+    <string name="donation_record_without_rankings">Anda menyumbangkan total %1$d CNY.</string>
     <string name="donation_record_none">Anda belum melakukan donasi</string>
     <string name="donation_restore_success">Catatan donasi berhasil dipulihkan!</string>
     <string name="donation_restore_failure">Silakan periksa koneksi internet Anda dan coba lagi nanti.</string>

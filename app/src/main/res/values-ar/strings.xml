@@ -76,6 +76,7 @@
     <string name="update_type_nightly">النسخة الليلية</string>
     <string name="update_type_premium">النسخة المتميزة</string>
     <string name="donation_record_title">سجل التبرع</string>
+    <string name="donation_record_without_rankings">أنت تبرعت ما مجموعه %1$d CNY.</string>
     <string name="donation_record_none">لم تقم بالتبرع</string>
     <string name="donation_restore_success">تم استعادة سجل التبرع بنجاح!</string>
     <string name="donation_restore_failure">رجاءً تأكد من اتصالك بالإنترنت وأعد المحاولة لاحقاً.</string>

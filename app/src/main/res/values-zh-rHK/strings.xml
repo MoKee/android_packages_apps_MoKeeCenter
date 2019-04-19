@@ -75,6 +75,8 @@
     <string name="update_type_nightly">夜版</string>
     <string name="update_type_premium">進階版</string>
     <string name="donation_record_title">捐贈記錄</string>
+    <string name="donation_record_without_rank">您捐贈了 %1$d 元。</string>
+    <string name="donation_record_with_rank">你共捐贈了￥ %1$d 元，已超過全球 %2$s 的捐助者，排名 No.%3$d ！</string>
     <string name="donation_record_none">捐贈是國際上通行的一種支持免費軟件的方式，完成一次光榮的捐贈，使我們能夠做的更好！</string>
     <string name="donation_restore_success">捐贈記錄恢復成功！</string>
     <string name="donation_restore_failure">請檢查您的網路連線，請稍後再試。</string>
