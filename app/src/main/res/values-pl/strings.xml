@@ -75,6 +75,7 @@
     <string name="update_type_release">Wydanie</string>
     <string name="update_type_nightly">Nocne</string>
     <string name="donation_record_title">Zapis darowizny</string>
+    <string name="donation_record_without_rankings">Przekazałeś w sumie %1$d CNY.</string>
     <string name="donation_record_none">Nie przekazałeś dotacji</string>
     <string name="donation_restore_success">Zapis darowizny został przywrócony pomyślnie!</string>
     <string name="donation_restore_failure">Proszę sprawdź swoje połączenie internetowe i spróbuj ponownie później.</string>

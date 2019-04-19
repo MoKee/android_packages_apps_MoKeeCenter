@@ -76,6 +76,8 @@
     <string name="update_type_nightly">Ночные сборки</string>
     <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">История пожертвований</string>
+    <string name="donation_record_without_rankings">Всего вы пожертвовали %1$d юаней.</string>
+    <string name="donation_record_with_rankings">Всего вы пожертвовали %1$d юаней. Это больше %2$s пожертвовавших во всём мире! Ваш номер в рейтинге: %3$d.</string>
     <string name="donation_record_none">Вы не произвели пожертвование</string>
     <string name="donation_restore_success">История пожертвований успешно восстановлена!</string>
     <string name="donation_restore_failure">Пожалуйста, проверьте ваше соединение и повторите попытку.</string>

@@ -71,6 +71,7 @@
     <string name="update_type_release">Vydanie</string>
     <string name="update_type_nightly">Nočná</string>
     <string name="donation_record_title">Zoznam príspevkov</string>
+    <string name="donation_record_without_rankings">Prispeli ste celkovo %1$d CNY.</string>
     <string name="donation_record_none">Nedarovali ste</string>
     <string name="donation_restore_success">Zoznam príspevkov bol úspešne obnovený!</string>
     <string name="donation_restore_failure">Prosím skontrolujte svoje internetové pripojenie a skúste znova neskôr.</string>

@@ -71,6 +71,7 @@
     <string name="update_type_release">ಬಿಡುಗಡೆ</string>
     <string name="update_type_nightly">ರಾತ್ರಿಯ</string>
     <string name="donation_record_title">ಕಾಣಿಕೆ ದಾಖಲೆ</string>
+    <string name="donation_record_without_rankings">ನೀವು ಒಟ್ಟು %1$d CNY ಕಾಣಿಕೆ ನೀಡಿದ್ದೀರಿ.</string>
     <string name="donation_record_none">ನೀವು ಕಾಣಿಕೆ ನೀಡಿಲ್ಲ</string>
     <string name="donation_restore_success">ಕಾಣಿಕೆ ದಾಖಲೆ ಯಶಸ್ವಿಯಾಗಿ ಮರುಸಂಗ್ರಹಿಸಲ್ಪಟ್ಟಿದೆ!</string>
     <string name="donation_restore_failure">ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅಂತರ್ಜಾಲದ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ನಂತರ ಇನ್ನೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</string>
