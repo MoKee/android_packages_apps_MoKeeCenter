@@ -17,7 +17,9 @@
 
 package com.mokee.center;
 
+import android.Manifest;
 import android.app.Application;
+import android.content.pm.PackageManager;
 
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.interceptor.HttpLoggingInterceptor;
@@ -38,10 +40,9 @@ import static com.mokee.center.misc.Constants.USER_AGENT;
 
 public class MKCenterApplication extends Application {
 
+    public static final List<String> WHITELIST_HOSTNAME = Arrays.asList("api.mokeedev.com", "cloud.mokeedev.com", "ota.mokeedev.com");
     private static MKCenterApplication mApp;
-
     private DonationInfo mDonationInfo = new DonationInfo();
-
     private OkHttpClient.Builder builder = new OkHttpClient.Builder();
 
     public static synchronized MKCenterApplication getInstance() {
@@ -56,13 +57,14 @@ public class MKCenterApplication extends Application {
         return builder;
     }
 
-    public static final List<String> WHITELIST_HOSTNAME = Arrays.asList("api.mokeedev.com", "cloud.mokeedev.com", "ota.mokeedev.com");
-
     @Override
     public void onCreate() {
         super.onCreate();
         mApp = this;
-        CommonUtil.updateDonationInfo(this);
+        if (checkSelfPermission(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
+                && checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            CommonUtil.updateDonationInfo(this);
+        }
         initOkGo();
     }
 
