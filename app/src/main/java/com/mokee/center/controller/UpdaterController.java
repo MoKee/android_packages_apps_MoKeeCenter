@@ -290,7 +290,7 @@ public class UpdaterController {
         @Override
         public void onProgress(Progress progress) {
             if (mStatus != progress.status) {
-                Log.i(TAG, "Status changed: " + mStatus + " to " + String.valueOf(progress.status));
+                Log.i(TAG, "Status changed: " + mStatus + " to " + progress.status);
                 if (progress.status != Progress.FINISH
                         && progress.status != Progress.ERROR) {
                     notifyUpdateChange(progress.tag);
