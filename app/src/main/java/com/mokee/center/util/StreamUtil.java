@@ -47,8 +47,7 @@ public class StreamUtil {
             // Read through the stream to update digest.
         }
         input.close();
-        String md5 = bytesToHexString(md.digest());
-        return md5;
+        return bytesToHexString(md.digest());
     }
 
     private static String bytesToHexString(byte[] bytes) {

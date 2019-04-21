@@ -38,9 +38,9 @@ public class BuildInfoUtil {
         String buildDate = String.valueOf(getBuildDate(version));
 
         if (buildDate.length() == 6) {
-            simpleDateFormat = new SimpleDateFormat("yyMMdd");
+            simpleDateFormat = new SimpleDateFormat("yyMMdd", Locale.ENGLISH);
         } else {
-            simpleDateFormat = new SimpleDateFormat("yyyyMMddhhmm");
+            simpleDateFormat = new SimpleDateFormat("yyyyMMddhhmm", Locale.ENGLISH);
         }
         try {
             long timestamp = simpleDateFormat.parse(buildDate).getTime();

@@ -188,7 +188,7 @@ public class CommonUtil {
     }
 
     private static UpdateInfo parseJsonUpdate(Context context, JSONObject object) throws JSONException {
-        UpdateInfo updateInfo = new UpdateInfo.Builder()
+        return new UpdateInfo.Builder()
                 .setName(object.getString("name"))
                 .setDisplayVersion(BuildInfoUtil.getDisplayVersion(context, object.getString("name")))
                 .setMD5Sum(object.getString("md5"))
@@ -197,7 +197,6 @@ public class CommonUtil {
                 .setTimestamp(object.getLong("timestamp"))
                 .setDownloadUrl(object.getString("rom"))
                 .setChangelogUrl(object.getString("log")).build();
-        return updateInfo;
     }
 
     public static CharSequence calculateEta(Context context, long speed, long totalBytes, long totalBytesRead) {

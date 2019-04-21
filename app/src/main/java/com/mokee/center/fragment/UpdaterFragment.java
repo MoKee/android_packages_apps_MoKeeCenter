@@ -301,7 +301,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         }
     }
 
-    private void downloadUpdatesList(final boolean manualRefresh) {
+    private void downloadUpdatesList(boolean manualRefresh) {
         final File json = FileUtil.getCachedUpdateList(getContext());
         final File jsonNew = new File(getContext().getCacheDir().getAbsolutePath() + UUID.randomUUID());
         RequestUtil.fetchAvailableUpdates(getContext(), new StringCallback() {
@@ -372,7 +372,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             }
         } else if (key.equals(PREF_INCREMENTAL_UPDATES)) {
             String suggestUpdateType = BuildInfoUtil.getSuggestUpdateType();
-            String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, String.valueOf(suggestUpdateType));
+            String configUpdateType = mMainPrefs.getString(PREF_UPDATE_TYPE, suggestUpdateType);
             if (!TextUtils.equals(suggestUpdateType, configUpdateType)) {
                 mMainPrefs.edit().putString(PREF_UPDATE_TYPE, suggestUpdateType).apply();
                 mUpdateTypePreference.setValue(suggestUpdateType);

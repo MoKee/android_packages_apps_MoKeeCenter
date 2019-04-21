@@ -39,8 +39,6 @@
     <string name="unlock_features_title">I-unlock ang mga katangian</string>
     <string name="unlock_features_request_summary">(magagamit pagkatapos ng donasyon%d CNY)</string>
     <string name="unlock_features_pending_summary">(nagbigay %1$d CNY, magagamit ng lubos kapag nagbigay ng ganitong donasyon %2$d CNY pa)</string>
-    <string name="incremental_updates_supported_full_summary">ota_diff_I-update_buod</string>
-    <string name="incremental_updates_supported_ota_summary">Buong_diff_I-update_buod</string>
     <string name="update_type_title">Uri ng update</string>
     <string name="update_type_release">Pagkakawalan</string>
     <string name="update_type_nightly">Gabi-gabi</string>
