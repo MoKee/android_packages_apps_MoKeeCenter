@@ -120,4 +120,6 @@
     <string name="dialog_battery_low_message_pct">Poziom naładowania baterii jest zbyt niski, musisz mieć co najmniej <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterii lub <xliff:g id="percent_charging">%2$d</xliff:g>%% w trakcie ładowania.</string>
     <string name="apply_update_dialog_title">Zatwierdź aktualizację</string>
     <string name="apply_update_dialog_message">Masz zamiar zaktualizować do <xliff:g id="update_name">%1$s</xliff:g>.\n\nGdy naciśniesz <xliff:g id="ok">%2$s</xliff:g>, urządzenie uruchomi się ponownie w trybie recovery, aby zainstalować aktualizację.\n\nUwaga: Ta funkcja wymaga kompatybilnego recovery, w innym przypadku aktualizację należy zainstalować ręcznie.</string>
+    <string name="no_storage_permissions">Wymagane jest uprawnienie \'Pamięć\'</string>
+    <string name="no_phone_permissions">Wymagane jest uprawnienie \'Telefon\'</string>
 </resources>

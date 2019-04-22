@@ -60,4 +60,6 @@
     <string name="update_on_mobile_data_title">Aviso</string>
     <string name="checkbox_mobile_data_warning">No mostrar de nuevo</string>
     <string name="apply_update_dialog_title">Aplicar actualización</string>
+    <string name="no_storage_permissions">Se requiere permiso de almacenamiento</string>
+    <string name="no_phone_permissions">Se requiere permiso del teléfono</string>
 </resources>

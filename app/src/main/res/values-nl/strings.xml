@@ -60,4 +60,5 @@
     <string name="update_on_mobile_data_title">Let op</string>
     <string name="checkbox_mobile_data_warning">Niet opnieuw tonen</string>
     <string name="apply_update_dialog_title">Update toepassen</string>
+    <string name="no_storage_permissions">Machtiging voor opslag benodigd</string>
 </resources>

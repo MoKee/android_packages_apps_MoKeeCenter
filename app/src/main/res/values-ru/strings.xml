@@ -123,4 +123,6 @@
     <string name="dialog_battery_low_message_pct">Низкий заряд батареи. Необходимо не менее <xliff:g id="percent_discharging">%1$d</xliff:g>%% заряда батареи для продолжения, <xliff:g id="percent_charging">%2$d</xliff:g>%% заряда батареи, если телефон заряжается.</string>
     <string name="apply_update_dialog_title">Применить обновление</string>
     <string name="apply_update_dialog_message">Вы собираетесь обновиться до версии <xliff:g id="update_name">%1$s</xliff:g>.\n\nЕсли вы нажмете <xliff:g id="ok">%2$s</xliff:g>, устройство будет перезагружено в режим восстановления для установки обновления.\n\nПримечание: для этой функции требуется совместимое меню Recovery, в ином случае обновление необходимо будет устанавливать вручную.</string>
+    <string name="no_storage_permissions">Требуется разрешение для доступа к хранилищу</string>
+    <string name="no_phone_permissions">Требуется доступ к телефону</string>
 </resources>

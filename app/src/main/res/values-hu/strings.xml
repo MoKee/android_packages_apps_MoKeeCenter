@@ -77,7 +77,7 @@
     <string name="update_type_premium">Prémium</string>
     <string name="donation_record_title">Támogatási nyilvántartás</string>
     <string name="donation_record_without_rankings">Ön összesen %1$d kínai jüant adományozott.</string>
-    <string name="donation_record_with_rankings">Ön a lehető legnagyobb összeget (%1$d CNY) adományozta, többet mint %2$s adományozónk világszerte, az Ön rangsorbéli helye No.%3$d!</string>
+    <string name="donation_record_with_rankings">Ön a lehető legnagyobb összeget (%1$d kínai jüant) adományozta, többet mint adományozóink %2$s százaléka világszerte, az Ön rangsorbéli helye No.%3$d!</string>
     <string name="donation_record_none">Még nem adományoztál</string>
     <string name="donation_restore_success">A Támogatási nyilvántartás sikeresen visszaállításra került!</string>
     <string name="donation_restore_failure">Kérjük, ellenőrizze az internetkapcsolatát, majd próbálja meg újra.</string>
@@ -123,4 +123,6 @@
     <string name="dialog_battery_low_message_pct">Az akkumulátortöltöttség túl alacsony, a folytatáshoz legalább <xliff:g id="percent_discharging">%1$d</xliff:g>%% töltöttségre lenne szüksége, illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:g>%% töltés szükséges.</string>
     <string name="apply_update_dialog_title">Frissítés alkalmazása</string>
     <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> változatra fog frissíteni.\n\nHa megnyomja a <xliff:g id="ok">%2$s</xliff:g> gombot, a készülék újraindul recovery módban a frissítés telepítéséhez.\n\nMegjegyzés: Ehhez kompatibilis Recovery-re van szüksége, enélkül manuálisan kell a telepítenie a frissítéseket.</string>
+    <string name="no_storage_permissions">Tárhely-hozzáférés szükséges</string>
+    <string name="no_phone_permissions">Hozzáférési engedély szükséges a telefonhoz</string>
 </resources>

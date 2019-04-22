@@ -77,6 +77,7 @@
     <string name="update_type_premium">Özel</string>
     <string name="donation_record_title">Bağış kaydı</string>
     <string name="donation_record_without_rankings">Toplamda %1$d CNY bağışladınız.</string>
+    <string name="donation_record_with_rankings">Toplamda CNY %1$d bağışta bulundun, diğer bağışçılaradan %2$s daha fazla bağışta bulundun, sıralama no. %3$d!</string>
     <string name="donation_record_none">Bağiş yapılmadı</string>
     <string name="donation_restore_success">Bağış kaydı başarıyla geri yüklendi!</string>
     <string name="donation_restore_failure">Lütfen internet bağlantınızı kontrol edip daha sonra tekrar deneyin.</string>
@@ -122,4 +123,6 @@
     <string name="dialog_battery_low_message_pct">Pil seviyesi çok düşük, devam etmek için en az <xliff:g id="percent_discharging">%1$d</xliff:g>%% pil gereklidir, <xliff:g id="percent_charging">%2$d</xliff:g>%% şarj ediliyor.</string>
     <string name="apply_update_dialog_title">Güncellemeyi uygula</string>
     <string name="apply_update_dialog_message"><xliff:g id="update_name">%1$s</xliff:g> yükseltmek üzeresiniz.\n\n<xliff:g id="ok">%2$s</xliff:g> bastığınızda, güncellemeyi yüklemek için cihaz kurtarma modun da yeniden başlatılacak.\n\nNot: Bu özellik uyumlu bir Kurtarma bölümü gerektirir veya güncellemelerin el ile kurulması gerekir.</string>
+    <string name="no_storage_permissions">Depolama izni gerekiyor</string>
+    <string name="no_phone_permissions">Telefon izni gerekiyor</string>
 </resources>

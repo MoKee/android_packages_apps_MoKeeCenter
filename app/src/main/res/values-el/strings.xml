@@ -53,4 +53,5 @@
     <string name="update_on_mobile_data_title">Προειδοποίηση</string>
     <string name="checkbox_mobile_data_warning">Να μην εμφανιστεί ξανά</string>
     <string name="apply_update_dialog_title">Εφαρμογή ενημέρωσης</string>
+    <string name="no_storage_permissions">Απαιτείται άδεια Αποθήκευσης</string>
 </resources>

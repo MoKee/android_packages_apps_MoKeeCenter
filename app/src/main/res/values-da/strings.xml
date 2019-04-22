@@ -48,4 +48,5 @@
     <string name="download_already_running">En download er allerede i gang</string>
     <string name="update_on_mobile_data_title">Advarsel</string>
     <string name="apply_update_dialog_title">Anvend opdatering</string>
+    <string name="no_storage_permissions">Tilladelse til at gemme påkrævet</string>
 </resources>

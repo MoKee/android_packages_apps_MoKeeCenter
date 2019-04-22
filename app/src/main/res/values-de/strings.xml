@@ -100,4 +100,6 @@
     <string name="checkbox_mobile_data_warning">Nicht wieder anzeigen</string>
     <string name="dialog_battery_low_title">Niedriger Akkustand</string>
     <string name="apply_update_dialog_title">Update durchführen</string>
+    <string name="no_storage_permissions">Speicher-Berechtigung wird benötigt</string>
+    <string name="no_phone_permissions">Telefon-Berechtigung ist erforderlich</string>
 </resources>

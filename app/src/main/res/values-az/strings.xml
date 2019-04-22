@@ -39,4 +39,5 @@
     <string name="activity_not_found">Tətbiq quraşdırılmayıb.</string>
     <string name="new_updates_channel_title">Ən son yeniləmələr</string>
     <string name="apply_update_dialog_title">Yeniləməni tətbiq et</string>
+    <string name="no_storage_permissions">Yaddaş icazəsi tələb olunur</string>
 </resources>
