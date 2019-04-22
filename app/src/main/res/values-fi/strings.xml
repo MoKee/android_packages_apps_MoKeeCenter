@@ -53,4 +53,5 @@
     <string name="update_on_mobile_data_title">Varoitus</string>
     <string name="checkbox_mobile_data_warning">Älä näytä uudelleen</string>
     <string name="apply_update_dialog_title">Asenna päivitys</string>
+    <string name="no_storage_permissions">Lupa tallennustilaan vaaditaan</string>
 </resources>

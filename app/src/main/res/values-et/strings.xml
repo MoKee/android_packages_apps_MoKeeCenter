@@ -20,6 +20,7 @@
     <string name="action_next">Järgmine</string>
     <string name="action_pause">Peata</string>
     <string name="action_resume">Jätka</string>
+    <string name="action_download">Allalaadimine</string>
     <string name="menu_delete_update">Kustuta</string>
     <string name="unknown">Teadmata</string>
     <string name="activity_not_found">Rakendus pole installitud.</string>

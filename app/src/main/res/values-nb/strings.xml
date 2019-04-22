@@ -46,4 +46,5 @@
     <string name="download_already_running">En nedlasting pågår allerede</string>
     <string name="update_on_mobile_data_title">Advarsel</string>
     <string name="apply_update_dialog_title">Installer oppdatering</string>
+    <string name="no_storage_permissions">Tillatelse for lagring kreves</string>
 </resources>

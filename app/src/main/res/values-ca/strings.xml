@@ -48,4 +48,5 @@
     <string name="update_on_mobile_data_title">Alerta</string>
     <string name="checkbox_mobile_data_warning">No ho tornis a mostrar</string>
     <string name="apply_update_dialog_title">Aplica actualització</string>
+    <string name="no_storage_permissions">Es requereix permís d\'accés a l\'emmagatzematge</string>
 </resources>

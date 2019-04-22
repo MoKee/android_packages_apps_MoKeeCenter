@@ -112,4 +112,6 @@
     <string name="dialog_battery_low_message_pct">Úroveň nabitia batérie je príliš nízka, budete potrebovať aspoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% batérie na pokračovanie, <xliff:g id="percent_charging">%2$d</xliff:g>%% pri nabíjaní.</string>
     <string name="apply_update_dialog_title">Aplikovať aktualizáciu</string>
     <string name="apply_update_dialog_message">Chystáte sa aktualizovať na <xliff:g id="update_name">%1$s</xliff:g>.\n\nAk stlačíte <xliff:g id="ok">%2$s</xliff:g>, zariadenie sa reštartuje do recovery režimu na inštaláciu aktualizácie.\n\nPoznámka: Táto funkcia vyžaduje kompatibilné Recovery alebo treba aktualizácie nainštalovať ručne.</string>
+    <string name="no_storage_permissions">Je potrebné povolenie pre prístup k súborom</string>
+    <string name="no_phone_permissions">Je potrebné povolenie pre prístup k telefónu</string>
 </resources>

@@ -122,4 +122,6 @@
     <string name="dialog_battery_low_message_pct">Raven napolnjenosti akumulatorja je prenizka, potrebnih je vsaj <xliff:g id="percent_discharging">%1$d</xliff:g>%% akumulatorja za nadaljevanje, ali <xliff:g id="percent_charging">%2$d</xliff:g>%% če se polni.</string>
     <string name="apply_update_dialog_title">Uveljavi posodbitev</string>
     <string name="apply_update_dialog_message">Ste pred nadgradnjo na <xliff:g id="update_name">%1$s</xliff:g>.\n\nČe pritisnete <xliff:g id="ok">%2$s</xliff:g>, se bo naprava ponovno zagnala v obnovitvenem načinu, da se namesti posodobitev.\n\nOpomba: Ta funkcija zahteva združljivo obnovitev, drugače je potrebno posodobitv namestiti ročno.</string>
+    <string name="no_storage_permissions">Dovoljenje za shrambo je potrebno</string>
+    <string name="no_phone_permissions">Potrebno je dovoljenje za telefon</string>
 </resources>

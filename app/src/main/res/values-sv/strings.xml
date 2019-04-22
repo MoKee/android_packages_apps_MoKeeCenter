@@ -52,4 +52,5 @@
     <string name="update_on_mobile_data_title">Varning</string>
     <string name="checkbox_mobile_data_warning">Visa inte igen</string>
     <string name="apply_update_dialog_title">Installera uppdateringen</string>
+    <string name="no_storage_permissions">Lagringsbehörighet krävs</string>
 </resources>

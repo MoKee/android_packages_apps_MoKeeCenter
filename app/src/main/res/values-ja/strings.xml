@@ -82,4 +82,6 @@
     <string name="update_on_mobile_data_title">注意</string>
     <string name="checkbox_mobile_data_warning">次回から表示しない</string>
     <string name="apply_update_dialog_title">アップデートを適用</string>
+    <string name="no_storage_permissions">ストレージへのアクセス許可が必要です</string>
+    <string name="no_phone_permissions">ストレージへのアクセス許可が必要です</string>
 </resources>
