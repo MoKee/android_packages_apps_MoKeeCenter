@@ -33,6 +33,10 @@
             android:icon="@drawable/ic_nav_bug_reports"
             android:title="@string/nav_main_bug_reports_title" />
         <item
+            android:id="@+id/nav_team"
+            android:icon="@drawable/ic_nav_team"
+            android:title="@string/nav_main_team_title" />
+        <item
             android:id="@+id/nav_open_source"
             android:icon="@drawable/ic_nav_open_source"
             android:title="@string/nav_main_source_title" />

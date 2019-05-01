@@ -267,6 +267,9 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_open_source:
                 CommonUtil.openLink(this, Constants.NAV_OPEN_SOURCE_URL);
                 break;
+            case R.id.nav_team:
+                CommonUtil.openLink(this, Constants.NAV_TEAM_URL);
+                break;
             case R.id.nav_code_review:
                 CommonUtil.openLink(this, Constants.NAV_CODE_REVIEW_URL);
                 break;

@@ -52,6 +52,7 @@
     <string name="nav_main_guide_title">Guide</string>
     <string name="nav_main_source_title">Source Code</string>
     <string name="nav_main_bug_reports_title">Bug Reports</string>
+    <string name="nav_main_team_title">Team</string>
     <!-- Nav Social -->
     <string name="nav_social_title">Social Media</string>
     <string name="nav_social_telegram_title">Telegram</string>
