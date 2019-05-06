@@ -43,6 +43,7 @@
     <string name="nav_main_guide_title">Kılavuz</string>
     <string name="nav_main_source_title">Kaynak Kodu</string>
     <string name="nav_main_bug_reports_title">Hata Bildirme</string>
+    <string name="nav_main_team_title">Ekip</string>
     <string name="nav_social_title">Sosyal Medya</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>

@@ -43,6 +43,7 @@
     <string name="nav_main_guide_title">Руководство</string>
     <string name="nav_main_source_title">Исходный код</string>
     <string name="nav_main_bug_reports_title">Отчёты об ошибках</string>
+    <string name="nav_main_team_title">Команда</string>
     <string name="nav_social_title">Социальные сети</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>

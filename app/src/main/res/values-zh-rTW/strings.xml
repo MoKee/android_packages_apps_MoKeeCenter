@@ -43,6 +43,7 @@
     <string name="nav_main_guide_title">指南</string>
     <string name="nav_main_source_title">原始碼</string>
     <string name="nav_main_bug_reports_title">錯誤回報</string>
+    <string name="nav_main_team_title">團隊</string>
     <string name="nav_social_title">社群媒體</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">微博</string>

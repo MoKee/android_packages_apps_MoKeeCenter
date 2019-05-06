@@ -43,6 +43,7 @@
     <string name="nav_main_guide_title">Przewodnik</string>
     <string name="nav_main_source_title">Kod źródłowy</string>
     <string name="nav_main_bug_reports_title">Raportowanie błędów</string>
+    <string name="nav_main_team_title">Drużyna</string>
     <string name="nav_social_title">Media społecznościowe</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
@@ -74,8 +75,10 @@
     <string name="update_type_title">Rodzaj aktualizacji</string>
     <string name="update_type_release">Wydanie</string>
     <string name="update_type_nightly">Nocne</string>
+    <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Zapis darowizny</string>
     <string name="donation_record_without_rankings">Przekazałeś w sumie %1$d CNY.</string>
+    <string name="donation_record_with_rankings">Przekazałeś w sumie %1$d juanów, więcej niż %2$s przekazujących dotację. Miejsce numer %3$d!</string>
     <string name="donation_record_none">Nie przekazałeś dotacji</string>
     <string name="donation_restore_success">Zapis darowizny został przywrócony pomyślnie!</string>
     <string name="donation_restore_failure">Proszę sprawdź swoje połączenie internetowe i spróbuj ponownie później.</string>
