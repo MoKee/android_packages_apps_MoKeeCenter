@@ -43,6 +43,7 @@
     <string name="nav_main_guide_title">Průvodce</string>
     <string name="nav_main_source_title">Zdrojový kód</string>
     <string name="nav_main_bug_reports_title">Hlášení chyb</string>
+    <string name="nav_main_team_title">Tým</string>
     <string name="nav_social_title">Sociální média</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>

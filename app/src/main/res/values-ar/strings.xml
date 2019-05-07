@@ -43,6 +43,7 @@
     <string name="nav_main_guide_title">الدليل</string>
     <string name="nav_main_source_title">الشفرة المصدرية</string>
     <string name="nav_main_bug_reports_title">تقارير الأخطاء</string>
+    <string name="nav_main_team_title">الفريق</string>
     <string name="nav_social_title">التواصل الاجتماعي</string>
     <string name="nav_social_telegram_title">تليجرام</string>
     <string name="nav_social_weibo_title">Weibo</string>

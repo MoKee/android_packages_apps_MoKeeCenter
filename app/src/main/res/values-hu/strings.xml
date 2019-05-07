@@ -43,6 +43,7 @@
     <string name="nav_main_guide_title">Útmutató</string>
     <string name="nav_main_source_title">Forráskód</string>
     <string name="nav_main_bug_reports_title">Hibajelentés</string>
+    <string name="nav_main_team_title">A csapat</string>
     <string name="nav_social_title">Közösségi média</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
