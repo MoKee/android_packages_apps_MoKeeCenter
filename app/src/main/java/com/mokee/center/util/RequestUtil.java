@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,9 +26,10 @@ import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.HttpParams;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
+import com.mokee.center.misc.Constants;
 import com.mokee.center.model.DonationInfo;
 import com.mokee.os.Build;
-import com.mokee.security.RSAUtils;
+import com.mokee.security.License;
 
 import static com.mokee.center.misc.Constants.AVAILABLE_UPDATES_TAG;
 import static com.mokee.center.misc.Constants.PREF_INCREMENTAL_UPDATES;
@@ -38,7 +39,7 @@ import static com.mokee.center.misc.Constants.PREF_VERIFIED_UPDATES;
 public class RequestUtil {
 
     public static void fetchAvailableUpdates(Context context, StringCallback callback) {
-        HttpParams params = new HttpParams();
+        HttpParams params = buildParams(context);
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
         SharedPreferences mMainPrefs = CommonUtil.getMainPrefs(context);
 
@@ -54,10 +55,11 @@ public class RequestUtil {
         String url;
         if (mMainPrefs.getBoolean(PREF_INCREMENTAL_UPDATES, false) && donationInfo.isBasic() && !CommonUtil.isABDevice()) {
             url = context.getString(R.string.conf_fetch_ota_update_url_def);
+            params.put("build_user", android.os.Build.USER);
         } else {
             url = context.getString(R.string.conf_fetch_full_update_url_def);
             mMainPrefs.edit().putBoolean(PREF_INCREMENTAL_UPDATES, false).apply();
-            params.put("device_official", configUpdateType);
+            params.put("update_type", configUpdateType);
         }
 
         if (mMainPrefs.getBoolean(PREF_VERIFIED_UPDATES, false) && donationInfo.isAdvanced()) {
@@ -66,21 +68,15 @@ public class RequestUtil {
             mMainPrefs.edit().putBoolean(PREF_VERIFIED_UPDATES, false).apply();
         }
 
-        try {
-            params.put("device_name", RSAUtils.rsaEncryptByPublicKey(Build.PRODUCT));
-            params.put("device_version", RSAUtils.rsaEncryptByPublicKey(Build.VERSION));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        params.put("build_user", android.os.Build.USER);
-        params.put("is_encrypted", 1);
+        params.put("version", Build.VERSION);
 
         OkGo.<String>post(url).tag(AVAILABLE_UPDATES_TAG).params(params).execute(callback);
     }
 
-    public static HttpParams updateParams (Context context) {
+    public static HttpParams buildParams (Context context) {
         HttpParams params = new HttpParams();
-        params.put("user_id", Build.getUniqueID(context));
+        params.put("license", License.loadLicense(Constants.LICENSE_PATH));
+        params.put("unique_ids", Build.getUniqueIDS(context));
         return params;
     }
 

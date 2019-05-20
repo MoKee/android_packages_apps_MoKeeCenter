@@ -105,11 +105,7 @@ public class CommonUtil {
         DonationUtils.updateDonationInfo(context, donationInfo, Constants.LICENSE_PATH, Constants.LICENSE_PUB_KEY);
         Intent intent = new Intent(ACTION_LICENSE_CHANGED);
         if (donationInfo.getPaid() > 0) {
-            try {
-                intent.putExtra("data", License.loadLicense(Constants.LICENSE_PATH));
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+            intent.putExtra("data", License.loadLicense(Constants.LICENSE_PATH));
         } else {
             intent.putExtra("data", "");
         }
@@ -195,8 +191,7 @@ public class CommonUtil {
                 .setDiffSize(object.getLong("diff"))
                 .setFileSize(object.getLong("length"))
                 .setTimestamp(object.getLong("timestamp"))
-                .setDownloadUrl(object.getString("rom"))
-                .setChangelogUrl(object.getString("log")).build();
+                .setDownloadUrl(object.getString("url")).build();
     }
 
     public static CharSequence calculateEta(Context context, long speed, long totalBytes, long totalBytesRead) {
