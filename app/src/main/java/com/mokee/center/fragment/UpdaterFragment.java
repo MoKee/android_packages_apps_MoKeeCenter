@@ -314,6 +314,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             public void onError(Response<String> response) {
                 super.onError(response);
                 if (manualRefresh) {
+                    refreshAnimationStop();
                     mMainActivity.makeSnackbar(R.string.updates_check_failed).show();
                 }
             }
@@ -348,6 +349,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             mRefreshAnimation.setRepeatCount(0);
             mRefreshIconView.setEnabled(true);
             updateFeatureStatus();
+            mUpdatesCategory.refreshPreferences();
         }
     }
 
