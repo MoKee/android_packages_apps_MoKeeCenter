@@ -121,6 +121,10 @@ public class UpdaterController {
 
     private Map<String, UpdateInfo> mAvailableUpdates = new TreeMap<>((o1, o2) -> CommonUtil.compare(o1, o2));
 
+    public void cleanAvailableUpdates() {
+        mAvailableUpdates.clear();
+    }
+
     public void setUpdatesAvailableOnline(List<String> downloadIds) {
         for (Iterator<Entry<String, UpdateInfo>> iterator = mAvailableUpdates.entrySet().iterator(); iterator.hasNext();) {
             Entry<String, UpdateInfo> item = iterator.next();

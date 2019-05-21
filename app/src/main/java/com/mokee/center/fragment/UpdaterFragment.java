@@ -257,6 +257,10 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         UpdaterController controller = mUpdaterService.getUpdaterController();
         boolean newUpdates = false;
 
+        if (manualRefresh) {
+            controller.cleanAvailableUpdates();
+        }
+
         List<String> updatesOnline = new ArrayList<>();
         for (UpdateInfo update : updates) {
             newUpdates |= controller.addUpdate(update);
@@ -314,7 +318,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             public void onError(Response<String> response) {
                 super.onError(response);
                 if (manualRefresh) {
-                    refreshAnimationStop();
                     mMainActivity.makeSnackbar(R.string.updates_check_failed).show();
                 }
             }
