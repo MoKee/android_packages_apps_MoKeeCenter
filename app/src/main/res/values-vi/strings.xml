@@ -61,4 +61,5 @@
     <string name="update_on_mobile_data_title">Cảnh báo</string>
     <string name="checkbox_mobile_data_warning">Không hiện lại</string>
     <string name="apply_update_dialog_title">Áp dụng Cập Nhật</string>
+    <string name="no_phone_permissions">Yêu cầu cấp quyền hạn</string>
 </resources>
