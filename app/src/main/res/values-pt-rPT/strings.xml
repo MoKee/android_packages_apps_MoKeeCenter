@@ -29,6 +29,7 @@
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Continuar</string>
     <string name="action_download">Transferência</string>
+    <string name="action_reboot">Reiniciar</string>
     <string name="menu_preferences">Preferências</string>
     <string name="menu_restore">Restaurar</string>
     <string name="menu_donation">Donativo</string>
@@ -42,6 +43,7 @@
     <string name="nav_main_guide_title">Guia</string>
     <string name="nav_main_source_title">Código Fonte</string>
     <string name="nav_main_bug_reports_title">Reportar Erros</string>
+    <string name="nav_main_team_title">Equipa</string>
     <string name="nav_social_title">Redes Sociais</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
@@ -53,16 +55,18 @@
     <string name="unique_id_title">ID Único</string>
     <string name="last_update_check_title">Última Verificação</string>
     <string name="incremental_updates_title">Atualizações incrementais</string>
-    <string name="incremental_updates_summary">Obter atualizações incrementais para economizar tempo de download e largura de banda</string>
+    <string name="incremental_updates_summary">Obter atualizações incrementais para economizar tempo de transferência e largura de banda</string>
     <string name="verified_updates_title">Atualizações testadas</string>
     <string name="verified_updates_summary">Exibir somente as atualizações que são testadas por outros utilizadores</string>
     <string name="available_updates_title">Actualizações Disponíveis</string>
     <string name="no_available_updates_intro">A última verificação não encontrou atualizações disponíveis. Para verificar manualmente, utilize o botão Procurar.</string>
     <string name="pending_available_updates_intro">A procurar atualizações disponíveis</string>
     <string name="unlock_features_title">Funcionalidade de desbloqueio</string>
-    <string name="unlock_features_plan_a_title">Doe %d CNY para desbloquear as atualizações incrementais e baixar a toda velocidade.</string>
+    <string name="unlock_features_plan_a_title">Doar %d CNY para desbloquear as atualizações incrementais e transferir a toda velocidade.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Doar %d CNY para desbloquear a transferência a toda a velocidade.</string>
     <string name="unlock_features_plan_b_title">Doe %d CNY para atualizações verificadas e para remover publicidade.</string>
-    <string name="unlock_features_plan_unlimited_title">Doe %d CNY para desbloquear atualizações incrementais, baixar a velocidade total, atualizações verificadas e remover o Google Ads.</string>
+    <string name="unlock_features_plan_unlimited_title">Doar %d CNY para desbloquear atualizações incrementais, transferir a velocidade total, atualizações verificadas e remover Anúncios da Google.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Doar %d CNY para desbloquear a transferência a toda a velocidade, atualizações verificadas e remover Anúncios da Google.</string>
     <string name="unlock_features_request_summary">(disponível após a doação %d CNY)</string>
     <string name="unlock_features_pending_summary">(doados %1$d CNY, disponível para a vida após a doação de mais %2$d CNY)</string>
     <string name="incremental_updates_not_support_summary">Atualizações incrementais para esta versão não são suportadas.</string>
@@ -71,6 +75,7 @@
     <string name="update_type_title">Tipos de actualização</string>
     <string name="update_type_release">Lançamento</string>
     <string name="update_type_nightly">Beta</string>
+    <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Registro de Doação</string>
     <string name="donation_record_without_rankings">Você doou um total de %1$d CNY.</string>
     <string name="donation_record_none">Não fez nenhuma doação</string>
@@ -94,11 +99,27 @@
     <string name="new_updates_channel_title">Novas atualizações</string>
     <string name="new_updates_found_title">Nova atualização de sistema encontrada</string>
     <string name="ongoing_channel_title">Transferências em curso</string>
-    <string name="downloading_notification">A baixar</string>
+    <string name="downloading_notification">A transferir</string>
     <string name="download_starting_notification">A iniciar a transferência</string>
     <string name="download_paused_notification">Transferência em pausa</string>
+    <string name="download_waiting_network_notification">A aguardar por rede</string>
+    <string name="download_completed_notification">Transferência concluída</string>
+    <string name="download_verification_failed_notification">Não foi possível verificar o pacote de atualização, por favor, transfira novamente</string>
+    <string name="download_file_not_found_notification">Hiperligação de transferência expirada, por favor, clique no botão \"Atualizar\" e tente novamente</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> restante</string>
+    <string name="download_speed">%1$s, %2$s/s</string>
+    <string name="download_already_running">Já existe uma transferência em curso</string>
+    <string name="download_limited_mode">A transferir com velocidade limitada, por favor, doe 30 CNY para desfrutar da velocidade total.</string>
+    <string name="install_already_running">Uma instalação já está em execução</string>
+    <string name="installing_update_notification">A instalar o pacote de atualização</string>
+    <string name="installing_update_finished_notification">Atualização instalada</string>
+    <string name="finalizing_package_notification">A finalizar a instalação do pacote</string>
+    <string name="preparing_ota_first_boot_notification">A preparar para a primeira inicialização</string>
     <string name="update_on_mobile_data_title">Aviso</string>
+    <string name="update_on_mobile_data_message">Está prestes a transferir um pacote de atualização, usando os dados móveis, o que provavelmente irá resultar num elevado consumo de dados. Deseja continuar?</string>
     <string name="checkbox_mobile_data_warning">Não mostrar novamente</string>
+    <string name="dialog_battery_low_title">Bateria fraca</string>
     <string name="apply_update_dialog_title">Instalar atualização</string>
+    <string name="no_storage_permissions">Necessário permissão de armazenamento</string>
     <string name="no_phone_permissions">Necessária a permissão para telefone</string>
 </resources>
