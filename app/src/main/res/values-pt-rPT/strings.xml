@@ -55,7 +55,7 @@
     <string name="unique_id_title">ID Único</string>
     <string name="last_update_check_title">Última Verificação</string>
     <string name="incremental_updates_title">Atualizações incrementais</string>
-    <string name="incremental_updates_summary">Obter atualizações incrementais para economizar tempo de download e largura de banda</string>
+    <string name="incremental_updates_summary">Obter atualizações incrementais para economizar tempo de transferência e largura de banda</string>
     <string name="verified_updates_title">Atualizações testadas</string>
     <string name="verified_updates_summary">Exibir somente as atualizações que são testadas por outros utilizadores</string>
     <string name="available_updates_title">Actualizações Disponíveis</string>
@@ -99,7 +99,7 @@
     <string name="new_updates_channel_title">Novas atualizações</string>
     <string name="new_updates_found_title">Nova atualização de sistema encontrada</string>
     <string name="ongoing_channel_title">Transferências em curso</string>
-    <string name="downloading_notification">A baixar</string>
+    <string name="downloading_notification">A transferir</string>
     <string name="download_starting_notification">A iniciar a transferência</string>
     <string name="download_paused_notification">Transferência em pausa</string>
     <string name="download_waiting_network_notification">A aguardar por rede</string>
