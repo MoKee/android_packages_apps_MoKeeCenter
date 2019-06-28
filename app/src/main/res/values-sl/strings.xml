@@ -43,6 +43,7 @@
     <string name="nav_main_guide_title">Vodič</string>
     <string name="nav_main_source_title">Izvorna koda</string>
     <string name="nav_main_bug_reports_title">Prijavljeni hrošči</string>
+    <string name="nav_main_team_title">Ekipa</string>
     <string name="nav_social_title">Družbena omrežja</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
@@ -62,10 +63,8 @@
     <string name="pending_available_updates_intro">Preverjam, če so na voljo posodobitve</string>
     <string name="unlock_features_title">Odklenete funkcije</string>
     <string name="unlock_features_plan_a_title">Prispevajte %d CNY za odklep delnih posobobitv in prenos s polno hitrostjo.</string>
-    <string name="unlock_features_plan_a_abdevice_title">Prispevajte %d CNY za odklep prenosa pri polni hitrosti.</string>
     <string name="unlock_features_plan_b_title">Prispevajte %d CNY za odklep preverjenih posodobitv in odstranjene Google oglase.</string>
     <string name="unlock_features_plan_unlimited_title">Prispevajte %d CNY za odklep delnih posobobitv, prenos s polno hitrostjo, preverjene posodobitve in odstranjeni Google oglasi.</string>
-    <string name="unlock_features_plan_unlimited_abdevice_title">Prispevajte %d CNY za odklep prenosa pri polni hitrosti, preverjenih posodobitev in odstranitev Google oglasov.</string>
     <string name="unlock_features_request_summary">(na voljo po prispevku %d CNY)</string>
     <string name="unlock_features_pending_summary">(prispevano %1$d CNY, če želite neomejeno uporabo, prispevajte še %2$d CNY)</string>
     <string name="incremental_updates_not_support_summary">Delne posodobitve za to različico niso podprte.</string>
