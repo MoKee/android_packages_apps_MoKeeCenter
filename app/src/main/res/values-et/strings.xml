@@ -75,7 +75,7 @@
     <string name="update_type_title">Uuenduse tüüp</string>
     <string name="update_type_release">Vabasta</string>
     <string name="update_type_nightly">Igapäevane</string>
-    <string name="update_type_premium">Tasuline</string>
+    <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Annetuse rekord</string>
     <string name="donation_record_without_rankings">Te annetasite kokku %1$d CNYd.</string>
     <string name="donation_record_with_rankings">Te annetasite kokku of %1$d CNYd, rohkem kui %2$s doonorit kogu maailmas, paremusjärjestuses nr.%3$d!</string>
