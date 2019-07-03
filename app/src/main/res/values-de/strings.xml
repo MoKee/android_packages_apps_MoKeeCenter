@@ -42,6 +42,7 @@
     <string name="nav_main_guide_title">Anleitung</string>
     <string name="nav_main_source_title">Quellcode</string>
     <string name="nav_main_bug_reports_title">Fehlerberichte</string>
+    <string name="nav_main_team_title">Team</string>
     <string name="nav_social_title">Social Media</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
