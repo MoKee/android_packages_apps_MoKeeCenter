@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -18,12 +18,15 @@
 package com.mokee.center;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.Application;
 import android.content.pm.PackageManager;
+import android.os.Bundle;
 
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.interceptor.HttpLoggingInterceptor;
 import com.lzy.okgo.model.HttpHeaders;
+import com.mokee.center.activity.MainActivity;
 import com.mokee.center.model.DonationInfo;
 import com.mokee.center.util.CommonUtil;
 
@@ -38,12 +41,14 @@ import okhttp3.OkHttpClient;
 
 import static com.mokee.center.misc.Constants.USER_AGENT;
 
-public class MKCenterApplication extends Application {
+public class MKCenterApplication extends Application implements
+        Application.ActivityLifecycleCallbacks {
 
     public static final List<String> WHITELIST_HOSTNAME = Arrays.asList("api.mokeedev.com");
     private static MKCenterApplication mApp;
     private DonationInfo mDonationInfo = new DonationInfo();
     private OkHttpClient.Builder builder = new OkHttpClient.Builder();
+    private boolean mMainActivityActive;
 
     public static synchronized MKCenterApplication getInstance() {
         return mApp;
@@ -60,6 +65,8 @@ public class MKCenterApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        mMainActivityActive = false;
+        registerActivityLifecycleCallbacks(this);
         mApp = this;
         if (checkSelfPermission(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
                 && checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
@@ -90,6 +97,45 @@ public class MKCenterApplication extends Application {
         public boolean verify(String hostname, SSLSession session) {
             return WHITELIST_HOSTNAME.contains(hostname);
         }
+    }
+
+    @Override
+    public void onActivityCreated(Activity activity, Bundle savedInstanceState) {
+    }
+
+    @Override
+    public void onActivityStarted(Activity activity) {
+        if (activity instanceof MainActivity) {
+            mMainActivityActive = true;
+        }
+    }
+
+    @Override
+    public void onActivityResumed(Activity activity) {
+    }
+
+    @Override
+    public void onActivityPaused(Activity activity) {
+
+    }
+
+    @Override
+    public void onActivityStopped(Activity activity) {
+        if (activity instanceof MainActivity) {
+            mMainActivityActive = false;
+        }
+    }
+
+    @Override
+    public void onActivitySaveInstanceState(Activity activity, Bundle outState) {
+    }
+
+    @Override
+    public void onActivityDestroyed(Activity activity) {
+    }
+
+    public boolean isMainActivityActive() {
+        return mMainActivityActive;
     }
 
 }

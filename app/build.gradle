@@ -10,7 +10,7 @@ android {
         minSdkVersion 27
         targetSdkVersion 28
         versionCode gitVersionCode()
-        versionName "2.3.3.9"
+        versionName "2.3.4.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
@@ -33,6 +33,7 @@ android {
             signingConfig signingConfigs.release
         }
         debug {
+            multiDexEnabled = true
             minifyEnabled false
             signingConfig signingConfigs.release
         }

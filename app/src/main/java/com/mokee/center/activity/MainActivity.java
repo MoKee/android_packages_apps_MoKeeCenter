@@ -58,6 +58,8 @@ import static com.mokee.center.misc.Constants.DONATION_RESULT_SUCCESS;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private MKCenterApplication mApp;
+
     private final int PERMISSION_REQUEST_CODE = 1;
 
     private int mIndexPermissionRequestStorageWrite = 0;
@@ -76,6 +78,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mApp = MKCenterApplication.getInstance();
         checkPermissions();
     }
 
@@ -113,7 +116,7 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-        if (!MKCenterApplication.getInstance().getDonationInfo().isAdvanced()) {
+        if (!mApp.getDonationInfo().isAdvanced()) {
             MobileAds.initialize(this, getString(R.string.app_id));
             mWelcomeInterstitialAd = new InterstitialAd(this);
             mWelcomeInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
@@ -121,7 +124,9 @@ public class MainActivity extends AppCompatActivity
             mWelcomeInterstitialAd.setAdListener(new AdListener() {
                 @Override
                 public void onAdLoaded() {
-                    mWelcomeInterstitialAd.show();
+                    if (mApp.isMainActivityActive()) {
+                        mWelcomeInterstitialAd.show();
+                    }
                 }
             });
         }
@@ -228,7 +233,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
-        if (MKCenterApplication.getInstance().getDonationInfo().isAdvanced()) {
+        if (mApp.getDonationInfo().isAdvanced()) {
             menu.findItem(R.id.menu_donation).setTitle(R.string.menu_donation);
         } else {
             menu.findItem(R.id.menu_donation).setTitle(R.string.menu_unlock_features);
