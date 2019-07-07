@@ -142,7 +142,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     public void onCreatePreferences(Bundle bundle, String s) {
         addPreferencesFromResource(R.xml.updater);
         setHasOptionsMenu(true);
-        mDonationPrefs = CommonUtil.getDonationPrefs(getContext());
+        mDonationPrefs = CommonUtil.getDonationPrefs(mMainActivity);
         mMainPrefs = CommonUtil.getMainPrefs(getContext());
         mDonationRecordPreference = findPreference(PREF_DONATION_RECORD);
         mIncrementalUpdatesPreference = findPreference(PREF_INCREMENTAL_UPDATES);
@@ -192,24 +192,24 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         mMainPrefs.registerOnSharedPreferenceChangeListener(this);
 
         Intent intent = new Intent(getContext(), UpdaterService.class);
-        getContext().startService(intent);
-        getContext().bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
+        mMainActivity.startService(intent);
+        mMainActivity.bindService(intent, mConnection, Context.BIND_AUTO_CREATE);
 
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_STATUS);
         intentFilter.addAction(UpdaterController.ACTION_DOWNLOAD_PROGRESS);
         intentFilter.addAction(UpdaterController.ACTION_INSTALL_PROGRESS);
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_REMOVED);
-        LocalBroadcastManager.getInstance(getContext()).registerReceiver(mBroadcastReceiver, intentFilter);
+        LocalBroadcastManager.getInstance(mMainActivity).registerReceiver(mBroadcastReceiver, intentFilter);
     }
 
     @Override
     public void onStop() {
         mDonationPrefs.unregisterOnSharedPreferenceChangeListener(this);
         mMainPrefs.unregisterOnSharedPreferenceChangeListener(this);
-        LocalBroadcastManager.getInstance(getContext()).unregisterReceiver(mBroadcastReceiver);
+        LocalBroadcastManager.getInstance(mMainActivity).unregisterReceiver(mBroadcastReceiver);
         if (mUpdaterService != null) {
-            getContext().unbindService(mConnection);
+            mMainActivity.unbindService(mConnection);
         }
         super.onStop();
     }
@@ -276,7 +276,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     }
 
     private void getUpdatesList() {
-        File jsonFile = FileUtil.getCachedUpdateList(getContext());
+        File jsonFile = FileUtil.getCachedUpdateList(mMainActivity);
         if (jsonFile.exists()) {
             loadUpdatesList(State.loadState(jsonFile), false);
             Log.d(TAG, "Cached list parsed");
@@ -296,7 +296,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                 UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getContext());
             }
             // In case we set a one-shot check because of a previous failure
-            UpdatesCheckReceiver.cancelUpdatesCheck(getContext());
+            UpdatesCheckReceiver.cancelUpdatesCheck(mMainActivity);
             jsonNew.renameTo(json);
         } catch (JSONException e) {
             Log.e(TAG, "Could not read json", e);
@@ -306,8 +306,8 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     }
 
     private void downloadUpdatesList(boolean manualRefresh) {
-        final File json = FileUtil.getCachedUpdateList(getContext());
-        final File jsonNew = new File(getContext().getCacheDir().getAbsolutePath() + UUID.randomUUID());
+        final File json = FileUtil.getCachedUpdateList(mMainActivity);
+        final File jsonNew = new File(mMainActivity.getCacheDir().getAbsolutePath() + UUID.randomUUID());
         RequestUtil.fetchAvailableUpdates(getContext(), new StringCallback() {
             @Override
             public void onSuccess(Response<String> response) {
@@ -373,7 +373,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         if (key.equals(KEY_DONATION_AMOUNT)) {
             if (mDonationPrefs.getInt(KEY_DONATION_AMOUNT, 0)
                     > MKCenterApplication.getInstance().getDonationInfo().getPaid()) {
-                CommonUtil.restoreLicenseRequest(getActivity());
+                CommonUtil.restoreLicenseRequest(mMainActivity);
             }
         } else if (key.equals(PREF_INCREMENTAL_UPDATES)) {
             String suggestUpdateType = BuildInfoUtil.getSuggestUpdateType();
@@ -390,7 +390,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     public boolean onPreferenceClick(Preference preference) {
         if (preference instanceof IncrementalUpdatesPreference
                 || preference instanceof VerifiedUpdatesPreference) {
-            File jsonFile = FileUtil.getCachedUpdateList(getContext());
+            File jsonFile = FileUtil.getCachedUpdateList(mMainActivity);
             jsonFile.delete();
             downloadUpdatesList(true);
             return true;
@@ -403,7 +403,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         if (preference instanceof UpdateTypePreference) {
             if (TextUtils.equals(mUpdateTypePreference.getValue(), newValue.toString()))
                 return false;
-            File jsonFile = FileUtil.getCachedUpdateList(getContext());
+            File jsonFile = FileUtil.getCachedUpdateList(mMainActivity);
             jsonFile.delete();
             mMainPrefs.edit().putString(PREF_UPDATE_TYPE, newValue.toString()).apply();
             downloadUpdatesList(true);
