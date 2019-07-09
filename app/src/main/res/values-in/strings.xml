@@ -29,6 +29,7 @@
     <string name="action_pause">Jeda</string>
     <string name="action_resume">Lanjutkan</string>
     <string name="action_download">Unduh</string>
+    <string name="action_reboot">Nyalakan Ulang</string>
     <string name="menu_preferences">Preferensi</string>
     <string name="menu_restore">Pulihkan</string>
     <string name="menu_donation">Donasi</string>
@@ -42,6 +43,7 @@
     <string name="nav_main_guide_title">Panduan</string>
     <string name="nav_main_source_title">Kode Sumber</string>
     <string name="nav_main_bug_reports_title">Laporkan Masalah</string>
+    <string name="nav_main_team_title">Tim</string>
     <string name="nav_social_title">Media Sosial</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
@@ -61,8 +63,10 @@
     <string name="pending_available_updates_intro">Mencari pembaruan yang tersedia</string>
     <string name="unlock_features_title">Buka fitur</string>
     <string name="unlock_features_plan_a_title">Donasi %d CNY untuk membuka pembaruan tambahan dan mengunduh dengan kecepatan penuh.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Donasikan% d CNY untuk membuka kunci unduhan dengan kecepatan penuh.</string>
     <string name="unlock_features_plan_b_title">Donasikan %d CNY untuk pembaruan terverifikasi dan hapus Iklan Google.</string>
     <string name="unlock_features_plan_unlimited_title">Donasikan %d CNY untuk membuka pembaruan bertahap, unduh dengan kecepatan penuh, pembaruan terverifikasi, dan hapus Iklan Google.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Donasikan% d CNY untuk membuka kunci unduhan dengan kecepatan penuh, pembaruan terverifikasi, dan menghapus Iklan Google.</string>
     <string name="unlock_features_request_summary">(tersedia setelah donasi %d CNY)</string>
     <string name="unlock_features_pending_summary">(donasikan %1$d CNY, tersedia untuk seumur hidup setelah donasi %2$d CNY lebih)</string>
     <string name="incremental_updates_not_support_summary">Pembaruan bertahap untuk versi ini tidak didukung.</string>
@@ -71,8 +75,10 @@
     <string name="update_type_title">Tipe pembaruan</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
+    <string name="update_type_premium">Meningkatkan</string>
     <string name="donation_record_title">Catatan donasi</string>
     <string name="donation_record_without_rankings">Anda menyumbangkan total %1$d CNY.</string>
+    <string name="donation_record_with_rankings">Total donasi anda CNY %1$d, lebih dari %2$s dari para donatur global, peringkat No.%3$d!</string>
     <string name="donation_record_none">Anda belum melakukan donasi</string>
     <string name="donation_restore_success">Catatan donasi berhasil dipulihkan!</string>
     <string name="donation_restore_failure">Silakan periksa koneksi internet Anda dan coba lagi nanti.</string>
@@ -104,6 +110,12 @@
     <string name="download_remaining"><xliff:g example="3 menit" id="duration">%s</xliff:g> tersisa</string>
     <string name="download_speed">%1$s, %2$s/d</string>
     <string name="download_already_running">Unduhan sedang berjalan</string>
+    <string name="download_limited_speed">Mengunduh dengan kecepatan terbatas, silahkan donasi untuk menikmati kecepatan penuh.</string>
+    <string name="install_already_running">Instalasi sudah berjalan</string>
+    <string name="installing_update_notification">Menginstal paket pembaruan</string>
+    <string name="installing_update_finished_notification">Pembaruan diinstal</string>
+    <string name="finalizing_package_notification">Menyelesaikan instalasi paket</string>
+    <string name="preparing_ota_first_boot_notification">Mempersiapkan boot pertama</string>
     <string name="update_on_mobile_data_title">Peringatan</string>
     <string name="update_on_mobile_data_message">Anda akan mengunduh paket pembaruan menggunakan data seluler yang kemungkinan akan menyebabkan penggunaan data tinggi. Apakah Anda ingin melanjutkan?</string>
     <string name="checkbox_mobile_data_warning">Jangan tampilkan lagi</string>

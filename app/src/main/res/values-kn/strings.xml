@@ -41,6 +41,7 @@
     <string name="nav_main_guide_title">ಮಾರ್ಗದರ್ಶಿ</string>
     <string name="nav_main_source_title">ಮೂಲ ಕೊಡ್</string>
     <string name="nav_main_bug_reports_title">ದೋಷ ವರದಿಗಳು</string>
+    <string name="nav_main_team_title">ತಂಡ</string>
     <string name="nav_social_title">ಸಾಮಾಜಿಕ ಮಾಧ್ಯಮ</string>
     <string name="nav_social_telegram_title">ಟೆಲಿಗ್ರಾಂ</string>
     <string name="nav_social_weibo_title">ವೆಬೊ</string>
@@ -72,12 +73,14 @@
     <string name="update_type_nightly">ರಾತ್ರಿಯ</string>
     <string name="donation_record_title">ಕಾಣಿಕೆ ದಾಖಲೆ</string>
     <string name="donation_record_without_rankings">ನೀವು ಒಟ್ಟು %1$d CNY ಕಾಣಿಕೆ ನೀಡಿದ್ದೀರಿ.</string>
+    <string name="donation_record_with_rankings">ನೀವು ಒಟ್ಟು %1$d CNY ಕಾಣಿಕೆ ನೀಡಿದ್ದೀರಿ, %2$s ಗಿಂತ ಹೆಚ್ಚು ದೇಣಿಗೆದಾರರು ಜಾಗತಿಕವಾಗಿದ್ದರೆ,%3$d ಅಗ್ರಗಣ್ಯದಲ್ಲಿದ್ದಾರೆ!</string>
     <string name="donation_record_none">ನೀವು ಕಾಣಿಕೆ ನೀಡಿಲ್ಲ</string>
     <string name="donation_restore_success">ಕಾಣಿಕೆ ದಾಖಲೆ ಯಶಸ್ವಿಯಾಗಿ ಮರುಸಂಗ್ರಹಿಸಲ್ಪಟ್ಟಿದೆ!</string>
     <string name="donation_restore_failure">ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅಂತರ್ಜಾಲದ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ನಂತರ ಇನ್ನೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="donation_restore_not_found">ಯಾವುದೇ ಕಾಣಿಕೆ ದಾಖಲೆಗಳು ಕಂಡುಬಂದಿಲ್ಲ.</string>
     <string name="donation_payment_success">ನಿಮ್ಮ ಕಾಣಿಕೆಗೆ ಧನ್ಯವಾದಗಳು!</string>
     <string name="donation_dialog_title">MoKee Open Source ಗೆ ಕಾಣಿಕೆ ನೀಡಿ</string>
+    <string name="donation_dialog_message">MoKee ಮುಕ್ತ ತಂತ್ರಾಂಶವು ಪರಿಪೂರ್ಣವಾಗಿ ಕೇವಲ ಲಾಭರಹಿತ ಯೋಜನೆಯಾಗಿದ್ದು ಹವ್ಯಾಸ ಮತ್ತು ಉತ್ಸಾಹದಿಂದ ಹುಟ್ಟಿದ ಯೋಜನೆಯಾಗಿದೆ. ಈ ಯೋಜನೆಯನ್ನು ನಿರ್ವಹಿಸಲು, ನಾವು ಹೆಚ್ಚು ಸಮಯ ನಮ್ಮ ಸ್ವಂತ ಹಣವನ್ನು ಮುಟ್ಟುಗೋಲು ಹಾಕಿಕೊಳ್ಳಬೇಕು ಅಥವಾ ದೇಣಿಗೆ ಮತ್ತು ಜಾಹೀರಾತುಗಳನ್ನು ಅವಲಂಬಿಸಬೇಕು. ನಿಮ್ಮ ದೇಣಿಗೆ ನಮ್ಮ ಆರ್ಥಿಕ ಹೊರೆ ಕಡಿಮೆ ಮಾಡಲು ಮತ್ತು ಭವಿಷ್ಯದ ಅಭಿವೃದ್ಧಿಯನ್ನು ಉಳಿಸಿಕೊಳ್ಳಲು ಸಹಾಯ ಮಾಡುತ್ತದೆ!</string>
     <string name="donation_dialog_message_extra">ಕಾಣಿಕೆ ನೀಡಿದ ನಂತರ ನಾವು ಕೆಲವು ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಕಾಣಿಕೆ ನೀಡಿದವರಿಗೆ ಜೀವಮಾನಕ್ಕೆ ಸಕ್ರಿಯಗೊಳಿಸುತ್ತೇವೆ!</string>
     <string name="updates_found">ಹೊಸ ನವೀಕರಣಗಳು ಕಂಡುಬಂದಿವೆ</string>
     <string name="no_updates_found">ಯಾವುದೇ ಹೊಸ ನವೀಕರಣೆಗಳು ಕಂಡುಬಂದಿಲ್ಲ</string>
@@ -99,8 +102,13 @@
     <string name="download_completed_notification">ಡೌನ್‌ಲೋಡ್ ಪೂರ್ಣಗೊಂಡಿದೆ</string>
     <string name="download_verification_failed_notification">ನವೀಕರಣ ಪ್ಯಾಕೇಜ್ ಪರಿಶೀಲನೆ ವಿಫಲಗೊಂಡಿದೆ, ದಯಮಾಡಿ ಮತ್ತೊಮ್ಮೆ ಡೌನ್ಲೋಡ್ ಮಾಡಿ</string>
     <string name="download_file_not_found_notification">ಡೌನ್ಲೋಡ್ ಲಿಂಕ್ ಅವಧಿ ಮುಗಿದುಹೋಗಿದೆ, ದಯವಿಟ್ಟು ಮರುಹೊಸದಾಗಿಸಿ ಗುಂಡಿಯನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ ಮತ್ತು ಇನ್ನೊಮ್ಮೆ ಪ್ರಯತ್ನಿಸಿ</string>
+    <string name="download_remaining"><xliff:g ಉದಾಹರಣೆ="೩ನಿಮಿಷಗಳು" id="ಅವಧಿ">%s</xliff:g> ಉಳಿದಿದೆ</string>
+    <string name="download_speed">%1$s,%2$s/s</string>
     <string name="download_already_running">ಒಂದು ಡೌನ್‍ಲೋಡ್ ಈಗಾಗಲೇ ಚಾಲನೆಯಲ್ಲಿದೆ</string>
     <string name="update_on_mobile_data_title">ಎಚ್ಚರಿಕೆ</string>
+    <string name="update_on_mobile_data_message">ನೀವು ಒಂದು ನವೀಕರಣ ಪ್ಯಾಕೇಜ್‌ ಅನ್ನು ಮೊಬೈಲ್‌ ಡೇಟಾನಿಂದ ಡೌನ್ಲೋಡ್‌ ಮಾಡುವಲ್ಲಿದ್ದು ಅದು ಹೆಚ್ಚಿನ ಡೇಟಾ ಬಳಕೆಗೆ ಕಾರಣವಾಗಬಹುದು. ನೀವು ಮುಂದುವರೆಯಲು ಬಯಸುವೀರಾ?</string>
     <string name="dialog_battery_low_title">ಕಡಿಮೆ ಬ್ಯಾಟರಿ</string>
+    <string name="dialog_battery_low_message_pct">ಬ್ಯಾಟರಿ ಮಟ್ಟವು ತುಂಬ ಕಡಿಮೆ ಇದೆ, ಮುಂದುವರೆಯಲು, ಒಂದು ವೇಳೆ ಚಾರ್ಜ ಮಾಡುತ್ತಿದ್ದಲ್ಲಿ ನಿಮಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ <xliff:g id="percent_discharging"> ಬ್ಯಾಟರಿಯ ಅಗತ್ಯವಿದೆ%1$d</xliff:g>%%<xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
     <string name="apply_update_dialog_title">ನವೀಕರಣ ಅನ್ವಯಿಸಿ</string>
+    <string name="apply_update_dialog_message">ನೀವು ನವೀಕರಣ ಮಾಡುವಲ್ಲಿದ್ದೀರಿ<xliff:g id="update_name">%1$s</xliff:g>. \n\n ಒಂದು ವೇಳೆ ನೀವು <xliff:g id="ok">%2$s</xliff:g> ಒತ್ತಿದ್ದಲ್ಲಿ, ಸಾಧನವು ರಿಕವರಿ ಮಾದರಿಯಲಿ ನವೀಕರಣವನ್ನು ಅಳವಡಿಸುವಲ್ಲಿ ಸ್ವಯಂ ಮರುಪ್ರಾರಂಭವಾಗುವುದು. \n\n ಸೂಚನೆ: ಈ ವೈಶಿಷ್ಟ್ಯಕ್ಕೆ ಹೊಂದಾಣಿಕೆಯಾಗುವ ರಿಕವರಿ ಅಥವಾ ನವೀಕರಣಗಳು ಕೈಯಾರೆ ಅಳವಡಿಸುವ ಅಗತ್ಯವಿದೆ.</string>
 </resources>
