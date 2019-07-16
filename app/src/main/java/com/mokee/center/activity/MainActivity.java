@@ -22,33 +22,37 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
 
+import com.crashlytics.android.Crashlytics;
+import com.crashlytics.android.core.CrashlyticsCore;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
-import androidx.fragment.app.Fragment;
-import androidx.core.view.GravityCompat;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.Toast;
-
+import com.mokee.center.BuildConfig;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.dialog.DonationDialogBuilder;
 import com.mokee.center.dialog.PreferencesDialogBuilder;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.util.CommonUtil;
+
+import io.fabric.sdk.android.Fabric;
 
 import static com.mokee.center.misc.Constants.DONATION_RESULT_FAILURE;
 import static com.mokee.center.misc.Constants.DONATION_RESULT_NOT_FOUND;
@@ -58,10 +62,8 @@ import static com.mokee.center.misc.Constants.DONATION_RESULT_SUCCESS;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    private MKCenterApplication mApp;
-
     private final int PERMISSION_REQUEST_CODE = 1;
-
+    private MKCenterApplication mApp;
     private int mIndexPermissionRequestStorageWrite = 0;
     private int mIndexPermissionRequestStorageRead = 0;
     private int mIndexPermissionRequestPhone = 0;
@@ -79,6 +81,13 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mApp = MKCenterApplication.getInstance();
+        // Set up Crashlytics, disabled for debug builds
+        Crashlytics crashlyticsKit = new Crashlytics.Builder()
+                .core(new CrashlyticsCore.Builder().disabled(BuildConfig.DEBUG).build())
+                .build();
+
+        // Initialize Fabric with the debug-disabled crashlytics.
+        Fabric.with(this, crashlyticsKit);
         checkPermissions();
     }
 
