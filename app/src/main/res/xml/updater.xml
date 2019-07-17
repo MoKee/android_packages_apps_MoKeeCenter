@@ -15,7 +15,8 @@
      You should have received a copy of the GNU General Public License
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.mokee.center.preference.VersionPreference
         android:icon="@drawable/ic_pref_version"
@@ -41,7 +42,9 @@
             android:dependency="incremental_updates"
             android:icon="@drawable/ic_pref_update_type"
             android:key="update_type"
-            android:title="@string/update_type_title" />
+            android:title="@string/update_type_title"
+            android:negativeButtonText="@null"
+            app:useSimpleSummaryProvider="true" />
         <com.mokee.center.preference.IncrementalUpdatesPreference
             android:disableDependentsState="true"
             android:icon="@drawable/ic_pref_incremental_updates"
