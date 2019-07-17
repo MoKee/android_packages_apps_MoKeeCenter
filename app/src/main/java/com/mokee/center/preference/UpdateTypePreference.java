@@ -66,12 +66,5 @@ public class UpdateTypePreference extends ListPreference {
             setEntryValues(resources.getStringArray(R.array.normal_type_values));
         }
         setValue(configUpdateType);
-        setSummary(getEntries()[findIndexOfValue(configUpdateType)]);
-    }
-
-    @Override
-    public boolean callChangeListener(Object newValue) {
-        setSummary(getEntries()[findIndexOfValue(String.valueOf(newValue))]);
-        return super.callChangeListener(newValue);
     }
 }
