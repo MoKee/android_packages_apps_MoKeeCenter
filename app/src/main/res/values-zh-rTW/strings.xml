@@ -31,7 +31,7 @@
     <string name="action_download">下載</string>
     <string name="action_reboot">重新啟動</string>
     <string name="menu_preferences">偏好設定</string>
-    <string name="menu_restore">恢複</string>
+    <string name="menu_restore">恢複授權</string>
     <string name="menu_donation">捐贈</string>
     <string name="menu_unlock_features">解鎖功能</string>
     <string name="menu_refresh">重新整理</string>
