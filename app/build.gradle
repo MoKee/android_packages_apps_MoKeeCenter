@@ -10,7 +10,7 @@ android {
         minSdkVersion 27
         targetSdkVersion 28
         versionCode gitVersionCode()
-        versionName "2.3.7.8"
+        versionName "2.3.8.8"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
