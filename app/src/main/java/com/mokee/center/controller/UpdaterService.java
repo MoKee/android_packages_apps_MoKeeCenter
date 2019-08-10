@@ -76,7 +76,6 @@ public class UpdaterService extends Service {
     public static final int DOWNLOAD_RESTART = 3;
 
     public static final int NOTIFICATION_ID = 10;
-    public static final int NOTIFICATION_INSTALL_ID = 11;
 
     private final IBinder mBinder = new LocalBinder();
     private boolean mHasClients;
