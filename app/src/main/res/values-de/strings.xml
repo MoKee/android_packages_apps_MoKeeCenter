@@ -78,12 +78,14 @@
     <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Spenden-Anzeige</string>
     <string name="donation_record_without_rankings">Sie haben insgesamt %1$d CNY gespendet.</string>
+    <string name="donation_record_with_rankings">Sie spendeten eine Summe von %1$d CNY, mehr als %2$s Spender weltweit und rangieren damit auf Platz Nummer %3$d!</string>
     <string name="donation_record_none">Sie haben nicht gespendet</string>
     <string name="donation_restore_success">Die Daten werden erfolgreich erneut!</string>
     <string name="donation_restore_failure">Bitte überprüfe deine Internetverbindung und versuche es später erneut.</string>
     <string name="donation_restore_not_found">Kein spendenprotokoll gefunden.</string>
     <string name="donation_payment_success">Vielen Dank für Ihre Spende!</string>
     <string name="donation_dialog_title">Spenden Sie an MoKee Open Source</string>
+    <string name="donation_dialog_message">MoKee Open Source ist ein rein gemeinnütziges Projekt, entstanden aus Hobby und Leidenschaft. Um dieses Projekt zu erhalten, müssen wir größtenteils unsere eigenen Mittel aufwenden oder sind auf Spenden und Werbeanzeigen angewiesen. Ihre Spenden können dazu beitragen, unsere finanzielle Last zu reduzieren und die zukünftige Entwicklung zu sichern!</string>
     <string name="donation_dialog_message_extra">Nach der spende werden wir bestimmte Features aktivieren die nur Spendern zur verfügung stehen. Das leben lang!</string>
     <string name="updates_found">Neue Updates gefunden</string>
     <string name="no_updates_found">Keine neuen Updates gefunden</string>
@@ -105,6 +107,7 @@
     <string name="download_completed_notification">Download abgeschlossen</string>
     <string name="download_verification_failed_notification">Update package überprüfung fehlgeschlagen, bitte wiederhole den Download</string>
     <string name="download_file_not_found_notification">Download link abgelaufen, drück bitte den Refresh button und versuche es erneut</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> links</string>
     <string name="download_already_running">Es ist bereits ein Download aktiv</string>
     <string name="download_limited_mode">Lade mit begrenzter Geschwindigkeit runter, bitte spende 30 CNY um die volle Geschwindigkeit zu genießen.</string>
     <string name="install_already_running">Eine installation wird bereits durchgeführt</string>
@@ -113,6 +116,7 @@
     <string name="finalizing_package_notification">Beende Paket installation</string>
     <string name="preparing_ota_first_boot_notification">Bereite für den ersten Start vor</string>
     <string name="update_on_mobile_data_title">Achtung</string>
+    <string name="update_on_mobile_data_message">Sie sind dabei ein Software-Update über das Mobilfunknetz herunterzuladen, was zu einem hohen Datenverbrauch führen kann. Möchten Sie fortfahren?</string>
     <string name="checkbox_mobile_data_warning">Nicht wieder anzeigen</string>
     <string name="dialog_battery_low_title">Niedriger Akkustand</string>
     <string name="apply_update_dialog_title">Update durchführen</string>
