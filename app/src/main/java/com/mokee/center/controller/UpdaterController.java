@@ -241,7 +241,12 @@ public class UpdaterController {
         DownloadTask downloadTask = mOkDownload.getTask(downloadId);
 
         if (MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
-            downloadTask.progress.request.params(RequestUtil.buildParams(mContext));
+            if (downloadTask.progress.request != null) {
+                downloadTask.progress.request.params(RequestUtil.buildParams(mContext));
+            } else {
+                restartDownload(downloadId);
+                return;
+            }
         }
         downloadTask.register(new LogDownloadListener()).start();
     }
