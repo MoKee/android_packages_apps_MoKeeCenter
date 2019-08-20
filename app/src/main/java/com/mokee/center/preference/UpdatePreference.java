@@ -40,6 +40,8 @@ import java.text.NumberFormat;
 
 import javax.net.ssl.SSLException;
 
+import okhttp3.internal.http2.StreamResetException;
+
 public class UpdatePreference extends Preference implements View.OnClickListener, View.OnLongClickListener, PopupMenu.OnMenuItemClickListener {
 
     private OnActionListener mOnActionListener;
@@ -167,7 +169,9 @@ public class UpdatePreference extends Preference implements View.OnClickListener
                     }
                 case Progress.ERROR:
                     mFileSizeView.setText(Formatter.formatFileSize(getContext(), updateInfo.getFileSize()));
-                    if (progress.exception instanceof SSLException || progress.exception instanceof UnknownHostException) {
+                    if (progress.exception instanceof SSLException
+                            || progress.exception instanceof UnknownHostException
+                            || progress.exception instanceof StreamResetException) {
                         mIconView.setVisibility(View.GONE);
                         mDownloadProgress.setIndeterminate(true);
                         mDownloadProgress.setVisibility(View.VISIBLE);
