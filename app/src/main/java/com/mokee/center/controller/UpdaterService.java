@@ -45,6 +45,7 @@ import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadTask;
 import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
+import com.mokee.center.misc.Constants;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.model.UpdateStatus;
 import com.mokee.center.receiver.UpdaterReceiver;
@@ -56,6 +57,8 @@ import java.text.NumberFormat;
 
 import javax.net.ssl.SSLException;
 import javax.net.ssl.SSLHandshakeException;
+
+import okhttp3.internal.http2.StreamResetException;
 
 public class UpdaterService extends Service {
 
@@ -88,6 +91,8 @@ public class UpdaterService extends Service {
     private UpdaterController mUpdaterController;
     private OkDownload mOkDownload;
     private ConnectivityManager mConnectivityManager;
+
+    private boolean networkWarn;
 
     @Override
     public void onCreate() {
@@ -150,16 +155,15 @@ public class UpdaterService extends Service {
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_REMOVED);
         LocalBroadcastManager.getInstance(this).registerReceiver(mBroadcastReceiver, intentFilter);
 
+        networkWarn = CommonUtil.getMainPrefs(this).getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
+
         NetworkRequest.Builder req = new NetworkRequest.Builder();
         req.addTransportType(NetworkCapabilities.TRANSPORT_WIFI);
         req.addTransportType(NetworkCapabilities.TRANSPORT_ETHERNET);
         req.addTransportType(NetworkCapabilities.TRANSPORT_BLUETOOTH);
         req.addTransportType(NetworkCapabilities.TRANSPORT_VPN);
         req.removeCapability(NetworkCapabilities.NET_CAPABILITY_NOT_VPN);
-//        boolean warn = CommonUtil.getMainPrefs(this).getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
-//        if (!warn) {
-//            req.addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR);
-//        }
+
         mConnectivityManager.registerNetworkCallback(req.build(), mNetworkCallback);
     }
 
@@ -168,10 +172,18 @@ public class UpdaterService extends Service {
         public void onAvailable(Network network) {
             super.onAvailable(network);
             mConnectivityManager.bindProcessToNetwork(network);
-            String downloadId = mUpdaterController.getActiveDownloadTag();
-            if (!TextUtils.isEmpty(downloadId)) {
-                mOkDownload.getTask(downloadId).start();
+            if (!networkWarn || mConnectivityManager.getNetworkInfo(network).getType() != ConnectivityManager.TYPE_MOBILE) {
+                String downloadId = mUpdaterController.getActiveDownloadTag();
+                if (!TextUtils.isEmpty(downloadId)) {
+                    mOkDownload.getTask(downloadId).start();
+                }
             }
+        }
+
+        @Override
+        public void onLost(Network network) {
+            super.onLost(network);
+            mConnectivityManager.bindProcessToNetwork(null);
         }
     };
 
@@ -370,7 +382,8 @@ public class UpdaterService extends Service {
                 } else if (progress.exception instanceof SSLHandshakeException) {
                     downloadTask.start();
                 } else if (progress.exception instanceof SSLException
-                        || progress.exception instanceof UnknownHostException) {
+                        || progress.exception instanceof UnknownHostException
+                        || progress.exception instanceof StreamResetException) {
                     mNotificationBuilder.mActions.clear();
                     mNotificationBuilder.setProgress(0, 0, true);
                     String text = getString(R.string.download_waiting_network_notification);
