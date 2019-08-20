@@ -45,7 +45,6 @@ import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadTask;
 import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
-import com.mokee.center.misc.Constants;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.model.UpdateStatus;
 import com.mokee.center.receiver.UpdaterReceiver;
@@ -151,16 +150,16 @@ public class UpdaterService extends Service {
         intentFilter.addAction(UpdaterController.ACTION_UPDATE_REMOVED);
         LocalBroadcastManager.getInstance(this).registerReceiver(mBroadcastReceiver, intentFilter);
 
-        boolean warn = CommonUtil.getMainPrefs(this).getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
-
         NetworkRequest.Builder req = new NetworkRequest.Builder();
-        if (warn) {
-            req.addTransportType(NetworkCapabilities.TRANSPORT_WIFI);
-            req.addTransportType(NetworkCapabilities.TRANSPORT_ETHERNET);
-            req.addTransportType(NetworkCapabilities.TRANSPORT_BLUETOOTH);
-            req.addTransportType(NetworkCapabilities.TRANSPORT_VPN);
-            req.removeCapability(NetworkCapabilities.NET_CAPABILITY_NOT_VPN);
-        }
+        req.addTransportType(NetworkCapabilities.TRANSPORT_WIFI);
+        req.addTransportType(NetworkCapabilities.TRANSPORT_ETHERNET);
+        req.addTransportType(NetworkCapabilities.TRANSPORT_BLUETOOTH);
+        req.addTransportType(NetworkCapabilities.TRANSPORT_VPN);
+        req.removeCapability(NetworkCapabilities.NET_CAPABILITY_NOT_VPN);
+//        boolean warn = CommonUtil.getMainPrefs(this).getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
+//        if (!warn) {
+//            req.addTransportType(NetworkCapabilities.TRANSPORT_CELLULAR);
+//        }
         mConnectivityManager.registerNetworkCallback(req.build(), mNetworkCallback);
     }
 
