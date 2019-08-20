@@ -43,7 +43,7 @@
     <string name="nav_main_guide_title">Руководство</string>
     <string name="nav_main_source_title">Исходный код</string>
     <string name="nav_main_bug_reports_title">Отчёты об ошибках</string>
-    <string name="nav_main_team_title">Команда</string>
+    <string name="nav_main_team_title">Team</string>
     <string name="nav_social_title">Социальные сети</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
@@ -78,7 +78,7 @@
     <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">История пожертвований</string>
     <string name="donation_record_without_rankings">Всего вы пожертвовали %1$d юаней.</string>
-    <string name="donation_record_with_rankings">Всего вы пожертвовали %1$d юаней. Это больше %2$s пожертвовавших во всём мире! Ваш номер в рейтинге: %3$d.</string>
+    <string name="donation_record_with_rankings">You donated a total of %1$d CNY, more than %2$s of donors globally, rankings No.%3$d!</string>
     <string name="donation_record_none">Вы не произвели пожертвование</string>
     <string name="donation_restore_success">История пожертвований успешно восстановлена!</string>
     <string name="donation_restore_failure">Пожалуйста, проверьте ваше соединение и повторите попытку.</string>
