@@ -29,6 +29,7 @@
     <string name="action_pause">Pozastaviť</string>
     <string name="action_resume">Pokračovať</string>
     <string name="action_download">Stiahnuť</string>
+    <string name="action_reboot">Reštart</string>
     <string name="menu_preferences">Nastavenia</string>
     <string name="menu_restore">Obnoviť</string>
     <string name="menu_donation">Príspevok</string>
@@ -42,6 +43,7 @@
     <string name="nav_main_guide_title">Sprievodca</string>
     <string name="nav_main_source_title">Zdrojový kód</string>
     <string name="nav_main_bug_reports_title">Hlásenie chýb</string>
+    <string name="nav_main_team_title">Tím</string>
     <string name="nav_social_title">Sociálne siete</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
@@ -61,8 +63,10 @@
     <string name="pending_available_updates_intro">Vyhľadávam dostupné aktualizácie</string>
     <string name="unlock_features_title">Odomknúť funkcie</string>
     <string name="unlock_features_plan_a_title">Prispejte %d CNY na odomknutie prírastkových aktualizácii a sťahovania v plnej rýchlosti.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Prispieť %d CNY, aby bola odomknutá plná rýchlosť sťahovania.</string>
     <string name="unlock_features_plan_b_title">Prispejte %d CNY pre overené aktualizácie a odstránenie reklám Google.</string>
     <string name="unlock_features_plan_unlimited_title">Prispejte %d CNY na odomknutie prírastkových aktualizácii, sťahovania v plnej rýchlosti, overených aktualizácii a odstránenie reklám Google.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Prispieť %d CNY na odomknutie plnej rýchlosti sťahovania, overených aktualizácii a odstránenie reklám Google.</string>
     <string name="unlock_features_request_summary">(k dispozícii po darovaní %d CNY)</string>
     <string name="unlock_features_pending_summary">(darované %1$d CNY, k dispozícii doživotne po darovaní o %2$d CNY viac)</string>
     <string name="incremental_updates_not_support_summary">Prírastkové aktualizácie tejto verzie nie sú podporované.</string>
@@ -71,8 +75,10 @@
     <string name="update_type_title">Typ aktualizácie</string>
     <string name="update_type_release">Vydanie</string>
     <string name="update_type_nightly">Nočná</string>
+    <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Zoznam príspevkov</string>
     <string name="donation_record_without_rankings">Prispeli ste celkovo %1$d CNY.</string>
+    <string name="donation_record_with_rankings">Darovali ste celkom %1$d CNY viac, než %2$s darcov celkovo. Vaša priečka je No.%3$d!</string>
     <string name="donation_record_none">Nedarovali ste</string>
     <string name="donation_restore_success">Zoznam príspevkov bol úspešne obnovený!</string>
     <string name="donation_restore_failure">Prosím skontrolujte svoje internetové pripojenie a skúste znova neskôr.</string>
@@ -105,6 +111,12 @@
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Sťahovanie je už spustené</string>
     <string name="download_limited_mode">Sťahovanie obmedzenou rýchlosťou, prosím prispejte 30 CNY pre povolenie plnej rýchlosti.</string>
+    <string name="install_already_running">Prebieha inštalácia</string>
+    <string name="installing_update_notification">Inštalácia balíka aktualizácií</string>
+    <string name="installing_update_finished_notification">Aktualizácia nainštalovaná</string>
+    <string name="finalizing_package_notification">Dokončuje sa inštalácia balíka</string>
+    <string name="preparing_ota_first_boot_notification">Príprava na prvé spustenie</string>
+    <string name="dialog_prepare_zip_message_notification">Predbežná príprava aktualizácie</string>
     <string name="update_on_mobile_data_title">Upozornenie</string>
     <string name="update_on_mobile_data_message">Chystáte sa stiahnuť aktualizáciu pomocou mobilných dát, čo pravdepodobne zapríčiní veľkú spotrebu mobilných dát. Prajete si pokračovať?</string>
     <string name="checkbox_mobile_data_warning">Už nezobrazovať</string>
