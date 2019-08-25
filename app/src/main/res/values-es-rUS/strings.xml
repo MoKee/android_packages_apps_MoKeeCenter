@@ -20,6 +20,7 @@
     <string name="app_name">Centro de Mokee</string>
     <string name="navigation_drawer_open">Abrir panel de navegacion</string>
     <string name="navigation_drawer_close">Cerrar panel de navegacion</string>
+    <string name="nav_header_desc">Barra de navegación</string>
     <string name="action_solution">Solución</string>
     <string name="action_next">Siguiente</string>
     <string name="action_pause">Pausar</string>
