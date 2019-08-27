@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">Anneta %d CNY, et avada allalaadimine täiskiirusel, kontrollida värskendusi ja eemaldada Google\'i reklaamid.</string>
     <string name="unlock_features_request_summary">(saadaval pärast %d CNY annetamist)</string>
     <string name="unlock_features_pending_summary">(annetatud %1$d CNYd, saadaval kogu elu jooksul pärast %2$d CNY annetamist)</string>
-    <string name="incremental_updates_not_support_summary">Selle versiooni täiendavaid uuendusi ei toetata.</string>
     <string name="incremental_updates_supported_full_summary">Täiendavad uuendused saab salvestada %s</string>
     <string name="incremental_updates_supported_ota_summary">Salvestab %s võrreldes täieliku ROMiga</string>
     <string name="update_type_title">Uuenduse tüüp</string>

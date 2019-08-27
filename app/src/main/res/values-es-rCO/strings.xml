@@ -60,7 +60,6 @@
     <string name="unlock_features_title">Gesto de desbloqueo</string>
     <string name="unlock_features_request_summary">(Disponible después de donar %d CNY)</string>
     <string name="unlock_features_pending_summary">(Donado %1$d CNY, Disponible de por vida luego de donar %2$d CNY más)</string>
-    <string name="incremental_updates_not_support_summary">No se admiten actualizaciones incrementales a esta versión.</string>
     <string name="incremental_updates_supported_full_summary">Actualizaciones incrementales pueden ahorrar %s</string>
     <string name="incremental_updates_supported_ota_summary">Ahorrarás %s comparado con ROM completo</string>
     <string name="update_type_title">Tipo de actualización</string>

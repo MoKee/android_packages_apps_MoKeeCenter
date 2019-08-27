@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">Dona %d CNY per sbloccare aggiornamenti incrementali, scaricare a tutta velocità, aggiornamenti verificati e rimuovere annunci Google.</string>
     <string name="unlock_features_request_summary">(disponibile dopo la donazione %d CNY)</string>
     <string name="unlock_features_pending_summary">(Donato %1$d CNY, disponibile per tutta la vita dopo la donazione più di %2$d CNY)</string>
-    <string name="incremental_updates_not_support_summary">Gli aggiornamenti incrementali di questa versione non sono supportati.</string>
     <string name="incremental_updates_supported_full_summary">Gli aggiornamenti incrementali possono salvare %s</string>
     <string name="incremental_updates_supported_ota_summary">Risparmio del %s se comparato alla ROM completa</string>
     <string name="update_type_title">Tipo di aggiornamento</string>

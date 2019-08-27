@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">ಪೂರ್ಣ ವೇಗದಲ್ಲಿ ಡೌನ್ಲೋಡ್‌ ಮಾಡಲು ಅನ್ಲಾಕ್‌ ಮಾಡಲು, ಪರಿಶೀಲಿಸಿದ ನವೀಕರಣಗಳು ಮತ್ತು ಗೂಗಲ್‌ ಜಾಹೀರಾತುಗಳನ್ನು ತೆಗೆಯಲು %d CNY ಕಾಣಿಕೆ ನೀಡಿ.</string>
     <string name="unlock_features_request_summary">(%d CNY ಕಾಣಿಕೆ ನೀಡಿದ ನಂತರ ಲಭ್ಯವಿರುವುದು)</string>
     <string name="unlock_features_pending_summary">(%1$d CNY ಕಾಣಿಕೆ ನೀಡಿದ್ದೀರಿ. %2$d CNY ಅಥವಾ ಹೆಚ್ಚು ಕಾಣಿಕೆ ನೀಡಿದ ನಂತರ ಜೀವಮಾನಕ್ಕಾಗಿ ಲಭ್ಯವಿರುತ್ತದೆ)</string>
-    <string name="incremental_updates_not_support_summary">ಈ ಆವೃತ್ತಿಗೆ ಹೆಚ್ಚಿನ ನವೀಕರಣಗಳು ಬೆಂಬಲಿಸುವುದಿಲ್ಲ.</string>
     <string name="incremental_updates_supported_full_summary">ಉನ್ನತ ನವೀಕರಣಗಳು %s ಉಳಿಸಬಹುದು</string>
     <string name="incremental_updates_supported_ota_summary">ಪೂರ್ಣ ROM ಗೆ ಹೋಲಿಕೆ ಮಾಡಿದಾಗ %s ಉಳಿಯುತ್ತದೆ</string>
     <string name="update_type_title">ನವೀಕರಣ ಮಾದರಿ</string>

@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">Пожертвуйте %d юаней, чтобы разблокировать загрузку на полной скорости, а также для доступа к проверенным обновлениям и отключению рекламы Google.</string>
     <string name="unlock_features_request_summary">(доступно после пожертвования в %d юаней)</string>
     <string name="unlock_features_pending_summary">(пожертвовано %1$d юаней, будет доступно навсегда после пожертвования ещё %2$d юаней и более)</string>
-    <string name="incremental_updates_not_support_summary">Обновления по воздуху для этой версии не поддерживаются.</string>
     <string name="incremental_updates_supported_full_summary">ОТА-обновления могут сэкономить %s трафика</string>
     <string name="incremental_updates_supported_ota_summary">Сэкономит %s по сравнению с полным пакетом обновления</string>
     <string name="update_type_title">Тип обновлений</string>

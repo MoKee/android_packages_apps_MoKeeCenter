@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">Donasikan% d CNY untuk membuka kunci unduhan dengan kecepatan penuh, pembaruan terverifikasi, dan menghapus Iklan Google.</string>
     <string name="unlock_features_request_summary">(tersedia setelah donasi %d CNY)</string>
     <string name="unlock_features_pending_summary">(donasikan %1$d CNY, tersedia untuk seumur hidup setelah donasi %2$d CNY lebih)</string>
-    <string name="incremental_updates_not_support_summary">Pembaruan bertahap untuk versi ini tidak didukung.</string>
     <string name="incremental_updates_supported_full_summary">Pembaruan inkremental bisa menghemat %s</string>
     <string name="incremental_updates_supported_ota_summary">Hemat %s bila dibandingkan dengan full ROM</string>
     <string name="update_type_title">Tipe pembaruan</string>

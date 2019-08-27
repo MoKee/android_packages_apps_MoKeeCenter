@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">Spende %d CNY um Downloads mit voller Geschwindigkeit freizuschalten, verzifizierte Updates zu erhalten und Google Ads abzuschalten.</string>
     <string name="unlock_features_request_summary">(Verfügbar nach einer Spende von %d CNY)</string>
     <string name="unlock_features_pending_summary">(Bereits %1$d gespendet, für Lebenslänglich noch %2$d CNY mehr spenden)</string>
-    <string name="incremental_updates_not_support_summary">Inkrementelle Updates für diese Version werden nicht unterstützt.</string>
     <string name="incremental_updates_supported_full_summary">Inkrementelle Updates können %s sparen</string>
     <string name="incremental_updates_supported_ota_summary">Spart %s im Vergleich zur ROM-Vollversion</string>
     <string name="update_type_title">Updatetyp</string>

@@ -67,7 +67,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">Faire un don de %d CNY pour déverrouiller le téléchargement à pleine vitesse, vérifiées mises à jour et supprimer les Google Ads (pub).</string>
     <string name="unlock_features_request_summary">(proposé après un don de %d CNY)</string>
     <string name="unlock_features_pending_summary">(don effectué de %1$d CNY, proposé à vie après un don d’encore %2$d CNY)</string>
-    <string name="incremental_updates_not_support_summary">Mises à jour incrémentielles vers cette version ne sont pas supportés.</string>
     <string name="incremental_updates_supported_full_summary">Les mises à jour incrémentielles peuvent économiser %s</string>
     <string name="incremental_updates_supported_ota_summary">Permet d’économiser %s par rapport à la ROM complète</string>
     <string name="update_type_title">Type de mise à jour</string>

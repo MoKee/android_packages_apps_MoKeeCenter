@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">تبرع %d CNY لفتح التحديثات المتزايدة والتنزيل بأقصى سرعة والتحديثات التي تم التحقق منها وإزالة إعلانات Google.</string>
     <string name="unlock_features_request_summary">(متوفر بعد التبرع%d CNY)</string>
     <string name="unlock_features_pending_summary">(donated %1$d CNY, available for lifetime after donating %2$d CNY more)</string>
-    <string name="incremental_updates_not_support_summary">التحديثات المتزايدة لهذا الإصدار غير مدعومة.</string>
     <string name="incremental_updates_supported_full_summary">يمكن أن توفر التحديثات الإضافية%s</string>
     <string name="incremental_updates_supported_ota_summary">يحفظ %s عند مقارنتها بروم متكامل</string>
     <string name="update_type_title">نوع التحديث</string>

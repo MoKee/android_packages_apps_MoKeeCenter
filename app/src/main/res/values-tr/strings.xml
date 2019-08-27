@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">İndirmenin tam hızıyla kilidini açmak, güncellemeleri doğrulamak ve Google Reklamlarını kaldırmak için %d CNY bağış yapın.</string>
     <string name="unlock_features_request_summary">(%d CNY bağışta bulunulduğunda kullanılabilir)</string>
     <string name="unlock_features_pending_summary">(bağış %1$d CNY %2$d CNY daha bağış yaptıktan sonra ömür boyu kullanılabilir)</string>
-    <string name="incremental_updates_not_support_summary">Bu sürüme yapılan güncellemeleri desteklenmiyor.</string>
     <string name="incremental_updates_supported_full_summary">Artan güncellemeler %s kaydedebilir</string>
     <string name="incremental_updates_supported_ota_summary">Tam ROM için karşılaştırıldığında %s kaydeder</string>
     <string name="update_type_title">Güncelleme türü</string>
