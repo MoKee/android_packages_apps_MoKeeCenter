@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">捐赠 %d 元，解锁高速下载、放心刷™并移除谷歌广告。</string>
     <string name="unlock_features_request_summary">（累计捐赠 %d 元激活选项）</string>
     <string name="unlock_features_pending_summary">（已捐赠 %1$d 元，再捐赠 %2$d 元激活选项）</string>
-    <string name="incremental_updates_not_support_summary">暂不支持增量更新到此版本</string>
     <string name="incremental_updates_supported_full_summary">开启增量更新可为您节省 %s 流量</string>
     <string name="incremental_updates_supported_ota_summary">与完整包相比可为您节省 %s 流量</string>
     <string name="update_type_title">更新类型</string>

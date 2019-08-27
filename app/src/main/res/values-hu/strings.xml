@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">%d kínai jüan adományozásával megnyílik Ön előtt a teljes sebességű letöltés lehetősége és ellenőrzött frissítésekhez juthat Google-reklámok nélkül.</string>
     <string name="unlock_features_request_summary">(%d kínai jüan adományozása után érhető el)</string>
     <string name="unlock_features_pending_summary">(%1$d kínai jüant adományozott, ha még adományoz %2$d összeget állandóan elérhető lesz)</string>
-    <string name="incremental_updates_not_support_summary">Az Ön verziójában a növekményes frissítés nem támogatott.</string>
     <string name="incremental_updates_supported_full_summary">Csak a frissülő növekményeket tartalmazó fájllal ennyit takaríthat meg %s</string>
     <string name="incremental_updates_supported_ota_summary">Összehasonlítva a teljes ROM-mal a megtakarítás ennyi %s</string>
     <string name="update_type_title">Frissítés típusa</string>

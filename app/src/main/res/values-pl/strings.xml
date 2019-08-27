@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">Przekaż %d CNY, aby odblokować pobieranie z pełną prędkością, zweryfikowane aktualizacje i usunąć reklamy Google.</string>
     <string name="unlock_features_request_summary">(dostępne po dotacji %d CNY)</string>
     <string name="unlock_features_pending_summary">(przekazano %1$d CNY, dostępne dożywotnio po przekazaniu więcej %2$d CNY)</string>
-    <string name="incremental_updates_not_support_summary">Aktualizacje przyrostowe do tej wersji nie są obsługiwane.</string>
     <string name="incremental_updates_supported_full_summary">Aktualizacje przyrostowe mogą zaoszczędzić %s</string>
     <string name="incremental_updates_supported_ota_summary">Oszczędza %s w porównaniu do pełnego ROMu</string>
     <string name="update_type_title">Rodzaj aktualizacji</string>

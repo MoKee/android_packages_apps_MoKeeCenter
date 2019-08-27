@@ -67,7 +67,6 @@
     <string name="unlock_features_plan_unlimited_title">Prispevajte %d CNY za odklep delnih posobobitv, prenos s polno hitrostjo, preverjene posodobitve in odstranjeni Google oglasi.</string>
     <string name="unlock_features_request_summary">(na voljo po prispevku %d CNY)</string>
     <string name="unlock_features_pending_summary">(prispevano %1$d CNY, če želite neomejeno uporabo, prispevajte še %2$d CNY)</string>
-    <string name="incremental_updates_not_support_summary">Delne posodobitve za to različico niso podprte.</string>
     <string name="incremental_updates_supported_full_summary">Delne posodobitve bi lahko prihranile %s</string>
     <string name="incremental_updates_supported_ota_summary">Prihrani %s v primerjavi z polnim ROM-om</string>
     <string name="update_type_title">Tip posodobitve</string>

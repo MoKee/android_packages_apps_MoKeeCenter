@@ -69,7 +69,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">Darovat %d CNY pro odemknutí stahování v plné rychlosti, ověřených aktualizací a odstranění reklam Google.</string>
     <string name="unlock_features_request_summary">(k dispozici po darování %d CNY)</string>
     <string name="unlock_features_pending_summary">(darováno %1$d CNY, doživotně k dispozici po darování o %2$d CNY více)</string>
-    <string name="incremental_updates_not_support_summary">Přírůstkové aktualizace nejsou pro tuto verzi podporovány.</string>
     <string name="incremental_updates_supported_full_summary">Přírůstkové aktualizace mohou ušetřit %s</string>
     <string name="incremental_updates_supported_ota_summary">Ušetří %s v porovnání s plnou ROM</string>
     <string name="update_type_title">Typ aktualizace</string>

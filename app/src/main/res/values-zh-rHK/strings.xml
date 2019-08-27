@@ -68,7 +68,6 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">捐贈 %d 人民幣於解鎖全速下載、驗證更新和去除 Google 廣告。</string>
     <string name="unlock_features_request_summary">（累計捐贈人民幣 %d 元後永久可用）</string>
     <string name="unlock_features_pending_summary">（已捐贈人民幣 %1$d 元，再捐贈人民幣 %2$d 元後永久可用）</string>
-    <string name="incremental_updates_not_support_summary">不支援此版本的增量更新。</string>
     <string name="incremental_updates_supported_full_summary">開啟增量更新可節省 %s 流量</string>
     <string name="incremental_updates_supported_ota_summary">與完整 ROM 相比可為您節省 %s 流量</string>
     <string name="update_type_title">更新類型</string>

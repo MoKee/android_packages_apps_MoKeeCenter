@@ -87,7 +87,6 @@
     <string name="unlock_features_pending_summary">(donated %1$d CNY, available for lifetime after donating %2$d CNY more)</string>
 
     <!-- Incremental Updates -->
-    <string name="incremental_updates_not_support_summary">Incremental updates to this version are not supported.</string>
     <string name="incremental_updates_supported_full_summary">Incremental updates can save %s</string>
     <string name="incremental_updates_supported_ota_summary">Saves %s when compared to full ROM</string>
 

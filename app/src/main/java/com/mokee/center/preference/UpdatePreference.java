@@ -219,9 +219,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
             mDownloadProgress.setVisibility(View.GONE);
             if (!CommonUtil.isABDevice()) {
                 long diffSize = updateInfo.getDiffSize();
-                if (diffSize == 0) {
-                    mSummaryView.setText(R.string.incremental_updates_not_support_summary);
-                } else {
+                if (diffSize > 0) {
                     mSummaryView.setText(getContext().getString(BuildInfoUtil.isIncrementalUpdate(getKey())
                                     ? R.string.incremental_updates_supported_ota_summary
                                     : R.string.incremental_updates_supported_full_summary,
