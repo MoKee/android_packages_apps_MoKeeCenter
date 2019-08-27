@@ -34,6 +34,7 @@ import com.mokee.center.controller.UpdaterController;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.model.UpdateStatus;
 import com.mokee.center.util.BuildInfoUtil;
+import com.mokee.center.util.CommonUtil;
 
 import java.net.UnknownHostException;
 import java.text.NumberFormat;
@@ -216,14 +217,16 @@ public class UpdatePreference extends Preference implements View.OnClickListener
             mIconView.setVisibility(View.VISIBLE);
             mDownloadProgress.setIndeterminate(false);
             mDownloadProgress.setVisibility(View.GONE);
-            long diffSize = Long.valueOf(updateInfo.getDiffSize());
-            if (diffSize == 0) {
-                mSummaryView.setText(R.string.incremental_updates_not_support_summary);
-            } else {
-                mSummaryView.setText(getContext().getString(BuildInfoUtil.isIncrementalUpdate(getKey())
-                                ? R.string.incremental_updates_supported_ota_summary
-                                : R.string.incremental_updates_supported_full_summary,
-                        Formatter.formatFileSize(getContext(), diffSize)));
+            if (!CommonUtil.isABDevice()) {
+                long diffSize = updateInfo.getDiffSize();
+                if (diffSize == 0) {
+                    mSummaryView.setText(R.string.incremental_updates_not_support_summary);
+                } else {
+                    mSummaryView.setText(getContext().getString(BuildInfoUtil.isIncrementalUpdate(getKey())
+                                    ? R.string.incremental_updates_supported_ota_summary
+                                    : R.string.incremental_updates_supported_full_summary,
+                            Formatter.formatFileSize(getContext(), diffSize)));
+                }
             }
             mActionProgress.setVisibility(View.GONE);
             mUpdateButton.setEnabled(true);
