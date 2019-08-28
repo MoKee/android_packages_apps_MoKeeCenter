@@ -120,10 +120,9 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                     updateFeatureStatus();
                 }
                 String downloadId = intent.getStringExtra(UpdaterController.EXTRA_DOWNLOAD_ID);
-                UpdateInfo updateInfo = mUpdaterService.getUpdaterController().getUpdate(downloadId);
                 UpdatePreference updatePreference = findPreference(downloadId);
                 if (updatePreference != null) {
-                    updatePreference.updatePreferenceView(updateInfo);
+                    updatePreference.updateStatus();
                 }
             }
         };
