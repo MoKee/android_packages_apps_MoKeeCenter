@@ -21,6 +21,8 @@ import androidx.preference.internal.PreferenceImageView;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 import androidx.appcompat.widget.PopupMenu;
+
+import android.text.TextUtils;
 import android.text.format.Formatter;
 import android.view.MenuItem;
 import android.view.View;
@@ -86,9 +88,18 @@ public class UpdatePreference extends Preference implements View.OnClickListener
 
         mSummaryView = (TextView) holder.findViewById(R.id.summary);
         updatePreferenceView(updateInfo);
+        if (TextUtils.isEmpty(mSummaryView.getText())) {
+            mSummaryView.setVisibility(View.GONE);
+        } else {
+            mSummaryView.setVisibility(View.VISIBLE);
+        }
     }
 
-    public void updatePreferenceView(UpdateInfo updateInfo) {
+    public void updateStatus() {
+        notifyChanged();
+    }
+
+    private void updatePreferenceView(UpdateInfo updateInfo) {
         if (mDownloadProgress == null || mIconView == null
                 || mSummaryView == null && mFileSizeView == null
                 || mActionProgress == null) {
