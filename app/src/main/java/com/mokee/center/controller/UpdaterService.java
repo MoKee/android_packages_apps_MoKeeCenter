@@ -33,10 +33,10 @@ import android.net.NetworkRequest;
 import android.os.Binder;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.util.Log;
+
 import androidx.core.app.NotificationCompat;
 import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import android.text.TextUtils;
-import android.util.Log;
 
 import com.lzy.okgo.exception.HttpException;
 import com.lzy.okgo.exception.OkGoException;
@@ -62,24 +62,19 @@ import okhttp3.internal.http2.StreamResetException;
 
 public class UpdaterService extends Service {
 
-    private static final String TAG = UpdaterService.class.getName();
-
     public static final String ACTION_DOWNLOAD_CONTROL = "action_download_control";
     public static final String EXTRA_DOWNLOAD_ID = "extra_download_id";
     public static final String EXTRA_DOWNLOAD_CONTROL = "extra_download_control";
     public static final String ACTION_INSTALL_UPDATE = "action_install_update";
     public static final String ACTION_INSTALL_STOP = "action_install_stop";
-
-    private static final String ONGOING_NOTIFICATION_CHANNEL =
-            "ongoing_notification_channel";
-
     public static final int DOWNLOAD_START = 0;
     public static final int DOWNLOAD_RESUME = 1;
     public static final int DOWNLOAD_PAUSE = 2;
     public static final int DOWNLOAD_RESTART = 3;
-
     public static final int NOTIFICATION_ID = 10;
-
+    private static final String TAG = UpdaterService.class.getName();
+    private static final String ONGOING_NOTIFICATION_CHANNEL =
+            "ongoing_notification_channel";
     private final IBinder mBinder = new LocalBinder();
     private boolean mHasClients;
 
@@ -93,6 +88,18 @@ public class UpdaterService extends Service {
     private ConnectivityManager mConnectivityManager;
 
     private boolean networkWarn;
+    private NetworkCallback mNetworkCallback = new NetworkCallback() {
+
+        @Override
+        public void onAvailable(Network network) {
+            super.onAvailable(network);
+            if (!networkWarn || mConnectivityManager.getNetworkInfo(network).getType() != ConnectivityManager.TYPE_MOBILE) {
+                if (mUpdaterController.hasActiveDownloads()) {
+                    mUpdaterController.resumeDownload(mUpdaterController.getActiveDownloadTag());
+                }
+            }
+        }
+    };
 
     @Override
     public void onCreate() {
@@ -158,46 +165,17 @@ public class UpdaterService extends Service {
         networkWarn = CommonUtil.getMainPrefs(this).getBoolean(Constants.PREF_MOBILE_DATA_WARNING, true);
 
         NetworkRequest.Builder req = new NetworkRequest.Builder();
-        req.addTransportType(NetworkCapabilities.TRANSPORT_WIFI);
-        req.addTransportType(NetworkCapabilities.TRANSPORT_ETHERNET);
-        req.addTransportType(NetworkCapabilities.TRANSPORT_BLUETOOTH);
-        req.addTransportType(NetworkCapabilities.TRANSPORT_VPN);
+        req.addCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET);
         req.removeCapability(NetworkCapabilities.NET_CAPABILITY_NOT_VPN);
 
         mConnectivityManager.registerNetworkCallback(req.build(), mNetworkCallback);
     }
-
-    private NetworkCallback mNetworkCallback = new NetworkCallback() {
-        @Override
-        public void onAvailable(Network network) {
-            super.onAvailable(network);
-            mConnectivityManager.bindProcessToNetwork(network);
-            if (!networkWarn || mConnectivityManager.getNetworkInfo(network).getType() != ConnectivityManager.TYPE_MOBILE) {
-                String downloadId = mUpdaterController.getActiveDownloadTag();
-                if (!TextUtils.isEmpty(downloadId)) {
-                    mOkDownload.getTask(downloadId).start();
-                }
-            }
-        }
-
-        @Override
-        public void onLost(Network network) {
-            super.onLost(network);
-            mConnectivityManager.bindProcessToNetwork(null);
-        }
-    };
 
     @Override
     public void onDestroy() {
         LocalBroadcastManager.getInstance(this).unregisterReceiver(mBroadcastReceiver);
         mConnectivityManager.unregisterNetworkCallback(mNetworkCallback);
         super.onDestroy();
-    }
-
-    public class LocalBinder extends Binder {
-        public UpdaterService getService() {
-            return UpdaterService.this;
-        }
     }
 
     @Override
@@ -397,6 +375,7 @@ public class UpdaterService extends Service {
                     mNotificationBuilder.setOngoing(true);
                     mNotificationBuilder.setAutoCancel(false);
                     mNotificationManager.notify(NOTIFICATION_ID, mNotificationBuilder.build());
+
                 } else if (progress.exception instanceof UnsupportedOperationException) {
                     stopForeground(STOP_FOREGROUND_DETACH);
                     mNotificationBuilder.mActions.clear();
@@ -499,6 +478,12 @@ public class UpdaterService extends Service {
         final Intent intent = new Intent(this, UpdaterReceiver.class);
         intent.setAction(UpdaterReceiver.ACTION_INSTALL_REBOOT);
         return PendingIntent.getBroadcast(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+    }
+
+    public class LocalBinder extends Binder {
+        public UpdaterService getService() {
+            return UpdaterService.this;
+        }
     }
 
 }

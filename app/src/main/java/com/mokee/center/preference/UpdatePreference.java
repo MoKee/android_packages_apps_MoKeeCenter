@@ -228,6 +228,7 @@ public class UpdatePreference extends Preference implements View.OnClickListener
             mIconView.setVisibility(View.VISIBLE);
             mDownloadProgress.setIndeterminate(false);
             mDownloadProgress.setVisibility(View.GONE);
+            mSummaryView.setText(null);
             if (!CommonUtil.isABDevice()) {
                 long diffSize = updateInfo.getDiffSize();
                 if (diffSize > 0) {
