@@ -20,12 +20,15 @@
     <string name="app_name">Centro MoKee</string>
     <string name="navigation_drawer_open">Abrir menú lateral</string>
     <string name="navigation_drawer_close">Cerrar menú lateral</string>
+    <string name="nav_header_subtitle">Sistema operativo de la Comunidad Android</string>
     <string name="nav_header_desc">Barra de navegación</string>
+    <string name="action_faq">Preguntas &amp; Respuestas</string>
     <string name="action_solution">Solución</string>
     <string name="action_next">Siguiente</string>
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Continuar</string>
     <string name="action_download">Descargar</string>
+    <string name="action_reboot">Reiniciar</string>
     <string name="menu_preferences">Ajustes</string>
     <string name="menu_restore">Restaurar</string>
     <string name="menu_donation">Donación</string>
@@ -58,6 +61,11 @@
     <string name="no_available_updates_intro">No se encontraron actualizaciones en la última comprobación. Pulsa el botón Refrescar para comprobar si existen nuevas actualizaciones.</string>
     <string name="pending_available_updates_intro">Buscar actualizaciones disponibles</string>
     <string name="unlock_features_title">Gesto de desbloqueo</string>
+    <string name="unlock_features_plan_a_title">Dona %d CNY para desbloquear actualizaciones incrementales y descargar a toda velocidad.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Dona %d CNY para desbloquear la descarga a toda velocidad.</string>
+    <string name="unlock_features_plan_b_title">Donar %d CNY para actualizaciones verificadas y eliminar Google Ads.</string>
+    <string name="unlock_features_plan_unlimited_title">Dona %d CNY para desbloquear actualizaciones incrementales, descargar a toda velocidad, actualizaciones verificadas y eliminar Google Ads.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Dona %d CNY para desbloquear la descarga a toda velocidad, verifica actualizaciones y elimina Google Ads.</string>
     <string name="unlock_features_request_summary">(Disponible después de donar %d CNY)</string>
     <string name="unlock_features_pending_summary">(Donado %1$d CNY, Disponible de por vida luego de donar %2$d CNY más)</string>
     <string name="incremental_updates_supported_full_summary">Actualizaciones incrementales pueden ahorrar %s</string>
@@ -65,6 +73,7 @@
     <string name="update_type_title">Tipo de actualización</string>
     <string name="update_type_release">Lanzamiento</string>
     <string name="update_type_nightly">Nocturna</string>
+    <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Record de donación</string>
     <string name="donation_record_without_rankings">Has donado un total de %1$d CNY.</string>
     <string name="donation_record_with_rankings">Donaste un total de CNY %1$d, más que %2$s de donantes a nivel mundial, rank No.%3$d!</string>
@@ -74,6 +83,8 @@
     <string name="donation_restore_not_found">No se encontró ningún registro de donación.</string>
     <string name="donation_payment_success">Gracias por tu donación!</string>
     <string name="donation_dialog_title">Donar a MoKee Open Source</string>
+    <string name="donation_dialog_message">MoKee Open Source es un proyecto puramente sin fines de lucro nacido de afición y pasión. Para mantener este proyecto, tenemos que abandonar nuestro propio dinero la mayor parte del tiempo o confiar en donaciones y anuncios. ¡Tus donaciones pueden ayudar a reducir nuestra carga financiera y sostener el desarrollo futuro!</string>
+    <string name="donation_dialog_message_extra">Después de donar, activaremos ciertas características que sólo están disponibles para los que hayan donado, ¡de por vida!</string>
     <string name="updates_found">Nueva actualización encontrada</string>
     <string name="no_updates_found">No hay nuevas actualizaciones</string>
     <string name="updates_check_failed">Falló la comprobación de actualizaciones. Por favor, verifica la conexión a Internet e inténtalo nuevamente.</string>
@@ -93,10 +104,24 @@
     <string name="download_waiting_network_notification">Esperando la red</string>
     <string name="download_completed_notification">Descarga completada</string>
     <string name="download_verification_failed_notification">Error al verificar el paquete de actualización, por favor, descarga de nuevo</string>
+    <string name="download_file_not_found_notification">Enlace de descarga caducado, por favor haz clic en el botón Actualizar e inténtalo de nuevo</string>
+    <string name="download_remaining">. <xliff:g example="3 minutes" id="duration">%s</xliff:g> restantes</string>
+    <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Hay una descarga en curso</string>
+    <string name="download_limited_speed">Descargando a velocidad limitada, por favor dona %d CNY para disfrutar de la máxima velocidad.</string>
+    <string name="install_already_running">Una instalación ya está en ejecución</string>
+    <string name="installing_update_notification">Instalando paquete de actualización</string>
+    <string name="installing_update_finished_notification">Actualización instalada</string>
+    <string name="finalizing_package_notification">Finalizando instalación del paquete</string>
+    <string name="preparing_ota_first_boot_notification">Preparando para el primer arranque</string>
+    <string name="dialog_prepare_zip_message_notification">Preparación preliminar de la actualización</string>
     <string name="update_on_mobile_data_title">Aviso</string>
+    <string name="update_on_mobile_data_message">Está a punto de descargar un paquete de actualización usando datos móviles que probablemente causarán un alto uso de datos. ¿Desea continuar?</string>
     <string name="checkbox_mobile_data_warning">No mostrar de nuevo</string>
+    <string name="dialog_battery_low_title">Batería baja</string>
+    <string name="dialog_battery_low_message_pct">El nivel de la batería es demasiado bajo, necesita al menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositivo se está cargando.</string>
     <string name="apply_update_dialog_title">Aplicar actualización</string>
+    <string name="apply_update_dialog_message">Actualizarás a <xliff:g id="filename">%1$s</xliff:g>.\n\nAl pulsar en <xliff:g id="ok">%2$s</xliff:g>, se reiniciará el dispositivo en modo «Recovery» para instalar la actualización.\n\nNota: Esta función requiere un «Recovery» compatible o las actualizaciones deberán instalarse manualmente.</string>
     <string name="no_storage_permissions">Se requiere permiso de almacenamiento</string>
     <string name="no_phone_permissions">Se requiere permiso del teléfono</string>
 </resources>
