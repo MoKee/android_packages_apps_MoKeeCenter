@@ -18,11 +18,11 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <plurals name="new_updates_found_content">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g>‌ ನವೀಕರಣವು ಡೌನ್ಲೋಡ್‌ ಗೆ ಲಭ್ಯವಿದೆ</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g>‌ ನವೀಕರಣಗಳು ಡೌನ್ಲೋಡ್‌ ಗೆ ಲಭ್ಯವಿವೆ</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> actualización disponible para descargar</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> actualizaciones disponibles para descargar</item>
     </plurals>
     <plurals name="new_updates_found_additional_count">
-        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> ಹೆಚ್ಚು</item>
-        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> ಹೆಚ್ಚು</item>
+        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> más</item>
+        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> más</item>
     </plurals>
 </resources>
