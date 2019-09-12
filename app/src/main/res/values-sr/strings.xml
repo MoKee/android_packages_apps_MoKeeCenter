@@ -20,12 +20,34 @@
     <string name="app_name">MoKee Центар</string>
     <string name="navigation_drawer_open">Отвори фиоку навигације</string>
     <string name="navigation_drawer_close">Затвори фиоку навигације</string>
+    <string name="nav_header_title">MoKee OpenSource</string>
+    <string name="nav_header_subtitle">Андроид Комуна</string>
+    <string name="nav_header_desc">Навигациона трака</string>
+    <string name="action_faq">Q&amp;A</string>
+    <string name="action_solution">Решење</string>
     <string name="action_next">Следеће</string>
+    <string name="action_pause">Пауза</string>
     <string name="action_resume">Настави</string>
     <string name="action_download">Преузми</string>
+    <string name="action_reboot">Рестарт</string>
+    <string name="menu_preferences">Подешавања</string>
     <string name="menu_restore">Увези</string>
+    <string name="menu_donation">Донације</string>
+    <string name="menu_unlock_features">Откључај све опције</string>
     <string name="menu_refresh">Оcвежи</string>
     <string name="menu_delete_update">Избриши</string>
+    <string name="pref_auto_delete_updates">Обришите ажурирања када су инсталирана или застарела</string>
+    <string name="pref_ab_perf_mode">Поставите приоритетни начин ажурирања</string>
+    <string name="pref_mobile_data_warning">Упозори ако се користе мобилни податци</string>
+    <string name="nav_main_forum_title">Форум</string>
+    <string name="nav_main_guide_title">Водич</string>
+    <string name="nav_main_source_title">Изворни код</string>
+    <string name="nav_main_bug_reports_title">Пријава грешке</string>
+    <string name="nav_main_team_title">Тим</string>
+    <string name="nav_social_title">Друштвене мреже</string>
+    <string name="nav_social_telegram_title">Телеграм</string>
+    <string name="nav_social_weibo_title">Weibo</string>
+    <string name="nav_social_qqchat_title">QQ Group</string>
     <string name="mokee_version_title">MoKee верзија</string>
     <string name="incremental_updates_title">ОТА надоградње</string>
     <string name="incremental_updates_summary">Преузмите постепену надоградњу ради уштеде времена и података</string>
@@ -44,6 +66,19 @@
     <string name="activity_not_found">Апликација није инсталирана.</string>
     <string name="new_updates_channel_title">Нова ажурирања</string>
     <string name="download_already_running">Преузимање је већ покренуто</string>
+    <string name="install_already_running">Инсталација је већ покренута</string>
+    <string name="installing_update_notification">Инсталирање ажурирања</string>
+    <string name="installing_update_finished_notification">Ажурирање је завршено</string>
+    <string name="finalizing_package_notification">Довршавање инсталације</string>
+    <string name="preparing_ota_first_boot_notification">Припрема за прво покретање</string>
+    <string name="dialog_prepare_zip_message_notification">Припрема за ажурирање</string>
     <string name="update_on_mobile_data_title">Упозорење</string>
+    <string name="update_on_mobile_data_message">Припремате се да преузмете пакет ажурирања користећи мобилну интернет везу што ће вероватно прузроковати високу потрошњу мобилног интернета. Желите ли да наставите?</string>
+    <string name="checkbox_mobile_data_warning">Не приказуј поново</string>
+    <string name="dialog_battery_low_title">Слаба батерија</string>
+    <string name="dialog_battery_low_message_pct">Ниво батерије је пренизак, треба вам барем <xliff:g id="percent_discharging">%1$d</xliff:g>%% батерије да наставите, <xliff:g id="percent_charging">%2$d</xliff:g>%% ако се пуни.</string>
     <string name="apply_update_dialog_title">Примени надоградње</string>
+    <string name="apply_update_dialog_message">Биће инсталирано <xliff:g id="update_name">%1$s</xliff:g>.\n\nАко додирнете <xliff:g id="ok">%2$s</xliff:g>, уређај ће се поново покренути у режим опоравка ради инсталације ажурирања.\n\nНапомена: За ову функцију је неопходан одговарајући режим опоравка (Recovery) или ћете морати да инсталирате ручно.</string>
+    <string name="no_storage_permissions">Потребна је дозвола за снимања у меморију уређаја</string>
+    <string name="no_phone_permissions">Потребна је дозвола за приступ телефону</string>
 </resources>
