@@ -107,6 +107,7 @@
     <string name="download_verification_failed_notification">Update package überprüfung fehlgeschlagen, bitte wiederhole den Download</string>
     <string name="download_file_not_found_notification">Download link abgelaufen, drück bitte den Refresh button und versuche es erneut</string>
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> links</string>
+    <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Es ist bereits ein Download aktiv</string>
     <string name="download_limited_mode">Lade mit begrenzter Geschwindigkeit runter, bitte spende 30 CNY um die volle Geschwindigkeit zu genießen.</string>
     <string name="install_already_running">Eine installation wird bereits durchgeführt</string>
@@ -114,11 +115,14 @@
     <string name="installing_update_finished_notification">Update installiert</string>
     <string name="finalizing_package_notification">Beende Paket installation</string>
     <string name="preparing_ota_first_boot_notification">Bereite für den ersten Start vor</string>
+    <string name="dialog_prepare_zip_message_notification">Update wird vorbereitet</string>
     <string name="update_on_mobile_data_title">Achtung</string>
     <string name="update_on_mobile_data_message">Sie sind dabei ein Software-Update über das Mobilfunknetz herunterzuladen, was zu einem hohen Datenverbrauch führen kann. Möchten Sie fortfahren?</string>
     <string name="checkbox_mobile_data_warning">Nicht wieder anzeigen</string>
     <string name="dialog_battery_low_title">Niedriger Akkustand</string>
+    <string name="dialog_battery_low_message_pct">Ihr Akkustand ist zu niedrig. Es werden mindestens <xliff:g id="percent_discharging">%1$d</xliff:g>%% Restkapazität (oder <xliff:g id="percent_charging">%2$d</xliff:g>%% mit angeschlossenem Ladegerät) benötigt, um fortzufahren.</string>
     <string name="apply_update_dialog_title">Update durchführen</string>
+    <string name="apply_update_dialog_message">Bereit zum Update auf <xliff:g id="update_name">%1$s</xliff:g>\n\nWenn Sie <xliff:g id="ok">%2$s</xliff:g> drücken, wird das Gerät im Recovery-Modus gestartet, um das Update durchzuführen.\n\nHinweis: Diese Funktion erfordert ein kompatibles Recovery-System, anderenfalls muss das Update manuell installiert werden.</string>
     <string name="no_storage_permissions">Speicher-Berechtigung wird benötigt</string>
     <string name="no_phone_permissions">Telefon-Berechtigung ist erforderlich</string>
 </resources>

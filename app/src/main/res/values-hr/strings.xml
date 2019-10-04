@@ -23,6 +23,7 @@
     <string name="action_download">Preuzmi</string>
     <string name="menu_delete_update">Izbriši</string>
     <string name="unknown">Nepoznato</string>
+    <string name="never">Nikad</string>
     <string name="activity_not_found">Aplikacija nije instalirana.</string>
     <string name="update_on_mobile_data_title">Upozorenje</string>
     <string name="checkbox_mobile_data_warning">Ne prikazuj ponovno</string>
