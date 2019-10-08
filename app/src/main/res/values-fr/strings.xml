@@ -29,7 +29,7 @@
     <string name="action_pause">Pause</string>
     <string name="action_resume">Reprendre</string>
     <string name="action_download">Télécharger</string>
-    <string name="action_reboot">Redémarrer</string>
+    <string name="action_reboot">Redémarrage</string>
     <string name="menu_preferences">Préférences</string>
     <string name="menu_restore">Restaurer</string>
     <string name="menu_donation">Don</string>
@@ -43,6 +43,7 @@
     <string name="nav_main_guide_title">Guide</string>
     <string name="nav_main_source_title">Code source</string>
     <string name="nav_main_bug_reports_title">Rapports de bogues</string>
+    <string name="nav_main_team_title">Équipe</string>
     <string name="nav_social_title">Réseau Social</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
@@ -62,10 +63,10 @@
     <string name="pending_available_updates_intro">À la recherche de mises à jour disponibles</string>
     <string name="unlock_features_title">Fonctionnalités de déverrouillage</string>
     <string name="unlock_features_plan_a_title">Faire un don de %d CNY pour débloquer les mises à jour incrémentielles et télécharger à pleine vitesse.</string>
-    <string name="unlock_features_plan_a_abdevice_title">Faire un don %d CNY pour débloquer le téléchargement à pleine vitesse.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Faire un don de %d CNY pour débloquer le téléchargement à pleine vitesse.</string>
     <string name="unlock_features_plan_b_title">Donner %d CYN pour des mise à jour vérifiée et enlever la publicité.</string>
     <string name="unlock_features_plan_unlimited_title">Faire un don de %d CNY pour déverrouiller les mises à jour incrémentielles, télécharger à pleine vitesse, vérifiées mises à jour et supprimer Google Ads.</string>
-    <string name="unlock_features_plan_unlimited_abdevice_title">Faire un don de %d CNY pour déverrouiller le téléchargement à pleine vitesse, vérifiées mises à jour et supprimer les Google Ads (pub).</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Faire un don de %d CNY pour déverrouiller le téléchargement à pleine vitesse, les mises à jour vérifiées et supprimer les \"Google Ads\".</string>
     <string name="unlock_features_request_summary">(proposé après un don de %d CNY)</string>
     <string name="unlock_features_pending_summary">(don effectué de %1$d CNY, proposé à vie après un don d’encore %2$d CNY)</string>
     <string name="incremental_updates_supported_full_summary">Les mises à jour incrémentielles peuvent économiser %s</string>
@@ -76,7 +77,7 @@
     <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Enregistrement de la donation</string>
     <string name="donation_record_without_rankings">Vous avez fait don d’un total de %1$d CNY.</string>
-    <string name="donation_record_with_rankings">Vous avez fait un don total de %1$d CNY, plus que %2$s de tous les donateurs à l’échelle mondiale ! Vous êtes au %3$de rang !</string>
+    <string name="donation_record_with_rankings">Vous avez donné un total de %1$d CNY, plus que %2$s de la totalité des donateurs. Votre rang : n°%3$d!</string>
     <string name="donation_record_none">Vous n’avez fait aucun don</string>
     <string name="donation_restore_success">L’enregistrement de la donation a été restauré avec succès !</string>
     <string name="donation_restore_failure">Veuillez vérifier votre connexion internet et réessayer plus tard.</string>
@@ -109,11 +110,11 @@
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Un téléchargement est déjà en cours</string>
     <string name="download_limited_mode">Téléchargement à vitesse limitée, faites un don pour profiter pleinement de la vitesse.</string>
-    <string name="install_already_running">Une istallation est déjà en cours</string>
-    <string name="installing_update_notification">Installation du paquet de mise à jour en cours</string>
+    <string name="install_already_running">Une installation est déjà en cours</string>
+    <string name="installing_update_notification">Installation du paquet de mise à jour</string>
     <string name="installing_update_finished_notification">Mise à jour installée</string>
     <string name="finalizing_package_notification">Finalisation de l’installation du paquet</string>
-    <string name="preparing_ota_first_boot_notification">Préparation pour le premier démarrage</string>
+    <string name="preparing_ota_first_boot_notification">Préparation du premier démarrage</string>
     <string name="dialog_prepare_zip_message_notification">Préparation de la mise à jour préliminaire</string>
     <string name="update_on_mobile_data_title">Avertissement</string>
     <string name="update_on_mobile_data_message">Vous allez télécharger une mise à jour en utilisant les données mobiles et beaucoup de data va donc être utilisée. Voulez-vous continuer ?</string>
