@@ -29,6 +29,7 @@
     <string name="action_pause">Anhalten</string>
     <string name="action_resume">Fortsetzen</string>
     <string name="action_download">Herunterladen</string>
+    <string name="action_reboot">Neustart</string>
     <string name="menu_preferences">Vorlieben</string>
     <string name="menu_restore">Wiederherstellen</string>
     <string name="menu_donation">Spende</string>

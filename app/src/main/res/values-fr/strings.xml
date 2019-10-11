@@ -43,6 +43,7 @@
     <string name="nav_main_guide_title">Guide</string>
     <string name="nav_main_source_title">Code source</string>
     <string name="nav_main_bug_reports_title">Rapports de bogues</string>
+    <string name="nav_main_team_title">Équipe</string>
     <string name="nav_social_title">Réseau Social</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
@@ -76,7 +77,7 @@
     <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Enregistrement de la donation</string>
     <string name="donation_record_without_rankings">Vous avez fait don d’un total de %1$d CNY.</string>
-    <string name="donation_record_with_rankings">Vous avez fait un don total de %1$d CNY, plus que %2$s de tous les donateurs à l’échelle mondiale ! Vous êtes au %3$de rang !</string>
+    <string name="donation_record_with_rankings">Vous avez donné un total de %1$d CNY, plus que %2$s de la totalité des donateurs. Votre rang : n°%3$d!</string>
     <string name="donation_record_none">Vous n’avez fait aucun don</string>
     <string name="donation_restore_success">L’enregistrement de la donation a été restauré avec succès !</string>
     <string name="donation_restore_failure">Veuillez vérifier votre connexion internet et réessayer plus tard.</string>
