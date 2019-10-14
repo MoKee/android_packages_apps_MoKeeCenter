@@ -3,12 +3,12 @@ apply plugin: 'com.google.firebase.firebase-perf'
 apply plugin: 'io.fabric'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     buildToolsVersion = '28.0.3'
     defaultConfig {
         applicationId "com.mokee.center"
         minSdkVersion 27
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode gitVersionCode()
         versionName "2.4.4.10"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
