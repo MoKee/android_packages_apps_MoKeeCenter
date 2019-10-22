@@ -164,6 +164,7 @@
     <!-- Apply update -->
     <string name="apply_update_dialog_title">Apply update</string>
     <string name="apply_update_dialog_message">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>. If you press <xliff:g id="ok">%2$s</xliff:g>, the device will restart itself in recovery mode to install the update.\n\nUpdate notes:\n1. This update will not erase your personal data, but we recommend that you back up any important data before updating.\n2. This feature requires a compatible Recovery or updates will need to be installed manually.\n3. If you encounter any issues, you can go to "Forum".</string>
+    <string name="apply_update_dialog_message_ab">You are about to upgrade to <xliff:g id="update_name">%1$s</xliff:g>. If you press <xliff:g id="ok">%2$s</xliff:g>, the device will begin installing in the background. Once completed, you will be prompted to reboot.\n\nUpdate notes:\n1. This update will not erase your personal data, but we recommend that you back up any important data before updating.\n2. If you encounter any issues, you can go to "Forum".</string>
 
     <!-- Require permission -->
     <string name="no_storage_permissions">Storage permission is required</string>
