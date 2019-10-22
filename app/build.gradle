@@ -10,7 +10,7 @@ android {
         minSdkVersion 27
         targetSdkVersion 28
         versionCode gitVersionCode()
-        versionName "2.4.3.8"
+        versionName "2.4.4.8"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
@@ -56,11 +56,11 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.preference:preference:1.1.0'
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
-    implementation 'com.google.android.material:material:1.1.0-alpha10'
+    implementation 'com.google.android.material:material:1.1.0-beta01'
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.google.firebase:firebase-ads:18.2.0'
     implementation 'com.google.firebase:firebase-core:17.2.0'
-    implementation 'com.google.firebase:firebase-perf:19.0.0'
+    implementation 'com.google.firebase:firebase-perf:19.0.1'
     implementation 'com.lzy.net:okgo:3.0.4'
     implementation 'com.lzy.net:okserver:2.0.5'
     testImplementation 'junit:junit:4.13-beta-3'
