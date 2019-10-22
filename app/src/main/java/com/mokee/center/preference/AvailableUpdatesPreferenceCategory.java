@@ -25,6 +25,7 @@ import android.content.res.Resources;
 import android.os.BatteryManager;
 import android.os.PowerManager;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
@@ -41,6 +42,7 @@ import com.mokee.center.misc.Constants;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.CommonUtil;
 
+import java.io.IOException;
 import java.util.LinkedList;
 
 import androidx.appcompat.app.AlertDialog;
@@ -48,6 +50,8 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceViewHolder;
 
 public class AvailableUpdatesPreferenceCategory extends PreferenceCategory implements UpdatePreference.OnActionListener {
+
+    private static final String TAG = AvailableUpdatesPreferenceCategory.class.getSimpleName();
 
     private UpdaterController mUpdaterController;
     private View mItemView;
@@ -211,9 +215,17 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
                     .setPositiveButton(android.R.string.ok, null).show();
         } else {
             UpdateInfo updateInfo = mUpdaterController.getUpdate(downloadId);
+            int resId = R.string.apply_update_dialog_message;
+            try {
+                if (CommonUtil.isABUpdate(updateInfo.getFile())) {
+                    resId = R.string.apply_update_dialog_message_ab;
+                }
+            } catch (IOException e) {
+                Log.e(TAG, "Could not determine the type of the update");
+            }
             new AlertDialog.Builder(getContext())
                     .setTitle(R.string.apply_update_dialog_title)
-                    .setMessage(getContext().getString(R.string.apply_update_dialog_message,
+                    .setMessage(getContext().getString(resId,
                             updateInfo.getDisplayVersion(), getContext().getString(android.R.string.ok)))
                     .setPositiveButton(android.R.string.ok,
                             (dialog, which) -> CommonUtil.triggerUpdate(getContext(), downloadId))
