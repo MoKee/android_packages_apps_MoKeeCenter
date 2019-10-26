@@ -112,7 +112,6 @@
     <string name="dialog_battery_low_title">Niedriger Akkustand</string>
     <string name="dialog_battery_low_message_pct">Ihr Akkustand ist zu niedrig. Es werden mindestens <xliff:g id="percent_discharging">%1$d</xliff:g>%% Restkapazität (oder <xliff:g id="percent_charging">%2$d</xliff:g>%% mit angeschlossenem Ladegerät) benötigt, um fortzufahren.</string>
     <string name="apply_update_dialog_title">Update durchführen</string>
-    <string name="apply_update_dialog_message">Bereit zum Update auf <xliff:g id="update_name">%1$s</xliff:g>\n\nWenn Sie <xliff:g id="ok">%2$s</xliff:g> drücken, wird das Gerät im Recovery-Modus gestartet, um das Update durchzuführen.\n\nHinweis: Diese Funktion erfordert ein kompatibles Recovery-System, anderenfalls muss das Update manuell installiert werden.</string>
     <string name="no_storage_permissions">Speicher-Berechtigung wird benötigt</string>
     <string name="no_phone_permissions">Telefon-Berechtigung ist erforderlich</string>
 </resources>

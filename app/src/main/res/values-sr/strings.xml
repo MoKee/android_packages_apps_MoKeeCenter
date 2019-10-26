@@ -122,7 +122,6 @@
     <string name="dialog_battery_low_title">Слаба батерија</string>
     <string name="dialog_battery_low_message_pct">Ниво батерије је пренизак, треба вам барем <xliff:g id="percent_discharging">%1$d</xliff:g>%% батерије да наставите, <xliff:g id="percent_charging">%2$d</xliff:g>%% ако се пуни.</string>
     <string name="apply_update_dialog_title">Примени надоградње</string>
-    <string name="apply_update_dialog_message">Биће инсталирано <xliff:g id="update_name">%1$s</xliff:g>.\n\nАко додирнете <xliff:g id="ok">%2$s</xliff:g>, уређај ће се поново покренути у режим опоравка ради инсталације ажурирања.\n\nНапомена: За ову функцију је неопходан одговарајући режим опоравка (Recovery) или ћете морати да инсталирате ручно.</string>
     <string name="no_storage_permissions">Потребна је дозвола за снимања у меморију уређаја</string>
     <string name="no_phone_permissions">Потребна је дозвола за приступ телефону</string>
 </resources>

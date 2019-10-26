@@ -109,5 +109,4 @@
     <string name="dialog_battery_low_title">ಕಡಿಮೆ ಬ್ಯಾಟರಿ</string>
     <string name="dialog_battery_low_message_pct">ಬ್ಯಾಟರಿ ಮಟ್ಟವು ತುಂಬ ಕಡಿಮೆ ಇದೆ, ಮುಂದುವರೆಯಲು, ಒಂದು ವೇಳೆ ಚಾರ್ಜ ಮಾಡುತ್ತಿದ್ದಲ್ಲಿ ನಿಮಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ <xliff:g id="percent_discharging"> ಬ್ಯಾಟರಿಯ ಅಗತ್ಯವಿದೆ%1$d</xliff:g>%%<xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
     <string name="apply_update_dialog_title">ನವೀಕರಣ ಅನ್ವಯಿಸಿ</string>
-    <string name="apply_update_dialog_message">ನೀವು ನವೀಕರಣ ಮಾಡುವಲ್ಲಿದ್ದೀರಿ<xliff:g id="update_name">%1$s</xliff:g>. \n\n ಒಂದು ವೇಳೆ ನೀವು <xliff:g id="ok">%2$s</xliff:g> ಒತ್ತಿದ್ದಲ್ಲಿ, ಸಾಧನವು ರಿಕವರಿ ಮಾದರಿಯಲಿ ನವೀಕರಣವನ್ನು ಅಳವಡಿಸುವಲ್ಲಿ ಸ್ವಯಂ ಮರುಪ್ರಾರಂಭವಾಗುವುದು. \n\n ಸೂಚನೆ: ಈ ವೈಶಿಷ್ಟ್ಯಕ್ಕೆ ಹೊಂದಾಣಿಕೆಯಾಗುವ ರಿಕವರಿ ಅಥವಾ ನವೀಕರಣಗಳು ಕೈಯಾರೆ ಅಳವಡಿಸುವ ಅಗತ್ಯವಿದೆ.</string>
 </resources>
