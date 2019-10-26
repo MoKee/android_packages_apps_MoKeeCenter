@@ -121,7 +121,8 @@
     <string name="dialog_battery_low_title">低電量</string>
     <string name="dialog_battery_low_message_pct">電池電量過低，您需要至少 <xliff:g id="percent_discharging">%1$d</xliff:g>%% 的電量才能繼續；如果正在充電，則需要 <xliff:g id="percent_charging">%2$d</xliff:g>%% 的電量才能繼續。</string>
     <string name="apply_update_dialog_title">套用更新</string>
-    <string name="apply_update_dialog_message">您將更新至 <xliff:g id="update_name">%1$s</xliff:g>。\n\n如果您按下 「<xliff:g id="ok">%2$s</xliff:g>」，裝置將重新啟動進入 Recovery 模式並安裝更新。\n\n注意：這項功能需要相容的 Recovery，否則將需要手動安裝更新。</string>
+    <string name="apply_update_dialog_message">您即將升級到 <xliff:g id="update_name">%1$s</xliff:g>。如果您按下 <xliff:g id="ok">%2$s</xliff:g>，裝置將在 recovery 模式中重新啟動自己來安裝更新。\n\n 更新注意事項：\n 1. 此更新不會刪除您的個人資料，但我們建議您在更新前備份任何重要資料。\n 2. 此功能需要一個相容的 recovery 否則更新將需要手動安裝。\n 3. 如果您遇到任何問題請至「論壇」。</string>
+    <string name="apply_update_dialog_message_ab">您即將升級到 <xliff:g id="update_name">%1$s</xliff:g>。如果您按下<xliff:g id="ok">%2$s</xliff:g>，裝置將開始在背景安裝。完成後，系統將提示您重新啟動。\n\n 更新注意事項:\n 1. 此更新不會刪除您的個人資料，但我們建議您在更新前備份任何重要資料。\n 2. 如果您遇到任何問題請至「論壇」。</string>
     <string name="no_storage_permissions">儲存空間權限是必要的</string>
     <string name="no_phone_permissions">電話權限是必需的</string>
 </resources>
