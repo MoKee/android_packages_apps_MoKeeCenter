@@ -96,6 +96,7 @@
     <string name="wechat">微信</string>
     <string name="paypal">贝宝</string>
     <string name="activity_not_found">未安装该应用。</string>
+    <string name="ad_blocker_detected">您似乎正在使用广告拦截器，请将我们的应用列入白名单。</string>
     <string name="new_updates_channel_title">新的系统更新</string>
     <string name="new_updates_found_title">新的系统更新</string>
     <string name="ongoing_channel_title">正在下载</string>
