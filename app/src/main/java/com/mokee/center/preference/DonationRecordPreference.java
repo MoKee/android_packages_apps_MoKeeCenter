@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,6 +24,7 @@ import androidx.preference.Preference;
 import android.text.TextUtils;
 import android.text.format.DateUtils;
 import android.util.AttributeSet;
+import android.util.Log;
 
 import com.google.gson.Gson;
 import com.lzy.okgo.OkGo;
@@ -73,24 +74,28 @@ public class DonationRecordPreference extends Preference {
         fetchRankingsInfo();
     }
 
-    public void fetchRankingsInfo() {
+    private void fetchRankingsInfo() {
         OkGo.<String>post(getContext().getString(R.string.conf_fetch_donation_ranking_url_def))
                 .tag(TAG).params(PARAM_UNIQUE_IDS, Build.getUniqueIDS(getContext())).execute(new StringCallback() {
             @Override
             public void onSuccess(Response<String> response) {
                 if (!TextUtils.isEmpty(response.body())) {
                     Gson gson = new Gson();
-                    RankingsInfo rankingsInfo = gson.fromJson(response.body(), RankingsInfo.class);
-                    if (rankingsInfo != null) {
-                        mDonationPrefs.edit()
-                                .putInt(KEY_DONATION_AMOUNT, rankingsInfo.getAmount())
-                                .putInt(KEY_DONATION_PERCENT, rankingsInfo.getPercent())
-                                .putInt(KEY_DONATION_RANKINGS, rankingsInfo.getRankings())
-                                .putLong(KEY_DONATION_LAST_CHECK_TIME, System.currentTimeMillis())
-                                .putBoolean(KEY_DONATION_FIRST_CHECK_COMPLETED, true).apply();
-                        mPercent = rankingsInfo.getPercent();
-                        mRankings = rankingsInfo.getRankings();
-                        setSummary(rankingsInfo.getAmount(), rankingsInfo.getPercent(), rankingsInfo.getRankings());
+                    try {
+                        RankingsInfo rankingsInfo = gson.fromJson(response.body(), RankingsInfo.class);
+                        if (rankingsInfo != null) {
+                            mDonationPrefs.edit()
+                                    .putInt(KEY_DONATION_AMOUNT, rankingsInfo.getAmount())
+                                    .putInt(KEY_DONATION_PERCENT, rankingsInfo.getPercent())
+                                    .putInt(KEY_DONATION_RANKINGS, rankingsInfo.getRankings())
+                                    .putLong(KEY_DONATION_LAST_CHECK_TIME, System.currentTimeMillis())
+                                    .putBoolean(KEY_DONATION_FIRST_CHECK_COMPLETED, true).apply();
+                            mPercent = rankingsInfo.getPercent();
+                            mRankings = rankingsInfo.getRankings();
+                            setSummary(rankingsInfo.getAmount(), rankingsInfo.getPercent(), rankingsInfo.getRankings());
+                        }
+                    } catch (IllegalStateException ex) {
+                        Log.e(TAG, ex.getMessage());
                     }
                 }
             }
