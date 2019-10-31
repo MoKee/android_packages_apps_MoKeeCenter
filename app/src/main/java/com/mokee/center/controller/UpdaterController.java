@@ -311,7 +311,10 @@ public class UpdaterController {
                     mLastUpdate = now;
 
                     long spendTime = (System.currentTimeMillis() - progress.date) / DateUtils.SECOND_IN_MILLIS;
-                    long speed = progress.speed != 0 ? progress.speed : progress.currentSize / spendTime;
+                    long speed = 0;
+                    if (spendTime > 0) {
+                        speed = progress.speed != 0 ? progress.speed : progress.currentSize / spendTime;
+                    }
                     if (speed != 0) {
                         CharSequence eta = CommonUtil.calculateEta(mContext, speed, progress.totalSize, progress.currentSize);
                         CharSequence etaWithSpeed = mContext.getString(R.string.download_speed, eta, Formatter.formatFileSize(mContext, speed));
