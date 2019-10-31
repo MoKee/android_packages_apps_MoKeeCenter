@@ -119,6 +119,7 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
         });
         setPositiveButton(R.string.action_next, (dialog, which) -> {
             int price = donationInfo.isAdvanced() ? seekBar.getProgress() + 10 : seekBar.getProgress() - donationInfo.getPaid();
+            int resId = R.string.mokeepay_not_found;
             try {
                 switch (via.getCheckedRadioButtonId()) {
                     case R.id.alipay:
@@ -126,7 +127,8 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
                         break;
                     case R.id.wechat:
                         if (!MoKeeUtils.isApkInstalledAndEnabled("com.tencent.mm", getContext())) {
-                            mActivity.makeSnackbar(R.string.activity_not_found).show();
+                            resId = R.string.activity_not_found;
+                            throw new ActivityNotFoundException();
                         } else {
                             CommonUtil.sendPaymentRequest(mActivity, "wechat", title, String.valueOf(price), "donation");
                         }
@@ -136,7 +138,7 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
                         break;
                 }
             } catch (ActivityNotFoundException ex) {
-                mActivity.makeSnackbar(R.string.activity_not_found, Snackbar.LENGTH_LONG).show();
+                mActivity.makeSnackbar(resId, Snackbar.LENGTH_LONG).show();
             }
         });
         return super.create();

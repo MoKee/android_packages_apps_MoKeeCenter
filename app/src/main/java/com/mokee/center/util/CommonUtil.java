@@ -96,10 +96,14 @@ public class CommonUtil {
         }
     }
 
-    public static void openLink(Context context, String url) {
+    public static void openLink(Activity context, String url) {
         Uri uri = Uri.parse(url);
-        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        context.startActivity(intent);
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            context.startActivity(intent);
+        } catch (ActivityNotFoundException ex) {
+            Snackbar.make(context.findViewById(R.id.updater), R.string.browser_not_found,Snackbar.LENGTH_LONG).show();
+        }
     }
 
     public static void updateDonationInfo(Context context) {
@@ -153,7 +157,7 @@ public class CommonUtil {
             Intent intent = new Intent(Constants.ACTION_RESTORE_REQUEST);
             context.startActivityForResult(intent, 0);
         } catch (ActivityNotFoundException ex) {
-             Snackbar.make(context.findViewById(R.id.updater), R.string.activity_not_found, Snackbar.LENGTH_LONG).show();
+             Snackbar.make(context.findViewById(R.id.updater), R.string.mokeepay_not_found, Snackbar.LENGTH_LONG).show();
         }
     }
 

@@ -123,6 +123,8 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">App isn\'t installed.</string>
+    <string name="browser_not_found">Browser isn\'t installed.</string>
+    <string name="mokeepay_not_found">You\'ve accidentally deleted MoKeePay app, please restore via full update.</string>
     <string name="ad_blocker_detected">It looks like you\'re using an ad blocker, please whitelist our app.</string>
 
     <!-- Notification -->
