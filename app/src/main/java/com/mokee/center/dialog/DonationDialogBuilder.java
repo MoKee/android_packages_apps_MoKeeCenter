@@ -126,7 +126,7 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
                         break;
                     case R.id.wechat:
                         if (!MoKeeUtils.isApkInstalledAndEnabled("com.tencent.mm", getContext())) {
-                            mActivity.makeSnackbar(R.string.activity_not_found).show();
+                            throw new ActivityNotFoundException();
                         } else {
                             CommonUtil.sendPaymentRequest(mActivity, "wechat", title, String.valueOf(price), "donation");
                         }
