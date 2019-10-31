@@ -29,6 +29,7 @@ import android.net.ConnectivityManager;
 import android.net.ConnectivityManager.NetworkCallback;
 import android.net.Network;
 import android.net.NetworkCapabilities;
+import android.net.NetworkInfo;
 import android.net.NetworkRequest;
 import android.os.Binder;
 import android.os.Bundle;
@@ -93,7 +94,12 @@ public class UpdaterService extends Service {
         @Override
         public void onAvailable(Network network) {
             super.onAvailable(network);
-            if (!networkWarn || mConnectivityManager.getNetworkInfo(network).getType() != ConnectivityManager.TYPE_MOBILE) {
+            NetworkInfo networkInfo = mConnectivityManager.getNetworkInfo(network);
+            if (networkInfo == null) {
+                return;
+            }
+
+            if (!networkWarn || networkInfo.getType() != ConnectivityManager.TYPE_MOBILE) {
                 if (mUpdaterController.hasActiveDownloads()) {
                     mUpdaterController.resumeDownload(mUpdaterController.getActiveDownloadTag());
                 }
