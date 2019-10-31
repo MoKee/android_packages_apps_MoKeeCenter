@@ -17,6 +17,7 @@
 
 package com.mokee.center.preference;
 
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -29,6 +30,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.Toast;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
@@ -81,7 +83,12 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
                     }
                 }
             });
-            mDownloadInterstitialAd.loadAd(new AdRequest.Builder().build());
+            try {
+                mDownloadInterstitialAd.loadAd(new AdRequest.Builder().build());
+            } catch (ActivityNotFoundException e) {
+                Toast.makeText(getContext(), R.string.ad_blocker_detected, Toast.LENGTH_LONG).show();
+                e.printStackTrace();
+            }
         }
     }
 
