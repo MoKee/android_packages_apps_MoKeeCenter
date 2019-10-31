@@ -27,6 +27,7 @@ import android.util.AttributeSet;
 import android.util.Log;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
@@ -94,7 +95,7 @@ public class DonationRecordPreference extends Preference {
                             mRankings = rankingsInfo.getRankings();
                             setSummary(rankingsInfo.getAmount(), rankingsInfo.getPercent(), rankingsInfo.getRankings());
                         }
-                    } catch (IllegalStateException ex) {
+                    } catch (IllegalStateException | JsonSyntaxException ex) {
                         Log.e(TAG, ex.getMessage());
                     }
                 }
