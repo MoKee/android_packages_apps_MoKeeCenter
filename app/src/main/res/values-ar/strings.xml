@@ -122,7 +122,6 @@
     <string name="dialog_battery_low_title">البطـارية منخفضة</string>
     <string name="dialog_battery_low_message_pct">مستوى شحن البطارية منخفض للغاية؛ وتحتاج على الأقل <xliff:g id="percent_discharging">%1$d</xliff:g>%% من البطارية للمتابعة، <xliff:g id="percent_charging">%2$d</xliff:g>%% في حالة الشحن.</string>
     <string name="apply_update_dialog_title">تطبيق التحديث</string>
-    <string name="apply_update_dialog_message">أنت على وشك الترقية إلى <xliff:g id="update_name">%1$s</xliff:g>.\n\nإذا قمت بالضغط على <xliff:g id="ok">%2$s</xliff:g>، سيقوم الجهاز بإعادة تشغيل نفسه في وضع الاستعادة لتثبيت التحديث.\n\nملاحظة: هذه الميزة تتطلب مسترد متوافق أو سيلزم تثبيت التحديثات يدويًا.</string>
     <string name="no_storage_permissions">الإذن مطلوب للتخزين</string>
     <string name="no_phone_permissions">مطلوب إذن الهاتف</string>
 </resources>

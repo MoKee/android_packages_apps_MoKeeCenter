@@ -122,7 +122,6 @@
     <string name="dialog_battery_low_title">Batería baja</string>
     <string name="dialog_battery_low_message_pct">El nivel de la batería es demasiado bajo, necesita al menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de batería para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% si el dispositivo se está cargando.</string>
     <string name="apply_update_dialog_title">Aplicar actualización</string>
-    <string name="apply_update_dialog_message">Actualizarás a <xliff:g id="filename">%1$s</xliff:g>.\n\nAl pulsar en <xliff:g id="ok">%2$s</xliff:g>, se reiniciará el dispositivo en modo «Recovery» para instalar la actualización.\n\nNota: Esta función requiere un «Recovery» compatible o las actualizaciones deberán instalarse manualmente.</string>
     <string name="no_storage_permissions">Se requiere permiso de almacenamiento</string>
     <string name="no_phone_permissions">Se requiere permiso del teléfono</string>
 </resources>
