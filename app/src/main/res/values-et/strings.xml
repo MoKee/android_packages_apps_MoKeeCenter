@@ -96,6 +96,9 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Rakendus pole installitud.</string>
+    <string name="browser_not_found">Brauser pole installitud.</string>
+    <string name="mokeepay_not_found">Olete juhuslikult MoKeePay rakenduse kustutanud, taastage täielik värskendus.</string>
+    <string name="ad_blocker_detected">Paistab, et kasutate reklaamide blokeerijat, lisage meie rakendus valgesse nimekirja.</string>
     <string name="new_updates_channel_title">Uued uuendused</string>
     <string name="new_updates_found_title">Uued süsteemi uuendused</string>
     <string name="ongoing_channel_title">Käimasolevad allalaadimised</string>
@@ -122,7 +125,8 @@
     <string name="dialog_battery_low_title">Madal akutase</string>
     <string name="dialog_battery_low_message_pct">Akutase on liiga madal, jätkamiseks on vaja akut vähemalt <xliff:g id="percent_discharging">%1$d</xliff:g>%%, laadimise korral <xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
     <string name="apply_update_dialog_title">Rakenda uuendused</string>
-    <string name="apply_update_dialog_message">Uuendate versiooni <xliff:g id="update_name">%1$s</xliff:g>.\n\nKui vajutate <xliff:g id="ok">%2$s</xliff:g>, käivitub seade uuenduste installimiseks taaskasutamis režiimis.\n\nMärkus: See funktsioon nõuab ühilduvat taastamist või uuendusi tuleb installida käsitsi.</string>
+    <string name="apply_update_dialog_message">Olete versiooniuuenduses  <xliff:g id="update_name">%1$s</xliff:g>. Kui vajutate nuppu <xliff:g id="ok">%2$s</xliff:g>,värskenduse installimiseks taaskäivitab seade taasterežiimis.\n\nVärskendage märkmeid:\n1. See värskendus ei kustuta teie isiklikke andmeid, kuid soovitame enne värskendamist kõik olulised andmed varundada.\n2. See funktsioon nõuab ühilduvat taastefunktsiooni või värskendused tuleb käsitsi installida.\n3. Kui teil on probleeme, võite minna \"Foorumisse\".</string>
+    <string name="apply_update_dialog_message_ab">Olete versiooniuuenduses  <xliff:g id="update_name">%1$s</xliff:g>. Kui vajutate nuppu <xliff:g id="ok">%2$s</xliff:g>, alustab seade installimist taustal. Kui see on lõpule viidud, palutakse teil seade taaskäivitada.\n\nMärkmete värskendamine:\n1. See värskendus ei kustuta teie isiklikke andmeid, kuid soovitame enne värskendamist kõik olulised andmed varundada.\n2. Kui teil on probleeme, võite minna \"Foorumisse\".</string>
     <string name="no_storage_permissions">Nõutav on salvestusluba</string>
     <string name="no_phone_permissions">Nõutav on telefoni luba</string>
 </resources>
