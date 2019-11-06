@@ -96,6 +96,9 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Az alkalmazás nincs telepítve.</string>
+    <string name="browser_not_found">Nincs telepített Böngésző.</string>
+    <string name="mokeepay_not_found">Véletlenül törölte a MoKeePay alkalmazást, kérjük egy teljes frissítéssel állítsa helyre.</string>
+    <string name="ad_blocker_detected">Úgy tűnik, Ön hirdetésblokkolót használ, kérjük, tegye az alkalmazásunkat a kivételek közé.</string>
     <string name="new_updates_channel_title">Új frissítések</string>
     <string name="new_updates_found_title">Új rendszerfrissítések</string>
     <string name="ongoing_channel_title">Folyamatban lévő letöltések</string>
@@ -122,6 +125,8 @@
     <string name="dialog_battery_low_title">Alacsony akkufeszültség</string>
     <string name="dialog_battery_low_message_pct">Az akkumulátortöltöttség túl alacsony, a folytatáshoz legalább <xliff:g id="percent_discharging">%1$d</xliff:g>%% töltöttségre lenne szüksége, illetve, ha éppen tölt, akkor még <xliff:g id="percent_charging">%2$d</xliff:g>%% töltés szükséges.</string>
     <string name="apply_update_dialog_title">A Frissítés alkalmazása</string>
+    <string name="apply_update_dialog_message">Ön épp a következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>. Ha megnyomja ezt a gombot: <xliff:g id="ok">%2$s</xliff:g>, a készülék újraindul recovery módban a frissítés telepítéséhez.\n\nFrissítési megjegyzés:\n1. Ez a frissítés nem töröl személyes adatokat, de sosem árt azokat frissítés előtt elmenteni.\n2. Ehhez a funkcióhoz kompatibilis recovery-re van szükség, ennek hiányában manuálisan kell a telepíteni a frissítéseket.\n3. Ha bármilyen hibával találkozik, jelentse azt a \"Fórum\"-on.</string>
+    <string name="apply_update_dialog_message_ab">Ön épp a következő frissítésre készül: <xliff:g id="update_name">%1$s</xliff:g>. Ha megnyomja ezt a gombot: <xliff:g id="ok">%2$s</xliff:g>, a készülék a háttérben elvégzi a telepítést.\n\nFrissítési megjegyzés:\n1. Ez a frissítés nem töröl személyes adatokat, de sosem árt azokat frissítés előtt elmenteni.\n2. Ha bármilyen hibával találkozik, jelentse azt a \"Fórum\"-on.</string>
     <string name="no_storage_permissions">Tárhely-hozzáférés szükséges</string>
     <string name="no_phone_permissions">Hozzáférési engedély szükséges a telefonhoz</string>
 </resources>
