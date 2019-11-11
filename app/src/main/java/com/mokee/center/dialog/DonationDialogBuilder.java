@@ -134,7 +134,12 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
                         }
                         break;
                     case R.id.paypal:
-                        CommonUtil.sendPaymentRequest(mActivity, "paypal", title, String.valueOf(Float.valueOf(price) / 6), "donation");
+                        if (!MoKeeUtils.isApkInstalledAndEnabled("com.android.chrome", getContext())) {
+                            resId = R.string.chrome_not_found;
+                            throw new ActivityNotFoundException();
+                        } else {
+                            CommonUtil.sendPaymentRequest(mActivity, "paypal", title, String.valueOf(Float.valueOf(price) / 6), "donation");
+                        }
                         break;
                 }
             } catch (ActivityNotFoundException ex) {
