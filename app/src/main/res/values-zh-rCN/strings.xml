@@ -97,7 +97,6 @@
     <string name="paypal">贝宝</string>
     <string name="activity_not_found">未安装该应用。</string>
     <string name="browser_not_found">未安装浏览器程序。</string>
-    <string name="chrome_not_found">请先安装 Google Chrome 浏览器。</string>
     <string name="mokeepay_not_found">您可能误删除了魔趣支付，请通过完整更新来恢复它。</string>
     <string name="ad_blocker_detected">看起来您正在使用广告拦截器，请将我们的应用加入白名单。</string>
     <string name="new_updates_channel_title">新的系统更新</string>
