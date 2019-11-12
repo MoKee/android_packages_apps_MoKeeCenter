@@ -96,6 +96,8 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal (USD)</string>
     <string name="activity_not_found">Приложение не установлено.</string>
+    <string name="browser_not_found">Браузер не установлен.</string>
+    <string name="mokeepay_not_found">Вы случайно удалили приложение MoKeePay, пожалуйста восстановите приложение с помощью полного обновления.</string>
     <string name="new_updates_channel_title">Новые обновления</string>
     <string name="new_updates_found_title">Новые системные обновления</string>
     <string name="ongoing_channel_title">Текущие загрузки</string>

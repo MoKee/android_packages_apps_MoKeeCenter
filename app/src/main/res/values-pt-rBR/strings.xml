@@ -96,6 +96,9 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">Paypal</string>
     <string name="activity_not_found">O aplicativo não está instalado.</string>
+    <string name="browser_not_found">Navegador não instalado.</string>
+    <string name="mokeepay_not_found">Você apagou acidentalmente o app MoKeePay, por favor restaure por meio de uma atualização completa.</string>
+    <string name="ad_blocker_detected">Parece que você está usando um bloqueador de anúncios, por favor, adicione a lista branca nosso aplicativo.</string>
     <string name="new_updates_channel_title">Novas atualizações</string>
     <string name="new_updates_found_title">Nova atualização de sistema encontrada</string>
     <string name="ongoing_channel_title">Transferências em curso</string>
@@ -122,6 +125,8 @@
     <string name="dialog_battery_low_title">Bateria fraca</string>
     <string name="dialog_battery_low_message_pct">O nível da bateria está muito baixo, você precisa de pelo menos <xliff:g id="percent_discharging">%1$d</xliff:g>%% de bateria para continuar, <xliff:g id="percent_charging">%2$d</xliff:g>%% se estiver carregando.</string>
     <string name="apply_update_dialog_title">Aplicar atualização</string>
+    <string name="apply_update_dialog_message">Você está prestes a atualizar para <xliff:g id="update_name">%1$s</xliff:g>. Se pressionar <xliff:g id="ok">%2$s</xliff:g>, o dispositivo reiniciará no modo de recuperação para instalar a atualização.\n\nNotas de atualização:\n1. Esta atualização não apagará seus dados pessoais, mas nós recomendamos que você faça o backup de qualquer dado importante antes de atualizar.\n2. Este recurso requer uma recuperação compatível ou atualizações precisam ser instaladas manualmente.\n3. Se você encontrar qualquer problema, você pode ir para \"Fórum\".</string>
+    <string name="apply_update_dialog_message_ab">Você está prestes a atualizar para <xliff:g id="update_name">%1$s</xliff:g>. Se pressionar <xliff:g id="ok">%2$s</xliff:g>, o dispositivo reiniciará no modo de recuperação para instalar a atualização.\n\nNotas de atualização:\n1. Esta atualização não apagará seus dados pessoais, mas nós recomendamos que você faça o backup de qualquer dado importante antes de atualizar.\n2. Este recurso requer uma recuperação compatível ou atualizações precisam ser instaladas manualmente.\n3. Se você encontrar qualquer problema, você pode ir para \"Fórum\".</string>
     <string name="no_storage_permissions">É necessária a permissão Armazenamento</string>
     <string name="no_phone_permissions">Necessária a permissão para telefone</string>
 </resources>
