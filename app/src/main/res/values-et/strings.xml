@@ -97,6 +97,7 @@
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Rakendus pole installitud.</string>
     <string name="browser_not_found">Brauser pole installitud.</string>
+    <string name="chrome_not_found">Installige esmalt Google Chrome.</string>
     <string name="mokeepay_not_found">Olete juhuslikult MoKeePay rakenduse kustutanud, taastage täielik värskendus.</string>
     <string name="ad_blocker_detected">Paistab, et kasutate reklaamide blokeerijat, lisage meie rakendus valgesse nimekirja.</string>
     <string name="new_updates_channel_title">Uued uuendused</string>
