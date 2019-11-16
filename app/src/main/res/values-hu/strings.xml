@@ -97,6 +97,7 @@
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Az alkalmazás nincs telepítve.</string>
     <string name="browser_not_found">Nincs telepített Böngésző.</string>
+    <string name="chrome_not_found">Kérjük, előbb telepítse a Google Chrome-ot.</string>
     <string name="mokeepay_not_found">Véletlenül törölte a MoKeePay alkalmazást, kérjük egy teljes frissítéssel állítsa helyre.</string>
     <string name="ad_blocker_detected">Úgy tűnik, Ön hirdetésblokkolót használ, kérjük, tegye az alkalmazásunkat a kivételek közé.</string>
     <string name="new_updates_channel_title">Új frissítések</string>

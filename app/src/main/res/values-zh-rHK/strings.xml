@@ -96,6 +96,7 @@
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">尚未安裝應用程式。</string>
     <string name="browser_not_found">瀏覽器未安裝。</string>
+    <string name="chrome_not_found">請先安裝 Chrome 瀏覽器</string>
     <string name="mokeepay_not_found">您不小心刪除了 MoKeePay 應用程式，請通過完整更新進行恢復。</string>
     <string name="ad_blocker_detected">看起來你正在使用廣告攔截器，請將我們的應用程式加入白名單。</string>
     <string name="new_updates_channel_title">新的更新</string>
