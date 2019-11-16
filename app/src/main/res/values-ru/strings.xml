@@ -97,6 +97,7 @@
     <string name="paypal">PayPal (USD)</string>
     <string name="activity_not_found">Приложение не установлено.</string>
     <string name="browser_not_found">Браузер не установлен.</string>
+    <string name="chrome_not_found">Сначала установите Google Chrome.</string>
     <string name="mokeepay_not_found">Вы случайно удалили приложение MoKeePay, пожалуйста восстановите приложение с помощью полного обновления.</string>
     <string name="ad_blocker_detected">Похоже, вы используете блокировщик рекламы, пожалуйста добавьте наше приложение в белый список.</string>
     <string name="new_updates_channel_title">Новые обновления</string>
@@ -125,6 +126,8 @@
     <string name="dialog_battery_low_title">Низкий заряд батареи</string>
     <string name="dialog_battery_low_message_pct">Низкий заряд батареи. Необходимо не менее <xliff:g id="percent_discharging">%1$d</xliff:g>%% заряда батареи для продолжения, <xliff:g id="percent_charging">%2$d</xliff:g>%% заряда батареи, если телефон заряжается.</string>
     <string name="apply_update_dialog_title">Применить обновление</string>
+    <string name="apply_update_dialog_message">Будет выполнено обновление до версии <xliff:g id="update_name">%1$s</xliff:g>.\n\nПри нажатии кнопки <xliff:g id="ok">%2$s</xliff:g>, устройство будет перезапущено и переведено в режим восстановления для установки обновления.\n\nПримечания: \n1. Рекомендуется сохранить важные данные перед обновлением. \n2. Для выполнения требуется совместимое меню Recovery, иначе обновление необходимо будет установить вручную. \n3. При наличии проблем, обратитесь на \"Форум\".</string>
+    <string name="apply_update_dialog_message_ab">Будет выполнено обновление до версии <xliff:g id="update_name">%1$s</xliff:g>.\n\nПри нажатии кнопки <xliff:g id="ok">%2$s</xliff:g>, устройство будет перезапущено и переведено в режим восстановления для установки обновления.\n\nПримечания: \n1. Рекомендуется сохранить важные данные перед обновлением. \n2. Для выполнения требуется совместимое меню Recovery, иначе обновление необходимо будет установить вручную. \n3. При наличии проблем, обратитесь на \"Форум\".</string>
     <string name="no_storage_permissions">Требуется разрешение для доступа к хранилищу</string>
     <string name="no_phone_permissions">Требуется доступ к телефону</string>
 </resources>
