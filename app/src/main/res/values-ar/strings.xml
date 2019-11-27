@@ -96,6 +96,10 @@
     <string name="wechat">Wechat</string>
     <string name="paypal">تبرع باستخدام باي بال</string>
     <string name="activity_not_found">لم يتم تثبيت التطبيق.</string>
+    <string name="browser_not_found">المتصفح غير مثبت.</string>
+    <string name="chrome_not_found">يرجى تثبيت Google Chrome اولا.</string>
+    <string name="mokeepay_not_found">لقد حذفت تطبيق MoKeePay بالخطأ، يرجى استرجاعه عبر التحديث الكامل.</string>
+    <string name="ad_blocker_detected">يبدو أنك تستخدم أداة حظر الإعلانات ، يرجى إدراج تطبيقنا في القائمة البيضاء.</string>
     <string name="new_updates_channel_title">تحديثات جديدة</string>
     <string name="new_updates_found_title">يوجد تحديث نظام جديد</string>
     <string name="ongoing_channel_title">التنزيلات الحالية</string>
