@@ -97,7 +97,6 @@
     <string name="paypal">贝宝</string>
     <string name="activity_not_found">未安装该应用。</string>
     <string name="browser_not_found">未安装浏览器程序。</string>
-    <string name="chrome_not_found">请先安装 Google Chrome 浏览器。</string>
     <string name="mokeepay_not_found">您可能误删除了魔趣支付，请通过完整更新来恢复它。</string>
     <string name="ad_blocker_detected">看起来您正在使用广告拦截器，请将我们的应用加入白名单。</string>
     <string name="new_updates_channel_title">新的系统更新</string>
@@ -113,7 +112,7 @@
     <string name="download_remaining">还剩 <xliff:g id="DURATION">%s</xliff:g></string>
     <string name="download_speed">%1$s, %2$s/秒</string>
     <string name="download_already_running">已有一个正在运行的下载</string>
-    <string name="download_limited_mode">当前是限速下载模式，累计捐赠达到30元即可享受全速下载。</string>
+    <string name="download_limited_speed">当前是限速下载模式，累计捐赠达到 %d 元即可享受全速下载。</string>
     <string name="install_already_running">已有一个正在运行的安装进程</string>
     <string name="installing_update_notification">正在安装更新包</string>
     <string name="installing_update_finished_notification">更新已安装</string>

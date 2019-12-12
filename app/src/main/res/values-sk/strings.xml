@@ -109,7 +109,7 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> ostáva</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Sťahovanie je už spustené</string>
-    <string name="download_limited_mode">Sťahovanie obmedzenou rýchlosťou, prosím prispejte 30 CNY pre povolenie plnej rýchlosti.</string>
+    <string name="download_limited_speed">Sťahovanie obmedzenou rýchlosťou, prosím prispejte 30 CNY pre povolenie plnej rýchlosti.</string>
     <string name="install_already_running">Prebieha inštalácia</string>
     <string name="installing_update_notification">Inštalácia balíka aktualizácií</string>
     <string name="installing_update_finished_notification">Aktualizácia nainštalovaná</string>

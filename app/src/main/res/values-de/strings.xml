@@ -63,10 +63,8 @@
     <string name="pending_available_updates_intro">Nach verfügbaren Updates suchen</string>
     <string name="unlock_features_title">Funktionen freischalten</string>
     <string name="unlock_features_plan_a_title">Spenden Sie %d CNY, um inkrementelle Updates und Downloads bei voller Geschwindigkeit freizuschalten.</string>
-    <string name="unlock_features_plan_a_abdevice_title">Spende %d CNY um Downloads mit voller Geschwindigkeit freizuschalten.</string>
     <string name="unlock_features_plan_b_title">Spenden Sie %d CNY, um verifizierte Updates freizuschalten und Google Ads zu entfernen.</string>
     <string name="unlock_features_plan_unlimited_title">Spenden Sie %d CNY, um sowohl inkrementelle Updates, Downloads bei voller Geschwindigkeit und verifizierte Updates freizuschalten, als auf Google Ads zu entfernen.</string>
-    <string name="unlock_features_plan_unlimited_abdevice_title">Spende %d CNY um Downloads mit voller Geschwindigkeit freizuschalten, verzifizierte Updates zu erhalten und Google Ads abzuschalten.</string>
     <string name="unlock_features_request_summary">(Verfügbar nach einer Spende von %d CNY)</string>
     <string name="unlock_features_pending_summary">(Bereits %1$d gespendet, für Lebenslänglich noch %2$d CNY mehr spenden)</string>
     <string name="incremental_updates_supported_full_summary">Inkrementelle Updates können %s sparen</string>
@@ -74,7 +72,6 @@
     <string name="update_type_title">Updatetyp</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Spenden-Anzeige</string>
     <string name="donation_record_without_rankings">Sie haben insgesamt %1$d CNY gespendet.</string>
     <string name="donation_record_with_rankings">Sie spendeten eine Summe von %1$d CNY, mehr als %2$s Spender weltweit und rangieren damit auf Platz Nummer %3$d!</string>
@@ -109,13 +106,6 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> links</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Es ist bereits ein Download aktiv</string>
-    <string name="download_limited_mode">Lade mit begrenzter Geschwindigkeit runter, bitte spende 30 CNY um die volle Geschwindigkeit zu genießen.</string>
-    <string name="install_already_running">Eine installation wird bereits durchgeführt</string>
-    <string name="installing_update_notification">Installiere update Paket</string>
-    <string name="installing_update_finished_notification">Update installiert</string>
-    <string name="finalizing_package_notification">Beende Paket installation</string>
-    <string name="preparing_ota_first_boot_notification">Bereite für den ersten Start vor</string>
-    <string name="dialog_prepare_zip_message_notification">Update wird vorbereitet</string>
     <string name="update_on_mobile_data_title">Achtung</string>
     <string name="update_on_mobile_data_message">Sie sind dabei ein Software-Update über das Mobilfunknetz herunterzuladen, was zu einem hohen Datenverbrauch führen kann. Möchten Sie fortfahren?</string>
     <string name="checkbox_mobile_data_warning">Nicht wieder anzeigen</string>

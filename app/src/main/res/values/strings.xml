@@ -146,7 +146,7 @@
     <string name="download_already_running">A download is already running</string>
     <string name="download_progress_new" translatable="false"><xliff:g example="12.2" id="filesize_without_unit">%1$s</xliff:g> / <xliff:g example="310 MB" id="filesize_without_unit">%2$s</xliff:g></string>
     <string name="download_progress_eta_new" translatable="false"><xliff:g example="3 minutes left, 1.56 MB/s" id="eta">%1$s</xliff:g></string>
-    <string name="download_limited_mode">Downloading at limited speed, please donate 30 CNY to enjoy full speed.</string>
+    <string name="download_limited_speed">Downloading at limited speed, please donate %d CNY to enjoy full speed.</string>
 
     <!-- Install Status -->
     <string name="install_already_running">An install is already running</string>

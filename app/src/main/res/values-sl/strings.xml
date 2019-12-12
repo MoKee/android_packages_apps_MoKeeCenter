@@ -106,7 +106,6 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> do konca</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Prenos se že izvaja</string>
-    <string name="download_limited_mode">Prenos z omejeno hitrostjo, darujte 30 CNY za prenos s polno hitrostjo.</string>
     <string name="install_already_running">Namestitev se že izvaja</string>
     <string name="installing_update_notification">Nameščanje posodobitvenega paketa</string>
     <string name="installing_update_finished_notification">Posodobitev nameščena</string>
@@ -116,7 +115,7 @@
     <string name="update_on_mobile_data_title">Opozorilo</string>
     <string name="update_on_mobile_data_message">Ste pred prenosom posodobitvenega paketa z uporabo mobilnih podatkov, kar bo verjetno povzročilo visoko porabo podatkov. Ali želite nadaljevati?</string>
     <string name="checkbox_mobile_data_warning">Ne prikaži ponovno</string>
-    <string name="dialog_battery_low_title">Nizko stanje akumulatorja</string>
+    <string name="dialog_battery_low_title">Nizko stanje baterije</string>
     <string name="dialog_battery_low_message_pct">Raven napolnjenosti akumulatorja je prenizka, potrebnih je vsaj <xliff:g id="percent_discharging">%1$d</xliff:g>%% akumulatorja za nadaljevanje, ali <xliff:g id="percent_charging">%2$d</xliff:g>%% če se polni.</string>
     <string name="apply_update_dialog_title">Uveljavi posodbitev</string>
     <string name="no_storage_permissions">Dovoljenje za shrambo je potrebno</string>

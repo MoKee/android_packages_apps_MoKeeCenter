@@ -44,7 +44,7 @@ import static com.mokee.center.misc.Constants.USER_AGENT;
 public class MKCenterApplication extends Application implements
         Application.ActivityLifecycleCallbacks {
 
-    public static final List<String> WHITELIST_HOSTNAME = Arrays.asList("api.mokeedev.com", "cloud.mokeedev.com", "ota.mokeedev.com");
+    public static final List<String> WHITELIST_HOSTNAME = Arrays.asList("api.mokeedev.com");
     private static MKCenterApplication mApp;
     private DonationInfo mDonationInfo = new DonationInfo();
     private OkHttpClient.Builder builder = new OkHttpClient.Builder();
