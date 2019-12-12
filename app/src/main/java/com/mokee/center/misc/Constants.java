@@ -88,4 +88,7 @@ public class Constants extends ConstantsBase {
     public static final String PROP_AB_DEVICE = "ro.build.ab_update";
     public static final String AB_PAYLOAD_BIN_PATH = "payload.bin";
     public static final String AB_PAYLOAD_PROPERTIES_PATH = "payload_properties.txt";
+
+    // Push Extras
+    public static final String KEY_PUSH_EXTRA_URL = "url";
 }
