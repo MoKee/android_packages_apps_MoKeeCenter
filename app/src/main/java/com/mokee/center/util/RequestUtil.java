@@ -56,7 +56,7 @@ public class RequestUtil {
             url = context.getString(R.string.conf_fetch_ota_update_url_def);
             params.put("build_user", android.os.Build.USER);
         } else {
-            url = context.getString(R.string.conf_fetch_full_update_url_def);
+            url = context.getString(R.string.conf_fetch_firmware_update_url_def);
             mMainPrefs.edit().putBoolean(PREF_INCREMENTAL_UPDATES, false).apply();
             params.put("update_type", configUpdateType);
         }
