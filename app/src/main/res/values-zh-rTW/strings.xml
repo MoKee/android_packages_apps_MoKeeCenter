@@ -31,7 +31,7 @@
     <string name="action_download">下載</string>
     <string name="action_reboot">重新啟動</string>
     <string name="menu_preferences">偏好設定</string>
-    <string name="menu_restore">恢複</string>
+    <string name="menu_restore">恢複授權</string>
     <string name="menu_donation">捐贈</string>
     <string name="menu_unlock_features">解鎖功能</string>
     <string name="menu_refresh">重新整理</string>
@@ -77,14 +77,14 @@
     <string name="update_type_premium">進階版</string>
     <string name="donation_record_title">捐贈記錄</string>
     <string name="donation_record_without_rankings">您捐贈了 %1$d 元。</string>
-    <string name="donation_record_with_rankings">您共捐贈了人民幣 %1$d 元，超過全球 %2$s 的捐助者，排名 %3$d！</string>
+    <string name="donation_record_with_rankings">您總共捐贈了人民幣 %1$d 元，超過全球 %2$s 的捐助者，排名第 %3$d！</string>
     <string name="donation_record_none">捐贈是國際上通行的一種支持免費軟體的方式，完成一次光榮的捐贈，使我們能夠做的更好！</string>
     <string name="donation_restore_success">捐贈記錄恢復成功！</string>
     <string name="donation_restore_failure">請檢查您的網路連線，請稍後再試。</string>
     <string name="donation_restore_not_found">沒有找到此裝置的捐贈記錄。</string>
     <string name="donation_payment_success">謝謝您的捐贈 ！</string>
     <string name="donation_dialog_title">贊助 MoKee OpenSource</string>
-    <string name="donation_dialog_message">Mokee 開源是一個純粹的非營利專案, 誕生的愛好和激情。為了維持這個專案, 我們大部分時間都要掏錢, 或者依靠捐款和廣告。您的捐款可以説明減少我們的財務負擔和維持未來的發展!</string>
+    <string name="donation_dialog_message">Mokee 開源專案是非營利性組織，我們需要通過接收使用者捐贈與顯示 Google 廣告的方式來維持運作。\n\n如果您願意在能力所及的情況下為我們捐贈，這將使我們有更多資金用於發展，開發更好用的系統。\n\n您的捐贈將用作伺服器、頻寬、日常維護、技術升級、商業介面授權等各項開銷。</string>
     <string name="donation_dialog_message_extra">捐款後, 我們將啟動某些功能, 這些功能只提供給捐獻者終身!</string>
     <string name="updates_found">發現新的更新</string>
     <string name="no_updates_found">沒有找到新的更新</string>
@@ -97,7 +97,7 @@
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">應用程式未安裝。</string>
     <string name="browser_not_found">瀏覽器未安裝。</string>
-    <string name="chrome_not_found">請先安裝 Chrome 瀏覽器。</string>
+    <string name="chrome_not_found">請先安裝 Chrome 瀏覽器</string>
     <string name="mokeepay_not_found">您不小心刪除了 MoKeePay 應用程式，請通過完整更新進行恢復。</string>
     <string name="ad_blocker_detected">看起來你正在使用廣告攔截器，請將我們的應用程式加入白名單。</string>
     <string name="new_updates_channel_title">新的更新</string>
@@ -113,7 +113,7 @@
     <string name="download_remaining">還剩 <xliff:g example="3 minutes" id="duration">%s</xliff:g></string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">下載已經正在執行</string>
-    <string name="download_limited_mode">目前是限速下載模式，累計捐贈達到 30 元人民幣即可享受全速下載。</string>
+    <string name="download_limited_speed">目前是限速下載模式，累計捐贈達到 %d 元人民幣即可享受全速下載。</string>
     <string name="install_already_running">安裝已在運行</string>
     <string name="installing_update_notification">正在安裝更新套件</string>
     <string name="installing_update_finished_notification">更新已安裝</string>

@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">మోకీ సెంటర్</string>
-    <string name="action_next">"తదుపరి"</string>
+    <string name="action_next">తదుపరి</string>
     <string name="menu_restore">పునరుద్ధరించు</string>
     <string name="menu_refresh">రిఫ్రెష్</string>
     <string name="mokee_version_title">మోకీ వెర్షన్</string>

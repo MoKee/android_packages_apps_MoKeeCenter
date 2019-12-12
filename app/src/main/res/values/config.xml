@@ -18,8 +18,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Server Interface Config -->
-    <string name="conf_fetch_full_update_url_def" translatable="false">https://ota.mokeedev.com/full.php</string>
-    <string name="conf_fetch_ota_update_url_def" translatable="false">https://ota.mokeedev.com/ota.php</string>
+    <string name="conf_fetch_full_update_url_def" translatable="false">https://api.mokeedev.com/updater/full</string>
+    <string name="conf_fetch_ota_update_url_def" translatable="false">https://api.mokeedev.com/updater/incremental</string>
     <string name="conf_fetch_donation_ranking_url_def" translatable="false">https://api.mokeedev.com/license/rankingsByUserID</string>
 
     <!-- Google Mobile Ads -->

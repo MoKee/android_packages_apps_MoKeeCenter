@@ -108,7 +108,7 @@
     <string name="download_remaining">. <xliff:g example="3 minutes" id="duration">%s</xliff:g> restantes</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Hay una descarga en curso</string>
-    <string name="download_limited_mode">Descargando a velocidad limitada, por favor dona 30 CNY (3,82€) para disfrutar de la máxima velocidad.</string>
+    <string name="download_limited_speed">Descargando a velocidad limitada, por favor dona %d CNY para disfrutar de la máxima velocidad.</string>
     <string name="install_already_running">Una instalación ya está en ejecución</string>
     <string name="installing_update_notification">Instalando paquete de actualización</string>
     <string name="installing_update_finished_notification">Actualización instalada</string>

@@ -79,7 +79,7 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
                 public void onAdClosed() {
                     mDownloadInterstitialAd.loadAd(new AdRequest.Builder().build());
                     if (!MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
-                        Snackbar.make(mItemView, R.string.download_limited_mode, Snackbar.LENGTH_LONG).show();
+                        Snackbar.make(mItemView, getContext().getString(R.string.download_limited_speed, Constants.DONATION_BASIC), Snackbar.LENGTH_LONG).show();
                     }
                 }
             });
@@ -128,7 +128,7 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
                 mDownloadInterstitialAd.show();
             } else {
                 if (!MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
-                    Snackbar.make(mItemView, R.string.download_limited_mode, Snackbar.LENGTH_LONG).show();
+                    Snackbar.make(mItemView, getContext().getString(R.string.download_limited_speed, Constants.DONATION_BASIC), Snackbar.LENGTH_LONG).show();
                 }
             }
         }

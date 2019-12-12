@@ -50,7 +50,9 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Collections;
@@ -67,6 +69,8 @@ import static com.mokee.center.misc.Constants.ACTION_LICENSE_CHANGED;
 import static com.mokee.center.misc.Constants.ACTION_PAYMENT_REQUEST;
 
 public class CommonUtil {
+
+    public static final String TAG = CommonUtil.class.getSimpleName();
 
     public static boolean isNetworkAvailable(Context context) {
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(
@@ -161,6 +165,22 @@ public class CommonUtil {
         }
     }
 
+    public static String loadLicense(String fileName) {
+        try {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName));
+            String line;
+            StringBuilder stringBuilder = new StringBuilder();
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuilder.append(line);
+            }
+            bufferedReader.close();
+            return stringBuilder.toString();
+        } catch (Exception e) {
+            Log.e(TAG, e.getMessage());
+            return null;
+        }
+    }
+
     public static boolean checkForNewUpdates(File oldJson, File newJson) {
         List<UpdateInfo> oldList = State.loadState(oldJson);
         List<UpdateInfo> newList = State.loadState(newJson);
@@ -221,8 +241,7 @@ public class CommonUtil {
                 .setDiffSize(object.getLong("diff"))
                 .setFileSize(object.getLong("length"))
                 .setTimestamp(object.getLong("timestamp"))
-                .setDownloadUrl(object.getString("rom"))
-                .setChangelogUrl(object.getString("log")).build();
+                .setDownloadUrl(object.getString("url")).build();
     }
 
     public static CharSequence calculateEta(Context context, long speed, long totalBytes, long totalBytesRead) {

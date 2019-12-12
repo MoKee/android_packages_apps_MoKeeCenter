@@ -32,7 +32,7 @@ import android.util.Log;
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.exception.HttpException;
 import com.lzy.okgo.model.Progress;
-import com.lzy.okgo.request.GetRequest;
+import com.lzy.okgo.request.PostRequest;
 import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadListener;
 import com.lzy.okserver.download.DownloadTask;
@@ -225,9 +225,9 @@ public class UpdaterController {
 
     public void startDownload(String downloadId) {
         Log.d(TAG, "Starting " + downloadId);
-        GetRequest<File> request = OkGo.get(mAvailableUpdates.get(downloadId).getDownloadUrl());
+        PostRequest<File> request = OkGo.post(mAvailableUpdates.get(downloadId).getDownloadUrl());
         if (MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
-            request.params(RequestUtil.updateParams(mContext));
+            request.params(RequestUtil.buildParams(mContext));
         }
         DownloadTask task = OkDownload.request(mAvailableUpdates.get(downloadId).getName(), request)
                 .fileName(FileUtil.getPartialName(downloadId)).save()
@@ -242,7 +242,7 @@ public class UpdaterController {
 
         if (MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
             if (downloadTask.progress.request != null) {
-                downloadTask.progress.request.params(RequestUtil.updateParams(mContext));
+                downloadTask.progress.request.params(RequestUtil.buildParams(mContext));
             } else {
                 restartDownload(downloadId);
                 return;
