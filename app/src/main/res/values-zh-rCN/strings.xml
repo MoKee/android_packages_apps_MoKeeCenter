@@ -36,6 +36,7 @@
     <string name="menu_unlock_features">功能解锁</string>
     <string name="menu_refresh">刷新</string>
     <string name="menu_delete_update">删除</string>
+    <string name="menu_open_link">在浏览器中打开</string>
     <string name="pref_auto_delete_updates">删除已安装或过时的更新</string>
     <string name="pref_ab_perf_mode">更快的安装更新</string>
     <string name="pref_mobile_data_warning">移动数据警告</string>

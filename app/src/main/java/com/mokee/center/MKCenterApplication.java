@@ -37,6 +37,8 @@ import java.util.concurrent.TimeUnit;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSession;
 
+import cn.jpush.android.api.BasicPushNotificationBuilder;
+import cn.jpush.android.api.JPushInterface;
 import okhttp3.OkHttpClient;
 
 import static com.mokee.center.misc.Constants.USER_AGENT;
@@ -73,6 +75,18 @@ public class MKCenterApplication extends Application implements
             CommonUtil.updateDonationInfo(this);
         }
         initOkGo();
+        initJPush();
+    }
+
+    private void initJPush() {
+        JPushInterface.setDebugMode(BuildConfig.DEBUG);
+        JPushInterface.init(this);
+        JPushInterface.setStatisticsEnable(false);
+        JPushInterface.setPowerSaveMode(this, true);
+        JPushInterface.stopCrashHandler(this);
+        BasicPushNotificationBuilder builder = new BasicPushNotificationBuilder(this);
+        builder.statusBarDrawable = R.drawable.ic_push_notify;
+        JPushInterface.setDefaultPushNotificationBuilder(builder);
     }
 
     private void initOkGo() {
@@ -90,13 +104,6 @@ public class MKCenterApplication extends Application implements
         OkGo.getInstance().init(this)
                 .setOkHttpClient(builder.build())
                 .addCommonHeaders(httpHeaders);
-    }
-
-    private class SafeHostnameVerifier implements HostnameVerifier {
-        @Override
-        public boolean verify(String hostname, SSLSession session) {
-            return WHITELIST_HOSTNAME.contains(hostname);
-        }
     }
 
     @Override
@@ -136,6 +143,13 @@ public class MKCenterApplication extends Application implements
 
     public boolean isMainActivityActive() {
         return mMainActivityActive;
+    }
+
+    private class SafeHostnameVerifier implements HostnameVerifier {
+        @Override
+        public boolean verify(String hostname, SSLSession session) {
+            return WHITELIST_HOSTNAME.contains(hostname);
+        }
     }
 
 }
