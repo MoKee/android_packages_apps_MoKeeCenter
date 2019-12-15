@@ -30,9 +30,8 @@ import com.mokee.center.activity.MainActivity;
 import com.mokee.center.model.DonationInfo;
 import com.mokee.center.util.CommonUtil;
 
-import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Pattern;
 
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSession;
@@ -46,7 +45,6 @@ import static com.mokee.center.misc.Constants.USER_AGENT;
 public class MKCenterApplication extends Application implements
         Application.ActivityLifecycleCallbacks {
 
-    public static final List<String> WHITELIST_HOSTNAME = Arrays.asList("api.mokeedev.com");
     private static MKCenterApplication mApp;
     private DonationInfo mDonationInfo = new DonationInfo();
     private OkHttpClient.Builder builder = new OkHttpClient.Builder();
@@ -148,7 +146,8 @@ public class MKCenterApplication extends Application implements
     private class SafeHostnameVerifier implements HostnameVerifier {
         @Override
         public boolean verify(String hostname, SSLSession session) {
-            return WHITELIST_HOSTNAME.contains(hostname);
+            String pattern = "^[a-zA-Z0-9].+mokeedev.com$";
+            return Pattern.matches(pattern, hostname);
         }
     }
 
