@@ -152,6 +152,8 @@ public class TagAliasOperatorHelper {
             tags.add(Build.PRODUCT);
             tags.add(VERSION.CODENAME);
             tags.add(Build.MAINTAINER);
+            tags.add(Locale.getDefault().getCountry());
+            tags.add(Build.RELEASE_TYPE);
             tagAliasBean.setTags(tags);
             if (!tagAliasBean.getTags().equals(jPushMessage.getTags())) {
                 tagAliasBean.setAction(ACTION_SET);
