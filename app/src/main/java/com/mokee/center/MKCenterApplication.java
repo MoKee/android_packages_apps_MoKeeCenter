@@ -95,6 +95,7 @@ public class MKCenterApplication extends Application implements
         HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor("OkGo");
         loggingInterceptor.setPrintLevel(HttpLoggingInterceptor.Level.NONE);
         builder.addInterceptor(loggingInterceptor);
+
         //default timeout
         builder.connectTimeout(30, TimeUnit.SECONDS);
         builder.hostnameVerifier(new SafeHostnameVerifier());
