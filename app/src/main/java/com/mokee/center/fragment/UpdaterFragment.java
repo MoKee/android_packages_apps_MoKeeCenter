@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -34,6 +34,11 @@ import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 
+import androidx.localbroadcastmanager.content.LocalBroadcastManager;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceFragmentCompat;
+
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.Response;
@@ -62,17 +67,13 @@ import com.mokee.center.util.FileUtil;
 import com.mokee.center.util.RequestUtil;
 
 import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
-
-import androidx.localbroadcastmanager.content.LocalBroadcastManager;
-import androidx.preference.Preference;
-import androidx.preference.PreferenceCategory;
-import androidx.preference.PreferenceFragmentCompat;
 
 import static com.mokee.center.misc.Constants.DONATION_RESULT_OK;
 import static com.mokee.center.misc.Constants.DONATION_RESULT_SUCCESS;
@@ -81,6 +82,7 @@ import static com.mokee.center.misc.Constants.PREF_DONATION_RECORD;
 import static com.mokee.center.misc.Constants.PREF_FEATURES_CATEGORY;
 import static com.mokee.center.misc.Constants.PREF_INCREMENTAL_UPDATES;
 import static com.mokee.center.misc.Constants.PREF_LAST_UPDATE_CHECK;
+import static com.mokee.center.misc.Constants.PREF_OUT_OF_DATE;
 import static com.mokee.center.misc.Constants.PREF_UPDATES_CATEGORY;
 import static com.mokee.center.misc.Constants.PREF_UPDATE_TYPE;
 import static com.mokee.center.misc.Constants.PREF_VERIFIED_UPDATES;
@@ -109,6 +111,24 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     private SharedPreferences mMainPrefs;
 
     private OkDownload mOkDownload;
+    private ServiceConnection mConnection = new ServiceConnection() {
+
+        @Override
+        public void onServiceConnected(ComponentName className,
+                                       IBinder service) {
+            UpdaterService.LocalBinder binder = (UpdaterService.LocalBinder) service;
+            mUpdaterService = binder.getService();
+            mUpdatesCategory.setUpdaterController(mUpdaterService.getUpdaterController());
+            updateFeatureStatus();
+            getUpdatesList();
+        }
+
+        @Override
+        public void onServiceDisconnected(ComponentName componentName) {
+            mUpdatesCategory.setUpdaterController(null);
+            mUpdaterService = null;
+        }
+    };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -234,25 +254,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         }
     }
 
-    private ServiceConnection mConnection = new ServiceConnection() {
-
-        @Override
-        public void onServiceConnected(ComponentName className,
-                IBinder service) {
-            UpdaterService.LocalBinder binder = (UpdaterService.LocalBinder) service;
-            mUpdaterService = binder.getService();
-            mUpdatesCategory.setUpdaterController(mUpdaterService.getUpdaterController());
-            updateFeatureStatus();
-            getUpdatesList();
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName componentName) {
-            mUpdatesCategory.setUpdaterController(null);
-            mUpdaterService = null;
-        }
-    };
-
     private void loadUpdatesList(LinkedList<UpdateInfo> updates, boolean manualRefresh) {
         if (updates.size() > 0) {
             Log.d(TAG, "Adding remote updates");
@@ -293,7 +294,8 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             final LinkedList<UpdateInfo> updates = CommonUtil.parseJson(getContext(), response.body(), TAG);
             State.saveState(updates, jsonNew);
             loadUpdatesList(updates, manualRefresh);
-            mMainPrefs.edit().putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
+            mMainPrefs.edit().remove(PREF_OUT_OF_DATE)
+                    .putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
             ((LastUpdateCheckPreference) findPreference(PREF_LAST_UPDATE_CHECK)).updateSummary();
             if (json.exists() && CommonUtil.checkForNewUpdates(json, jsonNew)) {
                 UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getContext());
@@ -302,6 +304,11 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             UpdatesCheckReceiver.cancelUpdatesCheck(mMainActivity);
             jsonNew.renameTo(json);
         } catch (JSONException e) {
+            try {
+                JSONObject status = new JSONObject(response.body());
+                mMainPrefs.edit().putBoolean(PREF_OUT_OF_DATE, status.has(PREF_OUT_OF_DATE)).apply();
+            } catch (JSONException ex) {
+            }
             Log.e(TAG, "Could not read json", e);
             json.delete();
             loadUpdatesList(new LinkedList<>(), manualRefresh);
