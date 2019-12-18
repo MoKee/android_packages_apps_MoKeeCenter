@@ -25,13 +25,17 @@ import android.view.View;
 import android.widget.Switch;
 
 import com.mokee.center.R;
+import com.mokee.center.controller.UpdaterService;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.util.CommonUtil;
 
 public class PreferencesDialogBuilder extends AlertDialog.Builder {
 
-    public PreferencesDialogBuilder(@NonNull Context context) {
+    private UpdaterService mUpdaterService;
+
+    public PreferencesDialogBuilder(@NonNull Context context, UpdaterService updaterService) {
         super(context);
+        mUpdaterService = updaterService;
     }
 
     @Override
@@ -62,8 +66,8 @@ public class PreferencesDialogBuilder extends AlertDialog.Builder {
                                     abPerfMode.isChecked())
                     .apply();
 
-//                    boolean enableABPerfMode = abPerfMode.isChecked();
-//                    mUpdaterService.getUpdaterController().setPerformanceMode(enableABPerfMode);
+                    boolean enableABPerfMode = abPerfMode.isChecked();
+                    mUpdaterService.getUpdaterController().setPerformanceMode(enableABPerfMode);
         });
 
         return super.create();
