@@ -77,6 +77,7 @@ public class Constants extends ConstantsBase {
     public static final String PREF_FEATURES_CATEGORY = "features_category";
     public static final String PREF_MOBILE_DATA_WARNING = "pref_mobile_data_warning";
     public static final String PREF_NEEDS_REBOOT_ID = "needs_reboot_id";
+    public static final String PREF_OUT_OF_DATE = "out_of_date";
 
     // HTTP Params
     public static final String PARAM_UNIQUE_IDS = "user_ids";

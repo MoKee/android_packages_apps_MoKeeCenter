@@ -26,10 +26,10 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.SystemProperties;
-import androidx.preference.PreferenceManager;
-
 import android.text.format.DateUtils;
 import android.util.Log;
+
+import androidx.preference.PreferenceManager;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.lzy.okgo.db.DownloadManager;
@@ -100,7 +100,7 @@ public class CommonUtil {
             Intent intent = new Intent(Intent.ACTION_VIEW, uri);
             context.startActivity(intent);
         } catch (ActivityNotFoundException ex) {
-            Snackbar.make(context.findViewById(R.id.updater), R.string.browser_not_found,Snackbar.LENGTH_LONG).show();
+            Snackbar.make(context.findViewById(R.id.updater), R.string.browser_not_found, Snackbar.LENGTH_LONG).show();
         }
     }
 
@@ -131,7 +131,7 @@ public class CommonUtil {
             Intent intent = new Intent(Constants.ACTION_RESTORE_REQUEST);
             context.startActivityForResult(intent, 0);
         } catch (ActivityNotFoundException ex) {
-             Snackbar.make(context.findViewById(R.id.updater), R.string.mokeepay_not_found, Snackbar.LENGTH_LONG).show();
+            Snackbar.make(context.findViewById(R.id.updater), R.string.mokeepay_not_found, Snackbar.LENGTH_LONG).show();
         }
     }
 
@@ -162,13 +162,12 @@ public class CommonUtil {
         }
     }
 
-    public static LinkedList<UpdateInfo> getSortedUpdates(LinkedList<UpdateInfo> updates) {
+    private static LinkedList<UpdateInfo> getSortedUpdates(LinkedList<UpdateInfo> updates) {
         Collections.sort(updates, (o1, o2) -> compare(o1.getName(), o2.getName()));
         return updates;
     }
 
-    public static LinkedList<UpdateInfo> parseJson(Context context, String json, String tag)
-            throws JSONException {
+    public static LinkedList<UpdateInfo> parseJson(Context context, String json, String tag) throws JSONException {
         LinkedList<UpdateInfo> updates = new LinkedList<>();
         JSONArray updatesList = new JSONArray(json);
         for (int i = 0; i < updatesList.length(); i++) {
