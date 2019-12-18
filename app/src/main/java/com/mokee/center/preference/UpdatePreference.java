@@ -258,7 +258,9 @@ public class UpdatePreference extends Preference implements View.OnClickListener
     @Override
     public boolean onLongClick(View view) {
         Progress progress = mUpdaterController.getUpdate(getKey()).getProgress();
-        if (progress != null && progress.status == Progress.FINISH) {
+        if (progress == null) return false;
+        if (progress.status == Progress.FINISH || progress.status == Progress.PAUSE
+                || progress.status == Progress.ERROR) {
             PopupMenu popupMenu = new PopupMenu(getContext(), mTitleView);
             popupMenu.getMenuInflater().inflate(R.menu.menu_action_mode, popupMenu.getMenu());
             popupMenu.setOnMenuItemClickListener(this);
