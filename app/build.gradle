@@ -12,7 +12,7 @@ android {
         minSdkVersion 27
         targetSdkVersion 28
         versionCode gitVersionCode()
-        versionName "2.4.9." + platformVersion
+        versionName "2.5.0." + platformVersion
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         ndk {
