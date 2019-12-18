@@ -2,6 +2,8 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.firebase.firebase-perf'
 apply plugin: 'io.fabric'
 
+def platformVersion = 8
+
 android {
     compileSdkVersion 28
     buildToolsVersion = '28.0.3'
@@ -10,7 +12,7 @@ android {
         minSdkVersion 27
         targetSdkVersion 28
         versionCode gitVersionCode()
-        versionName "2.4.8.8"
+        versionName "2.5.0." + platformVersion
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
