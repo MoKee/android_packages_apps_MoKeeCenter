@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018 The MoKee Open Source Project
+ * Copyright (C) 2018-2019 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -57,7 +57,6 @@ public class RequestUtil {
         } else {
             url = context.getString(R.string.conf_fetch_firmware_update_url_def);
             mMainPrefs.edit().putBoolean(PREF_INCREMENTAL_UPDATES, false).apply();
-            params.put("update_type", configUpdateType);
         }
 
         if (mMainPrefs.getBoolean(PREF_VERIFIED_UPDATES, false) && donationInfo.isAdvanced()) {
@@ -66,12 +65,13 @@ public class RequestUtil {
             mMainPrefs.edit().putBoolean(PREF_VERIFIED_UPDATES, false).apply();
         }
 
+        params.put("update_type", configUpdateType);
         params.put("version", Build.VERSION);
 
         OkGo.<String>post(url).tag(AVAILABLE_UPDATES_TAG).params(params).execute(callback);
     }
 
-    public static HttpParams buildParams (Context context) {
+    public static HttpParams buildParams(Context context) {
         HttpParams params = new HttpParams();
         params.put("license", CommonUtil.loadLicense(Constants.LICENSE_FILE));
         params.put("unique_ids", Build.getUniqueIDS(context));

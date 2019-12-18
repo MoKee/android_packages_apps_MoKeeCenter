@@ -73,6 +73,7 @@
     <string name="verified_updates_summary">Only display updates that are verified by other users</string>
     <string name="available_updates_title">Available updates</string>
     <string name="no_available_updates_intro">The last check did not find any available updates. To manually check for new updates, use the Refresh button.</string>
+    <string name="out_of_date_updates_intro">The current version is out of date to apply incremental updates. To update, please download a full ROM instead.</string>
     <string name="pending_available_updates_intro">Looking for available updates</string>
 
     <!-- Unlock Features -->
