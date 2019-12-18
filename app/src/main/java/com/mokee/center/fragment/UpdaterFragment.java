@@ -49,7 +49,6 @@ import com.mokee.center.activity.MainActivity;
 import com.mokee.center.controller.UpdaterController;
 import com.mokee.center.controller.UpdaterService;
 import com.mokee.center.dialog.PreferencesDialogBuilder;
-import com.mokee.center.misc.Constants;
 import com.mokee.center.misc.State;
 import com.mokee.center.model.DonationInfo;
 import com.mokee.center.model.UpdateInfo;
@@ -75,6 +74,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.UUID;
 
+import static com.mokee.center.misc.Constants.AVAILABLE_UPDATES_TAG;
 import static com.mokee.center.misc.Constants.DONATION_RESULT_OK;
 import static com.mokee.center.misc.Constants.DONATION_RESULT_SUCCESS;
 import static com.mokee.center.misc.Constants.KEY_DONATION_AMOUNT;
@@ -237,7 +237,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     @Override
     public void onDestroy() {
         super.onDestroy();
-        OkGo.cancelTag(MKCenterApplication.getInstance().getClient().build(), Constants.AVAILABLE_UPDATES_TAG);
+        OkGo.cancelTag(MKCenterApplication.getInstance().getClient().build(), AVAILABLE_UPDATES_TAG);
     }
 
     @Override
@@ -295,7 +295,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             State.saveState(updates, jsonNew);
             loadUpdatesList(updates, manualRefresh);
             mMainPrefs.edit().remove(PREF_OUT_OF_DATE)
-                    .putLong(Constants.PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
+                    .putLong(PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
             ((LastUpdateCheckPreference) findPreference(PREF_LAST_UPDATE_CHECK)).updateSummary();
             if (json.exists() && CommonUtil.checkForNewUpdates(json, jsonNew)) {
                 UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getContext());
