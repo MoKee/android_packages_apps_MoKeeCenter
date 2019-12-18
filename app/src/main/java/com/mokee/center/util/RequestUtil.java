@@ -58,7 +58,6 @@ public class RequestUtil {
         } else {
             url = context.getString(R.string.conf_fetch_firmware_update_url_def);
             mMainPrefs.edit().putBoolean(PREF_INCREMENTAL_UPDATES, false).apply();
-            params.put("update_type", configUpdateType);
         }
 
         if (mMainPrefs.getBoolean(PREF_VERIFIED_UPDATES, false) && donationInfo.isAdvanced()) {
@@ -67,12 +66,13 @@ public class RequestUtil {
             mMainPrefs.edit().putBoolean(PREF_VERIFIED_UPDATES, false).apply();
         }
 
+        params.put("update_type", configUpdateType);
         params.put("version", Build.VERSION);
 
         OkGo.<String>post(url).tag(AVAILABLE_UPDATES_TAG).params(params).execute(callback);
     }
 
-    public static HttpParams buildParams (Context context) {
+    public static HttpParams buildParams(Context context) {
         HttpParams params = new HttpParams();
         params.put("license", License.loadLicense(Constants.LICENSE_PATH));
         params.put("unique_ids", Build.getUniqueIDS(context));
