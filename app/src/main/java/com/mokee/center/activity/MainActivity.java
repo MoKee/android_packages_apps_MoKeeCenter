@@ -48,7 +48,6 @@ import com.mokee.center.BuildConfig;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.dialog.DonationDialogBuilder;
-import com.mokee.center.dialog.PreferencesDialogBuilder;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.util.CommonUtil;
 
@@ -253,9 +252,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.menu_preferences:
-                new PreferencesDialogBuilder(this).show();
-                return true;
             case R.id.menu_donation:
                 new DonationDialogBuilder(this).show();
                 return true;
