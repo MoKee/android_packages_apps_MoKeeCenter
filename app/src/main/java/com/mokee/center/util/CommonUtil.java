@@ -19,12 +19,14 @@ package com.mokee.center.util;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
+import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Environment;
 import android.os.SystemProperties;
 import android.text.format.DateUtils;
 import android.util.Log;
@@ -51,6 +53,9 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -104,12 +109,27 @@ public class CommonUtil {
         }
     }
 
+    public static String getLicenseFilePath(Context context) {
+        return String.join("/", context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath(), "mokee.lic");
+    }
+
+    public static void copyLicenseFile(Context context, Uri uri) {
+        ContentResolver contentResolver = context.getContentResolver();
+        try {
+            InputStream inputStream = contentResolver.openInputStream(uri);
+            Files.copy(inputStream, new File(getLicenseFilePath(context)).toPath(), StandardCopyOption.REPLACE_EXISTING);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void updateDonationInfo(Context context) {
+        String licensePath = getLicenseFilePath(context);
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
-        DonationUtils.updateDonationInfo(context, donationInfo, Constants.LICENSE_PATH, Constants.LICENSE_PUB_KEY);
+        DonationUtils.updateDonationInfo(context, donationInfo, licensePath, Constants.LICENSE_PUB_KEY);
         Intent intent = new Intent(ACTION_LICENSE_CHANGED);
         if (donationInfo.getPaid() > 0) {
-            intent.putExtra("data", License.loadLicense(Constants.LICENSE_PATH));
+            intent.putExtra("data", License.loadLicense(licensePath));
         } else {
             intent.putExtra("data", "");
         }
