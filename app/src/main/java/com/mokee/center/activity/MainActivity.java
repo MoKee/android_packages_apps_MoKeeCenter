@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity
 
         if (TextUtils.equals(getIntent().getAction(), Constants.ACTION_LICENSE_REQUEST)) {
             if (mApp.getDonationInfo().isBasic()) {
-                setResult(DONATION_RESULT_SUCCESS, LicenseUtil.generateLicenseData(this, getIntent().getPackage()));
+                setResult(DONATION_RESULT_SUCCESS, LicenseUtil.generateLicenseData(this, getCallingPackage()));
                 finish();
             }
         }
