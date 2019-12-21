@@ -11,7 +11,7 @@ android {
         applicationId "com.mokee.center"
         minSdkVersion 27
         targetSdkVersion 28
-        versionCode gitVersionCode()
+        versionCode increasedVersionCode()
         versionName "2.5.1." + platformVersion
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -70,9 +70,8 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha03'
 }
 
-private static gitVersionCode() {
-    def cmd = 'git rev-list HEAD --first-parent --count'
-    cmd.execute().text.trim().toInteger()
+static increasedVersionCode() {
+    return (int) (System.currentTimeMillis() / 1000)
 }
 
 apply plugin: 'com.google.gms.google-services'
