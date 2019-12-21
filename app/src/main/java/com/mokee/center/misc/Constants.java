@@ -18,7 +18,6 @@
 package com.mokee.center.misc;
 
 import android.app.Activity;
-import android.os.Environment;
 
 public class Constants {
 
