@@ -31,12 +31,14 @@ import android.os.SystemProperties;
 import android.text.format.DateUtils;
 import android.util.Log;
 
+import androidx.core.content.FileProvider;
 import androidx.preference.PreferenceManager;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.lzy.okgo.db.DownloadManager;
 import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadTask;
+import com.mokee.center.BuildConfig;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.controller.UpdaterService;
@@ -113,11 +115,21 @@ public class CommonUtil {
         return String.join("/", context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath(), "mokee.lic");
     }
 
+    public static Intent generateLicenseData(Context context, String packageName) {
+        Intent intent = new Intent();
+        Uri uri = FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".files", new File(getLicenseFilePath(context)));
+        intent.setDataAndType(uri, context.getContentResolver().getType(uri));
+        context.grantUriPermission(packageName, uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        return intent;
+    }
+
     public static void copyLicenseFile(Context context, Uri uri) {
         ContentResolver contentResolver = context.getContentResolver();
         try {
             InputStream inputStream = contentResolver.openInputStream(uri);
-            Files.copy(inputStream, new File(getLicenseFilePath(context)).toPath(), StandardCopyOption.REPLACE_EXISTING);
+            if (inputStream != null) {
+                Files.copy(inputStream, new File(getLicenseFilePath(context)).toPath(), StandardCopyOption.REPLACE_EXISTING);
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }

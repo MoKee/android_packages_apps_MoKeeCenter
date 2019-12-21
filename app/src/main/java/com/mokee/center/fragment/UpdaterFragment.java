@@ -192,7 +192,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         switch (resultCode) {
             case DONATION_RESULT_OK:
             case DONATION_RESULT_SUCCESS:
-                CommonUtil.copyLicenseFile(getContext(), data.getData());
+                CommonUtil.copyLicenseFile(mMainActivity, data.getData());
                 CommonUtil.updateDonationInfo(getContext());
                 mDonationRecordPreference.updateRankingsInfo();
                 mUpdateTypePreference.refreshPreference();
