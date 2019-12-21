@@ -111,62 +111,6 @@ public class CommonUtil {
         }
     }
 
-    public static String getLicenseFilePath(Context context) {
-        return String.join("/", context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath(), "mokee.lic");
-    }
-
-    public static Intent generateLicenseData(Context context, String packageName) {
-        Intent intent = new Intent();
-        Uri uri = FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".files", new File(getLicenseFilePath(context)));
-        intent.setDataAndType(uri, context.getContentResolver().getType(uri));
-        context.grantUriPermission(packageName, uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
-        return intent;
-    }
-
-    public static void copyLicenseFile(Context context, Uri uri) {
-        ContentResolver contentResolver = context.getContentResolver();
-        try {
-            InputStream inputStream = contentResolver.openInputStream(uri);
-            if (inputStream != null) {
-                Files.copy(inputStream, new File(getLicenseFilePath(context)).toPath(), StandardCopyOption.REPLACE_EXISTING);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void updateDonationInfo(Context context) {
-        String licensePath = getLicenseFilePath(context);
-        DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
-        DonationUtils.updateDonationInfo(context, donationInfo, licensePath, Constants.LICENSE_PUB_KEY);
-        Intent intent = new Intent(ACTION_LICENSE_CHANGED);
-        if (donationInfo.getPaid() > 0) {
-            intent.putExtra("data", License.loadLicense(licensePath));
-        } else {
-            intent.putExtra("data", "");
-        }
-        context.sendBroadcast(intent);
-    }
-
-    public static void sendPaymentRequest(Activity context, String channel, String description, String price, String type) {
-        Intent intent = new Intent(ACTION_PAYMENT_REQUEST);
-        intent.putExtra("packagename", context.getPackageName());
-        intent.putExtra("channel", channel);
-        intent.putExtra("type", type);
-        intent.putExtra("description", description);
-        intent.putExtra("price", price);
-        context.startActivityForResult(intent, 0);
-    }
-
-    public static void restoreLicenseRequest(Activity context) {
-        try {
-            Intent intent = new Intent(Constants.ACTION_RESTORE_REQUEST);
-            context.startActivityForResult(intent, 0);
-        } catch (ActivityNotFoundException ex) {
-            Snackbar.make(context.findViewById(R.id.updater), R.string.mokeepay_not_found, Snackbar.LENGTH_LONG).show();
-        }
-    }
-
     public static boolean checkForNewUpdates(File oldJson, File newJson) {
         List<UpdateInfo> oldList = State.loadState(oldJson);
         List<UpdateInfo> newList = State.loadState(newJson);

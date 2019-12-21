@@ -51,6 +51,7 @@ import com.mokee.center.R;
 import com.mokee.center.dialog.DonationDialogBuilder;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.util.CommonUtil;
+import com.mokee.center.util.LicenseUtil;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -142,7 +143,7 @@ public class MainActivity extends AppCompatActivity
 
         if (TextUtils.equals(getIntent().getAction(), Constants.ACTION_LICENSE_REQUEST)) {
             if (mApp.getDonationInfo().isBasic()) {
-                setResult(DONATION_RESULT_SUCCESS, CommonUtil.generateLicenseData(this, getIntent().getPackage()));
+                setResult(DONATION_RESULT_SUCCESS, LicenseUtil.generateLicenseData(this, getIntent().getPackage()));
                 finish();
             }
         }
@@ -264,7 +265,7 @@ public class MainActivity extends AppCompatActivity
                 new DonationDialogBuilder(this).show();
                 return true;
             case R.id.menu_restore:
-                CommonUtil.restoreLicenseRequest(this);
+                LicenseUtil.restoreLicenseRequest(this);
                 return true;
         }
         return super.onOptionsItemSelected(item);
