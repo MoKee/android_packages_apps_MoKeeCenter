@@ -33,7 +33,6 @@ import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.model.DonationInfo;
-import com.mokee.security.License;
 import com.mokee.utils.DonationUtils;
 
 import java.io.File;
@@ -41,21 +40,21 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
+import java.util.Objects;
 
-import static com.mokee.center.misc.Constants.ACTION_LICENSE_CHANGED;
 import static com.mokee.center.misc.Constants.ACTION_PAYMENT_REQUEST;
 
 public class LicenseUtil {
 
-    static String getLicenseFilePath(Context context) {
-        return String.join("/", context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath(), "mokee.lic");
+    public static String getLicenseFilePath(Context context) {
+        return String.join("/", Objects.requireNonNull(context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).getAbsolutePath(), "mokee.lic");
     }
 
-    public static Intent generateLicenseData(Context context, String packageName) {
-        Intent intent = new Intent();
+    public static Intent generateLicenseIntent(Context context) {
+        Intent intent = new Intent(Constants.ACTION_LICENSE_CHANGED);
         Uri uri = FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".files", new File(getLicenseFilePath(context)));
         intent.setDataAndType(uri, context.getContentResolver().getType(uri));
-        context.grantUriPermission(packageName, uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+        context.grantUriPermission("android", uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
         return intent;
     }
 
@@ -75,13 +74,9 @@ public class LicenseUtil {
         String licensePath = getLicenseFilePath(context);
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
         DonationUtils.updateDonationInfo(context, donationInfo, licensePath, Constants.LICENSE_PUB_KEY);
-        Intent intent = new Intent(ACTION_LICENSE_CHANGED);
-        if (donationInfo.getPaid() > 0) {
-            intent.putExtra("data", License.loadLicense(licensePath));
-        } else {
-            intent.putExtra("data", "");
+        if (donationInfo.isBasic()) {
+            context.sendBroadcast(generateLicenseIntent(context));
         }
-        context.sendBroadcast(intent);
     }
 
     public static void sendPaymentRequest(Activity context, String channel, String description, String price, String type) {

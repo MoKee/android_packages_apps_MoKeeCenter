@@ -19,35 +19,27 @@ package com.mokee.center.util;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.os.Environment;
 import android.os.SystemProperties;
 import android.text.format.DateUtils;
 import android.util.Log;
 
-import androidx.core.content.FileProvider;
 import androidx.preference.PreferenceManager;
 
 import com.google.android.material.snackbar.Snackbar;
 import com.lzy.okgo.db.DownloadManager;
 import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadTask;
-import com.mokee.center.BuildConfig;
-import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.controller.UpdaterService;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.misc.State;
-import com.mokee.center.model.DonationInfo;
 import com.mokee.center.model.UpdateInfo;
-import com.mokee.security.License;
-import com.mokee.utils.DonationUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -55,9 +47,6 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -67,9 +56,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.zip.ZipFile;
-
-import static com.mokee.center.misc.Constants.ACTION_LICENSE_CHANGED;
-import static com.mokee.center.misc.Constants.ACTION_PAYMENT_REQUEST;
 
 public class CommonUtil {
 

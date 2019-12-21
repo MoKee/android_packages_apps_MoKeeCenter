@@ -22,7 +22,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -139,13 +138,6 @@ public class MainActivity extends AppCompatActivity
                     }
                 }
             });
-        }
-
-        if (TextUtils.equals(getIntent().getAction(), Constants.ACTION_LICENSE_REQUEST)) {
-            if (mApp.getDonationInfo().isBasic()) {
-                setResult(DONATION_RESULT_SUCCESS, LicenseUtil.generateLicenseData(this, getCallingPackage()));
-                finish();
-            }
         }
     }
 

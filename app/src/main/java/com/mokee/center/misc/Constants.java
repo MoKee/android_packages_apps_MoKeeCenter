@@ -26,7 +26,6 @@ public class Constants extends ConstantsBase {
     // Actions
     public static final String ACTION_PAYMENT_REQUEST = "com.mokee.pay.action.PAYMENT_REQUEST";
     public static final String ACTION_RESTORE_REQUEST = "com.mokee.pay.action.RESTORE_REQUEST";
-    public static final String ACTION_LICENSE_REQUEST = "mokee.intent.action.LICENSE_REQUEST";
     public static final String ACTION_LICENSE_CHANGED = "mokee.intent.action.LICENSE_CHANGED";
 
     // Nav URLs
