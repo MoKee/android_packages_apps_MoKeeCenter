@@ -19,14 +19,12 @@ package com.mokee.center.util;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
-import android.os.Environment;
 import android.os.SystemProperties;
 import android.text.format.DateUtils;
 import android.util.Log;
@@ -37,15 +35,11 @@ import com.google.android.material.snackbar.Snackbar;
 import com.lzy.okgo.db.DownloadManager;
 import com.lzy.okserver.OkDownload;
 import com.lzy.okserver.download.DownloadTask;
-import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.controller.UpdaterService;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.misc.State;
-import com.mokee.center.model.DonationInfo;
 import com.mokee.center.model.UpdateInfo;
-import com.mokee.security.License;
-import com.mokee.utils.DonationUtils;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -53,21 +47,14 @@ import org.json.JSONObject;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.zip.ZipFile;
-
-import static com.mokee.center.misc.Constants.ACTION_LICENSE_CHANGED;
-import static com.mokee.center.misc.Constants.ACTION_PAYMENT_REQUEST;
 
 public class CommonUtil {
 
@@ -106,52 +93,6 @@ public class CommonUtil {
             context.startActivity(intent);
         } catch (ActivityNotFoundException ex) {
             Snackbar.make(context.findViewById(R.id.updater), R.string.browser_not_found, Snackbar.LENGTH_LONG).show();
-        }
-    }
-
-    public static String getLicenseFilePath(Context context) {
-        return String.join("/", context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS).getAbsolutePath(), "mokee.lic");
-    }
-
-    public static void copyLicenseFile(Context context, Uri uri) {
-        ContentResolver contentResolver = context.getContentResolver();
-        try {
-            InputStream inputStream = contentResolver.openInputStream(uri);
-            Files.copy(inputStream, new File(getLicenseFilePath(context)).toPath(), StandardCopyOption.REPLACE_EXISTING);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public static void updateDonationInfo(Context context) {
-        String licensePath = getLicenseFilePath(context);
-        DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
-        DonationUtils.updateDonationInfo(context, donationInfo, licensePath, Constants.LICENSE_PUB_KEY);
-        Intent intent = new Intent(ACTION_LICENSE_CHANGED);
-        if (donationInfo.getPaid() > 0) {
-            intent.putExtra("data", License.loadLicense(licensePath));
-        } else {
-            intent.putExtra("data", "");
-        }
-        context.sendBroadcast(intent);
-    }
-
-    public static void sendPaymentRequest(Activity context, String channel, String description, String price, String type) {
-        Intent intent = new Intent(ACTION_PAYMENT_REQUEST);
-        intent.putExtra("packagename", context.getPackageName());
-        intent.putExtra("channel", channel);
-        intent.putExtra("type", type);
-        intent.putExtra("description", description);
-        intent.putExtra("price", price);
-        context.startActivityForResult(intent, 0);
-    }
-
-    public static void restoreLicenseRequest(Activity context) {
-        try {
-            Intent intent = new Intent(Constants.ACTION_RESTORE_REQUEST);
-            context.startActivityForResult(intent, 0);
-        } catch (ActivityNotFoundException ex) {
-            Snackbar.make(context.findViewById(R.id.updater), R.string.mokeepay_not_found, Snackbar.LENGTH_LONG).show();
         }
     }
 
@@ -247,8 +188,7 @@ public class CommonUtil {
     public static Map<String, DownloadTask> getDownloadTaskMap() {
         Map<String, DownloadTask> downloadTaskMap = new HashMap<>();
         List<DownloadTask> downloadTasks = OkDownload.restore(DownloadManager.getInstance().getAll());
-        for (Iterator iterator = downloadTasks.iterator(); iterator.hasNext(); ) {
-            DownloadTask task = (DownloadTask) iterator.next();
+        for (DownloadTask task : downloadTasks) {
             downloadTaskMap.put(task.progress.tag, task);
         }
         return downloadTaskMap;

@@ -63,6 +63,7 @@ import com.mokee.center.receiver.UpdatesCheckReceiver;
 import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
 import com.mokee.center.util.FileUtil;
+import com.mokee.center.util.LicenseUtil;
 import com.mokee.center.util.RequestUtil;
 
 import org.json.JSONException;
@@ -192,8 +193,8 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         switch (resultCode) {
             case DONATION_RESULT_OK:
             case DONATION_RESULT_SUCCESS:
-                CommonUtil.copyLicenseFile(getContext(), data.getData());
-                CommonUtil.updateDonationInfo(getContext());
+                LicenseUtil.copyLicenseFile(mMainActivity, data.getData());
+                LicenseUtil.updateDonationInfo(getContext());
                 mDonationRecordPreference.updateRankingsInfo();
                 mUpdateTypePreference.refreshPreference();
                 if (mIncrementalUpdatesPreference != null) {
@@ -384,7 +385,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         if (key.equals(KEY_DONATION_AMOUNT)) {
             if (mDonationPrefs.getInt(KEY_DONATION_AMOUNT, 0)
                     > MKCenterApplication.getInstance().getDonationInfo().getPaid()) {
-                CommonUtil.restoreLicenseRequest(mMainActivity);
+                LicenseUtil.restoreLicenseRequest(mMainActivity);
             }
         } else if (key.equals(PREF_INCREMENTAL_UPDATES)) {
             String suggestUpdateType = BuildInfoUtil.getSuggestUpdateType();

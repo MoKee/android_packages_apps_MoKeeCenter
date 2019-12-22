@@ -50,6 +50,7 @@ import com.mokee.center.R;
 import com.mokee.center.dialog.DonationDialogBuilder;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.util.CommonUtil;
+import com.mokee.center.util.LicenseUtil;
 
 import io.fabric.sdk.android.Fabric;
 
@@ -256,7 +257,7 @@ public class MainActivity extends AppCompatActivity
                 new DonationDialogBuilder(this).show();
                 return true;
             case R.id.menu_restore:
-                CommonUtil.restoreLicenseRequest(this);
+                LicenseUtil.restoreLicenseRequest(this);
                 return true;
         }
         return super.onOptionsItemSelected(item);
