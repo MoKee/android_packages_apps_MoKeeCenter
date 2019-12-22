@@ -19,16 +19,17 @@ package com.mokee.center;
 
 import android.Manifest;
 import android.app.Activity;
+import android.app.ActivityThread;
 import android.app.Application;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.text.TextUtils;
 
 import com.lzy.okgo.OkGo;
 import com.lzy.okgo.interceptor.HttpLoggingInterceptor;
 import com.lzy.okgo.model.HttpHeaders;
 import com.mokee.center.activity.MainActivity;
 import com.mokee.center.model.DonationInfo;
-import com.mokee.center.util.CommonUtil;
 import com.mokee.center.util.LicenseUtil;
 
 import java.util.concurrent.TimeUnit;
@@ -66,14 +67,16 @@ public class MKCenterApplication extends Application implements
     @Override
     public void onCreate() {
         super.onCreate();
-        mMainActivityActive = false;
-        registerActivityLifecycleCallbacks(this);
-        mApp = this;
-        if (checkSelfPermission(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
-                && checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-            LicenseUtil.updateDonationInfo(this);
+        if (TextUtils.equals(ActivityThread.currentProcessName(), BuildConfig.APPLICATION_ID)) {
+            mMainActivityActive = false;
+            registerActivityLifecycleCallbacks(this);
+            mApp = this;
+            if (checkSelfPermission(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
+                    && checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                LicenseUtil.updateDonationInfo(this);
+            }
+            initOkGo();
         }
-        initOkGo();
         initJPush();
     }
 
