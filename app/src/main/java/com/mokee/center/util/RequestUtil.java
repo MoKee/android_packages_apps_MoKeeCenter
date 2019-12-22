@@ -74,7 +74,7 @@ public class RequestUtil {
 
     public static HttpParams buildParams(Context context) {
         HttpParams params = new HttpParams();
-        params.put("license", License.loadLicense(CommonUtil.getLicenseFilePath(context)));
+        params.put("license", License.loadLicense(LicenseUtil.getLicenseFilePath(context)));
         params.put("unique_ids", Build.getUniqueIDS(context));
         return params;
     }
