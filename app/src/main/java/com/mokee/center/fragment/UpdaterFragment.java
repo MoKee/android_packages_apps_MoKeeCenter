@@ -63,8 +63,9 @@ import com.mokee.center.receiver.UpdatesCheckReceiver;
 import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
 import com.mokee.center.util.FileUtil;
-import com.mokee.center.util.LicenseUtil;
-import com.mokee.center.util.RequestUtil;
+import com.mokee.center.util.IntentUtil;
+import com.mokee.center.util.OkGoUtil;
+import com.mokee.security.LicenseUtils;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -193,8 +194,8 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         switch (resultCode) {
             case DONATION_RESULT_OK:
             case DONATION_RESULT_SUCCESS:
-                LicenseUtil.copyLicenseFile(mMainActivity, data.getData());
-                LicenseUtil.updateDonationInfo(getContext());
+                LicenseUtils.copyLicenseFile(mMainActivity, data.getData(), LicenseUtils.getLicensePath(mMainActivity));
+                IntentUtil.updateDonationInfo(getContext());
                 mDonationRecordPreference.updateRankingsInfo();
                 mUpdateTypePreference.refreshPreference();
                 if (mIncrementalUpdatesPreference != null) {
@@ -320,7 +321,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
     private void downloadUpdatesList(boolean manualRefresh) {
         final File json = FileUtil.getCachedUpdateList(mMainActivity);
         final File jsonNew = new File(mMainActivity.getCacheDir().getAbsolutePath() + UUID.randomUUID());
-        RequestUtil.fetchAvailableUpdates(getContext(), new StringCallback() {
+        OkGoUtil.fetchAvailableUpdates(getContext(), new StringCallback() {
             @Override
             public void onSuccess(Response<String> response) {
                 processNewJson(response, json, jsonNew, manualRefresh);
@@ -385,7 +386,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
         if (key.equals(KEY_DONATION_AMOUNT)) {
             if (mDonationPrefs.getInt(KEY_DONATION_AMOUNT, 0)
                     > MKCenterApplication.getInstance().getDonationInfo().getPaid()) {
-                LicenseUtil.restoreLicenseRequest(mMainActivity);
+                IntentUtil.restoreLicenseRequest(mMainActivity);
             }
         } else if (key.equals(PREF_INCREMENTAL_UPDATES)) {
             String suggestUpdateType = BuildInfoUtil.getSuggestUpdateType();

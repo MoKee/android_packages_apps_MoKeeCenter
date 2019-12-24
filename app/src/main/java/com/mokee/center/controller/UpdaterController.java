@@ -43,7 +43,7 @@ import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
 import com.mokee.center.util.FileUtil;
-import com.mokee.center.util.RequestUtil;
+import com.mokee.center.util.OkGoUtil;
 
 import java.io.File;
 import java.util.Iterator;
@@ -227,7 +227,7 @@ public class UpdaterController {
         Log.d(TAG, "Starting " + downloadId);
         PostRequest<File> request = OkGo.post(mAvailableUpdates.get(downloadId).getDownloadUrl());
         if (MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
-            request.params(RequestUtil.buildParams(mContext));
+            request.params(OkGoUtil.buildParams(mContext));
         }
         DownloadTask task = OkDownload.request(mAvailableUpdates.get(downloadId).getName(), request)
                 .fileName(FileUtil.getPartialName(downloadId)).save()
@@ -242,7 +242,7 @@ public class UpdaterController {
 
         if (MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
             if (downloadTask.progress.request != null) {
-                downloadTask.progress.request.params(RequestUtil.buildParams(mContext));
+                downloadTask.progress.request.params(OkGoUtil.buildParams(mContext));
             } else {
                 restartDownload(downloadId);
                 return;

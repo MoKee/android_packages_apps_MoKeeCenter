@@ -37,7 +37,7 @@ import com.mokee.center.R;
 import com.mokee.center.activity.MainActivity;
 import com.mokee.center.model.DonationInfo;
 import com.mokee.center.util.CommonUtil;
-import com.mokee.center.util.LicenseUtil;
+import com.mokee.center.util.IntentUtil;
 
 import java.util.Arrays;
 
@@ -124,14 +124,14 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
             try {
                 switch (via.getCheckedRadioButtonId()) {
                     case R.id.alipay:
-                        LicenseUtil.sendPaymentRequest(mActivity, "alipay", title, String.valueOf(price), "donation");
+                        IntentUtil.sendPaymentRequest(mActivity, "alipay", title, String.valueOf(price), "donation");
                         break;
                     case R.id.wechat:
                         if (!MoKeeUtils.isApkInstalledAndEnabled("com.tencent.mm", getContext())) {
                             resId = R.string.activity_not_found;
                             throw new ActivityNotFoundException();
                         } else {
-                            LicenseUtil.sendPaymentRequest(mActivity, "wechat", title, String.valueOf(price), "donation");
+                            IntentUtil.sendPaymentRequest(mActivity, "wechat", title, String.valueOf(price), "donation");
                         }
                         break;
                     case R.id.paypal:
@@ -139,7 +139,7 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
                             resId = R.string.chrome_not_found;
                             throw new ActivityNotFoundException();
                         } else {
-                            LicenseUtil.sendPaymentRequest(mActivity, "paypal", title, String.valueOf(Float.valueOf(price) / 6), "donation");
+                            IntentUtil.sendPaymentRequest(mActivity, "paypal", title, String.valueOf(Float.valueOf(price) / 6), "donation");
                         }
                         break;
                 }

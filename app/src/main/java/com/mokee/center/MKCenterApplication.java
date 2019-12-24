@@ -30,7 +30,7 @@ import com.lzy.okgo.interceptor.HttpLoggingInterceptor;
 import com.lzy.okgo.model.HttpHeaders;
 import com.mokee.center.activity.MainActivity;
 import com.mokee.center.model.DonationInfo;
-import com.mokee.center.util.LicenseUtil;
+import com.mokee.center.util.IntentUtil;
 
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Pattern;
@@ -73,7 +73,7 @@ public class MKCenterApplication extends Application implements
             mApp = this;
             if (checkSelfPermission(Manifest.permission.READ_PHONE_STATE) == PackageManager.PERMISSION_GRANTED
                     && checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                LicenseUtil.updateDonationInfo(this);
+                IntentUtil.updateDonationInfo(this);
             }
             initOkGo();
         }
