@@ -17,5 +17,5 @@
 -->
 
 <paths>
-    <external-files-path name="license" path="Documents/" />
+    <files-path name="license" path="." />
 </paths>
