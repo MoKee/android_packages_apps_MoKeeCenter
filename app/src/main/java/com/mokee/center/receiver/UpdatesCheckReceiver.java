@@ -37,7 +37,7 @@ import com.mokee.center.misc.State;
 import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.util.CommonUtil;
 import com.mokee.center.util.FileUtil;
-import com.mokee.center.util.RequestUtil;
+import com.mokee.center.util.OkGoUtil;
 
 import org.json.JSONException;
 
@@ -82,7 +82,7 @@ public class UpdatesCheckReceiver extends BroadcastReceiver {
 
         final File json = FileUtil.getCachedUpdateList(context);
         final File jsonNew = new File(context.getCacheDir().getAbsolutePath() + UUID.randomUUID());
-        RequestUtil.fetchAvailableUpdates(context, new StringCallback() {
+        OkGoUtil.fetchAvailableUpdates(context, new StringCallback() {
             @Override
             public void onSuccess(Response<String> response) {
                 try {
