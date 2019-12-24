@@ -23,7 +23,6 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Environment;
 
 import androidx.core.content.FileProvider;
 
@@ -48,7 +47,7 @@ import static com.mokee.center.misc.Constants.ANDROID_PACKAGE;
 public class LicenseUtil {
 
     public static String getLicenseFilePath(Context context) {
-        return String.join("/", Objects.requireNonNull(context.getExternalFilesDir(Environment.DIRECTORY_DOCUMENTS)).getAbsolutePath(), "mokee.lic");
+        return String.join("/", Objects.requireNonNull(context.getFilesDir()).getAbsolutePath(), "mokee.lic");
     }
 
     public static void copyLicenseFile(Context context, Uri uri) {
