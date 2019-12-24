@@ -26,17 +26,17 @@ import com.lzy.okgo.callback.StringCallback;
 import com.lzy.okgo.model.HttpParams;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
-import com.mokee.center.misc.Constants;
 import com.mokee.center.model.DonationInfo;
 import com.mokee.os.Build;
 import com.mokee.security.License;
+import com.mokee.security.LicenseUtils;
 
 import static com.mokee.center.misc.Constants.AVAILABLE_UPDATES_TAG;
 import static com.mokee.center.misc.Constants.PREF_INCREMENTAL_UPDATES;
 import static com.mokee.center.misc.Constants.PREF_UPDATE_TYPE;
 import static com.mokee.center.misc.Constants.PREF_VERIFIED_UPDATES;
 
-public class RequestUtil {
+public class OkGoUtil {
 
     public static void fetchAvailableUpdates(Context context, StringCallback callback) {
         HttpParams params = buildParams(context);
@@ -74,7 +74,7 @@ public class RequestUtil {
 
     public static HttpParams buildParams(Context context) {
         HttpParams params = new HttpParams();
-        params.put("license", License.loadLicense(LicenseUtil.getLicenseFilePath(context)));
+        params.put("license", License.loadLicense(LicenseUtils.getLicensePath(context)));
         params.put("unique_ids", Build.getUniqueIDS(context));
         return params;
     }
