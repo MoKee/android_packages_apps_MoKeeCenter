@@ -41,7 +41,6 @@ public class Constants extends ConstantsBase {
     public static final String NAV_QQCHAT_URL = "https://bbs.mokeedev.com/t/topic/9551/1";
 
     // License
-    public static final String ANDROID_PACKAGE = "android";
     public static final String LICENSE_PUB_KEY =
             "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwN8FdvNOu5A8yP2Bfb7rk1o6N" +
                     "dXik/DO+Kw6+q7nIZjTh4qpPL3Gyoa7A3MI01gTRKaM+MU2+zkiZND8qoB8EGlF6" +

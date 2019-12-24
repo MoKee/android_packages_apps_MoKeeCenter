@@ -19,7 +19,6 @@ package com.mokee.center.util;
 
 import android.app.Activity;
 import android.content.ActivityNotFoundException;
-import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -32,47 +31,31 @@ import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
 import com.mokee.center.misc.Constants;
 import com.mokee.center.model.DonationInfo;
+import com.mokee.security.License;
+import com.mokee.security.LicenseUtils;
 import com.mokee.utils.DonationUtils;
 
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.StandardCopyOption;
-import java.util.Objects;
 
 import static com.mokee.center.misc.Constants.ACTION_PAYMENT_REQUEST;
-import static com.mokee.center.misc.Constants.ANDROID_PACKAGE;
 
-public class LicenseUtil {
-
-    public static String getLicenseFilePath(Context context) {
-        return String.join("/", Objects.requireNonNull(context.getFilesDir()).getAbsolutePath(), "mokee.lic");
-    }
-
-    public static void copyLicenseFile(Context context, Uri uri) {
-        ContentResolver contentResolver = context.getContentResolver();
-        try {
-            InputStream inputStream = contentResolver.openInputStream(uri);
-            if (inputStream != null) {
-                Files.copy(inputStream, new File(getLicenseFilePath(context)).toPath(), StandardCopyOption.REPLACE_EXISTING);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+public class IntentUtil {
 
     public static void updateDonationInfo(Context context) {
-        String licensePath = getLicenseFilePath(context);
+        String licensePath = LicenseUtils.getLicensePath(context);
         DonationInfo donationInfo = MKCenterApplication.getInstance().getDonationInfo();
         DonationUtils.updateDonationInfo(context, donationInfo, licensePath, Constants.LICENSE_PUB_KEY);
         if (donationInfo.isBasic()) {
-            Intent intent = new Intent(Constants.ACTION_LICENSE_CHANGED);
-            Uri uri = FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".files", new File(licensePath));
-            intent.setDataAndType(uri, context.getContentResolver().getType(uri));
-            intent.setPackage(ANDROID_PACKAGE);
-            context.grantUriPermission(ANDROID_PACKAGE, uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            context.sendBroadcast(intent);
+            License.LICENSE_APPLICATION_LIST.forEach(
+                    pkg -> {
+                        Intent intent = new Intent(Constants.ACTION_LICENSE_CHANGED);
+                        Uri uri = FileProvider.getUriForFile(context, BuildConfig.APPLICATION_ID + ".files", new File(licensePath));
+                        intent.setDataAndType(uri, context.getContentResolver().getType(uri));
+                        intent.setPackage(pkg);
+                        context.grantUriPermission(pkg, uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                        context.sendBroadcast(intent);
+                    }
+            );
         }
     }
 
