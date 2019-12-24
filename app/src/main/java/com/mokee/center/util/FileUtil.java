@@ -37,7 +37,7 @@ public class FileUtil {
     private static final String TAG = "FileUtils";
 
     public static File getDownloadPath() {
-        return new File(Environment.getExternalStorageDirectory(), "mokee_updates");
+        return Environment.getExternalStoragePublicDirectory("mokee_updates");
     }
 
     public static File getCachedUpdateList(Context context) {
