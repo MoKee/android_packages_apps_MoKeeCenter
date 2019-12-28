@@ -96,6 +96,7 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>
     <string name="activity_not_found">Апликација није инсталирана.</string>
+    <string name="browser_not_found">Претраживач није инсталиран.</string>
     <string name="new_updates_channel_title">Нова ажурирања</string>
     <string name="new_updates_found_title">Ново ажурирања система</string>
     <string name="ongoing_channel_title">Преузимања у току</string>
