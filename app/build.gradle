@@ -12,7 +12,7 @@ android {
         minSdkVersion 27
         targetSdkVersion 28
         versionCode gitVersionCode()
-        versionName "2.5.0." + platformVersion
+        versionName "2.5.1." + platformVersion
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
@@ -54,7 +54,7 @@ dependencies {
     compileOnly fileTree(include: ['*.jar'], dir: 'ext-libs')
     compileOnly files('../../../../vendor/mk-priv/build/tools/sdks/cloud/cloud.jar')
     implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation 'androidx.preference:preference:1.1.0'
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
@@ -62,7 +62,7 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.google.firebase:firebase-ads:18.3.0'
     implementation 'com.google.firebase:firebase-core:17.2.1'
-    implementation 'com.google.firebase:firebase-perf:19.0.3'
+    implementation 'com.google.firebase:firebase-perf:19.0.4'
     implementation 'com.lzy.net:okgo:3.0.4'
     implementation 'com.lzy.net:okserver:2.0.5'
     testImplementation 'junit:junit:4.13-beta-3'
