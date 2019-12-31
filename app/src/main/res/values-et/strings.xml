@@ -73,7 +73,7 @@
     <string name="incremental_updates_supported_ota_summary">Salvestab %s võrreldes täieliku ROMiga</string>
     <string name="update_type_title">Uuenduse tüüp</string>
     <string name="update_type_release">Vabasta</string>
-    <string name="update_type_nightly">Nightly</string>
+    <string name="update_type_nightly">Igapäevane</string>
     <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Annetuse rekord</string>
     <string name="donation_record_without_rankings">Te annetasite kokku %1$d CNYd.</string>
@@ -113,7 +113,7 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> vasakule</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Allalaadimine on juba käimas</string>
-    <string name="download_limited_speed">Piiratud kiirusega allalaadimine annetage %d CNY, et nautida täielikku kiirust.</string>
+    <string name="download_limited_mode">Piiratud kiirusega allalaadimine annetage 30 CNY, et nautida täielikku kiirust.</string>
     <string name="install_already_running">Installimine on juba käimas</string>
     <string name="installing_update_notification">Uuenduspaketi installimine</string>
     <string name="installing_update_finished_notification">Uuendus installitud</string>

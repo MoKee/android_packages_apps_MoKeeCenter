@@ -18,7 +18,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">MoKee மையம்</string>
-    <string name="action_next">அடுத்து</string>
+    <string name="action_next">"அடுத்து"</string>
     <string name="action_download">பதிவிறக்கம்</string>
     <string name="menu_restore">மீட்டெடுத்தல்</string>
     <string name="menu_refresh">புதுப்பி</string>
