@@ -17,7 +17,7 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">MoKee merkezi</string>
+    <string name="app_name">MoKee Merkezi</string>
     <string name="navigation_drawer_open">Gezinme çekmecesini aç</string>
     <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
     <string name="nav_header_title">MoKee Open Source</string>
@@ -41,21 +41,21 @@
     <string name="pref_mobile_data_warning">Mobil veri uyarısı</string>
     <string name="nav_main_forum_title">Forum</string>
     <string name="nav_main_guide_title">Kılavuz</string>
-    <string name="nav_main_source_title">Kaynak kodu</string>
-    <string name="nav_main_bug_reports_title">Hata raporu</string>
+    <string name="nav_main_source_title">Kaynak Kodu</string>
+    <string name="nav_main_bug_reports_title">Hata Bildirme</string>
     <string name="nav_main_team_title">Ekip</string>
-    <string name="nav_social_title">Sosyal medya</string>
+    <string name="nav_social_title">Sosyal Medya</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
     <string name="nav_social_qqchat_title">QQ Grup</string>
     <string name="nav_contribute_title">Katkıda bulunun</string>
     <string name="nav_contribute_code_title">Kod</string>
     <string name="nav_contribute_translate_title">Çeviri</string>
-    <string name="mokee_version_title">MoKee sürümü</string>
+    <string name="mokee_version_title">MoKee Versiyonu</string>
     <string name="unique_id_title">Benzersiz kimlik</string>
     <string name="last_update_check_title">Son kontrol</string>
-    <string name="incremental_updates_title">Artırımlı güncellemeler</string>
-    <string name="incremental_updates_summary">İndirme süresinden ve bant genişliğinden tasarruf etmek için artırımlı güncellemeler alın</string>
+    <string name="incremental_updates_title">OTA güncellemeleri</string>
+    <string name="incremental_updates_summary">İndirme süresinden kazanmak ve veri tasarrufu için Ota güncellemeleri alın</string>
     <string name="verified_updates_title">Doğrulanmış güncellemeler</string>
     <string name="verified_updates_summary">Yalnızca diğer kullanıcılar tarafından doğrulanan güncellemeleri görüntüleyin</string>
     <string name="available_updates_title">Mevcut güncellemeler</string>
@@ -69,7 +69,7 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">İndirmenin tam hızıyla kilidini açmak, güncellemeleri doğrulamak ve Google Reklamlarını kaldırmak için %d CNY bağış yapın.</string>
     <string name="unlock_features_request_summary">(%d CNY bağışta bulunulduğunda kullanılabilir)</string>
     <string name="unlock_features_pending_summary">(bağış %1$d CNY %2$d CNY daha bağış yaptıktan sonra ömür boyu kullanılabilir)</string>
-    <string name="incremental_updates_supported_full_summary">Artırımlı güncellemeler %s kaydedebilir</string>
+    <string name="incremental_updates_supported_full_summary">Artan güncellemeler %s kaydedebilir</string>
     <string name="incremental_updates_supported_ota_summary">Tam ROM için karşılaştırıldığında %s kaydeder</string>
     <string name="update_type_title">Güncelleme türü</string>
     <string name="update_type_release">Kararlı</string>
@@ -77,7 +77,7 @@
     <string name="update_type_premium">Özel</string>
     <string name="donation_record_title">Bağış kaydı</string>
     <string name="donation_record_without_rankings">Toplamda %1$d CNY bağışladınız.</string>
-    <string name="donation_record_with_rankings">Toplamda CNY %1$d bağışta bulundun, diğer bağışçılaradan %2$s daha fazla bağışta bulundun, sıralama no. %3$d!</string>
+    <string name="donation_record_with_rankings">Toplamda CNY %1$d bağışta bulundun, diğer bağışçılaradan %2$s daha fazla bağışta bulundun, sıralama no %3$d!</string>
     <string name="donation_record_none">Bağiş yapılmadı</string>
     <string name="donation_restore_success">Bağış kaydı başarıyla geri yüklendi!</string>
     <string name="donation_restore_failure">Lütfen internet bağlantınızı kontrol edip daha sonra tekrar deneyin.</string>
@@ -96,6 +96,9 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>
     <string name="activity_not_found">Uygulama yüklü değil.</string>
+    <string name="browser_not_found">Uygulama yüklü değil.</string>
+    <string name="mokeepay_not_found">Yanlışlıkla MoKeePay uygulamasını sildiniz, lütfen tam güncelleme ile geri yükleyin.</string>
+    <string name="ad_blocker_detected">Görünüşe göre reklam engelliyici kullanıyorsunuz, uygulamamızı beyaz listeye alın.</string>
     <string name="new_updates_channel_title">Yeni güncellemeler</string>
     <string name="new_updates_found_title">Yeni sistem güncellemeleri</string>
     <string name="ongoing_channel_title">Devam eden indirmeler</string>
@@ -109,7 +112,7 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> kaldı</string>
     <string name="download_speed">%1$s, %2$s/sn</string>
     <string name="download_already_running">Bir indirme işlemi devam ediyor</string>
-    <string name="download_limited_speed">Sınırlı hızda indiriliyor, tam hızın tadını çıkarmak için lütfen %d CNY bağışında bulunun.</string>
+    <string name="download_limited_mode">Sınırlı hızda indiriliyor, tam hızın tadını çıkarmak için lütfen 30 CNY bağışında bulunun.</string>
     <string name="install_already_running">Bir yükleme zaten çalışıyor</string>
     <string name="installing_update_notification">Güncelleme paketi yükleniyor</string>
     <string name="installing_update_finished_notification">Güncelleme yüklendi</string>
@@ -122,6 +125,8 @@
     <string name="dialog_battery_low_title">Düşük pil</string>
     <string name="dialog_battery_low_message_pct">Pil seviyesi çok düşük, devam etmek için en az <xliff:g id="percent_discharging">%1$d</xliff:g>%% pil gereklidir, <xliff:g id="percent_charging">%2$d</xliff:g>%% şarj ediliyor.</string>
     <string name="apply_update_dialog_title">Güncellemeyi uygula</string>
+    <string name="apply_update_dialog_message">Şuanda <xliff:g id="update_name">%1$s</xliff:g> ye güncelleneceksiniz. Eğer <xliff:g id="ok">%2$s</xliff:g>\'a basarsanız, güncellemeyi yapmak için cihaz kendini kurtarma modunda yeniden başlatacak.\n\nYama Notları:\n1.Bu güncelleme personel verilerinizi silmicek, fakat güncellemeden önce önemli verilerinizi yedeklemenizi tavsiye ederiz.\n2. Bu özellik uyumlu bir Kurtarma gerektirir veya güncellemelerin manuel olarak yüklenmesi gerekir.\n3. Eğer bir hata olursa \"Forum\" sayfamıza bekleriz.</string>
+    <string name="apply_update_dialog_message_ab">Şuanda <xliff:g id="update_name">%1$s</xliff:g> ye güncelleneceksiniz. Eğer <xliff:g id="ok">%2$s</xliff:g>\'a basarsanız, cihaz indirmeye arkaplan\'da başlayacak.Tamamlandığında kendini yeniden başlatcak.\n\nYama Notları:\n1.Bu güncelleme personel verilerinizi silmeyecek, fakat güncellemeden önce önemli verilerinizi yedeklemenizi tavsiye ederiz.\n2. Eğer sorunuz varsa \"Forum\" sayfamıza bekleriz.</string>
     <string name="no_storage_permissions">Depolama izni gerekiyor</string>
     <string name="no_phone_permissions">Telefon izni gerekiyor</string>
 </resources>

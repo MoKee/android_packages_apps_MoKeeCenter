@@ -18,15 +18,9 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <plurals name="new_updates_found_content">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> обновление доступно для скачивания</item>
-        <item quantity="few"><xliff:g id="count">%d</xliff:g> обновления доступно для скачивания</item>
-        <item quantity="many"><xliff:g id="count">%d</xliff:g> обновлений доступно для скачивания</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> обновлений доступно для скачивания</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> bản cập nhật có sẵn để tải về</item>
     </plurals>
     <plurals name="new_updates_found_additional_count">
-        <item quantity="one">+  ещё <xliff:g id="count">%d</xliff:g></item>
-        <item quantity="few">+  ещё <xliff:g id="count">%d</xliff:g></item>
-        <item quantity="many">+  ещё <xliff:g id="count">%d</xliff:g></item>
-        <item quantity="other">+  ещё <xliff:g id="count">%d</xliff:g></item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> thêm</item>
     </plurals>
 </resources>

@@ -20,7 +20,7 @@
     <string name="app_name">MoKee - Centro</string>
     <string name="navigation_drawer_open">Abrir a gaveta de navegação</string>
     <string name="navigation_drawer_close">Fechar a gaveta de navegação</string>
-    <string name="nav_header_title">MoKee - Código Fonte Aberto</string>
+    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Sistema de operacional Android Comunidade</string>
     <string name="nav_header_desc">Cabeçalho de navegação</string>
     <string name="action_faq">P&amp;R</string>
@@ -108,6 +108,7 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> restante</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Já existe uma transferência em curso</string>
+    <string name="download_limited_mode">A transferir com velocidade limitada, por favor, doe 30 CNY para desfrutar da velocidade total.</string>
     <string name="install_already_running">Uma instalação já está em execução</string>
     <string name="installing_update_notification">A instalar o pacote de atualização</string>
     <string name="installing_update_finished_notification">Atualização instalada</string>
@@ -118,5 +119,6 @@
     <string name="checkbox_mobile_data_warning">Não mostrar novamente</string>
     <string name="dialog_battery_low_title">Bateria fraca</string>
     <string name="apply_update_dialog_title">Instalar atualização</string>
+    <string name="no_storage_permissions">Necessário permissão de armazenamento</string>
     <string name="no_phone_permissions">Necessária a permissão para telefone</string>
 </resources>

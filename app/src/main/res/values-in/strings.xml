@@ -43,7 +43,7 @@
     <string name="nav_main_guide_title">Panduan</string>
     <string name="nav_main_source_title">Kode Sumber</string>
     <string name="nav_main_bug_reports_title">Laporkan Masalah</string>
-    <string name="nav_main_team_title">Tim</string>
+    <string name="nav_main_team_title">Tim - Tim</string>
     <string name="nav_social_title">Media Sosial</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
@@ -77,7 +77,7 @@
     <string name="update_type_premium">Meningkatkan</string>
     <string name="donation_record_title">Catatan donasi</string>
     <string name="donation_record_without_rankings">Anda menyumbangkan total %1$d CNY.</string>
-    <string name="donation_record_with_rankings">Total donasi anda CNY %1$d, lebih dari %2$s dari para donatur global, peringkat No.%3$d!</string>
+    <string name="donation_record_with_rankings">You donated a total of %1$d CNY, more than %2$s of donors globally, rankings No.%3$d!</string>
     <string name="donation_record_none">Anda belum melakukan donasi</string>
     <string name="donation_restore_success">Catatan donasi berhasil dipulihkan!</string>
     <string name="donation_restore_failure">Silakan periksa koneksi internet Anda dan coba lagi nanti.</string>
@@ -96,6 +96,8 @@
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikasi tidak dipasang.</string>
+    <string name="browser_not_found">Peramban tidak terpasang.</string>
+    <string name="chrome_not_found">Silahkan Install Google Chrome dahulu.</string>
     <string name="new_updates_channel_title">Pembaruan baru</string>
     <string name="new_updates_found_title">Pembaruan sistem baru</string>
     <string name="ongoing_channel_title">Pengunduhan sedang berlangsung</string>
@@ -106,15 +108,16 @@
     <string name="download_completed_notification">Unduhan selesai</string>
     <string name="download_verification_failed_notification">Gagal memverifikasi paket pembaruan, silakan unduh lagi</string>
     <string name="download_file_not_found_notification">Tautan unduhan kedaluwarsa, klik tombol Refresh dan coba lagi</string>
-    <string name="download_remaining"><xliff:g example="3 menit" id="duration">%s</xliff:g> tersisa</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> tersisa</string>
     <string name="download_speed">%1$s, %2$s/d</string>
     <string name="download_already_running">Unduhan sedang berjalan</string>
-    <string name="download_limited_speed">Mengunduh dengan kecepatan terbatas, silahkan donasi untuk menikmati kecepatan penuh.</string>
+    <string name="download_limited_mode">Mengunduh dengan kecepatan terbatas, silakan menyumbang 30 CNY untuk menikmati kecepatan penuh.</string>
     <string name="install_already_running">Instalasi sudah berjalan</string>
     <string name="installing_update_notification">Menginstal paket pembaruan</string>
     <string name="installing_update_finished_notification">Pembaruan diinstal</string>
     <string name="finalizing_package_notification">Menyelesaikan instalasi paket</string>
     <string name="preparing_ota_first_boot_notification">Mempersiapkan boot pertama</string>
+    <string name="dialog_prepare_zip_message_notification">Preliminary update preparation</string>
     <string name="update_on_mobile_data_title">Peringatan</string>
     <string name="update_on_mobile_data_message">Anda akan mengunduh paket pembaruan menggunakan data seluler yang kemungkinan akan menyebabkan penggunaan data tinggi. Apakah Anda ingin melanjutkan?</string>
     <string name="checkbox_mobile_data_warning">Jangan tampilkan lagi</string>

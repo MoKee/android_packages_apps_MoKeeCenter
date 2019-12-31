@@ -21,7 +21,7 @@
     <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
     <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
     <string name="nav_header_title">MoKee OpenSource</string>
-    <string name="nav_header_subtitle">Asop</string>
+    <string name="nav_header_subtitle">ASOP</string>
     <string name="nav_header_desc">Barre de navigation</string>
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Solution</string>
@@ -29,7 +29,7 @@
     <string name="action_pause">Pause</string>
     <string name="action_resume">Reprendre</string>
     <string name="action_download">Télécharger</string>
-    <string name="action_reboot">Redémarrer</string>
+    <string name="action_reboot">Redémarrage</string>
     <string name="menu_preferences">Préférences</string>
     <string name="menu_restore">Restaurer</string>
     <string name="menu_donation">Don</string>
@@ -38,7 +38,7 @@
     <string name="menu_delete_update">Supprimer</string>
     <string name="pref_auto_delete_updates">Supprimer les mises à jour une fois installées ou devenues obsolètes</string>
     <string name="pref_ab_perf_mode">Privilégier le processus de mise à jour</string>
-    <string name="pref_mobile_data_warning">Alerter lors de l\'utilisation ded données mobiles</string>
+    <string name="pref_mobile_data_warning">Alerter lors de l\'utilisation de données mobiles</string>
     <string name="nav_main_forum_title">Forum</string>
     <string name="nav_main_guide_title">Guide</string>
     <string name="nav_main_source_title">Code source</string>
@@ -63,17 +63,17 @@
     <string name="pending_available_updates_intro">À la recherche de mises à jour disponibles</string>
     <string name="unlock_features_title">Fonctionnalités de déverrouillage</string>
     <string name="unlock_features_plan_a_title">Faire un don de %d CNY pour débloquer les mises à jour incrémentielles et télécharger à pleine vitesse.</string>
-    <string name="unlock_features_plan_a_abdevice_title">Faire un don %d CNY pour débloquer le téléchargement à pleine vitesse.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Faire un don de %d CNY pour débloquer le téléchargement à pleine vitesse.</string>
     <string name="unlock_features_plan_b_title">Donner %d CYN pour des mise à jour vérifiée et enlever la publicité.</string>
     <string name="unlock_features_plan_unlimited_title">Faire un don de %d CNY pour déverrouiller les mises à jour incrémentielles, télécharger à pleine vitesse, vérifiées mises à jour et supprimer Google Ads.</string>
-    <string name="unlock_features_plan_unlimited_abdevice_title">Faire un don de %d CNY pour déverrouiller le téléchargement à pleine vitesse, vérifiées mises à jour et supprimer les Google Ads (pub).</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Faire un don de %d CNY pour déverrouiller le téléchargement à pleine vitesse, les mises à jour vérifiées et supprimer les \"Google Ads\".</string>
     <string name="unlock_features_request_summary">(proposé après un don de %d CNY)</string>
     <string name="unlock_features_pending_summary">(don effectué de %1$d CNY, proposé à vie après un don d’encore %2$d CNY)</string>
     <string name="incremental_updates_supported_full_summary">Les mises à jour incrémentielles peuvent économiser %s</string>
     <string name="incremental_updates_supported_ota_summary">Permet d’économiser %s par rapport à la ROM complète</string>
     <string name="update_type_title">Type de mise à jour</string>
     <string name="update_type_release">Release</string>
-    <string name="update_type_nightly">Nightly</string>
+    <string name="update_type_nightly">Béta</string>
     <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Enregistrement de la donation</string>
     <string name="donation_record_without_rankings">Vous avez fait don d’un total de %1$d CNY.</string>
@@ -113,12 +113,12 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="durée">%s</xliff:g> gauche</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Un téléchargement est déjà en cours</string>
-    <string name="download_limited_speed">Téléchargement à vitesse limitée, faites un don de %d CNY pour profiter de la vitesse max.</string>
-    <string name="install_already_running">Une istallation est déjà en cours</string>
-    <string name="installing_update_notification">Installation du paquet de mise à jour en cours</string>
+    <string name="download_limited_mode">Téléchargement à vitesse limitée, faites un don pour profiter pleinement de la vitesse.</string>
+    <string name="install_already_running">Une installation est déjà en cours</string>
+    <string name="installing_update_notification">Installation du paquet de mise à jour</string>
     <string name="installing_update_finished_notification">Mise à jour installée</string>
     <string name="finalizing_package_notification">Finalisation de l’installation du paquet</string>
-    <string name="preparing_ota_first_boot_notification">Préparation pour le premier démarrage</string>
+    <string name="preparing_ota_first_boot_notification">Préparation du premier démarrage</string>
     <string name="dialog_prepare_zip_message_notification">Préparation de la mise à jour préliminaire</string>
     <string name="update_on_mobile_data_title">Avertissement</string>
     <string name="update_on_mobile_data_message">Vous allez télécharger une mise à jour en utilisant les données mobiles et beaucoup de data va donc être utilisée. Voulez-vous continuer ?</string>
