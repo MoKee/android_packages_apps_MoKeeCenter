@@ -72,6 +72,7 @@
     <string name="update_type_title">Updatetyp</string>
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Nightly</string>
+    <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Spenden-Anzeige</string>
     <string name="donation_record_without_rankings">Sie haben insgesamt %1$d CNY gespendet.</string>
     <string name="donation_record_with_rankings">Sie spendeten eine Summe von %1$d CNY, mehr als %2$s Spender weltweit und rangieren damit auf Platz Nummer %3$d!</string>
@@ -93,6 +94,7 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal (EUR)</string>
     <string name="activity_not_found">App ist nicht installiert.</string>
+    <string name="browser_not_found">Browser ist nicht installiert.</string>
     <string name="new_updates_channel_title">Neue Updates</string>
     <string name="new_updates_found_title">Neue Systemaktualisierung gefunden</string>
     <string name="ongoing_channel_title">Laufende Downloads</string>
@@ -103,9 +105,11 @@
     <string name="download_completed_notification">Download abgeschlossen</string>
     <string name="download_verification_failed_notification">Update package überprüfung fehlgeschlagen, bitte wiederhole den Download</string>
     <string name="download_file_not_found_notification">Download link abgelaufen, drück bitte den Refresh button und versuche es erneut</string>
-    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> links</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> verbleibend</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Es ist bereits ein Download aktiv</string>
+    <string name="install_already_running">Eine installation wird bereits durchgeführt</string>
+    <string name="installing_update_finished_notification">Update installiert</string>
     <string name="update_on_mobile_data_title">Achtung</string>
     <string name="update_on_mobile_data_message">Sie sind dabei ein Software-Update über das Mobilfunknetz herunterzuladen, was zu einem hohen Datenverbrauch führen kann. Möchten Sie fortfahren?</string>
     <string name="checkbox_mobile_data_warning">Nicht wieder anzeigen</string>
