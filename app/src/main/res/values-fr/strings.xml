@@ -36,6 +36,7 @@
     <string name="menu_unlock_features">Débloquer les fonctionnalités</string>
     <string name="menu_refresh">Actualiser</string>
     <string name="menu_delete_update">Supprimer</string>
+    <string name="menu_open_link">Ouvrir dans le navigateur</string>
     <string name="pref_auto_delete_updates">Supprimer les mises à jour une fois installées ou devenues obsolètes</string>
     <string name="pref_ab_perf_mode">Privilégier le processus de mise à jour</string>
     <string name="pref_mobile_data_warning">Alerter lors de l\'utilisation ded données mobiles</string>
@@ -60,6 +61,7 @@
     <string name="verified_updates_summary">N’afficher que les mises à jour vérifiées par d’autres utilisateurs</string>
     <string name="available_updates_title">Mises à jour proposées</string>
     <string name="no_available_updates_intro">La dernière vérification n’a trouvé aucune mise à jour. Pour vérifier manuellement les nouvelles mises à jour, utiliser le bouton Actualiser.</string>
+    <string name="out_of_date_updates_intro">La version actuelle est obsolète pour appliquer les mises à jour incrémentielles. Pour mettre à jour, veuillez télécharger la ROM complètement.</string>
     <string name="pending_available_updates_intro">À la recherche de mises à jour disponibles</string>
     <string name="unlock_features_title">Fonctionnalités de déverrouillage</string>
     <string name="unlock_features_plan_a_title">Faire un don de %d CNY pour débloquer les mises à jour incrémentielles et télécharger à pleine vitesse.</string>

@@ -36,6 +36,7 @@
     <string name="menu_unlock_features">Lukusta lahti funktsioonid</string>
     <string name="menu_refresh">Värskenda</string>
     <string name="menu_delete_update">Kustuta</string>
+    <string name="menu_open_link">Ava brauseris</string>
     <string name="pref_auto_delete_updates">Kustutage värskendused, kui need on installitud või aegunud</string>
     <string name="pref_ab_perf_mode">Eelista uuendusprotsessi</string>
     <string name="pref_mobile_data_warning">Hoiatus, kui kasutate mobiilandmeid</string>
@@ -60,6 +61,7 @@
     <string name="verified_updates_summary">Kuva ainult värskendusi, mida on kinnitanud teised kasutajad</string>
     <string name="available_updates_title">Saadaval uuendused</string>
     <string name="no_available_updates_intro">Viimane kontroll ei leidnud saadaval olevaid värskendusi. Uute värskenduste käsitsi kontrollimiseks kasutage nuppu Värskenda.</string>
+    <string name="out_of_date_updates_intro">Järkjärguliste värskenduste rakendamiseks on praegune versioon aegunud. Värskendamiseks laadige selle asemel alla täielik ROM.</string>
     <string name="pending_available_updates_intro">Otsid saadaolevad värskendused</string>
     <string name="unlock_features_title">Lukusta lahti funktsioonid</string>
     <string name="unlock_features_plan_a_title">Anneta %d CNY, et avada täiendavaid värskendusi ja laadida alla täiskiirusel.</string>
