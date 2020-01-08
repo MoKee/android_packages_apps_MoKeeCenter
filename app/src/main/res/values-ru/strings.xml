@@ -36,6 +36,7 @@
     <string name="menu_unlock_features">Разблок. все функции</string>
     <string name="menu_refresh">Обновить</string>
     <string name="menu_delete_update">Удалить</string>
+    <string name="menu_open_link">Открыть с помощью браузера</string>
     <string name="pref_auto_delete_updates">Удаление обновлений после установки или устаревании</string>
     <string name="pref_ab_perf_mode">Приоритет процесса обновления</string>
     <string name="pref_mobile_data_warning">Предупреждать об использовании мобильных данных</string>
@@ -60,6 +61,7 @@
     <string name="verified_updates_summary">Показывать только проверенные другими пользователями обновления</string>
     <string name="available_updates_title">Доступные обновления</string>
     <string name="no_available_updates_intro">Во время последней проверки не найдено доступных обновлений. Чтобы вручную проверить доступные обновления, используйте кнопку \"Обновить\".</string>
+    <string name="out_of_date_updates_intro">Текущая версия устарела для применения ОТА-обновлений. Для обновления, пожалуйста, загрузите полную версию вместо этого.</string>
     <string name="pending_available_updates_intro">Поиск доступных обновлений</string>
     <string name="unlock_features_title">Разблок. все функции</string>
     <string name="unlock_features_plan_a_title">Пожертвуйте %d юаней, чтобы разблокировать обновления по воздуху (ОТА) и возможность скачивания на полной скорости.</string>
