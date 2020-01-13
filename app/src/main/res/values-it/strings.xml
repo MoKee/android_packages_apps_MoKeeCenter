@@ -29,13 +29,14 @@
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Riprendi</string>
     <string name="action_download">Download</string>
-    <string name="action_reboot">Riavvio</string>
+    <string name="action_reboot">Riavvia</string>
     <string name="menu_preferences">Preferenze</string>
     <string name="menu_restore">Ripristina</string>
     <string name="menu_donation">Donazione</string>
     <string name="menu_unlock_features">Sblocca funzioni</string>
     <string name="menu_refresh">Aggiorna</string>
     <string name="menu_delete_update">Elimina</string>
+    <string name="menu_open_link">Apri nel Browser</string>
     <string name="pref_auto_delete_updates">Eliminare gli aggiornamenti quando installati o deprecati</string>
     <string name="pref_ab_perf_mode">Dare priorità al processo di aggiornamento</string>
     <string name="pref_mobile_data_warning">Avviso se su dati mobili</string>
@@ -60,6 +61,7 @@
     <string name="verified_updates_summary">Visualizzare solo gli aggiornamenti che sono stati verificati da altri utenti</string>
     <string name="available_updates_title">Aggiornamenti disponibili</string>
     <string name="no_available_updates_intro">L\'ultimo controllo non ha trovato aggiornamenti disponibili. Per verificare manualmente nuovi aggiornamenti, usa il pulsante Aggiorna.</string>
+    <string name="out_of_date_updates_intro">La versione corrente non è aggiornata per applicare gli aggiornamenti incrementali. Per aggiornare, scarica invece la ROM completa.</string>
     <string name="pending_available_updates_intro">Cercando aggiornamenti disponibili</string>
     <string name="unlock_features_title">Sblocca altre funzioni</string>
     <string name="unlock_features_plan_a_title">Dona %d CNY per sbloccare aggiornamenti incrementali e scaricare a tutta velocità.</string>
@@ -96,6 +98,10 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">L\'app non è installata.</string>
+    <string name="browser_not_found">Browser non installato.</string>
+    <string name="chrome_not_found">Si prega di installare Google Chrome prima.</string>
+    <string name="mokeepay_not_found">Hai eliminato accidentalmente l\'app MoKeePay, per favore ripristina tramite aggiornamento completo.</string>
+    <string name="ad_blocker_detected">Sembra che tu stia utilizzando un ad blocker, per favore metti in whitelist la nostra app.</string>
     <string name="new_updates_channel_title">Nuovi aggiornamenti</string>
     <string name="new_updates_found_title">Nuovi aggiornamenti del sistema</string>
     <string name="ongoing_channel_title">Download in corso</string>
@@ -122,6 +128,8 @@
     <string name="dialog_battery_low_title">Batteria scarica</string>
     <string name="dialog_battery_low_message_pct">Il livello della batteria è troppo basso, è necessario almeno <xliff:g id="percent_discharging">%1$d</xliff:g>%% di batteria per continuare, <xliff:g id="percent_charging">%2$d</xliff:g>%% se in carica.</string>
     <string name="apply_update_dialog_title">Applica l\'aggiornamento</string>
+    <string name="apply_update_dialog_message">Stai per effettuare l\'aggiornamento a <xliff:g id="update_name">%1$s</xliff:g>. Se premi <xliff:g id="ok">%2$s</xliff:g>, il dispositivo si riavvierà in modalità recovery per installare l\'aggiornamento.\n\nNote di aggiornamento:\n1. Questo aggiornamento non cancellerà i tuoi dati personali, ma ti raccomandiamo di eseguire un backup di qualsiasi dato importante prima di aggiornare.\n2. Questa funzione richiede una recovery compatibile, altrimenti gli aggiornamenti dovranno essere installati manualmente.\n3. Se riscontri qualche problema, puoi andare al \"Forum\".</string>
+    <string name="apply_update_dialog_message_ab">Stai per effettuare l\'aggiornamento a <xliff:g id="update_name">%1$s</xliff:g>. Se premi <xliff:g id="ok">%2$s</xliff:g>, il dispositivo avvierà l\'installazione in background. Una volta completato, ti verrà richiesto di riavviare.\n\nNote di aggiornamento:\n1. Questo aggiornamento non cancellerà i tuoi dati personali, ma ti consigliamo di fare un backup di qualsiasi dato importante prima di aggiornare.\n2. Se riscontri qualche problema, puoi andare al \"Forum\".</string>
     <string name="no_storage_permissions">L\'autorizzazione Archiviazione è necessaria</string>
     <string name="no_phone_permissions">L\'autorizzazione Telefono è necessaria</string>
 </resources>

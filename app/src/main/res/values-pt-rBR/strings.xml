@@ -36,6 +36,7 @@
     <string name="menu_unlock_features">Desbloquear recursos</string>
     <string name="menu_refresh">Recarregar</string>
     <string name="menu_delete_update">Excluir</string>
+    <string name="menu_open_link">Abrir no navegador</string>
     <string name="pref_auto_delete_updates">Excluir atualizações quando instalado ou obsoleto</string>
     <string name="pref_ab_perf_mode">Priorizar o processo de atualização</string>
     <string name="pref_mobile_data_warning">Aviso se em dados móveis</string>
@@ -60,6 +61,7 @@
     <string name="verified_updates_summary">Exibir somente as atualizações que são verificadas por outros usuários</string>
     <string name="available_updates_title">Atualizações disponíveis</string>
     <string name="no_available_updates_intro">A última verificação não encontrou nenhuma atualização. Para verificar manualmente por novas atualizações, use o botão Recarregar.</string>
+    <string name="out_of_date_updates_intro">A versão atual está desatualizada para aplicar atualizações incrementais. Para atualizar, faça o download da ROM completa.</string>
     <string name="pending_available_updates_intro">A procurar atualizações disponíveis</string>
     <string name="unlock_features_title">Desbloquear recursos</string>
     <string name="unlock_features_plan_a_title">Doe %d CNY para desbloquear as atualizações incrementais e baixar a toda velocidade.</string>
@@ -97,6 +99,7 @@
     <string name="paypal">Paypal</string>
     <string name="activity_not_found">O aplicativo não está instalado.</string>
     <string name="browser_not_found">Navegador não instalado.</string>
+    <string name="chrome_not_found">Por favor, instale o Google Chrome primeiro.</string>
     <string name="mokeepay_not_found">Você apagou acidentalmente o app MoKeePay, por favor restaure por meio de uma atualização completa.</string>
     <string name="ad_blocker_detected">Parece que você está usando um bloqueador de anúncios, por favor, adicione a lista branca nosso aplicativo.</string>
     <string name="new_updates_channel_title">Novas atualizações</string>
