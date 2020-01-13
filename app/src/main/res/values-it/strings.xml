@@ -29,7 +29,7 @@
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Riprendi</string>
     <string name="action_download">Download</string>
-    <string name="action_reboot">Riavvio</string>
+    <string name="action_reboot">Riavvia</string>
     <string name="menu_preferences">Preferenze</string>
     <string name="menu_restore">Ripristina</string>
     <string name="menu_donation">Donazione</string>
