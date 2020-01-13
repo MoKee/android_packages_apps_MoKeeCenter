@@ -36,6 +36,7 @@
     <string name="menu_unlock_features">Feloldási lehetőségek</string>
     <string name="menu_refresh">Frissités</string>
     <string name="menu_delete_update">Törlés</string>
+    <string name="menu_open_link">Megnyitás Böngészőben</string>
     <string name="pref_auto_delete_updates">Frissítések törlése telepítés vagy elavulás után</string>
     <string name="pref_ab_perf_mode">Frissítési folyamat fontossági sorrendbe állítása</string>
     <string name="pref_mobile_data_warning">Figyelmeztetés, ha mobiladatot használ</string>
@@ -60,6 +61,7 @@
     <string name="verified_updates_summary">Csak azokat a frissítéseket jeleníti meg, amiket más felhasználók ellenőriztek</string>
     <string name="available_updates_title">Elérhető frissítések</string>
     <string name="no_available_updates_intro">Az utolsó ellenőrzés nem talált elérhető frissítést. A manuális ellenőrizéshez használja a Frissítés gombot.</string>
+    <string name="out_of_date_updates_intro">Az Ön jelenleg telepített verziója olyan régi, hogy már nem lehet növekményes frissítést használni. Csak teljes ROM letöltésével frissíthet.</string>
     <string name="pending_available_updates_intro">Az elérhető frissítések keresése</string>
     <string name="unlock_features_title">Feloldási lehetőségek</string>
     <string name="unlock_features_plan_a_title">%d kínai jüan adományozásával megnyílik Ön előtt a növekményes frissítések teljes sebességű letöltésének lehetősége.</string>
