@@ -20,7 +20,6 @@
     <string name="app_name">Mokee centrum</string>
     <string name="navigation_drawer_open">Otvoriť navigačný panel</string>
     <string name="navigation_drawer_close">Zavrieť navigačný panel</string>
-    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Komunitný operačný systém Android</string>
     <string name="nav_header_desc">Hlavička navigačného panela</string>
     <string name="action_faq">Q&amp;A</string>

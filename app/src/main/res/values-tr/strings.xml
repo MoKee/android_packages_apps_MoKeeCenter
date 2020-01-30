@@ -17,10 +17,9 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">MoKee merkezi</string>
+    <string name="app_name">MoKee Merkezi</string>
     <string name="navigation_drawer_open">Gezinme çekmecesini aç</string>
     <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
-    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Android Topluluğu İşletim Sistemi</string>
     <string name="nav_header_desc">Gezinme başlığı</string>
     <string name="action_faq">Soru ve Cevap</string>
@@ -28,7 +27,7 @@
     <string name="action_next">Sonraki</string>
     <string name="action_pause">Duraklat</string>
     <string name="action_resume">Devam et</string>
-    <string name="action_download">İndir</string>
+    <string name="action_download">İndirme</string>
     <string name="action_reboot">Yeniden başlat</string>
     <string name="menu_preferences">Tercihler</string>
     <string name="menu_restore">Geri yükle</string>
@@ -41,21 +40,21 @@
     <string name="pref_mobile_data_warning">Mobil veri uyarısı</string>
     <string name="nav_main_forum_title">Forum</string>
     <string name="nav_main_guide_title">Kılavuz</string>
-    <string name="nav_main_source_title">Kaynak kodu</string>
-    <string name="nav_main_bug_reports_title">Hata raporu</string>
+    <string name="nav_main_source_title">Kaynak Kodu</string>
+    <string name="nav_main_bug_reports_title">Hata Bildirme</string>
     <string name="nav_main_team_title">Ekip</string>
-    <string name="nav_social_title">Sosyal medya</string>
+    <string name="nav_social_title">Sosyal Medya</string>
     <string name="nav_social_telegram_title">Telegram</string>
     <string name="nav_social_weibo_title">Weibo</string>
     <string name="nav_social_qqchat_title">QQ Grup</string>
     <string name="nav_contribute_title">Katkıda bulunun</string>
     <string name="nav_contribute_code_title">Kod</string>
     <string name="nav_contribute_translate_title">Çeviri</string>
-    <string name="mokee_version_title">MoKee sürümü</string>
+    <string name="mokee_version_title">MoKee Versiyonu</string>
     <string name="unique_id_title">Benzersiz kimlik</string>
     <string name="last_update_check_title">Son kontrol</string>
-    <string name="incremental_updates_title">Artırımlı güncellemeler</string>
-    <string name="incremental_updates_summary">İndirme süresinden ve bant genişliğinden tasarruf etmek için artırımlı güncellemeler alın</string>
+    <string name="incremental_updates_title">OTA güncellemeleri</string>
+    <string name="incremental_updates_summary">İndirme süresinden kazanmak ve veri tasarrufu için Ota güncellemeleri alın</string>
     <string name="verified_updates_title">Doğrulanmış güncellemeler</string>
     <string name="verified_updates_summary">Yalnızca diğer kullanıcılar tarafından doğrulanan güncellemeleri görüntüleyin</string>
     <string name="available_updates_title">Mevcut güncellemeler</string>
@@ -69,7 +68,7 @@
     <string name="unlock_features_plan_unlimited_abdevice_title">İndirmenin tam hızıyla kilidini açmak, güncellemeleri doğrulamak ve Google Reklamlarını kaldırmak için %d CNY bağış yapın.</string>
     <string name="unlock_features_request_summary">(%d CNY bağışta bulunulduğunda kullanılabilir)</string>
     <string name="unlock_features_pending_summary">(bağış %1$d CNY %2$d CNY daha bağış yaptıktan sonra ömür boyu kullanılabilir)</string>
-    <string name="incremental_updates_supported_full_summary">Artırımlı güncellemeler %s kaydedebilir</string>
+    <string name="incremental_updates_supported_full_summary">Artan güncellemeler %s kaydedebilir</string>
     <string name="incremental_updates_supported_ota_summary">Tam ROM için karşılaştırıldığında %s kaydeder</string>
     <string name="update_type_title">Güncelleme türü</string>
     <string name="update_type_release">Kararlı</string>
@@ -77,7 +76,7 @@
     <string name="update_type_premium">Özel</string>
     <string name="donation_record_title">Bağış kaydı</string>
     <string name="donation_record_without_rankings">Toplamda %1$d CNY bağışladınız.</string>
-    <string name="donation_record_with_rankings">Toplamda CNY %1$d bağışta bulundun, diğer bağışçılaradan %2$s daha fazla bağışta bulundun, sıralama no. %3$d!</string>
+    <string name="donation_record_with_rankings">Toplamda CNY %1$d bağışta bulundun, diğer bağışçılaradan %2$s daha fazla bağışta bulundun, sıralama no %3$d!</string>
     <string name="donation_record_none">Bağiş yapılmadı</string>
     <string name="donation_restore_success">Bağış kaydı başarıyla geri yüklendi!</string>
     <string name="donation_restore_failure">Lütfen internet bağlantınızı kontrol edip daha sonra tekrar deneyin.</string>

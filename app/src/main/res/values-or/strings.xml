@@ -17,6 +17,6 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="action_next">ପରବର୍ତ୍ତୀ</string>
+    <string name="action_next">"ପରବର୍ତ୍ତୀ"</string>
     <string name="unknown">ଅଜ୍ଞାତ</string>
 </resources>

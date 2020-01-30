@@ -35,7 +35,7 @@
     <string name="donation_payment_success">உங்கள் நன்கொடை நன்றி!</string>
     <string name="no_updates_found">புதிய மேம்படுத்தல்கள் இல்லை</string>
     <string name="updates_check_failed">மேம்படுத்தல் சோதனை தோல்வியுற்றது. உங்கள் இணைய இணைப்பைச் சரிபார்த்து, பிறகு மீண்டும் முயலவும்.</string>
-    <string name="unknown">அறியாத</string>
+    <string name="unknown">தெரியாதது</string>
     <string name="never">ஒருபோதுமில்லை</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>

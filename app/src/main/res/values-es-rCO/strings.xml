@@ -26,7 +26,7 @@
     <string name="action_solution">Solución</string>
     <string name="action_next">Siguiente</string>
     <string name="action_pause">Pausa</string>
-    <string name="action_resume">Continuar</string>
+    <string name="action_resume">Reanudar</string>
     <string name="action_download">Descargar</string>
     <string name="action_reboot">Reiniciar</string>
     <string name="menu_preferences">Ajustes</string>

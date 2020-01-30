@@ -20,7 +20,7 @@
     <string name="app_name">Mokee Senter</string>
     <string name="action_next">Neste</string>
     <string name="action_resume">Fortsett</string>
-    <string name="action_download">Last ned</string>
+    <string name="action_download">Download-modus</string>
     <string name="menu_restore">Gjenopprett</string>
     <string name="menu_refresh">Oppdater</string>
     <string name="menu_delete_update">Slett</string>

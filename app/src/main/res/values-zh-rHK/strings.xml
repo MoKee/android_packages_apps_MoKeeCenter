@@ -24,7 +24,7 @@
     <string name="nav_header_desc">導航標頭</string>
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">解決方案</string>
-    <string name="action_next">下一首</string>
+    <string name="action_next">下一步</string>
     <string name="action_pause">暫停</string>
     <string name="action_resume">恢復</string>
     <string name="action_download">下載</string>
@@ -92,7 +92,7 @@
     <string name="updates_check_failed">更新檢查失敗。請檢查你的網絡連綫並於稍後重試。</string>
     <string name="text_copied">文字已複製到剪貼簿</string>
     <string name="unknown">不明</string>
-    <string name="never">永不</string>
+    <string name="never">Noway</string>
     <string name="alipay">支付寶</string>
     <string name="wechat">微信</string>
     <string name="paypal">PayPal</string>

@@ -20,12 +20,11 @@
     <string name="app_name">Centro Mokee</string>
     <string name="navigation_drawer_open">Apri navigation drawer</string>
     <string name="navigation_drawer_close">Chiudi navigation drawer</string>
-    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Sistema operativo della comunità Android</string>
     <string name="nav_header_desc">Intestazione di navigazione</string>
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Soluzione</string>
-    <string name="action_next">Successivo</string>
+    <string name="action_next">Avanti</string>
     <string name="action_pause">Pausa</string>
     <string name="action_resume">Riprendi</string>
     <string name="action_download">Download</string>
@@ -92,7 +91,7 @@
     <string name="no_updates_found">Nessun nuovo aggiornamento trovato</string>
     <string name="updates_check_failed">Controllo degli aggiornamenti non riuscito. Controlla la connessione ad internet e riprova.</string>
     <string name="text_copied">Testo copiato negli appunti.</string>
-    <string name="unknown">Sconosciuto</string>
+    <string name="unknown">Sconosciuta</string>
     <string name="never">Mai</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
