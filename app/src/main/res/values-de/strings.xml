@@ -20,7 +20,6 @@
     <string name="app_name">MoKee Center</string>
     <string name="navigation_drawer_open">Öffne Navigations-Menü</string>
     <string name="navigation_drawer_close">Schließe Navigations-Menü</string>
-    <string name="nav_header_title">MoKee OpenSource</string>
     <string name="nav_header_subtitle">Android Community Betriebssystem</string>
     <string name="nav_header_desc">Navigationsleiste</string>
     <string name="action_faq">Q&amp;A</string>
@@ -28,7 +27,7 @@
     <string name="action_next">Weiter</string>
     <string name="action_pause">Anhalten</string>
     <string name="action_resume">Fortsetzen</string>
-    <string name="action_download">Herunterladen</string>
+    <string name="action_download">Download-Modus</string>
     <string name="action_reboot">Neustart</string>
     <string name="menu_preferences">Vorlieben</string>
     <string name="menu_restore">Wiederherstellen</string>
@@ -93,7 +92,7 @@
     <string name="updates_check_failed">Die Suche nach Updates ist fehlgeschlagen. Bitte überprüfen Sie Ihre Internetverbindung und versuchen es erneut.</string>
     <string name="text_copied">Text in Zwischenablage kopiert.</string>
     <string name="unknown">Unbekannt</string>
-    <string name="never">Niemals</string>
+    <string name="never">Nie</string>
     <string name="alipay">AliPay (CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal (EUR)</string>
@@ -112,7 +111,7 @@
     <string name="download_completed_notification">Download abgeschlossen</string>
     <string name="download_verification_failed_notification">Update package überprüfung fehlgeschlagen, bitte wiederhole den Download</string>
     <string name="download_file_not_found_notification">Download link abgelaufen, drück bitte den Refresh button und versuche es erneut</string>
-    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> verbleibend</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> links</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Es ist bereits ein Download aktiv</string>
     <string name="download_limited_speed">Herunterladen mit limitierter Geschwindigkeit, bitte spende %d CNY um die volle Geschwindigkeit zu genießen.</string>

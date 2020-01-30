@@ -32,7 +32,7 @@
     <string name="donation_record_none">İanə verməmisiniz</string>
     <string name="donation_payment_success">İanəniz üçün təşəkkürlər!</string>
     <string name="no_updates_found">Yeniləmə tapılmadı</string>
-    <string name="unknown">Bilinməyən</string>
+    <string name="unknown">Naməlum</string>
     <string name="never">Heç vaxt</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
