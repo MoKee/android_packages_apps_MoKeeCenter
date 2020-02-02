@@ -17,7 +17,7 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="action_next">"આગામી"</string>
+    <string name="action_next">આગામી</string>
     <string name="action_pause">થોભાવો</string>
     <string name="action_resume">ફરી શરૂ કરો</string>
     <string name="unknown">અજાણ્યો</string>
