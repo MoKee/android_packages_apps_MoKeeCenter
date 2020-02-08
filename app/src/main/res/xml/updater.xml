@@ -38,8 +38,7 @@
             android:icon="@drawable/ic_pref_update_type"
             android:key="update_type"
             android:title="@string/update_type_title"
-            android:negativeButtonText="@null"
-            app:useSimpleSummaryProvider="true" />
+            android:negativeButtonText="@null" />
         <com.mokee.center.preference.IncrementalUpdatesPreference
             android:disableDependentsState="true"
             android:icon="@drawable/ic_pref_incremental_updates"

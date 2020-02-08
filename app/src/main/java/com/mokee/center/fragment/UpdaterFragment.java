@@ -198,6 +198,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
                     mIncrementalUpdatesPreference.refreshPreference();
                 }
                 mVerifiedUpdatesPreference.refreshPreference();
+                mUpdateTypePreference.refreshPreference();
                 mUpdatesCategory.setInterstitialAd();
                 updateFeatureStatus();
                 break;
@@ -295,7 +296,6 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             loadUpdatesList(updates, manualRefresh);
             mMainPrefs.edit().remove(PREF_OUT_OF_DATE)
                     .putLong(PREF_LAST_UPDATE_CHECK, System.currentTimeMillis()).apply();
-            ((LastUpdateCheckPreference) findPreference(PREF_LAST_UPDATE_CHECK)).updateSummary();
             if (json.exists() && CommonUtil.checkForNewUpdates(json, jsonNew)) {
                 UpdatesCheckReceiver.updateRepeatingUpdatesCheck(getContext());
             }
@@ -415,6 +415,8 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             jsonFile.delete();
             mMainPrefs.edit().putString(PREF_UPDATE_TYPE, newValue.toString()).apply();
             downloadUpdatesList(true);
+            int index = mUpdateTypePreference.findIndexOfValue(newValue.toString());
+            preference.setSummary(mUpdateTypePreference.getEntries()[index]);
             return true;
         }
         return false;
