@@ -29,7 +29,6 @@
     <string name="no_updates_found">कोई नया अपडेट नहीं मिला</string>
     <string name="updates_check_failed">अद्यतन जांच असफल रही कृपया अपना इंटरनेट कनेक्शन जांचें और बाद में फिर से प्रयास करें।</string>
     <string name="unknown">अज्ञात</string>
-    <string name="never">कभी नहीं</string>
     <string name="activity_not_found">ऐप स्थापित नहीं है।</string>
     <string name="download_already_running">एक डाउनलोड पहले से ही चल रहा है</string>
 </resources>

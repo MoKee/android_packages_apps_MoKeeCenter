@@ -36,7 +36,6 @@
     <string name="no_updates_found">ບໍ່ພົບອັບເດດໃໝ່</string>
     <string name="updates_check_failed">ກວດສອບອັບເດດລົ້ມເຫລວ. ກະລຸນາກວດສອບອິນເຕີເນັດ ແລະ ລອງໃຫມ່.</string>
     <string name="unknown">ບໍ່ຮູ້ຈັກ</string>
-    <string name="never">ບໍ່ເຄີຍ</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

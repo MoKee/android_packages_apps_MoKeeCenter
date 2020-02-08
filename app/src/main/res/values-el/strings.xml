@@ -44,7 +44,6 @@
     <string name="no_updates_found">Δεν βρέθηκαν ενημερώσεις</string>
     <string name="updates_check_failed">Ο έλεγχος για ενημερώσεις απέτυχε. Παρακαλώ ελέγξτε την σύνδεσή σας στο διαδίκτυο και προσπαθήστε αργότερα.</string>
     <string name="unknown">Άγνωστο</string>
-    <string name="never">Ποτέ</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Η εφαρμογή δεν είναι εγκατεστημένη.</string>

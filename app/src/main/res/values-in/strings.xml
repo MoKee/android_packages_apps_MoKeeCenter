@@ -53,7 +53,6 @@
     <string name="nav_contribute_translate_title">Terjemahan</string>
     <string name="mokee_version_title">Versi MoKee</string>
     <string name="unique_id_title">ID Unik</string>
-    <string name="last_update_check_title">Pemeriksaan terakhir</string>
     <string name="incremental_updates_title">Pembaruan Incremental</string>
     <string name="incremental_updates_summary">Dapatkan pembaruan Incremental untuk menghemat waktu unduh dan bandwidth</string>
     <string name="verified_updates_title">Pembaruan diverifikasi</string>
@@ -91,7 +90,6 @@
     <string name="updates_check_failed">Pemeriksaan pembaruan gagal. Silakan periksa koneksi internet anda dan coba lagi nanti.</string>
     <string name="text_copied">Teks disalin ke clipboard.</string>
     <string name="unknown">Tidak dikenal</string>
-    <string name="never">Jangan pernah</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>

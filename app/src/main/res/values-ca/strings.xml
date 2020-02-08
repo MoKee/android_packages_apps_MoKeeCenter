@@ -39,7 +39,6 @@
     <string name="no_updates_found">No s\'han trobat noves actualitzacions</string>
     <string name="updates_check_failed">Ha fallat la comprovació d\'actualitzacions. Si us plau, verifiqueu la connexió d\'internet i comproveu una altra vegada.</string>
     <string name="unknown">Desconegut</string>
-    <string name="never">Mai</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="paypal">PayPal(USD)</string>
     <string name="activity_not_found">L\'app no està instal·lada.</string>

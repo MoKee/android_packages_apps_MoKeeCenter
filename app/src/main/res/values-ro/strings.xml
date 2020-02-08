@@ -50,7 +50,6 @@
     <string name="no_updates_found">Nu s-au găsit actualizări noi</string>
     <string name="updates_check_failed">Verificarea actualizării a eșuat. Vă rugăm să verificați conexiunea la internet și să încercați din nou mai târziu.</string>
     <string name="unknown">Necunoscută</string>
-    <string name="never">Niciodată</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

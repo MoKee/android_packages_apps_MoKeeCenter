@@ -48,7 +48,6 @@
     <string name="no_updates_found">Walang nakita na mga bagong update</string>
     <string name="updates_check_failed">Nabigo ang pag-check ng update. Mangyaring suriin ang iyong koneksyon sa internet at subukan muli sa ibang pagkakataon.</string>
     <string name="unknown">Hindi alam</string>
-    <string name="never">Hindi kailanman</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

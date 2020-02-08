@@ -57,7 +57,6 @@
     <string name="no_updates_found">Новыя абнаўленнi не знойдзены</string>
     <string name="updates_check_failed">Праверка абнаўленняў не ўдалася. Калі ласка, праверце ваша інтэрнэт-злучэнне і паспрабуйце ізноў пазней.</string>
     <string name="unknown">Невядомы</string>
-    <string name="never">Ніколі</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>

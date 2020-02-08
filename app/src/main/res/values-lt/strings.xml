@@ -28,7 +28,6 @@
     <string name="update_type_nightly">MoKee naktinė versija</string>
     <string name="donation_payment_success">Dėkojame jums už paramą!</string>
     <string name="unknown">Nežinoma</string>
-    <string name="never">Niekada</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Programa neįdiegta.</string>

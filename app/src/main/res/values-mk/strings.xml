@@ -19,6 +19,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="action_next">Следно</string>
     <string name="menu_delete_update">Избриши</string>
-    <string name="never">Никогаш</string>
     <string name="activity_not_found">Апликацијата не е инсталирана.</string>
 </resources>

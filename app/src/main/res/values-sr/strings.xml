@@ -52,7 +52,6 @@
     <string name="nav_contribute_translate_title">Превод</string>
     <string name="mokee_version_title">MoKee верзија</string>
     <string name="unique_id_title">Јединствени ИД</string>
-    <string name="last_update_check_title">Последња провера</string>
     <string name="incremental_updates_title">ОТА надоградње</string>
     <string name="incremental_updates_summary">Преузмите постепену надоградњу ради уштеде времена и података</string>
     <string name="verified_updates_title">Верификација анжурирања</string>
@@ -90,7 +89,6 @@
     <string name="updates_check_failed">Провера за ажурирања није успела. Провери своју интернет везу и покушај поново касније.</string>
     <string name="text_copied">Текст је копиран у клиборд.</string>
     <string name="unknown">Непознато</string>
-    <string name="never">Никад</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>

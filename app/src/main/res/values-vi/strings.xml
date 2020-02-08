@@ -52,7 +52,6 @@
     <string name="nav_contribute_translate_title">Dịch thuật</string>
     <string name="mokee_version_title">Phiên bản MoKee</string>
     <string name="unique_id_title">Mã số ID</string>
-    <string name="last_update_check_title">Kiểm tra lần cuối</string>
     <string name="incremental_updates_title">Cập nhật bổ sung</string>
     <string name="incremental_updates_summary">Lấy bản cập nhật bổ sung để tiết kiệm thời gian tải và băng thông</string>
     <string name="verified_updates_title">Cập nhật đã được xác thực</string>
@@ -77,7 +76,6 @@
     <string name="no_updates_found">Không tìm thấy bản cập nhật mới</string>
     <string name="updates_check_failed">Kiểm tra Cập Nhật không thành công. Xin vui lòng kiểm tra kết nối internet của bạn và thử lại sau.</string>
     <string name="unknown">Không xác định</string>
-    <string name="never">Không bao giờ</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>
