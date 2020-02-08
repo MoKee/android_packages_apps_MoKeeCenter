@@ -38,7 +38,6 @@
     <string name="menu_preferences">Preferences</string>
     <string name="menu_restore">Restore</string>
     <string name="menu_donation">Donation</string>
-    <string name="menu_unlock_features">Unlock Features</string>
     <string name="menu_refresh">Refresh</string>
     <string name="menu_delete_update">Delete</string>
     <string name="menu_open_link">Open in Browser</string>
@@ -77,7 +76,6 @@
     <string name="pending_available_updates_intro">Looking for available updates</string>
 
     <!-- Unlock Features -->
-    <string name="unlock_features_title">Unlock features</string>
     <string name="unlock_features_plan_a_title">Donate %d CNY to unlock incremental updates and download at full speed.</string>
     <string name="unlock_features_plan_a_abdevice_title">Donate %d CNY to unlock download at full speed.</string>
     <string name="unlock_features_plan_b_title">Donate %d CNY for verified updates and remove Google Ads.</string>

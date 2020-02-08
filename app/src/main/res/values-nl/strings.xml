@@ -36,7 +36,6 @@
     <string name="verified_updates_summary">Alleen updates die worden geverifieerd door andere gebruikers worden weergegeven</string>
     <string name="available_updates_title">Beschikbare updates</string>
     <string name="no_available_updates_intro">De laatste keer zijn er geen updates gevonden. Om handmatig te controleren, tikt u op \'Vernieuwen\'.</string>
-    <string name="unlock_features_title">Onderdelen ontgrendelen</string>
     <string name="unlock_features_request_summary">(Beschikbaar na %d CNY gedoneerd te hebben)</string>
     <string name="unlock_features_pending_summary">(%1$d CNY gedoneerd, beschikbaar voor altijd na %2$d CNY)</string>
     <string name="incremental_updates_supported_full_summary">Incrementele updates kunnen %s opslaan</string>

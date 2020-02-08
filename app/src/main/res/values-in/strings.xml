@@ -33,7 +33,6 @@
     <string name="menu_preferences">Preferensi</string>
     <string name="menu_restore">Pulihkan</string>
     <string name="menu_donation">Donasi</string>
-    <string name="menu_unlock_features">Buka fitur</string>
     <string name="menu_refresh">Segarkan</string>
     <string name="menu_delete_update">Hapus</string>
     <string name="menu_open_link">Buka di Browser</string>
@@ -61,7 +60,6 @@
     <string name="available_updates_title">Pembaruan tersedia</string>
     <string name="no_available_updates_intro">Pemeriksaan tidak menemukan adanya pembaruan tersedia. Untuk memeriksa secara manual pembaruan terkini, gunakan tombol Segarkan.</string>
     <string name="pending_available_updates_intro">Mencari pembaruan yang tersedia</string>
-    <string name="unlock_features_title">Buka fitur</string>
     <string name="unlock_features_plan_a_title">Donasi %d CNY untuk membuka pembaruan tambahan dan mengunduh dengan kecepatan penuh.</string>
     <string name="unlock_features_plan_a_abdevice_title">Donasikan% d CNY untuk membuka kunci unduhan dengan kecepatan penuh.</string>
     <string name="unlock_features_plan_b_title">Donasikan %d CNY untuk pembaruan terverifikasi dan hapus Iklan Google.</string>

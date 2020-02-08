@@ -33,7 +33,6 @@
     <string name="menu_preferences">Preferenze</string>
     <string name="menu_restore">Ripristina</string>
     <string name="menu_donation">Donazione</string>
-    <string name="menu_unlock_features">Sblocca funzioni</string>
     <string name="menu_refresh">Aggiorna</string>
     <string name="menu_delete_update">Elimina</string>
     <string name="menu_open_link">Apri nel Browser</string>
@@ -62,7 +61,6 @@
     <string name="no_available_updates_intro">L\'ultimo controllo non ha trovato aggiornamenti disponibili. Per verificare manualmente nuovi aggiornamenti, usa il pulsante Aggiorna.</string>
     <string name="out_of_date_updates_intro">La versione corrente non è aggiornata per applicare gli aggiornamenti incrementali. Per aggiornare, scarica invece la ROM completa.</string>
     <string name="pending_available_updates_intro">Cercando aggiornamenti disponibili</string>
-    <string name="unlock_features_title">Sblocca altre funzioni</string>
     <string name="unlock_features_plan_a_title">Dona %d CNY per sbloccare aggiornamenti incrementali e scaricare a tutta velocità.</string>
     <string name="unlock_features_plan_a_abdevice_title">Dona %d CNY per sbloccare il download alla massima velocità.</string>
     <string name="unlock_features_plan_b_title">Dona %d CNY per gli aggiornamenti verificati e rimuovere Annunci Google.</string>

@@ -33,7 +33,6 @@
     <string name="menu_preferences">首选项</string>
     <string name="menu_restore">恢复授权</string>
     <string name="menu_donation">捐赠</string>
-    <string name="menu_unlock_features">功能解锁</string>
     <string name="menu_refresh">刷新</string>
     <string name="menu_delete_update">删除</string>
     <string name="menu_open_link">在浏览器中打开</string>
@@ -62,7 +61,6 @@
     <string name="no_available_updates_intro">最后一次检测并未找到可用的更新，请点击右上角的刷新按钮尝试手动检查更新。</string>
     <string name="out_of_date_updates_intro">当前版本已过时，超出了增量更新的支持范围，请下载完整包更新。</string>
     <string name="pending_available_updates_intro">正在查找可用的更新</string>
-    <string name="unlock_features_title">功能解锁</string>
     <string name="unlock_features_plan_a_title">捐赠 %d 元，解锁增量更新和高速下载。</string>
     <string name="unlock_features_plan_a_abdevice_title">捐赠 %d 元，解锁高速下载。</string>
     <string name="unlock_features_plan_b_title">捐赠 %d 元，解锁放心刷™并移除谷歌广告。</string>

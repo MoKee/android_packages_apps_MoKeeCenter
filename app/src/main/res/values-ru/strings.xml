@@ -33,7 +33,6 @@
     <string name="menu_preferences">Настройки</string>
     <string name="menu_restore">Восстановление</string>
     <string name="menu_donation">Пожертвование</string>
-    <string name="menu_unlock_features">Разблок. все функции</string>
     <string name="menu_refresh">Обновить</string>
     <string name="menu_delete_update">Удалить</string>
     <string name="menu_open_link">Открыть с помощью браузера</string>
@@ -62,7 +61,6 @@
     <string name="no_available_updates_intro">Во время последней проверки не найдено доступных обновлений. Чтобы вручную проверить доступные обновления, используйте кнопку \"Обновить\".</string>
     <string name="out_of_date_updates_intro">Текущая версия устарела для применения ОТА-обновлений. Для обновления, пожалуйста, загрузите полную версию вместо этого.</string>
     <string name="pending_available_updates_intro">Поиск доступных обновлений</string>
-    <string name="unlock_features_title">Разблок. все функции</string>
     <string name="unlock_features_plan_a_title">Пожертвуйте %d юаней, чтобы разблокировать обновления по воздуху (ОТА) и возможность скачивания на полной скорости.</string>
     <string name="unlock_features_plan_a_abdevice_title">Пожертвуйте %d юаней чтобы разблокировать загрузку с полной скоростью.</string>
     <string name="unlock_features_plan_b_title">Пожертвуйте %d юаней для доступа к проверенным обновлениям и отключению рекламы Google.</string>

@@ -32,7 +32,6 @@
     <string name="menu_preferences">Tùy chỉnh</string>
     <string name="menu_restore">Khôi phục</string>
     <string name="menu_donation">Đóng góp</string>
-    <string name="menu_unlock_features">Mở khóa tính năng</string>
     <string name="menu_refresh">Tải lại</string>
     <string name="menu_delete_update">Xóa</string>
     <string name="pref_auto_delete_updates">Xóa bản cập nhật sau khi cài đặt</string>
@@ -59,7 +58,6 @@
     <string name="available_updates_title">Bản cập nhật khả dụng</string>
     <string name="no_available_updates_intro">Lần kiểm tra cuối cùng không tìm thấy bất kỳ bản cập nhật nào. Để kiểm tra cập nhật mới một cách thủ công, sử dụng nút Tải lại.</string>
     <string name="pending_available_updates_intro">Kiểm tra cập nhật có sẵn</string>
-    <string name="unlock_features_title">Mở khóa tất cả tính năng</string>
     <string name="unlock_features_request_summary">(có sẵn sau khi tặng %d CNY)</string>
     <string name="unlock_features_pending_summary">(tặng %1$d CNY, có sẵn cho đời sau đợt quyên góp %2$d CNY hơn)</string>
     <string name="incremental_updates_supported_full_summary">Gia tăng Cập Nhật có thể tiết kiệm %s</string>
