@@ -36,7 +36,6 @@
     <string name="no_updates_found">No new updates found</string>
     <string name="updates_check_failed">The update check failed. Please check your internet connection and try again later.</string>
     <string name="unknown">Unknown</string>
-    <string name="never">Never</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="new_updates_channel_title">New updates</string>

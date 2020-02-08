@@ -33,7 +33,6 @@
     <string name="donation_payment_success">İanəniz üçün təşəkkürlər!</string>
     <string name="no_updates_found">Yeniləmə tapılmadı</string>
     <string name="unknown">Bilinməyən</string>
-    <string name="never">Heç vaxt</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Tətbiq quraşdırılmayıb.</string>

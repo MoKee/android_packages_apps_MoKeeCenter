@@ -54,7 +54,6 @@
     <string name="nav_contribute_translate_title">Fordítás</string>
     <string name="mokee_version_title">MoKee verzió</string>
     <string name="unique_id_title">Egyedi azonosító</string>
-    <string name="last_update_check_title">Utolsó ellenőrzés</string>
     <string name="incremental_updates_title">Növekményes frissítések</string>
     <string name="incremental_updates_summary">Növekményes frissítések használata a letöltési idő és sávszélesség kímélése érdekében</string>
     <string name="verified_updates_title">Ellenőrzött frissitések</string>
@@ -93,7 +92,6 @@
     <string name="updates_check_failed">Nem sikerült a frissítések ellenőrzése. Ellenőrizze internetkapcsolatot, majd próbálja újra.</string>
     <string name="text_copied">A szöveg a vágólapra másolódott.</string>
     <string name="unknown">Ismeretlen</string>
-    <string name="never">Soha</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

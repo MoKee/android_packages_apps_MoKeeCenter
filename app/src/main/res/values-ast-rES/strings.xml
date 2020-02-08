@@ -23,7 +23,6 @@
     <string name="action_pause">Posar</string>
     <string name="action_resume">Siguir</string>
     <string name="menu_delete_update">Desaniciar</string>
-    <string name="never">Enxamás</string>
     <string name="update_on_mobile_data_title">Alvertencia</string>
     <string name="checkbox_mobile_data_warning">Nun amosar de nueves</string>
 </resources>

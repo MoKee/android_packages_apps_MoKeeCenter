@@ -54,7 +54,6 @@
     <string name="nav_contribute_translate_title">Překlady</string>
     <string name="mokee_version_title">Verze MoKee</string>
     <string name="unique_id_title">Jedinečné ID</string>
-    <string name="last_update_check_title">Poslední kontrola</string>
     <string name="incremental_updates_title">Přírůstkové aktualizace</string>
     <string name="incremental_updates_summary">Stahovat OTA aktualizace, aby jste ušetřili data a čas</string>
     <string name="verified_updates_title">Ověřené aktualizace</string>
@@ -92,7 +91,6 @@
     <string name="updates_check_failed">Kontrola aktualizací selhala. Zkontrolujte připojení k internetu a zkuste to znovu.</string>
     <string name="text_copied">Text zkopírován do schránky.</string>
     <string name="unknown">Neznámá</string>
-    <string name="never">Nikdy</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

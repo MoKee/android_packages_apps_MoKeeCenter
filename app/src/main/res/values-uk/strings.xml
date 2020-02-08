@@ -65,7 +65,6 @@
     <string name="no_updates_found">Оновлень не знайдено</string>
     <string name="updates_check_failed">Не вдалося перевірити оновлення. Будь-ласка, перевірте підключення до Інтернету і повторіть спробу пізніше.</string>
     <string name="unknown">Невідомо</string>
-    <string name="never">Ніколи</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

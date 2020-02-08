@@ -42,7 +42,6 @@
     <string name="no_updates_found">Inga nya uppdateringar hittades</string>
     <string name="updates_check_failed">Sökningen efter uppdateringar misslyckades. Var god kontrollera din internetanslutning och försök igen senare.</string>
     <string name="unknown">Okänd</string>
-    <string name="never">Aldrig</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

@@ -23,7 +23,6 @@
     <string name="action_download">Deskarga</string>
     <string name="menu_delete_update">Ezabatu</string>
     <string name="unknown">Ezezaguna</string>
-    <string name="never">Inoiz ez</string>
     <string name="activity_not_found">Aplikazioa instalatu gabe dago.</string>
     <string name="update_on_mobile_data_title">Abisua</string>
     <string name="checkbox_mobile_data_warning">Ez erakutsi berriro</string>

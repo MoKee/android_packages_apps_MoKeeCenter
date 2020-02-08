@@ -32,7 +32,6 @@
     <string name="donation_record_none">မလှူဒါန်းရသေးပါ။</string>
     <string name="donation_payment_success">လှူဒါန်းမှု့အတွက် ကျေးဇူးတင်ပါတယ်။</string>
     <string name="unknown">မသိ</string>
-    <string name="never">ဘယ်တော့မှ</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">အက်ပ်မထည့်သွင်းထားပါ</string>

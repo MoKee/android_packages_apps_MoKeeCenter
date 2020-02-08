@@ -29,7 +29,6 @@
     <string name="update_type_release">রিলিজ</string>
     <string name="update_type_nightly">Nightly</string>
     <string name="unknown">Unknown</string>
-    <string name="never">Never</string>
     <string name="activity_not_found">অ্যাপ্লিকেশান ইনস্টল করা নেই৷</string>
     <string name="update_on_mobile_data_title">সতর্কতা</string>
 </resources>
