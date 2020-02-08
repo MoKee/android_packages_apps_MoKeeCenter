@@ -36,7 +36,6 @@
     <string name="verified_updates_summary">Afişează doar actualizări care sunt verificate de către alţi utilizatori</string>
     <string name="available_updates_title">Actualizari disponibile</string>
     <string name="no_available_updates_intro">Ultima verificare nu a găsit actualizări disponibile. Pentru a verifica manual existenţa actualizărilor noi, utilizaţi butonul Reîmprospătare.</string>
-    <string name="unlock_features_title">Deblocați caracteristici</string>
     <string name="unlock_features_request_summary">(disponibil după donarea %d CNY)</string>
     <string name="unlock_features_pending_summary">(donat %1$d CNY, disponibil pentru toată durata de viaţă după donarea cu %2$d CNY mai mult)</string>
     <string name="incremental_updates_supported_full_summary">Actualizările incrementale pot salva %s</string>

@@ -110,7 +110,7 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
             }
         });
 
-        String title = donationInfo.isAdvanced() ? getContext().getString(R.string.donation_dialog_title) : getContext().getString(R.string.unlock_features_title);
+        String title = getContext().getString(R.string.donation_dialog_title);
         setTitle(title);
         setView(donationView);
         setNeutralButton(R.string.action_faq, (dialog, which) -> {

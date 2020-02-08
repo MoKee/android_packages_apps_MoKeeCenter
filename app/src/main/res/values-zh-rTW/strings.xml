@@ -33,7 +33,6 @@
     <string name="menu_preferences">偏好設定</string>
     <string name="menu_restore">恢複</string>
     <string name="menu_donation">捐贈</string>
-    <string name="menu_unlock_features">解鎖功能</string>
     <string name="menu_refresh">重新整理</string>
     <string name="menu_delete_update">刪除</string>
     <string name="menu_open_link">以瀏覽器開啟</string>
@@ -62,7 +61,6 @@
     <string name="no_available_updates_intro">上次檢查並未發現任何可用的更新。輕觸重新整理按鈕即可手動檢查新的更新。</string>
     <string name="out_of_date_updates_intro">目前版本已過期，無法套用增量更新。請下載完整包更新。</string>
     <string name="pending_available_updates_intro">查找可用的更新</string>
-    <string name="unlock_features_title">功能解鎖</string>
     <string name="unlock_features_plan_a_title">捐贈 %d 人民幣，以解鎖增量更新並全速下載。</string>
     <string name="unlock_features_plan_a_abdevice_title">捐贈 %d 人民幣於解鎖全速下載。</string>
     <string name="unlock_features_plan_b_title">捐贈 %d 元人民幣，開啟驗證更新和去除 Google 廣告</string>

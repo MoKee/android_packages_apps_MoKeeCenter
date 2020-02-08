@@ -32,7 +32,6 @@
     <string name="menu_preferences">Preferências</string>
     <string name="menu_restore">Restaurar</string>
     <string name="menu_donation">Doação</string>
-    <string name="menu_unlock_features">Desbloquear recursos</string>
     <string name="menu_refresh">Recarregar</string>
     <string name="menu_delete_update">Excluir</string>
     <string name="menu_open_link">Abrir no navegador</string>
@@ -61,7 +60,6 @@
     <string name="no_available_updates_intro">A última verificação não encontrou nenhuma atualização. Para verificar manualmente por novas atualizações, use o botão Recarregar.</string>
     <string name="out_of_date_updates_intro">A versão atual está desatualizada para aplicar atualizações incrementais. Para atualizar, faça o download da ROM completa.</string>
     <string name="pending_available_updates_intro">Procurando por atualizações disponíveis</string>
-    <string name="unlock_features_title">Desbloquear recursos</string>
     <string name="unlock_features_plan_a_title">Doe %d CNY para desbloquear as atualizações incrementais e baixar a toda velocidade.</string>
     <string name="unlock_features_plan_a_abdevice_title">Doe %d CNY para desbloquear o download a toda velocidade.</string>
     <string name="unlock_features_plan_b_title">Doe %d CNY para atualizações verificadas e para remover publicidade.</string>

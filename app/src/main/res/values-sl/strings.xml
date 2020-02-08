@@ -32,7 +32,6 @@
     <string name="menu_preferences">Nastavitve</string>
     <string name="menu_restore">Obnovi</string>
     <string name="menu_donation">Prispevek</string>
-    <string name="menu_unlock_features">Odklep funkcij</string>
     <string name="menu_refresh">Osveži</string>
     <string name="menu_delete_update">Izbriši</string>
     <string name="pref_auto_delete_updates">Izbriši nameščene ali opuščene posodobitve</string>
@@ -59,7 +58,6 @@
     <string name="available_updates_title">Posodobitve na voljo</string>
     <string name="no_available_updates_intro">Ob zadnjem preverjanju ni bilo najdenih novih posodobitev. Da ročno preverite za posodobitve, uporabite gumb Osveži.</string>
     <string name="pending_available_updates_intro">Preverjam, če so na voljo posodobitve</string>
-    <string name="unlock_features_title">Odklenete funkcije</string>
     <string name="unlock_features_plan_a_title">Prispevajte %d CNY za odklep delnih posobobitv in prenos s polno hitrostjo.</string>
     <string name="unlock_features_plan_b_title">Prispevajte %d CNY za odklep preverjenih posodobitv in odstranjene Google oglase.</string>
     <string name="unlock_features_plan_unlimited_title">Prispevajte %d CNY za odklep delnih posobobitv, prenos s polno hitrostjo, preverjene posodobitve in odstranjeni Google oglasi.</string>

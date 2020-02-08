@@ -32,7 +32,6 @@
     <string name="menu_preferences">Tercihler</string>
     <string name="menu_restore">Geri yükle</string>
     <string name="menu_donation">Bağış</string>
-    <string name="menu_unlock_features">Özelliklerin kilidini aç</string>
     <string name="menu_refresh">Yenile</string>
     <string name="menu_delete_update">Sil</string>
     <string name="pref_auto_delete_updates">Yüklendiğinde veya kullanımdan kaldırıldığında güncellemeleri sil</string>
@@ -59,7 +58,6 @@
     <string name="available_updates_title">Mevcut güncellemeler</string>
     <string name="no_available_updates_intro">Son kontrolde güncelleme bulunamadı. Yeni güncellemeleri elle kontrol etmek için Yenile tuşunu kullanın.</string>
     <string name="pending_available_updates_intro">Mevcut güncellemeleri arıyor</string>
-    <string name="unlock_features_title">Özelliklerin kilidini aç</string>
     <string name="unlock_features_plan_a_title">Artımlı güncellemeleri açmak ve tam hızda indirmek için %d CNY\'ye bağış yapın.</string>
     <string name="unlock_features_plan_a_abdevice_title">İndirme kilidini açmak için %d CNY bağış yapın.</string>
     <string name="unlock_features_plan_b_title">Doğrulanmış güncellemeler için %d CNY\'ye bağış yapın ve Google reklamlarını kaldırın.</string>

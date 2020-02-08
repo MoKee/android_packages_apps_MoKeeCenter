@@ -33,7 +33,6 @@
     <string name="menu_preferences">Beállítások</string>
     <string name="menu_restore">Visszaállítás</string>
     <string name="menu_donation">Adományozás</string>
-    <string name="menu_unlock_features">Feloldási lehetőségek</string>
     <string name="menu_refresh">Frissités</string>
     <string name="menu_delete_update">Törlés</string>
     <string name="menu_open_link">Megnyitás Böngészőben</string>
@@ -62,7 +61,6 @@
     <string name="no_available_updates_intro">Az utolsó ellenőrzés nem talált elérhető frissítést. A manuális ellenőrizéshez használja a Frissítés gombot.</string>
     <string name="out_of_date_updates_intro">Az Ön jelenleg telepített verziója olyan régi, hogy már nem lehet növekményes frissítést használni. Csak teljes ROM letöltésével frissíthet.</string>
     <string name="pending_available_updates_intro">Az elérhető frissítések keresése</string>
-    <string name="unlock_features_title">Feloldási lehetőségek</string>
     <string name="unlock_features_plan_a_title">%d kínai jüan adományozásával megnyílik Ön előtt a növekményes frissítések teljes sebességű letöltésének lehetősége.</string>
     <string name="unlock_features_plan_a_abdevice_title">Adományozzon %d jüant, hogy teljes sebességgel tölthessen le.</string>
     <string name="unlock_features_plan_b_title">%d kínai jüan adományozásával ellenőrzött frissítésekhez juthat és eltűnnek a Google Reklámok.</string>

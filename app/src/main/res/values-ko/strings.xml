@@ -36,7 +36,6 @@
     <string name="verified_updates_summary">다른 사용자들에 의해 검증된 업데이트만 표시</string>
     <string name="available_updates_title">사용 가능한 업데이트</string>
     <string name="no_available_updates_intro">마지막으로 확인했을때, 업데이트를 찾지 못했습니다. 수동으로 새 업데이트를 확인하려면 새로고침 버튼을 누르세요.</string>
-    <string name="unlock_features_title">기능 잠금해제</string>
     <string name="unlock_features_request_summary">(%d CNY 후원 후 사용가능)</string>
     <string name="unlock_features_pending_summary">(%1$d CNY 후원됨, %2$d CNY 더 후원하면 평생 사용가능)</string>
     <string name="incremental_updates_supported_full_summary">증분 업데이트는 %s를(을) 절약할 수 있습니다</string>
