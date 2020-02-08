@@ -33,7 +33,6 @@
     <string name="menu_preferences">Preferências</string>
     <string name="menu_restore">Restaurar</string>
     <string name="menu_donation">Donativo</string>
-    <string name="menu_unlock_features">Funcionalidade de desbloqueio</string>
     <string name="menu_refresh">Refrescar</string>
     <string name="menu_delete_update">Eliminar</string>
     <string name="pref_auto_delete_updates">Excluir as atualizações quando instalado ou substituído</string>
@@ -60,7 +59,6 @@
     <string name="available_updates_title">Actualizações Disponíveis</string>
     <string name="no_available_updates_intro">A última verificação não encontrou atualizações disponíveis. Para verificar manualmente, utilize o botão Procurar.</string>
     <string name="pending_available_updates_intro">A procurar atualizações disponíveis</string>
-    <string name="unlock_features_title">Funcionalidade de desbloqueio</string>
     <string name="unlock_features_plan_a_title">Doar %d CNY para desbloquear as atualizações incrementais e transferir a toda velocidade.</string>
     <string name="unlock_features_plan_a_abdevice_title">Doar %d CNY para desbloquear a transferência a toda a velocidade.</string>
     <string name="unlock_features_plan_b_title">Doe %d CNY para atualizações verificadas e para remover publicidade.</string>

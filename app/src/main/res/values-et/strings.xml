@@ -33,7 +33,6 @@
     <string name="menu_preferences">Eelistused</string>
     <string name="menu_restore">Taasta</string>
     <string name="menu_donation">Annetus</string>
-    <string name="menu_unlock_features">Lukusta lahti funktsioonid</string>
     <string name="menu_refresh">Värskenda</string>
     <string name="menu_delete_update">Kustuta</string>
     <string name="pref_auto_delete_updates">Kustutage värskendused, kui need on installitud või aegunud</string>
@@ -60,7 +59,6 @@
     <string name="available_updates_title">Saadaval uuendused</string>
     <string name="no_available_updates_intro">Viimane kontroll ei leidnud saadaval olevaid värskendusi. Uute värskenduste käsitsi kontrollimiseks kasutage nuppu Värskenda.</string>
     <string name="pending_available_updates_intro">Otsid saadaolevad värskendused</string>
-    <string name="unlock_features_title">Lukusta lahti funktsioonid</string>
     <string name="unlock_features_plan_a_title">Anneta %d CNY, et avada täiendavaid värskendusi ja laadida alla täiskiirusel.</string>
     <string name="unlock_features_plan_a_abdevice_title">Anneta %d CNY, et laadida alla täis kiirusel.</string>
     <string name="unlock_features_plan_b_title">Anneta %d CNY kinnitatud värskenduste ja Google\'i reklaamide eemaldamiseks.</string>

@@ -33,7 +33,6 @@
     <string name="menu_preferences">ಆದ್ಯತೆಗಳು</string>
     <string name="menu_restore">ಮರುಸಂಗ್ರಹಿಸಿ</string>
     <string name="menu_donation">ಕಾಣಿಕೆ</string>
-    <string name="menu_unlock_features">ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ</string>
     <string name="menu_refresh">ಹೊಸತಾಗಿಸಿ</string>
     <string name="menu_delete_update">ಅಳಿಸು</string>
     <string name="pref_auto_delete_updates">ನವೀಕರಣಗಳನ್ನು ಅಳವಡಿಸಿದಾಗ ಅಥವಾ ತಡೆಹಿಡಿದಾಗ ಅಳಿಸು</string>
@@ -60,7 +59,6 @@
     <string name="available_updates_title">ಲಭ್ಯವಿರುವ ನವೀಕರಣಗಳು</string>
     <string name="no_available_updates_intro">ಕೊನೆಯ ಪರೀಕ್ಷೆಯು ಯಾವುದೇ ಲಭ್ಯವಿರುವ ನವೀಕರಣಗಳನ್ನು ಕಂಡು ಹಿಡಿದಿಲ್ಲ. ದೈಹಿಕವಾಗಿ ನೀವು ಹೊಸ ನವೀಕರಣಗಳನ್ನು ಪರೀಕ್ಷಿಸಲು ಮರುಹೊಸದಾಗಿಸಿ ಗುಂಡಿ ಬಳಸಿ.</string>
     <string name="pending_available_updates_intro">ಲಭ್ಯವಿರುವ ನವೀಕರಣಗಳಿಗೆ ಹುಡುಕಲಾಗುತ್ತಿದೆ</string>
-    <string name="unlock_features_title">ವೈಶಿಷ್ಟ್ಯಗಳನ್ನು ಅನ್ಲಾಕ್ ಮಾಡಿ</string>
     <string name="unlock_features_plan_a_title">ಹೆಚ್ಚಿನ ನವೀಕರಣಗಳನ್ನು ಅನ್ ಲಾಕ್ ಮಾಡಲು ಮತ್ತು ಪೂರ್ಣ ವೇಗದಲ್ಲಿ ಡೌನ್ಲೋಡ್ ಮಾಡಲು %d CNY ಕಾಣಿಕೆ ನೀಡಿ.</string>
     <string name="unlock_features_plan_a_abdevice_title">ಪೂರ್ಣವೇಗದೊಂದಿಗಿನ ಡೌನ್ಲೋಡ್‌ನ ಲಾಕ್‌ ತೆಗೆಯಲು %d CNY ಕಾಣಿಕೆ ನೀಡಿ.</string>
     <string name="unlock_features_plan_b_title">ಪರಿಶೀಲಿಸಿದ ನವೀಕರಣಗಳಿಗೆ ಮತ್ತು ಜಾಹೀರಾತುಗಳನ್ನು ತೆಗೆಯಲು %d CNY ಕಾಣಿಕೆ ನೀಡಿ.</string>

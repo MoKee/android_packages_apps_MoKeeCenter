@@ -33,7 +33,6 @@
     <string name="menu_preferences">Подешавања</string>
     <string name="menu_restore">Увези</string>
     <string name="menu_donation">Донације</string>
-    <string name="menu_unlock_features">Откључај све опције</string>
     <string name="menu_refresh">Оcвежи</string>
     <string name="menu_delete_update">Избриши</string>
     <string name="pref_auto_delete_updates">Обришите ажурирања када су инсталирана или застарела</string>
@@ -60,7 +59,6 @@
     <string name="available_updates_title">Доступна ажурирања</string>
     <string name="no_available_updates_intro">Последња провера није пронашла нове надоградње. За ручну проверу користите дугме за освежавање.</string>
     <string name="pending_available_updates_intro">Претражите доступне исправке</string>
-    <string name="unlock_features_title">Откључај све опције</string>
     <string name="unlock_features_plan_a_title">Донирајте %d CNY за откључавање инкременталних ажурирања и преузимање пуном брзином.</string>
     <string name="unlock_features_plan_a_abdevice_title">Донирајте %d CNY за за омогућавање преузимања пуном брзином.</string>
     <string name="unlock_features_plan_b_title">Донирајте %d CNY за проверу ажурирања и уклањања реклама.</string>

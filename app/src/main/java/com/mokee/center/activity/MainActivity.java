@@ -241,11 +241,6 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
-        if (mApp.getDonationInfo().isAdvanced()) {
-            menu.findItem(R.id.menu_donation).setTitle(R.string.menu_donation);
-        } else {
-            menu.findItem(R.id.menu_donation).setTitle(R.string.menu_unlock_features);
-        }
         return true;
     }
 

@@ -35,7 +35,6 @@
     <string name="verified_updates_summary">Показувати лише оновлення, підтверджені іншими користувачами</string>
     <string name="available_updates_title">Доступні оновлення</string>
     <string name="no_available_updates_intro">Остання перевірка не виявила доступних оновлень. Щоб перевірити наявність оновлень вручну, натисніть кнопку \"Оновити\".</string>
-    <string name="unlock_features_title">Розблокувати більше можливостей</string>
     <string name="unlock_features_request_summary">(доступні після пожертвування %d CNY)</string>
     <string name="unlock_features_pending_summary">(пожертвувані %1$d CNY, доступні для життя післи жертви в %2$d CNY, або більше)</string>
     <string name="incremental_updates_supported_full_summary">Інкрементне оновлення може зекономити %s</string>

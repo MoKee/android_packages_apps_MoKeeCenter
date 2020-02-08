@@ -33,7 +33,6 @@
     <string name="menu_preferences">Préférences</string>
     <string name="menu_restore">Restaurer</string>
     <string name="menu_donation">Don</string>
-    <string name="menu_unlock_features">Débloquer les fonctionnalités</string>
     <string name="menu_refresh">Actualiser</string>
     <string name="menu_delete_update">Supprimer</string>
     <string name="pref_auto_delete_updates">Supprimer les mises à jour une fois installées ou devenues obsolètes</string>
@@ -60,7 +59,6 @@
     <string name="available_updates_title">Mises à jour proposées</string>
     <string name="no_available_updates_intro">La dernière vérification n’a trouvé aucune mise à jour. Pour vérifier manuellement les nouvelles mises à jour, utiliser le bouton Actualiser.</string>
     <string name="pending_available_updates_intro">À la recherche de mises à jour disponibles</string>
-    <string name="unlock_features_title">Fonctionnalités de déverrouillage</string>
     <string name="unlock_features_plan_a_title">Faire un don de %d CNY pour débloquer les mises à jour incrémentielles et télécharger à pleine vitesse.</string>
     <string name="unlock_features_plan_a_abdevice_title">Faire un don de %d CNY pour débloquer le téléchargement à pleine vitesse.</string>
     <string name="unlock_features_plan_b_title">Donner %d CYN pour des mise à jour vérifiée et enlever la publicité.</string>

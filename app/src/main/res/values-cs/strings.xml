@@ -33,7 +33,6 @@
     <string name="menu_preferences">Předvolby</string>
     <string name="menu_restore">Obnovit</string>
     <string name="menu_donation">Příspěvek</string>
-    <string name="menu_unlock_features">Odemknout funkce</string>
     <string name="menu_refresh">Znovu načíst</string>
     <string name="menu_delete_update">Smazat</string>
     <string name="pref_auto_delete_updates">Odstranit aktualizace, pokud jsou nainstalovány nebo zastaralé</string>
@@ -60,7 +59,6 @@
     <string name="available_updates_title">Dostupné aktualizace</string>
     <string name="no_available_updates_intro">Při poslední kontrole nebyly zjištěny žádné dostupné aktualizace. Chcete-li ručně zkontrolovat nové aktualizace, použijte tlačítko Aktualizovat.</string>
     <string name="pending_available_updates_intro">Vyhledat dostupné aktualizace</string>
-    <string name="unlock_features_title">Odemknout funkce</string>
     <string name="unlock_features_plan_a_title">Darovat %d CNY pro odemknutí přírůstkových aktualizací a stahování v plné rychlosti.</string>
     <string name="unlock_features_plan_a_abdevice_title">Darovat %d CNY pro odemknutí stahování v plné rychlosti.</string>
     <string name="unlock_features_plan_b_title">Darovat %d CNY pro ověřené aktualizace a odstranění reklam Google.</string>
