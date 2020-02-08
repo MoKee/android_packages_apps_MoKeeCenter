@@ -40,7 +40,6 @@
     <string name="no_updates_found">Ingen nye opdateringer fundet</string>
     <string name="updates_check_failed">Opdateringstjek mislykkedes. Tjek venligst Internetforbindelsen, og forsøg igen senere.</string>
     <string name="unknown">Ukendt</string>
-    <string name="never">Aldrig</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Appen er ikke installeret.</string>

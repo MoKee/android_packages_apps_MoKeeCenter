@@ -23,7 +23,6 @@
     <string name="action_download">Descarga</string>
     <string name="menu_delete_update">Eliminar</string>
     <string name="unknown">Non se coñece</string>
-    <string name="never">Nunca</string>
     <string name="activity_not_found">A aplicación non está instalada</string>
     <string name="update_on_mobile_data_title">Aviso</string>
     <string name="checkbox_mobile_data_warning">Non amosar máis</string>

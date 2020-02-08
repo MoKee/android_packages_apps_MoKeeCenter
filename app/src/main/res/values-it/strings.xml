@@ -53,7 +53,6 @@
     <string name="nav_contribute_translate_title">Traduzione</string>
     <string name="mokee_version_title">Versione Mokee</string>
     <string name="unique_id_title">ID Univoco</string>
-    <string name="last_update_check_title">Ultimo controllo</string>
     <string name="incremental_updates_title">Aggiornamenti OTA</string>
     <string name="incremental_updates_summary">Ottieni gli aggiornamenti incrementali per risparmiare tempo di download e larghezza di banda</string>
     <string name="verified_updates_title">Verifica aggiornamenti</string>
@@ -91,7 +90,6 @@
     <string name="updates_check_failed">Controllo degli aggiornamenti non riuscito. Controlla la connessione ad internet e riprova.</string>
     <string name="text_copied">Testo copiato negli appunti.</string>
     <string name="unknown">Sconosciuto</string>
-    <string name="never">Mai</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

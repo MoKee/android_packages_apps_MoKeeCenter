@@ -53,7 +53,6 @@
     <string name="nav_contribute_translate_title">Tõlge</string>
     <string name="mokee_version_title">MoKee versioon</string>
     <string name="unique_id_title">Kordumatu ID</string>
-    <string name="last_update_check_title">Viimane kontroll</string>
     <string name="incremental_updates_title">Täiendavad uuendused</string>
     <string name="incremental_updates_summary">Laadimisaja ja ribalaiuse salvestamiseks saate täiendavaid värskendusi</string>
     <string name="verified_updates_title">Värskendused kontrollitud</string>
@@ -91,7 +90,6 @@
     <string name="updates_check_failed">Uuenduste kontroll nurjus. Kontrollige oma internetiühendust ja proovige hiljem uuesti.</string>
     <string name="text_copied">Lõikelauale kopeeritud tekst.</string>
     <string name="unknown">Teadmata</string>
-    <string name="never">Mitte kunagi</string>
     <string name="alipay">Alipay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

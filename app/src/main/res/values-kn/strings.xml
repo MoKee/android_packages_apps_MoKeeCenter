@@ -53,7 +53,6 @@
     <string name="nav_contribute_translate_title">ಅನುವಾದ</string>
     <string name="mokee_version_title">MoKee ಆವೃತ್ತಿ</string>
     <string name="unique_id_title">ಏಕಮಾತ್ರ ಗುರುತು</string>
-    <string name="last_update_check_title">ಕೊನೆಯ ಪರಿಶೀಲನೆ</string>
     <string name="incremental_updates_title">ಹೆಚ್ಚಿನ ನವೀಕರಣೆಗಳು</string>
     <string name="incremental_updates_summary">ಡೌನ್ಲೋಡ್ ಮಾಡಿದ ಸಮಯ ಮತ್ತು ಅಳತೆಪಟ್ಟಿಯನ್ನು ಉಳಿಸಲು ಹೆಚ್ಚಿನ ನವೀಕರಣೆಗಳನ್ನು ಪಡೆಯಿರಿ</string>
     <string name="verified_updates_title">ಪರಿಶೀಲಿಸಿದ ನವೀಕರಣೆಗಳು</string>
@@ -91,7 +90,6 @@
     <string name="updates_check_failed">ನವೀಕರಣೆ ಪರಿಶೀಲನೆ ವಿಫಲವಾಗಿದೆ. ದಯವಿಟ್ಟು ನಿಮ್ಮ ಅಂತರ್ಜಾಲ ಸಂಪರ್ಕವನ್ನು ಪರಿಶೀಲಿಸಿ ಮತ್ತು ನಂತರ ಪ್ರಯತ್ನಿಸಿ.</string>
     <string name="text_copied">ಪಠ್ಯವನ್ನು ಕ್ಲಿಪ್‌ಬೋರ್ಡಿಗೆ ನಕಲಿಸಿದೆ.</string>
     <string name="unknown">ಅಪರಿಚಿತ</string>
-    <string name="never">ಎಂದಿಗೂ</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

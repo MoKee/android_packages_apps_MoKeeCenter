@@ -53,7 +53,6 @@
     <string name="nav_contribute_translate_title">Çeviri</string>
     <string name="mokee_version_title">MoKee Versiyonu</string>
     <string name="unique_id_title">Benzersiz kimlik</string>
-    <string name="last_update_check_title">Son kontrol</string>
     <string name="incremental_updates_title">OTA güncellemeleri</string>
     <string name="incremental_updates_summary">İndirme süresinden kazanmak ve veri tasarrufu için Ota güncellemeleri alın</string>
     <string name="verified_updates_title">Doğrulanmış güncellemeler</string>
@@ -91,7 +90,6 @@
     <string name="updates_check_failed">Güncelleme kontrolü başarısız oldu. Lütfen internet bağlantınızı kontrol edin ve daha sonra tekrar deneyin.</string>
     <string name="text_copied">Metin panoya kopyalandı.</string>
     <string name="unknown">Bilinmiyor</string>
-    <string name="never">Asla</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>

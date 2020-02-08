@@ -28,7 +28,6 @@
     <string name="no_updates_found">هیچ به روز رسانی جدید پیدا کردم</string>
     <string name="updates_check_failed">بررسی به روز رسانی انجام نشد. اتصال اینترنت خود را بررسی کنید و دوباره سعی کنید.</string>
     <string name="unknown">ناشناس</string>
-    <string name="never">هرگز</string>
     <string name="paypal">پی پال</string>
     <string name="activity_not_found">برنامه نصب نشده است.</string>
     <string name="new_updates_channel_title">به روز رسانی جدید</string>

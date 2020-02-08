@@ -31,11 +31,6 @@
         android:key="donation_record"
         android:title="@string/donation_record_title" />
 
-    <com.mokee.center.preference.LastUpdateCheckPreference
-        android:icon="@drawable/ic_pref_last_update_check"
-        android:key="last_update_check"
-        android:title="@string/last_update_check_title" />
-
     <PreferenceCategory
         android:key="features_category">
         <com.mokee.center.preference.UpdateTypePreference

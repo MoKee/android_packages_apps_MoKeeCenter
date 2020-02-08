@@ -53,7 +53,6 @@
     <string name="nav_contribute_translate_title">Перевод</string>
     <string name="mokee_version_title">Версия MoKee</string>
     <string name="unique_id_title">Идентификатор устройства</string>
-    <string name="last_update_check_title">Последняя проверка:</string>
     <string name="incremental_updates_title">OTA-обновления</string>
     <string name="incremental_updates_summary">Получать ОТА-обновления для экономии трафика и времени загрузки</string>
     <string name="verified_updates_title">Проверенные обновления</string>
@@ -91,7 +90,6 @@
     <string name="updates_check_failed">Не удалось выполнить проверку обновлений. Пожалуйста, проверьте подключение к Интернету, либо повторите попытку позже.</string>
     <string name="text_copied">Текст скопирован в буфер обмена.</string>
     <string name="unknown">Неизвестно</string>
-    <string name="never">Никогда</string>
     <string name="alipay">AliPay (CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal (USD)</string>

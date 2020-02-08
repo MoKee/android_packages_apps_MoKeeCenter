@@ -55,7 +55,6 @@ import com.mokee.center.model.UpdateInfo;
 import com.mokee.center.preference.AvailableUpdatesPreferenceCategory;
 import com.mokee.center.preference.DonationRecordPreference;
 import com.mokee.center.preference.IncrementalUpdatesPreference;
-import com.mokee.center.preference.LastUpdateCheckPreference;
 import com.mokee.center.preference.UpdatePreference;
 import com.mokee.center.preference.UpdateTypePreference;
 import com.mokee.center.preference.VerifiedUpdatesPreference;

@@ -39,7 +39,6 @@
     <string name="no_updates_found">לא נמצאו עדכונים חדשים</string>
     <string name="updates_check_failed">בדיקת העדכון נכשל. אנא בדוק את החיבור שלך לאינטרנט ונסה שוב מאוחר יותר.</string>
     <string name="unknown">לא ידוע</string>
-    <string name="never">אף פעם</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">האפליקציה לא מותקנת.</string>

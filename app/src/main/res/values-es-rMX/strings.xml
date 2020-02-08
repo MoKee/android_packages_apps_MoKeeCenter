@@ -52,7 +52,6 @@
     <string name="nav_contribute_translate_title">Traducción</string>
     <string name="mokee_version_title">Versión de MoKee</string>
     <string name="unique_id_title">ID único</string>
-    <string name="last_update_check_title">Última comprobación</string>
     <string name="incremental_updates_title">Actualizaciones OTA</string>
     <string name="incremental_updates_summary">Obtener actualizaciones incrementales para ahorrar ancho de banda y tiempo de descarga</string>
     <string name="verified_updates_title">Actualizaciones verificadas</string>
@@ -90,7 +89,6 @@
     <string name="updates_check_failed">Falló la comprobación de actualizaciones. Por favor, verifica la conexión a Internet e inténtalo nuevamente.</string>
     <string name="text_copied">Texto copiado al portapapeles.</string>
     <string name="unknown">Desconocido</string>
-    <string name="never">Nunca</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>

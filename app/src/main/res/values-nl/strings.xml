@@ -50,7 +50,6 @@
     <string name="no_updates_found">Geen nieuwe updates gevonden</string>
     <string name="updates_check_failed">Kan niet controleren op updates. Controleer uw internetverbinding en probeer het later opnieuw.</string>
     <string name="unknown">Onbekend</string>
-    <string name="never">Nooit</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

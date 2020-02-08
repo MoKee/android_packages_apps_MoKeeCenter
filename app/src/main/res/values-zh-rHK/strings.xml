@@ -52,7 +52,6 @@
     <string name="nav_contribute_translate_title">翻譯</string>
     <string name="mokee_version_title">MoKee 版本</string>
     <string name="unique_id_title">唯一的 ID</string>
-    <string name="last_update_check_title">上次檢查：</string>
     <string name="incremental_updates_title">增量更新</string>
     <string name="incremental_updates_summary">取得增量更新以節省下載時間和數據</string>
     <string name="verified_updates_title">放心刷™</string>
@@ -90,7 +89,6 @@
     <string name="updates_check_failed">更新檢查失敗。請檢查你的網絡連綫並於稍後重試。</string>
     <string name="text_copied">文字已複製到剪貼簿</string>
     <string name="unknown">不明</string>
-    <string name="never">永不</string>
     <string name="alipay">支付寶</string>
     <string name="wechat">微信</string>
     <string name="paypal">PayPal</string>
