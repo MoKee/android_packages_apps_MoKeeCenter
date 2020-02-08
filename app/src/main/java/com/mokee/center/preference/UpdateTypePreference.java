@@ -30,7 +30,10 @@ import com.mokee.center.model.DonationInfo;
 import com.mokee.center.util.BuildInfoUtil;
 import com.mokee.center.util.CommonUtil;
 
+import java.util.Arrays;
+
 import static com.mokee.center.misc.Constants.PREF_UPDATE_TYPE;
+import static com.mokee.center.misc.ConstantsBase.DONATION_BASIC;
 
 public class UpdateTypePreference extends ListPreference {
 
@@ -66,5 +69,11 @@ public class UpdateTypePreference extends ListPreference {
             setEntryValues(resources.getStringArray(R.array.normal_type_values));
         }
         setValue(configUpdateType);
+        if (!donationInfo.isBasic()) {
+            setSummary(TextUtils.join(" ", Arrays.asList(getEntry(),
+                    getContext().getString(R.string.unlock_features_request_summary, DONATION_BASIC))));
+        } else {
+            setSummary(getEntry());
+        }
     }
 }
