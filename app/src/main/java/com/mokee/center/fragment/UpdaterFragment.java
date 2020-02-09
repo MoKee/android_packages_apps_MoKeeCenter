@@ -393,6 +393,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             if (!TextUtils.equals(suggestUpdateType, configUpdateType)) {
                 mMainPrefs.edit().putString(PREF_UPDATE_TYPE, suggestUpdateType).apply();
                 mUpdateTypePreference.setValue(suggestUpdateType);
+                mUpdateTypePreference.setSummary(mUpdateTypePreference.getEntry());
             }
         }
     }
