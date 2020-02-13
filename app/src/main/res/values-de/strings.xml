@@ -20,7 +20,6 @@
     <string name="app_name">MoKee Center</string>
     <string name="navigation_drawer_open">Öffne Navigations-Menü</string>
     <string name="navigation_drawer_close">Schließe Navigations-Menü</string>
-    <string name="nav_header_title">MoKee OpenSource</string>
     <string name="nav_header_subtitle">Android Community Betriebssystem</string>
     <string name="nav_header_desc">Navigationsleiste</string>
     <string name="action_faq">Q&amp;A</string>
@@ -28,7 +27,7 @@
     <string name="action_next">Weiter</string>
     <string name="action_pause">Anhalten</string>
     <string name="action_resume">Fortsetzen</string>
-    <string name="action_download">Herunterladen</string>
+    <string name="action_download">Download-Modus</string>
     <string name="action_reboot">Neustart</string>
     <string name="menu_preferences">Vorlieben</string>
     <string name="menu_restore">Wiederherstellen</string>

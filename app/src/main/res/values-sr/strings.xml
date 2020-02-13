@@ -20,7 +20,6 @@
     <string name="app_name">MoKee Центар</string>
     <string name="navigation_drawer_open">Отвори фиоку навигације</string>
     <string name="navigation_drawer_close">Затвори фиоку навигације</string>
-    <string name="nav_header_title">MoKee OpenSource</string>
     <string name="nav_header_subtitle">Андроид Комуна</string>
     <string name="nav_header_desc">Навигациона трака</string>
     <string name="action_faq">Q&amp;A</string>
@@ -28,13 +27,13 @@
     <string name="action_next">Следеће</string>
     <string name="action_pause">Пауза</string>
     <string name="action_resume">Настави</string>
-    <string name="action_download">Преузми</string>
+    <string name="action_download">Преузимање</string>
     <string name="action_reboot">Рестарт</string>
     <string name="menu_preferences">Подешавања</string>
     <string name="menu_restore">Увези</string>
     <string name="menu_donation">Донације</string>
     <string name="menu_refresh">Оcвежи</string>
-    <string name="menu_delete_update">Избриши</string>
+    <string name="menu_delete_update">Брисање</string>
     <string name="pref_auto_delete_updates">Обришите ажурирања када су инсталирана или застарела</string>
     <string name="pref_ab_perf_mode">Поставите приоритетни начин ажурирања</string>
     <string name="pref_mobile_data_warning">Упозори ако се користе мобилни податци</string>
@@ -78,12 +77,12 @@
     <string name="donation_record_none">Нисте донор</string>
     <string name="donation_restore_success">Ваше донације су успешно повраћене!</string>
     <string name="donation_restore_failure">Проверити интернет везу или покушати касније.</string>
-    <string name="donation_restore_not_found">Nisu pronađeni zapisi o Донацији.</string>
+    <string name="donation_restore_not_found">Донације нису пронађене.</string>
     <string name="donation_payment_success">Хвала на донацији!</string>
     <string name="donation_dialog_title">Донирајте MoKee отвореном коду</string>
     <string name="donation_dialog_message">МоКее отворен код је чисто непрофитни пројекат рођен из хобија и страсти. Да бисмо одржали овај пројекат, морамо већину времена издвојити сопствени новац или се ослонити на донације и рекламе. Ваше донације могу помоћи у смањењу нашег финанцијског оптерећења и одржавању будућег развоја!</string>
     <string name="donation_dialog_message_extra">Након донирања активирати ћемо одређене функције које су доступне само донаторима и то доживотно!</string>
-    <string name="updates_found">Нема нових ажурирања</string>
+    <string name="updates_found">Пронађено ново ажурирање</string>
     <string name="no_updates_found">Нису пронађена нова ажурирања</string>
     <string name="updates_check_failed">Провера за ажурирања није успела. Провери своју интернет везу и покушај поново касније.</string>
     <string name="text_copied">Текст је копиран у клиборд.</string>
@@ -103,8 +102,8 @@
     <string name="download_completed_notification">Преузимање је завршено</string>
     <string name="download_verification_failed_notification">Немогуће је проверити доступно ажурирање, преузми поново</string>
     <string name="download_file_not_found_notification">Линк за скидање је недоступан, покушајте да освежите садржај и покушајте поново</string>
-    <string name="download_remaining"><xliff:g пример="3 минута" id="duration">%s</xliff:g> преостало</string>
-    <string name="download_speed">%1$s, %2$s/с</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> је остало</string>
+    <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Преузимање је већ покренуто</string>
     <string name="download_limited_speed">Преузимање са смањеном брзином, молимо да донирате %d CNY за коришћење максималне брзине.</string>
     <string name="install_already_running">Инсталација је већ покренута</string>

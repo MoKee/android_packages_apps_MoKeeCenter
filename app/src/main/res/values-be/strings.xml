@@ -20,13 +20,12 @@
     <string name="app_name">Панэль MoKee</string>
     <string name="navigation_drawer_open">Адкрыць панэль</string>
     <string name="navigation_drawer_close">Зачыніць панель</string>
-    <string name="nav_header_title">Адкрыты рэсурс MoKee</string>
     <string name="nav_header_desc">Навігацыйны радок</string>
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Рашэнне</string>
-    <string name="action_next">Наступны трэк</string>
+    <string name="action_next">Далей</string>
     <string name="action_pause">Прыпыніць</string>
-    <string name="action_resume">Узнавіць</string>
+    <string name="action_resume">Працягнуць</string>
     <string name="action_download">Спампаваць</string>
     <string name="menu_preferences">Налады</string>
     <string name="menu_restore">Аднавіць з рэзервовай копіі</string>
@@ -55,7 +54,7 @@
     <string name="donation_dialog_title">Ахвяраваць MoKee OpenSource</string>
     <string name="no_updates_found">Новыя абнаўленнi не знойдзены</string>
     <string name="updates_check_failed">Праверка абнаўленняў не ўдалася. Калі ласка, праверце ваша інтэрнэт-злучэнне і паспрабуйце ізноў пазней.</string>
-    <string name="unknown">Невядома</string>
+    <string name="unknown">Невядомы</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>

@@ -23,7 +23,7 @@
     <string name="action_solution">해결 방법</string>
     <string name="action_next">다음</string>
     <string name="action_pause">중지</string>
-    <string name="action_resume">재개</string>
+    <string name="action_resume">이어 받기</string>
     <string name="action_download">다운로드</string>
     <string name="menu_restore">복구하기</string>
     <string name="menu_refresh">새로 고침</string>

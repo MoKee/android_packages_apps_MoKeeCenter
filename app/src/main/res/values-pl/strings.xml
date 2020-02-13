@@ -20,12 +20,11 @@
     <string name="app_name">Centrum MoKee</string>
     <string name="navigation_drawer_open">Otwórz szufladę naiwigacji</string>
     <string name="navigation_drawer_close">Zamknij szufladę naiwigacji</string>
-    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Android Community Operating System</string>
     <string name="nav_header_desc">Pasek nawigacji</string>
     <string name="action_faq">Pytania&amp;odpowiedzi</string>
     <string name="action_solution">Rozwiązanie</string>
-    <string name="action_next">Następny</string>
+    <string name="action_next">Dalej</string>
     <string name="action_pause">Pauza</string>
     <string name="action_resume">Wznów</string>
     <string name="action_download">Pobierz</string>
@@ -86,7 +85,7 @@
     <string name="no_updates_found">Brak dostępnych aktualizacji</string>
     <string name="updates_check_failed">Nie udało się wyszukać aktualizacji. Sprawdź połączenie internetowe i spróbuj ponownie.</string>
     <string name="text_copied">Tekst skopiowany do schowka.</string>
-    <string name="unknown">Brak informacji</string>
+    <string name="unknown">Nieznana</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>
