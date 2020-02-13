@@ -19,7 +19,7 @@ package com.mokee.center.push;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
+import android.net.Uri;
 import android.text.TextUtils;
 
 import com.mokee.center.activity.AgentWebActivity;
@@ -48,9 +48,7 @@ public class PushMessageReceiver extends JPushMessageReceiver {
             String url = jsonExtras.getString(KEY_PUSH_EXTRA_URL);
             if (!TextUtils.isEmpty(url)) {
                 Intent intent = new Intent(context, AgentWebActivity.class);
-                Bundle bundle = new Bundle();
-                bundle.putString(KEY_PUSH_EXTRA_URL, url);
-                intent.putExtras(bundle);
+                intent.setData(Uri.parse(url));
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 context.startActivity(intent);
             }

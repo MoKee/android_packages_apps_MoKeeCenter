@@ -61,7 +61,6 @@ public class AgentWebActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agentweb);
-        Bundle bundle = getIntent().getExtras();
 
         mToolbar = this.findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -71,7 +70,7 @@ public class AgentWebActivity extends AppCompatActivity {
             getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_action_cancel);
         }
 
-        String url = bundle.getString(KEY_PUSH_EXTRA_URL);
+        String url = getIntent().getDataString();
         mAgentWeb = AgentWeb.with(this)
                 .setAgentWebParent(findViewById(R.id.agentweb),
                         new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
