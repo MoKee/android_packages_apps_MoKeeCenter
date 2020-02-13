@@ -21,7 +21,7 @@
     <string name="action_next">הבא</string>
     <string name="action_pause">השהה</string>
     <string name="action_resume">המשך</string>
-    <string name="action_download">הורדה</string>
+    <string name="action_download">מצב הורדה</string>
     <string name="menu_restore">שחזר</string>
     <string name="menu_refresh">רענן</string>
     <string name="menu_delete_update">מחק</string>
