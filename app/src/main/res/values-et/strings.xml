@@ -33,6 +33,7 @@
     <string name="menu_preferences">Eelistused</string>
     <string name="menu_restore">Taasta</string>
     <string name="menu_donation">Annetus</string>
+    <string name="menu_unlock_features">Lukusta lahti funktsioonid</string>
     <string name="menu_refresh">Värskenda</string>
     <string name="menu_delete_update">Kustuta</string>
     <string name="pref_auto_delete_updates">Kustutage värskendused, kui need on installitud või aegunud</string>
@@ -52,6 +53,7 @@
     <string name="nav_contribute_translate_title">Tõlge</string>
     <string name="mokee_version_title">MoKee versioon</string>
     <string name="unique_id_title">Kordumatu ID</string>
+    <string name="last_update_check_title">Viimane kontroll</string>
     <string name="incremental_updates_title">Täiendavad uuendused</string>
     <string name="incremental_updates_summary">Laadimisaja ja ribalaiuse salvestamiseks saate täiendavaid värskendusi</string>
     <string name="verified_updates_title">Värskendused kontrollitud</string>
@@ -59,6 +61,7 @@
     <string name="available_updates_title">Saadaval uuendused</string>
     <string name="no_available_updates_intro">Viimane kontroll ei leidnud saadaval olevaid värskendusi. Uute värskenduste käsitsi kontrollimiseks kasutage nuppu Värskenda.</string>
     <string name="pending_available_updates_intro">Otsid saadaolevad värskendused</string>
+    <string name="unlock_features_title">Lukusta lahti funktsioonid</string>
     <string name="unlock_features_plan_a_title">Anneta %d CNY, et avada täiendavaid värskendusi ja laadida alla täiskiirusel.</string>
     <string name="unlock_features_plan_a_abdevice_title">Anneta %d CNY, et laadida alla täis kiirusel.</string>
     <string name="unlock_features_plan_b_title">Anneta %d CNY kinnitatud värskenduste ja Google\'i reklaamide eemaldamiseks.</string>
@@ -88,6 +91,7 @@
     <string name="updates_check_failed">Uuenduste kontroll nurjus. Kontrollige oma internetiühendust ja proovige hiljem uuesti.</string>
     <string name="text_copied">Lõikelauale kopeeritud tekst.</string>
     <string name="unknown">Teadmata</string>
+    <string name="never">Mitte kunagi</string>
     <string name="alipay">Alipay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

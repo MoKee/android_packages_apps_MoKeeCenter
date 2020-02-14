@@ -33,6 +33,7 @@
     <string name="menu_preferences">Předvolby</string>
     <string name="menu_restore">Obnovit</string>
     <string name="menu_donation">Příspěvek</string>
+    <string name="menu_unlock_features">Odemknout funkce</string>
     <string name="menu_refresh">Znovu načíst</string>
     <string name="menu_delete_update">Smazat</string>
     <string name="pref_auto_delete_updates">Odstranit aktualizace, pokud jsou nainstalovány nebo zastaralé</string>
@@ -52,6 +53,7 @@
     <string name="nav_contribute_translate_title">Překlady</string>
     <string name="mokee_version_title">Verze MoKee</string>
     <string name="unique_id_title">Jedinečné ID</string>
+    <string name="last_update_check_title">Poslední kontrola</string>
     <string name="incremental_updates_title">Přírůstkové aktualizace</string>
     <string name="incremental_updates_summary">Stahovat OTA aktualizace, aby jste ušetřili data a čas</string>
     <string name="verified_updates_title">Ověřené aktualizace</string>
@@ -59,6 +61,7 @@
     <string name="available_updates_title">Dostupné aktualizace</string>
     <string name="no_available_updates_intro">Při poslední kontrole nebyly zjištěny žádné dostupné aktualizace. Chcete-li ručně zkontrolovat nové aktualizace, použijte tlačítko Aktualizovat.</string>
     <string name="pending_available_updates_intro">Vyhledat dostupné aktualizace</string>
+    <string name="unlock_features_title">Odemknout funkce</string>
     <string name="unlock_features_plan_a_title">Darovat %d CNY pro odemknutí přírůstkových aktualizací a stahování v plné rychlosti.</string>
     <string name="unlock_features_plan_a_abdevice_title">Darovat %d CNY pro odemknutí stahování v plné rychlosti.</string>
     <string name="unlock_features_plan_b_title">Darovat %d CNY pro ověřené aktualizace a odstranění reklam Google.</string>
@@ -88,10 +91,13 @@
     <string name="updates_check_failed">Kontrola aktualizací selhala. Zkontrolujte připojení k internetu a zkuste to znovu.</string>
     <string name="text_copied">Text zkopírován do schránky.</string>
     <string name="unknown">Neznámá</string>
+    <string name="never">Nikdy</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikace není nainstalována.</string>
+    <string name="browser_not_found">Prohlížeč není nainstalován.</string>
+    <string name="chrome_not_found">Nejprve nainstalujte Google Chrome.</string>
     <string name="new_updates_channel_title">Nové aktualizace</string>
     <string name="new_updates_found_title">Nová systémové aktualizace</string>
     <string name="ongoing_channel_title">Probíhající stahování</string>

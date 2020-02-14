@@ -32,6 +32,7 @@
     <string name="verified_updates_summary">Hanya memaparkan kemaskini yang disahkan oleh pengguna-pengguna lain</string>
     <string name="available_updates_title">Kemaskini tersedia</string>
     <string name="no_available_updates_intro">Semakan terakhir tidak menjumpai sebarang kemaskini. Untuk semak secara manual, gunakan butang kemaskini semula.</string>
+    <string name="unlock_features_title">Buka kunci ciri-ciri</string>
     <string name="unlock_features_request_summary">(akan disediakan selepas menderma %d CNY)</string>
     <string name="unlock_features_pending_summary">(didermakan %1$d CNY, akan disediakan untuk seumur hidup selapas menderma %2$d CNY banyak lagi)</string>
     <string name="incremental_updates_supported_full_summary">Kemaskini tambahan boleh menjimat %s</string>
@@ -45,6 +46,7 @@
     <string name="no_updates_found">Tiada kemaskini dijumpai</string>
     <string name="updates_check_failed">Semakan kemaskini gagal. Sila semak sambungan internet anda dan cuba lagi kemudian.</string>
     <string name="unknown">Tidak diketahui</string>
+    <string name="never">Tidak pernah</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

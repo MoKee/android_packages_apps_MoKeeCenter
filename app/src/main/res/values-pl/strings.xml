@@ -33,6 +33,7 @@
     <string name="menu_preferences">Ustawienia</string>
     <string name="menu_restore">Przywróć</string>
     <string name="menu_donation">Darowizna</string>
+    <string name="menu_unlock_features">Odblokuj funkcje</string>
     <string name="menu_refresh">Odśwież</string>
     <string name="menu_delete_update">Usuń</string>
     <string name="pref_auto_delete_updates">Usuń aktualizacje po zainstalowaniu lub wycofaniu</string>
@@ -52,6 +53,7 @@
     <string name="nav_contribute_translate_title">Tłumaczenie</string>
     <string name="mokee_version_title">Wersja Mokee</string>
     <string name="unique_id_title">Unikalne ID</string>
+    <string name="last_update_check_title">Ostatnie sprawdzenie</string>
     <string name="incremental_updates_title">Aktualizacje przyrostowe</string>
     <string name="incremental_updates_summary">Pobierz aktualizacje przyrostowe, aby zaoszczędzić czas i transfer</string>
     <string name="verified_updates_title">Sprawdzone aktualizacje</string>
@@ -59,6 +61,7 @@
     <string name="available_updates_title">Dostępne aktualizacje</string>
     <string name="no_available_updates_intro">Brak dostępnej aktualizacji po ostatnim sprawdzaniu. Aby sprawdzić dostępność ręcznie, naciśnij \"Odśwież\".</string>
     <string name="pending_available_updates_intro">Wyszukaj dostępne aktualizacje</string>
+    <string name="unlock_features_title">Gest odblokowania</string>
     <string name="unlock_features_plan_a_title">Przekaż %d CNY, aby odblokować aktualizacje przyrostowe i pobieranie z pełną prędkością.</string>
     <string name="unlock_features_plan_a_abdevice_title">Podaruj %d CNY aby odblokować pełną prędkość pobierania.</string>
     <string name="unlock_features_plan_b_title">Przekaż %d CNY dla zweryfikowanych aktualizacji i usunięcia reklam Google.</string>
@@ -88,6 +91,7 @@
     <string name="updates_check_failed">Nie udało się wyszukać aktualizacji. Sprawdź połączenie internetowe i spróbuj ponownie.</string>
     <string name="text_copied">Tekst skopiowany do schowka.</string>
     <string name="unknown">Brak informacji</string>
+    <string name="never">Nigdy</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>

@@ -24,11 +24,13 @@
     <string name="mokee_version_title">మోకీ వెర్షన్</string>
     <string name="unique_id_title">ప్రత్యేక ID</string>
     <string name="available_updates_title">అందుబాటులో ఉన్న నవీకరణలు</string>
+    <string name="unlock_features_title">అన్లాక్ లక్షణాలు</string>
     <string name="update_type_release">విడుదల</string>
     <string name="update_type_nightly">నైట్లీ</string>
     <string name="donation_payment_success">మీ విరాళం కోసం ధన్యవాదాలు!</string>
     <string name="donation_dialog_title">ఓపెన్ సోర్స్ మోకికి విరాళంగా</string>
     <string name="unknown">తెలియదు</string>
+    <string name="never">ఎప్పటికీ వద్దు</string>
     <string name="alipay">అలిపాయ్</string>
     <string name="wechat">వెచ్చటి</string>
     <string name="paypal">పేపాల్</string>

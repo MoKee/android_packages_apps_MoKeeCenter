@@ -45,6 +45,7 @@
     <string name="no_updates_found">Няма актуализации</string>
     <string name="updates_check_failed">Неуспешно. Проверете вашата интернет връзка и опитайте отново.</string>
     <string name="unknown">Неизвестно</string>
+    <string name="never">Никога</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

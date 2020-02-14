@@ -33,6 +33,7 @@
     <string name="menu_preferences">Подешавања</string>
     <string name="menu_restore">Увези</string>
     <string name="menu_donation">Донације</string>
+    <string name="menu_unlock_features">Откључај све опције</string>
     <string name="menu_refresh">Оcвежи</string>
     <string name="menu_delete_update">Избриши</string>
     <string name="pref_auto_delete_updates">Обришите ажурирања када су инсталирана или застарела</string>
@@ -52,6 +53,7 @@
     <string name="nav_contribute_translate_title">Превод</string>
     <string name="mokee_version_title">MoKee верзија</string>
     <string name="unique_id_title">Јединствени ИД</string>
+    <string name="last_update_check_title">Последња провера</string>
     <string name="incremental_updates_title">ОТА надоградње</string>
     <string name="incremental_updates_summary">Преузмите постепену надоградњу ради уштеде времена и података</string>
     <string name="verified_updates_title">Верификација анжурирања</string>
@@ -59,6 +61,7 @@
     <string name="available_updates_title">Доступна ажурирања</string>
     <string name="no_available_updates_intro">Последња провера није пронашла нове надоградње. За ручну проверу користите дугме за освежавање.</string>
     <string name="pending_available_updates_intro">Претражите доступне исправке</string>
+    <string name="unlock_features_title">Откључај све опције</string>
     <string name="unlock_features_plan_a_title">Донирајте %d CNY за откључавање инкременталних ажурирања и преузимање пуном брзином.</string>
     <string name="unlock_features_plan_a_abdevice_title">Донирајте %d CNY за за омогућавање преузимања пуном брзином.</string>
     <string name="unlock_features_plan_b_title">Донирајте %d CNY за проверу ажурирања и уклањања реклама.</string>
@@ -88,6 +91,7 @@
     <string name="updates_check_failed">Провера за ажурирања није успела. Провери своју интернет везу и покушај поново касније.</string>
     <string name="text_copied">Текст је копиран у клиборд.</string>
     <string name="unknown">Непознато</string>
+    <string name="never">Никада</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>

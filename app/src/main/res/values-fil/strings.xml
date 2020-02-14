@@ -36,6 +36,7 @@
     <string name="verified_updates_summary">Ipakita lamang ang mga update na napatunayan na ng ibang mga gumagamit</string>
     <string name="available_updates_title">Magagamit na mga update</string>
     <string name="no_available_updates_intro">Ang huling tseke ay hindi nakahanap ng anumang available na mga update. Upang manu-manong suriin para sa mga bagong update, gamitin ang pindutan ng I-refresh.</string>
+    <string name="unlock_features_title">I-unlock ang mga katangian</string>
     <string name="unlock_features_request_summary">(magagamit pagkatapos ng donasyon%d CNY)</string>
     <string name="unlock_features_pending_summary">(nagbigay %1$d CNY, magagamit ng lubos kapag nagbigay ng ganitong donasyon %2$d CNY pa)</string>
     <string name="update_type_title">Uri ng update</string>
@@ -47,6 +48,7 @@
     <string name="no_updates_found">Walang nakita na mga bagong update</string>
     <string name="updates_check_failed">Nabigo ang pag-check ng update. Mangyaring suriin ang iyong koneksyon sa internet at subukan muli sa ibang pagkakataon.</string>
     <string name="unknown">Hindi alam</string>
+    <string name="never">Hindi kailanman</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

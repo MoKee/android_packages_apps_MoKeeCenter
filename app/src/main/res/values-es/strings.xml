@@ -33,6 +33,7 @@
     <string name="menu_preferences">Ajustes</string>
     <string name="menu_restore">Restaurar</string>
     <string name="menu_donation">Donación</string>
+    <string name="menu_unlock_features">Desbloquear características</string>
     <string name="menu_refresh">Actualizar</string>
     <string name="menu_delete_update">Borrar</string>
     <string name="pref_auto_delete_updates">Eliminar actualizaciones si están instaladas u obsoletas</string>
@@ -52,6 +53,7 @@
     <string name="nav_contribute_translate_title">Traducción</string>
     <string name="mokee_version_title">Versión de MoKee</string>
     <string name="unique_id_title">ID único</string>
+    <string name="last_update_check_title">Última comprobación</string>
     <string name="incremental_updates_title">Actualizaciones OTA</string>
     <string name="incremental_updates_summary">Obtener actualizaciones incrementales para ahorrar ancho de banda y tiempo de descarga</string>
     <string name="verified_updates_title">Actualizaciones verificadas</string>
@@ -59,6 +61,7 @@
     <string name="available_updates_title">Actualizaciones disponibles</string>
     <string name="no_available_updates_intro">No se encontraron actualizaciones en la última comprobación. Pulsa el botón Refrescar para comprobar si existen nuevas actualizaciones.</string>
     <string name="pending_available_updates_intro">Buscar actualizaciones disponibles</string>
+    <string name="unlock_features_title">Gesto de desbloqueo</string>
     <string name="unlock_features_plan_a_title">Dona %d CNY para desbloquear actualizaciones incrementales y descargar a toda velocidad.</string>
     <string name="unlock_features_plan_a_abdevice_title">Dona %d CNY para desbloquear la descarga a toda velocidad.</string>
     <string name="unlock_features_plan_b_title">Donar %d CNY para actualizaciones verificadas y eliminar Google Ads.</string>
@@ -88,11 +91,14 @@
     <string name="updates_check_failed">Falló la comprobación de actualizaciones. Por favor, verifica la conexión a Internet e inténtalo nuevamente.</string>
     <string name="text_copied">Texto copiado al portapapeles.</string>
     <string name="unknown">Desconocido</string>
+    <string name="never">Nunca</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>
     <string name="activity_not_found">La aplicación no está instalada.</string>
     <string name="browser_not_found">Explorador no instalado.</string>
+    <string name="mokeepay_not_found">Has borrado accidentalmente la app MoKeePay. Por favor restaurala a través de una actualización completa.</string>
+    <string name="ad_blocker_detected">Parece que estás usando un bloqueador de anuncios. Por favor añade nuestra app a la lista blanca.</string>
     <string name="new_updates_channel_title">Nuevas actualizaciones</string>
     <string name="new_updates_found_title">Nueva actualización del sistema disponible</string>
     <string name="ongoing_channel_title">Descargas en curso</string>

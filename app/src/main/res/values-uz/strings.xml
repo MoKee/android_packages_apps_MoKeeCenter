@@ -25,5 +25,6 @@
     <string name="update_type_release">Release</string>
     <string name="update_type_nightly">Tungi</string>
     <string name="unknown">Ko`rsatilmagan</string>
+    <string name="never">Hech qachon</string>
     <string name="activity_not_found">Ilova o‘rnatilmadi.</string>
 </resources>

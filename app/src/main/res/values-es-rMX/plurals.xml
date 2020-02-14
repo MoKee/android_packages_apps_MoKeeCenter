@@ -22,7 +22,7 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> actualizaciones disponibles para descargar</item>
     </plurals>
     <plurals name="new_updates_found_additional_count">
-        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> más</item>
-        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> más</item>
+        <item quantity="one">y <xliff:g id="count">%d</xliff:g> más</item>
+        <item quantity="other">y <xliff:g id="count">%d</xliff:g> más</item>
     </plurals>
 </resources>

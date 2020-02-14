@@ -30,6 +30,7 @@
     <string name="menu_preferences">設定</string>
     <string name="menu_restore">復元する</string>
     <string name="menu_donation">貢献</string>
+    <string name="menu_unlock_features">機能のロック解除</string>
     <string name="menu_refresh">更新</string>
     <string name="menu_delete_update">削除</string>
     <string name="pref_ab_perf_mode">更新プロセスを優先する</string>
@@ -46,12 +47,14 @@
     <string name="nav_contribute_translate_title">翻訳</string>
     <string name="mokee_version_title">MoKeeバージョン</string>
     <string name="unique_id_title">ユニークID</string>
+    <string name="last_update_check_title">最後の確認:</string>
     <string name="incremental_updates_title">差分アップデート</string>
     <string name="incremental_updates_summary">ダウンロード時間と帯域を節約する差分アップデートを入手</string>
     <string name="verified_updates_title">検証済みの更新</string>
     <string name="verified_updates_summary">他のユーザーにより検証された更新のみを表示する</string>
     <string name="available_updates_title">利用可能なアップデート</string>
     <string name="no_available_updates_intro">利用可能なアップデートを見つけられませんでした。新しいアップデートを手動で確認するには、更新ボタンを使用して下さい。</string>
+    <string name="unlock_features_title">機能のロック解除</string>
     <string name="unlock_features_request_summary">（%d CNYの寄付後に有効です）</string>
     <string name="unlock_features_pending_summary">（今まで %1$d CNYの寄付をし、あと %2$d CNYの寄付で永久に有効です。）</string>
     <string name="incremental_updates_supported_full_summary">増分アップデートにより %s の節約が可能</string>
@@ -68,6 +71,7 @@
     <string name="updates_check_failed">アップデートの確認に失敗しました。インターネット接続を確認し、しばらくしてからもう一度お試し下さい。</string>
     <string name="text_copied">テキストをクリップボードにコピーしました。</string>
     <string name="unknown">不明</string>
+    <string name="never">なし</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

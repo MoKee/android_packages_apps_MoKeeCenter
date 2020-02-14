@@ -33,6 +33,7 @@
     <string name="menu_preferences">Nastavenia</string>
     <string name="menu_restore">Obnoviť</string>
     <string name="menu_donation">Príspevok</string>
+    <string name="menu_unlock_features">Odomknúť funkcie</string>
     <string name="menu_refresh">Obnoviť</string>
     <string name="menu_delete_update">Vymazať</string>
     <string name="pref_auto_delete_updates">Vymazať nainštalované alebo zastarané aktualizácie</string>
@@ -52,6 +53,7 @@
     <string name="nav_contribute_translate_title">Preklad</string>
     <string name="mokee_version_title">MoKee verzia</string>
     <string name="unique_id_title">Unikátne ID</string>
+    <string name="last_update_check_title">Posledná kontrola</string>
     <string name="incremental_updates_title">Inkrementálne aktualizácie</string>
     <string name="incremental_updates_summary">Získajte inkrementálne aktualizácie aby ste obmedzili čas sťahovania a prenesené dáta</string>
     <string name="verified_updates_title">Overené aktualizácie</string>
@@ -59,6 +61,7 @@
     <string name="available_updates_title">Dostupné aktualizácie</string>
     <string name="no_available_updates_intro">Poslednou kontrolou sa nenašli žiadne dostupné aktualizácie. Použite tlačidlo Obnoviť na ručnú kontrolu nových aktualizácií.</string>
     <string name="pending_available_updates_intro">Vyhľadávam dostupné aktualizácie</string>
+    <string name="unlock_features_title">Odomknúť funkcie</string>
     <string name="unlock_features_plan_a_title">Prispejte %d CNY na odomknutie prírastkových aktualizácii a sťahovania v plnej rýchlosti.</string>
     <string name="unlock_features_plan_a_abdevice_title">Prispieť %d CNY, aby bola odomknutá plná rýchlosť sťahovania.</string>
     <string name="unlock_features_plan_b_title">Prispejte %d CNY pre overené aktualizácie a odstránenie reklám Google.</string>
@@ -88,6 +91,7 @@
     <string name="updates_check_failed">Kontrola aktualizácií zlyhala. Skontrolujte prosím svoje internetové pripojenie a skúste to znova neskôr.</string>
     <string name="text_copied">Text skopírovaný do schránky.</string>
     <string name="unknown">Neznáme</string>
+    <string name="never">Nikdy</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">Paypal</string>

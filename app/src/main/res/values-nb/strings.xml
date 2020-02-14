@@ -38,6 +38,7 @@
     <string name="no_updates_found">Ingen nye oppdateringer funnet</string>
     <string name="updates_check_failed">Oppdateringskontrollen feilet. Sjekk internettilkoblingen og prøv på nytt senere.</string>
     <string name="unknown">Ukjent</string>
+    <string name="never">Aldri</string>
     <string name="alipay">AliPay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Appen er ikke installert.</string>
