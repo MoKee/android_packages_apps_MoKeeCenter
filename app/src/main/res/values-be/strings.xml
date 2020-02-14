@@ -31,6 +31,7 @@
     <string name="menu_preferences">Налады</string>
     <string name="menu_restore">Аднавіць з рэзервовай копіі</string>
     <string name="menu_donation">Дарэнне</string>
+    <string name="menu_unlock_features">Функцыі разблакоўкі</string>
     <string name="menu_refresh">Абнавiць</string>
     <string name="menu_delete_update">Выдаліць</string>
     <string name="nav_main_forum_title">Форум</string>
@@ -43,6 +44,7 @@
     <string name="verified_updates_summary">Паказваць толькі правераныя іншымі карыстальнікамі абнаўлення</string>
     <string name="available_updates_title">Даступныя абнаўленнi</string>
     <string name="no_available_updates_intro">Апошняя праверка не знайшла даступных абнаўленняў. Каб уручную праверыць наяўнасць новых абнаўленняў, націсніце кнопку «Абнавіць».</string>
+    <string name="unlock_features_title">Функцыі разблакоўкі</string>
     <string name="unlock_features_request_summary">(даступна пасля ахвяравання ў %d юаняў)</string>
     <string name="unlock_features_pending_summary">(ахвяруйце %1$d юаняў, будзе даступна назаўжды пасля ахвяраванні яшчэ %2$d юаняў і больш)</string>
     <string name="incremental_updates_supported_full_summary">Дадатковыя абнаўлення можна захаваць %s</string>
@@ -56,6 +58,7 @@
     <string name="no_updates_found">Новыя абнаўленнi не знойдзены</string>
     <string name="updates_check_failed">Праверка абнаўленняў не ўдалася. Калі ласка, праверце ваша інтэрнэт-злучэнне і паспрабуйце ізноў пазней.</string>
     <string name="unknown">Невядома</string>
+    <string name="never">Ніколі</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>

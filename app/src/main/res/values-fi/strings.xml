@@ -44,6 +44,7 @@
     <string name="no_updates_found">Päivityksiä ei löytynyt</string>
     <string name="updates_check_failed">Päivitysten tarkistaminen epäonnistui. Tarkista internet-yhteytesi ja yritä uudelleen.</string>
     <string name="unknown">Tuntematon</string>
+    <string name="never">Ei koskaan</string>
     <string name="alipay">Alipay</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Sovellusta ei ole asennettu.</string>

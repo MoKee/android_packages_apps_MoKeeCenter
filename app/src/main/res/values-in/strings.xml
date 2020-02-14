@@ -33,6 +33,7 @@
     <string name="menu_preferences">Preferensi</string>
     <string name="menu_restore">Pulihkan</string>
     <string name="menu_donation">Donasi</string>
+    <string name="menu_unlock_features">Buka fitur</string>
     <string name="menu_refresh">Segarkan</string>
     <string name="menu_delete_update">Hapus</string>
     <string name="pref_auto_delete_updates">Hapus pembaruan ketika diinstal atau usang</string>
@@ -52,6 +53,7 @@
     <string name="nav_contribute_translate_title">Terjemahan</string>
     <string name="mokee_version_title">Versi MoKee</string>
     <string name="unique_id_title">ID Unik</string>
+    <string name="last_update_check_title">Pemeriksaan terakhir</string>
     <string name="incremental_updates_title">Pembaruan Incremental</string>
     <string name="incremental_updates_summary">Dapatkan pembaruan Incremental untuk menghemat waktu unduh dan bandwidth</string>
     <string name="verified_updates_title">Pembaruan diverifikasi</string>
@@ -59,6 +61,7 @@
     <string name="available_updates_title">Pembaruan tersedia</string>
     <string name="no_available_updates_intro">Pemeriksaan tidak menemukan adanya pembaruan tersedia. Untuk memeriksa secara manual pembaruan terkini, gunakan tombol Segarkan.</string>
     <string name="pending_available_updates_intro">Mencari pembaruan yang tersedia</string>
+    <string name="unlock_features_title">Buka fitur</string>
     <string name="unlock_features_plan_a_title">Donasi %d CNY untuk membuka pembaruan tambahan dan mengunduh dengan kecepatan penuh.</string>
     <string name="unlock_features_plan_a_abdevice_title">Donasikan% d CNY untuk membuka kunci unduhan dengan kecepatan penuh.</string>
     <string name="unlock_features_plan_b_title">Donasikan %d CNY untuk pembaruan terverifikasi dan hapus Iklan Google.</string>
@@ -88,12 +91,15 @@
     <string name="updates_check_failed">Pemeriksaan pembaruan gagal. Silakan periksa koneksi internet anda dan coba lagi nanti.</string>
     <string name="text_copied">Teks disalin ke clipboard.</string>
     <string name="unknown">Tidak diketahui</string>
+    <string name="never">Tidak pernah</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikasi tidak dipasang.</string>
     <string name="browser_not_found">Peramban tidak terpasang.</string>
     <string name="chrome_not_found">Silahkan Install Google Chrome dahulu.</string>
+    <string name="mokeepay_not_found">Anda telah secara tidak sengaja menghapus aplikasi MoKeePay, harap pulihkan melalui pembaruan lengkap.</string>
+    <string name="ad_blocker_detected">Sepertinya Anda menggunakan pemblokir iklan, silakan white list aplikasi kami.</string>
     <string name="new_updates_channel_title">Pembaruan baru</string>
     <string name="new_updates_found_title">Pembaruan sistem baru</string>
     <string name="ongoing_channel_title">Pengunduhan sedang berlangsung</string>

@@ -20,7 +20,7 @@
     <string name="app_name">Centro de Mokee</string>
     <string name="navigation_drawer_open">Abra el cajón navegación</string>
     <string name="navigation_drawer_close">Cierre el cajón navegación</string>
-    <string name="nav_header_subtitle">Sistema operativo de la Comunidad Android</string>
+    <string name="nav_header_subtitle">Sistema operativo de la comunidad Android</string>
     <string name="nav_header_desc">Barra de navegación</string>
     <string name="action_faq">Preguntas &amp; Respuestas</string>
     <string name="action_solution">Solución</string>
@@ -29,9 +29,10 @@
     <string name="action_resume">Reanudar</string>
     <string name="action_download">Descargar</string>
     <string name="action_reboot">Reiniciar</string>
-    <string name="menu_preferences">Ajustes</string>
+    <string name="menu_preferences">Preferencias</string>
     <string name="menu_restore">Restaurar</string>
     <string name="menu_donation">Donación</string>
+    <string name="menu_unlock_features">Desbloquear características</string>
     <string name="menu_refresh">Actualizar</string>
     <string name="menu_delete_update">Borrar</string>
     <string name="pref_auto_delete_updates">Eliminar actualizaciones si están instaladas u obsoletas</string>
@@ -40,7 +41,7 @@
     <string name="nav_main_forum_title">Foro</string>
     <string name="nav_main_guide_title">Manual</string>
     <string name="nav_main_source_title">Código Fuente</string>
-    <string name="nav_main_bug_reports_title">Reportar un error</string>
+    <string name="nav_main_bug_reports_title">Informe de errores</string>
     <string name="nav_main_team_title">Equipo</string>
     <string name="nav_social_title">Redes Sociales</string>
     <string name="nav_social_telegram_title">Telegram</string>
@@ -51,13 +52,15 @@
     <string name="nav_contribute_translate_title">Traducción</string>
     <string name="mokee_version_title">Versión de MoKee</string>
     <string name="unique_id_title">ID único</string>
+    <string name="last_update_check_title">Última comprobación</string>
     <string name="incremental_updates_title">Actualizaciones OTA</string>
     <string name="incremental_updates_summary">Obtener actualizaciones incrementales para ahorrar ancho de banda y tiempo de descarga</string>
     <string name="verified_updates_title">Actualizaciones verificadas</string>
     <string name="verified_updates_summary">Mostrar sólo las actualizaciones verificadas por otros usuarios</string>
     <string name="available_updates_title">Actualizaciones disponibles</string>
     <string name="no_available_updates_intro">No se encontraron actualizaciones en la última comprobación. Pulsa el botón Refrescar para comprobar si existen nuevas actualizaciones.</string>
-    <string name="pending_available_updates_intro">Buscar actualizaciones disponibles</string>
+    <string name="pending_available_updates_intro">Buscando actualizaciones disponibles</string>
+    <string name="unlock_features_title">Gesto de desbloqueo</string>
     <string name="unlock_features_plan_a_title">Dona %d CNY para desbloquear actualizaciones incrementales y descargar a toda velocidad.</string>
     <string name="unlock_features_plan_a_abdevice_title">Dona %d CNY para desbloquear la descarga a toda velocidad.</string>
     <string name="unlock_features_plan_b_title">Donar %d CNY para actualizaciones verificadas y eliminar Google Ads.</string>
@@ -71,7 +74,7 @@
     <string name="update_type_release">Versión</string>
     <string name="update_type_nightly">Nocturna</string>
     <string name="update_type_premium">Premium</string>
-    <string name="donation_record_title">Record de donación</string>
+    <string name="donation_record_title">Registro de donaciones</string>
     <string name="donation_record_without_rankings">Has donado un total de %1$d CNY.</string>
     <string name="donation_record_with_rankings">Donaste un total de CNY %1$d, más que %2$s de donantes a nivel mundial, rank No.%3$d!</string>
     <string name="donation_record_none">Usted no ha donado</string>
@@ -87,6 +90,7 @@
     <string name="updates_check_failed">Falló la comprobación de actualizaciones. Por favor, verifica la conexión a Internet e inténtalo nuevamente.</string>
     <string name="text_copied">Texto copiado al portapapeles.</string>
     <string name="unknown">Desconocido</string>
+    <string name="never">Nunca</string>
     <string name="alipay">AliPay(CNY)</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>

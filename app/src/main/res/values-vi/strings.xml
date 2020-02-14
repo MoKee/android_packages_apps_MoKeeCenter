@@ -33,6 +33,7 @@
     <string name="menu_preferences">Tùy chỉnh</string>
     <string name="menu_restore">Khôi phục</string>
     <string name="menu_donation">Đóng góp</string>
+    <string name="menu_unlock_features">Mở khóa tính năng</string>
     <string name="menu_refresh">Tải lại</string>
     <string name="menu_delete_update">Xóa</string>
     <string name="pref_auto_delete_updates">Xóa bản cập nhật sau khi cài đặt</string>
@@ -52,6 +53,7 @@
     <string name="nav_contribute_translate_title">Dịch thuật</string>
     <string name="mokee_version_title">Phiên bản MoKee</string>
     <string name="unique_id_title">Mã số ID</string>
+    <string name="last_update_check_title">Kiểm tra lần cuối</string>
     <string name="incremental_updates_title">Cập nhật bổ sung</string>
     <string name="incremental_updates_summary">Lấy bản cập nhật bổ sung để tiết kiệm thời gian tải và băng thông</string>
     <string name="verified_updates_title">Cập nhật đã được xác thực</string>
@@ -59,6 +61,7 @@
     <string name="available_updates_title">Bản cập nhật khả dụng</string>
     <string name="no_available_updates_intro">Lần kiểm tra cuối cùng không tìm thấy bất kỳ bản cập nhật nào. Để kiểm tra cập nhật mới một cách thủ công, sử dụng nút Tải lại.</string>
     <string name="pending_available_updates_intro">Kiểm tra cập nhật có sẵn</string>
+    <string name="unlock_features_title">Mở khóa tất cả tính năng</string>
     <string name="unlock_features_plan_a_title">Đóng góp %d NDT để mở khóa cập nhật liên tục và không giới hạn tốc độ tải về.</string>
     <string name="unlock_features_plan_a_abdevice_title">Đóng góp %d NDT để mở khóa không giới hạn tốc độ tải về.</string>
     <string name="unlock_features_plan_b_title">Đóng góp %d NDT để sử dụng bản cập nhật đã được xác minh và xóa quảng cáo.</string>
@@ -79,6 +82,7 @@
     <string name="no_updates_found">Không tìm thấy bản cập nhật mới</string>
     <string name="updates_check_failed">Kiểm tra Cập Nhật không thành công. Xin vui lòng kiểm tra kết nối internet của bạn và thử lại sau.</string>
     <string name="unknown">Không rõ</string>
+    <string name="never">Không bao giờ</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>

@@ -33,6 +33,7 @@
     <string name="menu_preferences">偏好設定</string>
     <string name="menu_restore">恢複</string>
     <string name="menu_donation">捐贈</string>
+    <string name="menu_unlock_features">解鎖功能</string>
     <string name="menu_refresh">重新整理</string>
     <string name="menu_delete_update">刪除</string>
     <string name="pref_auto_delete_updates">在安裝或不推薦使用時刪除更新</string>
@@ -52,6 +53,7 @@
     <string name="nav_contribute_translate_title">翻譯</string>
     <string name="mokee_version_title">MoKee 版本</string>
     <string name="unique_id_title">唯一識別碼</string>
+    <string name="last_update_check_title">上次檢查：</string>
     <string name="incremental_updates_title">增量更新</string>
     <string name="incremental_updates_summary">取得增量更新以節省時間和流量</string>
     <string name="verified_updates_title">已驗證的更新</string>
@@ -59,6 +61,7 @@
     <string name="available_updates_title">可用的更新</string>
     <string name="no_available_updates_intro">上次檢查並未發現任何可用的更新。輕觸重新整理按鈕即可手動檢查新的更新。</string>
     <string name="pending_available_updates_intro">查找可用的更新</string>
+    <string name="unlock_features_title">功能解鎖</string>
     <string name="unlock_features_plan_a_title">捐贈 %d 人民幣，以解鎖增量更新並全速下載。</string>
     <string name="unlock_features_plan_a_abdevice_title">捐贈 %d 人民幣於解鎖全速下載。</string>
     <string name="unlock_features_plan_b_title">捐贈 %d 元人民幣，開啟驗證更新和去除 Google 廣告</string>
@@ -88,6 +91,7 @@
     <string name="updates_check_failed">更新檢查失敗。請檢查您的網際網路連線並稍後重試。</string>
     <string name="text_copied">文字已複製到剪貼簿</string>
     <string name="unknown">未知</string>
+    <string name="never">永不</string>
     <string name="alipay">支付寶</string>
     <string name="wechat">微信 (WeChat)</string>
     <string name="paypal">PayPal</string>

@@ -33,6 +33,7 @@
     <string name="menu_preferences">Beállítások</string>
     <string name="menu_restore">Visszaállítás</string>
     <string name="menu_donation">Adományozás</string>
+    <string name="menu_unlock_features">Feloldási lehetőségek</string>
     <string name="menu_refresh">Frissités</string>
     <string name="menu_delete_update">Törlés</string>
     <string name="pref_auto_delete_updates">Frissítések törlése telepítés vagy elavulás után</string>
@@ -52,6 +53,7 @@
     <string name="nav_contribute_translate_title">Fordítás</string>
     <string name="mokee_version_title">MoKee-verzió</string>
     <string name="unique_id_title">Egyedi azonosító</string>
+    <string name="last_update_check_title">Utolsó ellenőrzés</string>
     <string name="incremental_updates_title">Növekményes frissítések</string>
     <string name="incremental_updates_summary">Növekményes frissítések használata a letöltési idő és sávszélesség kímélése érdekében</string>
     <string name="verified_updates_title">Ellenőrzött frissitések</string>
@@ -59,6 +61,7 @@
     <string name="available_updates_title">Elérhető frissítések</string>
     <string name="no_available_updates_intro">Az utolsó ellenőrzés nem talált elérhető frissítést. A manuális ellenőrizéshez használja a Frissítés gombot.</string>
     <string name="pending_available_updates_intro">Az elérhető frissítések keresése</string>
+    <string name="unlock_features_title">Feloldási lehetőségek</string>
     <string name="unlock_features_plan_a_title">%d kínai jüan adományozásával megnyílik Ön előtt a növekményes frissítések teljes sebességű letöltésének lehetősége.</string>
     <string name="unlock_features_plan_a_abdevice_title">Adományozzon %d jüant, hogy teljes sebességgel tölthessen le.</string>
     <string name="unlock_features_plan_b_title">%d kínai jüan adományozásával ellenőrzött frissítésekhez juthat és eltűnnek a Google Reklámok.</string>
@@ -88,6 +91,7 @@
     <string name="updates_check_failed">Nem sikerült a frissítések keresése. Ellenőrizze internetkapcsolatot, majd próbálja újra.</string>
     <string name="text_copied">A szöveg a vágólapra másolódott.</string>
     <string name="unknown">Ismeretlen</string>
+    <string name="never">Soha</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
