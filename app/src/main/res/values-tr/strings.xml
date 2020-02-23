@@ -33,6 +33,7 @@
     <string name="menu_donation">Bağış</string>
     <string name="menu_refresh">Yenile</string>
     <string name="menu_delete_update">Sil</string>
+    <string name="menu_open_link">Tarayıcıda Aç</string>
     <string name="pref_auto_delete_updates">Yüklendiğinde veya kullanımdan kaldırıldığında güncellemeleri sil</string>
     <string name="pref_ab_perf_mode">Güncelleme sürecini önceliklendir</string>
     <string name="pref_mobile_data_warning">Mobil veri uyarısı</string>
@@ -90,6 +91,10 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal(USD)</string>
     <string name="activity_not_found">Uygulama yüklü değil.</string>
+    <string name="browser_not_found">Tarayıcı yüklü değil.</string>
+    <string name="chrome_not_found">Lütfen önce Google Chrome\'u yükleyin.</string>
+    <string name="mokeepay_not_found">Yanlışlıkla MoKeePay uygulamasını sildiniz, lütfen tam güncelleme ile geri yükleyin.</string>
+    <string name="ad_blocker_detected">Görünüşe göre reklam engelleyici kullanıyorsunuz, uygulamamızı beyaz listeye alın.</string>
     <string name="new_updates_channel_title">Yeni güncellemeler</string>
     <string name="new_updates_found_title">Yeni sistem güncellemeleri</string>
     <string name="ongoing_channel_title">Devam eden indirmeler</string>
@@ -116,6 +121,8 @@
     <string name="dialog_battery_low_title">Düşük pil</string>
     <string name="dialog_battery_low_message_pct">Pil seviyesi çok düşük, devam etmek için en az <xliff:g id="percent_discharging">%1$d</xliff:g>%% pil gereklidir, <xliff:g id="percent_charging">%2$d</xliff:g>%% şarj ediliyor.</string>
     <string name="apply_update_dialog_title">Güncellemeyi uygula</string>
+    <string name="apply_update_dialog_message">Şuanda <xliff:g id="update_name">%1$s</xliff:g> ye güncelleneceksiniz. Eğer <xliff:g id="ok">%2$s</xliff:g>\'a basarsanız, güncellemeyi yapmak için cihaz kendini kurtarma modunda yeniden başlatacak.\n\nYama Notları:\n1.Bu güncelleme kişisel verilerinizi silmeyecek, fakat güncellemeden önce önemli verilerinizi yedeklemenizi tavsiye ederiz.\n2. Bu özellik uyumlu bir Kurtarma gerektirir veya güncellemelerin manuel olarak yüklenmesi gerekir.\n3. Eğer bir hata olursa \"Forum\" sayfamıza bekleriz.</string>
+    <string name="apply_update_dialog_message_ab">Şuanda <xliff:g id="update_name">%1$s</xliff:g> ye güncelleneceksiniz. Eğer <xliff:g id="ok">%2$s</xliff:g>\'a basarsanız, cihaz indirmeye arkaplan\'da başlayacak.Tamamlandığında kendini yeniden başlatcak.\n\nYama Notları:\n1.Bu güncelleme kişisel verilerinizi silmeyecek, fakat güncellemeden önce önemli verilerinizi yedeklemenizi tavsiye ederiz.\n2. Eğer sorunuz varsa \"Forum\" sayfamıza bekleriz.</string>
     <string name="no_storage_permissions">Depolama izni gerekiyor</string>
     <string name="no_phone_permissions">Telefon izni gerekiyor</string>
 </resources>
