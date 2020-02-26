@@ -17,11 +17,15 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <plurals name="new_updates_found_content">
-        <item quantity="one"><xliff:g id="count">%d</xliff:g> värskendus on allalaadimiseks saadaval</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> värskendust on allalaadimiseks saadaval</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> aktualizacja dostępna do pobrania</item>
+        <item quantity="few"><xliff:g id="count">%d</xliff:g> aktualizacje dostępne do pobrania</item>
+        <item quantity="many"><xliff:g id="count">%d</xliff:g> aktualizacje dostępne do pobrania</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> aktualizacje dostępne do pobrania</item>
     </plurals>
     <plurals name="new_updates_found_additional_count">
-        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> rohkem</item>
-        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> rohkem</item>
+        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> więcej</item>
+        <item quantity="few">+ <xliff:g id="count">%d</xliff:g> więcej</item>
+        <item quantity="many">+ <xliff:g id="count">%d</xliff:g> więcej</item>
+        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> więcej</item>
     </plurals>
 </resources>
