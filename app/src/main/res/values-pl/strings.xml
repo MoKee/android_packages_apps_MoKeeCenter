@@ -19,6 +19,7 @@
     <string name="app_name">Centrum MoKee</string>
     <string name="navigation_drawer_open">Otwórz szufladę naiwigacji</string>
     <string name="navigation_drawer_close">Zamknij szufladę naiwigacji</string>
+    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Android Community Operating System</string>
     <string name="nav_header_desc">Pasek nawigacji</string>
     <string name="action_faq">Pytania&amp;odpowiedzi</string>
@@ -33,6 +34,7 @@
     <string name="menu_donation">Darowizna</string>
     <string name="menu_refresh">Odśwież</string>
     <string name="menu_delete_update">Usuń</string>
+    <string name="menu_open_link">Otwórz w przeglądarce</string>
     <string name="pref_auto_delete_updates">Usuń aktualizacje po zainstalowaniu lub wycofaniu</string>
     <string name="pref_ab_perf_mode">Nadaj wyższy priorytet procesowi aktualizacji</string>
     <string name="pref_mobile_data_warning">Ostrzeżenie w przypadku danych mobilnych</string>
@@ -56,6 +58,7 @@
     <string name="verified_updates_summary">Pokaż tylko te aktualizacje, które zostały sprawdzone przez innych</string>
     <string name="available_updates_title">Dostępne aktualizacje</string>
     <string name="no_available_updates_intro">Brak dostępnej aktualizacji po ostatnim sprawdzaniu. Aby sprawdzić dostępność ręcznie, naciśnij \"Odśwież\".</string>
+    <string name="out_of_date_updates_intro">Obecna wersja jest nieaktualna, aby zastosować aktualizacje przyrostowe. Aby zaktualizować, pobierz pełny ROM.</string>
     <string name="pending_available_updates_intro">Wyszukaj dostępne aktualizacje</string>
     <string name="unlock_features_plan_a_title">Przekaż %d CNY, aby odblokować aktualizacje przyrostowe i pobieranie z pełną prędkością.</string>
     <string name="unlock_features_plan_a_abdevice_title">Podaruj %d CNY aby odblokować pełną prędkość pobierania.</string>
@@ -69,6 +72,7 @@
     <string name="update_type_title">Rodzaj aktualizacji</string>
     <string name="update_type_release">Wydanie</string>
     <string name="update_type_nightly">Nocne</string>
+    <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Zapis darowizny</string>
     <string name="donation_record_without_rankings">Przekazałeś w sumie %1$d CNY.</string>
     <string name="donation_record_with_rankings">Przekazałeś w sumie %1$d juanów, więcej niż %2$s przekazujących dotację. Miejsce numer %3$d!</string>
@@ -89,6 +93,10 @@
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikacja nie jest zainstalowana.</string>
+    <string name="browser_not_found">Przeglądarka nie jest zainstalowana.</string>
+    <string name="chrome_not_found">Proszę najpierw zainstalować Google Chrome.</string>
+    <string name="mokeepay_not_found">Pomyślnie usunąłeś aplikację MoKeePay przywróć poprzez pełną aktualizację.</string>
+    <string name="ad_blocker_detected">Wygląda na to, że używasz blokera reklam, proszę dodać do białej listy naszą aplikację.</string>
     <string name="new_updates_channel_title">Nowe aktualizacje</string>
     <string name="new_updates_found_title">Nowe aktualizacje systemu</string>
     <string name="ongoing_channel_title">Trwające pobierania</string>
@@ -102,6 +110,7 @@
     <string name="download_remaining">&lt;xliff:g example=\"3 minuty\" id=\"trwanie&gt;%s&lt;/xliff:g&gt; pozostały</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Pobieranie w toku</string>
+    <string name="download_limited_speed">Pobieranie z ograniczoną prędkością, proszę wesprzyj projekt za pomocą 30 CNY aby cieszyć się pełną szybkością.</string>
     <string name="install_already_running">Instalacja jest już uruchomiona</string>
     <string name="installing_update_notification">Instalowanie pakietu aktualizacji</string>
     <string name="installing_update_finished_notification">Zainstalowano aktualizację</string>
@@ -114,6 +123,8 @@
     <string name="dialog_battery_low_title">Niski stan baterii</string>
     <string name="dialog_battery_low_message_pct">Poziom naładowania baterii jest zbyt niski, musisz mieć co najmniej <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterii lub <xliff:g id="percent_charging">%2$d</xliff:g>%% w trakcie ładowania.</string>
     <string name="apply_update_dialog_title">Zatwierdź aktualizację</string>
+    <string name="apply_update_dialog_message">Zamierzasz zaktualizować do <xliff:g id="update_name">%1$s</xliff:g>. Jeśli naciśniesz <xliff:g id="ok">%2$s</xliff:g>, urządzenie zrestartuje się w trybie recovery aby zainstalować aktualizację.\n\nNotatki aktualizacyjne:\n1. Ta aktualizacja nie usunie Twoich danych osobowych, ale zalecamy wykonanie kopii zapasowej wszelkich ważnych danych przed aktualizacją.\nTa funkcja wymaga kompatybilnego recovery lub aktualizacje będą musiały być zainstalowane ręcznie.\n3. Jeśli napotkasz jakieś problemy, możesz przejść na \"Forum\".</string>
+    <string name="apply_update_dialog_message_ab">Zamierzasz zaktualizować do <xliff:g id="update_name">%1$s</xliff:g>. Jeśli naciśniesz <xliff:g id="ok">%2$s</xliff:g>, urządzenie rozpocznie instalację w tle. Po zakończeniu, zostaniesz poproszony o ponowne uruchomienie.\n\nNotatki aktualizacyjne:\n1. Ta aktualizacja nie usunie Twoich danych osobowych, ale zalecamy wykonanie kopii zapasowej jakichkolwiek ważnych danych przed aktualizacją.\n2. Jeśli napotkasz jakieś problemy, możesz przejść na \"Forum\".</string>
     <string name="no_storage_permissions">Wymagane jest uprawnienie \'Pamięć\'</string>
     <string name="no_phone_permissions">Wymagane jest uprawnienie \'Telefon\'</string>
 </resources>

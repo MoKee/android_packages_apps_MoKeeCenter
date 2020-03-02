@@ -19,6 +19,7 @@
     <string name="app_name">MoKee Merkezi</string>
     <string name="navigation_drawer_open">Gezinme çekmecesini aç</string>
     <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
+    <string name="nav_header_title">MoKee Açık Kaynak</string>
     <string name="nav_header_subtitle">Android Topluluğu İşletim Sistemi</string>
     <string name="nav_header_desc">Gezinme başlığı</string>
     <string name="action_faq">Soru ve Cevap</string>
@@ -57,6 +58,7 @@
     <string name="verified_updates_summary">Yalnızca diğer kullanıcılar tarafından doğrulanan güncellemeleri görüntüleyin</string>
     <string name="available_updates_title">Mevcut güncellemeler</string>
     <string name="no_available_updates_intro">Son kontrolde güncelleme bulunamadı. Yeni güncellemeleri elle kontrol etmek için Yenile tuşunu kullanın.</string>
+    <string name="out_of_date_updates_intro">Kullandığınız versiyon, yeni güncellemeleri yükleyemeyecek kadar eski. Güncellemek için yeni romun tam sürümünü indirin. </string>
     <string name="pending_available_updates_intro">Mevcut güncellemeleri arıyor</string>
     <string name="unlock_features_plan_a_title">Artımlı güncellemeleri açmak ve tam hızda indirmek için %d CNY\'ye bağış yapın.</string>
     <string name="unlock_features_plan_a_abdevice_title">İndirme kilidini açmak için %d CNY bağış yapın.</string>

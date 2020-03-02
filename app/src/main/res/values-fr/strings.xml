@@ -107,7 +107,7 @@
     <string name="download_completed_notification">Téléchargement terminé</string>
     <string name="download_verification_failed_notification">Impossible de vérifier la mise à jour du paquet, s’il vous plaît télécharger à nouveau</string>
     <string name="download_file_not_found_notification">Lien de téléchargement a expiré, s’il vous plaît cliquez sur le bouton actualiser et essayez à nouveau</string>
-    <string name="download_remaining"><xliff:g example="3 minutes" id="durée">%s</xliff:g> gauche</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="durée">%s</xliff:g> restantes</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Un téléchargement est déjà en cours</string>
     <string name="download_limited_speed">Téléchargement à vitesse limitée, faites un don de %d CNY pour profiter de la vitesse max.</string>
