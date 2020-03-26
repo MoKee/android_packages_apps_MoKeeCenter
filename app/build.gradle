@@ -46,7 +46,7 @@ android {
         }
         debug {
             multiDexEnabled = true
-            minifyEnabled false
+            minifyEnabled true
             signingConfig signingConfigs.release
         }
     }
@@ -71,7 +71,7 @@ dependencies {
     implementation 'cn.jiguang.sdk:jcore:2.2.8'
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
     implementation 'com.google.android.material:material:1.1.0-beta01'
-    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.google.firebase:firebase-ads:19.0.1'
     implementation 'com.google.firebase:firebase-core:17.2.3'
     implementation 'com.google.firebase:firebase-perf:19.0.5'
