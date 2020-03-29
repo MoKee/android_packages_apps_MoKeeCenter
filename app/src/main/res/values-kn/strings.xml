@@ -19,6 +19,7 @@
     <string name="app_name">Mokee ಕೇಂದ್ರ</string>
     <string name="navigation_drawer_open">ದಿಕ್ಸೂಚಿ ಡ್ರಾಯರ್ ತೆರೆಯಿರಿ</string>
     <string name="navigation_drawer_close">ದಿಕ್ಸೂಚಿ ಡ್ರಾಯರ್ ಮುಚ್ಚಿರಿ</string>
+    <string name="nav_header_title">MoKee ಮುಕ್ತ ತಂತ್ರಾಂಶ</string>
     <string name="nav_header_subtitle">ಅಂಡ್ರಾಯ್ಡ್ ಸಮುದಾಯ ಕಾರ್ಯನಿರ್ವಹಿಸುವ ವ್ಯವಸ್ಥೆ</string>
     <string name="nav_header_desc">ದಿಕ್ಸೂಚಿ ಪಟ್ಟಿ</string>
     <string name="action_faq">ಪ್ರ&amp;ಉ</string>
@@ -104,4 +105,5 @@
     <string name="dialog_battery_low_title">ಕಡಿಮೆ ಬ್ಯಾಟರಿ</string>
     <string name="dialog_battery_low_message_pct">ಬ್ಯಾಟರಿ ಮಟ್ಟವು ತುಂಬ ಕಡಿಮೆ ಇದೆ, ಮುಂದುವರೆಯಲು, ಒಂದು ವೇಳೆ ಚಾರ್ಜ ಮಾಡುತ್ತಿದ್ದಲ್ಲಿ ನಿಮಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ <xliff:g id="percent_discharging"> ಬ್ಯಾಟರಿಯ ಅಗತ್ಯವಿದೆ%1$d</xliff:g>%%<xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
     <string name="apply_update_dialog_title">ನವೀಕರಣ ಅನ್ವಯಿಸಿ</string>
+    <string name="no_storage_permissions">ಸಂಗ್ರಹಣಾ ಪರವಾನಗಿ ಅಗತ್ಯವಿದೆ</string>
 </resources>
