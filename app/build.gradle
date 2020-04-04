@@ -6,13 +6,13 @@ def platformVersion = 10
 
 android {
     compileSdkVersion 29
-    buildToolsVersion = '28.0.3'
+    buildToolsVersion = '29.0.3'
     defaultConfig {
         applicationId "com.mokee.center"
         minSdkVersion 27
         targetSdkVersion 29
         versionCode increasedVersionCode()
-        versionName "2.6.1." + platformVersion
+        versionName "2.6.2." + platformVersion
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
@@ -70,10 +70,11 @@ dependencies {
     implementation 'cn.jiguang.sdk:jpush:3.5.4'
     implementation 'cn.jiguang.sdk:jcore:2.2.8'
     implementation 'com.crashlytics.sdk.android:crashlytics:2.10.1'
-    implementation 'com.google.android.material:material:1.1.0-beta01'
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
     implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'com.google.firebase:firebase-ads:19.0.1'
-    implementation 'com.google.firebase:firebase-core:17.2.3'
+    implementation 'com.google.firebase:firebase-analytics:17.3.0'
+    implementation 'com.google.firebase:firebase-core:17.3.0'
     implementation 'com.google.firebase:firebase-perf:19.0.5'
     implementation 'com.just.agentweb:agentweb:4.1.2'
     implementation 'com.lcodecorex:tkrefreshlayout:1.0.7'
