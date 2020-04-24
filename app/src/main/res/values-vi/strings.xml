@@ -28,11 +28,13 @@
     <string name="action_pause">Tạm ngừng</string>
     <string name="action_resume">Tiếp tục lại</string>
     <string name="action_download">Tải xuống</string>
+    <string name="action_reboot">Khởi động lại</string>
     <string name="menu_preferences">Tùy chỉnh</string>
     <string name="menu_restore">Khôi phục</string>
     <string name="menu_donation">Đóng góp</string>
     <string name="menu_refresh">Tải lại</string>
     <string name="menu_delete_update">Xóa</string>
+    <string name="menu_open_link">Mở trong trình duyệt</string>
     <string name="pref_auto_delete_updates">Xóa bản cập nhật sau khi cài đặt</string>
     <string name="pref_ab_perf_mode">Ưu tiên quá trình cập nhật</string>
     <string name="pref_mobile_data_warning">Cảnh báo nếu sử dụng dữ liệu di động</string>
@@ -56,7 +58,13 @@
     <string name="verified_updates_summary">Chỉ hiện các bản cập nhật được những người dùng khác xác nhận</string>
     <string name="available_updates_title">Bản cập nhật khả dụng</string>
     <string name="no_available_updates_intro">Lần kiểm tra cuối cùng không tìm thấy bất kỳ bản cập nhật nào. Để kiểm tra cập nhật mới một cách thủ công, sử dụng nút Tải lại.</string>
+    <string name="out_of_date_updates_intro">Phiên bản hiện tại đã hết hạn để áp dụng các bản cập nhật gia tăng. Để cập nhật, vui lòng tải xuống ROM đầy đủ thay thế.</string>
     <string name="pending_available_updates_intro">Kiểm tra cập nhật có sẵn</string>
+    <string name="unlock_features_plan_a_title">Đóng góp %d CNY để mở khóa cập nhật liên tục và không giới hạn tốc độ tải về.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Đóng góp %d CNY để mở khóa không giới hạn tốc độ tải về.</string>
+    <string name="unlock_features_plan_b_title">Đóng góp %d CNY để sử dụng bản cập nhật đã được xác minh và xóa quảng cáo.</string>
+    <string name="unlock_features_plan_unlimited_title">Quyên góp %d CNY để mở khóa các bản cập nhật gia tăng, tải xuống ở tốc độ tối đa, các bản cập nhật được xác minh và xóa Quảng cáo Google.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Quyên góp %d CNY để mở khóa tải xuống ở tốc độ tối đa, cập nhật được xác minh và xóa Quảng cáo Google.</string>
     <string name="unlock_features_request_summary">(có sẵn sau khi tặng %d CNY)</string>
     <string name="unlock_features_pending_summary">(tặng %1$d CNY, có sẵn cho đời sau đợt quyên góp %2$d CNY hơn)</string>
     <string name="incremental_updates_supported_full_summary">Gia tăng Cập Nhật có thể tiết kiệm %s</string>
@@ -64,24 +72,59 @@
     <string name="update_type_title">Kiểu cập nhật</string>
     <string name="update_type_release">Ổn định</string>
     <string name="update_type_nightly">Hàng ngày</string>
+    <string name="update_type_premium">Cao cấp</string>
     <string name="donation_record_title">Lịch sử đóng góp</string>
     <string name="donation_record_without_rankings">Bạn đã đóng góp tổng cộng %1$d NDT.</string>
     <string name="donation_record_with_rankings">Bạn tặng tổng cộng của CNY %1$d, nhiều hơn %2$s của các nhà tài trợ toàn cầu, xếp hạng Thứ %3$d!</string>
     <string name="donation_record_none">Bạn không ủng hộ</string>
+    <string name="donation_restore_success">Hồ sơ quyên góp đã được khôi phục thành công!</string>
+    <string name="donation_restore_failure">Vui lòng kiểm tra kết nối internet của bạn và thử lại sau.</string>
+    <string name="donation_restore_not_found">Không tìm thấy hồ sơ quyên góp.</string>
     <string name="donation_payment_success">Cảm ơn sự ủng hộ của bạn!</string>
     <string name="donation_dialog_title">Ủng hộ Dự án nguồn mở MoKee</string>
+    <string name="donation_dialog_message">Mã nguồn mở MoKee là một dự án hoàn toàn phi lợi nhuận sinh ra từ sở thích và đam mê. Để duy trì dự án này, chúng tôi phải tự bỏ tiền ra hầu hết thời gian hoặc dựa vào sự đóng góp và quảng cáo. Đóng góp của bạn có thể giúp giảm tải tài chính của chúng tôi và duy trì sự phát triển trong tương lai!</string>
+    <string name="donation_dialog_message_extra">Sau khi đóng góp, chúng tôi sẽ kích hoạt một số tính năng chỉ dành cho các nhà tài trợ trọn đời!</string>
+    <string name="updates_found">Tìm thấy cập nhật mới</string>
     <string name="no_updates_found">Không tìm thấy bản cập nhật mới</string>
     <string name="updates_check_failed">Kiểm tra Cập Nhật không thành công. Xin vui lòng kiểm tra kết nối internet của bạn và thử lại sau.</string>
+    <string name="text_copied">Đã chép vào bộ nhớ tạm.</string>
     <string name="unknown">Không xác định</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Ứng dụng chưa được cài đặt.</string>
+    <string name="browser_not_found">Trình duyệt chưa được cài đặt.</string>
+    <string name="chrome_not_found">Vui lòng cài đặt Google Chrome trước.</string>
+    <string name="mokeepay_not_found">Bạn đã vô tình xóa ứng dụng MoKeePay, vui lòng khôi phục qua cập nhật đầy đủ.</string>
+    <string name="ad_blocker_detected">Có vẻ như bạn đang sử dụng trình chặn quảng cáo, vui lòng liệt kê danh sách ứng dụng của chúng tôi.</string>
     <string name="new_updates_channel_title">Bản cập nhật mới</string>
+    <string name="new_updates_found_title">Cập nhật hệ thống mới</string>
+    <string name="ongoing_channel_title">Đang bắt đầu tải xuống</string>
+    <string name="downloading_notification">Đang tải xuống</string>
+    <string name="download_starting_notification">Đang bắt đầu tải xuống</string>
+    <string name="download_paused_notification">Đã tạm dừng tải xuống</string>
+    <string name="download_waiting_network_notification">Đang chờ kết nối mạng</string>
+    <string name="download_completed_notification">Tải xuống hoàn tất</string>
+    <string name="download_verification_failed_notification">Không thể xác minh gói cập nhật, vui lòng tải lại</string>
+    <string name="download_file_not_found_notification">Liên kết tải xuống đã hết hạn, vui lòng nhấp vào nút Làm mới và thử lại</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> còn lại</string>
+    <string name="download_speed">%1$s, %2$s/giây</string>
     <string name="download_already_running">Tải xuống đang chạy</string>
+    <string name="download_limited_speed">Tải xuống ở tốc độ giới hạn, vui lòng tặng %d CNY để tận hưởng tốc độ tối đa.</string>
+    <string name="install_already_running">Bản cập nhật vẫn đang chạy</string>
+    <string name="installing_update_notification">Đang cài đặt gói cập nhật</string>
+    <string name="installing_update_finished_notification">Đã cài đặt bản cập nhật</string>
+    <string name="finalizing_package_notification">Đang hoàn tất gói cài đặt</string>
+    <string name="preparing_ota_first_boot_notification">Đang chuẩn bị cho lần khởi động đầu tiên</string>
+    <string name="dialog_prepare_zip_message_notification">Chuẩn bị cập nhật sơ bộ</string>
     <string name="update_on_mobile_data_title">Cảnh báo</string>
+    <string name="update_on_mobile_data_message">Bạn sắp tải xuống một gói cập nhật bằng dữ liệu di động, có khả năng gây ra việc sử dụng dữ liệu cao. Bạn có muốn tiến hành không?</string>
     <string name="checkbox_mobile_data_warning">Không hiện lại</string>
+    <string name="dialog_battery_low_title">Pin yếu</string>
+    <string name="dialog_battery_low_message_pct">Mức pin quá thấp, bạn cần tối thiểu <xliff:g id="percent_discharging">%1$d</xliff:g>%% pin để tiếp tục, <xliff:g id="percent_charging">%2$d</xliff:g>%% nếu đang sạc.</string>
     <string name="apply_update_dialog_title">Áp dụng Cập Nhật</string>
+    <string name="apply_update_dialog_message">Bạn sắp nâng cấp lên <xliff:g id="update_name">%1$s</xliff:g>. Nếu bạn nhấn <xliff:g id="ok">%2$s</xliff:g>, thiết bị sẽ tự khởi động lại trong chế độ khôi phục để cài đặt bản cập nhật.\n\nGhi chú:\n1. Bản cập nhật này sẽ không xóa dữ liệu cá nhân của bạn, nhưng chúng tôi khuyên bạn nên sao lưu mọi dữ liệu quan trọng trước khi cập nhật.\n2. Tính năng này yêu cầu Khôi phục tương thích hoặc các bản cập nhật sẽ cần được cài đặt thủ công.\n3. Nếu bạn gặp phải bất kỳ vấn đề nào, bạn có thể vào \"Diễn đàn\".</string>
+    <string name="apply_update_dialog_message_ab">Bạn sắp nâng cấp lên <xliff:g id="update_name">%1$s</xliff:g>. Nếu bạn nhấn <xliff:g id="ok">%2$s</xliff:g>, thiết bị sẽ bắt đầu cài đặt trong nền. Sau khi hoàn thành, bạn sẽ được nhắc khởi động lại.\n\nChú thích:\n1. Bản cập nhật này sẽ không xóa dữ liệu cá nhân của bạn, nhưng chúng tôi khuyên bạn nên sao lưu mọi dữ liệu quan trọng trước khi cập nhật.\n2. Nếu bạn gặp phải bất kỳ vấn đề nào, bạn có thể vào \"Diễn đàn\".</string>
     <string name="no_storage_permissions">Yêu cầu cấp quyền bộ nhớ</string>
     <string name="no_phone_permissions">Yêu cầu cấp quyền hạn</string>
 </resources>
