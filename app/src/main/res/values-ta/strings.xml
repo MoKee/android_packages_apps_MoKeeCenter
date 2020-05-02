@@ -59,6 +59,7 @@
     <string name="activity_not_found">செயலி நிறுவப்படவில்லை.</string>
     <string name="new_updates_channel_title">புதிய மேம்பாடு</string>
     <string name="download_already_running">பதிவிறக்கம் இயங்கிக்கொண்டிருக்கிறது</string>
+    <string name="update_on_mobile_data_title">எச்சரிக்கை</string>
     <string name="apply_update_dialog_title">மேம்படுத்தல் விண்ணப்பிக்க</string>
     <string name="no_storage_permissions">சேமிப்பக அனுமதித் தேவை</string>
 </resources>
