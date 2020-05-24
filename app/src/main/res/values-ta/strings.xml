@@ -20,11 +20,16 @@
     <string name="navigation_drawer_open">வழிசெலுத்தல் பட்டியைத் திற</string>
     <string name="navigation_drawer_close">வழிசெலுத்தல் பட்டியை மூடு</string>
     <string name="nav_header_subtitle">Android சமூக இயங்குத்தளம்</string>
+    <string name="nav_header_desc">வழிசெல்லுதல் தலைப்பு</string>
     <string name="action_next">அடுத்து</string>
+    <string name="action_pause">இடைநிறுத்து</string>
+    <string name="action_resume">தொடரவும்</string>
     <string name="action_download">பதிவிறக்கம்</string>
+    <string name="menu_preferences">விருப்பங்கள்</string>
     <string name="menu_restore">மீட்டெடுத்தல்</string>
     <string name="menu_refresh">புதுப்பி</string>
     <string name="menu_delete_update">நீக்கு</string>
+    <string name="menu_open_link">உலாவியில் திற</string>
     <string name="nav_main_forum_title">மன்றம்</string>
     <string name="nav_main_guide_title">கையேடு</string>
     <string name="nav_main_source_title">நிரல் மூலம்</string>
@@ -57,9 +62,12 @@
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">செயலி நிறுவப்படவில்லை.</string>
+    <string name="browser_not_found">உலாவி நிறுவப்படவில்லை</string>
+    <string name="chrome_not_found">தயவுசெய்து முதலில் Google Chromeஐ நிறுவுங்கள்</string>
     <string name="new_updates_channel_title">புதிய மேம்பாடு</string>
     <string name="download_already_running">பதிவிறக்கம் இயங்கிக்கொண்டிருக்கிறது</string>
     <string name="update_on_mobile_data_title">எச்சரிக்கை</string>
+    <string name="checkbox_mobile_data_warning">மீண்டும் காட்டாதே</string>
     <string name="apply_update_dialog_title">மேம்படுத்தல் விண்ணப்பிக்க</string>
     <string name="no_storage_permissions">சேமிப்பக அனுமதித் தேவை</string>
 </resources>

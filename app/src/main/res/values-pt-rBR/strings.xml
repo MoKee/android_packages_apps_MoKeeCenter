@@ -19,6 +19,7 @@
     <string name="app_name">Central MoKee</string>
     <string name="navigation_drawer_open">Abrir gaveta de navegação</string>
     <string name="navigation_drawer_close">Fechar gaveta de navegação</string>
+    <string name="nav_header_title">MoKee código aberto</string>
     <string name="nav_header_subtitle">Sistema operacional da Comunidade Android</string>
     <string name="nav_header_desc">Barra de navegação</string>
     <string name="action_faq">P&amp;R</string>
