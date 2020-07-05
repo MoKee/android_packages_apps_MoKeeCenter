@@ -19,6 +19,7 @@
     <string name="app_name">Centro de Mokee</string>
     <string name="navigation_drawer_open">Abra el cajón navegación</string>
     <string name="navigation_drawer_close">Cierre el cajón navegación</string>
+    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Sistema operativo de la Comunidad Android</string>
     <string name="nav_header_desc">Barra de navegación</string>
     <string name="action_faq">Preguntas &amp; Respuestas</string>
