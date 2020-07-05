@@ -19,6 +19,7 @@
     <string name="app_name">MoKee 中心</string>
     <string name="navigation_drawer_open">開啟導航欄</string>
     <string name="navigation_drawer_close">關閉導航欄</string>
+    <string name="nav_header_title">MoKee 開放原始碼</string>
     <string name="nav_header_subtitle">Android 社區作業系統</string>
     <string name="nav_header_desc">導航標頭</string>
     <string name="action_faq">Q&amp;A</string>

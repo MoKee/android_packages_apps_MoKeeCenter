@@ -16,15 +16,50 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">MoKee Centar</string>
+    <string name="navigation_drawer_open">Otvori navigacijsku ladicu</string>
+    <string name="navigation_drawer_close">Zatvori izbornik za navigaciju</string>
+    <string name="nav_header_subtitle">Android Community Operating System</string>
+    <string name="nav_header_desc">Navigacijsko zaglavlje</string>
+    <string name="action_faq">Q&amp;A</string>
+    <string name="action_solution">Rješenje</string>
     <string name="action_next">Sljedeći</string>
     <string name="action_pause">Pauziraj</string>
     <string name="action_resume">Nastavi</string>
     <string name="action_download">Preuzmi</string>
+    <string name="menu_preferences">Preference</string>
     <string name="menu_restore">Vrati</string>
+    <string name="menu_donation">Donacije</string>
     <string name="menu_delete_update">Izbriši</string>
+    <string name="donation_dialog_message_extra">Nakon darivanja aktivirat ćemo određene značajke koje su samo za donatore dostupne u životu!</string>
+    <string name="updates_found">Pronađena su nova ažuriranja</string>
+    <string name="no_updates_found">Nema novi ažuriranja</string>
+    <string name="updates_check_failed">Pretraga ažuriranja neuspješna. Molimo vas provjerite vašu internetsku vezu i pokušajte ponovno kasnije.</string>
+    <string name="text_copied">Tekst kopiran u međuspremnik.</string>
     <string name="unknown">Nepoznato</string>
+    <string name="alipay">AliPay</string>
+    <string name="wechat">WeChat</string>
+    <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikacija nije instalirana.</string>
+    <string name="new_updates_channel_title">Nova ažuriranja</string>
+    <string name="new_updates_found_title">Ažuriranje sustava</string>
+    <string name="ongoing_channel_title">Preuzimanja u tijeku</string>
+    <string name="downloading_notification">Preuzimanja</string>
+    <string name="download_starting_notification">Početak preuzimanja</string>
+    <string name="download_paused_notification">Preuzimanje pauzirano</string>
+    <string name="download_waiting_network_notification">Čekanje na mrežu</string>
+    <string name="download_completed_notification">Preuzimanje je završeno</string>
+    <string name="download_verification_failed_notification">Provjera paketa za ažuriranje nije uspjela, preuzmite ponovo</string>
+    <string name="download_file_not_found_notification">Link za preuzimanje je istekao, kliknite gumb Osvježi i pokušajte ponovo</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> left</string>
+    <string name="download_speed">%1$s, %2$s/s</string>
+    <string name="download_already_running">Preuzimanje je već u tijeku</string>
     <string name="update_on_mobile_data_title">Upozorenje</string>
+    <string name="update_on_mobile_data_message">Upravo ćete preuzeti paket ažuriranja pomoću mobilnih podataka koji će vjerojatno uzrokovati visoku upotrebu podataka. Želite li nastaviti?</string>
     <string name="checkbox_mobile_data_warning">Ne prikazuj ponovno</string>
+    <string name="dialog_battery_low_title">Slaba baterija</string>
+    <string name="dialog_battery_low_message_pct">Razina energije u bateriji je preniska, treba vam barem <xliff:g id="percent_discharging">%1$d</xliff:g>%% baterije za nastavak, <xliff:g id="percent_charging">%2$d</xliff:g>%% ako se puni.</string>
+    <string name="apply_update_dialog_title">Primijeni ažuriranje</string>
     <string name="no_storage_permissions">Potrebno je dopuštenje za prostor za pohranu</string>
+    <string name="no_phone_permissions">Potrebno je dopuštenje telefona.</string>
 </resources>
