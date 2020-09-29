@@ -21,6 +21,10 @@
             "package_name": "com.mokee.center",
             "certificate_hash": "411da1863f3be8609807fb3f93dd7357a53b94a2"
           }
+        },
+        {
+          "client_id": "362482270164-vot2kd4iu4pqik8qgogt8qv7808uhbah.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [
