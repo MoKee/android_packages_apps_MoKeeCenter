@@ -13,7 +13,7 @@ android {
         minSdkVersion 27
         targetSdkVersion 29
         versionCode increasedVersionCode()
-        versionName "2.7.1." + platformVersion
+        versionName "2.7.2." + platformVersion
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
 
