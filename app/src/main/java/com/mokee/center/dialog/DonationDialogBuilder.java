@@ -127,7 +127,7 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
                         IntentUtil.sendPaymentRequest(mActivity, "alipay", title, String.valueOf(price), "donation");
                         break;
                     case R.id.wechat:
-                        if (!MoKeeUtils.isApkInstalledAndEnabled("com.tencent.mm", getContext())) {
+                        if (!MoKeeUtils.isApkInstalledAndEnabled(getContext(), "com.tencent.mm")) {
                             resId = R.string.activity_not_found;
                             throw new ActivityNotFoundException();
                         } else {
@@ -135,7 +135,7 @@ public class DonationDialogBuilder extends AlertDialog.Builder {
                         }
                         break;
                     case R.id.paypal:
-                        if (!MoKeeUtils.isApkInstalledAndEnabled("com.android.chrome", getContext())) {
+                        if (!MoKeeUtils.isApkInstalledAndEnabled(getContext(), "com.android.chrome")) {
                             resId = R.string.chrome_not_found;
                             throw new ActivityNotFoundException();
                         } else {
