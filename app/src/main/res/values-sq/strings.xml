@@ -23,4 +23,5 @@
     <string name="menu_delete_update">Fshi</string>
     <string name="activity_not_found">Aplikacioni nuk është i instaluar.</string>
     <string name="update_on_mobile_data_title">Kujdes</string>
+    <string name="updates_found">​​U gjetën azhurnime të reja</string>
 </resources>
