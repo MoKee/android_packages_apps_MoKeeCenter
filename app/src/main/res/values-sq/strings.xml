@@ -21,6 +21,7 @@
     <string name="navigation_drawer_close">Mbyll sirtarin e navigimit</string>
     <string name="nav_header_subtitle">Sistemi operativ i komunitetit Android</string>
     <string name="nav_header_desc">Titulli i navigimit</string>
+    <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Zgjidhje</string>
     <string name="action_next">Vazhdo</string>
     <string name="action_pause">Ndërprit</string>
@@ -28,6 +29,7 @@
     <string name="action_download">Shkarko</string>
     <string name="menu_preferences">Preferncat</string>
     <string name="menu_restore">Rikthe</string>
+    <string name="menu_donation">Dhuruesit</string>
     <string name="menu_refresh">Rifresko</string>
     <string name="menu_delete_update">Fshi</string>
     <string name="pref_auto_delete_updates">Fshini azhurnimet kur instalohen ose amortizohen</string>
@@ -39,6 +41,9 @@
     <string name="nav_main_bug_reports_title">Raportimi i problemeve</string>
     <string name="nav_main_team_title">Ekipi:</string>
     <string name="nav_social_title">Mediat sociale</string>
+    <string name="nav_social_telegram_title">Telegram</string>
+    <string name="nav_social_weibo_title">Weibo</string>
+    <string name="nav_social_qqchat_title">QQ Group</string>
     <string name="nav_contribute_title">Kontribuoni</string>
     <string name="nav_contribute_code_title">Kodi</string>
     <string name="nav_contribute_translate_title">Përkthimet</string>
@@ -51,11 +56,50 @@
     <string name="available_updates_title">Përditësimet e disponueshme</string>
     <string name="no_available_updates_intro">Kontrolli i fundit nuk gjeti asnjë përditësim të disponueshëm. Për të kontrolluar manualisht për përditësime të reja, përdor butonin Rifresko.</string>
     <string name="pending_available_updates_intro">Po kërkoni azhurnime të disponueshme</string>
-    <string name="unlock_features_request_summary">(në dispozicion pas dhurimit% d CNY)</string>
+    <string name="unlock_features_request_summary">(në dispozicion pas dhurimit %d CNY)</string>
     <string name="unlock_features_pending_summary">(dhuruar %1$d CNY, i disponueshëm për tërë jetën pasi dhuroi %2$d CNY më shumë)</string>
     <string name="incremental_updates_supported_full_summary">Përditësimet shtesë mund të kursejnë %s</string>
+    <string name="incremental_updates_supported_ota_summary">Kursen %s kur krahasohet me ROM-in e plotë</string>
+    <string name="update_type_title">Lloji i azhurnimit</string>
+    <string name="update_type_release">Liroje</string>
+    <string name="update_type_nightly">Përnatshëm</string>
+    <string name="donation_record_title">Regjistrimi i dhurimit</string>
+    <string name="donation_record_without_rankings">Keni dhuruar gjithsej %1$d CNY.</string>
+    <string name="donation_record_with_rankings">Keni dhuruar gjithsej %1$d CNY, më shumë se %2$s donatorë në mbarë botën, renditja nr. %3$d!</string>
+    <string name="donation_record_none">Ju nuk keni dhuruar</string>
+    <string name="donation_restore_success">Regjistrimi i dhurimit u rikthye me sukses!</string>
+    <string name="donation_restore_failure">Ju lutemi kontrolloni lidhjen tuaj me internetin dhe provoni përsëri.</string>
+    <string name="donation_restore_not_found">Nuk u gjet asnjë regjistër dhurimi.</string>
+    <string name="donation_payment_success">Faleminderit per dhurimin tuaj!</string>
+    <string name="donation_dialog_title">Dhuroni për MoKee Open Source</string>
+    <string name="donation_dialog_message">MoKee Open Source është një projekt thjesht jofitimprurës i lindur nga hobi dhe pasioni.  Për të mirëmbajtur këtë projekt, ne duhet të mbledhim paratë tona shumicën e kohës ose të mbështetemi te donacionet dhe reklamat.  Donacionet tuaja mund të ndihmojnë në uljen e ngarkesës sonë financiare dhe mbështesin zhvillimin e ardhshëm!</string>
+    <string name="donation_dialog_message_extra">Pas dhurimit, ne do të aktivizojmë disa karakteristika të cilat janë në dispozicion vetëm për donatorët gjatë gjithë jetës!</string>
+    <string name="updates_found">Ka përditësime të reja</string>
+    <string name="no_updates_found">Nuk u gjet asnjë përditësim i ri</string>
+    <string name="updates_check_failed">Kontrolli për përditësim dështoi. Ju lutem kontrolloni për lidhjen me internet e më pas provoni sërish.</string>
+    <string name="text_copied">Teksti u kopjua në kujtesën e fragmenteve.</string>
+    <string name="alipay">Alipay</string>
+    <string name="wechat">WeChat</string>
+    <string name="paypal">PayPal</string>
     <string name="activity_not_found">Aplikacioni nuk është i instaluar.</string>
+    <string name="new_updates_channel_title">Përditësime të reja</string>
+    <string name="new_updates_found_title">Përditësimet e reja të sistemit</string>
+    <string name="ongoing_channel_title">Shkarkimet në proces</string>
+    <string name="downloading_notification">Duke shkaktuar..</string>
+    <string name="download_starting_notification">Duke filluar shkarkimin</string>
+    <string name="download_paused_notification">Shkarkimi u pezullua</string>
+    <string name="download_waiting_network_notification">Në pritje të rrjetit...</string>
+    <string name="download_completed_notification">Shkarkimi përfundoi</string>
+    <string name="download_verification_failed_notification">Verifikimi i paketës së azhurnimit dështoi, ju lutemi shkarkoni përsëri</string>
+    <string name="download_file_not_found_notification">Lidhja e shkarkimit skadoi, ju lutemi klikoni në butonin Refresh dhe provoni përsëri</string>
+    <string name="download_remaining">&lt;xliff:g example="3 minutes" id="duration"&gt; u largua</string>
+    <string name="download_speed">%1$s, %2$s/s</string>
+    <string name="download_already_running">Një shkarkim tashmë po ekzekutohet</string>
     <string name="update_on_mobile_data_title">Kujdes</string>
+    <string name="update_on_mobile_data_message">Jo po shkarkoni një paketë përditësimi duke përodur internetin e kartës, e cila do konsumojë shumë internet. Dëshironi të vazhdoni?</string>
     <string name="checkbox_mobile_data_warning">Mos e shfaq përsëri</string>
+    <string name="dialog_battery_low_title">Bateri e ulët</string>
+    <string name="dialog_battery_low_message_pct">Niveli i baterië është shumë i ulët, për të vazhduar duhet të jetë të paktën <xliff:g id="percent_discharging">%1$d</xliff:g>%% e baterisë, ose <xliff:g id="percent_charging">%2$d</xliff:g>%% nëse po karikohet.</string>
+    <string name="apply_update_dialog_title">Apliko përditësimin</string>
     <string name="no_storage_permissions">Kërkohet leja e magazinimit</string>
 </resources>
