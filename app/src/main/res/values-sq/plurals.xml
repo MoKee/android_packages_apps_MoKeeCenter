@@ -21,7 +21,7 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> azhurnime të disponueshme për shkarkim</item>
     </plurals>
     <plurals name="new_updates_found_additional_count">
-        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> më shumë</item>
-        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> më shumë</item>
+        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> Më shumë</item>
+        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> Më shumë</item>
     </plurals>
 </resources>
