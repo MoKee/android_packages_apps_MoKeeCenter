@@ -78,6 +78,7 @@
     <string name="no_updates_found">Nuk u gjet asnjë përditësim i ri</string>
     <string name="updates_check_failed">Kontrolli për përditësim dështoi. Ju lutem kontrolloni për lidhjen me internet e më pas provoni sërish.</string>
     <string name="text_copied">Teksti u kopjua në kujtesën e fragmenteve.</string>
+    <string name="unknown">I panjohur</string>
     <string name="alipay">Alipay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
@@ -101,5 +102,6 @@
     <string name="dialog_battery_low_title">Bateri e ulët</string>
     <string name="dialog_battery_low_message_pct">Niveli i baterië është shumë i ulët, për të vazhduar duhet të jetë të paktën <xliff:g id="percent_discharging">%1$d</xliff:g>%% e baterisë, ose <xliff:g id="percent_charging">%2$d</xliff:g>%% nëse po karikohet.</string>
     <string name="apply_update_dialog_title">Apliko përditësimin</string>
+    <string name="apply_update_dialog_message">Ju jeni gati për të azhurnuar në <xliff:g id="update_name">%1$s</xliff:g>  Nëse shtypni <xliff:g id="ok">%2$s</xliff:g>, pajisja do të rindizet vetë në modalitetin e rikuperimit për të instaluar azhurnimin.\n\n Artikoni shënimet:\n1.  Ky azhurnim nuk do të fshijë të dhënat tuaja personale, por ju rekomandojmë që të bëni kopje rezervë të të dhënave të rëndësishme para se të azhurnoni.\N2.  Kjo veçori kërkon një Rikuperim të përputhshëm ose azhurnimet do të duhet të instalohen manualisht.\N3.  Nëse hasni ndonjë problem, mund të shkoni në \"Forum\".</string>
     <string name="no_storage_permissions">Kërkohet leja e magazinimit</string>
 </resources>
