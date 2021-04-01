@@ -19,7 +19,7 @@
     <string name="app_name">MoKee keskus</string>
     <string name="navigation_drawer_open">Ava navigatsiooni riba</string>
     <string name="navigation_drawer_close">Sulge navigeerimise sakk</string>
-    <string name="nav_header_title">Avatud lähtekoodiga MoKee</string>
+    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Android-ühenduse operatsioonisüsteem</string>
     <string name="nav_header_desc">Navigeerimise päis</string>
     <string name="action_faq">Q&amp;A</string>
@@ -58,21 +58,21 @@
     <string name="verified_updates_summary">Kuva ainult värskendusi, mida on kinnitanud teised kasutajad</string>
     <string name="available_updates_title">Saadaval uuendused</string>
     <string name="no_available_updates_intro">Viimane kontroll ei leidnud saadaval olevaid värskendusi. Uute värskenduste käsitsi kontrollimiseks kasutage nuppu Värskenda.</string>
-    <string name="out_of_date_updates_intro">Järkjärguliste värskenduste rakendamiseks on praegune versioon aegunud. Värskendamiseks laadige selle asemel alla täielik ROM.</string>
+    <string name="out_of_date_updates_intro">Täiendavate värskenduste lisamiseks on praegune versioon aegunud. Värskendamiseks laadige alla terve ROM fail.</string>
     <string name="pending_available_updates_intro">Otsid saadaolevad värskendused</string>
-    <string name="unlock_features_plan_a_title">Anneta %d CNY, et avada täiendavaid värskendusi ja laadida alla täiskiirusel.</string>
-    <string name="unlock_features_plan_a_abdevice_title">Anneta %d CNY, et laadida alla täis kiirusel.</string>
-    <string name="unlock_features_plan_b_title">Anneta %d CNY kinnitatud värskenduste ja Google\'i reklaamide eemaldamiseks.</string>
-    <string name="unlock_features_plan_unlimited_title">Anneta %d CNY, et avada täiendavaid värskendusi, laadida alla täiskiirusel, kontrollida värskendusi ja eemaldada Google\'i reklaamid.</string>
-    <string name="unlock_features_plan_unlimited_abdevice_title">Anneta %d CNY, et avada allalaadimine täiskiirusel, kontrollida värskendusi ja eemaldada Google\'i reklaamid.</string>
+    <string name="unlock_features_plan_a_title">Täiendavate värskenduste avamiseks ja allalaadimiseks täiskiirusel, annetage  %d Hiina jüaani.</string>
+    <string name="unlock_features_plan_a_abdevice_title">Täiskiirusel allalaadimiseks annetage %d Hiina jüaani.</string>
+    <string name="unlock_features_plan_b_title">Kontrollitud värskenduste allalaadimiseks ja Google\'i reklaamide eemaldamiseks, annetage %d Hiina jüaani.</string>
+    <string name="unlock_features_plan_unlimited_title">Täiendavate ja kontrollitud värskenduste avamiseks ja allalaadimiseks täiskiirusel ning Google\'i reklaamide eemaldamiseks, annetage %d Hiina jüaani.</string>
+    <string name="unlock_features_plan_unlimited_abdevice_title">Kontrollitud värskenduste avamiseks ja allalaadimiseks täiskiirusel ning Google\'i reklaamide eemaldamiseks, annetage %d Hiina jüaani.</string>
     <string name="unlock_features_request_summary">(saadaval pärast %d CNY annetamist)</string>
     <string name="unlock_features_pending_summary">(annetatud %1$d CNYd, saadaval kogu elu jooksul pärast %2$d CNY annetamist)</string>
     <string name="incremental_updates_supported_full_summary">Täiendavad uuendused saab salvestada %s</string>
     <string name="incremental_updates_supported_ota_summary">Salvestab %s võrreldes täieliku ROMiga</string>
     <string name="update_type_title">Uuenduse tüüp</string>
     <string name="update_type_release">Vabasta</string>
-    <string name="update_type_nightly">Nightly</string>
-    <string name="update_type_premium">Premium</string>
+    <string name="update_type_nightly">Igapäevane</string>
+    <string name="update_type_premium">Kvaliteetne</string>
     <string name="donation_record_title">Annetuse rekord</string>
     <string name="donation_record_without_rankings">Te annetasite kokku %1$d CNYd.</string>
     <string name="donation_record_with_rankings">Te annetasite kokku of %1$d CNYd, rohkem kui %2$s doonorit kogu maailmas, paremusjärjestuses nr.%3$d!</string>
@@ -94,9 +94,9 @@
     <string name="paypal">PayPal</string>
     <string name="activity_not_found">Rakendus pole installitud.</string>
     <string name="browser_not_found">Brauser pole installitud.</string>
-    <string name="chrome_not_found">Installige esmalt Google Chrome.</string>
-    <string name="mokeepay_not_found">Olete juhuslikult MoKeePay rakenduse kustutanud, taastage täielik värskendus.</string>
-    <string name="ad_blocker_detected">Paistab, et kasutate reklaamide blokeerijat, lisage meie rakendus valgesse nimekirja.</string>
+    <string name="chrome_not_found">Palun installige esmalt Google Chrome.</string>
+    <string name="mokeepay_not_found">Olete juhuslikult MoKeePay rakenduse kustutanud, palun taastage see täieliku värskendusega.</string>
+    <string name="ad_blocker_detected">Paistab, et kasutate reklaamiblokeerijat, palun lisage meie rakendus lubatud reklaamide nimekirja.</string>
     <string name="new_updates_channel_title">Uued uuendused</string>
     <string name="new_updates_found_title">Uued süsteemi uuendused</string>
     <string name="ongoing_channel_title">Käimasolevad allalaadimised</string>
@@ -110,20 +110,20 @@
     <string name="download_remaining"><xliff:g example="3 minutes" id="duration">%s</xliff:g> vasakule</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Allalaadimine on juba käimas</string>
-    <string name="download_limited_speed">Piiratud kiirusega allalaadimine annetage %d CNY, et nautida täielikku kiirust.</string>
+    <string name="download_limited_speed">Piiratud kiirusega allalaadimine, täiskiirusel allalaadimiseks annetage %d Hiina jüaani.</string>
     <string name="install_already_running">Installimine on juba käimas</string>
-    <string name="installing_update_notification">Uuenduspaketi installimine</string>
-    <string name="installing_update_finished_notification">Uuendus installitud</string>
-    <string name="finalizing_package_notification">Paketi installimise lõpetamine</string>
-    <string name="preparing_ota_first_boot_notification">Esmakordse laadimise ettevalmistamine</string>
-    <string name="dialog_prepare_zip_message_notification">Esmane uuendamise ettevalmistamine</string>
+    <string name="installing_update_notification">Värskenduspaki installimine</string>
+    <string name="installing_update_finished_notification">Värskendus on installitud</string>
+    <string name="finalizing_package_notification">Paki installimise lõpetamine</string>
+    <string name="preparing_ota_first_boot_notification">Esmalaadimise ettevalmistamine</string>
+    <string name="dialog_prepare_zip_message_notification">Esmavärskenduse ettevalmistamine</string>
     <string name="update_on_mobile_data_title">Hoiatus</string>
     <string name="update_on_mobile_data_message">Olete alla laadimas värskendust mobiilse andmesideühendusega, mis võib tekitada suurt andmemahu kasutust. Kas soovite jätkata?</string>
     <string name="checkbox_mobile_data_warning">Ära rohkem näita</string>
     <string name="dialog_battery_low_title">Madal akutase</string>
     <string name="dialog_battery_low_message_pct">Akutase on liiga madal, jätkamiseks on vaja akut vähemalt <xliff:g id="percent_discharging">%1$d</xliff:g>%%, laadimise korral <xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
     <string name="apply_update_dialog_title">Rakenda uuendused</string>
-    <string name="apply_update_dialog_message">Olete versiooniuuenduses  <xliff:g id="update_name">%1$s</xliff:g>. Kui vajutate nuppu <xliff:g id="ok">%2$s</xliff:g>,värskenduse installimiseks taaskäivitab seade taasterežiimis.\n\nVärskendage märkmeid:\n1. See värskendus ei kustuta teie isiklikke andmeid, kuid soovitame enne värskendamist kõik olulised andmed varundada.\n2. See funktsioon nõuab ühilduvat taastefunktsiooni või värskendused tuleb käsitsi installida.\n3. Kui teil on probleeme, võite minna \"Foorumisse\".</string>
+    <string name="apply_update_dialog_message">Olete uuendamas süsteemi versioonile  <xliff:g id="update_name">%1$s</xliff:g>. Kui vajutate nuppu <xliff:g id="ok">%2$s</xliff:g>, taaskäivitab seade värskenduse installimiseks taastusrežiimis.\n\nVärskenduse märkmed:\n1. See värskendus ei kustuta teie isiklikke andmeid, kuid soovitame enne värskendamist kõik olulised andmed varundada.\n2. See funktsioon nõuab ühilduvat taastusfunktsiooni või tuleb värskendused käsitsi installida.\n3. Kui esineb probleeme installimisega, võite minna \"Foorumisse\".</string>
     <string name="apply_update_dialog_message_ab">Olete versiooniuuenduses  <xliff:g id="update_name">%1$s</xliff:g>. Kui vajutate nuppu <xliff:g id="ok">%2$s</xliff:g>, alustab seade installimist taustal. Kui see on lõpule viidud, palutakse teil seade taaskäivitada.\n\nMärkmete värskendamine:\n1. See värskendus ei kustuta teie isiklikke andmeid, kuid soovitame enne värskendamist kõik olulised andmed varundada.\n2. Kui teil on probleeme, võite minna \"Foorumisse\".</string>
     <string name="no_storage_permissions">Nõutav on salvestusluba</string>
     <string name="no_phone_permissions">Nõutav on telefoni luba</string>
