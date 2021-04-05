@@ -18,4 +18,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="action_next">পৰৱৰ্তী</string>
     <string name="unknown">অজ্ঞাত</string>
+    <string name="no_storage_permissions">সঞ্চয়াগাৰৰ অনুমতিৰ প্ৰয়োজন</string>
+    <string name="no_phone_permissions">ফোনৰ অনুমতিৰ প্ৰয়োজন</string>
 </resources>

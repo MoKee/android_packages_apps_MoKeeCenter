@@ -19,6 +19,7 @@
     <string name="app_name">MoKee Центар</string>
     <string name="navigation_drawer_open">Отвори фиоку навигације</string>
     <string name="navigation_drawer_close">Затвори фиоку навигације</string>
+    <string name="nav_header_title">MoKee OpenSource</string>
     <string name="nav_header_subtitle">Андроид Комуна</string>
     <string name="nav_header_desc">Навигациона трака</string>
     <string name="action_faq">Q&amp;A</string>

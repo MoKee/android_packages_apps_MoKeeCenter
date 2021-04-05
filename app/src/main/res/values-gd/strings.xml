@@ -16,6 +16,8 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="action_next">Air adhart</string>
+    <string name="action_download">Luchdadh a-nuas</string>
     <string name="unknown">Chan eil fhios</string>
     <string name="checkbox_mobile_data_warning">Na seall seo a-rithist</string>
 </resources>

@@ -19,6 +19,7 @@
     <string name="app_name">Панэль MoKee</string>
     <string name="navigation_drawer_open">Адкрыць панэль</string>
     <string name="navigation_drawer_close">Зачыніць панель</string>
+    <string name="nav_header_title">Адкрыты рэсурс MoKee</string>
     <string name="nav_header_desc">Навігацыйны радок</string>
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Рашэнне</string>

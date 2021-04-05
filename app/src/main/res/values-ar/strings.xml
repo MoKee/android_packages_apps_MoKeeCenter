@@ -19,6 +19,7 @@
     <string name="app_name">مركز موكي</string>
     <string name="navigation_drawer_open">فتح نافذة التنقل</string>
     <string name="navigation_drawer_close">إغلاق نافذة التنقل</string>
+    <string name="nav_header_title">مصدر موكي المفتوح</string>
     <string name="nav_header_subtitle">نظام تشغيل مجتمع أندرويد</string>
     <string name="nav_header_desc">رأس التنقل</string>
     <string name="action_faq">Q&amp;A</string>

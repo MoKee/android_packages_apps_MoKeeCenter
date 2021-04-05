@@ -19,6 +19,7 @@
     <string name="app_name">MoKee center</string>
     <string name="navigation_drawer_open">Odpri predal za krmarjenje</string>
     <string name="navigation_drawer_close">Zapri predal za krmarjenje</string>
+    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Operacijski sistem Android skupnosti</string>
     <string name="nav_header_desc">Glava krmarjenja</string>
     <string name="action_faq">V&amp;O</string>
