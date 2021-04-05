@@ -18,6 +18,8 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="action_next">Nesaf</string>
     <string name="action_pause">Saib</string>
+    <string name="action_download">Modd lawrlwytho</string>
     <string name="menu_delete_update">Dileu</string>
+    <string name="unknown">Anhysybys</string>
     <string name="update_on_mobile_data_title">Rhybudd</string>
 </resources>
