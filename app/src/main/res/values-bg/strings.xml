@@ -22,7 +22,7 @@
     <string name="action_solution">Решение</string>
     <string name="action_next">Следваща</string>
     <string name="action_pause">Пауза</string>
-    <string name="action_resume">Възобнови</string>
+    <string name="action_resume">Възобновяване</string>
     <string name="action_download">Изтегли</string>
     <string name="menu_restore">Възстанови</string>
     <string name="menu_refresh">Опресняване</string>

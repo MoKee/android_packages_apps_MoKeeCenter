@@ -20,13 +20,13 @@
     <string name="navigation_drawer_open">Deschideţi sertarul de navigare</string>
     <string name="navigation_drawer_close">Închideţi sertarul de navigare</string>
     <string name="action_solution">Soluţie</string>
-    <string name="action_next">Înainte</string>
+    <string name="action_next">Următoarea</string>
     <string name="action_pause">Pauză</string>
-    <string name="action_resume">Reluaţi</string>
-    <string name="action_download">Descărcare</string>
+    <string name="action_resume">Reia</string>
+    <string name="action_download">Download</string>
     <string name="menu_restore">Restuarează</string>
     <string name="menu_refresh">Reimprospatare</string>
-    <string name="menu_delete_update">Ștergeți</string>
+    <string name="menu_delete_update">Ștergeţi</string>
     <string name="mokee_version_title">Versiunea MoKee</string>
     <string name="unique_id_title">ID Unic</string>
     <string name="incremental_updates_title">Actualizări incrementale</string>
@@ -47,7 +47,7 @@
     <string name="donation_dialog_title">Donați pentru MoKee OpenSource</string>
     <string name="no_updates_found">Nu s-au găsit actualizări noi</string>
     <string name="updates_check_failed">Verificarea actualizării a eșuat. Vă rugăm să verificați conexiunea la internet și să încercați din nou mai târziu.</string>
-    <string name="unknown">Necunoscută</string>
+    <string name="unknown">Necunoscut</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>

@@ -16,5 +16,6 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="menu_delete_update">مٹائیں</string>
     <string name="activity_not_found">ایپ انسٹال نہیں ہے۔</string>
 </resources>

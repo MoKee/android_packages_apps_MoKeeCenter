@@ -21,7 +21,7 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> värskendust on allalaadimiseks saadaval</item>
     </plurals>
     <plurals name="new_updates_found_additional_count">
-        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> rohkem</item>
-        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> rohkem</item>
+        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> veel</item>
+        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> veel</item>
     </plurals>
 </resources>

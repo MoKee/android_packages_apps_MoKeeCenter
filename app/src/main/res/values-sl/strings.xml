@@ -19,11 +19,12 @@
     <string name="app_name">MoKee center</string>
     <string name="navigation_drawer_open">Odpri predal za krmarjenje</string>
     <string name="navigation_drawer_close">Zapri predal za krmarjenje</string>
+    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Operacijski sistem Android skupnosti</string>
     <string name="nav_header_desc">Glava krmarjenja</string>
     <string name="action_faq">V&amp;O</string>
     <string name="action_solution">Rešitev</string>
-    <string name="action_next">Naprej</string>
+    <string name="action_next">Naslednja</string>
     <string name="action_pause">Premor</string>
     <string name="action_resume">Nadaljuj</string>
     <string name="action_download">Prenos</string>
@@ -109,7 +110,7 @@
     <string name="update_on_mobile_data_title">Opozorilo</string>
     <string name="update_on_mobile_data_message">Ste pred prenosom posodobitvenega paketa z uporabo mobilnih podatkov, kar bo verjetno povzročilo visoko porabo podatkov. Ali želite nadaljevati?</string>
     <string name="checkbox_mobile_data_warning">Ne prikaži ponovno</string>
-    <string name="dialog_battery_low_title">Nizko stanje akumulatorja</string>
+    <string name="dialog_battery_low_title">Nizko stanje baterije</string>
     <string name="dialog_battery_low_message_pct">Raven napolnjenosti akumulatorja je prenizka, potrebnih je vsaj <xliff:g id="percent_discharging">%1$d</xliff:g>%% akumulatorja za nadaljevanje, ali <xliff:g id="percent_charging">%2$d</xliff:g>%% če se polni.</string>
     <string name="apply_update_dialog_title">Uveljavi posodbitev</string>
     <string name="no_storage_permissions">Dovoljenje za shrambo je potrebno</string>

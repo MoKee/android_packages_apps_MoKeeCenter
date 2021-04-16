@@ -20,6 +20,6 @@
         <item quantity="other"><xliff:g id="count">%d</xliff:g> pembaruan tersedia untuk diunduh</item>
     </plurals>
     <plurals name="new_updates_found_additional_count">
-        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> lainnya</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> lainnya</item>
     </plurals>
 </resources>

@@ -19,6 +19,7 @@
     <string name="app_name">Centro MoKee</string>
     <string name="navigation_drawer_open">Abrir menú lateral</string>
     <string name="navigation_drawer_close">Cerrar menú lateral</string>
+    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Sistema operativo de la Comunidad Android</string>
     <string name="nav_header_desc">Barra de navegación</string>
     <string name="action_faq">Preguntas &amp; Respuestas</string>
@@ -32,7 +33,7 @@
     <string name="menu_restore">Restaurar</string>
     <string name="menu_donation">Donación</string>
     <string name="menu_refresh">Actualizar</string>
-    <string name="menu_delete_update">Eliminar</string>
+    <string name="menu_delete_update">Borrar</string>
     <string name="menu_open_link">Abrir en el navegador</string>
     <string name="pref_auto_delete_updates">Eliminar actualizaciones si están instaladas u obsoletas</string>
     <string name="pref_ab_perf_mode">Priorizar el proceso de actualización</string>
