@@ -20,14 +20,14 @@
     <string name="navigation_drawer_open">Ouvrir le tiroir de navigation</string>
     <string name="navigation_drawer_close">Fermer le tiroir de navigation</string>
     <string name="nav_header_title">MoKee OpenSource</string>
-    <string name="nav_header_subtitle">ASOP</string>
+    <string name="nav_header_subtitle">Asop</string>
     <string name="nav_header_desc">Barre de navigation</string>
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Solution</string>
     <string name="action_next">Suivant</string>
     <string name="action_pause">Pause</string>
     <string name="action_resume">Reprendre</string>
-    <string name="action_download">Télécharger</string>
+    <string name="action_download">Download</string>
     <string name="action_reboot">Redémarrer</string>
     <string name="menu_preferences">Préférences</string>
     <string name="menu_restore">Restaurer</string>
@@ -37,7 +37,7 @@
     <string name="menu_open_link">Ouvrir dans le navigateur</string>
     <string name="pref_auto_delete_updates">Supprimer les mises à jour une fois installées ou devenues obsolètes</string>
     <string name="pref_ab_perf_mode">Privilégier le processus de mise à jour</string>
-    <string name="pref_mobile_data_warning">Alerter lors de l\'utilisation de données mobiles</string>
+    <string name="pref_mobile_data_warning">Alerter lors de l\'utilisation ded données mobiles</string>
     <string name="nav_main_forum_title">Forum</string>
     <string name="nav_main_guide_title">Guide</string>
     <string name="nav_main_source_title">Code source</string>
@@ -71,7 +71,7 @@
     <string name="incremental_updates_supported_ota_summary">Permet d’économiser %s par rapport à la ROM complète</string>
     <string name="update_type_title">Type de mise à jour</string>
     <string name="update_type_release">Release</string>
-    <string name="update_type_nightly">Béta</string>
+    <string name="update_type_nightly">Nightly</string>
     <string name="update_type_premium">Premium</string>
     <string name="donation_record_title">Enregistrement de la donation</string>
     <string name="donation_record_without_rankings">Vous avez fait don d’un total de %1$d CNY.</string>
@@ -88,7 +88,7 @@
     <string name="no_updates_found">Aucune nouvelle mise à jour n’est proposée</string>
     <string name="updates_check_failed">La vérification de mise à jour a échoué. Veuillez vérifier votre connexion internet et réessayez plus tard.</string>
     <string name="text_copied">Le texte a été copié dans le presse-papier.</string>
-    <string name="unknown">Inconnue</string>
+    <string name="unknown">Inconnu</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
@@ -107,7 +107,7 @@
     <string name="download_completed_notification">Téléchargement terminé</string>
     <string name="download_verification_failed_notification">Impossible de vérifier la mise à jour du paquet, s’il vous plaît télécharger à nouveau</string>
     <string name="download_file_not_found_notification">Lien de téléchargement a expiré, s’il vous plaît cliquez sur le bouton actualiser et essayez à nouveau</string>
-    <string name="download_remaining"><xliff:g example="3 minutes" id="durée">%s</xliff:g> restantes</string>
+    <string name="download_remaining"><xliff:g example="3 minutes" id="durée">%s</xliff:g> gauche</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Un téléchargement est déjà en cours</string>
     <string name="download_limited_speed">Téléchargement à vitesse limitée, faites un don de %d CNY pour profiter de la vitesse max.</string>
@@ -123,8 +123,8 @@
     <string name="dialog_battery_low_title">Batterie faible</string>
     <string name="dialog_battery_low_message_pct">Le niveau de batterie est trop faible. Pour continuer, vous devez avoir au moins <xliff:g id="percent_discharging">%1$d</xliff:g> %% de batterie restante, ou <xliff:g id="percent_charging">%2$d</xliff:g> %% si l\'appareil est en charge.</string>
     <string name="apply_update_dialog_title">Appliquer la mise à jour</string>
-    <string name="apply_update_dialog_message">Vous êtes sur le point d’améliorer à &lt;xliff:g id=“update_name”&gt;%1$s&lt;/xliff:g&gt;. Si vous appuyez sur &lt;xliff:g id=“ok”&gt;%2$s&lt;/xliff:g&gt;, le dispositif va se redémarrer en mode récupération pour installer la mise à jour.\n\nNotes de mise à jour:\n1. Cette mise à jour ne supprimera pas vos données personnelles, mais nous recommandons que vous sauvegardiez vos données importantes avant la mise à jour.\n2. Cette fonctionnalité exige une récupération compatible ou les mises à jour auront besoin d’être installées manuellement.\n3. Si vous rencontrez un problème, vous pouvez aller sur « forum ».</string>
-    <string name="apply_update_dialog_message_ab">Vous êtes sur le point d’améliorer à &lt;xliff:g id=“update_name”&gt;%1$s&lt;/xliff:g&gt;. Si vous appuyez sur &lt;xliff:g id=“ok”&gt;%2$s&lt;/xliff:g&gt;, le dispositif va commencer le téléchargement en arrière-plan. Une fois complété, vous serez invité à redémarrer.\n\nNotes de mise à jour:\n1. Cette mise à jour ne supprimera pas vos données personnelles, mais nous recommandons que vous sauvegardiez vos données importantes avant la mise à jour.\n2. Cette fonctionnalité exige une récupération compatible ou les mises à jour auront besoin d’être installées manuellement.\n3. Si vous rencontrez un problème, vous pouvez aller sur « forum ».</string>
+    <string name="apply_update_dialog_message">Vous êtes sur le point de passer à la version <xliff:g id="update_name">%1$s</xliff:g>. Si vous touchez <xliff:g id="ok">%2$s</xliff:g>, l’appareil redémarrera en mode récupération afin d’installer la mise à jour.\n\nNotes de mise à jour :\n1. Cette mise à jour ne supprimera pas vos données personnelles, mais nous recommandons que vous sauvegardiez vos données importantes avant la mise à jour.\n2. Cette fonction exige une récupération compatible, ou les mises à jour devront être installées manuellement.\n3. En cas de problème, consultez le « forum ».</string>
+    <string name="apply_update_dialog_message_ab">Vous êtes sur le point de passer à la version <xliff:g id="update_name">%1$s</xliff:g>. Si vous touchez <xliff:g id="ok">%2$s</xliff:g>, l’appareil lancera l’installation en arrière-plan. Une fois l’installation terminée, vous serez invité à redémarrer.\n\nNotes de mise à jour :\n1. Cette mise à jour ne supprimera pas vos données personnelles, mais nous recommandons que vous sauvegardiez vos données importantes avant la mise à jour.\n2. En cas de problème, consultez le « forum ».</string>
     <string name="no_storage_permissions">L\'autorisation d\'accès au stockage est nécessaire</string>
-    <string name="no_phone_permissions">Autorisation du téléphone requise</string>
+    <string name="no_phone_permissions">L\'autorisation d\'accès au téléphone est nécessaire</string>
 </resources>

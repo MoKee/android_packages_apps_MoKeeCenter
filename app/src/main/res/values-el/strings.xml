@@ -22,7 +22,7 @@
     <string name="action_next">Επόμενο</string>
     <string name="action_pause">Παύση</string>
     <string name="action_resume">Συνέχιση</string>
-    <string name="action_download">Λήψη αρχείου</string>
+    <string name="action_download">Download</string>
     <string name="menu_restore">Επαναφορά</string>
     <string name="menu_refresh">Ανανέωση</string>
     <string name="menu_delete_update">Διαγραφή</string>
@@ -48,7 +48,7 @@
     <string name="activity_not_found">Η εφαρμογή δεν είναι εγκατεστημένη.</string>
     <string name="new_updates_channel_title">Νέες ενημερώσεις</string>
     <string name="download_already_running">Μια λήψη εκτελείται ήδη</string>
-    <string name="update_on_mobile_data_title">Προσοχή</string>
+    <string name="update_on_mobile_data_title">Προειδοποίηση</string>
     <string name="checkbox_mobile_data_warning">Να μην εμφανιστεί ξανά</string>
     <string name="apply_update_dialog_title">Εφαρμογή ενημέρωσης</string>
     <string name="no_storage_permissions">Απαιτείται άδεια Αποθήκευσης</string>

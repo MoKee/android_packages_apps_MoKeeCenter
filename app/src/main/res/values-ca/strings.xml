@@ -25,7 +25,7 @@
     <string name="action_download">Descàrrega</string>
     <string name="menu_restore">Restaura</string>
     <string name="menu_refresh">Recarregar</string>
-    <string name="menu_delete_update">Esborra</string>
+    <string name="menu_delete_update">Suprimeix</string>
     <string name="mokee_version_title">Versió MoKee</string>
     <string name="incremental_updates_title">OTA actualitzacions</string>
     <string name="incremental_updates_summary">Obtenir actualitzacions incrementals per estalviar temps de descàrrega i ample de banda</string>

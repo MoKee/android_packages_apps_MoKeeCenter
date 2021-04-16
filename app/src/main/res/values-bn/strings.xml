@@ -19,7 +19,7 @@
     <string name="app_name">MoKee Center</string>
     <string name="action_next">Next</string>
     <string name="action_pause">বিরাম দিন</string>
-    <string name="action_resume">পুনরায় শুরু করুন</string>
+    <string name="action_resume">পুনঃসূচনা</string>
     <string name="menu_refresh">রিফ্রেশ</string>
     <string name="mokee_version_title">MoKee Version</string>
     <string name="unique_id_title">Unique ID</string>

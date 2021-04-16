@@ -19,14 +19,15 @@
     <string name="app_name">مركز موكي</string>
     <string name="navigation_drawer_open">فتح نافذة التنقل</string>
     <string name="navigation_drawer_close">إغلاق نافذة التنقل</string>
+    <string name="nav_header_title">مصدر موكي المفتوح</string>
     <string name="nav_header_subtitle">نظام تشغيل مجتمع أندرويد</string>
     <string name="nav_header_desc">رأس التنقل</string>
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">الحل</string>
-    <string name="action_next">القادم</string>
+    <string name="action_next">التالي</string>
     <string name="action_pause">إيقاف مؤقت</string>
     <string name="action_resume">استئناف</string>
-    <string name="action_download">تنزيل</string>
+    <string name="action_download">التنزيل</string>
     <string name="action_reboot">إعادة تشغيل</string>
     <string name="menu_preferences">التفضيلات</string>
     <string name="menu_restore">استعادة</string>

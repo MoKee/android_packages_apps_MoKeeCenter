@@ -27,7 +27,7 @@
     <string name="action_next">Další</string>
     <string name="action_pause">Pozastavit</string>
     <string name="action_resume">Pokračovat</string>
-    <string name="action_download">Ke stažení</string>
+    <string name="action_download">Stahování</string>
     <string name="action_reboot">Restartovat</string>
     <string name="menu_preferences">Předvolby</string>
     <string name="menu_restore">Obnovit</string>
@@ -88,7 +88,7 @@
     <string name="no_updates_found">Nové aktualizace nenalezeny</string>
     <string name="updates_check_failed">Kontrola aktualizací selhala. Zkontrolujte připojení k internetu a zkuste to znovu.</string>
     <string name="text_copied">Text zkopírován do schránky.</string>
-    <string name="unknown">Neznámé</string>
+    <string name="unknown">Neznámá</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">PayPal</string>
@@ -126,5 +126,5 @@
     <string name="apply_update_dialog_message">Chystáte se aktualizovat na <xliff:g id="update_name">%1$s</xliff:g>. Pokud stisknete <xliff:g id="ok">%2$s</xliff:g>, zařízení se restartuje do režimu recovery, kde bude pokračovat v instalaci aktualizace.\n\nPoznámky k aktualizaci:\n1. Tato aktualizace nevymaže vaše osobní údaje, ale před aktualizací doporučujeme zálohovat všechna důležitá data.\n2. Tato funkce vyžaduje kompatibilní recovery nebo je nutné instalaci provést ručně.\n3. Pokud narazíte na nějaké problémy, můžete přejít na naše „Fórum“.</string>
     <string name="apply_update_dialog_message_ab">Chystáte se aktualizovat na <xliff:g id="update_name">%1$s</xliff:g>. Pokud stisknete <xliff:g id="ok">%2$s</xliff:g>, zařízení zahájí instalaci na pozadí. Po dokončení budete vyzváni k restartu.\n\nPoznámky k aktualizaci:\n1. Tato aktualizace nevymaže vaše osobní údaje, ale před aktualizací doporučujeme zálohovat všechna důležitá data.\n2. Pokud narazíte na nějaké problémy, můžete přejít na naše „Fórum“.</string>
     <string name="no_storage_permissions">Vyžadováno oprávnění k úložišti</string>
-    <string name="no_phone_permissions">Vyžadováno oprávnění k telefonu</string>
+    <string name="no_phone_permissions">Oprávnění telefonu je požadováno</string>
 </resources>

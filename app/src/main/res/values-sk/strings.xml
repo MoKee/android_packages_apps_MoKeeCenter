@@ -19,20 +19,22 @@
     <string name="app_name">Mokee centrum</string>
     <string name="navigation_drawer_open">Otvoriť navigačný panel</string>
     <string name="navigation_drawer_close">Zavrieť navigačný panel</string>
+    <string name="nav_header_title">MoKee Open Source</string>
     <string name="nav_header_subtitle">Komunitný operačný systém Android</string>
     <string name="nav_header_desc">Hlavička navigačného panela</string>
     <string name="action_faq">Q&amp;A</string>
     <string name="action_solution">Riešenie</string>
-    <string name="action_next">Ďalší</string>
+    <string name="action_next">Nasledujúce</string>
     <string name="action_pause">Pozastaviť</string>
     <string name="action_resume">Pokračovať</string>
-    <string name="action_download">Stiahnuť</string>
+    <string name="action_download">Sťahovanie</string>
     <string name="action_reboot">Reštart</string>
     <string name="menu_preferences">Nastavenia</string>
     <string name="menu_restore">Obnoviť</string>
     <string name="menu_donation">Príspevok</string>
     <string name="menu_refresh">Obnoviť</string>
     <string name="menu_delete_update">Vymazať</string>
+    <string name="menu_open_link">Otvoriť v prehliadači</string>
     <string name="pref_auto_delete_updates">Vymazať nainštalované alebo zastarané aktualizácie</string>
     <string name="pref_ab_perf_mode">Uprednostniť proces aktualizácie</string>
     <string name="pref_mobile_data_warning">Upozorniť, ak na mobilných dátach</string>
@@ -56,6 +58,7 @@
     <string name="verified_updates_summary">Zobraziť len aktualizácie, ktoré sú overené inými užívateľmi</string>
     <string name="available_updates_title">Dostupné aktualizácie</string>
     <string name="no_available_updates_intro">Poslednou kontrolou sa nenašli žiadne dostupné aktualizácie. Použite tlačidlo Obnoviť na ručnú kontrolu nových aktualizácií.</string>
+    <string name="out_of_date_updates_intro">Aktuálna verzia je zastaraná pre použitie prírastkových aktualizácií. Ak chcete aktualizovať, stiahnite si namiesto toho plnú verziu ROM.</string>
     <string name="pending_available_updates_intro">Vyhľadávam dostupné aktualizácie</string>
     <string name="unlock_features_plan_a_title">Prispejte %d CNY na odomknutie prírastkových aktualizácii a sťahovania v plnej rýchlosti.</string>
     <string name="unlock_features_plan_a_abdevice_title">Prispieť %d CNY, aby bola odomknutá plná rýchlosť sťahovania.</string>
@@ -85,11 +88,15 @@
     <string name="no_updates_found">Nenašli sa žiadne nové aktualizácie</string>
     <string name="updates_check_failed">Kontrola aktualizácií zlyhala. Skontrolujte prosím svoje internetové pripojenie a skúste to znova neskôr.</string>
     <string name="text_copied">Text skopírovaný do schránky.</string>
-    <string name="unknown">Neznáme</string>
+    <string name="unknown">Neznáma</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">Paypal</string>
     <string name="activity_not_found">Aplikácia nie je nainštalovaná.</string>
+    <string name="browser_not_found">Prehliadač nie je nainštalovaný.</string>
+    <string name="chrome_not_found">Najprv nainštalujte Google Chrome.</string>
+    <string name="mokeepay_not_found">Omylom ste zmazali aplikáciu MoKeePay, obnovte ju prostredníctvom úplnej aktualizácie.</string>
+    <string name="ad_blocker_detected">Vyzerá to, že používate blokátor reklám. Umiestnite prosím našu aplikáciu na zoznam povolených.</string>
     <string name="new_updates_channel_title">Nové aktualizácie</string>
     <string name="new_updates_found_title">Nové systémové aktualizácie</string>
     <string name="ongoing_channel_title">Prebiehajúce sťahovania</string>
@@ -116,6 +123,8 @@
     <string name="dialog_battery_low_title">Slabá batéria</string>
     <string name="dialog_battery_low_message_pct">Úroveň nabitia batérie je príliš nízka, budete potrebovať aspoň <xliff:g id="percent_discharging">%1$d</xliff:g>%% batérie na pokračovanie, <xliff:g id="percent_charging">%2$d</xliff:g>%% pri nabíjaní.</string>
     <string name="apply_update_dialog_title">Aplikovať aktualizáciu</string>
+    <string name="apply_update_dialog_message">Chystáte sa aktualizovať na <xliff:g id="update_name">%1$s</xliff:g>. Ak stlačíte  <xliff:g id="ok">%2$s</xliff:g>, zariadenie sa reštartuje do režimu recovery, kde bude pokračovať v inštalácii aktualizácie.\n\n Poznámky k aktualizácii: \n1. Táto aktualizácia nevymaže vaše osobné údaje, ale pred aktualizáciou doporučujeme zálohovať všetky dôležité dáta.\n2. Táto funkcia vyžaduje kompatibilné recovery alebo je nutné inštaláciu vykonať ručne.\n3. Ak narazíte na nejaké problémy, môžete prejsť na naše \"Fórum\". </string>
+    <string name="apply_update_dialog_message_ab">Chystáte se aktualizovať na <xliff:g id="update_name">%1$s</xliff:g>. Ak stlačíte <xliff:g id="ok">%2$s</xliff:g>, zariadenie začne inštaláciu na pozadí. Po dokončení budete vyzvaní k reštartu.\n\n Poznámka k aktualizácii:\n1. Táto aktualizácia nevymaže vaše osobné údaje, ale pred aktualizáciou doporučujeme zálohovať všetky dôležité dáta.\n2. Ak narazíte na nejaké problémy, môžete prejsť na naše \"Fórum\".</string>
     <string name="no_storage_permissions">Je potrebné povolenie pre prístup k súborom</string>
     <string name="no_phone_permissions">Je potrebné povolenie pre prístup k telefónu</string>
 </resources>

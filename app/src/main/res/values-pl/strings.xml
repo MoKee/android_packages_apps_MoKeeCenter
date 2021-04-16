@@ -24,10 +24,10 @@
     <string name="nav_header_desc">Pasek nawigacji</string>
     <string name="action_faq">Pytania&amp;odpowiedzi</string>
     <string name="action_solution">Rozwiązanie</string>
-    <string name="action_next">Dalej</string>
+    <string name="action_next">Następny</string>
     <string name="action_pause">Pauza</string>
     <string name="action_resume">Wznów</string>
-    <string name="action_download">Pobierz</string>
+    <string name="action_download">Download</string>
     <string name="action_reboot">Restart</string>
     <string name="menu_preferences">Ustawienia</string>
     <string name="menu_restore">Przywróć</string>
@@ -88,7 +88,7 @@
     <string name="no_updates_found">Brak dostępnych aktualizacji</string>
     <string name="updates_check_failed">Nie udało się wyszukać aktualizacji. Sprawdź połączenie internetowe i spróbuj ponownie.</string>
     <string name="text_copied">Tekst skopiowany do schowka.</string>
-    <string name="unknown">Nieznana</string>
+    <string name="unknown">Nieznane</string>
     <string name="alipay">AliPay</string>
     <string name="wechat">Wechat</string>
     <string name="paypal">PayPal</string>
@@ -107,7 +107,7 @@
     <string name="download_completed_notification">Pobieranie zakończone</string>
     <string name="download_verification_failed_notification">Nie można zweryfikować pakietu aktualizacji, pobierz ponownie</string>
     <string name="download_file_not_found_notification">Link pobierania wygasł, kliknij przycisk Odśwież i spróbuj ponownie</string>
-    <string name="download_remaining">pozostały <xliff:g example="3 minuty" id="duration">%s</xliff:g></string>
+    <string name="download_remaining">&lt;xliff:g example=\"3 minuty\" id=\"trwanie&gt;%s&lt;/xliff:g&gt; pozostały</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Pobieranie w toku</string>
     <string name="download_limited_speed">Pobieranie z ograniczoną prędkością, proszę wesprzyj projekt za pomocą 30 CNY aby cieszyć się pełną szybkością.</string>

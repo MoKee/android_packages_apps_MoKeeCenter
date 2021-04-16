@@ -18,10 +18,10 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <plurals name="new_updates_found_content">
         <item quantity="one"><xliff:g id="count">%d</xliff:g> mise à jour disponible au téléchargement</item>
-        <item quantity="other"><xliff:g id="count">%d</xliff:g> mise à jour disponible au téléchargement</item>
+        <item quantity="other"><xliff:g id="count">%d</xliff:g> mises à jour disponible au téléchargement</item>
     </plurals>
     <plurals name="new_updates_found_additional_count">
-        <item quantity="one">+ <xliff:g id="count">%d</xliff:g> plus</item>
-        <item quantity="other">autre</item>
+        <item quantity="one"><xliff:g id="count">%d</xliff:g> voir plus</item>
+        <item quantity="other">+ <xliff:g id="count">%d</xliff:g> plus</item>
     </plurals>
 </resources>

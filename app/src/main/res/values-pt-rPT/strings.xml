@@ -19,7 +19,7 @@
     <string name="app_name">Central MoKee</string>
     <string name="navigation_drawer_open">Abrir a gaveta de navegação</string>
     <string name="navigation_drawer_close">Fechar a gaveta de navegação</string>
-    <string name="nav_header_title">MoKee Software de Código Aberto</string>
+    <string name="nav_header_title">MoKee - Código Fonte Aberto</string>
     <string name="nav_header_subtitle">Sistema de operacional Android Comunidade</string>
     <string name="nav_header_desc">Cabeçalho de navegação</string>
     <string name="action_faq">P&amp;R</string>
@@ -55,7 +55,7 @@
     <string name="incremental_updates_title">Atualizações incrementais</string>
     <string name="incremental_updates_summary">Obter atualizações incrementais para economizar tempo de transferência e largura de banda</string>
     <string name="verified_updates_title">Atualizações testadas</string>
-    <string name="verified_updates_summary">Mostrar apenas as atualizações que foram testadas por outros utilizadores</string>
+    <string name="verified_updates_summary">Exibir somente as atualizações que são testadas por outros utilizadores</string>
     <string name="available_updates_title">Actualizações Disponíveis</string>
     <string name="no_available_updates_intro">A última verificação não encontrou atualizações disponíveis. Para verificar manualmente, utilize o botão Procurar.</string>
     <string name="out_of_date_updates_intro">A versão atual está desatualizada para aplicar atualizações incrementais. Para atualizar, faça o download de uma ROM completa em vez disso.</string>
@@ -88,7 +88,7 @@
     <string name="no_updates_found">Não foram encontradas novas atualizações</string>
     <string name="updates_check_failed">Falhou a verificação de actualização. Faz favor, verifica a conexão a Internet e tenta-o novamente.</string>
     <string name="text_copied">Texto copiado para a área de transferência</string>
-    <string name="unknown">Desconhecida</string>
+    <string name="unknown">Desconhecido</string>
     <string name="alipay">Alipay</string>
     <string name="wechat">WeChat</string>
     <string name="paypal">Paypal</string>
