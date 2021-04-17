@@ -93,7 +93,7 @@
     <string name="download_completed_notification">Shkarkimi përfundoi</string>
     <string name="download_verification_failed_notification">Verifikimi i paketës së azhurnimit dështoi, ju lutemi shkarkoni përsëri</string>
     <string name="download_file_not_found_notification">Lidhja e shkarkimit skadoi, ju lutemi klikoni në butonin Refresh dhe provoni përsëri</string>
-    <string name="download_remaining">&lt;xliff:g example="3 minutes" id="duration"&gt; u largua</string>
+    <string name="download_remaining">&lt;xliff:g example=\"3 minutes\" id=\"duration\"&gt; u largua</string>
     <string name="download_speed">%1$s, %2$s/s</string>
     <string name="download_already_running">Një shkarkim tashmë po ekzekutohet</string>
     <string name="update_on_mobile_data_title">Kujdes</string>

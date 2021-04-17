@@ -107,7 +107,7 @@
     <string name="download_completed_notification">Завантаження завершено</string>
     <string name="download_verification_failed_notification">Не вдалося перевірити пакет оновлення, будь ласка, завантажте оновлення ще раз.</string>
     <string name="download_file_not_found_notification">Посилання на скачування застаріло, натисніть кнопку \"Оновити\" і повторіть спробу.</string>
-    <string name="download_remaining">Залишилося &lt;xliff:g example="3 minutes" id="duration"&gt;%s&lt;/xliff: g&gt;</string>
+    <string name="download_remaining">Залишилося &lt;xliff:g example=\"3 minutes\" id=\"duration\"&gt;%s&lt;/xliff: g&gt;</string>
     <string name="download_speed">%1$s, %2$s/сек</string>
     <string name="download_already_running">Завантаження вже відбувається</string>
     <string name="download_limited_speed">Швидкість завантаження обмежена, будь ласка, пожертвуйте %d юанів, щоб насолодитися повною швидкістю.</string>
