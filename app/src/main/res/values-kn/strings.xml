@@ -105,5 +105,6 @@
     <string name="dialog_battery_low_title">ಕಡಿಮೆ ಬ್ಯಾಟರಿ</string>
     <string name="dialog_battery_low_message_pct">ಬ್ಯಾಟರಿ ಮಟ್ಟವು ತುಂಬ ಕಡಿಮೆ ಇದೆ, ಮುಂದುವರೆಯಲು, ಒಂದು ವೇಳೆ ಚಾರ್ಜ ಮಾಡುತ್ತಿದ್ದಲ್ಲಿ ನಿಮಗೆ ಕನಿಷ್ಠ ಪಕ್ಷ <xliff:g id="percent_discharging"> ಬ್ಯಾಟರಿಯ ಅಗತ್ಯವಿದೆ%1$d</xliff:g>%%<xliff:g id="percent_charging">%2$d</xliff:g>%%.</string>
     <string name="apply_update_dialog_title">ನವೀಕರಣ ಅನ್ವಯಿಸಿ</string>
-    <string name="no_storage_permissions">ಸಂಗ್ರಹಣಾ ಪರವಾನಗಿ ಅಗತ್ಯವಿದೆ</string>
+    <string name="no_storage_permissions">ಸಂಗ್ರಹಣಾ ಪರವಾನಗಿಯ ಅಗತ್ಯವಿದೆ</string>
+    <string name="no_phone_permissions">ಫೋನಿನ ಪರವಾನಗಿಯ ಅಗತ್ಯವಿದೆ</string>
 </resources>
