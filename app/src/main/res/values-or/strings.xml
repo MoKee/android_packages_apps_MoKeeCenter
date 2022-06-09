@@ -16,6 +16,15 @@
      along with this program.  If not, see <http://www.gnu.org/licenses/>.
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="action_faq">ପ୍ରଶ୍ନ ଓ ଉତ୍ତର</string>
+    <string name="action_solution">ସମାଧାନ</string>
     <string name="action_next">ପରବର୍ତ୍ତୀ</string>
+    <string name="menu_preferences">ଅଗ୍ରାଧିକାରସମୂହ</string>
+    <string name="menu_donation">ଦାନ</string>
+    <string name="menu_delete_update">ବିଲୋପ କରନ୍ତୁ</string>
+    <string name="nav_main_team_title">ଦଳ</string>
     <string name="unknown">ଅଜ୍ଞାତ</string>
+    <string name="alipay">AliPay</string>
+    <string name="wechat">WeChat</string>
+    <string name="paypal">PayPal</string>
 </resources>
