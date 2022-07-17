@@ -159,7 +159,7 @@ public class CommonUtil {
     }
 
     public static CharSequence calculateEta(Context context, long speed, long totalBytes, long totalBytesRead) {
-        return context.getString(R.string.download_remaining, DateUtils.formatDuration((totalBytes - totalBytesRead) / speed * 1000));
+        return context.getString(R.string.download_remaining, StreamUtil.formatDuration((totalBytes - totalBytesRead) / speed * 1000));
     }
 
     public static boolean isABDevice() {
