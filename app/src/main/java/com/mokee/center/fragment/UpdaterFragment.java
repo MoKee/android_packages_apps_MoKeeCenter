@@ -120,6 +120,7 @@ public class UpdaterFragment extends PreferenceFragmentCompat implements SharedP
             UpdaterService.LocalBinder binder = (UpdaterService.LocalBinder) service;
             mUpdaterService = binder.getService();
             mUpdatesCategory.setUpdaterController(mUpdaterService.getUpdaterController());
+            mUpdatesCategory.setMainActivity(mMainActivity);
             updateFeatureStatus();
             getUpdatesList();
         }

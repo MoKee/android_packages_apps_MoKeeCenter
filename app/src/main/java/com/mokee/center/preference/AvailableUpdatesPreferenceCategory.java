@@ -17,7 +17,7 @@
 
 package com.mokee.center.preference;
 
-import android.content.ActivityNotFoundException;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -30,14 +30,16 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
-import android.widget.Toast;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.FullScreenContentCallback;
+import com.google.android.gms.ads.LoadAdError;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.snackbar.Snackbar;
 import com.mokee.center.MKCenterApplication;
 import com.mokee.center.R;
+import com.mokee.center.activity.MainActivity;
 import com.mokee.center.controller.UpdaterController;
 import com.mokee.center.controller.UpdaterService;
 import com.mokee.center.misc.Constants;
@@ -47,6 +49,7 @@ import com.mokee.center.util.CommonUtil;
 import java.io.IOException;
 import java.util.LinkedList;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceViewHolder;
@@ -61,6 +64,7 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
     private UpdaterController mUpdaterController;
     private View mItemView;
     private InterstitialAd mDownloadInterstitialAd;
+    private MainActivity mMainActivity;
 
     public AvailableUpdatesPreferenceCategory(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -70,28 +74,36 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
         mUpdaterController = updaterController;
     }
 
+    public void setMainActivity(MainActivity mainActivity) {
+        mMainActivity = mainActivity;
+    }
+
     @Override
     public void onBindViewHolder(PreferenceViewHolder holder) {
         super.onBindViewHolder(holder);
         mItemView = holder.itemView;
         if (!MKCenterApplication.getInstance().getDonationInfo().isAdvanced()) {
-            mDownloadInterstitialAd = new InterstitialAd(getContext());
-            mDownloadInterstitialAd.setAdUnitId(getContext().getString(R.string.interstitial_ad_unit_id));
-            mDownloadInterstitialAd.setAdListener(new AdListener() {
-                @Override
-                public void onAdClosed() {
-                    mDownloadInterstitialAd.loadAd(new AdRequest.Builder().build());
-                    if (!MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
-                        Snackbar.make(mItemView, getContext().getString(R.string.download_limited_speed, Constants.DONATION_BASIC), Snackbar.LENGTH_LONG).show();
-                    }
-                }
-            });
-            try {
-                mDownloadInterstitialAd.loadAd(new AdRequest.Builder().build());
-            } catch (ActivityNotFoundException e) {
-                Toast.makeText(getContext(), R.string.ad_blocker_detected, Toast.LENGTH_LONG).show();
-                e.printStackTrace();
-            }
+            AdRequest adRequest = new AdRequest.Builder().build();
+            InterstitialAd.load(getContext(), getContext().getString(R.string.interstitial_ad_unit_id), adRequest,
+                    new InterstitialAdLoadCallback() {
+                        @Override
+                        public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                            mDownloadInterstitialAd = interstitialAd;
+                            mDownloadInterstitialAd.setFullScreenContentCallback(new FullScreenContentCallback() {
+                                @Override
+                                public void onAdClicked() {
+                                    super.onAdClicked();
+                                    if (!MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
+                                        Snackbar.make(mItemView, getContext().getString(R.string.download_limited_speed, Constants.DONATION_BASIC), Snackbar.LENGTH_LONG).show();
+                                    }
+                                }
+                            });
+                        }
+                        @Override
+                        public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                            mDownloadInterstitialAd = null;
+                        }
+                    });
         }
     }
 
@@ -127,12 +139,10 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
 
     private void onStartAction(String downloadId, int action) {
         if (mDownloadInterstitialAd != null) {
-            if (mDownloadInterstitialAd.isLoaded()) {
-                mDownloadInterstitialAd.show();
-            } else {
-                if (!MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
-                    Snackbar.make(mItemView, getContext().getString(R.string.download_limited_speed, Constants.DONATION_BASIC), Snackbar.LENGTH_LONG).show();
-                }
+            mDownloadInterstitialAd.show(mMainActivity);
+        } else {
+            if (!MKCenterApplication.getInstance().getDonationInfo().isBasic()) {
+                Snackbar.make(mItemView, getContext().getString(R.string.download_limited_speed, Constants.DONATION_BASIC), Snackbar.LENGTH_LONG).show();
             }
         }
         if (action == UpdaterService.DOWNLOAD_START) {
@@ -258,5 +268,4 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
                 getContext().getResources().getInteger(R.integer.battery_ok_percentage_discharging);
         return percent >= required;
     }
-
 }

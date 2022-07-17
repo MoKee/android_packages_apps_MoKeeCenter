@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2018-2019 The MoKee Open Source Project
+ * Copyright (C) 2018-2022 The MoKee Open Source Project
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -36,10 +36,13 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
-import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.LoadAdError;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.mokee.center.MKCenterApplication;
@@ -114,18 +117,27 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         if (!mApp.getDonationInfo().isAdvanced()) {
-            MobileAds.initialize(this, getString(R.string.app_id));
-            mWelcomeInterstitialAd = new InterstitialAd(this);
-            mWelcomeInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
-            mWelcomeInterstitialAd.loadAd(new AdRequest.Builder().build());
-            mWelcomeInterstitialAd.setAdListener(new AdListener() {
+            MobileAds.initialize(this, new OnInitializationCompleteListener() {
                 @Override
-                public void onAdLoaded() {
-                    if (mApp.isMainActivityActive()) {
-                        mWelcomeInterstitialAd.show();
-                    }
-                }
+                public void onInitializationComplete(InitializationStatus initializationStatus) {}
             });
+            AdRequest adRequest = new AdRequest.Builder().build();
+            InterstitialAd.load(this, getString(R.string.interstitial_ad_unit_id), adRequest,
+                    new InterstitialAdLoadCallback() {
+                        @Override
+                        public void onAdLoaded(@NonNull InterstitialAd interstitialAd) {
+                            // The mInterstitialAd reference will be null until
+                            // an ad is loaded.
+                            mWelcomeInterstitialAd = interstitialAd;
+                            if (mApp.isMainActivityActive()) {
+                                mWelcomeInterstitialAd.show(MainActivity.this);
+                            }
+                        }
+                        @Override
+                        public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
+                            mWelcomeInterstitialAd = null;
+                        }
+                    });
         }
     }
 
