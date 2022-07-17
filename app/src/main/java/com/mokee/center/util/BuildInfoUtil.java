@@ -30,25 +30,27 @@ import java.util.Locale;
 public class BuildInfoUtil {
 
     public static boolean isCompatible(String version) {
-        return getBuildDate(version) > getBuildDate(Build.VERSION);
+        return getTimeStamp(String.valueOf(getBuildDate(version))) > getTimeStamp(String.valueOf(getBuildDate(Build.VERSION)));
     }
 
-    public static String getDisplayVersion(Context context, String version) {
+    public static long getTimeStamp(String buildDate) {
         SimpleDateFormat simpleDateFormat;
-        String buildDate = String.valueOf(getBuildDate(version));
-
         if (buildDate.length() == 6) {
             simpleDateFormat = new SimpleDateFormat("yyMMdd", Locale.ENGLISH);
         } else {
             simpleDateFormat = new SimpleDateFormat("yyyyMMddhhmm", Locale.ENGLISH);
         }
         try {
-            long timestamp = simpleDateFormat.parse(buildDate).getTime();
-            return getReleaseVersion(version) + " - " + DateUtils.formatDateTime(context, timestamp, DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR);
+            return simpleDateFormat.parse(buildDate).getTime();
         } catch (ParseException e) {
             e.printStackTrace();
         }
-        return null;
+        return 0;
+    }
+
+    public static String getDisplayVersion(Context context, String version) {
+        long timestamp = getTimeStamp(String.valueOf(getBuildDate(version)));
+        return getReleaseVersion(version) + " - " + DateUtils.formatDateTime(context, timestamp, DateUtils.FORMAT_SHOW_DATE | DateUtils.FORMAT_SHOW_YEAR);
     }
 
     public static long getBuildDate(String version) {
@@ -59,6 +61,7 @@ public class BuildInfoUtil {
         } else {
             date = info[2];
         }
+
         if (!TextUtils.isDigitsOnly(date)) {
             return 0;
         } else {
