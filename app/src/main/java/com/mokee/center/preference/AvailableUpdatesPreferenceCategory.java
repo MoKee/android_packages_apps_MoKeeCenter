@@ -55,6 +55,9 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
 
     private static final String TAG = AvailableUpdatesPreferenceCategory.class.getSimpleName();
 
+    private static final int BATTERY_PLUGGED_ANY = BatteryManager.BATTERY_PLUGGED_AC
+            | BatteryManager.BATTERY_PLUGGED_USB | BatteryManager.BATTERY_PLUGGED_WIRELESS;
+
     private UpdaterController mUpdaterController;
     private View mItemView;
     private InterstitialAd mDownloadInterstitialAd;
@@ -250,7 +253,7 @@ public class AvailableUpdatesPreferenceCategory extends PreferenceCategory imple
         int percent = Math.round(100.f * intent.getIntExtra(BatteryManager.EXTRA_LEVEL, 100) /
                 intent.getIntExtra(BatteryManager.EXTRA_SCALE, 100));
         int plugged = intent.getIntExtra(BatteryManager.EXTRA_PLUGGED, 0);
-        int required = (plugged & BatteryManager.BATTERY_PLUGGED_ANY) != 0 ?
+        int required = (plugged & BATTERY_PLUGGED_ANY) != 0 ?
                 getContext().getResources().getInteger(R.integer.battery_ok_percentage_charging) :
                 getContext().getResources().getInteger(R.integer.battery_ok_percentage_discharging);
         return percent >= required;
